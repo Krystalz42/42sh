@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/10 01:17:05 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/10 01:39:33 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -175,9 +175,11 @@ norme		:
 	@/usr/bin/norminette  */**/*.[ch]
 
 git			:
+	@make fclean
 	@git add -A
 	@git commit -m "Done"
 	@git push origin master
+	@make
 
 exe			:
 	make && ./$(NAME)
