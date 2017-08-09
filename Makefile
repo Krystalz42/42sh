@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/06/21 18:31:56 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/09 19:05:31 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -174,10 +174,10 @@ exe			:
 	make && ./$(NAME)
 
 leaks		:
-	while true ; do leaks 21sh | grep 'total\|malloced' ; sleep 3 ; clear ; done
+	while true ; do leaks $(NAME)| grep 'total\|malloced' ; sleep 3 ; clear ; done
 
 leaks1		:
-	while true ; do leaks 21sh ; sleep 3 ; clear ; done
+	while true ; do leaks $(NAME) ; sleep 3 ; clear ; done
 
 # ---------------------------------------------------------------------------- #
 #						 	/!\ PRIVATE RULES /!\							   #
