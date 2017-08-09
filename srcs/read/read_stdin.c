@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:42:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 00:24:19 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/10 01:30:46 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ t_read			*read_stdin(void)
 	
 	while (read(STDIN_FILENO, &buffer, sizeof(char)))
 	{
-		NL;
-		CHAR(buffer);
+		NBR(buffer);
+		CHAR(' ');
+		if (buffer == 13)
+			break;
 	}
 	return (read_std);
 }

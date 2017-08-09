@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/09 23:59:50 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/10 01:18:15 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,32 @@
 #include <struct.h>
 #include <stdio.h>
 #include <define.h>
+#include <termios.h>
+#include <fcntl.h>
+
+int					shell(void);
 
 /*
- **				FUNCTION READ AND RETURN A STRUCT
- */
+**				FUNCTION READ AND RETURN A STRUCT
+*/
 
-t_read			*read_stdin(void);
-int				shell(void);
-t_env			*gbl_save_env(unsigned short flags, t_env *env);
-void			init_env(void);
-void			split_env(char *env);
-void			add_list_env(char *name, char *value);
+t_read				*read_stdin(void);
+
+/*
+**				ENVIRONEMENT FUNCTION
+*/
+
+t_env				*gbl_save_env(unsigned short flags, t_env *env);
+void				init_env(void);
+void				split_env(char *env);
+void				add_list_env(char *name, char *value);
+
+/*
+**				TERMIOS FUNCTION
+*/
+
+struct termios		*keep_term_struct(unsigned short flags, struct termios *term);
+int					init_fd(void);
+int					init_term(void);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/10 00:04:07 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/10 01:17:05 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,9 @@ SRCS = \
 	   env/init_env.c										\
 	   env/add_list_env.c									\
 	   env/global_save_env.c									\
+	   term/init_fd.c										\
+	   term/init_term.c										\
+	   term/keep_term_struct.c								\
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #

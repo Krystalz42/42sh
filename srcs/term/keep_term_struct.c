@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   get_term.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 01:30:09 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/10 00:54:26 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/10 01:37:30 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int main()
+struct termios		*keep_term_struct(unsigned short flags, struct termios *term)
 {
-	init_env();
-	if (init_term())
-		return (1);
-	shell();
+	static struct termios		*save_our_term;
+	static struct termios		*save_old_term;
 
-	struct termios *lol = keep_term_struct(OLD_TERM, 0);
-	tcsetattr(0, 0, &(*lol));
-	return (0);
+	if ((flags & SAVE_OLD))
+		save_old_term = term;
+	else if ((flags & SAVE_OUR))
+		save_our_term = term;
+	else if ((flags & OLD_TERM))
+		return (save_old_term);
+	else if ((flags & OUR_TERM))
+		return (save_our_term);
+	return (NULL);
 }
