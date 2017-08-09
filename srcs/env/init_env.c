@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   init_env.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 00:05:43 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/09 23:16:36 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/10 00:05:00 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int main()
+void		init_env(void)
 {
-	init_env();
-	shell();
-	return (0);
+	extern char		**environ;
+	int				i;
+
+	i = -1;
+	if (environ)
+		while (environ[++i])
+			split_env(environ[i]);
 }

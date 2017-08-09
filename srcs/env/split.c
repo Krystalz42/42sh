@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   split.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 00:05:43 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/10 00:03:49 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/10 00:03:53 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int main()
+void		split_env(char *env)
 {
-	init_env();
-	shell();
-	return (0);
+	char		*name;
+	char		*value;
+	int			i;
+
+	i = -1;
+	while (env[++i] && env[i] != '=')
+		;
+	if (!(name = ft_strsub(env, 0, i - 1)))
+		return ;
+	if (!(value = ft_strdup(env + i + 1)))
+		return ;
+	add_list_env(name, value);
 }

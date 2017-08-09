@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   define.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 00:05:43 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/09 23:13:11 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/09 23:15:55 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sh.h>
+#ifndef DEFINE_H
+# define DEFINE_H
 
-int main()
-{
-	init_env();
-	shell();
-	return (0);
-}
+# define ENV_NULL	0x0
+# define ENV_ADD	0x1
+# define ENV_DEL	0x2
+
+#endif

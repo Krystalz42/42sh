@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/09 19:05:31 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/10 00:04:07 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,12 @@ NAME		= 42sh
 
 SRCS = \
 	   main.c												\
+	   shell.c												\
+	   read/read_stdin.c									\
+	   env/split.c										\
+	   env/init_env.c										\
+	   env/add_list_env.c									\
+	   env/global_save_env.c									\
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #
