@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   split.c                                            :+:      :+:    :+:   */
+/*   set_term.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/10 00:03:49 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 18:15:14 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/10 19:41:11 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/10 23:54:52 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-void		split_env(char *env)
+void			set_termios(unsigned short flags)
 {
-	char		*name;
-	char		*value;
-	int			i;
+	struct termios term;
 
-	i = -1;
-	while (env[++i] && env[i] != '=')
-		;
-	if (!(name = ft_strsub(env, 0, i)))
-		return ;
-	if (!(value = ft_strdup(env + i + 1)))
-		return ;
-	add_list_env(name, value);
+	if ((flags & SET_OUR_TERM))
+	{
+		term = keep_term_struct(OUR_TERM, NULL);
+		if (!(tcsetattr(0, TCSADRAIN, &term)))
+			STR("GGset\n");
+	}
+	if ((flags & SET_OLD_TERM))
+	{
+		term = keep_term_struct(OLD_TERM, NULL);
+		tcsetattr(0, 0, &term);
+	}
 }

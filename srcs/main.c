@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 02:02:47 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/10 19:57:37 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int main()
 {
+	STR("INIT_ENV\n");
 	init_env();
+	STR("INIT_TERM\n");
 	if (init_term())
 		return (1);
+	STR("SHELL\n");
 	shell();
-
-	struct termios *lol = keep_term_struct(OLD_TERM, 0);
-	tcsetattr(0, 0, &(*lol));
 	return (0);
 }

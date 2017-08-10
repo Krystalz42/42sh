@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   split.c                                            :+:      :+:    :+:   */
+/*   my_getenv.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/10 00:03:49 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 18:15:14 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/10 05:07:35 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/11 00:03:41 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-void		split_env(char *env)
+char		*my_getenv(char *str)
 {
-	char		*name;
-	char		*value;
-	int			i;
+	t_env		*env;
 
-	i = -1;
-	while (env[++i] && env[i] != '=')
-		;
-	if (!(name = ft_strsub(env, 0, i)))
-		return ;
-	if (!(value = ft_strdup(env + i + 1)))
-		return ;
-	add_list_env(name, value);
+	env = gbl_save_env(ENV_REC, NULL);
+	if (str)
+		while (env)
+		{
+			if (!ft_strcmp(env->name, str))
+				return (env->value);
+			else
+				env = env->next;	
+		}
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 23:25:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 02:33:02 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/10 19:48:48 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@
 # define OUR_TERM	2
 # define SAVE_OLD	4
 # define SAVE_OUR	8
+
+# define SET_OLD_TERM	1
+# define SET_OUR_TERM	2
 
 /*
 **			INITIALIZATION READ

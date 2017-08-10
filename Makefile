@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/10 02:05:43 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/10 19:46:47 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,10 +52,12 @@ SRCS = \
 	   read/special_key.c									\
 	   env/split.c											\
 	   env/init_env.c										\
+	   env/my_getenv.c				\
 	   env/add_list_env.c									\
 	   env/global_save_env.c								\
 	   term/init_fd.c										\
 	   term/init_term.c										\
+	   term/set_term.c										\
 	   term/keep_term_struct.c								\
 
 # ---------------------------------------------------------------------------- #
