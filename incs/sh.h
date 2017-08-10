@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 01:18:15 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/10 02:22:49 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int					shell(void);
 */
 
 t_read				*read_stdin(void);
+int					special_key(t_read **read_std);
 
 /*
 **				ENVIRONEMENT FUNCTION

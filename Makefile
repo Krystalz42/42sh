@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/10 01:39:33 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/10 02:05:43 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,10 +49,11 @@ SRCS = \
 	   main.c												\
 	   shell.c												\
 	   read/read_stdin.c									\
-	   env/split.c										\
+	   read/special_key.c									\
+	   env/split.c											\
 	   env/init_env.c										\
 	   env/add_list_env.c									\
-	   env/global_save_env.c									\
+	   env/global_save_env.c								\
 	   term/init_fd.c										\
 	   term/init_term.c										\
 	   term/keep_term_struct.c								\
@@ -175,11 +176,9 @@ norme		:
 	@/usr/bin/norminette  */**/*.[ch]
 
 git			:
-	@make fclean
 	@git add -A
 	@git commit -m "Done"
 	@git push origin master
-	@make
 
 exe			:
 	make && ./$(NAME)
