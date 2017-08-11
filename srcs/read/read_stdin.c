@@ -37,10 +37,9 @@ t_read			*read_stdin(void)
 		else
 			while (compare_key[++i].key)
 				if (compare_key[i].key == buffer)
-				{
-			//		compare_key[i].function(&read_std);
-				}
+					compare_key[i].function(&read_std);
 
 	}
+	set_termios(SET_OLD_TERM);
 	return (read_std);
 }

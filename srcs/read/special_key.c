@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/10 02:02:59 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 23:55:38 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/11 03:34:32 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 t_cmp		compare_special_key[] = {
 	(t_cmp){ARROW_UP, 0},
-		(t_cmp){ARROW_DOWN, 0},
-		(t_cmp){ARROW_LEFT, 0},
-		(t_cmp){ARROW_RIGHT, 0},
+		(t_cmp){ARROW_DOWN, arrow_down},
+		(t_cmp){ARROW_LEFT, arrow_left},
+		(t_cmp){ARROW_RIGHT, arrow_right},
+		(t_cmp){ARROW_UP, arrow_up},
 		(t_cmp){END_KEY, 0},
 		(t_cmp){HOME_KEY, 0},
 		(t_cmp){DEL_KEY, 0},
@@ -42,7 +43,8 @@ int			special_key(t_read **read_std)
 	c = -1;
 	while ((i = -1) && read(STDIN_FILENO, &buffer, sizeof(char)) && ++c >= 0)
 	{
-		STR("IN SPECIAL KEY\n");
+		NBR(buffer);
+		STR(" IN SPECIAL KEY\n");
 		while ((c == 1) && compare_special_key[++i].key)
 			if (compare_special_key[i].key == buffer)
 				return (compare_special_key[i].function(read_std));
