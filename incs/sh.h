@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/11 03:30:14 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/11 06:41:32 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,13 @@ int					arrow_left(t_read **read_std);
 int					arrow_right(t_read **read_std);
 int					arrow_up(t_read **read_std);
 int					arrow_down(t_read **read_std);
+int					home_key(t_read **read_std);
+int					del_key(t_read **read_std);
+int					shift_up_key(t_read **read);
+int					shift_down_key(t_read **read);
+int					shift_left_key(t_read **read);
+int					shift_right_key(t_read **read);
+int					end_key(t_read **read_std);
 
 /*
 **				ENVIRONEMENT FUNCTION

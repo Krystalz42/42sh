@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/11 03:31:58 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/11 06:41:31 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,10 @@ SRCS = \
 	   main.c												\
 	   shell.c												\
 	   read/read_stdin.c									\
+	   read/del_key.c				\
+	   read/shift_key.c				\
 	   read/special_key.c									\
+	   read/home_end.c				\
 	   read/arrow.c											\
 	   env/split.c											\
 	   env/init_env.c										\

@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 02:29:08 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/11 06:41:27 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,11 @@ typedef struct		s_cmp
 	char			key;
 	int				(*function)(t_read **read_std);
 }					t_cmp;
+
+typedef struct		s_cmp2
+{
+	char			*key;
+	int				(*function)(t_read **read_std);
+}					t_cmp2;
 
 #endif

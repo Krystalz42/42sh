@@ -28,9 +28,7 @@ t_read			*read_stdin(void)
 	set_termios(SET_OUR_TERM);
 	while ((i = -1) && read(STDIN_FILENO, &buffer, sizeof(char)))
 	{
-		NBR(buffer);
-		CHAR(' ');
-		if (buffer == 13)
+		if (buffer == 10)
 			break;
 		if (PRINT_KEY(buffer))
 			;

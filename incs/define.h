@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 23:25:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 19:48:48 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/11 06:31:36 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,19 @@
 # define CLEAR_KEY			'\xC'
 # define INTERRUPT_KEY		'\x2'
 
-# define ARROW_DOWN			'\x42'
-# define ARROW_LEFT			'\x44'
-# define ARROW_UP			'\x41'
-# define ARROW_RIGHT		'\x43'
-# define END_KEY			'\x46'
-# define HOME_KEY			'\x48'
-# define DEL_KEY			'\x33'
+# define ARROW_DOWN			"\x5B\x42"
+# define ARROW_LEFT			"\x5B\x44"
+# define ARROW_UP			"\x5B\x41"
+# define ARROW_RIGHT		"\x5B\x43"
+# define END_KEY			"\x5B\x46"
+# define HOME_KEY			"\x5B\x48"
 
-# define SHIFT_UP_KEY		'\x41'
-# define SHIFT_DOWN_KEY		'\x42'
-# define SHIFT_RIGHT_KEY	'\x43'
-# define SHIFT_LEFT_KEY		'\x44'
+# define DEL_KEY			'\x7E'
+
+# define SHIFT_UP_KEY		"\x32\x41"
+# define SHIFT_DOWN_KEY		"\x32\x42"
+# define SHIFT_RIGHT_KEY	"\x32\x44"
+# define SHIFT_LEFT_KEY		"\x32\x43"
 
 # define PRINT_KEY(x) (x >= '\x20' && x <= '\x7E')
 
