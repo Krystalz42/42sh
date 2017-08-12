@@ -1,42 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   struct.h                                           :+:      :+:    :+:   */
+/*   key_tabulation.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/12 16:40:43 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/12 17:39:56 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/12 17:40:29 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRUCT_H
-# define STRUCT_H
+#include <sh.h>
 
-typedef struct		s_env
+int			key_tab(t_read **read_std)
 {
-	char			*name;
-	char			*value;
-	struct s_env	*next;
-}					t_env;
-
-typedef struct		s_cmd
-{
-	char			c;
-	struct s_cmd	*next;
-	struct s_cmd	*prev;
-}					t_cmd;
-
-typedef struct		s_read
-{
-	t_cmd			*cmd;	
-}					t_read;
-
-typedef struct		s_cmp
-{
-	char			*key;
-	int				(*function)(t_read **read_std);
-	size_t			len;
-}					t_cmp;
-
-#endif
+	(void)read_std;
+	return (1);
+}
