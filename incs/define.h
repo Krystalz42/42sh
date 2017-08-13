@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 23:25:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/12 17:52:23 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/13 05:42:37 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,16 @@
 # define SHIFT_LEFT_KEY		"\x1b\x5b\x31\x3b\x32\x44"
 
 # define PRINT_KEY(x) (x >= '\x20' && x <= '\x7E')
+
+# define MV_RIGHT			tputs(tgetstr("nd", 0), 0, &my_put)
+# define MV_LEFT			tputs(tgetstr("le", 0), 0, &my_put)
+# define MV_BOT				tputs(tgetstr("do", 0), 0, &my_put)
+# define MV_TOP				tputs(tgetstr("up", 0), 0, &my_put)
+# define SAVE 				tputs(tgetstr("sc", 0), 0, &my_put)
+# define RESTORE			tputs(tgetstr("rc", 0), 0, &my_put)
+# define CURSOR_INVIS		tputs(tgetstr("vi", 0), 0, &my_put)
+# define CURSOR_BACK		tputs(tgetstr("ve", 0), 0, &my_put)
+# define CLEAR_FROM_CUR		tputs(tgetstr("cd", 0), 0, &my_put)
+# define BACK_N				tputs(tgetstr("cr", 0), 0, &my_put)
 
 #endif

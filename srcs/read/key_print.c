@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/12 21:50:30 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/13 00:40:29 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/13 03:39:57 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,11 @@ int			key_print_(t_read **read_std, char c)
 {
 	t_cmd *element;
 
-	CHAR(c);
-	if (!(*read_std)->cmd)
-		(*read_std)->cmd = create_element(c);
-	else
-	{
-		element = create_element(c);
-		element->prev = (*read_std)->cmd->prev;
-		element->next = (*read_std)->cmd;
-		if ((*read_std)->cmd->prev)
-			(*read_std)->cmd->prev->next = element;
-		(*read_std)->cmd->prev = element;
-	}
+	element = create_element(c);
+	element->prev = (*read_std)->cmd->prev;
+	element->next = (*read_std)->cmd;
+	if ((*read_std)->cmd->prev)
+		(*read_std)->cmd->prev->next = element;
+	(*read_std)->cmd->prev = element;
 	return (1);
 }

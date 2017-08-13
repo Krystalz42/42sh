@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/12 21:53:29 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/13 05:47:48 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,16 @@ SRCS = \
 	   read/key_delete_here.c								\
 	   read/key_enter.c										\
 	   read/key_interrupt.c									\
+	   read/print_struct.c									\
 	   read/key_clear.c										\
+	   read/my_put.c										\
+	   read/first_cmd.c										\
+	   read/completion/init_completion.c					\
+	   read/completion/complete_path.c						\
+	   read/completion/continue_completion.c				\
+	   read/completion/complete_binary.c					\
+	   read/completion/create_comp.c						\
+	   read/completion/init_files.c							\
 	   env/split.c											\
 	   env/init_env.c										\
 	   env/my_getenv.c										\
@@ -69,6 +78,7 @@ SRCS = \
 	   term/init_term.c										\
 	   term/set_term.c										\
 	   term/keep_term_struct.c								\
+	   error_function/bip.c									\
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #

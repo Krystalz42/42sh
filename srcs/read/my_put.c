@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_tabulation.c                                   :+:      :+:    :+:   */
+/*   my_put.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/12 17:39:56 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/13 05:40:39 by aroulin          ###   ########.fr       */
+/*   Created: 2017/03/21 16:30:45 by aroulin           #+#    #+#             */
+/*   Updated: 2017/04/06 14:26:08 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			key_tab(t_read **read_std)
+int		my_put(int c)
 {
-	if ((*read_std)->completion)
-	{
-		continue_completion(read_std);
-	}
-	else
-	{
-		init_completion(read_std);
-	}
-	return (1);
+	return ((int)write(0, &c, 1));
 }

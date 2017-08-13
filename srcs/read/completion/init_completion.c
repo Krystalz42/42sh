@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_tabulation.c                                   :+:      :+:    :+:   */
+/*   init_completion.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/12 17:39:56 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/13 05:40:39 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/13 03:59:11 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/13 04:55:27 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			key_tab(t_read **read_std)
+int			first_word(t_read **read_std)
 {
-	if ((*read_std)->completion)
+	t_cmd		*tmp;
+
+	tmp = (*read_std)->cmd;
+	while (tmp->prev)
 	{
-		continue_completion(read_std);
-	}
-	else
-	{
-		init_completion(read_std);
+		if (tmp->c == 32)
+			return (0);
+		tmp = tmp->prev;
 	}
 	return (1);
+}
+
+void		init_completion(t_read **read_std)
+{
+	if (!(*read_std)->cmd->prev && !(*read_std)->cmd->c)
+		key_print_(read_std, 9);
+	else if (first_word(read_std))
+		complete_binary(read_std);
+	else
+	{
+		STR("PATH\n");
+		complete_path(read_std);
+	}
 }

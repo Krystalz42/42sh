@@ -42,34 +42,39 @@ int				init_buff(char *buff, int *i)
 	return (1);
 }
 
+t_read					*init_struct_for_read(void)
+{
+	t_read		*read_std;
+
+	if (!(read_std = (t_read *)ft_memalloc(sizeof(t_read))))
+		return (NULL);
+	if (!(read_std->cmd = create_element('\0')))
+		return (NULL);
+	read_std->cmd->s = 1;
+	read_std->cur.co = tgetnum("co");
+	return (read_std);
+}
+
 t_read			*read_stdin(void)
 {
 	char		buff[LEN_BUFFER];
 	t_read		*read_std;
 	int			c;
 	int			i;
-	int tmp;
-
-	if (!(read_std = (t_read *)ft_memalloc(sizeof(t_read))))
-			return (NULL);
+	
+	if (!(read_std = init_struct_for_read()))
+		return (NULL);
 	init_buff(buff, &i);
 	set_termios(SET_OUR_TERM);
 	while ((c = -1) && read(STDIN_FILENO, &(buff[++i]), sizeof(char)))
 	{
-		tmp = -1;
-		while (++tmp < 6)
-		{
-			NBR(buff[tmp]);
-				CHAR(' ');
-		}
 		if (PRINT_KEY(buff[0]))
 			key_print_(&read_std, buff[0]) && init_buff(buff, &i);
 		while (compare_key[++c].key)
 			if (!ft_strncmp(compare_key[c].key, buff, compare_key[c].len) && init_buff(buff, &i))
 				compare_key[c].function(&read_std);
-		if (i == 5)
-			init_buff(buff, &i);
-
+		(i == 5) && init_buff(buff, &i);
+		(!read_std->completion) ? print_struct(read_std) : 0;
 	}
 	set_termios(SET_OLD_TERM);
 	return (read_std);

@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_tabulation.c                                   :+:      :+:    :+:   */
+/*   bip.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/12 17:39:56 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/13 05:40:39 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/13 04:15:14 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/13 04:43:38 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			key_tab(t_read **read_std)
+int			bip(void)
 {
-	if ((*read_std)->completion)
-	{
-		continue_completion(read_std);
-	}
-	else
-	{
-		init_completion(read_std);
-	}
+	CHAR_FD(7, init_fd());
 	return (1);
 }

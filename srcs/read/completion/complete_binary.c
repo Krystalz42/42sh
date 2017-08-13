@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_tabulation.c                                   :+:      :+:    :+:   */
+/*   complete_binary.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/12 17:39:56 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/13 05:40:39 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/13 04:09:28 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/13 04:46:11 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			key_tab(t_read **read_std)
+void		complete_binary(t_read **read_std)
 {
-	if ((*read_std)->completion)
+	char		*path;
+	char		*tmp;
+
+	(void)read_std;
+	if (!(tmp = ft_strjoin(path, "/.42sh_hashtable")))
+		return ;
+	if (!(path = my_getenv("HOME")))
+		return ;
+	if (open(path, O_RDONLY | O_CREAT, S_IRUSR) < 0)
 	{
-		continue_completion(read_std);
+		ft_strdel(&tmp);
+		return ;
 	}
-	else
-	{
-		init_completion(read_std);
-	}
-	return (1);
+	ft_strdel(&tmp);
 }

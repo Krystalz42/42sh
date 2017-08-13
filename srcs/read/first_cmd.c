@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_tabulation.c                                   :+:      :+:    :+:   */
+/*   first_cmd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/12 17:39:56 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/13 05:40:39 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/13 05:46:50 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/13 06:00:16 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			key_tab(t_read **read_std)
+t_cmd			*first_cmd(t_cmd *cmd, int history)
 {
-	if ((*read_std)->completion)
+	if (cmd)
+		while (cmd->next)
+			cmd = cmd->next;
+	while (cmd->prev)
 	{
-		continue_completion(read_std);
+		if (history && cmd->prev->c == 10)
+			return (cmd);
+		cmd = cmd->prev;
 	}
-	else
-	{
-		init_completion(read_std);
-	}
-	return (1);
+	return (cmd);
 }
