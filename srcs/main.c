@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 19:57:37 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/13 06:20:51 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 int main()
 {
-	STR("INIT_ENV\n");
 	init_env();
-	STR("INIT_TERM\n");
 	if (init_term())
 		return (1);
-	STR("SHELL\n");
 	shell();
 	return (0);
 }

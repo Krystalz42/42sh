@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/11 03:27:42 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/11 06:30:08 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/13 06:12:01 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,24 @@
 
 int			arrow_left(t_read **read_std)
 {
-	STR("AL\n");
-	(void)read_std;
+	if ((*read_std)->completion)
+		;
+	else
+		if ((*read_std)->cmd->prev)
+			if (!(*read_std)->history ||
+					((*read_std)->history && (*read_std)->cmd->prev->c != 10))
+				(*read_std)->cmd = (*read_std)->cmd->prev;
 	return (1);
 }
 
 int			arrow_right(t_read **read_std)
 {
-	STR("AR\n");
-	(void)read_std;
+	if ((*read_std)->completion)
+		;
+	else
+		if ((*read_std)->cmd->next)
+			(*read_std)->cmd = (*read_std)->cmd->next;
+
 	return (1);
 }
 

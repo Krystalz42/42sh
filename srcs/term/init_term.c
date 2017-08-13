@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/10 00:26:38 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/11 06:29:26 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/13 06:21:28 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		init_term(void)
 		return (1);
 	if (my_getenv("TERM") && tgetent(NULL, my_getenv("TERM")))
 	{
-		NBR(tcgetattr(STDIN_FILENO, &old_term));
+		tcgetattr(STDIN_FILENO, &old_term);
 		keep_term_struct(SAVE_OLD, &old_term);
 	}
 	else if (!tgetent(NULL, my_getenv("TERM")))
