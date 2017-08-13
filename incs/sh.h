@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/12 17:45:40 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/12 21:54:40 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int					shell(void);
 t_read				*read_stdin(void);
 
 int					key_tab(t_read **read_std);
+int					key_print_(t_read **read_std, char c);
 int					key_enter_(t_read **read_std);
 int					key_interrupt(t_read **read_std);
 int					key_clear_(t_read **read_std);

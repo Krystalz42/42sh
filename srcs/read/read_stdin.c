@@ -45,11 +45,13 @@ int				init_buff(char *buff, int *i)
 t_read			*read_stdin(void)
 {
 	char		buff[LEN_BUFFER];
-	t_read		*read_std = 0;
+	t_read		*read_std;
 	int			c;
 	int			i;
 	int tmp;
 
+	if (!(read_std = (t_read *)ft_memalloc(sizeof(t_read))))
+			return (NULL);
 	init_buff(buff, &i);
 	set_termios(SET_OUR_TERM);
 	while ((c = -1) && read(STDIN_FILENO, &(buff[++i]), sizeof(char)))
@@ -60,8 +62,8 @@ t_read			*read_stdin(void)
 			NBR(buff[tmp]);
 				CHAR(' ');
 		}
-		if (PRINT_KEY(buff[0]) && init_buff(buff, &i))
-			;	
+		if (PRINT_KEY(buff[0]))
+			key_print_(&read_std, buff[0]) && init_buff(buff, &i);
 		while (compare_key[++c].key)
 			if (!ft_strncmp(compare_key[c].key, buff, compare_key[c].len) && init_buff(buff, &i))
 				compare_key[c].function(&read_std);

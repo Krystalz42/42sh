@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/12 17:44:44 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/12 21:53:29 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ SRCS = \
 	   main.c												\
 	   shell.c												\
 	   read/read_stdin.c									\
+	   read/key_print.c										\
 	   read/key_delete.c									\
 	   read/key_shift.c										\
 	   read/key_home_end.c									\
