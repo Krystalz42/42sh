@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/13 05:47:48 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/16 17:48:53 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ NAME		= 42sh
 SRCS = \
 	   main.c												\
 	   shell.c												\
+	   insert_one_line.c									\
 	   read/read_stdin.c									\
 	   read/key_print.c										\
 	   read/key_delete.c									\
@@ -64,11 +65,13 @@ SRCS = \
 	   read/my_put.c										\
 	   read/first_cmd.c										\
 	   read/completion/init_completion.c					\
+	   read/completion/print_tab.c							\
 	   read/completion/complete_path.c						\
 	   read/completion/continue_completion.c				\
 	   read/completion/complete_binary.c					\
 	   read/completion/create_comp.c						\
 	   read/completion/init_files.c							\
+	   read/completion/completion.c							\
 	   env/split.c											\
 	   env/init_env.c										\
 	   env/my_getenv.c										\

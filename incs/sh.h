@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/13 06:00:32 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/16 18:06:49 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 #include <dirent.h>
 
 int					shell(void);
+void				insert_one_line(void);
 
 /*
 **				FUNCTION READ && PRINT AND RETURN A STRUCT
@@ -38,17 +39,22 @@ t_cmd				*create_element(char c);
 int					print_struct(t_read *read_std);
 int					my_put(int c);
 t_cmd				*first_cmd(t_cmd *cmd, int history);
+int					print_list(int to_select, t_cmd *cmd, t_cmd *stop);
+void				restore_cursor_(t_cursor cur);
+
 
 /*
 **				FUNCTION FOR COMPLETION
 */
 
 void				init_completion(t_read **read_std);
-void				complete_path(t_read **read_std);
+void				complete_path(t_read **read_std, char *to_find);
 void				complete_binary(t_read **read_std);
 void				continue_completion(t_read **read_std);
-void				create_comp(t_read **read_std, t_cmd *tmp, int i);
-void		init_files(t_file **file, char *name, unsigned char type);
+int					print_tab_(t_tab *tab_);
+void				create_comp(t_read **read_std, char *str);
+void				init_files(t_file **file, char *name, unsigned char type, int index);
+void				completion(t_read **read_std);
 
 /*
 **				POINTER ON FUNCTION FOR READ
@@ -56,6 +62,7 @@ void		init_files(t_file **file, char *name, unsigned char type);
 
 int					key_print_(t_read **read_std, char c);
 int					key_tab(t_read **read_std);
+
 int					key_enter_(t_read **read_std);
 int					key_interrupt(t_read **read_std);
 int					key_clear_(t_read **read_std);

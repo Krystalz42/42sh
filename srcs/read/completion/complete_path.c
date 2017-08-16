@@ -6,49 +6,43 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:23:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/13 05:40:20 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/16 18:34:24 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-t_cmd		*beg_word(t_read **read_std)
+void			init_tab_(t_tab *tab_)
 {
-	t_cmd 		*tmp;
+	int		len;
+	t_file	*tmp;
 
-	tmp = (*read_std)->cmd;
-	while (tmp->prev->c != 32)
-		tmp = tmp->prev;
-	return (tmp);
-}
-
-int			len_word(t_cmd *cmd)
-{
-	int		i;
-
-	i = 0;
-	if (!cmd->c && cmd->prev && cmd->prev->c == 32)
-		return (0);
-	while (cmd->c != 32)
+	len = 0;
+	tmp = tab_->file;
+	while (tmp)
 	{
-		NBR(cmd->prev->c);
-		i++;
-		if (cmd->prev)
-			cmd = cmd->prev;
+		len = (ft_strlen(tmp->name) > (size_t)len) ? ft_strlen(tmp->name) : len;
+		tmp = tmp->next;
 	}
-	NL;
-	return (i);
+	tab_->len = len + 5;
+	tab_->nbr = (tgetnum("co") / tab_->len);
+	tab_->li = tgetnum("li");
 }
 
-void		complete_path(t_read **read_std)
+void		complete_path(t_read **read_std, char *str)
 {
 	t_cmd		*tmp;
-	int			i;
 
 	if (!((*read_std)->comp = (t_completion *)ft_memalloc(sizeof(t_completion))))
 		return ;
-	(*read_std)->comp->file = NULL;
-	tmp = beg_word(read_std);
-	i = len_word(tmp);
-	create_comp(read_std, tmp, i);
+	if (!((*read_std)->comp->tab_ = (t_tab *)ft_memalloc(sizeof(t_tab))))
+		return ;
+	(*read_std)->comp->tab_->file = NULL;
+	create_comp(read_std, str);
+	(*read_std)->completion = 2;
+	init_tab_((*read_std)->comp->tab_);
+	print_tab_((*read_std)->comp->tab_);
+	tmp = first_cmd((*read_std)->cmd, (*read_std)->history);
+	restore_cursor_((*read_std)->cur);
+	print_list(1, tmp, (*read_std)->cmd);
 }

@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/13 06:00:48 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/13 08:05:31 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct		s_env
 typedef struct		s_mouse
 {
 	int						x;
+	int						x2;
 	int						y;
 }					t_mouse;
 
@@ -39,14 +40,27 @@ typedef struct		s_file
 	char			*name;
 	unsigned char	type;
 	int				select;
+	int				index;
 	struct s_file	*next;
 	t_mouse			ms;
 }					t_file;
 
+typedef struct		s_tab
+{
+	t_file			*file;
+	int				element;
+	int				len;
+	int				co;
+	int				li;
+	int				index;
+	int				nbr;
+}					t_tab;
+
 typedef struct		s_completion
 {
 	int				fd;
-	t_file			*file;
+	t_tab			*tab_;
+	int				element;
 }					t_completion;
 
 typedef struct		s_cursor
