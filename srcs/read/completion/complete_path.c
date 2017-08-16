@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:23:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/16 18:34:24 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/16 21:20:18 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void			init_tab_(t_tab *tab_)
 		tmp = tmp->next;
 	}
 	tab_->len = len + 5;
+	tab_->co = (tgetnum("co") / tab_->len) * tab_->len;
 	tab_->nbr = (tgetnum("co") / tab_->len);
 	tab_->li = tgetnum("li");
 }

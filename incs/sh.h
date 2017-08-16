@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/16 18:06:49 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/16 21:28:54 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void				complete_path(t_read **read_std, char *to_find);
 void				complete_binary(t_read **read_std);
 void				continue_completion(t_read **read_std);
 int					print_tab_(t_tab *tab_);
+int					print_element(t_file *file);
 void				create_comp(t_read **read_std, char *str);
 void				init_files(t_file **file, char *name, unsigned char type, int index);
 void				completion(t_read **read_std);

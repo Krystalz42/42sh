@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 06:58:08 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/16 18:34:32 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/16 21:32:38 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int			my_togoto(int li, int co)
 	if (li >= 0)
 		while (li)
 		{
-			insert_one_line();
+			MV_BOT;
 			li--;
 		}
 	if (co >= 0)
@@ -51,7 +51,7 @@ int			print_element(t_file *file)
 {
 	my_togoto(file->ms.y, file->ms.x);
 	STR(file->name);
-	my_tobackto(file->ms.y, file->ms.x2);
+	my_tobackto(file->ms.y, file->ms.x + 100);
 	return (1);
 }
 
@@ -64,13 +64,12 @@ int			print_tab_(t_tab *tab_)
 	while (tmp)
 	{
 		(tmp->index == tab_->index) ? P_INV_FD(init_fd()) : P_RST_FD(init_fd());
-		tmp->ms.y = (tmp->index / tab_->nbr);
-		tmp->ms.x= (tmp->index % tab_->nbr) * tab_->len;
-		tmp->ms.x2 = (tmp->index + 1 % tab_->nbr) * tab_->len;
+		tmp->ms.y = ((tmp->index / tab_->nbr));
+		tmp->ms.x= ((tmp->index % tab_->nbr) * tab_->len % tab_->co);
+		tmp->ms.x2 = (tmp->index + 1) * tab_->len;
 		print_element(tmp);
 		tmp = tmp->next;
 	}
-	tab_->index++;
 	MV_TOP;
 	return (1);
 }
