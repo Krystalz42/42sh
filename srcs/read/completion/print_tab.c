@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 06:58:08 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/16 21:32:38 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/17 02:07:51 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ int			my_togoto(int li, int co)
 int			print_element(t_file *file)
 {
 	my_togoto(file->ms.y, file->ms.x);
-	STR(file->name);
-	my_tobackto(file->ms.y, file->ms.x + 100);
+	STR_FD(file->name, init_fd());
+	my_tobackto(file->ms.y, file->ms.x + 20);
 	return (1);
 }
 

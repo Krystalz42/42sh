@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:48:03 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/16 20:24:23 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/17 02:07:19 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 void		create_comp(t_read **read_std, char *str)
 {
 	DIR					*dir;
-	struct dirent		*repo;
+	struct dirent		*repo = 0;
 	int					index;
-//	char				*str;
 
 	index = 0;
 	if (!str)
@@ -36,4 +35,5 @@ void		create_comp(t_read **read_std, char *str)
 					init_files(&((*read_std)->comp->tab_->file), repo->d_name, repo->d_type, index++);
 		(*read_std)->comp->tab_->element = index;
 	}
+	closedir(dir);
 }

@@ -68,6 +68,8 @@ t_read			*read_stdin(void)
 	set_termios(SET_OUR_TERM);
 	while ((c = -1) && read(STDIN_FILENO, &(buff[++i]), sizeof(char)))
 	{
+		if (buff[0] == 10)
+			exit(2);
 		if (PRINT_KEY(buff[0]))
 			key_print_(&read_std, buff[0]) && init_buff(buff, &i);
 		while (compare_key[++c].key)

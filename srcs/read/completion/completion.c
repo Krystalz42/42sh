@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 16:11:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/16 18:34:39 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/17 01:55:05 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,12 @@ void		completion(t_read **read_std)
 	{
 		tmp = ft_strjoin("./", to_find);
 		ft_strdel(&to_find);
-		to_find = tmp;
+		complete_path(read_std, tmp);
+		ft_strdel(&tmp);
 	}
-	complete_path(read_std, to_find);
+	else
+	{
+		complete_path(read_std, to_find);
+		ft_strdel(&to_find);
+	}
 }
