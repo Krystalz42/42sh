@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/16 21:28:54 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/17 21:32:13 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@
 #include <stdbool.h>
 #include <sys/types.h>
 #include <dirent.h>
+
+//DEBUG
+int fdb;
 
 int					shell(void);
 void				insert_one_line(void);
@@ -48,12 +51,13 @@ void				restore_cursor_(t_cursor cur);
 */
 
 void				init_completion(t_read **read_std);
-void				complete_path(t_read **read_std, char *to_find);
+void				complete_path(t_read **read_std, t_path f);
 void				complete_binary(t_read **read_std);
 void				continue_completion(t_read **read_std);
-int					print_tab_(t_tab *tab_);
+void				complete_command(t_read **read_std);
+int					print_tab_(t_read **read_std);
 int					print_element(t_file *file);
-void				create_comp(t_read **read_std, char *str);
+void				create_comp(t_read **read_std, t_path f);
 void				init_files(t_file **file, char *name, unsigned char type, int index);
 void				completion(t_read **read_std);
 
@@ -101,7 +105,13 @@ int					init_fd(void);
 int					init_term(void);
 
 /*
-**					ERROR FUNCTION
+**				FUNCTION MEMDEL STRUCTURE
+*/
+
+int					memdel_completion(t_completion **comp);
+
+/*
+**				ERROR FUNCTION
 */
 
 int					bip(void);

@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:23:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/16 21:20:18 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/17 22:30:40 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void			init_tab_(t_tab *tab_)
 	tab_->li = tgetnum("li");
 }
 
-void		complete_path(t_read **read_std, char *str)
+void		complete_path(t_read **read_std, t_path f)
 {
 	t_cmd		*tmp;
 
@@ -38,11 +38,11 @@ void		complete_path(t_read **read_std, char *str)
 		return ;
 	if (!((*read_std)->comp->tab_ = (t_tab *)ft_memalloc(sizeof(t_tab))))
 		return ;
+	(*read_std)->comp->from = ft_strdup(f.to_comp);
 	(*read_std)->comp->tab_->file = NULL;
-	create_comp(read_std, str);
-	(*read_std)->completion = 2;
+	create_comp(read_std, f);
 	init_tab_((*read_std)->comp->tab_);
-	print_tab_((*read_std)->comp->tab_);
+	print_tab_(read_std);
 	tmp = first_cmd((*read_std)->cmd, (*read_std)->history);
 	restore_cursor_((*read_std)->cur);
 	print_list(1, tmp, (*read_std)->cmd);

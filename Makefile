@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/16 17:48:53 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/17 18:46:48 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,7 @@ SRCS = \
 	   term/init_term.c										\
 	   term/set_term.c										\
 	   term/keep_term_struct.c								\
+	   memdel_struct/memdel_completion.c					\
 	   error_function/bip.c									\
 
 # ---------------------------------------------------------------------------- #

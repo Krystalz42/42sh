@@ -6,12 +6,26 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/13 08:05:31 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/17 18:34:44 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUCT_H
 # define STRUCT_H
+
+/*
+**			STRUCT FOR COMPLETION'S PATH
+*/
+
+typedef struct		s_path
+{
+	char			*path;
+	char			*to_comp;
+}					t_path;
+
+/*
+**			STRUCT FOR ENVIRONEMENT
+*/
 
 typedef struct		s_env
 {
@@ -20,12 +34,19 @@ typedef struct		s_env
 	struct s_env	*next;
 }					t_env;
 
+/*
+**			STRUCT FOR MOUSE 
+*/
+
 typedef struct		s_mouse
 {
 	int						x;
-	int						x2;
 	int						y;
 }					t_mouse;
+
+/*
+**			STRUCT FOR COMMAND
+*/
 
 typedef struct		s_cmd
 {
@@ -34,6 +55,10 @@ typedef struct		s_cmd
 	struct s_cmd	*next;
 	struct s_cmd	*prev;
 }					t_cmd;
+
+/*
+**			STRUCT FOR COMPLETION'S ARGUMENT
+*/
 
 typedef struct		s_file
 {
@@ -44,6 +69,10 @@ typedef struct		s_file
 	struct s_file	*next;
 	t_mouse			ms;
 }					t_file;
+
+/*
+**			STRUCT FOR COMPLETION'S TAB
+*/
 
 typedef struct		s_tab
 {
@@ -56,18 +85,31 @@ typedef struct		s_tab
 	int				nbr;
 }					t_tab;
 
+/*
+**			STRUCT FOR COMPLETION
+*/
+
 typedef struct		s_completion
 {
 	int				fd;
 	t_tab			*tab_;
+	char			*from;
 	int				element;
 }					t_completion;
+
+/*
+**			STRUCT FOR CURSOR
+*/
 
 typedef struct		s_cursor
 {
 	int				line;
 	int				co;
 }					t_cursor;
+
+/*
+**			STRUCT FOR READ_STD
+*/
 
 typedef struct		s_read
 {
@@ -78,12 +120,14 @@ typedef struct		s_read
 	int				history;
 }					t_read;
 
+/*
+**			STRUCT FOR COMPARE KEY
+*/
+
 typedef struct		s_cmp
 {
 	char			*key;
 	int				(*function)(t_read **read_std);
-	size_t			len;
 }					t_cmp;
-
 
 #endif

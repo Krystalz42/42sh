@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 16:11:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/17 01:55:05 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/17 22:28:06 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,22 +42,45 @@ char		*list_to_str(t_cmd *cmd)
 	return (str);
 }
 
+char		*get_last_word(char *path)
+{
+	int		i;
+	int		s;
+	char	*tmp;
+
+	s = -1;
+	tmp = NULL;
+	if ((i = -1) && path)
+	{
+		while (path[++i])
+			if (path[i] == '/')
+				s = i;
+		if (i - s - 1 > 0)
+		{
+			tmp = ft_strdup(path + s + 1);
+			while (path[++s])
+				path[s] = '\0';
+		}
+	}
+	return (tmp);
+}
+
 void		completion(t_read **read_std)
 {
-	char		*to_find;
-	char		*tmp;
+	t_path		f;
+	char 		*tmp;
 
-	to_find = list_to_str((*read_std)->cmd);
-	if (to_find && (to_find[0] != '.' || to_find[0] != '/'))
+	f.path = NULL;
+	f.to_comp = NULL;
+	f.path = list_to_str((*read_std)->cmd);
+	if (f.path && (f.path[0] != '.' || f.path[0] != '/'))
 	{
-		tmp = ft_strjoin("./", to_find);
-		ft_strdel(&to_find);
-		complete_path(read_std, tmp);
-		ft_strdel(&tmp);
+		tmp = ft_strjoin("./", f.path);
+		ft_strdel(&f.path);
+		f.path = tmp;
 	}
-	else
-	{
-		complete_path(read_std, to_find);
-		ft_strdel(&to_find);
-	}
+	f.to_comp = get_last_word(f.path);
+	complete_path(read_std, f);
+	ft_memdel((void **)&(f.path));
+	ft_memdel((void **)&(f.to_comp));
 }
