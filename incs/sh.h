@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 14:16:45 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 15:25:22 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ void				insert_one_line(void);
 */
 
 t_read				*read_stdin(void);
+int 				prompt(unsigned char flags, char *str);
+int					convert_to_cursor(t_read *read_std, int i);
 t_cmd				*create_element(char c);
 int					print_struct(t_read *read_std);
 int					my_put(int c);

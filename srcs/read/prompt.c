@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_tabulation.c                                   :+:      :+:    :+:   */
+/*   prompt.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/12 17:39:56 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 14:19:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/19 14:22:37 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/19 14:55:45 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			key_tab(t_read **read_std)
+
+
+int 			prompt(unsigned char flags, char *str)
 {
-	if ((*read_std)->completion)
-	{
-		(*read_std)->completion++;
-		continue_completion(read_std);
-	}
-	else
-	{
-		init_completion(read_std);
-	}
-	return (1);
+	static char		*prompt;
+
+	if (flags & HEREDOC)
+		prompt = "heredoc > ";
+	else if (flags & DQUOTE)
+		prompt = "dquote > ";
+	else if (flags & QUOTE)
+		prompt = "quote > ";
+	else if (flags & NEXTCMD)
+		prompt = "nextcmd > ";
+	else if (flags & DEFAULT)
+		prompt = str;
+	if (!(flags & PRINT))
+		STR_FD(prompt, init_fd());
+	return (ft_strlen(prompt));
 }

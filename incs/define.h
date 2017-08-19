@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 23:25:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/13 08:32:58 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 15:55:12 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,13 @@
 
 # define SET_OLD_TERM	1
 # define SET_OUR_TERM	2
+
+# define PRINT			0	
+# define HEREDOC		1
+# define DQUOTE			2
+# define QUOTE			4
+# define NEXTCMD		8
+# define DEFAULT		16
 
 /*
 **			INITIALIZATION READ

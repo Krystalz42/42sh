@@ -49,8 +49,7 @@ t_read					*init_struct_for_read(void)
 		return (NULL);
 	if (!(read_std->cmd = create_element('\0')))
 		return (NULL);
-	read_std->cmd->s = 1;
-	read_std->cur.co = tgetnum("co");
+	convert_to_cursor(read_std, prompt(DEFAULT | PRINT, "&> "));
 	return (read_std);
 }
 

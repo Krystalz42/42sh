@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/19 13:13:41 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/19 16:13:07 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,7 @@ SRCS = \
 	   read/key_clear.c										\
 	   read/my_put.c										\
 	   read/first_cmd.c										\
+	   read/prompt.c										\
 	   read/completion/init_completion.c					\
 	   read/completion/print_tab.c							\
 	   read/completion/complete_path.c						\
