@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/17 18:34:44 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 22:33:06 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,7 @@ typedef struct		s_read
 	int				completion;
 	t_cursor		cur;
 	int				history;
+	int				finish;
 }					t_read;
 
 /*

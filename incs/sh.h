@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 20:30:03 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 22:36:20 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int					my_put(int c);
 t_cmd				*first_cmd(t_cmd *cmd, int history);
 int					print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_read *read_std);
 void				restore_cursor_(t_cursor cur);
+int					check_cmd(t_read **read_std);
 
 
 /*
