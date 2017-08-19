@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:48:03 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/17 18:27:50 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 13:03:15 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,6 @@ void		create_comp(t_read **read_std, t_path f)
 	int					index;
 
 	index = 0;
-	STR_FD("CREATE_COMP", fdb);
-	CHAR_FD(10, fdb);
-	STR_FD(f.path, fdb);
-	CHAR_FD(10, fdb);
-	STR_FD(f.to_comp, fdb);
-	CHAR_FD(10, fdb);
 	if (!f.path)
 	{
 		if ((dir = opendir(".")))

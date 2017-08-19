@@ -73,7 +73,8 @@ t_read			*read_stdin(void)
 			if (!ft_strcmp(compare_key[c].key, buff) && init_buff(buff, &i))
 				compare_key[c].function(&read_std);
 		(i == 5) && init_buff(buff, &i);
-		(!read_std->completion) ? print_struct(read_std) && memdel_completion(&(read_std->comp)) : (read_std->completion -= 1);
+		(read_std->completion) && (--read_std->completion);
+		(!read_std->completion) && print_struct(read_std) && memdel_completion(&(read_std->comp));
 	}
 	set_termios(SET_OLD_TERM);
 	return (read_std);

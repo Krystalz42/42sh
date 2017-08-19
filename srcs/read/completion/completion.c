@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 16:11:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/17 22:28:06 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 13:08:44 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,15 @@ int			len_cmd(t_cmd **cmd)
 	return (i);
 }
 
-char		*list_to_str(t_cmd *cmd)
+char		*list_to_str(t_read **read_std, t_cmd *cmd)
 {
 	int		i;
 	int		len;
 	char	*str;
 
 	if (!(len = len_cmd(&cmd)))
+		return (NULL);
+	if (len == 1 && cmd && cmd->c == '.' && key_print_(read_std, '/'))
 		return (NULL);
 	if (!(str = (char *)ft_memalloc(sizeof(char) * (len + 1))))
 		return (NULL);
@@ -72,8 +74,8 @@ void		completion(t_read **read_std)
 
 	f.path = NULL;
 	f.to_comp = NULL;
-	f.path = list_to_str((*read_std)->cmd);
-	if (f.path && (f.path[0] != '.' || f.path[0] != '/'))
+	f.path = list_to_str(read_std, (*read_std)->cmd);
+	if (f.path && (f.path[0] != '.' && f.path[0] != '/'))
 	{
 		tmp = ft_strjoin("./", f.path);
 		ft_strdel(&f.path);

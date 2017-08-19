@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/17 21:32:13 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 14:16:45 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,16 @@ void				restore_cursor_(t_cursor cur);
 **				FUNCTION FOR COMPLETION
 */
 
+void				add_little_char(unsigned char type);
 void				init_completion(t_read **read_std);
 void				complete_path(t_read **read_std, t_path f);
 void				complete_binary(t_read **read_std);
 void				continue_completion(t_read **read_std);
 void				complete_command(t_read **read_std);
 int					print_tab_(t_read **read_std);
-int					print_element(t_file *file);
+int					print_element(t_file *file, int color);
 void				create_comp(t_read **read_std, t_path f);
+void				color_completion(unsigned char type, int color);
 void				init_files(t_file **file, char *name, unsigned char type, int index);
 void				completion(t_read **read_std);
 

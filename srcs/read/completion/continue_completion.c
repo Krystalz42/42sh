@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:40:22 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/17 21:20:41 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 14:17:52 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ void			continue_completion(t_read **read_std)
 				(*read_std)->comp->tab_->index = 0;
 			else 
 				(*read_std)->comp->tab_->index++;
-			print_element(tmp);
+			print_element(tmp, 1);
 			tmp = tmp->next;
 			P_INV_FD(init_fd());
 			if ((*read_std)->comp->tab_->index)
-				print_element(tmp);
+				print_element(tmp, 0);
 			else
-				print_element((*read_std)->comp->tab_->file);
+				print_element((*read_std)->comp->tab_->file, 0);
 			P_RST_FD(init_fd());
 			break;
 		}
