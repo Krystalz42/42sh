@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:23:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 12:37:24 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 18:00:09 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,5 @@ void		complete_path(t_read **read_std, t_path f)
 	print_tab_(read_std);
 	tmp = first_cmd((*read_std)->cmd, (*read_std)->history);
 	restore_cursor_((*read_std)->cur);
-	print_list(1, tmp, (*read_std)->cmd);
+	print_list(1, tmp, (*read_std)->cmd, (*read_std));
 }

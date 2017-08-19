@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 23:25:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 15:55:12 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 20:25:11 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,6 @@
 # define CURSOR_BACK		tputs(tgetstr("ve", 0), 0, &my_put)
 # define CLEAR_FROM_CUR		tputs(tgetstr("cd", 0), 0, &my_put)
 # define BACK_N				tputs(tgetstr("cr", 0), 0, &my_put)
+# define CLEAR				tputs(tgetstr("cl", 0), 0, &my_put)
 
 #endif

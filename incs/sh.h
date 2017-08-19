@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 15:25:22 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 20:30:03 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ t_cmd				*create_element(char c);
 int					print_struct(t_read *read_std);
 int					my_put(int c);
 t_cmd				*first_cmd(t_cmd *cmd, int history);
-int					print_list(int to_select, t_cmd *cmd, t_cmd *stop);
+int					print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_read *read_std);
 void				restore_cursor_(t_cursor cur);
 
 
@@ -88,6 +88,7 @@ int					shift_down_key(t_read **read);
 int					shift_left_key(t_read **read);
 int					shift_right_key(t_read **read);
 int					end_key(t_read **read_std);
+int					delete_char_here(t_read **read_std);
 
 /*
 **				ENVIRONEMENT FUNCTION

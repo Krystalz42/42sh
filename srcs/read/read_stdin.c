@@ -19,7 +19,7 @@ t_cmp		compare_key[] = {
 	(t_cmp){CLEAR_KEY, key_clear_},
 	(t_cmp){HOME_KEY, home_key},
 	(t_cmp){END_KEY, end_key},
-	(t_cmp){DEL_KEY, del_key},
+	(t_cmp){DEL_KEY, delete_char_here},
 	(t_cmp){PAGE_UP, del_key},
 	(t_cmp){PAGE_DOWN, del_key},
 	(t_cmp){ARROW_DOWN, arrow_down},
@@ -49,7 +49,7 @@ t_read					*init_struct_for_read(void)
 		return (NULL);
 	if (!(read_std->cmd = create_element('\0')))
 		return (NULL);
-	convert_to_cursor(read_std, prompt(DEFAULT | PRINT, "&> "));
+	read_std->cur.co = prompt(DEFAULT | PRINT, "&> ");
 	return (read_std);
 }
 

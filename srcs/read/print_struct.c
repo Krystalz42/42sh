@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 05:32:01 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 16:33:11 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/19 20:29:07 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,35 +25,25 @@ void		restore_cursor_(t_cursor cur)
 	}
 }
 
-int			print_list(int to_select, t_cmd *cmd, t_cmd *stop)
+int			print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_read *read_std)
 {
-	int			i;
-
-	i = prompt(PRINT, NULL);
-	if (to_select)
-		while (cmd && cmd->c && cmd != stop)
-		{
-			CHAR_FD(cmd->c, init_fd());
-			cmd = cmd->next;
-			i++;
-		}
-	else
-		while (cmd && cmd->c)
-		{
-			CHAR_FD(cmd->c, init_fd());
-			cmd = cmd->next;
-			i++;
-		}
-	return (i);
-}
-
-int			convert_to_cursor(t_read *read_std, int i)
-{
-	int				co;
+	int			co;
 
 	co = tgetnum("co");
-	read_std->cur.line += (co) ? i / (co) : 0;
-	read_std->cur.co += co;
+	read_std->cur.co = prompt(PRINT, NULL);
+	read_std->cur.line = 1;
+	while ((!to_select && cmd && cmd->c) || (to_select && cmd != stop))
+	{
+		if (cmd->c == 10 || read_std->cur.co == co)
+		{
+			insert_one_line();
+			read_std->cur.line += 1;
+			read_std->cur.co = 0;
+		}
+		(cmd->c != 10) ? CHAR_FD(cmd->c, init_fd()):0;
+		cmd = cmd->next;
+		read_std->cur.co++;
+	}
 	return (1);
 }
 
@@ -67,13 +57,15 @@ int			print_struct(t_read *read_std)
 {
 	t_cmd		*cmd;
 
+	CURSOR_INVIS;
 	cmd = first_cmd(read_std->cmd, read_std->history);
 	restore_cursor_(read_std->cur);
 	CLEAR_FROM_CUR;
 	reset_cur(read_std);
-	convert_to_cursor(read_std, print_list(0, cmd, read_std->cmd));
+	print_list(0, cmd, read_std->cmd, read_std);
 	restore_cursor_(read_std->cur);
 	reset_cur(read_std);
-	convert_to_cursor(read_std, print_list(1, cmd, read_std->cmd));
+	print_list(1, cmd, read_std->cmd, read_std);
+	CURSOR_BACK;
 	return (1);
 }
