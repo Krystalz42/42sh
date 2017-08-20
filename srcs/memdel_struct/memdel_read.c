@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_cmd.c                                        :+:      :+:    :+:   */
+/*   memdel_read.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/13 05:46:50 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 10:52:59 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/20 10:52:17 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/20 11:26:47 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-t_cmd			*first_cmd(t_cmd *cmd, int history)
+int			memdel_cmd(t_cmd **cmd)
 {
-	if (cmd)
-		while (cmd->next)
-			cmd = cmd->next;
-	while (cmd->prev)
+	t_cmd *tmp;
+
+	while ((*cmd) && (*cmd)->prev)
+		(*cmd) = (*cmd)->prev;
+	while ((*cmd))
 	{
-		if (!history && cmd->prev->c == 10)
-			return (cmd);
-		cmd = cmd->prev;
+		tmp = (*cmd);
+		(*cmd) = (*cmd)->next;
+		free(tmp);
 	}
-	return (cmd);
+	(*cmd) = NULL;
+	return (1);
+}
+
+int			memdel_read(t_read **read_std)
+{	
+	memdel_cmd(&((*read_std)->cmd));
+	memdel_completion(&((*read_std)->comp));
+	ft_memdel((void **)read_std);	
+	return (1);
 }

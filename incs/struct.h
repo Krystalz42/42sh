@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 22:33:06 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/20 16:55:45 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ typedef struct		s_file
 	int				select;
 	int				index;
 	struct s_file	*next;
+	struct s_file	*prev;
 	t_mouse			ms;
 }					t_file;
 
@@ -94,7 +95,6 @@ typedef struct		s_completion
 	int				fd;
 	t_tab			*tab_;
 	char			*from;
-	int				element;
 }					t_completion;
 
 /*

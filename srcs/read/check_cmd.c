@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 21:05:29 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 22:36:15 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/20 11:36:23 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,13 @@ int			check_cmd(t_read **read_std)
 {
 	t_cmd *tmp;
 
-	if ((tmp = rec_brackets(first_cmd((*read_std)->cmd, 0), '\0'), fdb))
+	if ((tmp = rec_brackets(first_cmd((*read_std)->cmd, 1), '\0'), fdb))
 		;
 	if (tmp)	
-		(*read_std)->finish = 1;
-	else if (!keep_this_char(-1))
+		return ((*read_std)->finish = 1);
+	key_print_(read_std, 10);
+	insert_one_line();
+	if (!keep_this_char(-1))
 		prompt(NEXTCMD, NULL);
 	else if (keep_this_char(-1) == '\'')
 		prompt(QUOTE, NULL);

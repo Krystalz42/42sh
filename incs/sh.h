@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 22:36:20 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/20 16:43:01 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,10 @@ int					check_cmd(t_read **read_std);
 **				FUNCTION FOR COMPLETION
 */
 
+void				back_completion(t_read **read_std);
 void				add_little_char(unsigned char type);
+void				to_up(t_read **read_std, int d, int to_p);
+int					to_down(t_read **read_std);
 void				init_completion(t_read **read_std);
 void				complete_path(t_read **read_std, t_path f);
 void				complete_binary(t_read **read_std);
@@ -115,6 +118,8 @@ int					init_term(void);
 */
 
 int					memdel_completion(t_completion **comp);
+int					memdel_read(t_read **read_std);
+int					memdel_cmd(t_cmd **cmd);
 
 /*
 **				ERROR FUNCTION

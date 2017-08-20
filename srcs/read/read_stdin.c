@@ -34,10 +34,12 @@ t_cmp		compare_key[] = {
 	(t_cmp){NULL, NULL}
 };
 
-int				init_buff(char *buff, int *i)
+int				init_buff(char *buff, int *i, t_read **read_std)
 {
 	ft_bzero(buff, LEN_BUFFER);
 	*i = -1;
+	((*read_std)->completion) && (--(*read_std)->completion);
+	(!(*read_std)->completion) && print_struct((*read_std)) && memdel_completion(&((*read_std)->comp));
 	return (1);
 }
 
@@ -62,19 +64,19 @@ t_read			*read_stdin(void)
 	
 	if (!(read_std = init_struct_for_read()))
 		return (NULL);
-	init_buff(buff, &i);
+	init_buff(buff, &i, &read_std);
 	set_termios(SET_OUR_TERM);
 	while ((c = -1) && read(STDIN_FILENO, &(buff[++i]), sizeof(char)))
 	{
 		if (PRINT_KEY(buff[0]))
-			key_print_(&read_std, buff[0]) && init_buff(buff, &i);
+			key_print_(&read_std, buff[0]) && init_buff(buff, &i, &read_std);
 		while (compare_key[++c].key)
-			if (!ft_strcmp(compare_key[c].key, buff) && init_buff(buff, &i))
-				compare_key[c].function(&read_std);
-		(i == 5) && init_buff(buff, &i);
-		(read_std->completion) && (--read_std->completion);
-		(!read_std->completion) && print_struct(read_std) && memdel_completion(&(read_std->comp));
+			if (!ft_strcmp(compare_key[c].key, buff))
+				compare_key[c].function(&read_std) && init_buff(buff, &i, &read_std);
+		if ((read_std)->finish)
+			break ; 
 	}
 	set_termios(SET_OLD_TERM);
+	memdel_read(&read_std);
 	return (read_std);
 }

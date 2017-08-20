@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/19 21:14:24 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/20 14:16:29 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ SRCS = \
 	   read/completion/create_comp.c						\
 	   read/completion/init_files.c							\
 	   read/completion/completion.c							\
+	   read/completion/up_or_down.c							\
 	   env/split.c											\
 	   env/init_env.c										\
 	   env/my_getenv.c										\
@@ -85,6 +86,7 @@ SRCS = \
 	   term/set_term.c										\
 	   term/keep_term_struct.c								\
 	   memdel_struct/memdel_completion.c					\
+	   memdel_struct/memdel_read.c							\
 	   error_function/bip.c									\
 
 # ---------------------------------------------------------------------------- #
@@ -217,6 +219,9 @@ leaks		:
 
 leaks1		:
 	while true ; do leaks $(NAME) ; sleep 3 ; clear ; done
+
+log			:
+	while true ; do cat logger ; sleep 2 ; clear ; done
 
 # ---------------------------------------------------------------------------- #
 #						 	/!\ PRIVATE RULES /!\							   #
