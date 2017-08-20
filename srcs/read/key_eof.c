@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/12 17:38:25 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/12 17:38:50 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/20 19:41:02 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 int			key_eof(t_read **read_std)
 {
 	(void)read_std;
+	exit(EXIT_SUCCESS);
 	return (1);
 }

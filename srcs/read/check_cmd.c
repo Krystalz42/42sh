@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 21:05:29 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 11:36:23 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/20 19:38:17 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,15 @@ char			keep_this_char(char c)
 
 t_cmd			*rec_brackets(t_cmd *cmd, char c)
 {
-	keep_this_char(c);
 	while (cmd)
 	{
 		if (cmd->prev && cmd->prev->c == '\\')
 		{
 			cmd = cmd->next;
+			keep_this_char('\\');
 			continue ;
 		}
+		keep_this_char(c);
 		if (cmd->c == c)
 			return ((c) ? cmd->next : cmd);
 		if ((cmd->c == '\'' || cmd->c == '\"') && c == '\0')
@@ -55,7 +56,10 @@ int			check_cmd(t_read **read_std)
 		return ((*read_std)->finish = 1);
 	key_print_(read_std, 10);
 	insert_one_line();
-	if (!keep_this_char(-1))
+	restore_cursor_((*read_std)->cur);
+	end_key(read_std);
+	print_list(1, first_cmd((*read_std)->cmd, 0), (*read_std)->cmd, (*read_std));
+	if (keep_this_char(-1) == '\\')
 		prompt(NEXTCMD, NULL);
 	else if (keep_this_char(-1) == '\'')
 		prompt(QUOTE, NULL);

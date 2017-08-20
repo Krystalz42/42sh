@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/12 17:41:21 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 10:59:49 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/20 19:25:39 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,7 @@ int			key_enter_(t_read **read_std)
 	}
 	else
 	{
-		if (check_cmd(read_std))
-			;
+		check_cmd(read_std);
 	}
 	return (1);
 }

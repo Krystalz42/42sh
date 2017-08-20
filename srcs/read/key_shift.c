@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/11 06:34:02 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 17:32:28 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/20 19:54:53 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,53 @@
 int		shift_up_key(t_read **read_std)
 {
 	int		co;
-	int		save;
 
 	co = tgetnum("co");
-	save = co;
 	if (co)
 		while (co-- && (*read_std)->cmd->prev)
 		{
 			if (!(*read_std)->history && (*read_std)->cmd->prev->c == 10)
 				break ;
-			(!(*read_std)->cur.co) && ((*read_std)->cur.line--); 
-			(!(*read_std)->cur.co) && ((*read_std)->cur.co = save);
 			(*read_std)->cmd = (*read_std)->cmd->prev;
 		}
-
 	return (1);
 }
 
 int		shift_down_key(t_read **read_std)
 {
-	STR("SHIFT DO\n");
-	(void)read_std;
+	int		co;
+
+	co = tgetnum("co");
+	if (co)
+		while (co-- && (*read_std)->cmd->next)
+			(*read_std)->cmd = (*read_std)->cmd->next;
 	return (1);
 }
 
 int		shift_left_key(t_read **read_std)
 {
-	STR("SHIFT LE\n");
-	(void)read_std;
+	while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c == 32)
+		(*read_std)->cmd = (*read_std)->cmd->prev;
+	while ((*read_std)->cmd->prev)
+	{
+		if ((*read_std)->cmd->prev->c == 32)
+			break;
+		(*read_std)->cmd = (*read_std)->cmd->prev;
+	}
 	return (1);
 }
 
 int		shift_right_key(t_read **read_std)
 {
-	STR("SHIFT RI\n");
-	(void)read_std;
+
+	while ((*read_std)->cmd)
+	{
+		if ((*read_std)->cmd->c == 32)
+			break;
+		(*read_std)->cmd = (*read_std)->cmd->next;
+	}
+	while ((*read_std)->cmd && (*read_std)->cmd->c == 32)
+		(*read_std)->cmd = (*read_std)->cmd->next;
 	return (1);
 }
 
