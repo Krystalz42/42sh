@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/11 03:27:42 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 16:54:49 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/22 15:40:22 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,21 @@ int			arrow_right(t_read **read_std)
 {
 	if ((*read_std)->completion)
 	{
-		continue_completion(read_std);
+		NBR_FD((*read_std)->comp->tab_->index, fdb);
+		CHAR_FD(32,fdb);
+		NBR_FD((*read_std)->comp->tab_->element, fdb);
+		CHAR_FD(32,fdb);
+		NBR_FD((*read_std)->comp->tab_->elem_page, fdb);
+		CHAR_FD(10,fdb);
+		if ((*read_std)->comp->tab_->index / ((*read_std)->comp->tab_->elem_page - 1) != (*read_std)->comp->tab_->page)
+		{
+			(*read_std)->comp->tab_->index++;
+			reprint_cmd(read_std, 1);
+			print_tab_(read_std);
+			reprint_cmd(read_std, 0);
+		}
+		else 
+			continue_completion(read_std);
 		(*read_std)->completion++;
 	}
 	else

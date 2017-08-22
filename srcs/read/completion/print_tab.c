@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 06:58:08 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 14:38:41 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/22 15:45:27 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,12 @@ int			print_tab_(t_read **read_std)
 		complete_command(read_std);
 	else if (init_page(read_std, &tmp))
 	{
+		STR_FD(tmp->name, fdb);
 		while (tmp && tmp->index < ((*read_std)->comp->tab_->elem_page * ((*read_std)->comp->tab_->page + 1)) - (((*read_std)->cur.line -1 ) * (*read_std)->comp->tab_->nbr))
 		{
-			tmp->ms.y = ((tmp->index / (*read_std)->comp->tab_->nbr));
-			tmp->ms.x = ((tmp->index % (*read_std)->comp->tab_->nbr) * (*read_std)->comp->tab_->len % (*read_std)->comp->tab_->co);
+			tmp->ms.y = (((tmp->index % (*read_std)->comp->tab_->elem_page) / (*read_std)->comp->tab_->nbr));
+			tmp->ms.x = (((tmp->index % (*read_std)->comp->tab_->elem_page) 
+						% (*read_std)->comp->tab_->nbr) * (*read_std)->comp->tab_->len % (*read_std)->comp->tab_->co);
 			(tmp->index == (*read_std)->comp->tab_->index) ? print_element(tmp, 0) : print_element(tmp, 1);
 			tmp->ms.y += ((*read_std)->cur.line - (*read_std)->cur.save);
 			tmp = tmp->next;

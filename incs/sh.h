@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 10:40:13 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/22 15:38:20 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ int					check_cmd(t_read **read_std);
 **				FUNCTION FOR COMPLETION
 */
 
+int					reprint_cmd(t_read **read_std, int t);
+int					print_tab_(t_read **read_std);
 int					my_togoto(int li, int co);
 int					my_tobackto(int li, int co);
 void				back_completion(t_read **read_std);
