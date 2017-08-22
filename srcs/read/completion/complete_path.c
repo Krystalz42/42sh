@@ -6,13 +6,13 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:23:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 18:00:09 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/22 14:59:39 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-void			init_tab_(t_tab *tab_)
+int			init_tab_(t_tab *tab_, int li)
 {
 	int		len;
 	t_file	*tmp;
@@ -25,15 +25,42 @@ void			init_tab_(t_tab *tab_)
 		tmp = tmp->next;
 	}
 	tab_->len = len + 5;
-	tab_->co = (tgetnum("co") / tab_->len) * tab_->len;
+	if (!(tab_->co = (tgetnum("co") / tab_->len) * tab_->len))
+		return (0);
 	tab_->nbr = (tgetnum("co") / tab_->len);
 	tab_->li = tgetnum("li");
+	tab_->elem_page = (tab_->li - li) * tab_->nbr;
+	NBR_FD(tab_->elem_page, fdb);
+	CHAR_FD(10,fdb);
+
+	return (1);
+}
+void		rst(t_read **read_std, int to)
+{
+		restore_cursor_((*read_std)->cur);
+			print_list(to, first_cmd((*read_std)->cmd, (*read_std)->history),
+								(*read_std)->cmd, (*read_std));
+}
+
+int			reprint_cmd(t_read **read_std, int t)
+{
+	if (t)
+	{
+		(*read_std)->cur.save = (*read_std)->cur.line;
+		rst(read_std, 0);
+		insert_one_line();
+		CLEAR_FROM_CUR;
+	}
+	else
+	{
+		MV_TOP;
+		rst(read_std, 1);
+	}
+	return (1);
 }
 
 void		complete_path(t_read **read_std, t_path f)
 {
-	t_cmd		*tmp;
-
 	if (!((*read_std)->comp = (t_completion *)ft_memalloc(sizeof(t_completion))))
 		return ;
 	if (!((*read_std)->comp->tab_ = (t_tab *)ft_memalloc(sizeof(t_tab))))
@@ -41,9 +68,10 @@ void		complete_path(t_read **read_std, t_path f)
 	(*read_std)->comp->from = ft_strdup(f.to_comp);
 	(*read_std)->comp->tab_->file = NULL;
 	create_comp(read_std, f);
-	init_tab_((*read_std)->comp->tab_);
-	print_tab_(read_std);
-	tmp = first_cmd((*read_std)->cmd, (*read_std)->history);
-	restore_cursor_((*read_std)->cur);
-	print_list(1, tmp, (*read_std)->cmd, (*read_std));
+	if (!(init_tab_((*read_std)->comp->tab_, (*read_std)->cur.line)))
+	{
+		(*read_std)->completion--;
+		return ;
+	}
+	reprint_cmd(read_std, 1) && print_tab_(read_std) && reprint_cmd(read_std, 0);
 }

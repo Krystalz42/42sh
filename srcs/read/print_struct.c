@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 05:32:01 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 19:47:24 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/22 15:03:01 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,16 @@ int			print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_read *read_std)
 			read_std->cur.co = 0;
 		}
 		(cmd->c != 10) ? CHAR_FD(cmd->c, init_fd()): 0 ;
+		read_std->cur.co += (cmd->c == 9) ? 4 : 1;
 		cmd = cmd->next;
-		read_std->cur.co++;
 	}
 	return (1);
 }
 
 int	reset_cur(t_read *read_std)
 {
-	read_std->cur = (t_cursor){0, 0};
+	read_std->cur.line = 0;
+	read_std->cur.co = 0;
 	return (1);
 }
 

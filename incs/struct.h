@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 16:55:45 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/22 14:05:21 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ typedef struct		s_tab
 	int				li;
 	int				index;
 	int				nbr;
+	int				elem_page;
+	int				page;
 }					t_tab;
 
 /*
@@ -105,6 +107,7 @@ typedef struct		s_cursor
 {
 	int				line;
 	int				co;
+	int				save;
 }					t_cursor;
 
 /*
