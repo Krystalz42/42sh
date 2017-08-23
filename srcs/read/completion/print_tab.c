@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 06:58:08 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/23 17:06:02 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/23 19:05:13 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ int			init_page(t_read **read_std, t_file **tmp)
 
 int			print_element(t_file *file, int color)
 {
-	NBR_FD(file->index, fdb);
-	CHAR_FD(10,fdb);
 	(!color) ? P_INV_FD(init_fd()) : NULL;
 	color_completion(file->type, color);
 	my_togoto(file->ms.y, file->ms.x);

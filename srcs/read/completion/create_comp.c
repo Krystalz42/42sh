@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:48:03 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 10:39:49 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/23 18:02:04 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void		create_comp(t_read **read_std, t_path f)
 				if (repo->d_name[0] != '.')
 					init_files(&((*read_std)->comp->tab_->file), repo->d_name, repo->d_type, index++);
 		(*read_std)->comp->tab_->element = index;
+		closedir(dir);
 	}
 	else
 	{
@@ -34,6 +35,6 @@ void		create_comp(t_read **read_std, t_path f)
 				if ((!f.to_comp && repo->d_name[0] != '.') || (f.to_comp && !ft_strncmp(repo->d_name, f.to_comp, ft_strlen(f.to_comp) - 1)))
 					init_files(&((*read_std)->comp->tab_->file), repo->d_name, repo->d_type, index++);
 		(*read_std)->comp->tab_->element = index;
+		closedir(dir);
 	}
-	closedir(dir);
 }

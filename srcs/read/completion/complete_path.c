@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:23:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/23 13:51:38 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/23 18:06:25 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int			init_tab_(t_tab *tab_, int li)
 		tmp = tmp->next;
 	}
 	tab_->len = len + 5;
-	if (!(tab_->co = (tgetnum("co") / tab_->len) * tab_->len))
+	if (!tab_->element || !(tab_->co = (tgetnum("co") / tab_->len) * tab_->len))
 		return (0);
 	tab_->nbr = (tgetnum("co") / tab_->len);
 	tab_->li = tgetnum("li");
@@ -65,8 +65,8 @@ void		complete_path(t_read **read_std, t_path f)
 	(*read_std)->comp->from = ft_strdup(f.to_comp);
 	(*read_std)->comp->tab_->file = NULL;
 	create_comp(read_std, f);
-	reprint_cmd(read_std, 1);
-	if (!(init_tab_((*read_std)->comp->tab_, (*read_std)->cur.line)))
+	((*read_std)->comp->tab_->element) ? reprint_cmd(read_std, 1) : bip();
+	if (!((*read_std)->comp->tab_->element && bip()) || (!(init_tab_((*read_std)->comp->tab_, (*read_std)->cur.line))))
 	{
 		(*read_std)->completion--;
 		return ;
