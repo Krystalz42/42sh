@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:23:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 23:01:12 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/23 13:51:38 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,6 @@ int			init_tab_(t_tab *tab_, int li)
 	tab_->nbr = (tgetnum("co") / tab_->len);
 	tab_->li = tgetnum("li");
 	tab_->elem_page = (tab_->li - li) * tab_->nbr;
-	NBR_FD(tab_->elem_page, fdb);
-	CHAR_FD(10,fdb);
-
 	return (1);
 }
 void		rst(t_read **read_std, int to)

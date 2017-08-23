@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/11 03:27:42 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 23:47:47 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/23 17:06:50 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,8 @@ int			arrow_up(t_read **read_std)
 {
 	if ((*read_std)->completion)
 	{
-		SAVE;
-		MV_BOT;
-		P_RST_FD(init_fd());
-		to_up(read_std, 0, 0);
+		to_up(read_std);
 		(*read_std)->completion++;
-		RESTORE;
 	}
 	else
 		;
@@ -80,12 +76,8 @@ int			arrow_down(t_read **read_std)
 {
 	if ((*read_std)->completion)
 	{
-		SAVE;
-		MV_BOT;
-		P_RST_FD(init_fd());
 		to_down(read_std);
 		(*read_std)->completion++;
-		RESTORE;
 	}
 	else
 		;

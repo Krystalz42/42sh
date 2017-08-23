@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 23:16:48 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/23 13:48:31 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int					my_togoto(int li, int co);
 int					my_tobackto(int li, int co);
 void				back_completion(t_read **read_std);
 void				add_little_char(unsigned char type);
-void				to_up(t_read **read_std, int d, int to_p);
+void				to_up(t_read **read_std);
 int					to_down(t_read **read_std);
 void				init_completion(t_read **read_std);
 void				complete_path(t_read **read_std, t_path f);
