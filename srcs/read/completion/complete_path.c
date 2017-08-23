@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:23:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 15:49:41 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/22 23:01:12 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,12 @@ void		complete_path(t_read **read_std, t_path f)
 	(*read_std)->comp->from = ft_strdup(f.to_comp);
 	(*read_std)->comp->tab_->file = NULL;
 	create_comp(read_std, f);
+	reprint_cmd(read_std, 1);
 	if (!(init_tab_((*read_std)->comp->tab_, (*read_std)->cur.line)))
 	{
 		(*read_std)->completion--;
 		return ;
 	}
-	reprint_cmd(read_std, 1) && print_tab_(read_std) && reprint_cmd(read_std, 0);
+	 print_tab_(read_std);
+	 reprint_cmd(read_std, 0);
 }

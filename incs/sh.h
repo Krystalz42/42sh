@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 15:38:20 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/22 23:16:48 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ void				create_comp(t_read **read_std, t_path f);
 void				color_completion(unsigned char type, int color);
 void				init_files(t_file **file, char *name, unsigned char type, int index);
 void				completion(t_read **read_std);
+void				update_index(t_read **read_std, int i);
 
 /*
 **				POINTER ON FUNCTION FOR READ
