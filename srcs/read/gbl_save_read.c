@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   gbl_save_read.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/23 19:25:14 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/24 15:31:38 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/27 17:46:00 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int main()
+t_cmd		*gbl_save_read(t_cmd *read_std)
 {
-	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
-	init_env();
-	init_history();
-	if (init_term())
-		return (1);
-	shell();
-	return (0);
+	static t_cmd		*save;
+
+	if (read_std)
+		save = read_std;
+	return (save);
 }

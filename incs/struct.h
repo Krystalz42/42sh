@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 14:05:21 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/23 19:54:51 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,5 +133,16 @@ typedef struct		s_cmp
 	char			*key;
 	int				(*function)(t_read **read_std);
 }					t_cmp;
+
+/*
+**			STRUCT HISTORY
+*/
+
+typedef struct		s_hist
+{
+	t_read			*hist;
+	struct s_hist	*prev;
+	struct s_hist	*next;
+}					t_hist;
 
 #endif

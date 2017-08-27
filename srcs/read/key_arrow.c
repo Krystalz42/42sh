@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/11 03:27:42 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/23 17:06:50 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/24 16:29:19 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int			arrow_up(t_read **read_std)
 		(*read_std)->completion++;
 	}
 	else
-		;
+		previous_history(read_std);
 	return (1);
 }
 
@@ -80,6 +80,6 @@ int			arrow_down(t_read **read_std)
 		(*read_std)->completion++;
 	}
 	else
-		;
+		next_history(read_std);
 	return (1);
 }

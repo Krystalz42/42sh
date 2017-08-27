@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   gbl_save_history.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/23 19:25:14 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/23 19:51:12 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/24 15:40:46 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int main()
+t_hist		*gbl_save_history(t_hist *hist)
 {
-	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
-	init_env();
-	init_history();
-	if (init_term())
-		return (1);
-	shell();
-	return (0);
+	static t_hist		*save;
+
+	if (hist)
+		save = hist;
+	return (save);
 }

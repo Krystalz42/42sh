@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/22 18:30:34 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/27 18:06:39 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,8 @@ SRCS = \
 	   read/first_cmd.c										\
 	   read/prompt.c										\
 	   read/check_cmd.c										\
+	   read/gbl_save_read.c									\
+	   read/finish_read_std.c								\
 	   read/completion/update_index.c						\
 	   read/completion/my_togo.c							\
 	   read/completion/init_completion.c					\
@@ -78,6 +80,12 @@ SRCS = \
 	   read/completion/init_files.c							\
 	   read/completion/completion.c							\
 	   read/completion/up_or_down.c							\
+	   history/init_history.c								\
+	   history/previous_history.c							\
+	   history/next_history.c								\
+	   history/make_list_hist.c								\
+	   history/gbl_save_history.c							\
+	   history/copy_cmd.c									\
 	   env/split.c											\
 	   env/init_env.c										\
 	   env/my_getenv.c										\

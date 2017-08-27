@@ -51,7 +51,7 @@ t_read					*init_struct_for_read(void)
 		return (NULL);
 	if (!(read_std->cmd = create_element('\0')))
 		return (NULL);
-	read_std->cur.co = prompt(DEFAULT | PRINT, "&> ");
+	gbl_save_read(read_std->cmd);
 	return (read_std);
 }
 
@@ -65,6 +65,7 @@ t_read			*read_stdin(void)
 	if (!(read_std = init_struct_for_read()))
 		return (NULL);
 	init_buff(buff, &i, &read_std);
+	read_std->cur.co = prompt(DEFAULT | PRINT, "&> ");
 	set_termios(SET_OUR_TERM);
 	while ((c = -1) && read(STDIN_FILENO, &(buff[++i]), sizeof(char)))
 	{
@@ -77,6 +78,6 @@ t_read			*read_stdin(void)
 			break ; 
 	}
 	set_termios(SET_OLD_TERM);
-	memdel_read(&read_std);
+	finish_read_std(&read_std);
 	return (read_std);
 }

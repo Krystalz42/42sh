@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/23 17:36:12 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/27 18:05:04 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,10 @@ int					convert_to_cursor(t_read *read_std, int i);
 t_cmd				*create_element(char c);
 int					print_struct(t_read *read_std);
 int					my_put(int c);
+t_read				*init_struct_for_read(void);
+void				make_list_hist(t_read *read_std);
 t_cmd				*first_cmd(t_cmd *cmd, int history);
+t_cmd				*gbl_save_read(t_cmd *read_std);
 int					print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_read *read_std);
 void				restore_cursor_(t_cursor cur);
 int					check_cmd(t_read **read_std);
@@ -80,7 +83,7 @@ void				update_index(t_read **read_std, int i);
 
 int					key_print_(t_read **read_std, char c);
 int					key_tab(t_read **read_std);
-
+void				finish_read_std(t_read **read_std);
 int					key_enter_(t_read **read_std);
 int					key_interrupt(t_read **read_std);
 int					key_clear_(t_read **read_std);
@@ -108,6 +111,17 @@ void				init_env(void);
 void				split_env(char *env);
 void				add_list_env(char *name, char *value);
 char				*my_getenv(char *str);
+
+/*
+**				HISTORY FUNCTION
+*/
+
+void				init_history(void);
+void				copy_cmd(t_read **read_std, t_cmd *cpy);
+t_hist				*gbl_save_history(t_hist *hist);
+void				make_list_hist(t_read *read_std);
+void				previous_history(t_read **read_std);
+void				next_history(t_read **read_std);
 
 /*
 **				TERMIOS FUNCTION
