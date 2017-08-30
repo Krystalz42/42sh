@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-t_env		*gbl_save_env(unsigned short flags, t_env *env)
+t_env		*gblSaveEnv(unsigned short flags, t_env *env)
 {
 	static t_env *save;
 

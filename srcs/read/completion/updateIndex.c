@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   update_index.c                                     :+:      :+:    :+:   */
+/*   updateIndex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,14 +12,14 @@
 
 #include <sh.h>
 
-void		update_index(t_read **read_std, int i)
+void		updateIndex(t_read **readStd, int i)
 {
-	(*read_std)->comp->tab_->index += i;
-	if ((*read_std)->comp->tab_->index >= (*read_std)->comp->tab_->element)
-		(*read_std)->comp->tab_->index = 0 + ((*read_std)->comp->tab_->index
-				% (*read_std)->comp->tab_->element);
-	else if ((*read_std)->comp->tab_->index < 0)
-		(*read_std)->comp->tab_->index = (*read_std)->comp->tab_->element +
-			((*read_std)->comp->tab_->index);
+	(*readStd)->comp->tab_->index += i;
+	if ((*readStd)->comp->tab_->index >= (*readStd)->comp->tab_->element)
+		(*readStd)->comp->tab_->index = 0 + ((*readStd)->comp->tab_->index
+				% (*readStd)->comp->tab_->element);
+	else if ((*readStd)->comp->tab_->index < 0)
+		(*readStd)->comp->tab_->index = (*readStd)->comp->tab_->element +
+			((*readStd)->comp->tab_->index);
 
 }

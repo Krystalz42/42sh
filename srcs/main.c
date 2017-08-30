@@ -14,10 +14,10 @@
 
 int main()
 {
-	init_env();
+	initEnv();
 	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
-	init_history();
-	if (init_term())
+	initHistory();
+	if (initTerm())
 		return (1);
 	shell();
 	return (0);

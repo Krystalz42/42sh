@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_files.c                                       :+:      :+:    :+:   */
+/*   initFiles.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -26,7 +26,7 @@ t_file		*init_file_(char *name, unsigned char type, int index)
 	return (element);
 }
 
-void		init_files(t_file **file, char *name, unsigned char type, int index)
+void		initFiles(t_file **file, char *name, unsigned char type, int index)
 {
 	t_file		*tmp;
 

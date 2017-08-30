@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   del_key.c                                          :+:      :+:    :+:   */
+/*   keyDel.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,20 +12,20 @@
 
 #include <sh.h>
 
-int			del_key(t_read **read_std)
+int			keyDel(t_read **readStd)
 {
 	t_cmd		*kill;
 
-	if ((*read_std)->cmd->prev)
+	if ((*readStd)->cmd->prev)
 	{
-		kill = (*read_std)->cmd->prev;
-		if ((*read_std)->cmd->prev->prev)
+		kill = (*readStd)->cmd->prev;
+		if ((*readStd)->cmd->prev->prev)
 		{
-			(*read_std)->cmd->prev->prev->next = (*read_std)->cmd;
-			(*read_std)->cmd->prev = (*read_std)->cmd->prev->prev;
+			(*readStd)->cmd->prev->prev->next = (*readStd)->cmd;
+			(*readStd)->cmd->prev = (*readStd)->cmd->prev->prev;
 		}
 		else
-			(*read_std)->cmd->prev = NULL;
+			(*readStd)->cmd->prev = NULL;
 		ft_memdel((void **)&(kill));
 	}
 	return (1);

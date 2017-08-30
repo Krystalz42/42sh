@@ -12,18 +12,18 @@
 
 #include <sh.h>
 
-void			set_termios(unsigned short flags)
+void			setTermios(unsigned short flags)
 {
 	struct termios term;
 
 	if ((flags & SET_OUR_TERM))
 	{
-		term = keep_term_struct(OUR_TERM, NULL);
+		term = keepTermStruct(OUR_TERM, NULL);
 		tcsetattr(0, TCSADRAIN, &term);
 	}
 	if ((flags & SET_OLD_TERM))
 	{
-		term = keep_term_struct(OLD_TERM, NULL);
+		term = keepTermStruct(OLD_TERM, NULL);
 		tcsetattr(0, 0, &term);
 	}
 }

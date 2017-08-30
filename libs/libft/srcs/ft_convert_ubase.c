@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_ubase.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgraille <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/07 15:40:53 by jgraille          #+#    #+#             */
-/*   Updated: 2017/01/08 20:09:12 by aroulin          ###   ########.fr       */
+/*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
+/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include <libft.h>
 #include <string.h>
 
 static char					*convert_nu(unsigned long long nb, char *base)

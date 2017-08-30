@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gbl_save_history.c                                 :+:      :+:    :+:   */
+/*   gblSaveHistory.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-t_hist		*gbl_save_history(t_hist *hist)
+t_hist		*gblSaveHistory(t_hist *hist)
 {
 	static t_hist		*save;
 

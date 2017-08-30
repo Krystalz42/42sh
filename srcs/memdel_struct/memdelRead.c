@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memdel_read.c                                      :+:      :+:    :+:   */
+/*   memdelRead.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-int			memdel_cmd(t_cmd **cmd)
+int			memdelCmd(t_cmd **cmd)
 {
 	t_cmd *tmp;
 
@@ -28,10 +28,10 @@ int			memdel_cmd(t_cmd **cmd)
 	return (1);
 }
 
-int			memdel_read(t_read **read_std)
+int			memdelRead(t_read **readStd)
 {	
-	memdel_cmd(&((*read_std)->cmd));
-	memdel_completion(&((*read_std)->comp));
-	ft_memdel((void **)read_std);	
+	memdelCmd(&((*readStd)->cmd));
+	memdelCompletion(&((*readStd)->comp));
+	ft_memdel((void **)readStd);
 	return (1);
 }

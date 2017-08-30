@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_getenv.c                                        :+:      :+:    :+:   */
+/*   myGetenv.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,11 +12,11 @@
 
 #include <sh.h>
 
-char		*my_getenv(char *str)
+char		*myGetenv(char *str)
 {
 	t_env		*env;
 
-	env = gbl_save_env(ENV_REC, NULL);
+	env = gblSaveEnv(ENV_REC, NULL);
 	if (str)
 		while (env)
 		{

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   finish_read_std.c                                  :+:      :+:    :+:   */
+/*   finishReadStd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -16,27 +16,27 @@ void		reset_history(void)
 {
 	t_hist	*tmp;
 
-	if (!(tmp = gbl_save_history(NULL)))
+	if (!(tmp = gblSaveHistory(NULL)))
 		return ;
 	while (tmp->next)
 		tmp = tmp->next;
-	gbl_save_history(tmp);
+	gblSaveHistory(tmp);
 }
 
-void		finish_read_std(t_read **read_std)
+void		finishReadStd(t_read **readStd)
 {
 	t_cmd		*tmp;
 
-	tmp = first_cmd(gbl_save_read(NULL), 1);
+	tmp = firstCmd(gblSaveRead(NULL), 1);
 	reset_history();
-	if ((*read_std)->history)
-		memdel_cmd(&tmp);
-	if ((*read_std)->finish == 2 ||
-			(!(*read_std)->cmd->c && !(*read_std)->cmd->prev))
-		memdel_read(read_std);
+	if ((*readStd)->history)
+		memdelCmd(&tmp);
+	if ((*readStd)->finish == 2 ||
+			(!(*readStd)->cmd->c && !(*readStd)->cmd->prev))
+		memdelRead(readStd);
 	else 
 	{
-		(*read_std)->finish = 0;
-		make_list_hist((*read_std));
+		(*readStd)->finish = 0;
+		makeListHist((*readStd));
 	}
 }

@@ -12,56 +12,56 @@
 
 #include <sh.h>
 
-void		to_up(t_read **read_std)
+void		toUp(t_read **readStd)
 {
 	t_file	*tmp;
 
-	tmp = (*read_std)->comp->tab_->file;
-	while (tmp->index != (*read_std)->comp->tab_->index)
+	tmp = (*readStd)->comp->tab_->file;
+	while (tmp->index != (*readStd)->comp->tab_->index)
 		tmp = tmp->next;
-	update_index(read_std, (*read_std)->comp->tab_->nbr * -1);
-	if (((*read_std)->comp->tab_->index / (*read_std)->comp->tab_->elem_page) != (*read_std)->comp->tab_->page)
+	updateIndex(readStd, (*readStd)->comp->tab_->nbr * -1);
+	if (((*readStd)->comp->tab_->index / (*readStd)->comp->tab_->elem_page) != (*readStd)->comp->tab_->page)
 	{
-		reprint_cmd(read_std, 1);
-		print_tab_(read_std);
-		reprint_cmd(read_std, 0);
+		reprintCmd(readStd, 1);
+		printTab(readStd);
+		reprintCmd(readStd, 0);
 	}
 	else
 	{
 		SAVE;
 		MV_BOT;
-		print_element(tmp, 1);
-		tmp = (*read_std)->comp->tab_->file;
-		while (tmp->index != (*read_std)->comp->tab_->index)
+		printElement(tmp, 1);
+		tmp = (*readStd)->comp->tab_->file;
+		while (tmp->index != (*readStd)->comp->tab_->index)
 			tmp = tmp->next;
-		print_element(tmp, 0);
+		printElement(tmp, 0);
 		RESTORE;
 	}
 }
 
-int			to_down(t_read **read_std)
+int			toDown(t_read **readStd)
 {
 	t_file	*tmp;
 
-	tmp = (*read_std)->comp->tab_->file;
-	while (tmp->index != (*read_std)->comp->tab_->index)
+	tmp = (*readStd)->comp->tab_->file;
+	while (tmp->index != (*readStd)->comp->tab_->index)
 		tmp = tmp->next;
-	update_index(read_std, (*read_std)->comp->tab_->nbr * 1);
-	if (((*read_std)->comp->tab_->index / (*read_std)->comp->tab_->elem_page) != (*read_std)->comp->tab_->page)
+	updateIndex(readStd, (*readStd)->comp->tab_->nbr * 1);
+	if (((*readStd)->comp->tab_->index / (*readStd)->comp->tab_->elem_page) != (*readStd)->comp->tab_->page)
 	{
-		reprint_cmd(read_std, 1);
-		print_tab_(read_std);
-		reprint_cmd(read_std, 0);
+		reprintCmd(readStd, 1);
+		printTab(readStd);
+		reprintCmd(readStd, 0);
 	}
 	else
 	{
 		SAVE;
 		MV_BOT;
-		print_element(tmp, 1);
-		tmp = (*read_std)->comp->tab_->file;
-		while (tmp->index != (*read_std)->comp->tab_->index)
+		printElement(tmp, 1);
+		tmp = (*readStd)->comp->tab_->file;
+		while (tmp->index != (*readStd)->comp->tab_->index)
 			tmp = tmp->next;
-		print_element(tmp, 0);
+		printElement(tmp, 0);
 		RESTORE;
 	}
 	return (1);

@@ -16,11 +16,11 @@ int		shell()
 {
 	addHash("ls", "/bin/ls");
 	STR(searchPath("ls"));
-	NL;
+    NL;
 	while (1)
 	{
-	read_stdin();
-	NL;
-	
+		readStdin();
+		NL;
+	}
 	return (1);
 }

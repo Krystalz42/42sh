@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_list_env.c                                     :+:      :+:    :+:   */
+/*   addListEnv.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -18,18 +18,18 @@ t_env		*init_list_env(char *name, char *value)
 
 	if (!(element = (t_env *)ft_memalloc(sizeof(t_env))))
 		return (NULL);
-	element->name = name;
+    element->name = name;
 	element->value = value;
 	element->next = NULL;
 	return (element);
 }
 
-void		add_list_env(char *name, char *value)
+void		addListEnv(char *name, char *value)
 {
 	t_env		*env;
 	
-	if (!(env = gbl_save_env(ENV_REC, NULL)))
-		gbl_save_env(ENV_INIT, init_list_env(name,value));
+	if (!(env = gblSaveEnv(ENV_REC, NULL)))
+		gblSaveEnv(ENV_INIT, init_list_env(name,value));
 	else
 	{
 		while (env->next)

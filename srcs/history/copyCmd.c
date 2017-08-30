@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   copy_cmd.c                                         :+:      :+:    :+:   */
+/*   copyCmd.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,17 +12,17 @@
 
 #include <sh.h>
 
-void			copy_cmd(t_read **read_std, t_cmd *cpy)
+void			copyCmd(t_read **readStd, t_cmd *cpy)
 {
 	t_cmd		*cmd;
 
 	cmd = NULL;
-	(*read_std)->cmd = cmd;
-	(*read_std)->cmd = create_element('\0');
-	cpy = first_cmd(cpy, 1);
+	(*readStd)->cmd = cmd;
+	(*readStd)->cmd = createElement('\0');
+	cpy = firstCmd(cpy, 1);
 	while (cpy->c)
 	{
-		key_print_(read_std, cpy->c);
+		keyPrint(readStd, cpy->c);
 		cpy = cpy->next;
 	}
 }

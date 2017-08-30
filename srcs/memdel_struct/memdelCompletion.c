@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memdel_completion.c                                :+:      :+:    :+:   */
+/*   memdelCompletion.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -18,7 +18,7 @@ void		memdel_files(t_file *file)
 	free(file);
 }
 
-int			memdel_completion(t_completion **comp)
+int			memdelCompletion(t_completion **comp)
 {
 	t_file	*tmp;
 	if (*comp)

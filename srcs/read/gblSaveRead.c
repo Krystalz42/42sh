@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gbl_save_read.c                                    :+:      :+:    :+:   */
+/*   gblSaveRead.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,11 +12,11 @@
 
 #include <sh.h>
 
-t_cmd		*gbl_save_read(t_cmd *read_std)
+t_cmd		*gblSaveRead(t_cmd *readStd)
 {
 	static t_cmd		*save;
 
-	if (read_std)
-		save = read_std;
+	if (readStd)
+		save = readStd;
 	return (save);
 }

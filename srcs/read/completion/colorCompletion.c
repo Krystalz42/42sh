@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   color_completion.c                                 :+:      :+:    :+:   */
+/*   colorCompletion.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,29 +12,29 @@
 
 #include <sh.h>
 
-void		color_completion(unsigned char type, int color)
+void		colorCompletion(unsigned char type, int color)
 {
 	if (color)
 	{
 		if (type & DT_DIR)
-			STR_FD("\033[1m\x1B[31m", init_fd());
+			STR_FD("\033[1m\x1B[31m", initFd());
 		else if (type & DT_BLK)
-			STR_FD("\033[1m\x1B[36m", init_fd());
+			STR_FD("\033[1m\x1B[36m", initFd());
 		else if (type & DT_CHR)
-			STR_FD("\033[1m\x1B[33m", init_fd());
+			STR_FD("\033[1m\x1B[33m", initFd());
 		else if (type == DT_LNK)
-			STR_FD("\033[1m\x1B[35m", init_fd());
+			STR_FD("\033[1m\x1B[35m", initFd());
 	}
 }
 
-void		add_little_char(unsigned char type)
+void		addLittleChar(unsigned char type)
 {
 	if (type == DT_DIR)
-		CHAR_FD('/', init_fd());
+		CHAR_FD('/', initFd());
 	else if (type == DT_CHR)
-		CHAR_FD('%', init_fd());
+		CHAR_FD('%', initFd());
 	else if (type == DT_LNK)
-		CHAR_FD('@', init_fd());
+		CHAR_FD('@', initFd());
 	else if (type == DT_BLK)
-		CHAR_FD('#', init_fd());
+		CHAR_FD('#', initFd());
 }

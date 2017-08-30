@@ -17,26 +17,26 @@
 **			INITIALIZATION FLAGS
 */
 
-# define LEN_BUFFER 7
+# define LEN_BUFFER         7
 
-# define ENV_NULL	1
-# define ENV_INIT	2
-# define ENV_REC	4
+# define ENV_NULL	        1
+# define ENV_INIT	        2
+# define ENV_REC	        4
 
-# define OLD_TERM	1
-# define OUR_TERM	2
-# define SAVE_OLD	4
-# define SAVE_OUR	8
+# define OLD_TERM	        1
+# define OUR_TERM	        2
+# define SAVE_OLD	        4
+# define SAVE_OUR	        8
 
-# define SET_OLD_TERM	1
-# define SET_OUR_TERM	2
+# define SET_OLD_TERM	    1
+# define SET_OUR_TERM	    2
 
-# define PRINT			0	
-# define HEREDOC		1
-# define DQUOTE			2
-# define QUOTE			4
-# define NEXTCMD		8
-# define DEFAULT		16
+# define PRINT			    0
+# define HEREDOC		    1
+# define DQUOTE			    2
+# define QUOTE			    4
+# define NEXTCMD		    8
+# define DEFAULT		    16
 
 # define LEN_HASH UINT_MAX - 1	 
 
@@ -70,16 +70,16 @@
 
 # define PRINT_KEY(x) (x >= '\x20' && x <= '\x7E')
 
-# define MV_RIGHT			tputs(tgetstr("nd", 0), 0, &my_put)
-# define MV_LEFT			tputs(tgetstr("le", 0), 0, &my_put)
-# define MV_BOT				tputs(tgetstr("do", 0), 0, &my_put)
-# define MV_TOP				tputs(tgetstr("up", 0), 0, &my_put)
-# define SAVE 				tputs(tgetstr("sc", 0), 0, &my_put)
-# define RESTORE			tputs(tgetstr("rc", 0), 0, &my_put)
-# define CURSOR_INVIS		tputs(tgetstr("vi", 0), 0, &my_put)
-# define CURSOR_BACK		tputs(tgetstr("ve", 0), 0, &my_put)
-# define CLEAR_FROM_CUR		tputs(tgetstr("cd", 0), 0, &my_put)
-# define BACK_N				tputs(tgetstr("cr", 0), 0, &my_put)
-# define CLEAR				tputs(tgetstr("cl", 0), 0, &my_put)
+# define MV_RIGHT			tputs(tgetstr("nd", 0), 0, &myPut)
+# define MV_LEFT			tputs(tgetstr("le", 0), 0, &myPut)
+# define MV_BOT				tputs(tgetstr("do", 0), 0, &myPut)
+# define MV_TOP				tputs(tgetstr("up", 0), 0, &myPut)
+# define SAVE 				tputs(tgetstr("sc", 0), 0, &myPut)
+# define RESTORE			tputs(tgetstr("rc", 0), 0, &myPut)
+# define CURSOR_INVIS		tputs(tgetstr("vi", 0), 0, &myPut)
+# define CURSOR_BACK		tputs(tgetstr("ve", 0), 0, &myPut)
+# define CLEAR_FROM_CUR		tputs(tgetstr("cd", 0), 0, &myPut)
+# define BACK_N				tputs(tgetstr("cr", 0), 0, &myPut)
+# define CLEAR				tputs(tgetstr("cl", 0), 0, &myPut)
 
 #endif

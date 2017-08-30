@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_debug.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/05 18:57:15 by aroulin           #+#    #+#             */
-/*   Updated: 2016/12/05 20:37:31 by aroulin          ###   ########.fr       */
+/*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
+/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 void	ft_debug(int bug, int need)
 {

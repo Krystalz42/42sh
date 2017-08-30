@@ -12,19 +12,19 @@
 
 #include <sh.h>
 
-int			home_key(t_read **read_std)
+int			keyHome(t_read **readStd)
 {
-	while ((*read_std)->cmd->prev)
+	while ((*readStd)->cmd->prev)
 	{
-		if (!(*read_std)->history && (*read_std)->cmd->prev->c == 10)
+		if (!(*readStd)->history && (*readStd)->cmd->prev->c == 10)
 			break ;
-		(*read_std)->cmd = (*read_std)->cmd->prev;
+		(*readStd)->cmd = (*readStd)->cmd->prev;
 	}
 	return (1);
 }
-int			end_key(t_read **read_std)
+int			keyEnd(t_read **readStd)
 {
-	while ((*read_std)->cmd->next)
-		(*read_std)->cmd = (*read_std)->cmd->next;
+	while ((*readStd)->cmd->next)
+		(*readStd)->cmd = (*readStd)->cmd->next;
 	return (1);
 }

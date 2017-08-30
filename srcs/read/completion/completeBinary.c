@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   complete_binary.c                                  :+:      :+:    :+:   */
+/*   completeBinary.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,13 +12,13 @@
 
 #include <sh.h>
 
-void		complete_binary(t_read **read_std)
+void		completeBinary(t_read **readStd)
 {
 	char		*path;
 	char		*tmp;
 
-	(void)read_std;
-	if (!(path = my_getenv("HOME")))
+	(void)readStd;
+	if (!(path = myGetenv("HOME")))
 		return ;
 	if (!(tmp = ft_strjoin(path, "/.42sh_hashtable")))
 		return ;

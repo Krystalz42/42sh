@@ -12,41 +12,41 @@
 
 #include <sh.h>
 
-void		complete_command(t_read **read_std)
+void		complete_command(t_read **readStd)
 {
 	t_file	*tmp;
 	int		i;
 
 	i = -1;
-	tmp = (*read_std)->comp->tab_->file;
+	tmp = (*readStd)->comp->tab_->file;
 	while (tmp)
 	{
-		if (tmp->index == (*read_std)->comp->tab_->index)
+		if (tmp->index == (*readStd)->comp->tab_->index)
 		{
-			if (!ft_strcmp((*read_std)->comp->from, tmp->name))
-				(DT_DIR & tmp->type) ? (key_print_(read_std, '/')) : bip();
+			if (!ft_strcmp((*readStd)->comp->from, tmp->name))
+				(DT_DIR & tmp->type) ? (keyPrint(readStd, '/')) : bip();
 			else
 			{
-				while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32 && (*read_std)->cmd->prev->c != '/')
-					del_key(read_std);
+				while ((*readStd)->cmd->prev && (*readStd)->cmd->prev->c != 32 && (*readStd)->cmd->prev->c != '/')
+					keyDel(readStd);
 				while (tmp->name[++i])
-					key_print_(read_std, tmp->name[i]);
+					keyPrint(readStd, tmp->name[i]);
 			}
 		}
 		tmp = tmp->next;
 	}
-	((*read_std)->completion) && ((*read_std)->completion--);
+	((*readStd)->completion) && ((*readStd)->completion--);
 }
 
-int			key_enter_(t_read **read_std)
+int			keyEnter(t_read **readStd)
 {
-	if ((*read_std)->completion)
+	if ((*readStd)->completion)
 	{
-		complete_command(read_std);
+		complete_command(readStd);
 	}
 	else
 	{
-		check_cmd(read_std);
+		checkCmd(readStd);
 	}
 	return (1);
 }

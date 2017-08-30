@@ -12,56 +12,56 @@
 
 #include <sh.h>
 
-int		shift_up_key(t_read **read_std)
+int		keyShiftUp(t_read **readStd)
 {
 	int		co;
 
 	co = tgetnum("co");
 	if (co)
-		while (co-- && (*read_std)->cmd->prev)
+		while (co-- && (*readStd)->cmd->prev)
 		{
-			if (!(*read_std)->history && (*read_std)->cmd->prev->c == 10)
+			if (!(*readStd)->history && (*readStd)->cmd->prev->c == 10)
 				break ;
-			(*read_std)->cmd = (*read_std)->cmd->prev;
+			(*readStd)->cmd = (*readStd)->cmd->prev;
 		}
 	return (1);
 }
 
-int		shift_down_key(t_read **read_std)
+int		keyShiftDown(t_read **readStd)
 {
 	int		co;
 
 	co = tgetnum("co");
 	if (co)
-		while (co-- && (*read_std)->cmd->next)
-			(*read_std)->cmd = (*read_std)->cmd->next;
+		while (co-- && (*readStd)->cmd->next)
+			(*readStd)->cmd = (*readStd)->cmd->next;
 	return (1);
 }
 
-int		shift_left_key(t_read **read_std)
+int		keyShiftLeft(t_read **readStd)
 {
-	while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c == 32)
-		(*read_std)->cmd = (*read_std)->cmd->prev;
-	while ((*read_std)->cmd->prev)
+	while ((*readStd)->cmd->prev && (*readStd)->cmd->prev->c == 32)
+		(*readStd)->cmd = (*readStd)->cmd->prev;
+	while ((*readStd)->cmd->prev)
 	{
-		if ((*read_std)->cmd->prev->c == 32)
+		if ((*readStd)->cmd->prev->c == 32)
 			break;
-		(*read_std)->cmd = (*read_std)->cmd->prev;
+		(*readStd)->cmd = (*readStd)->cmd->prev;
 	}
 	return (1);
 }
 
-int		shift_right_key(t_read **read_std)
+int		keyShiftRight(t_read **readStd)
 {
 
-	while ((*read_std)->cmd)
+	while ((*readStd)->cmd->c)
 	{
-		if ((*read_std)->cmd->c == 32)
+		if ((*readStd)->cmd->c == 32)
 			break;
-		(*read_std)->cmd = (*read_std)->cmd->next;
+		(*readStd)->cmd = (*readStd)->cmd->next;
 	}
-	while ((*read_std)->cmd && (*read_std)->cmd->c == 32)
-		(*read_std)->cmd = (*read_std)->cmd->next;
+	while ((*readStd)->cmd->c && (*readStd)->cmd->c == 32)
+		(*readStd)->cmd = (*readStd)->cmd->next;
 	return (1);
 }
 

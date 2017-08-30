@@ -15,5 +15,5 @@
 void		insertOneLine(void)
 {
 	MV_BOT;
-	tputs(tgetstr("al", 0), 0, &my_put);
+	tputs(tgetstr("al", 0), 0, &myPut);
 }

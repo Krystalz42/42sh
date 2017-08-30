@@ -12,9 +12,9 @@
 
 #include <sh.h>
 
-int			key_clear_(t_read **read_std)
+int			keyClear(t_read **readStd)
 {
-	(void)read_std;
+	(void)readStd;
 	CLEAR;
 	return (1);
 }

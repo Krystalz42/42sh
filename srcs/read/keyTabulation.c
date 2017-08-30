@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_tabulation.c                                   :+:      :+:    :+:   */
+/*   keyTabulation.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,15 +12,15 @@
 
 #include <sh.h>
 
-int			key_tab(t_read **read_std)
+int			keyTab(t_read **readStd)
 {
-	if ((*read_std)->completion)
+	if ((*readStd)->completion)
 	{
-		arrow_right(read_std);
+		keyArrowRight(readStd);
 	}
 	else
 	{
-		init_completion(read_std);
+		initCompletion(readStd);
 	}
 	return (1);
 }

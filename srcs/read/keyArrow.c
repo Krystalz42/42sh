@@ -12,74 +12,74 @@
 
 #include <sh.h>
 
-int			arrow_left(t_read **read_std)
+int			keyArrowLeft(t_read **readStd)
 {
-	if ((*read_std)->completion)
+	if ((*readStd)->completion)
 	{
-		update_index(read_std, -1);
-		if ((*read_std)->comp->tab_->index == ((*read_std)->comp->tab_->element - 1) || 
-					!(((*read_std)->comp->tab_->index + 1) % (*read_std)->comp->tab_->elem_page))
+		updateIndex(readStd, -1);
+		if ((*readStd)->comp->tab_->index == ((*readStd)->comp->tab_->element - 1) ||
+					!(((*readStd)->comp->tab_->index + 1) % (*readStd)->comp->tab_->elem_page))
 		{
-			reprint_cmd(read_std, 1);
-			print_tab_(read_std);
-			reprint_cmd(read_std, 0);
+			reprintCmd(readStd, 1);
+			printTab(readStd);
+			reprintCmd(readStd, 0);
 		}
 		else
-			back_completion(read_std);
-		(*read_std)->completion++;
+			backCompletion(readStd);
+		(*readStd)->completion++;
 	}
 	else
-		if ((*read_std)->cmd->prev)
-			if ((*read_std)->history ||
-					(!(*read_std)->history && (*read_std)->cmd->prev->c != 10))
-				(*read_std)->cmd = (*read_std)->cmd->prev;
+		if ((*readStd)->cmd->prev)
+			if ((*readStd)->history ||
+					(!(*readStd)->history && (*readStd)->cmd->prev->c != 10))
+				(*readStd)->cmd = (*readStd)->cmd->prev;
 	return (1);
 }
 
-int			arrow_right(t_read **read_std)
+int			keyArrowRight(t_read **readStd)
 {
-	if ((*read_std)->completion)
+	if ((*readStd)->completion)
 	{
-		update_index(read_std, 1);
-		if (!(((*read_std)->comp->tab_->index) % (*read_std)->comp->tab_->elem_page))
+		updateIndex(readStd, 1);
+		if (!(((*readStd)->comp->tab_->index) % (*readStd)->comp->tab_->elem_page))
 		{
-			reprint_cmd(read_std, 1);
-			print_tab_(read_std);
-			reprint_cmd(read_std, 0);
+			reprintCmd(readStd, 1);
+			printTab(readStd);
+			reprintCmd(readStd, 0);
 		}
 		else 
 		{
-			continue_completion(read_std);
+			continue_completion(readStd);
 		}
-		(*read_std)->completion++;
+		(*readStd)->completion++;
 	}
 	else
-		if ((*read_std)->cmd->next)
-			(*read_std)->cmd = (*read_std)->cmd->next;
+		if ((*readStd)->cmd->next)
+			(*readStd)->cmd = (*readStd)->cmd->next;
 
 	return (1);
 }
 
-int			arrow_up(t_read **read_std)
+int			keyArrowUp(t_read **readStd)
 {
-	if ((*read_std)->completion)
+	if ((*readStd)->completion)
 	{
-		to_up(read_std);
-		(*read_std)->completion++;
+		toUp(readStd);
+		(*readStd)->completion++;
 	}
 	else
-		previous_history(read_std);
+		previousHistory(readStd);
 	return (1);
 }
 
-int			arrow_down(t_read **read_std)
+int			keyArrowDown(t_read **readStd)
 {
-	if ((*read_std)->completion)
+	if ((*readStd)->completion)
 	{
-		to_down(read_std);
-		(*read_std)->completion++;
+		toDown(readStd);
+		(*readStd)->completion++;
 	}
 	else
-		next_history(read_std);
+		nextHistory(readStd);
 	return (1);
 }

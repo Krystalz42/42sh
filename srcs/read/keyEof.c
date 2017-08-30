@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_eof.c                                          :+:      :+:    :+:   */
+/*   keyEof.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,9 +12,9 @@
 
 #include <sh.h>
 
-int			key_eof(t_read **read_std)
+int			keyEof(t_read **readStd)
 {
-	(void)read_std;
+	(void)readStd;
 	exit(EXIT_SUCCESS);
 	return (1);
 }

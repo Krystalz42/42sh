@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-struct termios		keep_term_struct(unsigned short flags, struct termios *term)
+struct termios		keepTermStruct(unsigned short flags, struct termios *term)
 {
 	static struct termios		*save_our_term;
 	static struct termios		*save_old_term;

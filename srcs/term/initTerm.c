@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_term.c                                        :+:      :+:    :+:   */
+/*   initTerm.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -21,25 +21,25 @@ int		init_our_term(struct termios *term)
 	return (1);
 }
 
-int		init_term(void)
+int		initTerm(void)
 {
 	static struct termios old_term;
 	static struct termios our_term;
 
-	if ((init_fd() == -1))
+	if ((initFd() == -1))
 		return (1);
-	if (my_getenv("TERM") && tgetent(NULL, my_getenv("TERM")))
+	if (myGetenv("TERM") && tgetent(NULL, myGetenv("TERM")))
 	{
 		tcgetattr(STDIN_FILENO, &old_term);
-		keep_term_struct(SAVE_OLD, &old_term);
+		keepTermStruct(SAVE_OLD, &old_term);
 	}
-	else if (!tgetent(NULL, my_getenv("TERM")))
+	else if (!tgetent(NULL, myGetenv("TERM")))
 	{
-		add_list_env("TERM", "xterm");
+		addListEnv("TERM", "xterm");
 		tcgetattr(STDIN_FILENO, &old_term);
-		keep_term_struct(SAVE_OLD, &old_term);
+		keepTermStruct(SAVE_OLD, &old_term);
 	}
-	if (!(tcgetattr(init_fd(), &our_term)) && init_our_term(&our_term))
-		keep_term_struct(SAVE_OUR, &our_term);
+	if (!(tcgetattr(initFd(), &our_term)) && init_our_term(&our_term))
+		keepTermStruct(SAVE_OUR, &our_term);
 	return (0);
 }

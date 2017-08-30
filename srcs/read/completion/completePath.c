@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   complete_path.c                                    :+:      :+:    :+:   */
+/*   completePath.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -32,46 +32,46 @@ int			init_tab_(t_tab *tab_, int li)
 	tab_->elem_page = (tab_->li - li) * tab_->nbr;
 	return (1);
 }
-void		rst(t_read **read_std, int to)
+void		rst(t_read **readStd, int to)
 {
-		restore_cursor_((*read_std)->cur);
-			print_list(to, first_cmd((*read_std)->cmd, (*read_std)->history),
-								(*read_std)->cmd, (*read_std));
+		restoreCursor((*readStd)->cur);
+			printList(to, firstCmd((*readStd)->cmd, (*readStd)->history),
+								(*readStd)->cmd, (*readStd));
 }
 
-int			reprint_cmd(t_read **read_std, int t)
+int			reprintCmd(t_read **readStd, int t)
 {
 	if (t)
 	{
-		(*read_std)->cur.save = (*read_std)->cur.line;
-		rst(read_std, 0);
+		(*readStd)->cur.save = (*readStd)->cur.line;
+		rst(readStd, 0);
 		insertOneLine();
 		CLEAR_FROM_CUR;
 	}
 	else
 	{
 		MV_TOP;
-		rst(read_std, 1);
+		rst(readStd, 1);
 	}
 	return (1);
 }
 
-void		complete_path(t_read **read_std, t_path f)
+void		completePath(t_read **readStd, t_path f)
 {
-	if (!((*read_std)->comp = (t_completion *)ft_memalloc(sizeof(t_completion))))
+	if (!((*readStd)->comp = (t_completion *)ft_memalloc(sizeof(t_completion))))
 		return ;
-	if (!((*read_std)->comp->tab_ = (t_tab *)ft_memalloc(sizeof(t_tab))))
+	if (!((*readStd)->comp->tab_ = (t_tab *)ft_memalloc(sizeof(t_tab))))
 		return ;
-	(*read_std)->comp->from = ft_strdup(f.to_comp);
-	(*read_std)->comp->tab_->file = NULL;
-	create_comp(read_std, f);
-	((*read_std)->comp->tab_->element) ? reprint_cmd(read_std, 1) : bip();
-	if (!(*read_std)->comp->tab_->element ||
-		(!(init_tab_((*read_std)->comp->tab_, (*read_std)->cur.line))))
+	(*readStd)->comp->from = ft_strdup(f.to_comp);
+	(*readStd)->comp->tab_->file = NULL;
+	createComp(readStd, f);
+	((*readStd)->comp->tab_->element) ? reprintCmd(readStd, 1) : bip();
+	if (!(*readStd)->comp->tab_->element ||
+		(!(init_tab_((*readStd)->comp->tab_, (*readStd)->cur.line))))
 	{
-		(*read_std)->completion--;
+		(*readStd)->completion--;
 		return ;
 	}
-	 print_tab_(read_std);
-	 reprint_cmd(read_std, 0);
+	 printTab(readStd);
+	 reprintCmd(readStd, 0);
 }

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_cmd.c                                        :+:      :+:    :+:   */
+/*   checkCmd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -46,19 +46,19 @@ t_cmd			*rec_brackets(t_cmd *cmd, char c)
 	return (NULL);
 }
 
-int			check_cmd(t_read **read_std)
+int			checkCmd(t_read **readStd)
 {
 	t_cmd *tmp;
 
-	if ((tmp = rec_brackets(first_cmd((*read_std)->cmd, 1), '\0'), fdb))
+	if ((tmp = rec_brackets(firstCmd((*readStd)->cmd, 1), '\0'), fdb))
 		;
 	if (tmp)	
-		return ((*read_std)->finish = 1);
-	key_print_(read_std, 10);
+		return ((*readStd)->finish = 1);
+	keyPrint(readStd, 10);
 	insertOneLine();
-	restore_cursor_((*read_std)->cur);
-	end_key(read_std);
-	print_list(1, first_cmd((*read_std)->cmd, 0), (*read_std)->cmd, (*read_std));
+	restoreCursor((*readStd)->cur);
+	keyEnd(readStd);
+	printList(1, firstCmd((*readStd)->cmd, 0), (*readStd)->cmd, (*readStd));
 	if (keep_this_char(-1) == '\\')
 		prompt(NEXTCMD, NULL);
 	else if (keep_this_char(-1) == '\'')

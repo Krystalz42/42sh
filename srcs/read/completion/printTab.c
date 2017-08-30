@@ -12,59 +12,59 @@
 
 #include <sh.h>
 
-int			init_page(t_read **read_std, t_file **tmp)
+int			init_page(t_read **readStd, t_file **tmp)
 {
-	(*read_std)->comp->tab_->page = ((*read_std)->comp->tab_->index) /
-		((*read_std)->comp->tab_->elem_page);
+	(*readStd)->comp->tab_->page = ((*readStd)->comp->tab_->index) /
+		((*readStd)->comp->tab_->elem_page);
 	NBR_FD((*tmp)->next && (*tmp)->index,fdb);
 	CHAR_FD(32, fdb);
-	NBR_FD(((*read_std)->comp->tab_->elem_page),fdb);
+	NBR_FD(((*readStd)->comp->tab_->elem_page),fdb);
 	CHAR_FD(32, fdb);
-	NBR_FD((*read_std)->comp->tab_->page ,fdb);
+	NBR_FD((*readStd)->comp->tab_->page ,fdb);
 	CHAR_FD(32, fdb);
-	NBR_FD((*read_std)->comp->tab_->page * (*read_std)->comp->tab_->elem_page, fdb);
+	NBR_FD((*readStd)->comp->tab_->page * (*readStd)->comp->tab_->elem_page, fdb);
 	CHAR_FD(10, fdb);
-	while ((*tmp)->next && (*tmp)->index != (*read_std)->comp->tab_->page * (*read_std)->comp->tab_->elem_page)
+	while ((*tmp)->next && (*tmp)->index != (*readStd)->comp->tab_->page * (*readStd)->comp->tab_->elem_page)
 		(*tmp) = (*tmp)->next;
-	return ((*read_std)->comp->tab_->elem_page * ((*read_std)->comp->tab_->page + 1));
+	return ((*readStd)->comp->tab_->elem_page * ((*readStd)->comp->tab_->page + 1));
 }
 
 
-int			print_element(t_file *file, int color)
+int			printElement(t_file *file, int color)
 {
-	(!color) ? P_INV_FD(init_fd()) : NULL;
-	color_completion(file->type, color);
-	my_togoto(file->ms.y, file->ms.x);
-	STR_FD(file->name, init_fd());
-	STR_FD(RST, init_fd());
-	add_little_char(file->type);
-	my_tobackto(file->ms.y, file->ms.x + 100);
-	P_RST_FD(init_fd());
+	(!color) ? P_INV_FD(initFd()) : NULL;
+	colorCompletion(file->type, color);
+	myToGo(file->ms.y, file->ms.x);
+	STR_FD(file->name, initFd());
+	STR_FD(RST, initFd());
+	addLittleChar(file->type);
+	myToBackTo(file->ms.y, file->ms.x + 100);
+	P_RST_FD(initFd());
 	return (1);
 }
 
 
 
-int			print_tab_(t_read **read_std)
+int			printTab(t_read **readStd)
 {
 	t_file		*tmp;
 	int			stop;
 
-	tmp = (*read_std)->comp->tab_->file;
-	if ((*read_std)->comp->tab_->element == 1)
-		complete_command(read_std);
-	else if ((stop = init_page(read_std, &tmp)))
+	tmp = (*readStd)->comp->tab_->file;
+	if ((*readStd)->comp->tab_->element == 1)
+		complete_command(readStd);
+	else if ((stop = init_page(readStd, &tmp)))
 	{
 		while (tmp && tmp->index < stop)
 		{
-			tmp->ms.y = (((tmp->index % (*read_std)->comp->tab_->elem_page)
-						/ (*read_std)->comp->tab_->nbr));
-			tmp->ms.x = (((tmp->index % (*read_std)->comp->tab_->elem_page) 
-				% (*read_std)->comp->tab_->nbr) * (*read_std)->comp->tab_->len
-					% (*read_std)->comp->tab_->co);
-			(tmp->index == (*read_std)->comp->tab_->index)
-				? print_element(tmp, 0) : print_element(tmp, 1);
-			tmp->ms.y += ((*read_std)->cur.line - (*read_std)->cur.save);
+			tmp->ms.y = (((tmp->index % (*readStd)->comp->tab_->elem_page)
+						/ (*readStd)->comp->tab_->nbr));
+			tmp->ms.x = (((tmp->index % (*readStd)->comp->tab_->elem_page)
+				% (*readStd)->comp->tab_->nbr) * (*readStd)->comp->tab_->len
+					% (*readStd)->comp->tab_->co);
+			(tmp->index == (*readStd)->comp->tab_->index)
+				? printElement(tmp, 0) : printElement(tmp, 1);
+			tmp->ms.y += ((*readStd)->cur.line - (*readStd)->cur.save);
 			tmp = tmp->next;
 		}
 	}

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_cmd.c                                        :+:      :+:    :+:   */
+/*   firstCmd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-t_cmd			*first_cmd(t_cmd *cmd, int history)
+t_cmd			*firstCmd(t_cmd *cmd, int history)
 {
 	if (cmd)
 		while (cmd->next)

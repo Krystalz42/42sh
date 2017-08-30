@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   previous_history.c                                 :+:      :+:    :+:   */
+/*   previousHistory.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,24 +12,24 @@
 
 #include <sh.h>
 
-void			previous_history(t_read **read_std)
+void			previousHistory(t_read **readStd)
 {
 	t_hist		*hist;
 
-	if (!(hist = gbl_save_history(NULL)))
+	if (!(hist = gblSaveHistory(NULL)))
 		return ;
-	if ((*read_std)->history)
+	if ((*readStd)->history)
 	{
 		(!hist->prev) && bip();
 		(hist->prev) && (hist = hist->prev);
-		memdel_cmd(&((*read_std)->cmd));
-		copy_cmd(read_std, hist->hist->cmd);
+		memdelCmd(&((*readStd)->cmd));
+		copyCmd(readStd, hist->hist->cmd);
 	}
 	else
 	{
-		(*read_std)->history = 1;
-		copy_cmd(read_std, hist->hist->cmd);
+		(*readStd)->history = 1;
+		copyCmd(readStd, hist->hist->cmd);
 	}
-	(*read_std)->history = 1;
-	gbl_save_history(hist);
+	(*readStd)->history = 1;
+	gblSaveHistory(hist);
 }

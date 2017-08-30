@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   next_history.c                                     :+:      :+:    :+:   */
+/*   nextHistory.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,27 +12,27 @@
 
 #include <sh.h>
 
-void			next_history(t_read **read_std)
+void			nextHistory(t_read **readStd)
 {
 	t_hist		*hist;
 
-	if (!(hist = gbl_save_history(NULL)))
+	if (!(hist = gblSaveHistory(NULL)))
 		return ;
 	if (hist->next)
 	{
 		hist = hist->next;
-		memdel_cmd(&((*read_std)->cmd));
-		copy_cmd(read_std, hist->hist->cmd);
-		(*read_std)->history = 1;
+		memdelCmd(&((*readStd)->cmd));
+		copyCmd(readStd, hist->hist->cmd);
+		(*readStd)->history = 1;
 	}
-	else if ((*read_std)->history)
+	else if ((*readStd)->history)
 	{
-		(*read_std)->history = 0;
-		memdel_cmd(&((*read_std)->cmd));
-		(*read_std)->cmd = gbl_save_read(NULL);
-		(*read_std)->history = 0;
+		(*readStd)->history = 0;
+		memdelCmd(&((*readStd)->cmd));
+		(*readStd)->cmd = gblSaveRead(NULL);
+		(*readStd)->history = 0;
 	}
 	else
 		bip();
-	gbl_save_history(hist);
+	gblSaveHistory(hist);
 }

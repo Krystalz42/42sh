@@ -12,17 +12,17 @@
 
 #include <sh.h>
 
-int			delete_char_here(t_read **read_std)
+int			keyDeleteHere(t_read **readStd)
 {
 	t_cmd		*kill;
 
-	if ((*read_std)->cmd->c)
+	if ((*readStd)->cmd->c)
 	{
-		kill = (*read_std)->cmd;
-		(*read_std)->cmd = (*read_std)->cmd->next;
-		if ((*read_std)->cmd->prev->prev)
-			(*read_std)->cmd->prev->prev->next = (*read_std)->cmd;
-		(*read_std)->cmd->prev = (*read_std)->cmd->prev->prev;
+		kill = (*readStd)->cmd;
+		(*readStd)->cmd = (*readStd)->cmd->next;
+		if ((*readStd)->cmd->prev->prev)
+			(*readStd)->cmd->prev->prev->next = (*readStd)->cmd;
+		(*readStd)->cmd->prev = (*readStd)->cmd->prev->prev;
 		free(kill);
 	}
 	return (1);

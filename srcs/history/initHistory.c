@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_history.c                                     :+:      :+:    :+:   */
+/*   initHistory.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -14,14 +14,14 @@
 
 void		convert_to_hist(char *buff, int ret)
 {
-	static t_read	*read_std;
+	static t_read	*readStd;
 	static int		i;
 
 	i = -1;
 
 	if (!buff)
 		return ;
-	if (read_std)
+	if (readStd)
 	{
 
 	}
@@ -29,20 +29,20 @@ void		convert_to_hist(char *buff, int ret)
 	{
 		while (i < ret - 1)
 		{
-			read_std = init_struct_for_read();
+			readStd = initStructForRead();
 			while (buff[++i] && buff[i] != 10)
 			{
-				key_print_(&read_std, buff[i]);
+				keyPrint(&readStd, buff[i]);
 			}
-			read_std->history = 1;
-			make_list_hist(read_std);
-			read_std = NULL;
+			readStd->history = 1;
+			makeListHist(readStd);
+			readStd = NULL;
 		}
 	}
 
 }
 
-void		init_history(void)
+void		initHistory(void)
 {
 	char		*home;
 	char		*path_hist;
@@ -51,7 +51,7 @@ void		init_history(void)
 	int			ret;
 
 	ft_bzero(buff, 100000);
-	if (!(home = my_getenv("HOME")))
+	if (!(home = myGetenv("HOME")))
 		return ;
 	path_hist = ft_strjoin(home, "/.42sh_history");
 	if ((fd = open(path_hist, O_RDONLY | O_CREAT, S_IRUSR)) == -1)

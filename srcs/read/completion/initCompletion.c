@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_completion.c                                  :+:      :+:    :+:   */
+/*   initCompletion.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -25,13 +25,13 @@ int			empty_cmd(t_cmd *cmd)
 	return (1);
 }
 
-void		init_completion(t_read **read_std)
+void		initCompletion(t_read **readStd)
 {
-	if (empty_cmd((*read_std)->cmd))
-		key_print_(read_std, 9);
+	if (empty_cmd((*readStd)->cmd))
+		keyPrint(readStd, 9);
 	else
 	{
-		(*read_std)->completion = 2;
-		completion(read_std);
+		(*readStd)->completion = 2;
+		completion(readStd);
 	}
 }

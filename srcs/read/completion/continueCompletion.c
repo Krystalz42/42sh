@@ -12,32 +12,32 @@
 
 #include <sh.h>
 
-void			print_back(t_read **read_std, t_file *tmp)
+void			print_back(t_read **readStd, t_file *tmp)
 {
-	(*read_std)->comp->tab_->index--;
-	print_element(tmp, 0);
+	(*readStd)->comp->tab_->index--;
+	printElement(tmp, 0);
 	tmp = tmp->next;
-	P_RST_FD(init_fd());
-	print_element(tmp, 1);
+	P_RST_FD(initFd());
+	printElement(tmp, 1);
 }
 
-void			back_completion(t_read **read_std)
+void			backCompletion(t_read **readStd)
 {
 	t_file	*tmp;
 
-	tmp = (*read_std)->comp->tab_->file;
+	tmp = (*readStd)->comp->tab_->file;
 	SAVE;
 	MV_BOT;
 	while (tmp)
 	{
-		if (tmp->index == (*read_std)->comp->tab_->index)
+		if (tmp->index == (*readStd)->comp->tab_->index)
 		{
-			print_element(tmp, 0);
+			printElement(tmp, 0);
 			tmp = tmp->next;
-			print_element(tmp, 1);
+			printElement(tmp, 1);
 			break ;
 		}
-		else if (!(*read_std)->comp->tab_->index && !tmp->next)
+		else if (!(*readStd)->comp->tab_->index && !tmp->next)
 		{
 			break ;
 		}
@@ -46,20 +46,20 @@ void			back_completion(t_read **read_std)
 	RESTORE;
 }
 
-void			continue_completion(t_read **read_std)
+void			continue_completion(t_read **readStd)
 {
 	t_file	*tmp;
 
-	tmp = (*read_std)->comp->tab_->file;
+	tmp = (*readStd)->comp->tab_->file;
 	SAVE;
 	MV_BOT;
 	while (tmp)
 	{
-		if (tmp->index == (*read_std)->comp->tab_->index)
+		if (tmp->index == (*readStd)->comp->tab_->index)
 		{
-			print_element(tmp, 0);
+			printElement(tmp, 0);
 			tmp = tmp->prev;
-			print_element(tmp, 1);
+			printElement(tmp, 1);
 			(tmp->prev) && (tmp = tmp->prev);
 			break;
 		}

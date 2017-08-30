@@ -131,7 +131,7 @@ typedef struct		s_read
 typedef struct		s_cmp
 {
 	char			*key;
-	int				(*function)(t_read **read_std);
+	int				(*function)(t_read **readStd);
 }					t_cmp;
 
 /*

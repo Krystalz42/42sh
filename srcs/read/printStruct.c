@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_struct.c                                     :+:      :+:    :+:   */
+/*   printStruct.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-void		restore_cursor_(t_cursor cur)
+void		restoreCursor(t_cursor cur)
 {
 	BACK_N;
 	while (--cur.co >= 0)
@@ -25,48 +25,48 @@ void		restore_cursor_(t_cursor cur)
 	}
 }
 
-int			print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_read *read_std)
+int			printList(int to_select, t_cmd *cmd, t_cmd *stop, t_read *readStd)
 {
 	int			co;
 
 	co = tgetnum("co");
-	read_std->cur.co = prompt(PRINT, NULL);
-	read_std->cur.line = 1;
+	readStd->cur.co = prompt(PRINT, NULL);
+	readStd->cur.line = 1;
 	while ((!to_select && cmd && cmd->c) || (to_select && cmd != stop))
 	{
-		if (cmd->c == 10 || read_std->cur.co == co)
+		if (cmd->c == 10 || readStd->cur.co == co)
 		{
 			(to_select) ? MV_BOT : insertOneLine();
-			read_std->cur.line += 1;
-			read_std->cur.co = 0;
+			readStd->cur.line += 1;
+			readStd->cur.co = 0;
 		}
-		(cmd->c != 10) ? CHAR_FD(cmd->c, init_fd()): 0 ;
-		read_std->cur.co += (cmd->c == 9) ? 4 : 1;
+		(cmd->c != 10) ? CHAR_FD(cmd->c, initFd()): 0 ;
+		readStd->cur.co += (cmd->c == 9) ? 4 : 1;
 		cmd = cmd->next;
 	}
 	return (1);
 }
 
-int	reset_cur(t_read *read_std)
+int	reset_cur(t_read *readStd)
 {
-	read_std->cur.line = 0;
-	read_std->cur.co = 0;
+	readStd->cur.line = 0;
+	readStd->cur.co = 0;
 	return (1);
 }
 
-int			print_struct(t_read *read_std)
+int			printStruct(t_read *readStd)
 {
 	t_cmd		*cmd;
 
 	CURSOR_INVIS;
-	cmd = first_cmd(read_std->cmd, read_std->history);
-	restore_cursor_(read_std->cur);
+	cmd = firstCmd(readStd->cmd, readStd->history);
+	restoreCursor(readStd->cur);
 	CLEAR_FROM_CUR;
-	reset_cur(read_std);
-	print_list(0, cmd, read_std->cmd, read_std);
-	restore_cursor_(read_std->cur);
-	reset_cur(read_std);
-	print_list(1, cmd, read_std->cmd, read_std);
+	reset_cur(readStd);
+	printList(0, cmd, readStd->cmd, readStd);
+	restoreCursor(readStd->cur);
+	reset_cur(readStd);
+	printList(1, cmd, readStd->cmd, readStd);
 	CURSOR_BACK;
 	return (1);
 }

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_comp.c                                      :+:      :+:    :+:   */
+/*   createComp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -25,7 +25,7 @@ int			managementWildcard(char *data, char *comp)
 	return (0);
 }
 
-void		create_comp(t_read **read_std, t_path f)
+void		createComp(t_read **readStd, t_path f)
 {
 	DIR					*dir;
 	struct dirent		*repo = 0;
@@ -37,10 +37,10 @@ void		create_comp(t_read **read_std, t_path f)
 		while ((repo = readdir(dir)))
 			if ((!f.to_comp && repo->d_name[0] != '.') || (f.to_comp && (managementWildcard(repo->d_name, f.to_comp) || !ft_strncmp(f.to_comp, repo->d_name, ft_strlen(f.to_comp) - 1))))
 			{
-				init_files(&((*read_std)->comp->tab_->file), repo->d_name,
+				initFiles(&((*readStd)->comp->tab_->file), repo->d_name,
 						repo->d_type, index++);
 			}
 		closedir(dir);
 	}
-	(*read_std)->comp->tab_->element = index;
+	(*readStd)->comp->tab_->element = index;
 }

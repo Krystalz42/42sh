@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgraille <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/16 14:02:50 by jgraille          #+#    #+#             */
-/*   Updated: 2017/01/07 15:46:53 by jgraille         ###   ########.fr       */
+/*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
+/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include <libft.h>
 
 static char			*convert_int_to_base(char *str, long long nb, char *base)
 {

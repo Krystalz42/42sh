@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgraille <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/11 14:44:42 by jgraille          #+#    #+#             */
-/*   Updated: 2016/11/30 15:30:10 by jgraille         ###   ########.fr       */
+/*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
+/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 static int	check_pass(char c)
 {

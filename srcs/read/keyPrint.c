@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-t_cmd		*create_element(char c)
+t_cmd		*createElement(char c)
 {
 	t_cmd *element;
 
@@ -23,15 +23,15 @@ t_cmd		*create_element(char c)
 	return (element);
 }
 
-int			key_print_(t_read **read_std, char c)
+int			keyPrint(t_read **readStd, char c)
 {
 	t_cmd *element;
 
-	element = create_element(c);
-	element->prev = (*read_std)->cmd->prev;
-	element->next = (*read_std)->cmd;
-	if ((*read_std)->cmd->prev)
-		(*read_std)->cmd->prev->next = element;
-	(*read_std)->cmd->prev = element;
+	element = createElement(c);
+	element->prev = (*readStd)->cmd->prev;
+	element->next = (*readStd)->cmd;
+	if ((*readStd)->cmd->prev)
+		(*readStd)->cmd->prev->next = element;
+	(*readStd)->cmd->prev = element;
 	return (1);
 }

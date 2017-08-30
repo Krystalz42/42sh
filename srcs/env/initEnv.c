@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_env.c                                         :+:      :+:    :+:   */
+/*   initEnv.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-void		init_env(void)
+void		initEnv(void)
 {
 	extern char		**environ;
 	int				i;
@@ -20,5 +20,5 @@ void		init_env(void)
 	i = -1;
 	if (environ)
 		while (environ[++i])
-			split_env(environ[i]);
+			splitEnv(environ[i]);
 }

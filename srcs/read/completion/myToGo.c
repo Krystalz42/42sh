@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-int			my_tobackto(int li, int co)
+int			myToBackTo(int li, int co)
 {
 	if (li >= 0)
 		while (li)
@@ -30,7 +30,7 @@ int			my_tobackto(int li, int co)
 	return (1);
 }
 
-int			my_togoto(int li, int co)
+int			myToGo(int li, int co)
 {
 	if (li >= 0)
 		while (li)

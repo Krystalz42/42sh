@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-void init_signal(void)
+void initSignal(void)
 {
 	int			i;
 
@@ -27,7 +27,7 @@ void init_signal(void)
 	signal(SIGSTOP, &handler);
 */}
 
-void reset_signal(void)
+void resetSignal(void)
 {
 	int			i;
 

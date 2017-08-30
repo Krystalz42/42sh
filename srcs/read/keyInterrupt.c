@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_interrupt.c                                    :+:      :+:    :+:   */
+/*   keyInterrupt.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,8 +12,8 @@
 
 #include <sh.h>
 
-int			key_interrupt(t_read **read_std)
+int			keyInterrupt(t_read **readStd)
 {
-	(void)read_std;
+	(void)readStd;
 	return (1);
 }
