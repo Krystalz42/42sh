@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 05:32:01 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 15:24:59 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/30 21:02:30 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int			print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_read *read_std)
 	{
 		if (cmd->c == 10 || read_std->cur.co == co)
 		{
-			(to_select) ? MV_BOT : insert_one_line();
+			(to_select) ? MV_BOT : insertOneLine();
 			read_std->cur.line += 1;
 			read_std->cur.co = 0;
 		}

@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/12 17:41:21 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 19:25:39 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/30 20:40:30 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void		complete_command(t_read **read_std)
 {
 	t_file	*tmp;
-	char	*to_add;
 	int		i;
 
 	i = -1;
@@ -28,9 +27,10 @@ void		complete_command(t_read **read_std)
 				(DT_DIR & tmp->type) ? (key_print_(read_std, '/')) : bip();
 			else
 			{
-				to_add = tmp->name + ft_strlen((*read_std)->comp->from);
-				while (to_add && to_add[++i])
-					key_print_(read_std, to_add[i]);
+				while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32 && (*read_std)->cmd->prev->c != '/')
+					del_key(read_std);
+				while (tmp->name[++i])
+					key_print_(read_std, tmp->name[i]);
 			}
 		}
 		tmp = tmp->next;

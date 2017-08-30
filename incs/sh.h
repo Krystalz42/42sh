@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 18:53:13 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/30 21:07:00 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
 int fdb;
 
 int					shell(void);
-void				insert_one_line(void);
+void				insertOneLine(void);
 
 /*
 **				FUNCTION READ && PRINT AND RETURN A STRUCT

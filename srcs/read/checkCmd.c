@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 21:05:29 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 19:38:17 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/30 21:02:47 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int			check_cmd(t_read **read_std)
 	if (tmp)	
 		return ((*read_std)->finish = 1);
 	key_print_(read_std, 10);
-	insert_one_line();
+	insertOneLine();
 	restore_cursor_((*read_std)->cur);
 	end_key(read_std);
 	print_list(1, first_cmd((*read_std)->cmd, 0), (*read_std)->cmd, (*read_std));

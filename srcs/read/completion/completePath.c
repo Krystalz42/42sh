@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:23:45 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/23 19:06:19 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/30 21:03:07 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int			reprint_cmd(t_read **read_std, int t)
 	{
 		(*read_std)->cur.save = (*read_std)->cur.line;
 		rst(read_std, 0);
-		insert_one_line();
+		insertOneLine();
 		CLEAR_FROM_CUR;
 	}
 	else
@@ -66,7 +66,8 @@ void		complete_path(t_read **read_std, t_path f)
 	(*read_std)->comp->tab_->file = NULL;
 	create_comp(read_std, f);
 	((*read_std)->comp->tab_->element) ? reprint_cmd(read_std, 1) : bip();
-	if (!((*read_std)->comp->tab_->element && bip()) || (!(init_tab_((*read_std)->comp->tab_, (*read_std)->cur.line))))
+	if (!(*read_std)->comp->tab_->element ||
+		(!(init_tab_((*read_std)->comp->tab_, (*read_std)->cur.line))))
 	{
 		(*read_std)->completion--;
 		return ;
