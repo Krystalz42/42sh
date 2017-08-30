@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/23 19:54:51 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/30 17:50:12 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,4 +145,14 @@ typedef struct		s_hist
 	struct s_hist	*next;
 }					t_hist;
 
+/*
+**			STRUCT FOR HASH
+*/
+
+typedef struct		s_hash
+{
+	char			*binary;
+	char			*path;
+	struct s_hash	*next;
+}					t_hash;
 #endif

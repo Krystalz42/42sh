@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/23 19:25:14 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/30 17:57:30 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main()
 {
-	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
 	init_env();
+	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
 	init_history();
 	if (init_term())
 		return (1);

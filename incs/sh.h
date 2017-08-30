@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/27 18:05:04 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/30 18:53:13 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <libft.h>
 #include <unistd.h>
 #include <struct.h>
+#include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <define.h>
@@ -51,6 +52,14 @@ int					print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_read *read_std);
 void				restore_cursor_(t_cursor cur);
 int					check_cmd(t_read **read_std);
 
+/*
+**				HASH FUNCTION
+*/
+
+unsigned int		hashValue(char *str);
+t_hash				*hashBoard(void);
+char				*searchPath(char *binary);
+void				addHash(char *bin, char *path);
 
 /*
 **				FUNCTION FOR COMPLETION
@@ -122,6 +131,13 @@ t_hist				*gbl_save_history(t_hist *hist);
 void				make_list_hist(t_read *read_std);
 void				previous_history(t_read **read_std);
 void				next_history(t_read **read_std);
+
+/*
+**				SIGNAL FUNCTION
+*/
+
+void				init_signal(void);
+void				reset_signal(void);
 
 /*
 **				TERMIOS FUNCTION

@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 23:25:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 20:25:11 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/08/30 17:40:53 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@
 # define QUOTE			4
 # define NEXTCMD		8
 # define DEFAULT		16
+
+# define LEN_HASH UINT_MAX - 1	 
 
 /*
 **			INITIALIZATION READ
