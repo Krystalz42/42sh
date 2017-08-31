@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   key_del.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/11 06:33:09 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/19 20:22:27 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+int			key_del(t_read **read_std)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
+	t_cmd		*kill;
+
+	if ((*read_std)->cmd->prev)
 	{
-		read_stdin();
-		NL;
+		kill = (*read_std)->cmd->prev;
+		if ((*read_std)->cmd->prev->prev)
+		{
+			(*read_std)->cmd->prev->prev->next = (*read_std)->cmd;
+			(*read_std)->cmd->prev = (*read_std)->cmd->prev->prev;
+		}
+		else
+			(*read_std)->cmd->prev = NULL;
+		ft_memdel((void **)&(kill));
 	}
 	return (1);
 }

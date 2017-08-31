@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-void		splitEnv(char *env)
+void		split_env(char *env)
 {
 	char		*name;
 	char		*value;
@@ -25,5 +25,5 @@ void		splitEnv(char *env)
 		return ;
 	if (!(value = ft_strdup(env + i + 1)))
 		return ;
-	addListEnv(name, value);
+	add_list_env(name, value);
 }

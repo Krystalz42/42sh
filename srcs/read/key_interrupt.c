@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   key_interrupt.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/12 17:42:48 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/12 17:43:15 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+int			key_interrupt(t_read **read_std)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
-	{
-		read_stdin();
-		NL;
-	}
+	(void)read_std;
 	return (1);
 }

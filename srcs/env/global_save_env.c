@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   global_save_env.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/09 23:23:46 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/09 23:31:09 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+t_env		*gbl_save_env(unsigned short flags, t_env *env)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
-	{
-		read_stdin();
-		NL;
-	}
-	return (1);
+	static t_env *save;
+
+	if ((flags & ENV_NULL)) 
+		save = NULL;
+	else if ((flags & ENV_INIT))
+		save = env;
+	else if ((flags & ENV_REC))
+		;
+	return (save);
 }

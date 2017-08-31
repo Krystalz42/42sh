@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   set_term.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/10 19:41:11 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/13 06:22:08 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+void			set_termios(unsigned short flags)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
+	struct termios term;
+
+	if ((flags & SET_OUR_TERM))
 	{
-		read_stdin();
-		NL;
+		term = keep_term_struct(OUR_TERM, NULL);
+		tcsetattr(0, TCSADRAIN, &term);
 	}
-	return (1);
+	if ((flags & SET_OLD_TERM))
+	{
+		term = keep_term_struct(OLD_TERM, NULL);
+		tcsetattr(0, 0, &term);
+	}
 }

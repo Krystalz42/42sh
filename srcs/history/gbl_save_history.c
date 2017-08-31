@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   gbl_save_history.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/23 19:51:12 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/24 15:40:46 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+t_hist		*gbl_save_history(t_hist *hist)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
-	{
-		read_stdin();
-		NL;
-	}
-	return (1);
+	static t_hist		*save;
+
+	if (hist)
+		save = hist;
+	return (save);
 }

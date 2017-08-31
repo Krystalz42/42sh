@@ -12,12 +12,12 @@
 
 #include <sh.h>
 
-int main()
+int		main(void)
 {
-	initEnv();
+	init_env();
 	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
-	initHistory();
-	if (initTerm())
+	init_history();
+	if (init_term())
 		return (1);
 	shell();
 	return (0);

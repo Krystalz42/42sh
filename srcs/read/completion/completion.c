@@ -22,7 +22,7 @@ int			len_cmd(t_cmd **cmd)
 	return (i);
 }
 
-char		*list_to_str(t_read **readStd, t_cmd *cmd)
+char		*list_to_str(t_read **read_std, t_cmd *cmd)
 {
 	int		i;
 	int		len;
@@ -30,7 +30,7 @@ char		*list_to_str(t_read **readStd, t_cmd *cmd)
 
 	if (!(len = len_cmd(&cmd)))
 		return (NULL);
-	if (len == 1 && cmd && cmd->c == '.' && keyPrint(readStd, '/'))
+	if (len == 1 && cmd && cmd->c == '.' && key_print_(read_std, '/'))
 		return (NULL);
 	if (!(str = (char *)ft_memalloc(sizeof(char) * (len + 1))))
 		return (NULL);
@@ -67,14 +67,14 @@ char		*get_last_word(char *path)
 	return (tmp);
 }
 
-void		completion(t_read **readStd)
+void		completion(t_read **read_std)
 {
 	t_path		f;
 	char 		*tmp;
 
 	f.path = NULL;
 	f.to_comp = NULL;
-	f.path = list_to_str(readStd, (*readStd)->cmd);
+	f.path = list_to_str(read_std, (*read_std)->cmd);
 	if (f.path && (f.path[0] != '.' && f.path[0] != '/'))
 	{
 		tmp = ft_strjoin("./", f.path);
@@ -82,7 +82,7 @@ void		completion(t_read **readStd)
 		f.path = tmp;
 	}
 	f.to_comp = get_last_word(f.path);
-	completePath(readStd, f);
+	complete_path(read_std, f);
 	ft_memdel((void **)&(f.path));
 	ft_memdel((void **)&(f.to_comp));
 }

@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   previous_history.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/24 15:34:32 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/30 19:02:13 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+void			previous_history(t_read **read_std)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
+	t_hist		*hist;
+
+	if (!(hist = gbl_save_history(NULL)))
+		return ;
+	if ((*read_std)->history)
 	{
-		read_stdin();
-		NL;
+		(!hist->prev) && bip();
+		(hist->prev) && (hist = hist->prev);
+		memdel_cmd(&((*read_std)->cmd));
+		copy_cmd(read_std, hist->hist->cmd);
 	}
-	return (1);
+	else
+	{
+		(*read_std)->history = 1;
+		copy_cmd(read_std, hist->hist->cmd);
+	}
+	(*read_std)->history = 1;
+	gbl_save_history(hist);
 }

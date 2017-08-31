@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   get_term.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/10 00:54:26 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/11 00:01:53 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+struct termios		keep_term_struct(unsigned short flags, struct termios *term)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
-	{
-		read_stdin();
-		NL;
-	}
-	return (1);
+	static struct termios		*save_our_term;
+	static struct termios		*save_old_term;
+	static struct termios		null;
+
+	if ((flags & SAVE_OLD))
+		save_old_term = term;
+	else if ((flags & SAVE_OUR))
+		save_our_term = term;
+	if ((flags & OLD_TERM))
+		return (*save_old_term);
+	else if ((flags & OUR_TERM))
+		return (*save_our_term);
+	return (null);
 }

@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   first_cmd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/13 05:46:50 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/20 10:52:59 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+t_cmd			*first_cmd(t_cmd *cmd, int history)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
+	if (cmd)
+		while (cmd->next)
+			cmd = cmd->next;
+	while (cmd->prev)
 	{
-		read_stdin();
-		NL;
+		if (!history && cmd->prev->c == 10)
+			return (cmd);
+		cmd = cmd->prev;
 	}
-	return (1);
+	return (cmd);
 }

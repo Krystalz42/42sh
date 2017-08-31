@@ -14,6 +14,6 @@
 
 int			bip(void)
 {
-	CHAR_FD(7, initFd());
+	CHAR_FD(7, init_fd());
 	return (1);
 }

@@ -29,6 +29,6 @@ int 			prompt(unsigned char flags, char *str)
 	else if (flags & DEFAULT)
 		prompt = str;
 	if (!(flags & PRINT))
-		STR_FD(prompt, initFd());
+		STR_FD(prompt, init_fd());
 	return (ft_strlen(prompt));
 }

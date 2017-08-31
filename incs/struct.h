@@ -94,7 +94,6 @@ typedef struct		s_tab
 
 typedef struct		s_completion
 {
-	int				fd;
 	t_tab			*tab_;
 	char			*from;
 }					t_completion;
@@ -119,6 +118,7 @@ typedef struct		s_read
 	t_cmd			*cmd;	
 	t_completion	*comp;
 	int				completion;
+    int             history_search;
 	t_cursor		cur;
 	int				history;
 	int				finish;
@@ -131,7 +131,7 @@ typedef struct		s_read
 typedef struct		s_cmp
 {
 	char			*key;
-	int				(*function)(t_read **readStd);
+	int				(*function)(t_read **read_std);
 }					t_cmp;
 
 /*

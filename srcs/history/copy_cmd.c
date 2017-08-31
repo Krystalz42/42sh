@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   copy_cmd.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/27 18:04:14 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/27 18:04:32 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+void			copy_cmd(t_read **read_std, t_cmd *cpy)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
+	t_cmd		*cmd;
+
+	cmd = NULL;
+	(*read_std)->cmd = cmd;
+	(*read_std)->cmd = create_element('\0');
+	cpy = first_cmd(cpy, 1);
+	while (cpy->c)
 	{
-		read_stdin();
-		NL;
+		key_print_(read_std, cpy->c);
+		cpy = cpy->next;
 	}
-	return (1);
 }

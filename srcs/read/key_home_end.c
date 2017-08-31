@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   home_end.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/11 06:30:22 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/20 17:26:09 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+int			key_home_(t_read **read_std)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
+	while ((*read_std)->cmd->prev)
 	{
-		read_stdin();
-		NL;
+		if (!(*read_std)->history && (*read_std)->cmd->prev->c == 10)
+			break ;
+		(*read_std)->cmd = (*read_std)->cmd->prev;
 	}
+	return (1);
+}
+int			key_end_(t_read **read_std)
+{
+	while ((*read_std)->cmd->next)
+		(*read_std)->cmd = (*read_std)->cmd->next;
 	return (1);
 }

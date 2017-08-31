@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   key_delete_here.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/12 17:36:48 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/19 21:06:32 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+int			key_delete_here(t_read **read_std)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
+	t_cmd		*kill;
+
+	if ((*read_std)->cmd->c)
 	{
-		read_stdin();
-		NL;
+		kill = (*read_std)->cmd;
+		(*read_std)->cmd = (*read_std)->cmd->next;
+		if ((*read_std)->cmd->prev->prev)
+			(*read_std)->cmd->prev->prev->next = (*read_std)->cmd;
+		(*read_std)->cmd->prev = (*read_std)->cmd->prev->prev;
+		free(kill);
 	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/30 21:01:12 by aroulin          ###   ########.fr        #
+#    Updated: 2017/08/31 17:06:43 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,58 +48,59 @@ NAME		= 42sh
 SRCS = \
 	   main.c												\
 	   shell.c												\
-	   insertOneLine.c										\
-	   read/readStdin.c									\
-	   read/keyPrint.c										\
-	   read/keyDelete.c									\
-	   read/keyShift.c										\
-	   read/keyHomeEnd.c									\
-	   read/keyEof.c										\
-	   read/keyTabulation.c								\
-	   read/keyArrow.c										\
-	   read/keyDeleteHere.c								\
-	   read/keyEnter.c										\
-	   read/keyInterrupt.c									\
-	   read/printStruct.c									\
-	   read/keyClear.c										\
-	   read/myPut.c										\
-	   read/firstCmd.c										\
+	   insert_one_line.c										\
+	   read/read_stdin.c									\
+	   read/key_print.c										\
+	   read/key_delete.c									\
+	   read/key_shift.c										\
+	   read/key_home_end.c									\
+	   read/key_eof.c										\
+	   read/key_tabulation.c								\
+	   read/key_arrow.c										\
+	   read/key_delete_here.c								\
+	   read/key_enter.c										\
+	   read/key_interrupt.c									\
+	   read/print_struct.c									\
+	   read/key_clear.c										\
+	   read/my_put.c										\
+	   read/first_cmd.c										\
 	   read/prompt.c										\
-	   read/checkCmd.c										\
-	   read/gblSaveRead.c									\
-	   read/finishReadStd.c								\
-	   hash/hashValue.c										\
-	   hash/hashBoard.c										\
-	   read/completion/colorCompletion.c					\
-	   read/completion/updateIndex.c						\
-	   read/completion/myToGo.c							\
-	   read/completion/initCompletion.c					\
-	   read/completion/printTab.c							\
-	   read/completion/completePath.c						\
-	   read/completion/continueCompletion.c				\
-	   read/completion/completeBinary.c					\
-	   read/completion/createComp.c						\
-	   read/completion/initFiles.c							\
+	   read/check_cmd.c										\
+	   read/gbl_save_read.c									\
+	   read/finish_read_std.c								\
+	   hash/hash_value.c									\
+	   hash/hash_board.c	    							\
+	   read/completion/init_tab.c							\
+	   read/completion/color_completion.c					\
+	   read/completion/update_index.c                       \
+	   read/completion/my_togo.c							\
+	   read/completion/init_completion.c					\
+	   read/completion/print_tab.c							\
+	   read/completion/complete_path.c						\
+	   read/completion/continue_completion.c				\
+	   read/completion/complete_binary.c					\
+	   read/completion/create_comp.c						\
+	   read/completion/init_files.c							\
 	   read/completion/completion.c							\
-	   read/completion/upOrDown.c							\
-	   history/initHistory.c								\
-	   history/previousHistory.c							\
-	   history/nextHistory.c								\
-	   history/makeListHist.c								\
-	   history/gblSaveHistory.c							\
-	   history/copyCmd.c									\
-	   signal/ftSignal.c									\
+	   read/completion/up_or_down.c							\
+	   history/init_history.c								\
+	   history/previous_history.c							\
+	   history/next_history.c								\
+	   history/make_list_hist.c								\
+	   history/gbl_save_history.c							\
+	   history/copy_cmd.c									\
+	   signal/ft_signal.c									\
 	   env/split.c											\
-	   env/initEnv.c										\
-	   env/myGetenv.c										\
-	   env/addListEnv.c									\
-	   env/globalSaveEnv.c								\
-	   term/initFd.c										\
-	   term/initTerm.c										\
-	   term/setTerm.c										\
-	   term/keepTermStruct.c								\
-	   memdel_struct/memdelCompletion.c					\
-	   memdel_struct/memdelRead.c							\
+	   env/init_env.c										\
+	   env/my_getenv.c										\
+	   env/add_list_env.c									\
+	   env/global_save_env.c								\
+	   term/init_fd.c										\
+	   term/init_term.c										\
+	   term/set_term.c										\
+	   term/keep_term_struct.c								\
+	   memdel_struct/memdel_completion.c					\
+	   memdel_struct/memdel_read.c							\
 	   error_function/bip.c									\
 
 # ---------------------------------------------------------------------------- #

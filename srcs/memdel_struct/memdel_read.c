@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   shell.c                                            :+:      :+:    :+:   */
+/*   memdel_read.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:53 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/20 10:52:17 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/20 11:26:47 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		shell(void)
+int			memdel_cmd(t_cmd **cmd)
 {
-	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
+	t_cmd *tmp;
+
+	while ((*cmd) && (*cmd)->prev)
+		(*cmd) = (*cmd)->prev;
+	while ((*cmd))
 	{
-		read_stdin();
-		NL;
+		tmp = (*cmd);
+		(*cmd) = (*cmd)->next;
+		free(tmp);
 	}
+	(*cmd) = NULL;
+	return (1);
+}
+
+int			memdel_read(t_read **read_std)
+{	
+	memdel_cmd(&((*read_std)->cmd));
+	memdel_completion(&((*read_std)->comp));
+	ft_memdel((void **)read_std);
 	return (1);
 }
