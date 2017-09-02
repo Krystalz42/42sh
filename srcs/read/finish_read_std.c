@@ -12,17 +12,6 @@
 
 #include <sh.h>
 
-void		reset_history(void)
-{
-	t_hist	*tmp;
-
-	if (!(tmp = gbl_save_history(NULL)))
-		return ;
-	while (tmp->next)
-		tmp = tmp->next;
-	gbl_save_history(tmp);
-}
-
 void		finish_read_std(t_read **read_std)
 {
 	t_cmd		*tmp;

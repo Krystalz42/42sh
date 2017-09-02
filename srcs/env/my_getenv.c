@@ -23,7 +23,7 @@ char		*my_getenv(char *str)
 			if (!ft_strcmp(env->name, str))
 				return (env->value);
 			else
-				env = env->next;	
+				env = env->next;
 		}
 	return (NULL);
 }

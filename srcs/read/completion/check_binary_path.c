@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memdel_read.c                                      :+:      :+:    :+:   */
+/*   check_binary_path.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/20 10:52:17 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 11:26:47 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/02 16:21:04 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/02 16:21:07 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			memdel_cmd(t_cmd **cmd)
+int			is_token(char c)
 {
-	t_cmd *tmp;
+    const char		*token;
+    int				i;
 
-	while ((*cmd) && (*cmd)->prev)
-		(*cmd) = (*cmd)->prev;
-	while ((*cmd))
-	{
-		tmp = (*cmd);
-		(*cmd) = (*cmd)->next;
-		free(tmp);
-	}
-	(*cmd) = NULL;
-	return (1);
+    token = "|;&";
+    i = 0;
+    while (++i < 3)
+        if (token[i] == c)
+            return (1);
+    return (0);
 }
 
-int			memdel_read(t_read **read_std)
+int			check_word(t_cmd *cmd)
 {
-	memdel_cmd(&((*read_std)->cmd));
-	memdel_completion(&((*read_std)->comp));
-	ft_memdel((void **)read_std);
-	return (1);
+    while (cmd->prev)
+    {
+        if (is_token(cmd->prev->c) || !cmd->prev)
+            return (1);
+        if (cmd->prev->c != 32 && cmd->prev->c != 9)
+            return (0);
+        cmd = cmd->prev;
+    }
+    return (0);
 }

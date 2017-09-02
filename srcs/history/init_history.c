@@ -58,8 +58,6 @@ void		init_history(void)
 		return ;
 	if ((ret = read(fd, &buff, sizeof(char) * 100000)) > 0)
 		convert_to_hist(buff, ret);
-	if (ret == 100000)
-		STR_FD("CA PAR EN COUILLE\n", fdb);
 	remove(path_hist);
 	free(path_hist);
 	close(fd);

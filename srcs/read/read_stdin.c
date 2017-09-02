@@ -65,7 +65,7 @@ t_read			*read_stdin(void)
 	
 	if (!(read_std = init_struct_for_read()))
 		return (NULL);
-	read_std->cur.co = prompt(DEFAULT, "&> ");
+	read_std->cur.co = prompt(DEFAULT, "KOUKOU TOI &> ");
 	init_buff(buff, &i, &read_std);
 	set_termios(SET_OUR_TERM);
 	while ((c = -1) && read(STDIN_FILENO, &(buff[++i]), sizeof(char)))

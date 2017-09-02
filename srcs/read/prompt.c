@@ -12,8 +12,6 @@
 
 #include <sh.h>
 
-
-
 int 			prompt(unsigned char flags, char *str)
 {
 	static char		*prompt;

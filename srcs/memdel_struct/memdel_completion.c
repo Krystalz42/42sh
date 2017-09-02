@@ -21,6 +21,7 @@ void		memdel_files(t_file *file)
 int			memdel_completion(t_completion **comp)
 {
 	t_file	*tmp;
+
 	if (*comp)
 	{
 		if ((*comp)->from)
@@ -37,6 +38,6 @@ int			memdel_completion(t_completion **comp)
 		}
 		ft_memdel((void **)comp);
 	}
-		(*comp) = NULL;
+	(*comp) = NULL;
 	return (1);
 }

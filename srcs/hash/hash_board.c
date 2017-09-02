@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hash_board.c                                        :+:      :+:    :+:   */
+/*   hash_board.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/30 17:41:36 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 18:55:09 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/02 16:01:59 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/02 16:02:02 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,30 @@
 
 t_hash		*hash_board(void)
 {
-	static t_hash	hBoard[LEN_HASH];
-	
-	return (hBoard);
-}
+	static t_hash	h_board[LEN_HASH];
 
+	return (h_board);
+}
 
 char		*search_path(char *binary)
 {
 	unsigned int		index;
-	t_hash				*hashTab;
+	t_hash				*hash_tab;
 
 	index = hash_value(binary);
-	hashTab = hash_board();
-	if (hashTab[index].path)
-		return (hashTab[index].path);
+	hash_tab = hash_board();
+	if (hash_tab[index].path)
+		return (hash_tab[index].path);
 	return (NULL);
 }
 
 void		add_hash(char *bin, char *path)
 {
 	unsigned int		index;
-	t_hash				*hashTab;
+	t_hash				*hash_tab;
 
 	index = hash_value(bin);
-	hashTab = hash_board();
-	hashTab[index].path = path;
-	hashTab[index].binary = bin;
+	hash_tab = hash_board();
+	hash_tab[index].path = path;
+	hash_tab[index].binary = bin;
 }

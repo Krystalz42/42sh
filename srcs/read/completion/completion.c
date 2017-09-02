@@ -60,8 +60,7 @@ char		*get_last_word(char *path)
 		if (i - s - 1 > 0)
 		{
 			tmp = ft_strdup(path + s + 1);
-			while (path[++s])
-				path[s] = '\0';
+			ft_bzero(path + s, i - s);
 		}
 	}
 	return (tmp);

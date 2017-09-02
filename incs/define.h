@@ -76,16 +76,16 @@
 
 # define PRINT_KEY(x) (x >= '\x20' && x <= '\x7E')
 
-# define MV_RIGHT			tputs(tgetstr("nd", 0), 0, &my_ut)
-# define MV_LEFT			tputs(tgetstr("le", 0), 0, &my_ut)
-# define MV_BOT				tputs(tgetstr("do", 0), 0, &my_ut)
-# define MV_TOP				tputs(tgetstr("up", 0), 0, &my_ut)
-# define SAVE 				tputs(tgetstr("sc", 0), 0, &my_ut)
-# define RESTORE			tputs(tgetstr("rc", 0), 0, &my_ut)
-# define CURSOR_INVIS		tputs(tgetstr("vi", 0), 0, &my_ut)
-# define CURSOR_BACK		tputs(tgetstr("ve", 0), 0, &my_ut)
-# define CLEAR_FROM_CUR		tputs(tgetstr("cd", 0), 0, &my_ut)
-# define BACK_N				tputs(tgetstr("cr", 0), 0, &my_ut)
-# define CLEAR				tputs(tgetstr("cl", 0), 0, &my_ut)
+# define MV_RIGHT			tputs(tgetstr("nd", 0), 0, &my_put)
+# define MV_LEFT			tputs(tgetstr("le", 0), 0, &my_put)
+# define MV_BOT				tputs(tgetstr("do", 0), 0, &my_put)
+# define MV_TOP				tputs(tgetstr("up", 0), 0, &my_put)
+# define SAVE 				tputs(tgetstr("sc", 0), 0, &my_put)
+# define RESTORE			tputs(tgetstr("rc", 0), 0, &my_put)
+# define CURSOR_INVIS		tputs(tgetstr("vi", 0), 0, &my_put)
+# define CURSOR_BACK		tputs(tgetstr("ve", 0), 0, &my_put)
+# define CLEAR_FROM_CUR		tputs(tgetstr("cd", 0), 0, &my_put)
+# define BACK_N				tputs(tgetstr("cr", 0), 0, &my_put)
+# define CLEAR				tputs(tgetstr("cl", 0), 0, &my_put)
 
 #endif

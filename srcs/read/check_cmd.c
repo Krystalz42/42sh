@@ -50,7 +50,7 @@ int			check_cmd(t_read **read_std)
 {
 	t_cmd *tmp;
 
-	if ((tmp = rec_brackets(first_cmd((*read_std)->cmd, 1), '\0'), fdb))
+	if ((tmp = rec_brackets(first_cmd((*read_std)->cmd, 1), '\0')))
 		;
 	if (tmp)	
 		return ((*read_std)->finish = 1);

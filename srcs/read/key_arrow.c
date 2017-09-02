@@ -20,9 +20,9 @@ int			key_arrow_left(t_read **read_std)
 		if ((*read_std)->comp->tab_->index == ((*read_std)->comp->tab_->element - 1) ||
 					!(((*read_std)->comp->tab_->index + 1) % (*read_std)->comp->tab_->elem_page))
 		{
-			reprint_cmd(read_std, 1);
+			place_cursor(read_std, 1);
 			print_tab(read_std);
-			reprint_cmd(read_std, 0);
+			place_cursor(read_std, 0);
 		}
 		else
 			back_completion(read_std);
@@ -43,20 +43,17 @@ int			key_arrow_right(t_read **read_std)
 		update_index(read_std, 1);
 		if (!(((*read_std)->comp->tab_->index) % (*read_std)->comp->tab_->elem_page))
 		{
-			reprint_cmd(read_std, 1);
+			place_cursor(read_std, 1);
 			print_tab(read_std);
-			reprint_cmd(read_std, 0);
+			place_cursor(read_std, 0);
 		}
-		else 
-		{
+		else
 			continue_completion(read_std);
-		}
 		(*read_std)->completion++;
 	}
 	else
 		if ((*read_std)->cmd->next)
 			(*read_std)->cmd = (*read_std)->cmd->next;
-
 	return (1);
 }
 

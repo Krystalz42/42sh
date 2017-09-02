@@ -22,9 +22,9 @@ void		to_up(t_read **read_std)
 	update_index(read_std, (*read_std)->comp->tab_->nbr * -1);
 	if (((*read_std)->comp->tab_->index / (*read_std)->comp->tab_->elem_page) != (*read_std)->comp->tab_->page)
 	{
-		reprint_cmd(read_std, 1);
+		place_cursor(read_std, 1);
 		print_tab(read_std);
-		reprint_cmd(read_std, 0);
+		place_cursor(read_std, 0);
 	}
 	else
 	{
@@ -49,9 +49,9 @@ int			to_down(t_read **read_std)
 	update_index(read_std, (*read_std)->comp->tab_->nbr * 1);
 	if (((*read_std)->comp->tab_->index / (*read_std)->comp->tab_->elem_page) != (*read_std)->comp->tab_->page)
 	{
-		reprint_cmd(read_std, 1);
+		place_cursor(read_std, 1);
 		print_tab(read_std);
-		reprint_cmd(read_std, 0);
+		place_cursor(read_std, 0);
 	}
 	else
 	{

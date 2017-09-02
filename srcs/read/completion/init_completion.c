@@ -12,30 +12,7 @@
 
 #include <sh.h>
 
-int			is_token(char c)
-{
-	const char		*token;
-	int				i;
 
-	token = "|;&";
-	i = 0;
-	while (++i < 3)
-		if (token[i] == c)
-			return (1);
-	return (0);
-}
-
-int			check_word(t_cmd *cmd)
-{
-	while (cmd->prev)
-	{
-		if (is_token(cmd->prev->c))
-			return (1);
-		if (cmd->prev->c != 32 && cmd->prev->c != 9)
-			return (0);
-	}
-	return (0);
-}
 
 int			empty_cmd(t_cmd *cmd)
 {
@@ -53,12 +30,12 @@ int			empty_cmd(t_cmd *cmd)
 void		init_completion(t_read **read_std)
 {
 	if (empty_cmd((*read_std)->cmd))
+	{
 		key_print_(read_std, 9);
+	}
 	else if (check_word((*read_std)->cmd))
 	{
 		(*read_std)->completion = 2;
-		complete_binary(read_std);
-
 	}
 	else
 	{

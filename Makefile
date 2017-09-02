@@ -48,7 +48,7 @@ NAME		= 42sh
 SRCS = \
 	   main.c												\
 	   shell.c												\
-	   insert_one_line.c										\
+	   insert_one_line.c									\
 	   read/read_stdin.c									\
 	   read/key_print.c										\
 	   read/key_delete.c									\
@@ -71,6 +71,7 @@ SRCS = \
 	   hash/hash_value.c									\
 	   hash/hash_board.c	    							\
 	   read/completion/init_tab.c							\
+	   read/completion/check_binary_path.c                  \
 	   read/completion/color_completion.c					\
 	   read/completion/update_index.c                       \
 	   read/completion/my_togo.c							\
@@ -83,6 +84,7 @@ SRCS = \
 	   read/completion/init_files.c							\
 	   read/completion/completion.c							\
 	   read/completion/up_or_down.c							\
+	   history/reset_history.c                              \
 	   history/init_history.c								\
 	   history/previous_history.c							\
 	   history/next_history.c								\

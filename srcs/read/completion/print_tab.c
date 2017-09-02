@@ -16,14 +16,6 @@ int			init_page(t_read **read_std, t_file **tmp)
 {
 	(*read_std)->comp->tab_->page = ((*read_std)->comp->tab_->index) /
 		((*read_std)->comp->tab_->elem_page);
-	NBR_FD((*tmp)->next && (*tmp)->index,fdb);
-	CHAR_FD(32, fdb);
-	NBR_FD(((*read_std)->comp->tab_->elem_page),fdb);
-	CHAR_FD(32, fdb);
-	NBR_FD((*read_std)->comp->tab_->page ,fdb);
-	CHAR_FD(32, fdb);
-	NBR_FD((*read_std)->comp->tab_->page * (*read_std)->comp->tab_->elem_page, fdb);
-	CHAR_FD(10, fdb);
 	while ((*tmp)->next && (*tmp)->index != (*read_std)->comp->tab_->page * (*read_std)->comp->tab_->elem_page)
 		(*tmp) = (*tmp)->next;
 	return ((*read_std)->comp->tab_->elem_page * ((*read_std)->comp->tab_->page + 1));

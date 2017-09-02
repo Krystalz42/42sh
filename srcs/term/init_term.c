@@ -28,17 +28,15 @@ int		init_term(void)
 
 	if ((init_fd() == -1))
 		return (1);
-	if (my_getenv("TERM") && tgetent(NULL, my_getenv("TERM")))
+	if (!my_getenv("TERM"))
+		add_list_env("TERM", "vt100");
+	if (tgetent(NULL, my_getenv("TERM")))
 	{
 		tcgetattr(STDIN_FILENO, &old_term);
 		keep_term_struct(SAVE_OLD, &old_term);
 	}
-	else if (!tgetent(NULL, my_getenv("TERM")))
-	{
-		add_list_env("TERM", "xterm");
-		tcgetattr(STDIN_FILENO, &old_term);
-		keep_term_struct(SAVE_OLD, &old_term);
-	}
+	else
+		exit(127);
 	if (!(tcgetattr(init_fd(), &our_term)) && init_our_term(&our_term))
 		keep_term_struct(SAVE_OUR, &our_term);
 	return (0);

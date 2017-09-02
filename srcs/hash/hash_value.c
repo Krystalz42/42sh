@@ -1,13 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   hash_value.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/02 15:59:47 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/02 15:59:50 by aroulin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <sh.h>
 
 unsigned int		hash_value(char *str)
 {
-	int 		i= -1;
-	unsigned int nb;
+	int 				i;
+	unsigned int		nb;
 
+	i = -1;
 	nb = 0;
-	if (str[0] == '.')
-		return (0);
 	while (str[++i])
 	{
 		nb += str[i];
@@ -17,6 +28,6 @@ unsigned int		hash_value(char *str)
 	nb += (nb << 3);
 	nb ^= (nb >> 11);
 	nb += (nb << 15);
-	nb = ((nb) % LEN_HASH);
+	nb = (nb % LEN_HASH);
 	return (nb);
 }

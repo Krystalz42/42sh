@@ -16,7 +16,7 @@ t_env		*gbl_save_env(unsigned short flags, t_env *env)
 {
 	static t_env *save;
 
-	if ((flags & ENV_NULL)) 
+	if ((flags & ENV_NULL))
 		save = NULL;
 	else if ((flags & ENV_INIT))
 		save = env;
