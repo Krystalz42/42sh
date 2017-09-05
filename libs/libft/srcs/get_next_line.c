@@ -3,121 +3,90 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
-/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
+/*   Created: 2017/04/26 11:05:05 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/09/05 18:09:47 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 #include <get_next_line.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <fcntl.h>
-#include <stdio.h>
+#include <unistd.h>
 
-char	*my_realloc(char *str, int size)
+static t_struct	*ft_newnode(void)
 {
-	char	*new;
-	int		i;
+	t_struct	*node;
 
-	if ((new = ft_strnew(size)) == NULL)
+	if (!(node = (t_struct*)malloc(sizeof(t_struct))))
 		return (NULL);
-	i = 0;
-	while (str[i])
+	if (!(node->content = ft_memalloc(1)))
+		return (NULL);
+	node->next = NULL;
+	return (node);
+}
+
+static char		*ft_populateline(t_struct *node, char **line)
+{
+	size_t		index;
+	char		*memory;
+
+	index = 0;
+	while (node->content[index])
 	{
-		new[i] = str[i];
-		i++;
+		if (node->content[index] == '\n')
+		{
+			*line = ft_strsub(node->content, 0, index);
+			memory = node->content;
+			node->content = ft_strdup(node->content + (index + 1));
+			free(memory);
+			return (node->content);
+		}
+		index++;
 	}
-	new[i] = 0;
-	free(str);
-	return (new);
+	*line = ft_strdup(node->content);
+	ft_strclr(node->content);
+	return (node->content);
 }
 
-char	*destroy_buffer(char *d, int len)
+static int		ft_read(const int fd, t_struct *node)
 {
-	char	*tmp;
-	int		lend;
+	int			ret;
+	char		*buf;
+	char		*memory;
 
-	lend = ft_strlen(d);
-	tmp = NULL;
-	if (*d && lend >= len)
-		if ((tmp = ft_strsub(d, len, lend - len)) == NULL)
-			return (NULL);
-	return (tmp);
-}
-
-int		struct_init(t_file *tab, int i, int *len, int *r)
-{
-	char	*buff;
-
-	buff = ft_strnew(BUFF_SIZE);
-	*len = ft_strlen(tab->d[i]);
-	while ((*r = 0) == 0 && tab->count[i] == 0)
+	if (!(buf = ft_memalloc(BUFF_SIZE + 1)))
+		return (-1);
+	while (ft_strchr(node->content, '\n') == 0)
 	{
-		if ((*r = read(tab->fd[i], buff, BUFF_SIZE)) == -1)
+		if ((ret = read(fd, buf, BUFF_SIZE)) < 0)
 			return (-1);
-		tab->d[i] = *r > 0 ? my_realloc(tab->d[i], *len + *r) : tab->d[i];
-		r = r > 0 && ft_memcpy(tab->d[i] + *len, buff, *r) ? r : r;
-		*len += *r;
-		tab->count[i] = ft_chrchar(buff, '\n');
-		if (*r != BUFF_SIZE)
+		buf[ret] = '\0';
+		memory = node->content;
+		if (!(node->content = ft_strjoin(node->content, buf)))
+			return (-1);
+		free(memory);
+		if (ret < BUFF_SIZE)
 			break ;
 	}
-	free(buff);
-	if ((ft_strlen(tab->d[i]) == 0) &&
-			((tab->bol[i] == 0 && *r == 0) || (*r == 0 && tab->bol[i] == 0)))
-		return (0);
-	tab->bol[i] = 1;
-	if ((ft_strlen(tab->d[i]) == 0) && ((*r == 0 && tab->count[i] == 0)
-				|| (tab->count[i] == 0 && *r != BUFF_SIZE)))
-		tab->bol[i] = -1;
-	tab->count[i]--;
-	return (1);
+	ft_strdel(&buf);
+	return (ret);
 }
 
-int		read_it(t_file *tab, int i, char **line)
+int				get_next_line(const int fd, char **line)
 {
-	int		len;
+	int					ret;
+	static t_struct		*node;
 
-	len = 0;
-	if (tab->bol[i] != -1)
-		while (tab->d[i][len] != '\n' && tab->d[i][len] != '\0')
-			len++;
-	if (tab->bol[i] != -1)
-		if ((*line = ft_strsub(tab->d[i], 0, len)) == NULL)
-			return (-1);
-	if ((tab->d[i] = destroy_buffer(tab->d[i], len + 1)) == NULL)
-		tab->bol[i] = -1;
-	return (1);
-}
-
-int		get_next_line(int fd, char **line)
-{
-	static t_file	tab;
-	int				len;
-	int				r;
-	int				err;
-
-	if (line == NULL || fd < 0 || BUFF_SIZE == 0)
+	if (!node)
+		node = ft_newnode();
+	if (fd == -1 || !line)
 		return (-1);
-	tab.i = -1;
-	while (++tab.i < 49 && tab.first == 0)
-		tab.fd[tab.i] = -1;
-	tab.first = 1;
-	tab.i = 0;
-	while (tab.i < 49 && tab.fd[tab.i] != -1 && tab.fd[tab.i] != fd)
-		tab.i++;
-	tab.fd[tab.i] = fd;
-	if (tab.bol[tab.i] == -1)
+	if ((ret = ft_read(fd, node)) == -1)
+		return (-1);
+	node->content = ft_populateline(node, line);
+	if (!ft_strlen(node->content) && !ft_strlen(*line) && !ret)
 		return (0);
-	tab.d[tab.i] = tab.bol[tab.i] == 0 ? ft_strnew(1) : tab.d[tab.i];
-	if ((err = struct_init(&tab, tab.i, &len, &r)) != 1)
-		return (err);
-	if (len == 0 && r == 0)
-		return (0);
-	if ((err = read_it(&tab, tab.i, line)) != 1)
-		free(tab.d[tab.i]);
-	return (err);
+	return (1);
 }

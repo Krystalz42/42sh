@@ -25,32 +25,32 @@ void		restore_cursor_(t_cursor cur)
 	}
 }
 
-int			print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_read *read_std)
+int			print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_cursor *cur)
 {
 	int			co;
 
 	co = tgetnum("co");
-	read_std->cur.co = prompt(PRINT, NULL);
-	read_std->cur.line = 1;
+	cur->line = 1;
 	while ((!to_select && cmd && cmd->c) || (to_select && cmd != stop))
 	{
-		if (cmd->c == 10 || read_std->cur.co == co)
+		if (cmd->c == 10 || cur->co >= co)
 		{
 			(to_select) ? MV_BOT : insert_one_line();
-			read_std->cur.line += 1;
-			read_std->cur.co = 0;
+			cur->line += 1;
+			cur->co = 0;
 		}
 		(cmd->c != 10) ? CHAR_FD(cmd->c, init_fd()): 0 ;
-		read_std->cur.co += (cmd->c == 9) ? 4 : 1;
+		cur->co += (cmd->c == 9) ? 4 : 1;
 		cmd = cmd->next;
 	}
 	return (1);
 }
 
-int	reset_cur(t_read *read_std)
+
+int	reset_cur(t_cursor *cur)
 {
-	read_std->cur.line = 0;
-	read_std->cur.co = 0;
+	cur->line = 0;
+	cur->co = 0;
 	return (1);
 }
 
@@ -62,11 +62,13 @@ int			print_struct(t_read *read_std)
 	cmd = first_cmd(read_std->cmd, read_std->history);
 	restore_cursor_(read_std->cur);
 	CLEAR_FROM_CUR;
-	reset_cur(read_std);
-	print_list(0, cmd, read_std->cmd, read_std);
+	reset_cur(&(read_std->cur));
+	read_std->cur.co = prompt(PRINT, NULL);
+	print_list(0, cmd, read_std->cmd, &(read_std->cur));
 	restore_cursor_(read_std->cur);
-	reset_cur(read_std);
-	print_list(1, cmd, read_std->cmd, read_std);
+	reset_cur(&(read_std->cur));
+	read_std->cur.co = prompt(PRINT, NULL);
+	print_list(1, cmd, read_std->cmd, &(read_std->cur));
 	CURSOR_BACK;
-	return (1);
+    return (1);
 }

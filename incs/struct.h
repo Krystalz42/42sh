@@ -109,30 +109,6 @@ typedef struct		s_cursor
 	int				save;
 }					t_cursor;
 
-/*
-**			STRUCT FOR READ_STD
-*/
-
-typedef struct		s_read
-{
-	t_cmd			*cmd;	
-	t_completion	*comp;
-	int				completion;
-    int             history_search;
-	t_cursor		cur;
-	int				history;
-	int				finish;
-}					t_read;
-
-/*
-**			STRUCT FOR COMPARE KEY
-*/
-
-typedef struct		s_cmp
-{
-	char			*key;
-	int				(*function)(t_read **read_std);
-}					t_cmp;
 
 /*
 **			STRUCT HISTORY
@@ -140,7 +116,7 @@ typedef struct		s_cmp
 
 typedef struct		s_hist
 {
-	t_read			*hist;
+	struct s_read	*hist;
 	struct s_hist	*prev;
 	struct s_hist	*next;
 }					t_hist;
@@ -155,4 +131,42 @@ typedef struct		s_hash
 	char			*path;
 	struct s_hash	*next;
 }					t_hash;
+
+/*
+**			STRUCT FOR SEARCH IN HISTORY
+*/
+
+typedef struct		s_lfh
+{
+	t_cmd			*cmd;
+	t_cursor		cur;
+}					t_lfh;
+
+/*
+**			STRUCT FOR READ_STD
+*/
+
+typedef struct		s_read
+{
+	t_cmd			*cmd;
+	t_completion	*comp;
+	t_lfh			*hist_search;
+	int				completion;
+	int             history_search;
+	t_cursor		cur;
+	int				history;
+	int				finish;
+    int             co;
+}					t_read;
+
+/*
+**			STRUCT FOR COMPARE KEY
+*/
+
+typedef struct		s_cmp
+{
+	char			*key;
+	int				(*function)(struct s_read **read_std);
+}					t_cmp;
+
 #endif

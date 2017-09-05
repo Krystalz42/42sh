@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   memdel_search_history.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
-/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/02 17:16:24 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/02 17:17:07 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include <sh.h>
 
-void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+int     memdel_lfh(t_lfh *hist_search)
 {
-	if (*alst != NULL)
-	{
-		del((*alst)->content, (*alst)->content_size);
-		free(*alst);
-		*alst = NULL;
-	}
+	(void)hist_search;
+    return (0);
 }

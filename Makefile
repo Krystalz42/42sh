@@ -84,6 +84,14 @@ SRCS = \
 	   read/completion/init_files.c							\
 	   read/completion/completion.c							\
 	   read/completion/up_or_down.c							\
+	   read/search_history/compare_history.c                \
+	   read/search_history/compare_list.c                   \
+	   read/search_history/first_history.c                  \
+	   read/search_history/last_result.c                    \
+	   read/search_history/init_research.c                  \
+	   read/search_history/print_struct_history.c           \
+	   read/search_history/manage_cursor_prompt.c           \
+	   read/search_history/search_history.c                 \
 	   history/reset_history.c                              \
 	   history/init_history.c								\
 	   history/previous_history.c							\
@@ -102,6 +110,7 @@ SRCS = \
 	   term/set_term.c										\
 	   term/keep_term_struct.c								\
 	   memdel_struct/memdel_completion.c					\
+	   memdel_struct/memdel_search_history.c                \
 	   memdel_struct/memdel_read.c							\
 	   error_function/bip.c									\
 

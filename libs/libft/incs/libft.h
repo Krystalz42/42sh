@@ -13,6 +13,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+# include <get_next_line.h>
 
 # define ABS(x)	(x > 0 ? x : -x)
 
@@ -49,13 +50,6 @@
 # define BASE_DEC "0123456789"
 # define BASE_OCT "01234567"
 # define BASE_BIN "01"
-
-typedef struct		s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
 
 void				ft_memdel_tab(char **ta);
 char				**ft_str_to_tab(char *str);

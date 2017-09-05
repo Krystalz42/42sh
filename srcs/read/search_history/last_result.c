@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   last_result.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
-/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/05 21:17:57 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/05 21:17:58 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include <sh.h>
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+int         last_resultat(int res)
 {
-	if (lst != NULL)
-	{
-		f(lst);
-		ft_lstiter(lst->next, f);
-	}
+    static int save;
+
+    if (res != -42)
+        save = res;
+    return (save);
 }

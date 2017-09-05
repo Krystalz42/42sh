@@ -58,7 +58,7 @@ int			check_cmd(t_read **read_std)
 	insert_one_line();
 	restore_cursor_((*read_std)->cur);
 	key_end_(read_std);
-	print_list(1, first_cmd((*read_std)->cmd, 0), (*read_std)->cmd, (*read_std));
+	print_list(1, first_cmd((*read_std)->cmd, 0), (*read_std)->cmd, &((*read_std)->cur));
 	if (keep_this_char(-1) == '\\')
 		prompt(NEXTCMD, NULL);
 	else if (keep_this_char(-1) == '\'')

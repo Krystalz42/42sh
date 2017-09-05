@@ -23,15 +23,28 @@ t_cmd		*create_element(char c)
 	return (element);
 }
 
-int			key_print_(t_read **read_std, char c)
+int			key_print_fct(t_cmd *cmd, char c)
 {
 	t_cmd *element;
 
 	element = create_element(c);
-	element->prev = (*read_std)->cmd->prev;
-	element->next = (*read_std)->cmd;
-	if ((*read_std)->cmd->prev)
-		(*read_std)->cmd->prev->next = element;
-	(*read_std)->cmd->prev = element;
+	element->prev = cmd->prev;
+	element->next = cmd;
+	if (cmd->prev)
+		cmd->prev->next = element;
+	cmd->prev = element;
 	return (1);
+}
+
+int			key_print_(t_read **read_std, char c)
+{
+    if ((*read_std)->history_search)
+    {
+        key_print_fct((*read_std)->hist_search->cmd, c);
+        compare_history(read_std);
+        (*read_std)->history_search++;
+    }
+    else
+        key_print_fct((*read_std)->cmd, c);
+    return (1);
 }

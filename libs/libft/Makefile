@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/30 22:26:42 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/30 22:26:44 by aroulin          ###   ########.fr        #
+#    Updated: 2017/09/05 21:50:05 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,13 +67,6 @@ SRCS = \
 	   ft_itoa.c				\
 	   ft_itounssigned.c		\
 	   ft_lltoa.c				\
-	   ft_lstadd.c				\
-	   ft_lstcpy.c				\
-	   ft_lstdel.c				\
-	   ft_lstdelone.c			\
-	   ft_lstiter.c				\
-	   ft_lstmap.c				\
-	   ft_lstnew.c				\
 	   ft_ltoa.c				\
 	   ft_memalloc.c			\
 	   ft_memccpy.c				\

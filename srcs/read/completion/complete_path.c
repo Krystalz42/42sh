@@ -15,8 +15,9 @@
 void		reset(t_read **read_std, int to)
 {
 	restore_cursor_((*read_std)->cur);
+	(*read_std)->cur.co = prompt(PRINT, NULL);
 	print_list(to, first_cmd((*read_std)->cmd, (*read_std)->history),
-			(*read_std)->cmd, (*read_std));
+			(*read_std)->cmd, &((*read_std)->cur));
 }
 
 int			place_cursor(t_read **read_std, int t)

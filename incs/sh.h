@@ -47,9 +47,10 @@ t_read				*init_struct_for_read(void);
 void				make_list_hist(t_read *read_std);
 t_cmd				*first_cmd(t_cmd *cmd, int history);
 t_cmd				*gbl_save_read(t_cmd *read_std);
-int					print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_read *read_std);
+int		        	print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_cursor *cur);
 void				restore_cursor_(t_cursor cur);
 int					check_cmd(t_read **read_std);
+int	                reset_cur(t_cursor *cur);
 
 /*
 **				HASH FUNCTION
@@ -65,6 +66,7 @@ void				add_hash(char *bin, char *path);
 */
 
 int					place_cursor(t_read **read_std, int t);
+void                reset(t_read **read_std, int to);
 int	        		check_word(t_cmd *cmd);
 int			        len_cmd(t_cmd **cmd);
 int					print_tab(t_read **read_std);
@@ -114,6 +116,22 @@ int					key_end_(t_read **read_std);
 int					key_delete_here(t_read **read_std);
 
 /*
+**              SEARCH HISTORY FUNCTION
+*/
+
+int                 init_research(t_read **read_std);
+int                 key_search_history(t_read **read_std);
+int		            print_struct_history(t_read **read_std);
+int                 reset_cur_hist(t_lfh *hist);
+int                 prompt_history(int p);
+int                 new_line_after_bloc(t_read **read_std, int to);
+int		        	key_print_fct(t_cmd *cmd, char c);
+void                compare_history(t_read **read_std);
+int                 list_compare(t_cmd *little, t_cmd *big);
+t_hist              *first_history(void);
+int                 last_resultat(int res);
+
+/*
 **				ENVIRONEMENT FUNCTION
 */
 
@@ -157,10 +175,11 @@ int					init_term(void);
 
 int					memdel_completion(t_completion **comp);
 int					memdel_read(t_read **read_std);
+int                 memdel_lfh(t_lfh *hist_search);
 int					memdel_cmd(t_cmd **cmd);
 
 /*
-**				ERROR FUNCTION
+**			   	ERROR FUNCTION
 */
 
 int					bip(void);

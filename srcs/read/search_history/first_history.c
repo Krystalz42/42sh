@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstcpy.c                                        :+:      :+:    :+:   */
+/*   first_history.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
-/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/05 20:39:49 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/05 20:39:50 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include <sh.h>
 
-t_list	*ft_lstcpy(t_list *list)
+t_hist  *first_history(void)
 {
-	t_list *cpy;
+    static t_hist *first;
 
-	if (list != NULL)
-	{
-		cpy = ft_lstnew(list->content, list->content_size);
-		cpy->next = ft_lstcpy(list->next);
-		return (cpy);
-	}
-	else
-		return (NULL);
+    if (!(first = gbl_save_history(NULL)))
+        return (NULL);
+    while (first->next)
+        first = first->next;
+    return (first);
 }

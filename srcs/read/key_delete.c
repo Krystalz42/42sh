@@ -12,21 +12,34 @@
 
 #include <sh.h>
 
-int			key_del(t_read **read_std)
+int			key_del_fct(t_cmd *cmd)
 {
 	t_cmd		*kill;
 
-	if ((*read_std)->cmd->prev)
+	if (cmd->prev)
 	{
-		kill = (*read_std)->cmd->prev;
-		if ((*read_std)->cmd->prev->prev)
+		kill = cmd->prev;
+		if (cmd->prev->prev)
 		{
-			(*read_std)->cmd->prev->prev->next = (*read_std)->cmd;
-			(*read_std)->cmd->prev = (*read_std)->cmd->prev->prev;
+			cmd->prev->prev->next = cmd;
+			cmd->prev = cmd->prev->prev;
 		}
 		else
-			(*read_std)->cmd->prev = NULL;
+			cmd->prev = NULL;
 		ft_memdel((void **)&(kill));
 	}
 	return (1);
+}
+
+int			key_del(t_read **read_std)
+{
+    if ((*read_std)->history_search)
+    {
+        key_del_fct((*read_std)->hist_search->cmd);
+		compare_history(read_std);
+        (*read_std)->history_search++;
+    }
+    else
+        key_del_fct((*read_std)->cmd);
+    return (1);
 }

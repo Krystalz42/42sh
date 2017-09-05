@@ -27,7 +27,7 @@ t_cmp		compare_key[] = {
 	(t_cmp){ARROW_RIGHT, key_arrow_right},
 	(t_cmp){ARROW_UP, key_arrow_up},
 	(t_cmp){HOME_KEY, key_home_},
-	(t_cmp){CTRL_R, key_home_},
+	(t_cmp){CTRL_R, key_search_history},
 	(t_cmp){SHIFT_UP_KEY, key_shift_up},
 	(t_cmp){SHIFT_DOWN_KEY, key_shift_down},
 	(t_cmp){SHIFT_RIGHT_KEY, key_shift_right},
@@ -35,12 +35,14 @@ t_cmp		compare_key[] = {
 	(t_cmp){NULL, NULL}
 };
 
-int				init_buff(char *buff, int *i, t_read **read_std)
+int				modify_and_print(char *buff, int *i, t_read **read_std)
 {
 	ft_bzero(buff, LEN_BUFFER);
 	*i = -1;
-	((*read_std)->completion) && (--(*read_std)->completion);
-	(!(*read_std)->completion) && print_struct((*read_std)) && memdel_completion(&((*read_std)->comp));
+	((*read_std)->completion) ? (--(*read_std)->completion) : memdel_completion(&((*read_std)->comp));
+	((*read_std)->history_search) ? (--(*read_std)->history_search) : 0;
+    (!(*read_std)->completion) ? print_struct(*read_std) : 0;
+    ((*read_std)->history_search) ? print_struct_history(read_std) : 0;
 	return (1);
 }
 
@@ -53,6 +55,7 @@ t_read					*init_struct_for_read(void)
 	if (!(read_std->cmd = create_element('\0')))
 		return (NULL);
 	gbl_save_read(read_std->cmd);
+	read_std->history_search = 0;
 	return (read_std);
 }
 
@@ -65,20 +68,21 @@ t_read			*read_stdin(void)
 	
 	if (!(read_std = init_struct_for_read()))
 		return (NULL);
-	read_std->cur.co = prompt(DEFAULT, "KOUKOU TOI &> ");
-	init_buff(buff, &i, &read_std);
+	read_std->cur.co = prompt(DEFAULT, "Bonjour $> ");
+	last_resultat(0);
+	modify_and_print(buff, &i, &read_std);
 	set_termios(SET_OUR_TERM);
 	while ((c = -1) && read(STDIN_FILENO, &(buff[++i]), sizeof(char)))
 	{
-		if (PRINT_KEY(buff[0]))
-			key_print_(&read_std, buff[0]) && init_buff(buff, &i, &read_std);
+		if (ft_isprint(buff[0]))
+			key_print_(&read_std, buff[0]) && modify_and_print(buff, &i, &read_std);
 		while (compare_key[++c].key)
 			if (!ft_strcmp(compare_key[c].key, buff))
-				compare_key[c].function(&read_std) && init_buff(buff, &i, &read_std);
+				compare_key[c].function(&read_std) && modify_and_print(buff, &i, &read_std);
 		if ((read_std)->finish)
 			break ; 
 	}
 	set_termios(SET_OLD_TERM);
 	finish_read_std(&read_std);
-	return (read_std);
+    return (read_std);
 }
