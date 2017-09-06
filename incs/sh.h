@@ -89,6 +89,7 @@ void				init_files(t_file **file, char *name, unsigned char type, int index);
 void				completion(t_read **read_std);
 void				update_index(t_read **read_std, int i);
 int		        	init_tab_(t_tab *tab_, int li);
+static inline int 	management_wildcard(char *data, char *comp);
 
 /*
 **				POINTER ON FUNCTION FOR READ
@@ -97,9 +98,9 @@ int		        	init_tab_(t_tab *tab_, int li);
 int					key_print_(t_read **read_std, char c);
 int		        	is_token(char c);
 int					key_tab(t_read **read_std);
-void				finish_read_std(t_read **read_std);
 int					key_enter_(t_read **read_std);
 int					key_interrupt(t_read **read_std);
+void				finish_read_std(t_read **read_std);
 int					key_clear_(t_read **read_std);
 int					key_eof(t_read **read_std);
 int					key_arrow_left(t_read **read_std);
@@ -175,7 +176,7 @@ int					init_term(void);
 
 int					memdel_completion(t_completion **comp);
 int					memdel_read(t_read **read_std);
-int                 memdel_lfh(t_lfh *hist_search);
+int                 memdel_lfh(t_lfh **hist_search);
 int					memdel_cmd(t_cmd **cmd);
 
 /*

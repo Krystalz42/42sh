@@ -35,7 +35,7 @@ void		complete_command(t_read **read_std)
 		}
 		tmp = tmp->next;
 	}
-	((*read_std)->completion) && ((*read_std)->completion--);
+	((*read_std)->completion) && ((*read_std)->completion = 0);
 }
 
 int			key_enter_(t_read **read_std)

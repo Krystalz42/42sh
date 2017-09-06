@@ -16,22 +16,6 @@
 
 char			*init_prompt(void)
 {
-	char *str;
-	int fd;
-
-	if ((fd = open(".git/config", O_RDONLY)) == -1)
-		;
-	while (get_next_line(fd, &str))
-	{
-		if (!ft_strncmp(str, "[branch", 6))
-		{
-			close(fd);
-			return (str);
-		}
-		else
-			ft_strdel(&str);
-	}
-	close(fd);
 	return (NULL);
 }
 

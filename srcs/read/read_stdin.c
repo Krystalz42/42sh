@@ -35,18 +35,18 @@ t_cmp		compare_key[] = {
 	(t_cmp){NULL, NULL}
 };
 
-int				modify_and_print(char *buff, int *i, t_read **read_std)
+static inline int				modify_and_print(char *buff, int *i, t_read **read_std)
 {
 	ft_bzero(buff, LEN_BUFFER);
 	*i = -1;
 	((*read_std)->completion) ? (--(*read_std)->completion) : memdel_completion(&((*read_std)->comp));
-	((*read_std)->history_search) ? (--(*read_std)->history_search) : 0;
+	((*read_std)->history_search) ? (--(*read_std)->history_search) : memdel_lfh(&((*read_std)->hist_search));
     (!(*read_std)->completion) ? print_struct(*read_std) : 0;
     ((*read_std)->history_search) ? print_struct_history(read_std) : 0;
 	return (1);
 }
 
-t_read					*init_struct_for_read(void)
+static inline t_read					*init_struct_for_read(void)
 {
 	t_read		*read_std;
 
@@ -54,6 +54,7 @@ t_read					*init_struct_for_read(void)
 		return (NULL);
 	if (!(read_std->cmd = create_element('\0')))
 		return (NULL);
+	read_std->hist_search = NULL;
 	gbl_save_read(read_std->cmd);
 	read_std->history_search = 0;
 	return (read_std);

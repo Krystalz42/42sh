@@ -51,7 +51,7 @@ void		complete_path(t_read **read_std, t_path f)
 	if (!(*read_std)->comp->tab_->element ||
 		(!(init_tab_((*read_std)->comp->tab_, (*read_std)->cur.line))))
 	{
-		(*read_std)->completion--;
+		(*read_std)->completion = 0;
 		return ;
 	}
 	print_tab(read_std);

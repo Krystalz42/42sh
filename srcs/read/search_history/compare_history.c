@@ -38,5 +38,5 @@ void        compare_history(t_read **read_std)
         }
         (*read_std)->history_search = 1;
     }
-    last_resultat((!little->c) ? 1 : res);
+    last_resultat((!little->c) ? 0 : res);
 }

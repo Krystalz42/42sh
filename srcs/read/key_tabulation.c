@@ -20,6 +20,7 @@ int			key_tab(t_read **read_std)
 	}
 	else
 	{
+		memdel_completion(&((*read_std)->comp));
 		init_completion(read_std);
 	}
 	return (1);
