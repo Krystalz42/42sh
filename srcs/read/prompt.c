@@ -6,24 +6,16 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 14:22:37 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/05 18:17:28 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/14 15:52:36 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-
-
-char			*init_prompt(void)
-{
-	return (NULL);
-}
-
-int 			prompt(unsigned char flags, char *str)
+int 			prompt(unsigned char flags)
 {
 	static char		*prompt;
 
-	init_prompt();
 	if (flags & HEREDOC)
 		prompt = "heredoc > ";
 	else if (flags & DQUOTE)
@@ -33,8 +25,8 @@ int 			prompt(unsigned char flags, char *str)
 	else if (flags & NEXTCMD)
 		prompt = "nextcmd > ";
 	else if (flags & DEFAULT)
-		prompt = str;
-	if (!(flags & PRINT))
+		prompt = my_prompt(NULL);
+	if (flags & PRINT)
 		STR_FD(prompt, init_fd());
 	return (ft_strlen(prompt));
 }

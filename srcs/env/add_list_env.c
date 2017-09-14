@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-t_env		*init_list_env(char *name, char *value)
+static inline	t_env		*init_list_env(char *name, char *value)
 {
 	t_env		*element;
 
@@ -24,7 +24,7 @@ t_env		*init_list_env(char *name, char *value)
 	return (element);
 }
 
-void		add_list_env(char *name, char *value)
+void			add_list_env(char *name, char *value)
 {
 	t_env		*env;
 
@@ -34,7 +34,6 @@ void		add_list_env(char *name, char *value)
 	{
 		while (env->next)
 			env = env->next;
-		if (!(env->next = init_list_env(name, value)))
-			return ;
+		env->next = init_list_env(name, value);
 	}
 }

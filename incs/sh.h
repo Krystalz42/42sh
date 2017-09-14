@@ -39,7 +39,9 @@ void				insert_one_line(void);
 */
 
 t_read				*read_stdin(void);
-int 				prompt(unsigned char flags, char *str);
+char                *my_prompt(char *prompt);
+void			    init_prompt(void);
+int 				prompt(unsigned char flags);
 t_cmd				*create_element(char c);
 int					print_struct(t_read *read_std);
 int					my_put(int c);
@@ -51,7 +53,6 @@ int		        	print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_cursor *cur);
 void				restore_cursor_(t_cursor cur);
 int					check_cmd(t_read **read_std);
 int	                reset_cur(t_cursor *cur);
-
 /*
 **				HASH FUNCTION
 */
@@ -95,6 +96,7 @@ static inline int 	management_wildcard(char *data, char *comp);
 **				POINTER ON FUNCTION FOR READ
 */
 
+t_cmd               *last_cmd(t_cmd *cmd);
 int					key_print_(t_read **read_std, char c);
 int		        	is_token(char c);
 int					key_tab(t_read **read_std);

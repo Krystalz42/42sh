@@ -31,14 +31,14 @@
 # define SET_OLD_TERM	    1
 # define SET_OUR_TERM	    2
 
-# define PRINT			    0
 # define HEREDOC		    1
 # define DQUOTE			    2
 # define QUOTE			    4
 # define NEXTCMD		    8
 # define DEFAULT		    16
+# define PRINT			    32
 
-# define LEN_HASH UINT_MAX - 1	 
+# define LEN_HASH UINT_MAX - 1
 
 /*
 **			INITIALIZATION READ

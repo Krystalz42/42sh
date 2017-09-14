@@ -12,58 +12,61 @@
 
 #include <sh.h>
 
-
-char			keep_this_char(char c)
+static inline int 	is_quote(char cmd)
 {
-	static char to_keep;
+	static const char		*buff;
+	int						i;
 
-	if (c != -1)
-		to_keep = c;
-	return (to_keep);
+	i = -1;
+	buff = "\'\"";
+	while (++i < 2)
+		if (cmd == buff[i])
+			return (1);
+	return (0);
 }
 
-t_cmd			*rec_brackets(t_cmd *cmd, char c)
+static inline int	launch_rec(char cmd,char c)
 {
-	while (cmd)
-	{
-		if (cmd->prev && cmd->prev->c == '\\')
-		{
-			cmd = cmd->next;
-			keep_this_char('\\');
-			continue ;
-		}
-		keep_this_char(c);
-		if (cmd->c == c)
-			return ((c) ? cmd->next : cmd);
-		if ((cmd->c == '\'' || cmd->c == '\"') && c == '\0')
-		{
-			if (!(cmd = rec_brackets(cmd->next, cmd->c)))
-				return (NULL);
-		}
-		else
-			cmd = cmd->next;
-	}
-	return (NULL);
+	if (is_quote(cmd) && !is_quote(c))
+		return (1);
+	return (0);
+}
+
+static inline int 	stop_rec(char cmd, char c)
+{
+	if (is_quote(c) && is_quote(cmd) && cmd == c)
+		return (1);
+	return (0);
+}
+
+char				rec_brackets(t_cmd *cmd, char c)
+{
+
+	if (cmd == NULL)
+		return (!c ? '\\' : c);
+	if (cmd->c == '\\')
+		return (rec_brackets(cmd->next->next, c));
+	if (launch_rec(cmd->c, c))
+		return (rec_brackets(cmd->next, cmd->c));
+	if (stop_rec(cmd->c, c))
+		return (rec_brackets(cmd->next, '\0'));
+	if (cmd->c)
+		return (rec_brackets(cmd->next, c));
+	return (c);
 }
 
 int			check_cmd(t_read **read_std)
 {
-	t_cmd *tmp;
+	t_cmd		*tmp;
+	char		c;
 
-	if ((tmp = rec_brackets(first_cmd((*read_std)->cmd, 1), '\0')))
-		;
-	if (tmp)	
-		return ((*read_std)->finish = 1);
-	key_print_(read_std, 10);
-	insert_one_line();
-	restore_cursor_((*read_std)->cur);
-	key_end_(read_std);
-	print_list(1, first_cmd((*read_std)->cmd, 0), (*read_std)->cmd, &((*read_std)->cur));
-	if (keep_this_char(-1) == '\\')
-		prompt(NEXTCMD, NULL);
-	else if (keep_this_char(-1) == '\'')
-		prompt(QUOTE, NULL);
-	else if (keep_this_char(-1) == '\"')
-		prompt(DQUOTE, NULL);
-	return (1);
+	tmp = first_cmd((*read_std)->cmd, 1);
+	c = rec_brackets(tmp, '\0');
+	if (c == '\'')
+		prompt(QUOTE);
+	else if (c == '\"')
+		prompt(DQUOTE);
+	else if (c == '\\')
+		prompt(NEXTCMD);
+	return ((int)c);
 }

@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/08/31 17:06:43 by aroulin          ###   ########.fr        #
+#    Updated: 2017/09/06 19:41:16 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,11 @@ SRCS = \
 	   read/check_cmd.c										\
 	   read/gbl_save_read.c									\
 	   read/finish_read_std.c								\
+	   read/init_struct_for_read.c                          \
+	   read/last_cmd.c                                      \
+	   read/restore_cursor.c                                \
+	   read/init_prompt.c                                   \
+	   read/my_prompt.c                                     \
 	   hash/hash_value.c									\
 	   hash/hash_board.c	    							\
 	   read/completion/init_tab.c							\
@@ -158,6 +163,11 @@ CPPFLAGS	= \
 CFLAGS		= \
 			  -g									\
 			  -Wall -Werror -Wextra					\
+			  -g3									\
+
+DFLAGS		= \
+			  -fsanitize=address					\
+			  -O2									\
 
 # ---------------------------------------------------------------------------- #
 # /!\ SOURCE NORMALIZATION AND COMPILATION RULES /!\                           #
@@ -204,6 +214,9 @@ $(NAME)		: $(DIR_OBJS) $(DIR_DEPS) $(O_SRCS) $(LIBS)
 	@$(CC) $(O_SRCS) -o  $(NAME) $(LDFLAGS) $(LDLIBS)
 	@printf "$(GRN)[ Created Executable ]$(RST) %s\n" $(NAME)
 
+fs			:
+	@$(CC) $(LDFLAGS) $(DFLAGS) $(LDLIBS) $(O_SRCS) -o $(NAME)
+
 libs		:
 	@make -C $(DIR_LIBS)/libft
 	@make -C $(DIR_LIBS)/printf
@@ -212,7 +225,7 @@ fcleanlibs	:
 	@make -C $(DIR_LIBS)/libft fclean
 	@make -C $(DIR_LIBS)/printf fclean
 
-clean		: 
+clean		:
 	@$(RM) $(DIR_OBJS)
 	@$(RM) $(DIR_DEPS)
 	@printf "$(RED)[ Deleted directory ] $(RST)%s\n$(RED)[ Deleted directory ] $(RST)%s\n" $(DIR_DEPS) $(DIR_OBJS)

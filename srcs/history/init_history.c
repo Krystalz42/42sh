@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 19:06:50 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/24 16:43:33 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/06 18:44:37 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,21 @@ void		convert_to_hist(char *buff, int ret)
 	static int		i;
 
 	i = -1;
-
-	if (!buff)
-		return ;
-	if (read_std)
+	while (i < ret - 1)
 	{
-
-	}
-	else
-	{
-		while (i < ret - 1)
+		read_std = init_struct_for_read();
+		while (++i < ret)
 		{
-			read_std = init_struct_for_read();
-			while (buff[++i] && buff[i] != 10)
-			{
+			if (buff[i] == 10 && !check_cmd(&read_std))
+				break ;
+			else
 				key_print_(&read_std, buff[i]);
-			}
-			read_std->history = 1;
-			make_list_hist(read_std);
-			read_std = NULL;
-		}
-	}
 
+		}
+		read_std->history = 1;
+		make_list_hist(read_std);
+		read_std = NULL;
+	}
 }
 
 void		init_history(void)
@@ -50,12 +43,13 @@ void		init_history(void)
 	char		buff[100000];
 	int			ret;
 
-	ft_bzero(buff, 100000);
-	if (!(home = my_getenv("HOME")))
+	if (!(home = my_getenv("HOME"))) {
 		return ;
+	}
 	path_hist = ft_strjoin(home, "/.42sh_history");
 	if ((fd = open(path_hist, O_RDONLY | O_CREAT, S_IRUSR)) == -1)
 		return ;
+	ft_bzero(buff, 100000);
 	if ((ret = read(fd, &buff, sizeof(char) * 100000)) > 0)
 		convert_to_hist(buff, ret);
 	remove(path_hist);

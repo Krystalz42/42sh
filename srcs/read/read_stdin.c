@@ -1,16 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   read_stdin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2027/08/09 22:42:45 by aroulin           #+#    #+#             */
-/*   Updated: 2027/08/20 24:57:27 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/06 14:40:38 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/06 14:40:41 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-t_cmp		compare_key[] = {
+t_cmp		g_compare_key[] = {
 	(t_cmp){DELETE_KEY, key_del},
 	(t_cmp){EOF_KEY, key_eof},
 	(t_cmp){TAB_KEY, key_tab},
@@ -35,55 +37,50 @@ t_cmp		compare_key[] = {
 	(t_cmp){NULL, NULL}
 };
 
-static inline int				modify_and_print(char *buff, int *i, t_read **read_std)
+static inline int		chk_and_print(char *buff, int *i, t_read **read_std)
 {
 	ft_bzero(buff, LEN_BUFFER);
 	*i = -1;
-	((*read_std)->completion) ? (--(*read_std)->completion) : memdel_completion(&((*read_std)->comp));
-	((*read_std)->history_search) ? (--(*read_std)->history_search) : memdel_lfh(&((*read_std)->hist_search));
-    (!(*read_std)->completion) ? print_struct(*read_std) : 0;
-    ((*read_std)->history_search) ? print_struct_history(read_std) : 0;
+	((*read_std)->completion) ? (--(*read_std)->completion) :
+	memdel_completion(&((*read_std)->comp));
+	((*read_std)->history_search) ? (--(*read_std)->history_search) :
+	memdel_lfh(&((*read_std)->hist_search));
+	(!(*read_std)->completion) ? print_struct(*read_std) : 0;
+	((*read_std)->history_search) ? print_struct_history(read_std) : 0;
 	return (1);
 }
 
-static inline t_read					*init_struct_for_read(void)
+static inline void      initialize_fct(t_read **read_std, int *i, char *buff)
 {
-	t_read		*read_std;
-
-	if (!(read_std = (t_read *)ft_memalloc(sizeof(t_read))))
-		return (NULL);
-	if (!(read_std->cmd = create_element('\0')))
-		return (NULL);
-	read_std->hist_search = NULL;
-	gbl_save_read(read_std->cmd);
-	read_std->history_search = 0;
-	return (read_std);
+    set_termios(SET_OUR_TERM);
+    (*read_std)->cur.co = prompt(DEFAULT | PRINT);
+    last_resultat(0);
+    chk_and_print(buff, i, read_std);
 }
-
-t_read			*read_stdin(void)
+t_read					*read_stdin(void)
 {
 	char		buff[LEN_BUFFER];
 	t_read		*read_std;
 	int			c;
 	int			i;
-	
+
+
 	if (!(read_std = init_struct_for_read()))
 		return (NULL);
-	read_std->cur.co = prompt(DEFAULT, "Bonjour $> ");
-	last_resultat(0);
-	modify_and_print(buff, &i, &read_std);
-	set_termios(SET_OUR_TERM);
-	while ((c = -1) && read(STDIN_FILENO, &(buff[++i]), sizeof(char)))
+    initialize_fct(&read_std, &i, buff);
+    while ((c = -1) && read(STDIN_FILENO, &(buff[++i]), sizeof(char)))
 	{
 		if (ft_isprint(buff[0]))
-			key_print_(&read_std, buff[0]) && modify_and_print(buff, &i, &read_std);
-		while (compare_key[++c].key)
-			if (!ft_strcmp(compare_key[c].key, buff))
-				compare_key[c].function(&read_std) && modify_and_print(buff, &i, &read_std);
+			key_print_(&read_std, buff[0])
+			&& chk_and_print(buff, &i, &read_std);
+		while (g_compare_key[++c].key)
+			if (!ft_strcmp(g_compare_key[c].key, buff))
+				g_compare_key[c].function(&read_std) &&
+						chk_and_print(buff, &i, &read_std);
 		if ((read_std)->finish)
-			break ; 
+			break ;
 	}
 	set_termios(SET_OLD_TERM);
 	finish_read_std(&read_std);
-    return (read_std);
+	return (read_std);
 }

@@ -27,7 +27,8 @@ void		complete_command(t_read **read_std)
 				(DT_DIR & tmp->type) ? (key_print_(read_std, '/')) : bip();
 			else
 			{
-				while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32 && (*read_std)->cmd->prev->c != '/')
+				while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32
+					   && (*read_std)->cmd->prev->c != '/')
 					key_del(read_std);
 				while (tmp->name[++i])
 					key_print_(read_std, tmp->name[i]);
@@ -41,12 +42,17 @@ void		complete_command(t_read **read_std)
 int			key_enter_(t_read **read_std)
 {
 	if ((*read_std)->completion)
-	{
 		complete_command(read_std);
-	}
 	else
 	{
-		check_cmd(read_std);
+		if (!(check_cmd(read_std)))
+			(*read_std)->finish = 1;
+		else
+		{
+            (*read_std)->cmd = last_cmd((*read_std)->cmd);
+            key_print_(read_std, 10);
+			insert_one_line();
+		}
 	}
 	return (1);
 }

@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   restore_cursor.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 17:57:30 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/06 14:53:09 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/06 14:53:11 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		main(void)
+void		restore_cursor_(t_cursor cur)
 {
-	init_env();
-	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
-	init_history();
-	if (init_term())
-		return (1);
-	init_prompt();
-	shell();
-	return (0);
+    BACK_N;
+    while (--cur.co > 0)
+        MV_LEFT;
+    while (--cur.line > 0)
+        MV_TOP;
 }
