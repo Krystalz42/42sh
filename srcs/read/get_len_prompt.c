@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   get_len_prompt.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 17:57:30 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/14 20:12:54 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/14 20:12:55 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		main(void)
+int         get_len_prompt(int len)
 {
-	init_env();
-	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
-	init_history();
-	if (init_term())
-		return (1);
-	init_prompt();
-	shell();
-	return (0);
+    static int save;
+
+    if (len != -42)
+        save = len;
+    return (save);
 }

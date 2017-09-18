@@ -16,9 +16,10 @@ void		convert_to_hist(char *buff, int ret)
 {
 	static t_read	*read_std;
 	static int		i;
+	static int		cmd;
 
 	i = -1;
-	while (i < ret - 1)
+	while (i < ret - 1 && ++cmd < 500)
 	{
 		read_std = init_struct_for_read();
 		while (++i < ret)

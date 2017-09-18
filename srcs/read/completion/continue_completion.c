@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   complete_comp.c                              :+:      :+:    :+:   */
+/*   complete_tab_.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -14,7 +14,7 @@
 
 void			print_back(t_read **read_std, t_file *tmp)
 {
-	(*read_std)->comp->tab_->index--;
+	(*read_std)->tab_->index--;
 	print_element(tmp, 0);
 	tmp = tmp->next;
 	P_RST_FD(init_fd());
@@ -25,19 +25,19 @@ void			back_completion(t_read **read_std)
 {
 	t_file	*tmp;
 
-	tmp = (*read_std)->comp->tab_->file;
+	tmp = (*read_std)->tab_->file;
 	SAVE;
 	MV_BOT;
 	while (tmp)
 	{
-		if (tmp->index == (*read_std)->comp->tab_->index)
+		if (tmp->index == (*read_std)->tab_->index)
 		{
 			print_element(tmp, 0);
 			tmp = tmp->next;
 			print_element(tmp, 1);
 			break ;
 		}
-		else if (!(*read_std)->comp->tab_->index && !tmp->next)
+		else if (!(*read_std)->tab_->index && !tmp->next)
 		{
 			break ;
 		}
@@ -50,12 +50,12 @@ void			continue_completion(t_read **read_std)
 {
 	t_file	*tmp;
 
-	tmp = (*read_std)->comp->tab_->file;
+	tmp = (*read_std)->tab_->file;
 	SAVE;
 	MV_BOT;
 	while (tmp)
 	{
-		if (tmp->index == (*read_std)->comp->tab_->index)
+		if (tmp->index == (*read_std)->tab_->index)
 		{
 			print_element(tmp, 0);
 			tmp = tmp->prev;

@@ -53,6 +53,8 @@ int		        	print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_cursor *cur);
 void				restore_cursor_(t_cursor cur);
 int					check_cmd(t_read **read_std);
 int	                reset_cur(t_cursor *cur);
+int                 get_len_prompt(int len);
+
 /*
 **				HASH FUNCTION
 */
@@ -66,6 +68,10 @@ void				add_hash(char *bin, char *path);
 **				FUNCTION FOR COMPLETION
 */
 
+void				move_vertical(t_read **read_std, int pos);
+int	            	is_token(char c);
+void                complete_binary(t_read **read_std);
+char		        *list_to_str(t_read **read_std, t_cmd *cmd);
 int					place_cursor(t_read **read_std, int t);
 void                reset(t_read **read_std, int to);
 int	        		check_word(t_cmd *cmd);
@@ -75,8 +81,6 @@ int         	    my_togo(int li, int co);
 int					my_tobackto(int li, int co);
 void				back_completion(t_read **read_std);
 void				add_little_char(unsigned char type);
-void				to_up(t_read **read_std);
-int					to_down(t_read **read_std);
 void				init_completion(t_read **read_std);
 void				complete_path(t_read **read_std, t_path f);
 void				complete_binary(t_read **read_std);
@@ -138,6 +142,7 @@ int                 last_resultat(int res);
 **				ENVIRONEMENT FUNCTION
 */
 
+void                   create_table_env(void);
 t_env				*gbl_save_env(unsigned short flags, t_env *env);
 void				init_env(void);
 void				split_env(char *env);
@@ -176,7 +181,7 @@ int					init_term(void);
 **				FUNCTION MEMDEL STRUCTURE
 */
 
-int					memdel_completion(t_completion **comp);
+int					memdel_completion(t_tab **tab_);
 int					memdel_read(t_read **read_std);
 int                 memdel_lfh(t_lfh **hist_search);
 int					memdel_cmd(t_cmd **cmd);

@@ -31,7 +31,7 @@ int			memdel_cmd(t_cmd **cmd)
 int			memdel_read(t_read **read_std)
 {
 	memdel_cmd(&((*read_std)->cmd));
-	memdel_completion(&((*read_std)->comp));
+	memdel_completion(&((*read_std)->tab_));
 	ft_memdel((void **)read_std);
 	return (1);
 }

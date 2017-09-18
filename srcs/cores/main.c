@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   update_index.c                                     :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/22 18:27:56 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/31 21:20:13 by aroulin          ###   ########.fr       */
+/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/30 17:57:30 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-void		update_index(t_read **read_std, int i)
+int		main(void)
 {
-	(*read_std)->tab_->index += i;
-	if ((*read_std)->tab_->index >= (*read_std)->tab_->element)
-		(*read_std)->tab_->index = 0 + ((*read_std)->tab_->index
-				% (*read_std)->tab_->element);
-	else if ((*read_std)->tab_->index < 0)
-		(*read_std)->tab_->index = (*read_std)->tab_->element +
-			((*read_std)->tab_->index);
-
+	init_env();
+	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
+	init_history();
+	if (init_term())
+		return (1);
+	init_prompt();
+	create_table_env();
+	shell();
+	return (0);
 }

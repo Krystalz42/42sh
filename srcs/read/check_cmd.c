@@ -12,36 +12,34 @@
 
 #include <sh.h>
 
-static inline int 	is_quote(char cmd)
+static inline int	is_quote(char cmd)
 {
-	static const char		*buff;
+	static const char		buff[] = "\'\"";
 	int						i;
 
 	i = -1;
-	buff = "\'\"";
 	while (++i < 2)
 		if (cmd == buff[i])
 			return (1);
 	return (0);
 }
 
-static inline int	launch_rec(char cmd,char c)
+static inline int	launch_rec(char cmd, char c)
 {
 	if (is_quote(cmd) && !is_quote(c))
 		return (1);
 	return (0);
 }
 
-static inline int 	stop_rec(char cmd, char c)
+static inline int	stop_rec(char cmd, char c)
 {
 	if (is_quote(c) && is_quote(cmd) && cmd == c)
 		return (1);
 	return (0);
 }
 
-char				rec_brackets(t_cmd *cmd, char c)
+static char				rec_brackets(t_cmd *cmd, char c)
 {
-
 	if (cmd == NULL)
 		return (!c ? '\\' : c);
 	if (cmd->c == '\\')
@@ -55,7 +53,7 @@ char				rec_brackets(t_cmd *cmd, char c)
 	return (c);
 }
 
-int			check_cmd(t_read **read_std)
+int					check_cmd(t_read **read_std)
 {
 	t_cmd		*tmp;
 	char		c;

@@ -18,26 +18,24 @@ void		memdel_files(t_file *file)
 	free(file);
 }
 
-int			memdel_completion(t_completion **comp)
+int			memdel_completion(t_tab **tab_)
 {
 	t_file	*tmp;
 
-	if (*comp)
-	{
-		if ((*comp)->from)
-			ft_strdel(&((*comp)->from));
-		if ((*comp)->tab_)
+		if (*tab_)
 		{
-			while ((*comp)->tab_->file)
+			if ((*tab_)->from)
+				ft_strdel(&((*tab_)->from));
+			while ((*tab_)->file)
 			{
-				tmp = (*comp)->tab_->file;
-				(*comp)->tab_->file = (*comp)->tab_->file->next;
+				tmp = (*tab_)->file;
+				(*tab_)->file = (*tab_)->file->next;
 				memdel_files(tmp);
 			}
-			ft_memdel((void **)&((*comp)->tab_));
+			ft_memdel((void **)&((*tab_)));
+			ft_memdel((void **)tab_);
 		}
-		ft_memdel((void **)comp);
-	}
-	(*comp) = NULL;
+
+	(*tab_) = NULL;
 	return (1);
 }

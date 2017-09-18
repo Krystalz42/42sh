@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
-/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/17 18:24:48 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ int	ft_chrchar(char *str, char chr)
 
 	c = 0;
 	i = -1;
-	while (str[++i])
-		if (str[i] == chr)
-			c++;
+	if (str)
+		while (str[++i])
+			if (str[i] == chr)
+				c++;
 	return (c);
 }

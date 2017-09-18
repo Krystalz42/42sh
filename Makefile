@@ -46,9 +46,9 @@ RM			= rm -rf
 NAME		= 42sh
 
 SRCS = \
-	   main.c												\
-	   shell.c												\
-	   insert_one_line.c									\
+	   cores/main.c											\
+	   cores/shell.c										\
+	   cores/insert_one_line.c								\
 	   read/read_stdin.c									\
 	   read/key_print.c										\
 	   read/key_delete.c									\
@@ -73,6 +73,7 @@ SRCS = \
 	   read/restore_cursor.c                                \
 	   read/init_prompt.c                                   \
 	   read/my_prompt.c                                     \
+	   read/get_len_prompt.c                                \
 	   hash/hash_value.c									\
 	   hash/hash_board.c	    							\
 	   read/completion/init_tab.c							\
@@ -81,6 +82,7 @@ SRCS = \
 	   read/completion/update_index.c                       \
 	   read/completion/my_togo.c							\
 	   read/completion/init_completion.c					\
+	   read/completion/move_vertical.c                      \
 	   read/completion/print_tab.c							\
 	   read/completion/complete_path.c						\
 	   read/completion/continue_completion.c				\
@@ -88,7 +90,6 @@ SRCS = \
 	   read/completion/create_comp.c						\
 	   read/completion/init_files.c							\
 	   read/completion/completion.c							\
-	   read/completion/up_or_down.c							\
 	   read/search_history/compare_history.c                \
 	   read/search_history/compare_list.c                   \
 	   read/search_history/first_history.c                  \
@@ -110,6 +111,7 @@ SRCS = \
 	   env/my_getenv.c										\
 	   env/add_list_env.c									\
 	   env/global_save_env.c								\
+	   env/env_table.c                                      \
 	   term/init_fd.c										\
 	   term/init_term.c										\
 	   term/set_term.c										\

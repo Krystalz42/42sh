@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
-/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/17 17:30:41 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char			**ft_strsplit(char	const *s, char c)
 {
 	char	**table;
 
+	if (!s)
+		return (NULL);
 	if (*s != 0)
 	{
 		table = (char **)malloc(sizeof(char *) * (ft_count(s, c) + 1));

@@ -60,29 +60,39 @@ static void			git_branch(void)
     close(fdout);
 }
 
-static char            *get_str_from_branch(void)
+static int            get_str_from_branch(char **prompt)
 {
     char		*line;
     int			fd;
-    char        *tmp;
 
     line = NULL;
     git_branch();
     fd = open("/tmp/.git_info", O_RDONLY);
-    get_next_line(fd, &line);
-    tmp = ft_strdup(line + 2);
+    while (get_next_line(fd, &line))
+        if (line[0] == '*')
+            break ;
+        else
+            free(line);
+    if (ft_strlen(line))
+    {
+        ft_strcpy((*prompt) + ft_strlen((*prompt)), "\x1B[31m git[\x1B[32m");
+        ft_strcpy((*prompt) + ft_strlen((*prompt)), line + 2);
+        ft_strcpy((*prompt) + ft_strlen((*prompt)), "\x1B[31m]");
+        free(line);
+        return (6 + ft_strlen(line + 2));
+    }
     free(line);
     close(fd);
     remove("/tmp/.git_info");
-    return (tmp);
+    return (0);
 }
 
-static char             *get_str_from_pwd(void)
+static int          get_str_from_pwd(char **prompt)
 {
     char        *tmp;
     int         i;
     int         s;
-    int fd;
+    int         fd;
 
     tmp = NULL;
     my_pwd();
@@ -93,32 +103,27 @@ static char             *get_str_from_pwd(void)
     while (tmp[++i])
         if (tmp[i] == '/')
             s = i;
+    ft_strcpy((*prompt) + ft_strlen(*prompt), (!s) ? tmp : tmp + s + 1);
+    s = ft_strlen(tmp + s + 1);
     remove("/tmp/.pwd_info");
-    return ((!s ? ft_strdup("/") : ft_strdup(tmp + s + 1)));
+    free(tmp);
+    return (!s ? 1 : s);
 }
 
 void			init_prompt(void)
 {
     static char		*prompt;
-    char	    	*tmp;
     int             i;
+    int             len;
 
     i = -1;
+    len = 3;
     if (!prompt)
         prompt = (char *)ft_memalloc(sizeof(char) * 127);
     ft_strcpy(prompt + ft_strlen(prompt), "\x1B[1m\x1B[34m");
-    if ((tmp = get_str_from_pwd()))
-    {
-        ft_strcpy(prompt + ft_strlen(prompt), tmp);
-        free(tmp);
-    }
-    if ((tmp = get_str_from_branch()) && ft_strlen(tmp))
-    {
-        ft_strcpy(prompt + ft_strlen(prompt), "\x1B[31m git[\x1B[32m");
-        ft_strcpy(prompt + ft_strlen(prompt), tmp);
-        ft_strcpy(prompt + ft_strlen(prompt), "\x1B[31m]");
-        free(tmp);
-    }
+    len += get_str_from_pwd(&prompt);
+    len += get_str_from_branch(&prompt);
     ft_strcpy(prompt + ft_strlen(prompt), " √ \x1B[0m");
     my_prompt(prompt);
+    get_len_prompt(len);
 }

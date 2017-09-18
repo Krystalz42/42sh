@@ -18,12 +18,12 @@ void		complete_command(t_read **read_std)
 	int		i;
 
 	i = -1;
-	tmp = (*read_std)->comp->tab_->file;
+	tmp = (*read_std)->tab_->file;
 	while (tmp)
 	{
-		if (tmp->index == (*read_std)->comp->tab_->index)
+		if (tmp->index == (*read_std)->tab_->index)
 		{
-			if (!ft_strcmp((*read_std)->comp->from, tmp->name))
+			if (!ft_strcmp((*read_std)->tab_->from, tmp->name))
 				(DT_DIR & tmp->type) ? (key_print_(read_std, '/')) : bip();
 			else
 			{
@@ -50,7 +50,7 @@ int			key_enter_(t_read **read_std)
 		else
 		{
             (*read_std)->cmd = last_cmd((*read_std)->cmd);
-            key_print_(read_std, 10);
+			key_print_(read_std, 10);
 			insert_one_line();
 		}
 	}

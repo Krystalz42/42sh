@@ -14,11 +14,11 @@
 
 int			init_page(t_read **read_std, t_file **tmp)
 {
-	(*read_std)->comp->tab_->page = ((*read_std)->comp->tab_->index) /
-		((*read_std)->comp->tab_->elem_page);
-	while ((*tmp)->next && (*tmp)->index != (*read_std)->comp->tab_->page * (*read_std)->comp->tab_->elem_page)
+	(*read_std)->tab_->page = ((*read_std)->tab_->index) /
+		((*read_std)->tab_->elem_page);
+	while ((*tmp)->next && (*tmp)->index != (*read_std)->tab_->page * (*read_std)->tab_->elem_page)
 		(*tmp) = (*tmp)->next;
-	return ((*read_std)->comp->tab_->elem_page * ((*read_std)->comp->tab_->page + 1));
+	return ((*read_std)->tab_->elem_page * ((*read_std)->tab_->page + 1));
 }
 
 
@@ -42,19 +42,19 @@ int			print_tab(t_read **read_std)
 	t_file		*tmp;
 	int			stop;
 
-	tmp = (*read_std)->comp->tab_->file;
-	if ((*read_std)->comp->tab_->element == 1)
+	tmp = (*read_std)->tab_->file;
+	if ((*read_std)->tab_->element == 1)
 		complete_command(read_std);
 	else if ((stop = init_page(read_std, &tmp)))
 	{
 		while (tmp && tmp->index < stop)
 		{
-			tmp->ms.y = (((tmp->index % (*read_std)->comp->tab_->elem_page)
-						/ (*read_std)->comp->tab_->nbr));
-			tmp->ms.x = (((tmp->index % (*read_std)->comp->tab_->elem_page)
-				% (*read_std)->comp->tab_->nbr) * (*read_std)->comp->tab_->len
-					% (*read_std)->comp->tab_->co);
-			(tmp->index == (*read_std)->comp->tab_->index)
+			tmp->ms.y = (((tmp->index % (*read_std)->tab_->elem_page)
+						/ (*read_std)->tab_->nbr));
+			tmp->ms.x = (((tmp->index % (*read_std)->tab_->elem_page)
+				% (*read_std)->tab_->nbr) * (*read_std)->tab_->len
+					% (*read_std)->tab_->co);
+			(tmp->index == (*read_std)->tab_->index)
 				? print_element(tmp, 0) : print_element(tmp, 1);
 			tmp->ms.y += ((*read_std)->cur.line - (*read_std)->cur.save);
 			tmp = tmp->next;

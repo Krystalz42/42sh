@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-t_cmp		g_compare_key[] = {
+t_cmp		g_tab_are_key[] = {
 	(t_cmp){DELETE_KEY, key_del},
 	(t_cmp){EOF_KEY, key_eof},
 	(t_cmp){TAB_KEY, key_tab},
@@ -42,7 +42,7 @@ static inline int		chk_and_print(char *buff, int *i, t_read **read_std)
 	ft_bzero(buff, LEN_BUFFER);
 	*i = -1;
 	((*read_std)->completion) ? (--(*read_std)->completion) :
-	memdel_completion(&((*read_std)->comp));
+	memdel_completion(&((*read_std)->tab_));
 	((*read_std)->history_search) ? (--(*read_std)->history_search) :
 	memdel_lfh(&((*read_std)->hist_search));
 	(!(*read_std)->completion) ? print_struct(*read_std) : 0;
@@ -73,9 +73,9 @@ t_read					*read_stdin(void)
 		if (ft_isprint(buff[0]))
 			key_print_(&read_std, buff[0])
 			&& chk_and_print(buff, &i, &read_std);
-		while (g_compare_key[++c].key)
-			if (!ft_strcmp(g_compare_key[c].key, buff))
-				g_compare_key[c].function(&read_std) &&
+		while (g_tab_are_key[++c].key)
+			if (!ft_strcmp(g_tab_are_key[c].key, buff))
+				g_tab_are_key[c].function(&read_std) &&
 						chk_and_print(buff, &i, &read_std);
 		if ((read_std)->finish)
 			break ;

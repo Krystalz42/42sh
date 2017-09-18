@@ -37,9 +37,8 @@ int         new_line_after_bloc(t_read **read_std, int to)
 
 int         prompt_history(int p)
 {
-    char *prompt;
+    static const char prompt[] = "search in history : ";
 
-    prompt = "search in history : ";
     if (p)
         STR_FD("\x1B[31m", init_fd());
     STR_FD(prompt, init_fd());

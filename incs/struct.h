@@ -86,17 +86,8 @@ typedef struct		s_tab
 	int				nbr;
 	int				elem_page;
 	int				page;
+    char            *from;
 }					t_tab;
-
-/*
-**			STRUCT FOR COMPLETION
-*/
-
-typedef struct		s_completion
-{
-	t_tab			*tab_;
-	char			*from;
-}					t_completion;
 
 /*
 **			STRUCT FOR CURSOR
@@ -149,7 +140,7 @@ typedef struct		s_lfh
 typedef struct		s_read
 {
 	t_cmd			*cmd;
-	t_completion	*comp;
+	t_tab			*tab_;
 	t_lfh			*hist_search;
 	int				completion;
 	int             history_search;
