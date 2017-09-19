@@ -12,19 +12,17 @@
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# define BUFF_SIZE 50
+# define BUFF_SIZE 25600
 
 typedef struct	s_fd
 {
-	int					fd[50];
-	char				*d[50];
-	int					bol[50];
-	int					count[50];
-	int					first;
-	int					i;
-}				t_fd;
-
-int	get_next_line(int fd, char **line);
+    int					fd[256];
+    char				*d[256];
+    int					bol[256];
+    int					count[256];
+    int					first;
+    int					i;
+} t_fd;
 
 typedef struct			s_struct
 {
@@ -54,5 +52,7 @@ typedef	enum			e_bool
 }						t_bool;
 
 int				get_next_line(int fd, char **line);
+int             my_gnl(int fd, char **line);
+
 
 #endif

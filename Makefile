@@ -78,6 +78,8 @@ SRCS = \
 	   hash/table_hash.c									\
 	   hash/hash_board.c	    							\
 	   hash/built_in_hash.c                                 \
+	   hash/init_hash.c                                     \
+	   hash/get_str_from_hash.c                             \
 	   read/completion/init_tab.c							\
 	   read/completion/check_binary_path.c                  \
 	   read/completion/color_completion.c					\
@@ -100,6 +102,8 @@ SRCS = \
 	   read/search_history/print_struct_history.c           \
 	   read/search_history/manage_cursor_prompt.c           \
 	   read/search_history/search_history.c                 \
+	   history/get_str_from_history.c                       \
+	   history/write_history.c                              \
 	   history/reset_history.c                              \
 	   history/init_history.c								\
 	   history/previous_history.c							\

@@ -65,27 +65,23 @@ static int            get_str_from_branch(char **prompt)
 {
     char		*line;
     int			fd;
+    char        *tmp;
+    int         len;
 
-    line = NULL;
+    tmp = NULL;
     git_branch();
     fd = open("/tmp/.git_info", O_RDONLY);
-    while (get_next_line(fd, &line))
-    {
-        if (line[0] == '*')
-            break ;
-        else
-            free(line);
-    }
-    if (ft_strlen(line))
+    while ((my_gnl(fd, &line)))
+        (line[0] == '*') ? (tmp = ft_strdup(line)) : free(line);
+    if (tmp && (len = ft_strlen(tmp)))
     {
         ft_strcpy((*prompt) + ft_strlen((*prompt)), "\x1B[31m git[\x1B[32m");
-        ft_strcpy((*prompt) + ft_strlen((*prompt)), line + 2);
+        ft_strcpy((*prompt) + ft_strlen((*prompt)), tmp + 2);
         ft_strcpy((*prompt) + ft_strlen((*prompt)), "\x1B[31m]");
-        free(line);
-        return (6 + ft_strlen(line + 2));
+        ft_memdel((void **)&tmp);
+        return (6 + len - 2);
     }
-    free(line);
-    close(fd);
+    ft_memdel((void **)&tmp);
     remove("/tmp/.git_info");
     return (0);
 }
@@ -100,17 +96,16 @@ static int          get_str_from_pwd(char **prompt)
     tmp = NULL;
     my_pwd();
     fd = open("/tmp/.pwd_info", O_RDONLY);
-    get_next_line(fd, &tmp);
+    my_gnl(fd, &tmp);
     s = 0;
     i = -1;
-    while (tmp[++i])
+    while (tmp && tmp[++i])
         if (tmp[i] == '/')
             s = i;
     ft_strcpy((*prompt) + ft_strlen(*prompt), (!s) ? tmp : tmp + s + 1);
     s = ft_strlen(tmp + s + 1);
     remove("/tmp/.pwd_info");
     free(tmp);
-    close(fd);
     return (!s ? 1 : s);
 }
 
@@ -122,9 +117,10 @@ void			init_prompt(void)
 
     i = -1;
     len = 3;
-    if (!prompt)
+    if (!prompt) {
         prompt = (char *)ft_memalloc(sizeof(char) * 127);
-    ft_strcpy(prompt + ft_strlen(prompt), "\x1B[1m\x1B[34m");
+    }
+    ft_strcpy(prompt, "\x1B[1m\x1B[34m");
     len += get_str_from_pwd(&prompt);
     len += get_str_from_branch(&prompt);
     ft_strcpy(prompt + ft_strlen(prompt), " √ \x1B[0m");

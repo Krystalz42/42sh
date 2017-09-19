@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   get_str_from_history.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 17:57:30 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/19 17:03:28 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/19 17:03:36 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		main(void)
+char     *get_str_from_history(void)
 {
-	init_env();
-	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
-	init_history();
-    init_prompt();
-    if (init_term()) {
-		return (1);
-	}
-	create_table_env();
-	shell();
-	return (0);
+    char *home;
+
+    if (!(home = my_getenv("HOME")))
+        return (0);
+    return (ft_strjoin(home, PATH_HISTORY));
 }

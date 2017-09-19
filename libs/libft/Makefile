@@ -119,6 +119,7 @@ SRCS = \
 	   ft_strncpy.c				\
 	   ft_strnequ.c				\
 	   ft_strnew.c				\
+	   my_gnl.c                 \
 	   ft_strnstr.c				\
 	   ft_strrchr.c				\
 	   ft_strrev.c				\

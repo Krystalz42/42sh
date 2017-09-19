@@ -36,7 +36,7 @@ char		*search_path(char *binary)
 	return (NULL);
 }
 
-void		add_hash(char *bin, char *path)
+void		add_hash(char *bin, char *path, int times)
 {
 	unsigned int		index;
 	t_hash				**hash_tab;
@@ -47,6 +47,6 @@ void		add_hash(char *bin, char *path)
 	hash_tab[index] = (t_hash *)ft_memalloc(sizeof(t_hash));
 	hash_tab[index]->path = path;
 	hash_tab[index]->binary = bin;
-	hash_tab[index]->times = 1;
+	hash_tab[index]->times = times;
 	inventory_hash(&(hash_tab[index]), index);
 }

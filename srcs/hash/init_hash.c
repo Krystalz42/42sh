@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   init_hash.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 17:57:30 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/19 17:14:09 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/19 17:14:10 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		main(void)
+//static void		convert_to_hash(char *buff, int ret)
+//{
+//    int     i;
+//
+//    i = -1;
+//    while (++i < ret)
+//    {
+//        buff++;
+//    }
+//}
+
+void        init_hash(void)
 {
-	init_env();
-	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
-	init_history();
-    init_prompt();
-    if (init_term()) {
-		return (1);
-	}
-	create_table_env();
-	shell();
-	return (0);
+    char    *path_hash;
+    int     fd;
+    char    buff[10000];
+
+    if (!(path_hash = get_str_from_hash()))
+        return ;
+    if ((fd = open(path_hash, O_RDONLY) == -1))
+        return ;
+    ft_bzero(buff, 10000);
+    free(path_hash);
 }

@@ -14,9 +14,9 @@
 
 int		shell(void)
 {
-	add_hash("ls", "/bin/ls");
-	add_hash("grep", "/usr/bin/grep");
-	add_hash("mkdir", "/bin/mkdir");
+	add_hash("ls", "/bin/ls", 1);
+	add_hash("grep", "/usr/bin/grep", 1);
+	add_hash("mkdir", "/bin/mkdir", 1);
 	search_path("ls");
 	search_path("ls");
 	search_path("ls");
@@ -36,7 +36,7 @@ int		shell(void)
 	hash_print();
     hash_reset();
     hash_print();
-    add_hash("mkdir", "/bin/mkdir");
+    add_hash("mkdir", "/bin/mkdir", 1);
     search_path("mkdir");
     search_path("mkdir");
     search_path("mkdir");
@@ -51,10 +51,8 @@ int		shell(void)
     hash_reset();
     hash_reset();
     hash_reset();
-    while (1)
-	{
-		read_stdin();
-		NL;
-	}
+
+	read_stdin();
+    write_history();
 	return (1);
 }

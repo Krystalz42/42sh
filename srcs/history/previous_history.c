@@ -16,7 +16,7 @@ void			previous_history(t_read **read_std)
 {
 	t_hist		*hist;
 
-	if (!(hist = gbl_save_history(NULL)))
+	if (!(hist = gbl_save_history(NULL)) && bip())
 		return ;
 	if ((*read_std)->history)
 	{

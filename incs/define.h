@@ -38,6 +38,10 @@
 # define DEFAULT		    16
 # define PRINT			    32
 
+# define MAX_COMMAND        500
+# define PATH_HISTORY       "/.42sh_history"
+# define PATH_HASH          "/.42sh_hash"
+
 # define LEN_HASH UINT_MAX - 1
 
 /*
