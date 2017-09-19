@@ -120,8 +120,20 @@ typedef struct		s_hash
 {
 	char			*binary;
 	char			*path;
-	struct s_hash	*next;
+    size_t          times;
 }					t_hash;
+
+/*
+**          STRUCT FOR LIST HASH
+*/
+
+typedef struct      s_table_hash
+{
+    t_hash                  **hash;
+    unsigned int            index;
+    struct s_table_hash     *next;
+    struct s_table_hash     *prev;
+}                   t_table_hash;
 
 /*
 **			STRUCT FOR SEARCH IN HISTORY

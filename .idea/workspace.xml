@@ -13,38 +13,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a3c07f0-c183-4612-b240-4393db1b911c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/insert_one_line.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/main.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/read/completion/up_or_down.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/shell.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logger" afterPath="$PROJECT_DIR$/logger" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/sh.h" afterPath="$PROJECT_DIR$/incs/sh.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/struct.h" afterPath="$PROJECT_DIR$/incs/struct.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/srcs/ft_chrchar.c" afterPath="$PROJECT_DIR$/libs/libft/srcs/ft_chrchar.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/srcs/ft_strsplit.c" afterPath="$PROJECT_DIR$/libs/libft/srcs/ft_strsplit.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logger" afterPath="$PROJECT_DIR$/logger" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/incs/get_next_line.h" afterPath="$PROJECT_DIR$/libs/libft/incs/get_next_line.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/incs/libft.h" afterPath="$PROJECT_DIR$/libs/libft/incs/libft.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/srcs/ft_ftoa.c" afterPath="$PROJECT_DIR$/libs/libft/srcs/ft_ftoa.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/srcs/ft_realloc.c" afterPath="$PROJECT_DIR$/libs/libft/srcs/ft_realloc.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/srcs/ft_uitoa.c" afterPath="$PROJECT_DIR$/libs/libft/srcs/ft_uitoa.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/srcs/ft_ulltoa.c" afterPath="$PROJECT_DIR$/libs/libft/srcs/ft_ulltoa.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/srcs/ft_ultoa.c" afterPath="$PROJECT_DIR$/libs/libft/srcs/ft_ultoa.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/printf/incs/libft.h" afterPath="$PROJECT_DIR$/libs/printf/incs/libft.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/printf/srcs/detect_arg.c" afterPath="$PROJECT_DIR$/libs/printf/srcs/detect_arg.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/main.c" afterPath="$PROJECT_DIR$/srcs/cores/main.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/shell.c" afterPath="$PROJECT_DIR$/srcs/cores/shell.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/hash/hash_board.c" afterPath="$PROJECT_DIR$/srcs/hash/hash_board.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/history/init_history.c" afterPath="$PROJECT_DIR$/srcs/history/init_history.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/memdel_struct/memdel_completion.c" afterPath="$PROJECT_DIR$/srcs/memdel_struct/memdel_completion.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/memdel_struct/memdel_read.c" afterPath="$PROJECT_DIR$/srcs/memdel_struct/memdel_read.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/check_cmd.c" afterPath="$PROJECT_DIR$/srcs/read/check_cmd.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/check_binary_path.c" afterPath="$PROJECT_DIR$/srcs/read/completion/check_binary_path.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/complete_binary.c" afterPath="$PROJECT_DIR$/srcs/read/completion/complete_binary.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/complete_path.c" afterPath="$PROJECT_DIR$/srcs/read/completion/complete_path.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/continue_completion.c" afterPath="$PROJECT_DIR$/srcs/read/completion/continue_completion.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/create_comp.c" afterPath="$PROJECT_DIR$/srcs/read/completion/create_comp.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/init_completion.c" afterPath="$PROJECT_DIR$/srcs/read/completion/init_completion.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/print_tab.c" afterPath="$PROJECT_DIR$/srcs/read/completion/print_tab.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/update_index.c" afterPath="$PROJECT_DIR$/srcs/read/completion/update_index.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/init_prompt.c" afterPath="$PROJECT_DIR$/srcs/read/init_prompt.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/key_arrow.c" afterPath="$PROJECT_DIR$/srcs/read/key_arrow.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/key_enter.c" afterPath="$PROJECT_DIR$/srcs/read/key_enter.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/key_tabulation.c" afterPath="$PROJECT_DIR$/srcs/read/key_tabulation.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/prompt.c" afterPath="$PROJECT_DIR$/srcs/read/prompt.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/read_stdin.c" afterPath="$PROJECT_DIR$/srcs/read/read_stdin.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/search_history/compare_history.c" afterPath="$PROJECT_DIR$/srcs/read/search_history/compare_history.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/search_history/compare_list.c" afterPath="$PROJECT_DIR$/srcs/read/search_history/compare_list.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/search_history/manage_cursor_prompt.c" afterPath="$PROJECT_DIR$/srcs/read/search_history/manage_cursor_prompt.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,21 +50,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sh.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/incs/sh.h">
+      <file leaf-file-name="shell.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/srcs/cores/shell.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="156" column="16" lean-forward="false" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
+            <state relative-caret-position="795">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Makefile">
+      <file leaf-file-name="sh.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/incs/sh.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1860">
-              <caret line="124" column="61" lean-forward="false" selection-start-line="124" selection-start-column="61" selection-end-line="124" selection-end-column="61" />
+            <state relative-caret-position="1116">
+              <caret line="105" column="49" lean-forward="false" selection-start-line="105" selection-start-column="49" selection-end-line="105" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hash_board.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/srcs/hash/hash_board.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_stdin.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/srcs/read/read_stdin.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="885">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,18 +93,28 @@
       <file leaf-file-name="struct.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/incs/struct.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="54">
+              <caret line="98" column="23" lean-forward="true" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="global_save_env.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/srcs/env/global_save_env.c">
+      <file leaf-file-name="table_hash.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/srcs/hash/table_hash.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="645">
+              <caret line="43" column="59" lean-forward="false" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="879">
+              <caret line="79" column="61" lean-forward="false" selection-start-line="79" selection-start-column="61" selection-end-line="79" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -104,42 +124,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>history</find>
-      <find>compare_history</find>
-      <find>tab_l</find>
-      <find>commpe</find>
-      <find>commp</find>
-      <find>comm</find>
-      <find>com</find>
-      <find>compet</find>
-      <find>competi</find>
-      <find>competio</find>
-      <find>competion</find>
-      <find>c</find>
-      <find>compe</find>
-      <find>compete</find>
-      <find>f.to_tab_</find>
-      <find>l</find>
-      <find>list</find>
-      <find>list_c</find>
-      <find>list_</find>
-      <find>list_tab_are</find>
-      <find>new_line_after_bloc</find>
-      <find>check_word((*read_std)-&gt;cmd)</find>
-      <find>check_wor</find>
-      <find>check_word</find>
-      <find>to_up</find>
-      <find>up</find>
-      <find>up_</find>
-      <find>up_or</find>
-      <find>up_or_</find>
-      <find>ENV</find>
+      <find>E</find>
+      <find>EOF</find>
+      <find>convert_to_hist</find>
+      <find>get_next_l</find>
+      <find>get_next_line</find>
+      <find>get</find>
+      <find>get_</find>
+      <find>HASH</find>
+      <find>g</find>
+      <find>get_next</find>
+      <find>ge</find>
+      <find>get_ne</find>
+      <find>get_nex</find>
+      <find>t</find>
+      <find>t_</find>
+      <find>t_f</find>
+      <find>t_fi</find>
+      <find>t_fil</find>
+      <find>t_file</find>
+      <find>gbl_save_table_has</find>
+      <find>ta</find>
+      <find>ft_atoi</find>
+      <find>r</find>
+      <find>rea</find>
+      <find>real</find>
+      <find>reall</find>
+      <find>realloc</find>
+      <find>ft_strcpy</find>
+      <find>gbl_save_table</find>
+      <find>gbl_save_table_hash</find>
     </findStrings>
     <replaceStrings>
-      <replace>hash_tab</replace>
-      <replace>h_board</replace>
-      <replace>reset</replace>
-      <replace>place_cursor</replace>
       <replace>my_put</replace>
       <replace>print_for_history_search</replace>
       <replace>init_buff</replace>
@@ -166,6 +182,10 @@
       <replace>complete</replace>
       <replace>f.to_comp</replace>
       <replace>list_compare</replace>
+      <replace>t_hash		**hash_board(void)</replace>
+      <replace>t_fd</replace>
+      <replace>table</replace>
+      <replace>ft_uitoa</replace>
     </replaceStrings>
     <dirStrings>
       <dir>srcs</dir>
@@ -178,25 +198,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/srcs/read/search_history/search_history.c" />
-        <option value="$PROJECT_DIR$/libs/libft/incs/libft.h" />
-        <option value="$PROJECT_DIR$/libs/libft/srcs/get_next_line.c" />
-        <option value="$PROJECT_DIR$/srcs/read/search_history/compare_list.c.cpp" />
-        <option value="$PROJECT_DIR$/srcs/read/search_history/first_history.c" />
-        <option value="$PROJECT_DIR$/srcs/history/reset_history.c" />
-        <option value="$PROJECT_DIR$/libs/libft/incs/get_next_line.h" />
-        <option value="$PROJECT_DIR$/srcs/read/search_history/last_result.c" />
-        <option value="$PROJECT_DIR$/srcs/read/search_history/compare_list.c" />
-        <option value="$PROJECT_DIR$/srcs/read/search_history/print_struct_history.c" />
-        <option value="$PROJECT_DIR$/srcs/memdel_struct/memdel_search_history.c" />
-        <option value="$PROJECT_DIR$/srcs/read/restore_cursor.c.cpp" />
         <option value="$PROJECT_DIR$/srcs/read/restore_cursor.c" />
         <option value="$PROJECT_DIR$/srcs/read/last_cmd.c" />
         <option value="$PROJECT_DIR$/srcs/env/add_list_env.c" />
         <option value="$PROJECT_DIR$/srcs/read/init_struct_for_read.c" />
         <option value="$PROJECT_DIR$/srcs/read/my_prompt.c" />
         <option value="$PROJECT_DIR$/srcs/main.c" />
-        <option value="$PROJECT_DIR$/srcs/history/init_history.c" />
         <option value="$PROJECT_DIR$/srcs/read/get_len_prompt.c" />
         <option value="$PROJECT_DIR$/srcs/read/check_cmd.c" />
         <option value="$PROJECT_DIR$/srcs/read/print_struct.c" />
@@ -204,13 +211,11 @@
         <option value="$PROJECT_DIR$/srcs/read/completion/continue_completion.c" />
         <option value="$PROJECT_DIR$/srcs/read/completion/print_tab.c" />
         <option value="$PROJECT_DIR$/srcs/read/completion/update_index.c" />
-        <option value="$PROJECT_DIR$/srcs/read/read_stdin.c" />
         <option value="$PROJECT_DIR$/srcs/read/key_print.c" />
         <option value="$PROJECT_DIR$/srcs/read/key_delete.c" />
         <option value="$PROJECT_DIR$/srcs/read/key_tabulation.c" />
         <option value="$PROJECT_DIR$/srcs/memdel_struct/memdel_read.c" />
         <option value="$PROJECT_DIR$/srcs/read/completion/color_completion.c" />
-        <option value="$PROJECT_DIR$/incs/struct.h" />
         <option value="$PROJECT_DIR$/srcs/read/completion/completion.c" />
         <option value="$PROJECT_DIR$/srcs/read/search_history/compare_history.c" />
         <option value="$PROJECT_DIR$/srcs/memdel_struct/memdel_completion.c" />
@@ -220,15 +225,30 @@
         <option value="$PROJECT_DIR$/srcs/read/completion/init_completion.c" />
         <option value="$PROJECT_DIR$/srcs/read/completion/complete_binary.c" />
         <option value="$PROJECT_DIR$/srcs/read/prompt.c" />
-        <option value="$PROJECT_DIR$/incs/define.h" />
         <option value="$PROJECT_DIR$/srcs/read/key_arrow.c" />
         <option value="$PROJECT_DIR$/srcs/read/completion/up_or_down.c" />
         <option value="$PROJECT_DIR$/srcs/read/completion/check_binary_path.c" />
-        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/incs/define.h" />
+        <option value="$PROJECT_DIR$/srcs/history/init_history.c" />
         <option value="$PROJECT_DIR$/srcs/cores/main.c" />
+        <option value="$PROJECT_DIR$/libs/libft/srcs/get_next_line.c" />
+        <option value="$PROJECT_DIR$/libs/libft/incs/get_next_line.h" />
         <option value="$PROJECT_DIR$/srcs/read/init_prompt.c" />
+        <option value="$PROJECT_DIR$/incs/struct.h" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/libs/libft/srcs/ft_atoui.c" />
+        <option value="$PROJECT_DIR$/libs/libft/srcs/ft_realloc.c" />
+        <option value="$PROJECT_DIR$/libs/libft/incs/libft.h" />
+        <option value="$PROJECT_DIR$/libs/printf/incs/libft.h" />
+        <option value="$PROJECT_DIR$/libs/libft/srcs/ft_ulltoa.c" />
+        <option value="$PROJECT_DIR$/libs/libft/srcs/ft_uitoa.c" />
+        <option value="$PROJECT_DIR$/srcs/hash/hash_board.c" />
         <option value="$PROJECT_DIR$/srcs/env/env_table.c" />
         <option value="$PROJECT_DIR$/incs/sh.h" />
+        <option value="$PROJECT_DIR$/srcs/hash/table_hash.c" />
+        <option value="$PROJECT_DIR$/srcs/hash/built_in_hash.c" />
+        <option value="$PROJECT_DIR$/srcs/cores/shell.c" />
+        <option value="$PROJECT_DIR$/srcs/read/read_stdin.c" />
       </list>
     </option>
   </component>
@@ -239,7 +259,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1888" />
+    <option name="width" value="1910" />
     <option name="height" value="1440" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -373,61 +393,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="memdel_struct" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="42sh" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="42sh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="srcs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="42sh" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="42sh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="srcs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="hash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="42sh" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="42sh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="srcs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="env" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -708,7 +674,10 @@
       <workItem from="1504694066104" duration="16323000" />
       <workItem from="1505393617539" duration="11034000" />
       <workItem from="1505658503858" duration="9568000" />
-      <workItem from="1505727416156" duration="65000" />
+      <workItem from="1505727416156" duration="936000" />
+      <workItem from="1505734449508" duration="8907000" />
+      <workItem from="1505823374770" duration="2777000" />
+      <workItem from="1505827384468" duration="1218000" />
     </task>
     <task id="LOCAL-00001" summary="Clean some code ! And less leaks">
       <created>1504700814283</created>
@@ -721,7 +690,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81261000" />
+    <option name="totallyTimeSpent" value="95034000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -733,18 +702,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1888" height="1440" extended-state="0" />
+    <frame x="0" y="0" width="1910" height="1440" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.56567794" sideWeight="0.49571735" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42460734" sideWeight="0.49571735" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950467" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1902369" sideWeight="0.50168186" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15147164" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950467" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2512563" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3516101" sideWeight="0.50428265" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1902369" sideWeight="0.4983181" order="9" side_tool="false" content_ui="tabs" />
@@ -753,7 +724,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15147164" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -774,140 +744,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/srcs/env/split.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/hash/hash_value.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/history/copy_cmd.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/history/gbl_save_history.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/error_function/bip.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/env/my_getenv.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/hash/hash_board.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/gbl_save_read.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/history/init_history.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/finish_read_std.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/print_struct.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="35" lean-forward="false" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/check_cmd.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="31" lean-forward="true" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/my_prompt.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/read/key_enter.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="40" lean-forward="false" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/completion/print_tab.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="40" lean-forward="false" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/completion/update_index.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/read_stdin.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="47" column="23" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/key_print.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/key_delete.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/memdel_struct/memdel_read.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/memdel_struct/memdel_completion.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -915,7 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cores/shell.c" />
     <entry file="file://$PROJECT_DIR$/srcs/read/search_history/compare_list.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1009,20 +844,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/read/init_struct_for_read.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/read/completion/up_or_down.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incs/define.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/completion/up_or_down.c" />
     <entry file="file://$PROJECT_DIR$/srcs/read/key_arrow.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
@@ -1046,46 +868,205 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/read/get_len_prompt.c" />
-    <entry file="file://$PROJECT_DIR$/incs/sh.h">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt" />
+    <entry file="file://$PROJECT_DIR$/srcs/env/global_save_env.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="156" column="16" lean-forward="false" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="330">
+          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
+    <entry file="file://$PROJECT_DIR$/srcs/read/key_eof.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="124" column="61" lean-forward="false" selection-start-line="124" selection-start-column="61" selection-end-line="124" selection-end-column="61" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cores/main.c" />
-    <entry file="file://$PROJECT_DIR$/incs/struct.h">
+    <entry file="file://$PROJECT_DIR$/incs/define.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="978">
+          <caret line="71" column="58" lean-forward="true" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/libft/srcs/get_next_line.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/read/init_prompt.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        <state relative-caret-position="408">
+          <caret line="75" column="12" lean-forward="false" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/env/global_save_env.c">
+    <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="29" />
+          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/history/init_history.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/libft/incs/get_next_line.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/hash/hash_value.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_atoui.c" />
+    <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_newcat.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_realloc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/printf/incs/libft.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/printf/srcs/detect_arg.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="56" column="34" lean-forward="false" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/libft/incs/libft.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="130" column="4" lean-forward="false" selection-start-line="130" selection-start-column="4" selection-end-line="130" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/libft/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_nbrlen.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_uitoa.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_ulltoa.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="879">
+          <caret line="79" column="61" lean-forward="false" selection-start-line="79" selection-start-column="61" selection-end-line="79" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/env/env_table.c" />
+    <entry file="file://$PROJECT_DIR$/incs/struct.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="98" column="23" lean-forward="true" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/env/env_table.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/hash/table_hash.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="59" lean-forward="false" selection-start-line="43" selection-start-column="59" selection-end-line="43" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cores/shell.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/hash/built_in_hash.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/incs/sh.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="105" column="49" lean-forward="false" selection-start-line="105" selection-start-column="49" selection-end-line="105" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/hash/hash_board.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/read_stdin.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

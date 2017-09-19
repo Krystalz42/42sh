@@ -12,14 +12,14 @@
 
 #include <sh.h>
 
-void		convert_to_hist(char *buff, int ret)
+static int		convert_to_hist(char *buff, int ret)
 {
 	static t_read	*read_std;
 	static int		i;
 	static int		cmd;
 
 	i = -1;
-	while (i < ret - 1 && ++cmd < 500)
+	while (i < ret - 1 && ++cmd <= 500)
 	{
 		read_std = init_struct_for_read();
 		while (++i < ret)
@@ -34,9 +34,10 @@ void		convert_to_hist(char *buff, int ret)
 		make_list_hist(read_std);
 		read_std = NULL;
 	}
+	return (cmd == 500 ? 0 : 1);
 }
 
-void		init_history(void)
+void			init_history(void)
 {
 	char		*home;
 	char		*path_hist;
@@ -50,9 +51,10 @@ void		init_history(void)
 	path_hist = ft_strjoin(home, "/.42sh_history");
 	if ((fd = open(path_hist, O_RDONLY | O_CREAT, S_IRUSR)) == -1)
 		return ;
-	ft_bzero(buff, 100000);
-	if ((ret = read(fd, &buff, sizeof(char) * 100000)) > 0)
-		convert_to_hist(buff, ret);
+	ft_bzero(buff, 10000);
+	while ((ret = read(fd, &buff, sizeof(char) * 10000)))
+		if (!convert_to_hist(buff, ret))
+			break ;
 	remove(path_hist);
 	free(path_hist);
 	close(fd);

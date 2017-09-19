@@ -18,18 +18,15 @@ char			*ft_uitoa(unsigned int n)
 	char			*nbr;
 	size_t			len;
 
-	len = 0;
+	len = -1;
 	if (n == 0)
 		return (ft_strdup("0"));
-	nbr = ft_strnew(0);
-	while (n > 0)
+	nbr = ft_strnew(11);
+	while (n)
 	{
-		nbr = ft_realloc((void **)&nbr, len + 2);
-		nbr[len] = (n % 10) + 48;
+		nbr[++len] = (n % 10) + 48;
 		n /= 10;
-		len++;
 	}
-	nbr[len] = '\0';
-	ft_strrev(nbr);
-	return (nbr);
+    nbr[++len] = 0;
+	return (ft_strrev(nbr));
 }

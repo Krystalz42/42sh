@@ -54,7 +54,7 @@ static char		*check_flag(char *flag, char *full_arg)
 			if (len == 0)
 				flag = ft_strnew(1);
 			else
-				flag = (char *)ft_realloc((void **)(&flag), len + 1);
+				flag = (char *)ft_realloc((void **)(&flag), len, len + 1);
 			flag[len] = full_arg[i];
 			len++;
 		}

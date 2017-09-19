@@ -60,9 +60,18 @@ int                 get_len_prompt(int len);
 */
 
 unsigned int		hash_value(char *str);
-t_hash				*hash_board(void);
+t_table_hash        *gbl_save_table_hash(t_table_hash *hash, int flags);
+void	        	inventory_hash(t_hash **hash, unsigned int index);
+t_hash				**hash_board(void);
 char				*search_path(char *binary);
 void				add_hash(char *bin, char *path);
+
+/*
+**              BUILT IN FUNCTION
+*/
+
+void                hash_reset(void);
+void                hash_print(void);
 
 /*
 **				FUNCTION FOR COMPLETION
@@ -142,7 +151,7 @@ int                 last_resultat(int res);
 **				ENVIRONEMENT FUNCTION
 */
 
-void                   create_table_env(void);
+void                create_table_env(void);
 t_env				*gbl_save_env(unsigned short flags, t_env *env);
 void				init_env(void);
 void				split_env(char *env);

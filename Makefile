@@ -75,7 +75,9 @@ SRCS = \
 	   read/my_prompt.c                                     \
 	   read/get_len_prompt.c                                \
 	   hash/hash_value.c									\
+	   hash/table_hash.c									\
 	   hash/hash_board.c	    							\
+	   hash/built_in_hash.c                                 \
 	   read/completion/init_tab.c							\
 	   read/completion/check_binary_path.c                  \
 	   read/completion/color_completion.c					\

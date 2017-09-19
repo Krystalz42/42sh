@@ -17,8 +17,9 @@ int		main(void)
 	init_env();
 	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
 	init_history();
-	if (init_term())
+	if (init_term()) {
 		return (1);
+	}
 	init_prompt();
 	create_table_env();
 	shell();

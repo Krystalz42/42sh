@@ -52,11 +52,11 @@ char			*ft_ftoa(double nb, size_t precision)
 	i = 0;
 	while (i <= precision)
 	{
-		str = (char *)ft_realloc((void **)&str, ++len + 1);
+		str = (char *)ft_realloc((void **)&str, len, len + 2);
 		while (nb >= limit || nb <= -limit)
 			nb += nb >= limit ? -limit : limit;
 		nb *= nb < 0 ? -10 : 10;
-		str[len - 1] = ('0' + (((long)nb) % 10));
+		str[++len - 1] = ('0' + (((long)nb) % 10));
 		i++;
 	}
 	str[len - 2] += str[len - 1] >= '5' ? 1 : 0;

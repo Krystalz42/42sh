@@ -57,6 +57,7 @@ static inline void      initialize_fct(t_read **read_std, int *i, char *buff)
     last_resultat(0);
     chk_and_print(buff, i, read_std);
 }
+
 t_read					*read_stdin(void)
 {
 	char		buff[LEN_BUFFER];

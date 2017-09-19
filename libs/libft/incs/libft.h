@@ -13,6 +13,10 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <unistd.h>
+# include <stdlib.h>
 # include <get_next_line.h>
 
 # define ABS(x)	(x > 0 ? x : -x)
@@ -50,6 +54,16 @@
 # define BASE_DEC "0123456789"
 # define BASE_OCT "01234567"
 # define BASE_BIN "01"
+
+
+
+
+typedef struct		s_remain
+{
+    int				fd;
+    char			*content;
+}					t_remain;
+# define IFRETURN(a, b) if(1){if (a){return (b);}}
 
 void				ft_memdel_tab(char **ta);
 char				**ft_str_to_tab(char *str);
@@ -125,7 +139,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 char				*ft_filetostr(char *filepath);
-void				*ft_realloc(void **ptr, size_t buff);
+void            	*ft_realloc(void **ptr, size_t oldsize, size_t newsize);
 char				*ft_newcat(char *str1, char *str2);
 char				**ft_split(const char *str, const char *separator);
 int					ft_countchar(const char *s, char c);

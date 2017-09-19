@@ -15,9 +15,43 @@
 int		shell(void)
 {
 	add_hash("ls", "/bin/ls");
-	STR(search_path("ls"));
-	NL;
-	while (1)
+	add_hash("grep", "/usr/bin/grep");
+	add_hash("mkdir", "/bin/mkdir");
+	search_path("ls");
+	search_path("ls");
+	search_path("ls");
+	search_path("ls");
+	search_path("ls");
+	search_path("ls");
+	search_path("ls");
+	search_path("ls");
+	search_path("mkdir");
+	search_path("mkdir");
+	search_path("mkdir");
+	search_path("mkdir");
+	search_path("mkdir");
+	search_path("mkdir");
+	search_path("grep");
+	search_path("ls");
+	hash_print();
+    hash_reset();
+    hash_print();
+    add_hash("mkdir", "/bin/mkdir");
+    search_path("mkdir");
+    search_path("mkdir");
+    search_path("mkdir");
+    hash_print();
+    hash_reset();
+    hash_reset();
+    hash_reset();
+    hash_reset();
+    hash_reset();
+    hash_print();
+    hash_reset();
+    hash_reset();
+    hash_reset();
+    hash_reset();
+    while (1)
 	{
 		read_stdin();
 		NL;

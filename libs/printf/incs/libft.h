@@ -1,4 +1,3 @@
-/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
@@ -129,12 +128,12 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 char				*ft_filetostr(char *filepath);
-void				*ft_realloc(void **ptr, size_t buff);
 char				*ft_newcat(char *str1, char *str2);
 char				**ft_split(const char *str, const char *separator);
 int					ft_countchar(const char *s, char c);
 void				ft_debug(int nb, int need);
 int					ft_atoi_base(char *nbr, char *base);
+void            	*ft_realloc(void **ptr, size_t oldsize, size_t newsize);
 char				*ft_convert_base(char *nbr, char *base_from, char *bas_to);
 char				*ft_convert_ubase(char *nbr, char *base_from, char *bas_to);
 unsigned int		ft_itounsigned(int n);

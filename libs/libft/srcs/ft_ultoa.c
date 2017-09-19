@@ -26,7 +26,7 @@ char			*ft_ultoa(unsigned long n)
 	nbr = ft_strnew(0);
 	while (n > 0)
 	{
-		nbr = (char *)ft_realloc((void **)&nbr, len + 2);
+		nbr = (char *)ft_realloc((void **)&nbr, len, len + 2);
 		nbr[len] = n % 10 + 48;
 		n /= 10;
 		len++;

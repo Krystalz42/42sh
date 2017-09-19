@@ -28,7 +28,7 @@ void			my_pwd(void)
         dup2(fdout, STDOUT_FILENO);
         dup2(fderr, STDERR_FILENO);
         execve(command[0], command, NULL);
-        exit(1);
+        exit(EXIT_FAILURE);
     }
     else
         wait(&father);
@@ -52,10 +52,11 @@ static void			git_branch(void)
         dup2(fdout, STDOUT_FILENO);
         dup2(fderr, STDERR_FILENO);
         execve(command[0], command, NULL);
-        exit(1);
+        exit(EXIT_FAILURE);
     }
     else
         wait(&father);
+    remove("/tmp/.git_info_err");
     close(fderr);
     close(fdout);
 }
@@ -69,10 +70,12 @@ static int            get_str_from_branch(char **prompt)
     git_branch();
     fd = open("/tmp/.git_info", O_RDONLY);
     while (get_next_line(fd, &line))
+    {
         if (line[0] == '*')
             break ;
         else
             free(line);
+    }
     if (ft_strlen(line))
     {
         ft_strcpy((*prompt) + ft_strlen((*prompt)), "\x1B[31m git[\x1B[32m");
@@ -107,6 +110,7 @@ static int          get_str_from_pwd(char **prompt)
     s = ft_strlen(tmp + s + 1);
     remove("/tmp/.pwd_info");
     free(tmp);
+    close(fd);
     return (!s ? 1 : s);
 }
 

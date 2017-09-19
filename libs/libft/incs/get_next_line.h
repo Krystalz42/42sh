@@ -12,8 +12,19 @@
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# define BUFF_SIZE 3
+# define BUFF_SIZE 50
 
+typedef struct	s_fd
+{
+	int					fd[50];
+	char				*d[50];
+	int					bol[50];
+	int					count[50];
+	int					first;
+	int					i;
+}				t_fd;
+
+int	get_next_line(int fd, char **line);
 
 typedef struct			s_struct
 {
