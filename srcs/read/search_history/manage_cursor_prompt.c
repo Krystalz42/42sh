@@ -40,8 +40,8 @@ int         prompt_history(int p)
     static const char prompt[] = "search in history : ";
 
     if (p)
-        STR_FD("\x1B[31m", init_fd());
-    STR_FD(prompt, init_fd());
-    P_RST_FD(init_fd());
+        STR_FD("\x1B[31m", 2);
+    STR_FD(prompt, 2);
+    P_RST_FD(2);
     return (ft_strlen(prompt) + 3);
 }

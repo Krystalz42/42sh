@@ -12,15 +12,15 @@
 
 #include <sh.h>
 
-static void		convert_to_hist(char *buff)
+void		convert_to_hist(char *buff)
 {
 	static t_read	*read_std;
 	int				i;
 	static int		cmd;
 
 	i = -1;
-	if (!(cmd <= MAX_COMMAND))
-		;
+	if (!(cmd <= HISTSIZE) || !buff)
+		return ;
 	if (!read_std)
 		read_std = init_struct_for_read();
 	while (buff[++i])
@@ -43,11 +43,15 @@ void			init_history(void)
 	if (!(path_hist = get_str_from_history()))
 		return ;
 	if ((fd = open(path_hist, O_RDONLY)) == -1)
+	{
+		free(path_hist);
 		return ;
+	}
 	while (my_gnl(fd, &buff))
 	{
 		convert_to_hist(buff);
 		free(buff);
 	}
-	free(path_hist);
+    free(path_hist);
+	close(fd);
 }

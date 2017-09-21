@@ -12,11 +12,14 @@
 
 #include <sh.h>
 
-t_hist		*gbl_save_history(t_hist *hist)
+t_hist		*gbl_save_history(t_hist *hist, int flags)
 {
 	static t_hist		*save;
 
-	if (hist)
-		save = hist;
+	if (!flags)
+		save = NULL;
+	else
+		if (hist)
+			save = hist;
 	return (save);
 }

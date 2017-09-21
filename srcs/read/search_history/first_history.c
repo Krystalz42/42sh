@@ -16,7 +16,7 @@ t_hist  *first_history(void)
 {
     static t_hist *first;
 
-    if (!(first = gbl_save_history(NULL)))
+    if (!(first = gbl_save_history(NULL, 0)))
         return (NULL);
     while (first->next)
         first = first->next;

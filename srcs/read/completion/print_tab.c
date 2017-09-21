@@ -24,14 +24,14 @@ int			init_page(t_read **read_std, t_file **tmp)
 
 int			print_element(t_file *file, int color)
 {
-	(!color) ? P_INV_FD(init_fd()) : NULL;
+	(!color) ? P_INV_FD(2) : NULL;
 	color_completion(file->type, color);
 	my_togo(file->ms.y, file->ms.x);
-	STR_FD(file->name, init_fd());
-	STR_FD(RST, init_fd());
+	STR_FD(file->name, 2);
+	STR_FD(RST, 2);
 	add_little_char(file->type);
 	my_tobackto(file->ms.y, file->ms.x + 100);
-	P_RST_FD(init_fd());
+	P_RST_FD(2);
 	return (1);
 }
 

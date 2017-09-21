@@ -12,31 +12,27 @@
 
 #include <sh.h>
 
-static t_hist     *set_history_to_last(void)
+t_hist     *set_history_to_last(void)
 {
     t_hist *hist;
 
-    hist = gbl_save_history(NULL);
+    hist = gbl_save_history(NULL, 1);
     while (hist && hist->prev)
         hist = hist->prev;
     return (hist);
 }
 
-void            write_history(void)
+int            b_write_history_in_file(char *path)
 {
-    int     fd;
     t_hist  *hist;
-    char    buff[500 * MAX_COMMAND];
+    char    buff[500 * HISTSIZE];
+    int     fd;
     int     i;
-    char    *path_history;
 
-    i = -1;
-    if (!(path_history = get_str_from_history()))
-        return ;
-    remove(path_history);
-    fd = open(path_history, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    fd = open(path, O_WRONLY | O_CREAT | O_TRUNC, 0644);
     hist = set_history_to_last();
-    ft_bzero(buff, 500 * MAX_COMMAND);
+    ft_bzero(buff, 500 * HISTSIZE);
+    i = -1;
     while (hist)
     {
         hist->hist->cmd = first_cmd(hist->hist->cmd, 1);
@@ -49,6 +45,7 @@ void            write_history(void)
         hist = hist->next;
     }
     STR_FD(buff, fd);
-    free(path_history);
+	free(path);
     close(fd);
+	return (1);
 }

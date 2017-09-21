@@ -33,9 +33,11 @@ int fdb;
 
 int					shell(void);
 void				insert_one_line(void);
+char            var_return(int ret);
+
 
 /*
-**				FUNCTION READ && PRINT AND RETURN A STRUCT
+**				FUNCTION READ && PRINT && RETURN A STRUCT
 */
 
 t_read				*read_stdin(void);
@@ -74,6 +76,10 @@ char                *get_str_from_hash(void);
 
 void                hash_reset(void);
 void                hash_print(void);
+int                b_write_history(void);
+int                b_clear_history(void);
+void		        convert_to_hist(char *buff);
+int                   b_delete_history_offset(int offset);
 
 /*
 **				FUNCTION FOR COMPLETION
@@ -165,14 +171,15 @@ char				*my_getenv(char *str);
 **				HISTORY FUNCTION
 */
 
+t_hist             *set_history_to_last(void);
 void		        reset_history(void);
 void				init_history(void);
 void				copy_cmd(t_read **read_std, t_cmd *cpy);
-t_hist				*gbl_save_history(t_hist *hist);
+t_hist				*gbl_save_history(t_hist *hist, int flags);
 void				make_list_hist(t_read *read_std);
 void				previous_history(t_read **read_std);
 void				next_history(t_read **read_std);
-void                write_history(void);
+int                 b_write_history_in_file(char *path);
 
 /*
 **				SIGNAL FUNCTION

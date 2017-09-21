@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/09/06 19:41:16 by aroulin          ###   ########.fr        #
+#    Updated: 2017/09/21 15:34:52 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ SRCS = \
 	   cores/main.c											\
 	   cores/shell.c										\
 	   cores/insert_one_line.c								\
+	   cores/var_return.c                                   \
 	   read/read_stdin.c									\
 	   read/key_print.c										\
 	   read/key_delete.c									\
@@ -102,6 +103,7 @@ SRCS = \
 	   read/search_history/print_struct_history.c           \
 	   read/search_history/manage_cursor_prompt.c           \
 	   read/search_history/search_history.c                 \
+	   history/built_in_history.c                           \
 	   history/get_str_from_history.c                       \
 	   history/write_history.c                              \
 	   history/reset_history.c                              \
@@ -176,6 +178,7 @@ CFLAGS		= \
 DFLAGS		= \
 			  -fsanitize=address					\
 			  -O2									\
+			  -fno-omit-frame-pointer				\
 
 # ---------------------------------------------------------------------------- #
 # /!\ SOURCE NORMALIZATION AND COMPILATION RULES /!\                           #
@@ -223,7 +226,9 @@ $(NAME)		: $(DIR_OBJS) $(DIR_DEPS) $(O_SRCS) $(LIBS)
 	@printf "$(GRN)[ Created Executable ]$(RST) %s\n" $(NAME)
 
 fs			:
+	@ASAN_OPTIONS=detect_leaks=1
 	@$(CC) $(LDFLAGS) $(DFLAGS) $(LDLIBS) $(O_SRCS) -o $(NAME)
+	@printf "$(GRN)[ /!\ MEMORY CHECK /!\ ]$(RST) %s\n" $(NAME)
 
 libs		:
 	@make -C $(DIR_LIBS)/libft

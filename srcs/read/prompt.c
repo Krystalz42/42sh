@@ -28,6 +28,6 @@ int 			prompt(unsigned char flags)
 	else if (flags & DEFAULT && !(def = 0))
 		prompt = my_prompt(NULL);
 	if (flags & PRINT)
-		STR_FD(prompt, init_fd());
+		STR_FD(prompt, 2);
 	return (!def ? get_len_prompt(-42) : ft_strlen(prompt));
 }

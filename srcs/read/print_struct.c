@@ -26,7 +26,7 @@ int			print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_cursor *cur)
 			cur->line += 1;
 			cur->co = 0;
 		}
-		(cmd->c != 10) ? CHAR_FD(cmd->c, init_fd()): 0 ;
+		(cmd->c != 10) ? CHAR_FD(cmd->c, 2): 0 ;
 		cur->co += (cmd->c == 9) ? 4 : 1;
 		cmd = cmd->next;
 	}

@@ -14,18 +14,20 @@
 
 void            hash_reset(void)
 {
-    t_table_hash	*table;
-    t_hash			**hash_tab;
-    t_table_hash	**to_kill;
+	t_hash			**hash_tab;
+	t_table_hash	*table;
+    t_table_hash	*to_kill;
 
     hash_tab = hash_board();
     table = gbl_save_table_hash(NULL, 0);
     while (table)
     {
-        to_kill = &table;
-        ft_memdel((void **)&(hash_tab[table->index]));
-        table = table->next;
-        ft_memdel((void **)to_kill);
+        to_kill = table;
+	    ft_memdel((void **)&(hash_tab[table->index]->binary));
+	    ft_memdel((void **)&(hash_tab[table->index]->path));
+	    ft_memdel((void **)&(hash_tab[table->index]));
+	    table = table->next;
+	    ft_memdel((void **)&to_kill);
     }
 	gbl_save_table_hash(NULL, 1);
 }
@@ -33,13 +35,13 @@ void            hash_reset(void)
 void			hash_print(void)
 {
 	t_table_hash	*table;
-	static char		element[100];
+	static char		element[200];
 	char			*tmp;
 
 	table = gbl_save_table_hash(NULL, 0);
 	while (table)
 	{
-		ft_bzero(element, 100);
+		ft_bzero(element, 200);
 		ft_strcpy(element, "[");
 		tmp = ft_uitoa(table->index);
 		ft_strcpy(element + ft_strlen(element), tmp);

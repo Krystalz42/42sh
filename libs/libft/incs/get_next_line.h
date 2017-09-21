@@ -16,12 +16,8 @@
 
 typedef struct	s_fd
 {
-    int					fd[256];
-    char				*d[256];
-    int					bol[256];
-    int					count[256];
-    int					first;
-    int					i;
+    int					fd;
+    char				*keep;
 } t_fd;
 
 typedef struct			s_struct

@@ -38,11 +38,20 @@
 # define DEFAULT		    16
 # define PRINT			    32
 
-# define MAX_COMMAND        500
+# define HISTSIZE        500
 # define PATH_HISTORY       "/.42sh_history"
 # define PATH_HASH          "/.42sh_hash"
+# define PATH_GIT           "/tmp/.git_info"
+# define PATH_PWD           "/tmp/.pwd_info"
+# define PATH_ERR           "/dev/null"
 
-# define LEN_HASH UINT_MAX - 1
+# define FD_ERR             0
+# define FD_GIT             1
+# define FD_PWD             2
+# define FD_HISTORY         4
+# define FD_HASH            8
+
+# define LEN_HASH           UINT_MAX - 1
 
 /*
 **			INITIALIZATION READ

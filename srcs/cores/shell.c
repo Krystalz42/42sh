@@ -14,45 +14,29 @@
 
 int		shell(void)
 {
-	add_hash("ls", "/bin/ls", 1);
-	add_hash("grep", "/usr/bin/grep", 1);
-	add_hash("mkdir", "/bin/mkdir", 1);
-	search_path("ls");
-	search_path("ls");
-	search_path("ls");
-	search_path("ls");
-	search_path("ls");
-	search_path("ls");
-	search_path("ls");
-	search_path("ls");
-	search_path("mkdir");
-	search_path("mkdir");
-	search_path("mkdir");
-	search_path("mkdir");
-	search_path("mkdir");
-	search_path("mkdir");
-	search_path("grep");
-	search_path("ls");
+	add_hash("Alexandre", "@aroulin", 42);
+	add_hash("Gregoire", "@gbourson", 42);
+	add_hash("Jefferson", "@jle-quel", 42);
+	add_hash("Didier", "@dsebban", 42);
 	hash_print();
-    hash_reset();
-    hash_print();
-    add_hash("mkdir", "/bin/mkdir", 1);
-    search_path("mkdir");
-    search_path("mkdir");
-    search_path("mkdir");
-    hash_print();
-    hash_reset();
-    hash_reset();
-    hash_reset();
-    hash_reset();
-    hash_reset();
-    hash_print();
-    hash_reset();
-    hash_reset();
-    hash_reset();
-    hash_reset();
+	var_return(0);
+	read_stdin();
+
+
+
+
+	b_clear_history();
+	convert_to_hist("CECI UN UN AJOUT");
+	b_write_history_in_file(ft_strdup("./ici"));
+
+
+
 
 	read_stdin();
-    write_history();
+
+
+
+
+	b_write_history_in_file(get_str_from_history());
 	return (1);
 }

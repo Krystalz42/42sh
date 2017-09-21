@@ -16,8 +16,9 @@ void			previous_history(t_read **read_std)
 {
 	t_hist		*hist;
 
-	if (!(hist = gbl_save_history(NULL)) && bip())
+	if (!(hist = gbl_save_history(NULL, 1)) && bip())
 		return ;
+	NBR_FD((*read_std)->history, fdb);
 	if ((*read_std)->history)
 	{
 		(!hist->prev) && bip();
@@ -26,10 +27,7 @@ void			previous_history(t_read **read_std)
 		copy_cmd(read_std, hist->hist->cmd);
 	}
 	else
-	{
-		(*read_std)->history = 1;
 		copy_cmd(read_std, hist->hist->cmd);
-	}
 	(*read_std)->history = 1;
-	gbl_save_history(hist);
+	gbl_save_history(hist, 1);
 }

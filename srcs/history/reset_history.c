@@ -16,9 +16,9 @@ void		reset_history(void)
 {
 	t_hist	*tmp;
 
-	if (!(tmp = gbl_save_history(NULL)))
+	if (!(tmp = gbl_save_history(NULL, 1)))
 		return ;
 	while (tmp->next)
 		tmp = tmp->next;
-	gbl_save_history(tmp);
+	gbl_save_history(tmp, 1);
 }

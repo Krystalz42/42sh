@@ -26,7 +26,7 @@ int		init_term(void)
 	static struct termios old_term;
 	static struct termios our_term;
 
-	if ((init_fd() == -1))
+	if ((2 == -1))
 		return (1);
 	if (!my_getenv("TERM"))
 		add_list_env("TERM", "vt100");
@@ -37,7 +37,7 @@ int		init_term(void)
 	}
 	else
 		exit(127);
-	if (!(tcgetattr(init_fd(), &our_term)) && init_our_term(&our_term))
+	if (!(tcgetattr(2, &our_term)) && init_our_term(&our_term))
 		keep_term_struct(SAVE_OUR, &our_term);
 	return (0);
 }

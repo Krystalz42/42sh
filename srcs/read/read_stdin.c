@@ -52,10 +52,11 @@ static inline int		chk_and_print(char *buff, int *i, t_read **read_std)
 
 static inline void      initialize_fct(t_read **read_std, int *i, char *buff)
 {
-    set_termios(SET_OUR_TERM);
-    (*read_std)->cur.co = prompt(DEFAULT | PRINT);
-    last_resultat(0);
-    chk_and_print(buff, i, read_std);
+	set_termios(SET_OUR_TERM);
+	init_prompt();
+	(*read_std)->cur.co = prompt(DEFAULT | PRINT);
+	last_resultat(0);
+	chk_and_print(buff, i, read_std);
 }
 
 t_read					*read_stdin(void)
@@ -83,5 +84,6 @@ t_read					*read_stdin(void)
 	}
 	set_termios(SET_OLD_TERM);
 	finish_read_std(&read_std);
+	NL;
 	return (read_std);
 }
