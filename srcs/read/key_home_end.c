@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-int			key_home_(t_read **read_std)
+int			key_home_(t_read **read_std, unsigned long buff)
 {
 	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
 		return (0);
@@ -20,6 +20,7 @@ int			key_home_(t_read **read_std)
 		(*read_std)->print = 2;
 	else if ((*read_std)->cmd->prev)
 	{
+		add_outstanding(NULL, buff, 0);
 		while ((*read_std)->cmd->prev)
 		{
 			if (!(*read_std)->history && (*read_std)->cmd->prev->c == 10)
@@ -32,7 +33,7 @@ int			key_home_(t_read **read_std)
 		bip();
 	return (1);
 }
-int			key_end_(t_read **read_std)
+int			key_end_(t_read **read_std, unsigned long buff)
 {
 	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
 		return (0);
@@ -40,6 +41,7 @@ int			key_end_(t_read **read_std)
 		(*read_std)->print = 2;
 	else if ((*read_std)->cmd->next)
 	{
+		add_outstanding(NULL, buff, 0);
 		while ((*read_std)->cmd->next)
 			(*read_std)->cmd = (*read_std)->cmd->next;
 		(*read_std)->print = 2;

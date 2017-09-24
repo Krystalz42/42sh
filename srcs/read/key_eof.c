@@ -12,11 +12,11 @@
 
 #include <sh.h>
 
-int			key_eof(t_read **read_std)
+int			key_eof(t_read **read_std, unsigned long buff)
 {
 	if (!(*read_std)->cmd->c && !(*read_std)->cmd->prev)
 		exit(EXIT_SUCCESS);
 	else
-		bip();
+		key_delete_here(read_std, buff);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/23 19:28:25 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/24 17:34:43 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ int		shell(void)
 	b_write_history();
 	var_return(0);
 	read_stdin();
+	reset_signal();
 	return (1);
 }

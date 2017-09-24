@@ -5,8 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/24 17:13:15 by aroulin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   define.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 23:25:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 17:40:53 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/24 16:43:35 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,37 +69,54 @@
 **			INITIALIZATION READ
 */
 
-# define DELETE_KEY		    	"\x7f\x0\x0\x0\x0\x0"
-# define EOF_KEY			    "\x4\x0\x0\x0\x0\x0"
-# define TAB_KEY		    	"\x9\x0\x0\x0\x0\x0"
-# define ENTER_KEY		    	"\xA\x0\x0\x0\x0\x0"
-# define CLEAR_KEY		    	"\xc\x0\x0\x0\x0\x0"
-# define INTERRUPT_KEY	    	"\x2\x0\x0\x0\x0\x0"
-# define CTRL_R                 "\x12\x0\x0\x0\x0\x0"
+# define DELETE_KEY		        127
+# define TAB_KEY		    	9
+# define ENTER_KEY		    	10
+# define CLEAR_KEY		        12
 
-# define ARROW_LEFT		    	"\x1b\x5b\x44\x0\x0\x0"
-# define ARROW_DOWN		    	"\x1b\x5b\x42\x0\x0\x0"
-# define ARROW_UP		    	"\x1b\x5b\x41\x0\x0\x0"
-# define ARROW_RIGHT		    "\x1b\x5b\x43\x0\x0\x0"
-# define END_KEY		    	"\x1b\x5b\x46\x0\x0\x0"
-# define HOME_KEY		    	"\x1b\x5b\x48\x0\x0\x0"
+# define CTRL_Y                 0
+# define CTRL_B                 2
+# define CTRL_F                 6
+# define CTRL_D                 4
+# define CTRL_A                 1
+# define CTRL_E                 5
+# define CTRL_K                 11
+# define CTRL_W                 23
+# define CTRL_R                 18
+# define CTRL_UNDO              31
+# define PRINT_KEY              424242
 
-# define PAGE_UP		    	"\x1b\x5b\x36\x7e\x0\x0"
-# define PAGE_DOWN		    	"\x1b\x5b\x35\x7e\x0\x0"
+# define INTERRUPT_KEY          -1
 
-# define DEL_KEY		    	"\x1b\x5b\x33\x7e\x0\x0"
+# define META_Y                 31003
+# define META_F                 26139
+# define META_D                 8554722
+# define META_DELETE            32539
+# define META_DEL               2117294875
+# define META_B                 25115
 
-# define SHIFT_UP_KEY	    	"\x1b\x5b\x31\x3b\x32\x41"
-# define SHIFT_DOWN_KEY	    	"\x1b\x5b\x31\x3b\x32\x42"
-# define SHIFT_RIGHT_KEY	    "\x1b\x5b\x31\x3b\x32\x43"
-# define SHIFT_LEFT_KEY		    "\x1b\x5b\x31\x3b\x32\x44"
+# define ARROW_LEFT		    	4479771
+# define ARROW_DOWN		    	4348699
+# define ARROW_UP		    	4283163
+# define ARROW_RIGHT		    4414235
+# define END_KEY		    	4610843
+# define HOME_KEY		    	4741915
 
-# define CTRL_SHIFT_RIGHT_KEY   "\x1b\x5b\x31\x3b\x36\x43"
-# define CTRL_SHIFT_LEFT_KEY   "\x1b\x5b\x31\x3b\x32\x44"
-# define CTRL_SHIFT_UP_KEY	    "\x1b\x5b\x31\x3b\x32\x41"
-# define CTRL_SHIFT_DOWN_KEY	"\x1b\x5b\x31\x3b\x32\x42"
+# define PAGE_UP		    	2117425947
+# define PAGE_DOWN		        2117491483
 
-# define PRINT_KEY(x) (x >= '\x20' && x <= '\x7E')
+# define DEL_KEY		        6412262171
+
+# define SHIFT_UP_KEY	        71683997260571
+# define SHIFT_DOWN_KEY	    	72783508888347
+# define SHIFT_RIGHT_KEY	    73883020516123
+# define SHIFT_LEFT_KEY		    74982532143899
+
+# define CTRL_SHIFT_RIGHT_KEY   73900200385307
+# define CTRL_SHIFT_LEFT_KEY    74999712013083
+
+
+
 
 # define MV_RIGHT			tputs(tgetstr("nd", 0), 0, &my_put)
 # define MV_LEFT			tputs(tgetstr("le", 0), 0, &my_put)

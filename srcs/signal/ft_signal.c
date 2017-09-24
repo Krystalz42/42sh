@@ -11,3 +11,20 @@
 /* ************************************************************************** */
 
 #include <sh.h>
+
+void				init_signal(void)
+{
+	int i = -1;
+
+	while (++i < 32)
+		signal(i, SIG_IGN);
+	signal(SIGINT, SIG_DFL);
+}
+
+void				reset_signal(void)
+{
+int i = -1;
+
+while (++i < 32)
+	signal(i, SIG_DFL);
+}

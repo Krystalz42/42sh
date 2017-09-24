@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-int			key_delete_here(t_read **read_std)
+int			key_delete_here(t_read **read_std, unsigned long buff)
 {
 	t_cmd		*kill;
 
@@ -23,7 +23,7 @@ int			key_delete_here(t_read **read_std)
 		if ((*read_std)->cmd->prev->prev)
 			(*read_std)->cmd->prev->prev->next = (*read_std)->cmd;
 		(*read_std)->cmd->prev = (*read_std)->cmd->prev->prev;
-		free(kill);
+		add_outstanding(kill, buff, 0);
 		(*read_std)->print = 2;
 	}
 	else if ((*read_std)->completion)

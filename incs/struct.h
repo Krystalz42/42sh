@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:06:49 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/24 17:05:11 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,8 +168,24 @@ typedef struct		s_read
 
 typedef struct		s_cmp
 {
-	char			*key;
-	int				(*function)(struct s_read **read_std);
+	unsigned long	key;
+	int				(*function)(struct s_read **read_std, unsigned long buff);
 }					t_cmp;
+
+typedef struct      s_do
+{
+	unsigned long   cmd;
+	int				(*function)(struct s_read **read_std, unsigned long buff);
+
+}                   t_do;
+
+typedef struct      s_outstanding
+{
+	t_cmd           *cmd;
+	unsigned long   movement;
+	unsigned long   buff;
+	struct s_outstanding *next;
+	struct s_outstanding *prev;
+}                   t_outstanding;
 
 #endif

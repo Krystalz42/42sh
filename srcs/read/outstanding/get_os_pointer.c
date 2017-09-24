@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_clear_.c                                        :+:      :+:    :+:   */
+/*   get_os_pointer.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/12 17:44:04 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 21:05:17 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/24 19:56:04 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/24 19:56:05 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			key_clear_(t_read **read_std, unsigned long buff)
+t_outstanding       *get_os_pointer(t_outstanding *get, int flags)
 {
-	CLEAR;
-	(void)buff;
-	(*read_std)->print = 2;
-	return (1);
+	static t_outstanding        *save;
+
+	if (flags)
+		save = NULL;
+	else if (get)
+		save = get;
+	return (save);
 }

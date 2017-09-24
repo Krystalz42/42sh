@@ -1,0 +1,9 @@
+[in]: search_history/
+ compare_history.d            
+ compare_list.d               
+ first_history.d              
+ init_research.d              
+ last_result.d                
+ manage_cursor_prompt.d       
+ print_struct_history.d       
+ search_history.d             

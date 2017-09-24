@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/17 18:20:23 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/23 19:45:50 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/24 15:13:49 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char				**gbl_save_table(char **env)
 {
-	static char **save;
+    static char **save;
 
 	if (env)
 		save = env;

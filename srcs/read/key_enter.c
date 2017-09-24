@@ -29,7 +29,7 @@ void		complete_command(t_read **read_std)
 			{
 				while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32
 					   && (*read_std)->cmd->prev->c != '/')
-					key_del(read_std);
+					key_del(read_std, DELETE_KEY);
 				while (tmp->name[++i])
 					key_print_(read_std, tmp->name[i]);
 			}
@@ -39,8 +39,9 @@ void		complete_command(t_read **read_std)
 	((*read_std)->completion) && ((*read_std)->completion = 0);
 }
 
-int			key_enter_(t_read **read_std)
+int			key_enter_(t_read **read_std, unsigned long buff)
 {
+	(void)buff;
 	if ((*read_std)->completion)
 		complete_command(read_std);
 	else

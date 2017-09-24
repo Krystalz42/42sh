@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:07:00 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/24 17:20:38 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,19 @@ void				restore_cursor_(t_cursor cur);
 int					check_cmd(t_read **read_std);
 int                 reset_cur(t_cursor *cur);
 int                 get_len_prompt(int len);
+t_cmd               *last_cmd(t_cmd *cmd);
+void				finish_read_std(t_read **read_std);
+t_cmd    *key_del_fct(t_cmd *cmd);
+
+
+
+/*
+**              OUTSTANDING FUNCTION
+*/
+
+void                add_outstanding(t_cmd *cmd, unsigned long move,
+                                    unsigned long buff);
+t_outstanding       *get_os_pointer(t_outstanding *get, int flags);
 
 /*
 **				HASH FUNCTION
@@ -105,7 +118,7 @@ void				init_completion(t_read **read_std);
 void				complete_path(t_read **read_std, t_path f);
 void				complete_binary(t_read **read_std);
 void				continue_completion(t_read **read_std);
-void				complete_command(t_read **read_std);
+void	        	complete_command(t_read **read_std);
 int					print_tab(t_read **read_std);
 int					print_element(t_file *file, int color);
 void				create_comp(t_read **read_std, t_path f);
@@ -120,34 +133,32 @@ static inline int 	management_wildcard(char *data, char *comp);
 **				POINTER ON FUNCTION FOR READ
 */
 
-t_cmd               *last_cmd(t_cmd *cmd);
-int					key_print_(t_read **read_std, char c);
-int		        	is_token(char c);
-int					key_tab(t_read **read_std);
-int					key_enter_(t_read **read_std);
-int					key_interrupt(t_read **read_std);
-void				finish_read_std(t_read **read_std);
-int					key_clear_(t_read **read_std);
-int					key_eof(t_read **read_std);
-int					key_arrow_left(t_read **read_std);
-int					key_arrow_right(t_read **read_std);
-int					key_arrow_up(t_read **read_std);
-int					key_arrow_down(t_read **read_std);
-int					key_home_(t_read **read_std);
-int					key_del(t_read **read_std);
-int					key_shift_up(t_read **read);
-int					key_shift_down(t_read **read);
-int					key_shift_left(t_read **read);
-int					key_shift_right(t_read **read);
-int					key_end_(t_read **read_std);
-int					key_delete_here(t_read **read_std);
+int					key_print_(t_read **read_std, unsigned long buff);
+int					key_tab(t_read **read_std, unsigned long buff);
+int					key_enter_(t_read **read_std, unsigned long buff);
+int					key_interrupt(t_read **read_std, unsigned long buff);
+int					key_clear_(t_read **read_std, unsigned long buff);
+int					key_eof(t_read **read_std, unsigned long buff);
+int					key_arrow_left(t_read **read_std, unsigned long buff);
+int					key_arrow_right(t_read **read_std, unsigned long buff);
+int					key_arrow_up(t_read **read_std, unsigned long buff);
+int					key_arrow_down(t_read **read_std, unsigned long buff);
+int					key_home_(t_read **read_std, unsigned long buff);
+int					key_del(t_read **read_std, unsigned long buff);
+int					key_shift_up(t_read **read, unsigned long buff);
+int					key_shift_down(t_read **read, unsigned long buff);
+int					key_shift_left(t_read **read, unsigned long buff);
+int					key_shift_right(t_read **read, unsigned long buff);
+int					key_end_(t_read **read_std, unsigned long buff);
+int					key_delete_here(t_read **read_std, unsigned long buff);
+int                 key_search_history(t_read **read_std, unsigned long buff);
+int                key_undo_(t_read **read_std, unsigned long buff);
 
 /*
 **              SEARCH HISTORY FUNCTION
 */
 
 int                 init_research(t_read **read_std);
-int                 key_search_history(t_read **read_std);
 int		            print_struct_history(t_read **read_std);
 int                 reset_cur_hist(t_lfh *hist);
 int                 prompt_history(int p);
@@ -208,6 +219,7 @@ int					memdel_completion(t_tab **tab_);
 int					memdel_read(t_read **read_std);
 int                 memdel_lfh(t_lfh **hist_search);
 int					memdel_cmd(t_cmd **cmd);
+void                memdel_outstating(void);
 
 /*
 **			   	ERROR FUNCTION

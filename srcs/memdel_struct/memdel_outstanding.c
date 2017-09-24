@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_clear_.c                                        :+:      :+:    :+:   */
+/*   memdel_outstanding.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/12 17:44:04 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 21:05:17 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/24 21:06:26 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/24 21:06:27 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			key_clear_(t_read **read_std, unsigned long buff)
+void        reset_os(t_outstanding **ptr)
 {
-	CLEAR;
-	(void)buff;
-	(*read_std)->print = 2;
-	return (1);
+	while ((*ptr)->prev)
+		(*ptr) = (*ptr)->prev;
+}
+
+void        memdel_outstating(void)
+{
+	t_outstanding *ptr;
+	t_outstanding *tmp;
+
+	if ((ptr = get_os_pointer(NULL, 0)))
+	{
+		reset_os(&ptr);
+		while (ptr)
+		{
+			tmp = ptr;
+			memdel_cmd(&(ptr->cmd));
+			ptr = ptr->next;
+			free(tmp);
+		}
+	}
 }

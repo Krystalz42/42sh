@@ -67,6 +67,7 @@ SRCS = \
 	   read/first_cmd.c										\
 	   read/prompt.c										\
 	   read/check_cmd.c										\
+	   read/key_undo.c                                      \
 	   read/gbl_save_read.c									\
 	   read/finish_read_std.c								\
 	   read/init_struct_for_read.c                          \
@@ -81,6 +82,8 @@ SRCS = \
 	   hash/built_in_hash.c                                 \
 	   hash/init_hash.c                                     \
 	   hash/get_str_from_hash.c                             \
+	   read/outstanding/add_outstanding.c                   \
+	   read/outstanding/get_os_pointer.c                    \
 	   read/completion/init_tab.c							\
 	   read/completion/check_binary_path.c                  \
 	   read/completion/color_completion.c					\
@@ -125,6 +128,7 @@ SRCS = \
 	   term/init_term.c										\
 	   term/set_term.c										\
 	   term/keep_term_struct.c								\
+	   memdel_struct/memdel_outstanding.c                   \
 	   memdel_struct/memdel_completion.c					\
 	   memdel_struct/memdel_search_history.c                \
 	   memdel_struct/memdel_read.c							\

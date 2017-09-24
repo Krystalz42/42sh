@@ -12,8 +12,9 @@
 
 #include <sh.h>
 
-int            key_search_history(t_read **read_std)
+int            key_search_history(t_read **read_std, unsigned long buff)
 {
+    (void)buff;
     if ((*read_std)->history_search)
         (*read_std)->history_search++;
     else
