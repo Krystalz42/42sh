@@ -14,69 +14,71 @@
 
 int			key_arrow_left(t_read **read_std)
 {
+	if ((*read_std)->history_search && bip())
+		return (0);
 	if ((*read_std)->completion)
+		move_completion_left(read_std);
+	else if ((*read_std)->cmd->prev && ((*read_std)->history ||
+		(!(*read_std)->history && (*read_std)->cmd->prev->c != 10)))
 	{
-		update_index(read_std, -1);
-		if ((*read_std)->tab_->index == ((*read_std)->tab_->element - 1) ||
-					!(((*read_std)->tab_->index + 1) % (*read_std)->tab_->elem_page))
-		{
-			place_cursor(read_std, 1);
-			print_tab(read_std);
-			place_cursor(read_std, 0);
-		}
-		else
-			back_completion(read_std);
-		(*read_std)->completion++;
+		(*read_std)->cmd = (*read_std)->cmd->prev;
+		(*read_std)->print = 1;
 	}
 	else
-		if ((*read_std)->cmd->prev)
-			if ((*read_std)->history ||
-					(!(*read_std)->history && (*read_std)->cmd->prev->c != 10))
-				(*read_std)->cmd = (*read_std)->cmd->prev;
+		bip();
 	return (1);
 }
 
 int			key_arrow_right(t_read **read_std)
 {
+	if ((*read_std)->history_search && bip())
+		return (0);
 	if ((*read_std)->completion)
+		move_completion_right(read_std);
+	else if ((*read_std)->cmd->next)
 	{
-		update_index(read_std, 1);
-		if (!(((*read_std)->tab_->index) % (*read_std)->tab_->elem_page))
-		{
-			place_cursor(read_std, 1);
-			print_tab(read_std);
-			place_cursor(read_std, 0);
-		}
-		else
-			continue_completion(read_std);
-		(*read_std)->completion++;
+		(*read_std)->cmd = (*read_std)->cmd->next;
+		(*read_std)->print = 1;
 	}
 	else
-		if ((*read_std)->cmd->next)
-			(*read_std)->cmd = (*read_std)->cmd->next;
+		bip();
 	return (1);
 }
 
 int			key_arrow_up(t_read **read_std)
 {
+	if ((*read_std)->history_search && bip())
+		return (0);
 	if ((*read_std)->completion)
 	{
 		move_vertical(read_std, -1);
 		(*read_std)->completion++;
 	}
-	else
+	else if (get_len_prompt(-42) != -1)
+	{
+		(*read_std)->print = 2;
 		previous_history(read_std);
+	}
+	else
+		bip();
 	return (1);
 }
 
 int			key_arrow_down(t_read **read_std)
 {
+	if ((*read_std)->history_search && bip())
+		return (0);
 	if ((*read_std)->completion)
 	{
 		move_vertical(read_std, 1);
 		(*read_std)->completion++;
 	}
-	else
+	else if (get_len_prompt(-42) != -1)
+	{
+		(*read_std)->print = 2;
 		next_history(read_std);
+	}
+	else
+		bip();
 	return (1);
 }

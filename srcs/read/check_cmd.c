@@ -65,6 +65,6 @@ int					check_cmd(t_read **read_std)
 	else if (c == '\"')
 		prompt(DQUOTE);
 	else if (c == '\\')
-		prompt(NEXTCMD) && (key_print_(read_std, 10));
+		prompt(NEXTCMD);
 	return ((int)c);
 }

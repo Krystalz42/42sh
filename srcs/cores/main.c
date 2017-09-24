@@ -16,13 +16,13 @@ int		main(void)
 {
 	init_env();
 	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
-	init_history();
+	write_history_in_sh();
 	init_hash();
 	if (init_term())
 		return (1);
 	var_return(1);
-	NBR_FD(42,fdb);
 	create_table_env();
 	shell();
+	b_write_history_in_file(get_str_from_history());
 	return (0);
 }

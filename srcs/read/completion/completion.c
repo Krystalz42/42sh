@@ -73,7 +73,6 @@ void		completion(t_read **read_std)
 
 	f.to_comp = NULL;
 	f.path = list_to_str(read_std, (*read_std)->cmd);
-	STR_FD(f.path, fdb); CHAR_FD(10,fdb);
 	if (f.path && (f.path[0] != '.' && f.path[0] != '/'))
 	{
 		tmp = ft_strjoin("./", f.path);

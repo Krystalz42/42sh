@@ -15,19 +15,19 @@
 int 			prompt(unsigned char flags)
 {
 	static char		*prompt;
-    static int      def;
 
-	if (flags & HEREDOC && (def = 1))
+	if (flags & HEREDOC && get_len_prompt(-1))
 		prompt = "heredoc > ";
-	else if (flags & DQUOTE && (def = 1))
+	else if (flags & DQUOTE && get_len_prompt(-1))
 		prompt = "dquote > ";
-	else if (flags & QUOTE && (def = 1))
+	else if (flags & QUOTE && get_len_prompt(-1))
 		prompt = "quote > ";
-	else if (flags & NEXTCMD && (def = 1))
+	else if (flags & NEXTCMD && get_len_prompt(-1))
 		prompt = "nextcmd > ";
-	else if (flags & DEFAULT && !(def = 0))
+	else if (flags & DEFAULT)
 		prompt = my_prompt(NULL);
 	if (flags & PRINT)
 		STR_FD(prompt, 2);
-	return (!def ? get_len_prompt(-42) : ft_strlen(prompt));
+	return ((get_len_prompt(-42) == -1) ? ft_strlen(prompt) :
+	        get_len_prompt(-42));
 }

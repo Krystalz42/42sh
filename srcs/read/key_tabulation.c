@@ -14,10 +14,10 @@
 
 int			key_tab(t_read **read_std)
 {
+	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
+		return (0);
 	if ((*read_std)->completion)
-	{
-		key_arrow_right(read_std);
-	}
+		move_completion_right(read_std);
 	else
 	{
 		memdel_completion(&((*read_std)->tab_));

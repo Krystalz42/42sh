@@ -6,33 +6,33 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 14:34:16 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/19 15:25:34 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/23 19:47:16 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-void            hash_reset(void)
+void				hash_reset(void)
 {
 	t_hash			**hash_tab;
 	t_table_hash	*table;
-    t_table_hash	*to_kill;
+	t_table_hash	*to_kill;
 
-    hash_tab = hash_board();
-    table = gbl_save_table_hash(NULL, 0);
-    while (table)
-    {
-        to_kill = table;
-	    ft_memdel((void **)&(hash_tab[table->index]->binary));
-	    ft_memdel((void **)&(hash_tab[table->index]->path));
-	    ft_memdel((void **)&(hash_tab[table->index]));
-	    table = table->next;
-	    ft_memdel((void **)&to_kill);
-    }
+	hash_tab = hash_board();
+	table = gbl_save_table_hash(NULL, 0);
+	while (table)
+	{
+		to_kill = table;
+		ft_memdel((void **)&(hash_tab[table->index]->binary));
+		ft_memdel((void **)&(hash_tab[table->index]->path));
+		ft_memdel((void **)&(hash_tab[table->index]));
+		table = table->next;
+		ft_memdel((void **)&to_kill);
+	}
 	gbl_save_table_hash(NULL, 1);
 }
 
-void			hash_print(void)
+void				hash_print(void)
 {
 	t_table_hash	*table;
 	static char		element[200];

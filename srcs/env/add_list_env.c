@@ -6,13 +6,13 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 23:22:31 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/31 21:36:24 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/23 19:42:28 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-static inline	t_env		*init_list_env(char *name, char *value)
+static inline t_env				*init_list_env(char *name, char *value)
 {
 	t_env		*element;
 
@@ -24,7 +24,7 @@ static inline	t_env		*init_list_env(char *name, char *value)
 	return (element);
 }
 
-void			add_list_env(char *name, char *value)
+void							add_list_env(char *name, char *value)
 {
 	t_env		*env;
 

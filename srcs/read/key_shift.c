@@ -16,6 +16,12 @@ int		key_shift_up(t_read **read_std)
 {
 	int		co;
 
+	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
+		return (0);
+	else if ((*read_std)->completion && bip() && ((*read_std)->print = 2))
+		return (0);
+	else
+		(*read_std)->print = 1;
 	co = tgetnum("co");
 	if (co)
 		while (co-- && (*read_std)->cmd->prev)
@@ -31,6 +37,12 @@ int		key_shift_down(t_read **read_std)
 {
 	int		co;
 
+	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
+		return (0);
+	else if ((*read_std)->completion && bip() && ((*read_std)->print = 2))
+		return (0);
+	else
+		(*read_std)->print = 1;
 	co = tgetnum("co");
 	if (co)
 		while (co-- && (*read_std)->cmd->next)
@@ -40,6 +52,12 @@ int		key_shift_down(t_read **read_std)
 
 int		key_shift_left(t_read **read_std)
 {
+	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
+		return (0);
+	else if ((*read_std)->completion && bip() && ((*read_std)->print = 2))
+		return (0);
+	else
+		(*read_std)->print = 1;
 	while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c == 32)
 		(*read_std)->cmd = (*read_std)->cmd->prev;
 	while ((*read_std)->cmd->prev)
@@ -53,7 +71,12 @@ int		key_shift_left(t_read **read_std)
 
 int		key_shift_right(t_read **read_std)
 {
-
+	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
+		return (0);
+	else if ((*read_std)->completion && bip() && ((*read_std)->print = 2))
+		return (0);
+	else
+		(*read_std)->print = 1;
 	while ((*read_std)->cmd->c)
 	{
 		if ((*read_std)->cmd->c == 32)

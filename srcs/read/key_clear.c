@@ -14,7 +14,7 @@
 
 int			key_clear_(t_read **read_std)
 {
-	(void)read_std;
 	CLEAR;
+	(*read_std)->print = 2;
 	return (1);
 }

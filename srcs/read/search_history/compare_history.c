@@ -16,12 +16,10 @@ void        compare_history(t_read **read_std)
 {
     t_hist       *hist;
     t_cmd       *little;
-    int         res;
 
-    res = 1;
     hist = first_history();
     little = first_cmd((*read_std)->hist_search->cmd, 1);
-    while (hist && (res = !list_compare(little, first_cmd(hist->hist->cmd, 1))))
+    while (hist && !list_compare(little, first_cmd(hist->hist->cmd, 1)))
         hist = hist->prev;
     if (hist)
     {
@@ -38,5 +36,5 @@ void        compare_history(t_read **read_std)
         }
         (*read_std)->history_search = 1;
     }
-    last_resultat((!little->c) ? 0 : res);
+    last_resultat((hist) || !little->c ? 0 : 1);
 }

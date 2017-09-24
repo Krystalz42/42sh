@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 19:51:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/24 15:40:46 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/23 19:56:57 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ t_hist		*gbl_save_history(t_hist *hist, int flags)
 
 	if (!flags)
 		save = NULL;
-	else
-		if (hist)
-			save = hist;
+	else if (hist)
+		save = hist;
 	return (save);
 }

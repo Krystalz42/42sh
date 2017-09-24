@@ -49,7 +49,7 @@ int			key_enter_(t_read **read_std)
 			(*read_std)->finish = 1;
 		else
 		{
-            (*read_std)->cmd = last_cmd((*read_std)->cmd);
+			(*read_std)->cmd = last_cmd((*read_std)->cmd);
 			key_print_(read_std, 10);
 			insert_one_line();
 		}

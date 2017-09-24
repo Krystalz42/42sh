@@ -14,7 +14,9 @@
 
 int			key_eof(t_read **read_std)
 {
-	(void)read_std;
-	exit(EXIT_SUCCESS);
+	if (!(*read_std)->cmd->c && !(*read_std)->cmd->prev)
+		exit(EXIT_SUCCESS);
+	else
+		bip();
 	return (1);
 }

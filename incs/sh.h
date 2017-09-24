@@ -78,13 +78,16 @@ void                hash_reset(void);
 void                hash_print(void);
 int                b_write_history(void);
 int                b_clear_history(void);
-void		        convert_to_hist(char *buff);
+int		        convert_to_hist(char *buff);
 int                   b_delete_history_offset(int offset);
 
 /*
 **				FUNCTION FOR COMPLETION
 */
 
+
+void        move_completion_right(t_read **read_std);
+void        move_completion_left(t_read **read_std);
 void				move_vertical(t_read **read_std, int pos);
 int	            	is_token(char c);
 void                complete_binary(t_read **read_std);
@@ -173,7 +176,7 @@ char				*my_getenv(char *str);
 
 t_hist             *set_history_to_last(void);
 void		        reset_history(void);
-void				init_history(void);
+void				write_history_in_sh(void);
 void				copy_cmd(t_read **read_std, t_cmd *cpy);
 t_hist				*gbl_save_history(t_hist *hist, int flags);
 void				make_list_hist(t_read *read_std);

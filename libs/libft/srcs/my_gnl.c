@@ -21,10 +21,9 @@ void        add_size(char **buff, int *max_len)
 {
 	char *tmp;
 
+	tmp = (char *)ft_memalloc(sizeof(char) * ((*max_len) + 101));
+	ft_strncpy(tmp, *buff, *max_len);
 	*max_len += 100;
-	tmp = (char *)ft_memalloc(sizeof(char) * ((*max_len) + 1));
-	ft_bzero(tmp, (*max_len) + 1);
-	ft_strcpy(tmp, *buff);
 	ft_memdel((void **)buff);
 	(*buff) = tmp;
 }
@@ -40,18 +39,19 @@ int         my_gnl(int fd, char **line)
 	i = -1;
 	max_len = 100;
 	(*line) = (char *)ft_memalloc(sizeof(char) * (max_len + 1));
-	ft_bzero((*line), max_len + 1);
 	while ((ret = read(fd, &((*line)[++i]), sizeof(char))) > 0)
 	{
 		if ((*line)[i] == 10)
-		{
-			(*line)[i] = '\0';
-			return (1);
-		}
+			break ;
 		if (i == max_len)
 			add_size(line, &max_len);
 	}
-	if (!ret && !i)
+	if (i)
+	{
+		(*line)[i] = '\0';
+		return (1);
+	}
+	else if ((!ret && !i))
 		ft_memdel((void **)line);
 	return (ret);
 }

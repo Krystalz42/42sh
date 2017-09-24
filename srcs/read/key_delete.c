@@ -27,8 +27,9 @@ int			key_del_fct(t_cmd *cmd)
 		else
 			cmd->prev = NULL;
 		ft_memdel((void **)&(kill));
+		return (1);
 	}
-	return (1);
+	return (0);
 }
 
 int			key_del(t_read **read_std)
@@ -39,7 +40,16 @@ int			key_del(t_read **read_std)
 		compare_history(read_std);
         (*read_std)->history_search++;
     }
-    else
-        key_del_fct((*read_std)->cmd);
+    else if (key_del_fct((*read_std)->cmd))
+    {
+        (*read_std)->print = 2;
+    }
+    else if ((*read_std)->completion)
+    {
+	    (*read_std)->print = 2;
+	    bip();
+    }
+	else
+	    bip();
     return (1);
 }

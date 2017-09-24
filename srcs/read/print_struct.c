@@ -40,21 +40,29 @@ inline int	reset_cur(t_cursor *cur)
 	return (1);
 }
 
+static inline  void print_to_end(t_read *read_std, t_cmd *cmd, int end)
+{
+	restore_cursor_(read_std->cur);
+	if (!end)
+		CLEAR_FROM_CUR;
+	reset_cur(&(read_std->cur));
+	read_std->cur.co = prompt(PRINT);
+	print_list(end, cmd, read_std->cmd, &(read_std->cur));
+}
+
 int			print_struct(t_read *read_std)
 {
 	t_cmd		*cmd;
 
-	CURSOR_INVIS;
-	cmd = first_cmd(read_std->cmd, read_std->history);
-	restore_cursor_(read_std->cur);
-	CLEAR_FROM_CUR;
-	reset_cur(&(read_std->cur));
-	read_std->cur.co = prompt(PRINT);
-	print_list(0, cmd, read_std->cmd, &(read_std->cur));
-	restore_cursor_(read_std->cur);
-	reset_cur(&(read_std->cur));
-	read_std->cur.co = prompt(PRINT);
-	print_list(1, cmd, read_std->cmd, &(read_std->cur));
-	CURSOR_BACK;
-    return (1);
+	if ((read_std)->print)
+	{
+		CURSOR_INVIS;
+		cmd = first_cmd(read_std->cmd, read_std->history);
+		if ((read_std)->print == 2)
+			print_to_end(read_std, cmd, 0);
+		print_to_end(read_std, cmd, 1);
+		CURSOR_BACK;
+		(read_std)->print = 0;
+	}
+	return (1);
 }

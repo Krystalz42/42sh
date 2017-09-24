@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/02 15:59:47 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/02 15:59:50 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/23 19:51:24 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 unsigned int		hash_value(char *str)
 {
-	int 				i;
+	int					i;
 	unsigned int		nb;
 
 	i = -1;

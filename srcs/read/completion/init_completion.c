@@ -29,7 +29,6 @@ int			empty_cmd(t_cmd *cmd)
 
 void		init_completion(t_read **read_std)
 {
-    NBR_FD(check_word((*read_std)->cmd), fdb);
     if (empty_cmd((*read_std)->cmd))
 	{
 		key_print_(read_std, 9);

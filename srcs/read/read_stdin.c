@@ -47,6 +47,7 @@ static inline int		chk_and_print(char *buff, int *i, t_read **read_std)
 	memdel_lfh(&((*read_std)->hist_search));
 	(!(*read_std)->completion) ? print_struct(*read_std) : 0;
 	((*read_std)->history_search) ? print_struct_history(read_std) : 0;
+	(*read_std)->print = 0;
 	return (1);
 }
 
@@ -73,12 +74,16 @@ t_read					*read_stdin(void)
     while ((c = -1) && read(STDIN_FILENO, &(buff[++i]), sizeof(char)))
 	{
 		if (ft_isprint(buff[0]))
-			key_print_(&read_std, buff[0])
-			&& chk_and_print(buff, &i, &read_std);
+		{
+			key_print_(&read_std, buff[0]);
+			chk_and_print(buff, &i, &read_std);
+		}
 		while (g_tab_are_key[++c].key)
 			if (!ft_strcmp(g_tab_are_key[c].key, buff))
-				g_tab_are_key[c].function(&read_std) &&
-						chk_and_print(buff, &i, &read_std);
+			{
+				g_tab_are_key[c].function(&read_std);
+				chk_and_print(buff, &i, &read_std);
+			}
 		if ((read_std)->finish)
 			break ;
 	}

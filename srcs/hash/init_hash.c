@@ -6,22 +6,11 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/19 17:14:09 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/19 17:14:10 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/23 19:52:58 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
-
-//static void		convert_to_hash(char *buff, int ret)
-//{
-//    int     i;
-//
-//    i = -1;
-//    while (++i < ret)
-//    {
-//        buff++;
-//    }
-//}
 
 void        init_hash(void)
 {

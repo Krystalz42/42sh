@@ -16,7 +16,7 @@ int			key_delete_here(t_read **read_std)
 {
 	t_cmd		*kill;
 
-	if ((*read_std)->cmd->c)
+	if (!(*read_std)->history_search && (*read_std)->cmd->c)
 	{
 		kill = (*read_std)->cmd;
 		(*read_std)->cmd = (*read_std)->cmd->next;
@@ -24,6 +24,14 @@ int			key_delete_here(t_read **read_std)
 			(*read_std)->cmd->prev->prev->next = (*read_std)->cmd;
 		(*read_std)->cmd->prev = (*read_std)->cmd->prev->prev;
 		free(kill);
+		(*read_std)->print = 2;
 	}
+	else if ((*read_std)->completion)
+	{
+		(*read_std)->print = 2;
+		bip();
+	}
+	else
+		bip();
 	return (1);
 }

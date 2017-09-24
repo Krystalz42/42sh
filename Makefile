@@ -91,6 +91,7 @@ SRCS = \
 	   read/completion/print_tab.c							\
 	   read/completion/complete_path.c						\
 	   read/completion/continue_completion.c				\
+	   read/completion/move_horizontal.c                    \
 	   read/completion/complete_binary.c					\
 	   read/completion/create_comp.c						\
 	   read/completion/init_files.c							\

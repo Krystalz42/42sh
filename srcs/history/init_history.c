@@ -6,39 +6,47 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/23 19:06:50 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/19 20:22:28 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/23 20:05:10 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-void		convert_to_hist(char *buff)
+int				convert_to_hist(char *buff)
 {
-	static t_read	*read_std;
-	int				i;
-	static int		cmd;
+	static t_read		*read_std;
+	static int			cmd_len;
+	int					i;
 
-	i = -1;
-	if (!(cmd <= HISTSIZE) || !buff)
-		return ;
+	if (((i = -1) && !buff) || cmd_len == 500)
+		return (0);
 	if (!read_std)
-		read_std = init_struct_for_read();
-	while (buff[++i])
-		key_print_(&read_std, buff[i]);
-	if (!check_cmd(&read_std))
 	{
+		cmd_len = 0;
+		read_std = init_struct_for_read();
 		read_std->history = 1;
+	}
+	while (buff[++i])
+		if (ft_isprint(buff[i]) && ++cmd_len)
+			key_print_(&read_std, buff[i]);
+	if (cmd_len >= 500 || !check_cmd(&read_std))
+	{
+		cmd_len = 0;
 		make_list_hist(read_std);
 		read_std = NULL;
-		cmd++;
+		return (1);
 	}
+	else if (check_cmd(&read_std) && ++cmd_len)
+		key_print_(&read_std, 10);
+	return (0);
 }
 
-void			init_history(void)
+void				write_history_in_sh(void)
 {
 	char		*path_hist;
 	int			fd;
 	char		*buff;
+	int			command;
 
 	if (!(path_hist = get_str_from_history()))
 		return ;
@@ -47,11 +55,13 @@ void			init_history(void)
 		free(path_hist);
 		return ;
 	}
-	while (my_gnl(fd, &buff))
+	command = 0;
+	buff = NULL;
+	while (command < HISTSIZE && my_gnl(fd, &buff))
 	{
-		convert_to_hist(buff);
-		free(buff);
+		command += convert_to_hist(buff);
+		ft_memdel((void **)&buff);
 	}
-    free(path_hist);
+	free(path_hist);
 	close(fd);
 }

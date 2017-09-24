@@ -45,6 +45,9 @@ int			key_print_(t_read **read_std, char c)
         (*read_std)->history_search++;
     }
     else
-        key_print_fct((*read_std)->cmd, c);
-    return (1);
+    {
+	    (*read_std)->print = 2;
+	    key_print_fct((*read_std)->cmd, c);
+    }
+	return (1);
 }

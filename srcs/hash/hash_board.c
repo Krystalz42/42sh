@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/02 16:01:59 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/02 16:02:02 by aroulin          ###   ########.fr       */
+/*   Created: 2017/09/23 19:50:39 by aroulin           #+#    #+#             */
+/*   Updated: 2017/09/23 19:50:47 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
-
-
 
 t_hash		**hash_board(void)
 {
@@ -36,11 +34,14 @@ char		*search_path(char *binary)
 	return (NULL);
 }
 
+/*
+**		char *bin && char *path have to be malloc and not be free outside
+*/
+
 void		add_hash(char *bin, char *path, int times)
 {
 	unsigned int		index;
 	t_hash				**hash_tab;
-
 
 	index = hash_value(bin);
 	hash_tab = hash_board();

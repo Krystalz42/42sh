@@ -159,7 +159,7 @@ typedef struct		s_read
 	t_cursor		cur;
 	int				history;
 	int				finish;
-    int             co;
+	int             print;
 }					t_read;
 
 /*
