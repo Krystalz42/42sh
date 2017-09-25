@@ -16,6 +16,7 @@ t_do        to_do[]={
 		(t_do){ARROW_LEFT, key_arrow_right},
 		(t_do){ARROW_RIGHT, key_arrow_left},
 		(t_do){PRINT_KEY, key_del},
+		(t_do){DELETE_KEY, }
 		(t_do){0, 0}
 };
 
@@ -29,14 +30,8 @@ int         key_undo_(t_read **read_std, unsigned long buff)
 	if ((undo = get_os_pointer(NULL, 0)))
 	{
 		while (to_do[++i].cmd)
-		{
-			NBR_FD(undo->movement, fdb);
-			CHAR_FD(32,fdb);
-			NBR_FD(to_do[i].cmd, fdb);
-			CHAR_FD(10,fdb);
 			if (to_do[i].cmd == undo->movement)
 				to_do[i].function(read_std, 0);
-		}
 
 		if (undo->prev)
 			get_os_pointer(undo->prev, 0);

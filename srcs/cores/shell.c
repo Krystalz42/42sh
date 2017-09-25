@@ -18,11 +18,14 @@ int		shell(void)
 	add_hash("Gregoire", "@gbourson", 42);
 	add_hash("Jefferson", "@jle-quel", 42);
 	add_hash("Didier", "@dsebban", 42);
+
 	hash_print();
+
 	read_stdin();
-	b_write_history();
 	var_return(0);
+
 	read_stdin();
+
 	reset_signal();
 	return (1);
 }
