@@ -40,7 +40,7 @@ int			key_print_(t_read **read_std, unsigned long buff)
 {
     unsigned char    c;
 
-    add_outstanding((*read_std)->cmd, PRINT_KEY, buff);
+    add_outstanding(NULL, PRINT_KEY, buff);
     while (buff)
     {
         c = buff % (UCHAR_MAX + 1);

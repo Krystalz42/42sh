@@ -90,7 +90,7 @@
 
 # define META_Y                 31003
 # define META_F                 26139
-# define META_D                 8554722
+# define META_D                 25627
 # define META_DELETE            32539
 # define META_DEL               2117294875
 # define META_B                 25115
@@ -105,7 +105,7 @@
 # define PAGE_UP		    	2117425947
 # define PAGE_DOWN		        2117491483
 
-# define DEL_KEY		        6412262171
+# define DEL_KEY		        2117294875
 
 # define SHIFT_UP_KEY	        71683997260571
 # define SHIFT_DOWN_KEY	    	72783508888347

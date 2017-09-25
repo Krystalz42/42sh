@@ -28,7 +28,7 @@ int				convert_to_hist(char *buff)
 	}
 	while (buff[++i])
 		if (ft_isprint(buff[i]) && ++cmd_len)
-			key_print_(&read_std, buff[i]);
+			key_print_fct(read_std->cmd, buff[i]);
 	if (cmd_len >= 500 || !check_cmd(&read_std))
 	{
 		cmd_len = 0;
@@ -37,7 +37,7 @@ int				convert_to_hist(char *buff)
 		return (1);
 	}
 	else if (check_cmd(&read_std) && ++cmd_len)
-		key_print_(&read_std, 10);
+		key_print_fct(read_std->cmd, 10);
 	return (0);
 }
 

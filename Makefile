@@ -70,6 +70,9 @@ SRCS = \
 	   read/key_undo.c                                      \
 	   read/gbl_save_read.c									\
 	   read/finish_read_std.c								\
+	   read/key_reprint.c                                   \
+	   read/key_kill_k.c                                    \
+	   read/key_kill_word.c                                 \
 	   read/init_struct_for_read.c                          \
 	   read/last_cmd.c                                      \
 	   read/restore_cursor.c                                \

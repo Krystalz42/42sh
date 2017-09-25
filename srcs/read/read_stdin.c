@@ -24,8 +24,6 @@ t_cmp		g_tab_are_key[] = {
     (t_cmp){END_KEY, key_end_},
     (t_cmp){CTRL_E, key_end_},
     (t_cmp){DEL_KEY, key_delete_here},
-    (t_cmp){PAGE_UP, key_del},
-    (t_cmp){PAGE_DOWN, key_del},
     (t_cmp){ARROW_DOWN, key_arrow_down},
     (t_cmp){CTRL_B, key_arrow_left},
     (t_cmp){ARROW_LEFT, key_arrow_left},
@@ -41,6 +39,8 @@ t_cmp		g_tab_are_key[] = {
     (t_cmp){META_F, key_shift_right},
     (t_cmp){META_B, key_shift_left},
     (t_cmp){CTRL_UNDO, key_undo_},
+    (t_cmp){CTRL_K, key_kill_k},
+    (t_cmp){META_D, key_kill_word},
     (t_cmp){0, key_print_}
 };
 
@@ -79,8 +79,6 @@ t_read					*read_stdin(void)
     initialize_fct(&read_std, &buff);
     while ((index = -1) && read(STDIN_FILENO, &buff, sizeof(unsigned long)))
     {
-	    dprintf(fdb, "%lu\n", buff);
-	    CHAR_FD(10,fdb);
         while (g_tab_are_key[++index].key && g_tab_are_key[index].key != buff)
 	        ;
 	    g_tab_are_key[index].function(&read_std, buff);

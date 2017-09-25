@@ -33,14 +33,14 @@ void                add_outstanding(t_cmd *cmd, unsigned long move,
 
 	if (!move)
 		return ;
+	dprintf(fdb, "In add outstanding [Pointer = %d][move = %lu] [buff = "
+			"%lu]\n", (cmd ? 1 : 0), move, buff);
 	if (!(element = get_os_pointer(NULL, 0)))
 		get_os_pointer(create_element_os(cmd, move, buff), 0);
 	else
 	{
-		while (element->next)
-			element = element->next;
 		element->next = create_element_os(cmd, move, buff);
 		element->next->prev = element;
+		get_os_pointer(element->next, 0);
 	}
-	get_os_pointer(element, 0);
 }
