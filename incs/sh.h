@@ -58,6 +58,7 @@ int                 reset_cur(t_cursor *cur);
 int                 get_len_prompt(int len);
 t_cmd               *last_cmd(t_cmd *cmd);
 void				finish_read_std(t_read **read_std);
+t_cmd           *keep_buffer(t_cmd *cmd, int flags);
 
 
 
@@ -156,6 +157,9 @@ int     key_reprint(t_read **read_std, unsigned long buff);
 int     key_reprint_here(t_read **read_std, unsigned long buff);
 int     key_kill_k(t_read **read_std, unsigned long buff);
 int     key_kill_word(t_read **read_std, unsigned long buff);
+int     key_kill_prev_word(t_read **read_std, unsigned long buff);
+int     key_del_buff(t_read **read_std, unsigned long buff);
+int     key_yank(t_read **read_std, unsigned long buff);
 /*
 **              SEARCH HISTORY FUNCTION
 */

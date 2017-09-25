@@ -15,7 +15,7 @@
 t_do        to_do[]={
 		(t_do){ARROW_LEFT, key_arrow_right},
 		(t_do){ARROW_RIGHT, key_arrow_left},
-		(t_do){PRINT_KEY, key_del},
+		(t_do){PRINT_KEY, key_del_buff},
 		(t_do){DELETE_KEY, key_reprint},
 		(t_do){HOME_KEY, key_end_},
 		(t_do){END_KEY, key_home_},
@@ -38,8 +38,6 @@ static void place_new_undo(t_outstanding *undo)
 	t_outstanding *to_kill;
 
 	to_kill = undo;
-	if (!undo->next)
-		STR_FD("Salut tout va bien ! \n", fdb);
 	if (undo->prev)
 	{
 		undo = undo->prev;

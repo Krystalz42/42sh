@@ -85,14 +85,12 @@
 # define CTRL_R                 18
 # define CTRL_UNDO              31
 # define PRINT_KEY              424242
-
 # define INTERRUPT_KEY          -1
 
 # define META_Y                 31003
 # define META_F                 26139
 # define META_D                 25627
-# define META_DELETE            32539
-# define META_DEL               2117294875
+# define META_DEL               32539
 # define META_B                 25115
 
 # define ARROW_LEFT		    	4479771

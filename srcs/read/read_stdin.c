@@ -41,7 +41,8 @@ t_cmp		g_tab_are_key[] = {
     (t_cmp){CTRL_UNDO, key_undo_},
     (t_cmp){CTRL_K, key_kill_k},
     (t_cmp){META_D, key_kill_word},
-    (t_cmp){0, key_print_}
+    (t_cmp){META_DEL, key_kill_prev_word},
+    (t_cmp){CTRL_Y, key_yank},
 };
 
 static inline int		chk_and_print(unsigned long *buff, t_read **read_std)
@@ -79,9 +80,14 @@ t_read					*read_stdin(void)
     initialize_fct(&read_std, &buff);
     while ((index = -1) && read(STDIN_FILENO, &buff, sizeof(unsigned long)))
     {
-        while (g_tab_are_key[++index].key && g_tab_are_key[index].key != buff)
-	        ;
-	    g_tab_are_key[index].function(&read_std, buff);
+        while (++index < 30)//CTRL_Y
+	        if (g_tab_are_key[index].key == buff)
+            {
+                g_tab_are_key[index].function(&read_std, buff);
+                break ;
+            }
+		if (index == 30)
+			key_print_(&read_std, buff);
         chk_and_print(&buff, &read_std);
         if ((read_std)->finish)
             break ;

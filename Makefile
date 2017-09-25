@@ -73,6 +73,10 @@ SRCS = \
 	   read/key_reprint.c                                   \
 	   read/key_kill_k.c                                    \
 	   read/key_kill_word.c                                 \
+	   read/key_kill_prev_word.c                            \
+	   read/key_del_buff.c                                  \
+	   read/keep_buffer.c                                   \
+	   read/key_yank.c                                      \
 	   read/init_struct_for_read.c                          \
 	   read/last_cmd.c                                      \
 	   read/restore_cursor.c                                \
