@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42sh.h                                             :+:      :+:    :+:   */
+/*   sh.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gbourson <gbourson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 17:20:38 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/25 17:51:41 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,14 @@ int		        convert_to_hist(char *buff);
 int                   b_delete_history_offset(int offset);
 
 /*
+**				BUILTIN FUNCTION
+*/
+
+int             parse_builtins(char *line);
+int             _env(char *line);
+
+
+/*
 **				FUNCTION FOR COMPLETION
 */
 
@@ -179,7 +187,7 @@ t_env				*gbl_save_env(unsigned short flags, t_env *env);
 void				init_env(void);
 void				split_env(char *env);
 void				add_list_env(char *name, char *value);
-char				*my_getenv(char *str);
+char			    *my_getenv(char *str);
 
 /*
 **				HISTORY FUNCTION

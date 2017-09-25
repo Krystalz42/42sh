@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: gbourson <gbourson@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/09/21 15:34:52 by aroulin          ###   ########.fr        #
+#    Updated: 2017/09/25 17:30:11 by gbourson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -118,6 +118,8 @@ SRCS = \
 	   history/gbl_save_history.c							\
 	   history/copy_cmd.c									\
 	   signal/ft_signal.c									\
+	   builtins/env.c										\
+	   builtins/parse_builtins.c							\
 	   env/split.c											\
 	   env/init_env.c										\
 	   env/my_getenv.c										\

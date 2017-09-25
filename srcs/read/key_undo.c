@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_undo.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gbourson <gbourson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 21:12:14 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 21:12:15 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/25 17:34:54 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_do        to_do[]={
 		(t_do){ARROW_LEFT, key_arrow_right},
 		(t_do){ARROW_RIGHT, key_arrow_left},
 		(t_do){PRINT_KEY, key_del},
-		(t_do){DELETE_KEY, }
+		(t_do){DELETE_KEY, NULL},
 		(t_do){0, 0}
 };
 

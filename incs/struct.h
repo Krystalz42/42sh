@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   struct.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gbourson <gbourson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 17:05:11 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/09/25 17:04:45 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,12 @@ typedef struct		s_env
 	struct s_env	*next;
 }					t_env;
 
+typedef struct		s_env_n
+{
+	char			*value;
+	struct s_env	*next;
+}					t_env_n;
+
 /*
 **			STRUCT FOR MOUSE 
 */
@@ -51,7 +57,6 @@ typedef struct		s_mouse
 typedef struct		s_cmd
 {
 	char			c;
-	int				s;
 	struct s_cmd	*next;
 	struct s_cmd	*prev;
 }					t_cmd;
