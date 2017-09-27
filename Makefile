@@ -51,32 +51,32 @@ SRCS = \
 	   cores/insert_one_line.c								\
 	   cores/var_return.c                                   \
 	   read/read_stdin.c									\
-	   read/key_print.c										\
-	   read/key_delete.c									\
-	   read/key_shift.c										\
-	   read/key_home_end.c									\
-	   read/key_eof.c										\
-	   read/key_tabulation.c								\
-	   read/key_arrow.c										\
-	   read/key_delete_here.c								\
-	   read/key_enter.c										\
-	   read/key_interrupt.c									\
+	   read/key_/key_print.c								\
+	   read/key_/key_delete.c								\
+	   read/key_/key_shift.c								\
+	   read/key_/key_home_end.c								\
+	   read/key_/key_eof.c									\
+	   read/key_/key_tabulation.c							\
+	   read/key_/key_arrow.c								\
+	   read/key_/key_delete_here.c							\
+	   read/key_/key_enter.c								\
+	   read/key_/key_interrupt.c							\
 	   read/print_struct.c									\
-	   read/key_clear.c										\
+	   read/key_/key_clear.c								\
 	   read/my_put.c										\
 	   read/first_cmd.c										\
 	   read/prompt.c										\
 	   read/check_cmd.c										\
-	   read/key_undo.c                                      \
+	   read/key_/key_undo.c                                 \
 	   read/gbl_save_read.c									\
 	   read/finish_read_std.c								\
-	   read/key_reprint.c                                   \
-	   read/key_kill_k.c                                    \
-	   read/key_kill_word.c                                 \
-	   read/key_kill_prev_word.c                            \
-	   read/key_del_buff.c                                  \
+	   read/key_/key_reprint.c                              \
+	   read/key_/key_kill_k.c                               \
+	   read/key_/key_kill_word.c                            \
+	   read/key_/key_kill_prev_word.c                       \
+	   read/key_/key_del_buff.c                             \
 	   read/keep_buffer.c                                   \
-	   read/key_yank.c                                      \
+	   read/key_/key_yank.c                                 \
 	   read/init_struct_for_read.c                          \
 	   read/last_cmd.c                                      \
 	   read/restore_cursor.c                                \
@@ -281,7 +281,7 @@ leaks		:
 	while true ; do leaks $(NAME)| grep 'total\|malloced' ; sleep 3 ; clear ; done
 
 leaks1		:
-	while true ; do leaks $(NAME) ; sleep 3 ; clear ; done
+	while true ; do leaks $(NAME) ; sleep 1 ; clear ; done
 
 log			:
 	while true ; do cat logger ; sleep 2 ; clear ; done

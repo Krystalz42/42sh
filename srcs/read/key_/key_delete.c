@@ -26,8 +26,6 @@ static t_cmd    *key_del_fct(t_cmd *cmd, unsigned long buff)
 		}
 		else
 			cmd->prev = NULL;
-
-			dprintf(fdb, "In key del ! %lu\n", buff);
 			if (!buff)
 				free(kill);
 			else
@@ -42,21 +40,21 @@ static t_cmd    *key_del_fct(t_cmd *cmd, unsigned long buff)
 
 int			    key_del(t_read **read_std, unsigned long buff)
 {
+	if ((*read_std)->completion)
+	{
+		memdel_completion(&((*read_std)->tab_));
+		(*read_std)->print = 2;
+	}
     if ((*read_std)->history_search)
     {
-        key_del_fct((*read_std)->hist_search->cmd, buff);
-		compare_history(read_std);
-        (*read_std)->history_search++;
+        key_del_fct((*read_std)->hist_search->cmd, 0);
+	    compare_history(read_std);
+	    (*read_std)->history_search++;
     }
     else if ((*read_std)->cmd->prev)
     {
 	    add_outstanding(key_del_fct((*read_std)->cmd, buff), buff, 0);
 	    (*read_std)->print = 2;
-    }
-    else if ((*read_std)->completion)
-    {
-	    (*read_std)->print = 2;
-	    bip();
     }
 	else
 	    bip();

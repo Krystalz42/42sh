@@ -32,15 +32,16 @@ void					create_comp_bin(t_read **read_std, char **path)
 
     t = -1;
     index = 0;
+	STR_FD((*read_std)->tab_->from, fdb);
     if (!path)
         return ;
     while (path[++t])
         if ((dir = opendir(path[t])))
         {
             while ((repo = readdir(dir)))
-                if (!(*read_std)->tab_->from || !ft_strncmp((*read_std)
-                                                                 ->tab_->from ,repo->d_name,
-                                ft_strlen((*read_std)->tab_->from) - 1))
+                if ((!(*read_std)->tab_->from && repo->d_name[0] != '.') ||
+                        (!ft_strncmp((*read_std)->tab_->from ,repo->d_name,
+                                ft_strlen((*read_std)->tab_->from) - 1) && repo->d_name[0] != '.'))
                 {
                     init_files(&((*read_std)->tab_->file), repo->d_name,
                                repo->d_type, index++);
@@ -54,13 +55,13 @@ void					create_comp_bin(t_read **read_std, char **path)
 void        complete_binary(t_read **read_std)
 {
     init_completion_bin(read_std);
-    create_comp_bin(read_std, ft_split(my_getenv("PATH"), ":"));
-    if (!(init_tab_((*read_std)->tab_, (*read_std)->cur.line)))
+	create_comp_bin(read_std, ft_split(my_getenv("PATH"), ":"));
+	((*read_std)->tab_->element) ? place_cursor(read_std, 1) : bip();
+	if (!(init_tab_((*read_std)->tab_, (*read_std)->cur.line)))
     {
-        (*read_std)->completion = 1;
-        return ;
+	    (*read_std)->completion = 1;
+	    return ;
     }
-    ((*read_std)->tab_->element) ? place_cursor(read_std, 1) : bip();
     print_tab(read_std);
     place_cursor(read_std, 0);
 }

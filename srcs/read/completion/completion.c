@@ -68,19 +68,19 @@ char		*get_last_word(char *path)
 
 void		completion(t_read **read_std)
 {
-	t_path		f;
-	char 		*tmp;
+	t_path f;
+	char *tmp;
+
 
 	f.to_comp = NULL;
 	f.path = list_to_str(read_std, (*read_std)->cmd);
-	if (f.path && (f.path[0] != '.' && f.path[0] != '/'))
-	{
+	if (f.path && (f.path[0] != '.' && f.path[0] != '/')) {
 		tmp = ft_strjoin("./", f.path);
 		ft_strdel(&f.path);
 		f.path = tmp;
 	}
 	f.to_comp = get_last_word(f.path);
 	complete_path(read_std, f);
-	ft_memdel((void **)&(f.path));
-	ft_memdel((void **)&(f.to_comp));
+	ft_memdel((void **) &(f.path));
+	ft_memdel((void **) &(f.to_comp));
 }

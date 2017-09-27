@@ -14,10 +14,16 @@
 
 int			key_home_(t_read **read_std, unsigned long buff)
 {
-	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
-		return (0);
-	else if ((*read_std)->completion && bip())
+	if ((*read_std)->history_search && bip())
+	{
+		memdel_lfh(&((*read_std)->hist_search));
 		(*read_std)->print = 2;
+	}
+	else if ((*read_std)->completion && bip())
+	{
+		memdel_completion(&((*read_std)->tab_));
+		(*read_std)->print = 2;
+	}
 	else if ((*read_std)->cmd->prev)
 	{
 		add_outstanding(NULL, buff, 0);
@@ -35,8 +41,11 @@ int			key_home_(t_read **read_std, unsigned long buff)
 }
 int			key_end_(t_read **read_std, unsigned long buff)
 {
-	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
-		return (0);
+	if ((*read_std)->history_search && bip())
+	{
+		memdel_lfh(&((*read_std)->hist_search));
+		(*read_std)->print = 2;
+	}
 	else if ((*read_std)->completion && bip())
 		(*read_std)->print = 2;
 	else if ((*read_std)->cmd->next)

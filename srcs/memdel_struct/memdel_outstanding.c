@@ -18,7 +18,7 @@ void        reset_os(t_outstanding **ptr)
 		(*ptr) = (*ptr)->prev;
 }
 
-void        memdel_outstating(void)
+void        memdel_outstanding(void)
 {
 	t_outstanding *ptr;
 	t_outstanding *tmp;
@@ -34,4 +34,5 @@ void        memdel_outstating(void)
 			free(tmp);
 		}
 	}
+	get_os_pointer(NULL, 1);
 }

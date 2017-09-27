@@ -26,6 +26,11 @@ int			key_delete_here(t_read **read_std, unsigned long buff)
 		add_outstanding(kill, buff, 0);
 		(*read_std)->print = 2;
 	}
+	else if ((*read_std)->history_search)
+	{
+		memdel_lfh(&((*read_std)->hist_search));
+		(*read_std)->print = 2;
+	}
 	else if ((*read_std)->completion)
 	{
 		(*read_std)->print = 2;

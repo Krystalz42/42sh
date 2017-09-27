@@ -43,8 +43,12 @@ int			print_tab(t_read **read_std)
 	int			stop;
 
 	tmp = (*read_std)->tab_->file;
+	NBR_FD((*read_std)->tab_->element, fdb);
 	if ((*read_std)->tab_->element == 1)
-		complete_command(read_std);
+	{
+		insert_completion(read_std, (*read_std)->tab_->file);
+		STR_FD("Salut", fdb);
+	}
 	else if ((stop = init_page(read_std, &tmp)))
 	{
 		while (tmp && tmp->index < stop)

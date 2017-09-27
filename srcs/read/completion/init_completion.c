@@ -12,8 +12,6 @@
 
 #include <sh.h>
 
-
-
 int			empty_cmd(t_cmd *cmd)
 {
 	if (!cmd->prev)
@@ -29,11 +27,7 @@ int			empty_cmd(t_cmd *cmd)
 
 void		init_completion(t_read **read_std)
 {
-    if (empty_cmd((*read_std)->cmd))
-	{
-		key_print_(read_std, 9);
-	}
-	else if (check_word((*read_std)->cmd))
+	if (check_word((*read_std)->cmd))
 	{
         (*read_std)->completion = 2;
 		complete_binary(read_std);

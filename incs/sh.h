@@ -98,7 +98,7 @@ int                   b_delete_history_offset(int offset);
 **				FUNCTION FOR COMPLETION
 */
 
-
+void        insert_completion(t_read **read_std, t_file *tmp);
 void        move_completion_right(t_read **read_std);
 void        move_completion_left(t_read **read_std);
 void				move_vertical(t_read **read_std, int pos);
@@ -225,7 +225,7 @@ int					memdel_completion(t_tab **tab_);
 int					memdel_read(t_read **read_std);
 int                 memdel_lfh(t_lfh **hist_search);
 int					memdel_cmd(t_cmd **cmd);
-void                memdel_outstating(void);
+void                memdel_outstanding(void);
 
 /*
 **			   	ERROR FUNCTION

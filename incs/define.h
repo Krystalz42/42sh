@@ -74,7 +74,7 @@
 # define ENTER_KEY		    	10
 # define CLEAR_KEY		        12
 
-# define CTRL_Y                 0
+# define CTRL_V                 22
 # define CTRL_B                 2
 # define CTRL_F                 6
 # define CTRL_D                 4

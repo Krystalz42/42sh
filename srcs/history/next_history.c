@@ -19,6 +19,7 @@ void			next_history(t_read **read_std)
 	hist = gbl_save_history(NULL, 1);
 	if (hist && hist->next)
 	{
+		memdel_outstanding();
 		hist = hist->next;
 		memdel_cmd(&((*read_std)->cmd));
 		copy_cmd(read_std, hist->hist->cmd);
@@ -26,6 +27,7 @@ void			next_history(t_read **read_std)
 	}
 	else if ((*read_std)->history)
 	{
+		memdel_outstanding();
 		memdel_cmd(&((*read_std)->cmd));
 		(*read_std)->cmd = gbl_save_read(NULL);
 		(*read_std)->history = 0;

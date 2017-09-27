@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_eof.c                                          :+:      :+:    :+:   */
+/*   key_clear_.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/12 17:38:25 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 19:41:02 by aroulin          ###   ########.fr       */
+/*   Created: 2017/08/12 17:44:04 by aroulin           #+#    #+#             */
+/*   Updated: 2017/08/19 21:05:17 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			key_eof(t_read **read_std, unsigned long buff)
+int			key_clear_(t_read **read_std, unsigned long buff)
 {
-	if (!(*read_std)->cmd->c && !(*read_std)->cmd->prev)
-		exit(EXIT_SUCCESS);
+	CLEAR;
+	(void)buff;
+	if ((*read_std)->completion)
+	{
+		memdel_completion(&((*read_std)->tab_));
+		(*read_std)->print = 2;
+	}
+	else if ((*read_std)->history_search)
+	{
+		memdel_lfh(&((*read_std)->hist_search));
+		(*read_std)->print = 2;
+	}
 	else
-		key_delete_here(read_std, buff);
+		(*read_std)->print = 2;
 	return (1);
 }

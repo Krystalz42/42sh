@@ -12,48 +12,48 @@
 
 #include <sh.h>
 
-t_cmp		g_tab_are_key[] = {
+static const t_cmp		g_tab_are_key[] = {
     (t_cmp){DELETE_KEY, key_del},
-    (t_cmp){CTRL_D, key_eof},
     (t_cmp){TAB_KEY, key_tab},
     (t_cmp){ENTER_KEY, key_enter_},
     (t_cmp){INTERRUPT_KEY, key_interrupt},
     (t_cmp){CLEAR_KEY, key_clear_},
     (t_cmp){HOME_KEY, key_home_},
-    (t_cmp){CTRL_A, key_home_},
-    (t_cmp){END_KEY, key_end_},
-    (t_cmp){CTRL_E, key_end_},
     (t_cmp){DEL_KEY, key_delete_here},
-    (t_cmp){ARROW_DOWN, key_arrow_down},
+    (t_cmp){END_KEY, key_end_},
+    (t_cmp){CTRL_D, key_eof},
+    (t_cmp){CTRL_A, key_home_},
+    (t_cmp){CTRL_E, key_end_},
+    (t_cmp){CTRL_F, key_arrow_right},
+    (t_cmp){CTRL_R, key_search_history},
+    (t_cmp){CTRL_K, key_kill_k},
+    (t_cmp){CTRL_V, key_yank},
+    (t_cmp){CTRL_UNDO, key_undo_},
     (t_cmp){CTRL_B, key_arrow_left},
+    (t_cmp){META_DEL, key_kill_prev_word},
+    (t_cmp){META_F, key_shift_right},
+    (t_cmp){META_D, key_kill_word},
+    (t_cmp){META_B, key_shift_left},
+    (t_cmp){ARROW_DOWN, key_arrow_down},
     (t_cmp){ARROW_LEFT, key_arrow_left},
     (t_cmp){ARROW_RIGHT, key_arrow_right},
-    (t_cmp){CTRL_F, key_arrow_right},
     (t_cmp){ARROW_UP, key_arrow_up},
-    (t_cmp){HOME_KEY, key_home_},
-    (t_cmp){CTRL_R, key_search_history},
     (t_cmp){SHIFT_UP_KEY, key_shift_up},
     (t_cmp){SHIFT_DOWN_KEY, key_shift_down},
     (t_cmp){SHIFT_RIGHT_KEY, key_shift_right},
     (t_cmp){SHIFT_LEFT_KEY, key_shift_left},
-    (t_cmp){META_F, key_shift_right},
-    (t_cmp){META_B, key_shift_left},
-    (t_cmp){CTRL_UNDO, key_undo_},
-    (t_cmp){CTRL_K, key_kill_k},
-    (t_cmp){META_D, key_kill_word},
-    (t_cmp){META_DEL, key_kill_prev_word},
-    (t_cmp){CTRL_Y, key_yank},
 };
 
 static inline int		chk_and_print(unsigned long *buff, t_read **read_std)
 {
     (*buff) = 0;
-    ((*read_std)->completion) ? (--(*read_std)->completion) :
-        memdel_completion(&((*read_std)->tab_));
-    ((*read_std)->history_search) ? (--(*read_std)->history_search) :
-        memdel_lfh(&((*read_std)->hist_search));
-    (!(*read_std)->completion) ? print_struct(*read_std) : 0;
-    ((*read_std)->history_search) ? print_struct_history(read_std) : 0;
+    if ((*read_std)->completion)
+	    (*read_std)->completion -= 1;
+    if ((*read_std)->history_search)
+	    (*read_std)->history_search -= 1;
+    print_struct(*read_std);
+	if ((*read_std)->history_search)
+		print_struct_history(read_std);
     (*read_std)->print = 0;
     return (1);
 }
@@ -80,17 +80,24 @@ t_read					*read_stdin(void)
     initialize_fct(&read_std, &buff);
     while ((index = -1) && read(STDIN_FILENO, &buff, sizeof(unsigned long)))
     {
-        while (++index < 30)//CTRL_Y
+        while (++index < 30)
 	        if (g_tab_are_key[index].key == buff)
             {
                 g_tab_are_key[index].function(&read_std, buff);
+                chk_and_print(&buff, &read_std);
+
                 break ;
             }
-		if (index == 30)
-			key_print_(&read_std, buff);
-        chk_and_print(&buff, &read_std);
-        if ((read_std)->finish)
+		if (ft_isprint(buff))
+        {
+            key_print_(&read_std, buff);
+            chk_and_print(&buff, &read_std);
+
+        }
+        if ((read_std)->finish) {
             break ;
+        }
+        buff = 0;
     }
     set_termios(SET_OLD_TERM);
     finish_read_std(&read_std);

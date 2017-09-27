@@ -23,18 +23,16 @@ void        compare_history(t_read **read_std)
         hist = hist->prev;
     if (hist)
     {
-        (*read_std)->history_search = 0;
-        if ((*read_std)->history)
-        {
-            memdel_cmd(&((*read_std)->cmd));
-            copy_cmd(read_std, hist->hist->cmd);
-        }
-        else
-        {
-            (*read_std)->history = 1;
-            copy_cmd(read_std, hist->hist->cmd);
-        }
-        (*read_std)->history_search = 1;
+	    memdel_outstanding();
+	    (*read_std)->history_search = 0;
+	    if ((*read_std)->history)
+		    memdel_cmd(&((*read_std)->cmd));
+	    else
+		    (*read_std)->history = 1;
+	    copy_cmd(read_std, hist->hist->cmd);
+	    (*read_std)->history_search = 1;
     }
+	dprintf(fdb, "Avec %d je sais pas quoi dire\n",
+	        (*read_std)->history_search);
     last_resultat((hist) || !little->c ? 0 : 1);
 }

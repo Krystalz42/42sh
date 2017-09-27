@@ -12,31 +12,36 @@
 
 #include <sh.h>
 
-void		complete_command(t_read **read_std)
+void        insert_completion(t_read **read_std, t_file *tmp)
 {
-	t_file	*tmp;
 	int		i;
 
 	i = -1;
+	((*read_std)->completion) && ((*read_std)->completion = 0);
+	if (!ft_strcmp((*read_std)->tab_->from, tmp->name))
+		(DT_DIR & tmp->type) ? (key_print_(read_std, '/')) : bip();
+	else
+	{
+		while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32
+		       && (*read_std)->cmd->prev->c != '/')
+			key_del(read_std, DELETE_KEY);
+		while (tmp->name[++i])
+			key_print_(read_std, tmp->name[i]);
+	}
+	(*read_std)->print = 2;
+}
+
+void		complete_command(t_read **read_std)
+{
+	t_file	*tmp;
+
 	tmp = (*read_std)->tab_->file;
 	while (tmp)
 	{
 		if (tmp->index == (*read_std)->tab_->index)
-		{
-			if (!ft_strcmp((*read_std)->tab_->from, tmp->name))
-				(DT_DIR & tmp->type) ? (key_print_(read_std, '/')) : bip();
-			else
-			{
-				while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32
-					   && (*read_std)->cmd->prev->c != '/')
-					key_del(read_std, DELETE_KEY);
-				while (tmp->name[++i])
-					key_print_(read_std, tmp->name[i]);
-			}
-		}
+			insert_completion(read_std, tmp);
 		tmp = tmp->next;
 	}
-	((*read_std)->completion) && ((*read_std)->completion = 0);
 }
 
 int			key_enter_(t_read **read_std, unsigned long buff)

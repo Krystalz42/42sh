@@ -40,13 +40,15 @@ int			key_print_(t_read **read_std, unsigned long buff)
 {
     unsigned char    c;
 
-    add_outstanding(NULL, PRINT_KEY, buff);
+    if (!(*read_std)->history_search)
+        add_outstanding(NULL, PRINT_KEY, buff);
     while (buff)
     {
         c = buff % (UCHAR_MAX + 1);
         if (ft_isprint(c))
         {
-            if ((*read_std)->history_search) {
+            if ((*read_std)->history_search)
+            {
                 key_print_fct((*read_std)->hist_search->cmd, c);
                 compare_history(read_std);
                 (*read_std)->history_search++;

@@ -16,17 +16,21 @@ void			previous_history(t_read **read_std)
 {
 	t_hist		*hist;
 
-	if (!(hist = gbl_save_history(NULL, 1)) && bip())
-		return ;
-	if ((*read_std)->history)
+	hist = gbl_save_history(NULL, 1);
+	if (!(*read_std)->history && hist)
 	{
-		(!hist->prev) && bip();
-		(hist->prev) && (hist = hist->prev);
+		memdel_outstanding();
+		copy_cmd(read_std, hist->hist->cmd);
+	}
+	else if ((*read_std)->history && hist && hist->prev)
+	{
+		memdel_outstanding();
+		hist = hist->prev;
 		memdel_cmd(&((*read_std)->cmd));
 		copy_cmd(read_std, hist->hist->cmd);
 	}
 	else
-		copy_cmd(read_std, hist->hist->cmd);
+		bip();
 	(*read_std)->history = 1;
 	gbl_save_history(hist, 1);
 }

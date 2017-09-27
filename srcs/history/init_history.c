@@ -29,16 +29,17 @@ int				convert_to_hist(char *buff)
 	while (buff[++i])
 		if (ft_isprint(buff[i]) && ++cmd_len)
 			key_print_fct(read_std->cmd, buff[i]);
-	if (cmd_len >= 500 || !check_cmd(&read_std))
+	if (check_cmd(&read_std) && ++cmd_len)
+	{
+		return (0);
+	}
+	else
 	{
 		cmd_len = 0;
 		make_list_hist(read_std);
 		read_std = NULL;
 		return (1);
 	}
-	else if (check_cmd(&read_std) && ++cmd_len)
-		key_print_fct(read_std->cmd, 10);
-	return (0);
 }
 
 void				write_history_in_sh(void)
