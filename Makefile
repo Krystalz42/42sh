@@ -50,7 +50,22 @@ SRCS = \
 	   cores/shell.c										\
 	   cores/insert_one_line.c								\
 	   cores/var_return.c                                   \
-	   read/read_stdin.c									\
+	   read/other_read/read_stdin.c							\
+	   read/other_read/finish_read_std.c					\
+	   read/other_read/print_struct.c						\
+	   read/other_read/my_put.c								\
+	   read/other_read/first_cmd.c							\
+	   read/other_read/prompt.c								\
+	   read/other_read/check_cmd.c							\
+	   read/other_read/gbl_save_read.c						\
+	   read/other_read/keep_buffer.c                        \
+	   read/other_read/init_struct_for_read.c               \
+	   read/other_read/last_cmd.c                           \
+	   read/other_read/restore_cursor.c                     \
+	   read/other_read/init_prompt.c                        \
+	   read/other_read/my_prompt.c                          \
+	   read/other_read/get_len_prompt.c                     \
+	   read/key_/key_yank.c                                 \
 	   read/key_/key_print.c								\
 	   read/key_/key_delete.c								\
 	   read/key_/key_shift.c								\
@@ -61,29 +76,14 @@ SRCS = \
 	   read/key_/key_delete_here.c							\
 	   read/key_/key_enter.c								\
 	   read/key_/key_interrupt.c							\
-	   read/print_struct.c									\
 	   read/key_/key_clear.c								\
-	   read/my_put.c										\
-	   read/first_cmd.c										\
-	   read/prompt.c										\
-	   read/check_cmd.c										\
 	   read/key_/key_undo.c                                 \
-	   read/gbl_save_read.c									\
-	   read/finish_read_std.c								\
 	   read/key_/key_reprint.c                              \
 	   read/key_/key_kill_k.c                               \
 	   read/key_/key_kill_word.c                            \
 	   read/key_/key_kill_prev_word.c                       \
 	   read/key_/key_del_buff.c                             \
-	   read/key_/key_search_history.c                           \
-	   read/keep_buffer.c                                   \
-	   read/key_/key_yank.c                                 \
-	   read/init_struct_for_read.c                          \
-	   read/last_cmd.c                                      \
-	   read/restore_cursor.c                                \
-	   read/init_prompt.c                                   \
-	   read/my_prompt.c                                     \
-	   read/get_len_prompt.c                                \
+	   read/key_/key_search_history.c                       \
 	   hash/hash_value.c									\
 	   hash/table_hash.c									\
 	   hash/hash_board.c	    							\
