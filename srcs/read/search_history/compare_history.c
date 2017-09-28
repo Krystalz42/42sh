@@ -32,7 +32,5 @@ void        compare_history(t_read **read_std)
 	    copy_cmd(read_std, hist->hist->cmd);
 	    (*read_std)->history_search = 1;
     }
-	dprintf(fdb, "Avec %d je sais pas quoi dire\n",
-	        (*read_std)->history_search);
     last_resultat((hist) || !little->c ? 0 : 1);
 }

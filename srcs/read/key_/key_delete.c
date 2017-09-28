@@ -40,7 +40,7 @@ static t_cmd    *key_del_fct(t_cmd *cmd, unsigned long buff)
 
 int			    key_del(t_read **read_std, unsigned long buff)
 {
-	if ((*read_std)->completion)
+	if ((*read_std)->completion && bip())
 	{
 		memdel_completion(&((*read_std)->tab_));
 		(*read_std)->print = 2;

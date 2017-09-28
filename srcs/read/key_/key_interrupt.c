@@ -15,6 +15,6 @@
 int			key_interrupt(t_read **read_std, unsigned long buff)
 {
 	(void)buff;
-	(void)read_std;
+	(*read_std)->finish = 2;
 	return (1);
 }

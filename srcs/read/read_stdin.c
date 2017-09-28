@@ -42,16 +42,19 @@ static const t_cmp		g_tab_are_key[] = {
     (t_cmp){SHIFT_DOWN_KEY, key_shift_down},
     (t_cmp){SHIFT_RIGHT_KEY, key_shift_right},
     (t_cmp){SHIFT_LEFT_KEY, key_shift_left},
+    (t_cmp){0, NULL}
 };
 
 static inline int		chk_and_print(unsigned long *buff, t_read **read_std)
 {
-    (*buff) = 0;
-    if ((*read_std)->completion)
-	    (*read_std)->completion -= 1;
-    if ((*read_std)->history_search)
-	    (*read_std)->history_search -= 1;
+    (void )buff;
     print_struct(*read_std);
+    if ((*read_std)->completion) {
+        (*read_std)->completion -= 1;
+    }
+    if ((*read_std)->history_search) {
+        (*read_std)->history_search -= 1;
+    }
 	if ((*read_std)->history_search)
 		print_struct_history(read_std);
     (*read_std)->print = 0;
@@ -80,24 +83,20 @@ t_read					*read_stdin(void)
     initialize_fct(&read_std, &buff);
     while ((index = -1) && read(STDIN_FILENO, &buff, sizeof(unsigned long)))
     {
-        while (++index < 30)
+        while (g_tab_are_key[++index].key)
 	        if (g_tab_are_key[index].key == buff)
             {
                 g_tab_are_key[index].function(&read_std, buff);
                 chk_and_print(&buff, &read_std);
-
-                break ;
             }
-		if (ft_isprint(buff))
+		if (!g_tab_are_key[index].key && ft_isprint(buff))
         {
             key_print_(&read_std, buff);
             chk_and_print(&buff, &read_std);
-
         }
-        if ((read_std)->finish) {
+        (buff) = 0;
+        if ((read_std)->finish)
             break ;
-        }
-        buff = 0;
     }
     set_termios(SET_OLD_TERM);
     finish_read_std(&read_std);

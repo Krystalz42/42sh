@@ -15,8 +15,10 @@
 int			key_tab(t_read **read_std,
                        unsigned long buff __attribute__((unused)))
 {
-	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
-		return (0);
+	if ((*read_std)->history_search && bip())
+	{
+		memdel_lfh(&((*read_std)->hist_search));
+	}
 	if ((*read_std)->completion)
 		move_completion_right(read_std);
 	else

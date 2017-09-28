@@ -17,7 +17,10 @@ int			key_eof(t_read **read_std, unsigned long buff)
 	if (!(*read_std)->cmd->c && !(*read_std)->cmd->prev)
 		exit(EXIT_SUCCESS);
 	else if ((*read_std)->cmd->c)
+	{
 		key_delete_here(read_std, buff);
+		(*read_std)->print = 2;
+	}
 	else
 		bip();
 	return (1);

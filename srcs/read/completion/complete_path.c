@@ -42,7 +42,6 @@ void		complete_path(t_read **read_std, t_path f)
 	if (!((*read_std)->tab_ = (t_tab *)ft_memalloc(sizeof(t_tab))))
 		return ;
 	(*read_std)->tab_->from = ft_strdup(f.to_comp);
-	(*read_std)->tab_->file = NULL;
 	create_comp(read_std, f);
 	((*read_std)->tab_->element) ? place_cursor(read_std, 1) : bip();
 	if (!(*read_std)->tab_->element ||

@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-static void     key_delete_buffer(t_read **read_std, unsigned long buff)
+int              key_del_buff(t_read **read_std, unsigned long buff)
 {
 	t_outstanding *tmp;
 
@@ -23,21 +23,6 @@ static void     key_delete_buffer(t_read **read_std, unsigned long buff)
 		key_del(read_std, 0);
 		tmp->buff /= (UCHAR_MAX + 1);
 	}
-}
-
-int              key_del_buff(t_read **read_std, unsigned long buff)
-{
-	if ((*read_std)->completion && bip())
-	{
-		memdel_completion(&((*read_std)->tab_));
-		(*read_std)->print = 2;
-	}
-	else if ((*read_std)->history_search && bip())
-	{
-		memdel_lfh(&((*read_std)->hist_search));
-		(*read_std)->print = 2;
-	}
-	else
-		key_delete_buffer(read_std, buff);
+	(*read_std)->print = 2;
 	return (1);
 }

@@ -16,10 +16,16 @@ int		key_shift_up(t_read **read_std, unsigned long buff)
 {
 	int		co;
 
-	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
-		return (0);
-	else if ((*read_std)->completion && bip() && ((*read_std)->print = 2))
-		return (0);
+	if ((*read_std)->history_search && bip())
+	{
+		(*read_std)->print = 2;
+		memdel_lfh(&((*read_std)->hist_search));
+	}
+	else if ((*read_std)->completion && bip())
+	{
+		memdel_completion(&((*read_std)->tab_));
+		(*read_std)->print = 2;
+	}
 	else
 		(*read_std)->print = 1;
 	co = tgetnum("co");
@@ -38,10 +44,16 @@ int		key_shift_down(t_read **read_std, unsigned long buff)
 {
 	int		co;
 
-	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
-		return (0);
-	else if ((*read_std)->completion && bip() && ((*read_std)->print = 2))
-		return (0);
+	if ((*read_std)->history_search && bip())
+	{
+		(*read_std)->print = 2;
+		memdel_lfh(&((*read_std)->hist_search));
+	}
+	else if ((*read_std)->completion && bip())
+	{
+		memdel_completion(&((*read_std)->tab_));
+		(*read_std)->print = 2;
+	}
 	else
 		(*read_std)->print = 1;
 	co = tgetnum("co");
@@ -54,10 +66,16 @@ int		key_shift_down(t_read **read_std, unsigned long buff)
 
 int		key_shift_left(t_read **read_std, unsigned long buff)
 {
-	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
-		return (0);
-	else if ((*read_std)->completion && bip() && ((*read_std)->print = 2))
-		return (0);
+	if ((*read_std)->history_search && bip())
+	{
+		(*read_std)->print = 2;
+		memdel_lfh(&((*read_std)->hist_search));
+	}
+	else if ((*read_std)->completion && bip())
+	{
+		memdel_completion(&((*read_std)->tab_));
+		(*read_std)->print = 2;
+	}
 	else
 		(*read_std)->print = 1;
 	while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c == 32)
@@ -74,10 +92,16 @@ int		key_shift_left(t_read **read_std, unsigned long buff)
 
 int		key_shift_right(t_read **read_std, unsigned long buff)
 {
-	if ((*read_std)->history_search && bip() && ((*read_std)->print = 2))
-		return (0);
-	else if ((*read_std)->completion && bip() && ((*read_std)->print = 2))
-		return (0);
+	if ((*read_std)->history_search && bip())
+	{
+		(*read_std)->print = 2;
+		memdel_lfh(&((*read_std)->hist_search));
+	}
+	else if ((*read_std)->completion && bip())
+	{
+		memdel_completion(&((*read_std)->tab_));
+		(*read_std)->print = 2;
+	}
 	else
 		(*read_std)->print = 1;
 	while ((*read_std)->cmd->c)

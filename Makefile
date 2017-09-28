@@ -75,6 +75,7 @@ SRCS = \
 	   read/key_/key_kill_word.c                            \
 	   read/key_/key_kill_prev_word.c                       \
 	   read/key_/key_del_buff.c                             \
+	   read/key_/key_search_history.c                           \
 	   read/keep_buffer.c                                   \
 	   read/key_/key_yank.c                                 \
 	   read/init_struct_for_read.c                          \
@@ -113,7 +114,6 @@ SRCS = \
 	   read/search_history/init_research.c                  \
 	   read/search_history/print_struct_history.c           \
 	   read/search_history/manage_cursor_prompt.c           \
-	   read/search_history/search_history.c                 \
 	   history/built_in_history.c                           \
 	   history/get_str_from_history.c                       \
 	   history/write_history.c                              \

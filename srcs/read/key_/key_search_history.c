@@ -14,7 +14,12 @@
 
 int            key_search_history(t_read **read_std, unsigned long buff)
 {
-    (void)buff;
+    (void) buff;
+    if ((*read_std)->completion)
+    {
+        memdel_completion(&((*read_std)->tab_));
+	    (*read_std)->completion = 0;
+    }
     if ((*read_std)->history_search)
         (*read_std)->history_search++;
     else

@@ -35,10 +35,18 @@ static int     kill_k(t_read **read_std, unsigned long buff)
 int     key_kill_k(t_read **read_std, unsigned long buff)
 {
 	if ((*read_std)->completion && bip())
+	{
 		(*read_std)->print = 2;
+		memdel_completion(&((*read_std)->tab_));
+	}
 	else if  ((*read_std)->history_search && bip())
+	{
 		(*read_std)->print = 2;
-	else
+		memdel_lfh(&((*read_std)->hist_search));
+	}
+	if ((*read_std)->cmd->c)
 		kill_k(read_std, buff);
+	else
+		bip();
 	return (1);
 }

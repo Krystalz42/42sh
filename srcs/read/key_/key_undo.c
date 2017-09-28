@@ -60,8 +60,6 @@ int         key_undo_(t_read **read_std, unsigned long buff)
 	(void)buff;
 	if ((undo = get_os_pointer(NULL, 0)))
 	{
-		dprintf(fdb, "In undo_key [move = %lu] [buff = %lu]\n", undo->movement,
-		        undo->buff);
 		while (to_do[++i].cmd)
 			if (to_do[i].cmd == undo->movement)
 				to_do[i].function(read_std, 0);

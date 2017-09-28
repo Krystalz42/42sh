@@ -47,7 +47,10 @@ int			key_end_(t_read **read_std, unsigned long buff)
 		(*read_std)->print = 2;
 	}
 	else if ((*read_std)->completion && bip())
+	{
+		memdel_completion(&((*read_std)->tab_));
 		(*read_std)->print = 2;
+	}
 	else if ((*read_std)->cmd->next)
 	{
 		add_outstanding(NULL, buff, 0);

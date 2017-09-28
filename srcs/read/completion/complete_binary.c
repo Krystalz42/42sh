@@ -16,7 +16,7 @@ void        init_completion_bin(t_read **read_std)
 {
     if (!((*read_std)->tab_ = (t_tab *)ft_memalloc(sizeof(t_tab))))
         return ;
-    if (!is_token((*read_std)->cmd->prev->c))
+    if ((*read_std)->cmd->prev && !is_token((*read_std)->cmd->prev->c))
         (*read_std)->tab_->from  = list_to_str(read_std,(*read_std)->cmd);
     else
         (*read_std)->tab_->from = NULL;
@@ -32,20 +32,22 @@ void					create_comp_bin(t_read **read_std, char **path)
 
     t = -1;
     index = 0;
-	STR_FD((*read_std)->tab_->from, fdb);
     if (!path)
         return ;
     while (path[++t])
         if ((dir = opendir(path[t])))
         {
             while ((repo = readdir(dir)))
+            {
                 if ((!(*read_std)->tab_->from && repo->d_name[0] != '.') ||
-                        (!ft_strncmp((*read_std)->tab_->from ,repo->d_name,
-                                ft_strlen((*read_std)->tab_->from) - 1) && repo->d_name[0] != '.'))
+                    (!ft_strncmp((*read_std)->tab_->from ,repo->d_name,
+                                 ft_strlen((*read_std)->tab_->from) - 1)))
                 {
                     init_files(&((*read_std)->tab_->file), repo->d_name,
                                repo->d_type, index++);
                 }
+            }
+
             closedir(dir);
         }
     (*read_std)->tab_->element = index;
@@ -59,7 +61,7 @@ void        complete_binary(t_read **read_std)
 	((*read_std)->tab_->element) ? place_cursor(read_std, 1) : bip();
 	if (!(init_tab_((*read_std)->tab_, (*read_std)->cur.line)))
     {
-	    (*read_std)->completion = 1;
+	    (*read_std)->completion = 0;
 	    return ;
     }
     print_tab(read_std);
