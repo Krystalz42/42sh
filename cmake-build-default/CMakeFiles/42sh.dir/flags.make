@@ -6,5 +6,5 @@ C_FLAGS =  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/aroulin/42/42sh/incs -I/Users/aroulin/42/42sh/libs/libft/incs -I/Users/aroulin/42/42sh/libs/printf/incs 
+C_INCLUDES = -I/Users/aroulin/42sh/incs -I/Users/aroulin/42sh/libs/libft/incs -I/Users/aroulin/42sh/libs/printf/incs 
 

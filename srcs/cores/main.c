@@ -34,7 +34,6 @@ void test(void)
     int fildes[2];
 
     info("MAIN TEST");
-
 	father = fork();
 	if (father)
 	{
