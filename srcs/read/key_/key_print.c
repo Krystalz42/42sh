@@ -45,7 +45,7 @@ int			key_print_(t_read **read_std, unsigned long buff)
     while (buff)
     {
         c = buff % (UCHAR_MAX + 1);
-        if (ft_isprint(c))
+        if (ft_isprint(c) || c == 10)
         {
             if ((*read_std)->history_search)
             {

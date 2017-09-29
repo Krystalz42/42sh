@@ -26,8 +26,6 @@ int		init_term(void)
 	static struct termios old_term;
 	static struct termios our_term;
 
-	if ((2 == -1))
-		return (1);
 	if (!my_getenv("TERM"))
 		add_list_env("TERM", "vt100");
 	if (tgetent(NULL, my_getenv("TERM")))

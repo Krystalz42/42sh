@@ -41,7 +41,7 @@ static inline int	stop_rec(char cmd, char c)
 static char				rec_brackets(t_cmd *cmd, char c)
 {
 	if (cmd == NULL)
-		return (!c ? '\\' : c);
+		return (!c ? (char)'\\' : c);
 	if (cmd->c == '\\')
 		return (rec_brackets(cmd->next->next, c));
 	if (launch_rec(cmd->c, c))

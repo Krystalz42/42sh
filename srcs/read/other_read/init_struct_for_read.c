@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <sh.h>
+#include "../../../libs/libft/incs/libft.h"
 
 t_read	*init_struct_for_read(void)
 {

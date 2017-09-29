@@ -17,10 +17,13 @@ static void			my_pwd(int fderr)
     static char	*command[] = {"/bin/pwd", NULL};
     pid_t	    father;
     int         fdout;
+	int status;
 
-    fdout = open(PATH_PWD, O_CREAT | O_TRUNC | O_WRONLY, 0644);
+
+	fdout = open(PATH_PWD, O_CREAT | O_TRUNC | O_WRONLY, 0644);
     if ((father = fork()) == -1)
         return ;
+	STR_FD("PID PWD :",fdb); NBR_FD(father, fdb); CHAR_FD(10,fdb);
     if (!father)
     {
         dup2(fdout, STDOUT_FILENO);
@@ -29,7 +32,7 @@ static void			my_pwd(int fderr)
 	    exit(EXIT_FAILURE);
     }
     else
-        wait(&father);
+	    waitpid(father, &status, 0);
     close(fdout);
 }
 
@@ -38,12 +41,14 @@ static inline void			git_branch(int fderr)
 	static char	*command[] = {"/usr/bin/git", "branch", NULL};
 	pid_t	    father;
     int         fdout;
+	int status;
 
-	(void)command;
 	fdout = open(PATH_GIT, O_CREAT | O_TRUNC | O_WRONLY, 0644);
-    if ((father = fork()) == -1)
-        return ;
-    if (!father)
+    if ((father = fork()) == -1) {
+	    return ;
+    }
+	STR_FD("PID GIT :",fdb); NBR_FD(father, fdb); CHAR_FD(10,fdb);
+	if (!father)
     {
 	    dup2(fdout, STDOUT_FILENO);
         dup2(fderr, STDERR_FILENO);
@@ -52,7 +57,7 @@ static inline void			git_branch(int fderr)
 	    exit(EXIT_FAILURE);
     }
     else
-        wait(&father);
+	    waitpid(father, &status, 0);
 	close(fdout);
 }
 
@@ -86,7 +91,7 @@ static int          get_str_from_pwd(char **prompt, int fderr)
 {
     char        *tmp;
     int         i;
-    int         s;
+    size_t        s;
 	int         fd;
 
     tmp = NULL;

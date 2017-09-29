@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <sh.h>
+#include "../../../libs/libft/incs/libft.h"
 
 static const t_cmp		g_tab_are_key[] = {
     (t_cmp){DELETE_KEY, key_del},
@@ -76,7 +77,7 @@ t_read					*read_stdin(void)
 {
     t_read		*read_std;
     int			index;
-    unsigned long buff;
+    static unsigned long buff = 0;
 
     if (!(read_std = init_struct_for_read()))
         return (NULL);

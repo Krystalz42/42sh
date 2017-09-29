@@ -78,7 +78,6 @@ unsigned int		hash_value(char *str);
 t_table_hash        *gbl_save_table_hash(t_table_hash *hash, int flags);
 void	        	inventory_hash(t_hash **hash, unsigned int index);
 t_hash				**hash_board(void);
-char				*search_path(char *binary);
 void	        	add_hash(char *bin, char *path, int index);
 void                init_hash(void);
 char                *get_str_from_hash(void);

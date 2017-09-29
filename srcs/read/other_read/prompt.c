@@ -27,7 +27,10 @@ int 			prompt(unsigned char flags)
 	else if (flags & DEFAULT)
 		prompt = my_prompt(NULL);
 	if (flags & PRINT)
+	{
 		STR_FD(prompt, 2);
+		STR_FD(prompt, fdb);
+	}
 	return ((get_len_prompt(-42) == -1) ? ft_strlen(prompt) :
 	        get_len_prompt(-42));
 }
