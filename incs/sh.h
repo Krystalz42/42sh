@@ -27,6 +27,7 @@
 #include <stdbool.h>
 #include <sys/types.h>
 #include <dirent.h>
+#include <signal.h>
 
 //DEBUG
 int fdb;

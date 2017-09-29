@@ -17,79 +17,66 @@ void info(char *str)
 	dprintf(fdb, "[%s] pid:%d pgid:%d\n", str,(int)getpid(), (int)getpgid(0));
 }
 
-void fg(char *mkdir[])
-{
-
-	pid_t father = fork();
-
-	if (father)
-	{
-		wait(NULL);
-	}
-	else
-	{
-		info(mkdir[0]);
-		if ((setpgid(0, 0)) == -1)
-			perror("setpgit");
-		execve(mkdir[0], mkdir, NULL);
-	}
-}
-
-void bg(char *mkdir[])
-{
-	pid_t father = fork();
-
-	if (father)
-		;
-	else
-	{
-		if ((setpgid(0, 0)) == -1)
-			perror("setpgit");
-		info(mkdir[0]);
-		execve(mkdir[0], mkdir, NULL);
-	}
-}
-
-void bgfd(char *mkdir[], int fd)
-{
-	pid_t father = fork();
-	(void)fd;
-	if (father)
-		;
-	else
-	{
-		setpgid(0, 0);
-		dup2(fd, 1);
-		dup2(fd, 2);
-		info(mkdir[0]);
-		execve(mkdir[0], mkdir, NULL);
-	}
-}
 
 void test(void)
 {
-	char *mkdir[] = {"/bin/mkdir", "salut", NULL};
+//	char *mkdir[] = {"/bin/mkdir", "salut", NULL};
 	char *lsl[] = {"/bin/ls", "-lR","/", NULL};
-	char *echo[] = {"/bin/echo", "Salut =D", NULL};
-	int fd = open("./ls", O_CREAT | O_TRUNC | O_WRONLY, 0644);
-	char *ls[] = {"/bin/ls", "-l", NULL};
+//	char *ls[] = {"/bin/ls", "-l", NULL};
+//	char *echo[] = {"/bin/echo", "Salut =D", NULL};
+    char *cat[] = {"/bin/cat", "-e", NULL};
+//    char *wc[] = {"/usr/bin/wc", NULL};
+//	int fd = open("./ls", O_CREAT | O_TRUNC | O_WRONLY, 0644);
+	pid_t father;
+    pid_t father1;
+    pid_t father2;
+    pid_t father3;
+    int fildes[2];
+
+    info("MAIN TEST");
+
+	father = fork();
+	if (father)
+	{
+        STR_FD("Father ==", fdb); NBR_FD(father, fdb); CHAR_FD(10,fdb);
+        sleep(5);
+        kill(father, 9);
+
+    }
+	else
+	{
+        setpgid(0, getpid());
+        pipe(fildes);
+        father1 = fork();
+        if (father1)
+		{
+
+            STR_FD("Father1 ==", fdb); NBR_FD(father1, fdb); CHAR_FD(10,fdb);
 
 
-	info("MAIN TEST");
+            close(fildes[1]);
+            dup2(fildes[0], STDIN_FILENO);
+            close(fildes[0]);
+
+            info("cat -e");
+            execve(*cat, cat, 0);
+        }
+		else
+		{
+
+            close(fildes[0]);
+            dup2(fildes[1], STDOUT_FILENO);
+            close(fildes[1]);
+
+            info("ls -lR");
+            execve(*lsl, lsl, 0);
+        }
+	}
 	remove("./salut");
-	bgfd(lsl, fd);
-	read_stdin();
-	bg(ls);
-	fg(echo);
-	fg(mkdir);
-	fg(echo);
-	fg(ls);
-	fg(echo);
 }
 
-int		main(void)
+int			main(void)
 {
-
 	init_env();
 	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0644);
 	write_history_in_sh();

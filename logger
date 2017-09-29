@@ -1,5 +1,19 @@
-In add outstanding [Pointer = 0][move = 424242] [buff = 117]
-[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0mIn add outstanding [Pointer = 0][move = 424242] [buff = 116]
-[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0mIn add outstanding [Pointer = 0][move = 424242] [buff = 32]
-[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[/bin/ls] pid:7697 pgid:7697
-[/bin/echo] pid:7698 pgid:7684
+[MAIN TEST] pid:44035 pgid:44035
+Father ==44036
+Father1 ==44037
+[cat -e] pid:44036 pgid:44036
+Father1 ==4Father1 ==44037
+[cat -e] pid:44040 pgid:44036
+4037
+[cat -e] pid:44038 pgid:44036
+[ls -lR] pid:44037 pgid:44036
+Father1 ==44037
+[cat -e] pid:44041 pgid:44036
+[ls -lR] pid:44039 pgid:44036
+[ls -lR] pid:44042 pgid:44036
+[ls -lR] pid:44043 pgid:44036
+PID PWD :44062
+PID PWD :0
+PID GIT :44063
+PID GIT :0
+[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m[1m[34m42sh[31m git[[32mmaster[31m][32m √ [0m
