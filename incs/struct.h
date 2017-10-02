@@ -118,7 +118,7 @@ typedef struct		s_hist
 
 typedef struct		s_hash
 {
-	char			*binary;
+	char         *binary;
 	char			*path;
     size_t          times;
 }					t_hash;

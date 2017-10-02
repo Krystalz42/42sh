@@ -32,30 +32,31 @@ void				hash_reset(void)
 	gbl_save_table_hash(NULL, 1);
 }
 
-void				hash_print(void)
-{
-	t_table_hash	*table;
-	static char		element[200];
-	char			*tmp;
 
-	table = gbl_save_table_hash(NULL, 0);
-	while (table)
-	{
-		ft_bzero(element, 200);
-		ft_strcpy(element, "[");
-		tmp = ft_uitoa(table->index);
-		ft_strcpy(element + ft_strlen(element), tmp);
-		free(tmp);
-		ft_strcpy(element + ft_strlen(element), ":");
-		tmp = ft_uitoa((*table->hash)->times);
-		ft_strcpy(element + ft_strlen(element), tmp);
-		free(tmp);
-		ft_strcpy(element + ft_strlen(element), "] ");
-		ft_strcpy(element + ft_strlen(element), (*table->hash)->binary);
-		ft_strcpy(element + ft_strlen(element), "=");
-		ft_strcpy(element + ft_strlen(element), (*table->hash)->path);
-		ft_strcpy(element + ft_strlen(element), "\n");
-		table = table->next;
-		STR(element);
-	}
+void hash_print(int fd)
+{
+    t_table_hash	*table;
+    static char		element[400];
+    char			*tmp;
+
+    table = gbl_save_table_hash(NULL, 0);
+    while (table)
+    {
+        ft_bzero(element, 400);
+        ft_strcpy(element, "[");
+        tmp = ft_uitoa(table->index);
+        ft_strcpy(element + ft_strlen(element), tmp);
+        free(tmp);
+        ft_strcpy(element + ft_strlen(element), ":");
+        tmp = ft_uitoa((*table->hash)->times);
+        ft_strcpy(element + ft_strlen(element), tmp);
+        free(tmp);
+        ft_strcpy(element + ft_strlen(element), "] ");
+        ft_strcpy(element + ft_strlen(element), (*table->hash)->binary);
+        ft_strcpy(element + ft_strlen(element), "=");
+        ft_strcpy(element + ft_strlen(element), (*table->hash)->path);
+        ft_strcpy(element + ft_strlen(element), "\n");
+        table = table->next;
+        STR_FD(element,fd);
+    }
 }

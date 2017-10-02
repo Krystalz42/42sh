@@ -38,7 +38,7 @@ char		*search_path(char *binary)
 **		char *bin && char *path have to be malloc and not be free outside
 */
 
-void		add_hash(char *bin, char *path, int times)
+void		add_hash(char *bin, char *path, size_t times)
 {
 	unsigned int		index;
 	t_hash				**hash_tab;

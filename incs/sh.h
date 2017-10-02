@@ -79,7 +79,7 @@ unsigned int		hash_value(char *str);
 t_table_hash        *gbl_save_table_hash(t_table_hash *hash, int flags);
 void	        	inventory_hash(t_hash **hash, unsigned int index);
 t_hash				**hash_board(void);
-void	        	add_hash(char *bin, char *path, int index);
+void	        	add_hash(char *bin, char *path, size_t index);
 void                init_hash(void);
 char                *get_str_from_hash(void);
 
@@ -87,8 +87,9 @@ char                *get_str_from_hash(void);
 **              BUILT IN FUNCTION
 */
 
+void                write_hash(void);
 void                hash_reset(void);
-void                hash_print(void);
+void				hash_print(int fd);
 int                b_write_history(void);
 int                b_clear_history(void);
 int		        convert_to_hist(char *buff);
@@ -98,7 +99,7 @@ int                   b_delete_history_offset(int offset);
 **				FUNCTION FOR COMPLETION
 */
 
-void        insert_completion(t_read **read_std, t_file *tmp);
+void    insert_completion(t_read **read_std, t_file *tmp);
 void        move_completion_right(t_read **read_std);
 void        move_completion_left(t_read **read_std);
 void				move_vertical(t_read **read_std, int pos);

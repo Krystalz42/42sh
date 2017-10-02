@@ -18,7 +18,7 @@ int		shell(void)
 	add_hash("Gregoire", "@gbourson", 42);
 	add_hash("Jefferson", "@jle-quel", 42);
 	add_hash("Sofiane", "@sbelazou", 42);
-	hash_print();
+	hash_print(STDOUT_FILENO);
 	read_stdin();
 	read_stdin();
 	reset_signal();

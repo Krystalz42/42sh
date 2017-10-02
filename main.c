@@ -13,19 +13,23 @@
 #include <sys/types.h>
 #include <dirent.h>
 
+void		handler(int sig)
+{
+	dprintf(2, "In SIGNAL [%d] PID [%d] DADDY [%d]\n",sig, getpid(),getppid()); 
+	signal(sig, SIG_DFL);
+	kill(sig, getpid());
+}
+
 int main(void)
 {
-    pid_t pid;
-    pid=fork();
-    if(pid==-1){
-        perror("fork failure");
-        exit(EXIT_FAILURE);
-    }
-    else if(pid==0){
-        printf("pid in child=%d and parent=%d\n",getpid(),getppid()); 
-    }
-    else{
-        printf("pid in parent=%d and childid=%d\n",getpid(),getppid());
-    }
+	int i = -1;
+	while (++i < 32)
+		signal(i, &handler);
+
+	dprintf(2, "[IN SOFT 3] PID = [%d] PPID = [%d]\n",getpid(),getppid()); 
+	pause();
+	pause();
+	pause();
     exit(EXIT_SUCCESS);
+	return (1);
 }
