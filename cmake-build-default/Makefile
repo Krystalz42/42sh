@@ -3444,6 +3444,33 @@ srcs/error_function/bip.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/bip.c.s
 .PHONY : srcs/error_function/bip.c.s
 
+srcs/error_function/puterror.o: srcs/error_function/puterror.c.o
+
+.PHONY : srcs/error_function/puterror.o
+
+# target to build an object file
+srcs/error_function/puterror.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/puterror.c.o
+.PHONY : srcs/error_function/puterror.c.o
+
+srcs/error_function/puterror.i: srcs/error_function/puterror.c.i
+
+.PHONY : srcs/error_function/puterror.i
+
+# target to preprocess a source file
+srcs/error_function/puterror.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/puterror.c.i
+.PHONY : srcs/error_function/puterror.c.i
+
+srcs/error_function/puterror.s: srcs/error_function/puterror.c.s
+
+.PHONY : srcs/error_function/puterror.s
+
+# target to generate assembly for a file
+srcs/error_function/puterror.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/puterror.c.s
+.PHONY : srcs/error_function/puterror.c.s
+
 srcs/hash/built_in_hash.o: srcs/hash/built_in_hash.c.o
 
 .PHONY : srcs/hash/built_in_hash.o
@@ -6090,6 +6117,9 @@ help:
 	@echo "... srcs/error_function/bip.o"
 	@echo "... srcs/error_function/bip.i"
 	@echo "... srcs/error_function/bip.s"
+	@echo "... srcs/error_function/puterror.o"
+	@echo "... srcs/error_function/puterror.i"
+	@echo "... srcs/error_function/puterror.s"
 	@echo "... srcs/hash/built_in_hash.o"
 	@echo "... srcs/hash/built_in_hash.i"
 	@echo "... srcs/hash/built_in_hash.s"

@@ -14,7 +14,9 @@
 
 int			main(void)
 {
-	fdb = open("./logger", O_CREAT | O_TRUNC | O_WRONLY, 0000);
+	fdb = open("./logger", O_TRUNC | O_WRONLY, 0000);
+	errno = ENOMEM;
+		perror("");
 	init_env();
 	write_history_in_sh();
 	init_hash();

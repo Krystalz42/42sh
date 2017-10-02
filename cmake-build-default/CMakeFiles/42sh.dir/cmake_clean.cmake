@@ -206,6 +206,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o"
   "CMakeFiles/42sh.dir/srcs/term/set_term.c.o"
   "CMakeFiles/42sh.dir/srcs/hash/write_hash.c.o"
+  "CMakeFiles/42sh.dir/srcs/error_function/puterror.c.o"
   "42sh.pdb"
   "42sh"
 )

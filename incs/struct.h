@@ -188,4 +188,10 @@ typedef struct      s_outstanding
 	struct s_outstanding *prev;
 }                   t_outstanding;
 
+typedef struct 		s_error
+{
+	int 			err;
+	char 			*msg;
+}					t_error;
+
 #endif

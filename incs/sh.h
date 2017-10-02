@@ -13,21 +13,22 @@
 #ifndef SH_H
 # define SH_H
 
-#include <libft.h>
-#include <unistd.h>
-#include <struct.h>
-#include <limits.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <define.h>
-#include <termios.h>
-#include <fcntl.h>
-#include <curses.h>
-#include <term.h>
-#include <stdbool.h>
-#include <sys/types.h>
-#include <dirent.h>
-#include <signal.h>
+# include <errno.h>
+# include <libft.h>
+# include <unistd.h>
+# include <struct.h>
+# include <limits.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <define.h>
+# include <termios.h>
+# include <fcntl.h>
+# include <curses.h>
+# include <term.h>
+# include <stdbool.h>
+# include <sys/types.h>
+# include <dirent.h>
+# include <signal.h>
 
 //DEBUG
 int fdb;
@@ -76,8 +77,8 @@ t_outstanding       *get_os_pointer(t_outstanding *get, int flags);
 */
 
 unsigned int		hash_value(char *str);
-t_table_hash        *gbl_save_table_hash(t_table_hash *hash, int flags);
-void	        	inventory_hash(t_hash **hash, unsigned int index);
+t_table_hash		*gbl_save_table_hash(t_table_hash *hash, int flags);
+void				inventory_hash(t_hash **hash, unsigned int index);
 t_hash				**hash_board(void);
 void	        	add_hash(char *bin, char *path, size_t index);
 void                init_hash(void);
@@ -232,6 +233,7 @@ void                memdel_outstanding(void);
 **			   	ERROR FUNCTION
 */
 
-int					bip(void);
+void								puterror(char *err);
+int									bip(void);
 
 #endif

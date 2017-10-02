@@ -216,7 +216,7 @@ set(SOURCE_FILES
         srcs/term/init_fd.c
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
-        srcs/term/set_term.c srcs/hash/write_hash.c)
+        srcs/term/set_term.c srcs/hash/write_hash.c srcs/error_function/puterror.c)
 
 include_directories(
         incs

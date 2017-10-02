@@ -127,6 +127,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/aroulin/42sh/srcs/env/my_getenv.c" "/Users/aroulin/42sh/cmake-build-default/CMakeFiles/42sh.dir/srcs/env/my_getenv.c.o"
   "/Users/aroulin/42sh/srcs/env/split.c" "/Users/aroulin/42sh/cmake-build-default/CMakeFiles/42sh.dir/srcs/env/split.c.o"
   "/Users/aroulin/42sh/srcs/error_function/bip.c" "/Users/aroulin/42sh/cmake-build-default/CMakeFiles/42sh.dir/srcs/error_function/bip.c.o"
+  "/Users/aroulin/42sh/srcs/error_function/puterror.c" "/Users/aroulin/42sh/cmake-build-default/CMakeFiles/42sh.dir/srcs/error_function/puterror.c.o"
   "/Users/aroulin/42sh/srcs/hash/built_in_hash.c" "/Users/aroulin/42sh/cmake-build-default/CMakeFiles/42sh.dir/srcs/hash/built_in_hash.c.o"
   "/Users/aroulin/42sh/srcs/hash/get_str_from_hash.c" "/Users/aroulin/42sh/cmake-build-default/CMakeFiles/42sh.dir/srcs/hash/get_str_from_hash.c.o"
   "/Users/aroulin/42sh/srcs/hash/hash_board.c" "/Users/aroulin/42sh/cmake-build-default/CMakeFiles/42sh.dir/srcs/hash/hash_board.c.o"

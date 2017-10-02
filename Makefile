@@ -140,6 +140,7 @@ SRCS = \
 	   memdel_struct/memdel_search_history.c                \
 	   memdel_struct/memdel_read.c							\
 	   error_function/bip.c									\
+	   error_function/puterror.c							\
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #

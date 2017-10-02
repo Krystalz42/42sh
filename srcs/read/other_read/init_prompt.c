@@ -12,122 +12,94 @@
 
 #include <sh.h>
 
-static void			my_pwd(int fderr)
+static void				personnal_command(char *command[], int fdout, int fderr)
 {
-    static char	*command[] = {"/bin/pwd", NULL};
-    pid_t	    father;
-    int         fdout;
-	int status;
+	pid_t 		father;
+	int			status;
 
-
-	fdout = open(PATH_PWD, O_CREAT | O_TRUNC | O_WRONLY, 0644);
-    if ((father = fork()) == -1)
-        return ;
-	STR_FD("PID PWD :",fdb); NBR_FD(father, fdb); CHAR_FD(10,fdb);
-    if (!father)
-    {
-        dup2(fdout, STDOUT_FILENO);
-	    dup2(fderr, STDERR_FILENO);
-        execve(command[0], command, NULL);
-	    exit(EXIT_FAILURE);
-    }
-    else
-	    waitpid(father, &status, 0);
-    close(fdout);
-}
-
-static inline void			git_branch(int fderr)
-{
-	static char	*command[] = {"/usr/bin/git", "branch", NULL};
-	pid_t	    father;
-    int         fdout;
-	int status;
-
-	fdout = open(PATH_GIT, O_CREAT | O_TRUNC | O_WRONLY, 0644);
-    if ((father = fork()) == -1) {
-	    return ;
-    }
-	STR_FD("PID GIT :",fdb); NBR_FD(father, fdb); CHAR_FD(10,fdb);
-	if (!father)
-    {
-	    dup2(fdout, STDOUT_FILENO);
-        dup2(fderr, STDERR_FILENO);
-        execve(command[0],command, NULL);
-	    perror("");
-	    exit(EXIT_FAILURE);
-    }
-    else
-	    waitpid(father, &status, 0);
-	close(fdout);
-}
-
-static int            get_str_from_branch(char **prompt, int fderr)
-{
-	char		*line;
-    static int	fd;
-    int         len;
-	char        *tmp;
-
-    git_branch(fderr);
-    fd = open(PATH_GIT, O_RDONLY);
-	while (my_gnl(fd, &line))
+	father = fork();
+	if (father == -1)
+		puterror("fork");
+	else if (father)
+		waitpid(father, &status, 0);
+	else
 	{
-		(line[0] == '*') && (tmp = ft_strdup(line));
-		free(line);
+		dup2(fdout, STDOUT_FILENO);
+		dup2(fderr, STDERR_FILENO);
+		execve(command[0], command, NULL);
+		exit(EXIT_FAILURE);
 	}
-	if ((len = ft_strlen(tmp)))
+}
+ static size_t            get_str_from_branch(char **prompt, int fderr)
+{
+	static char		*command[] = {"/usr/bin/git", "branch", NULL};
+	char			*line;
+	int				fdout;
+	size_t			len;
+
+	if ((fdout = open(PATH_GIT, O_CREAT | O_TRUNC | O_WRONLY, 0644)) == -1)
+		return (0);
+	personnal_command(command, fdout, fderr);
+	if ((fdout = open(PATH_GIT, O_RDONLY)) == -1)
+		return (0);
+	while (my_gnl(fdout, &line) == 1 && line[0] != '*')
+		ft_memdel((void **)&line);
+	if ((len = ft_strlen(line)))
     {
+		(*prompt) = (char *)ft_realloc((void **)prompt, ft_strlen(*prompt), ft_strlen("\x1B[31m git[\x1B[32m\x1B[31m]") + len - 1);
         ft_strcpy((*prompt) + ft_strlen((*prompt)), "\x1B[31m git[\x1B[32m");
-        ft_strcpy((*prompt) + ft_strlen((*prompt)), tmp + 2);
+        ft_strcpy((*prompt) + ft_strlen((*prompt)), line + 2);
         ft_strcpy((*prompt) + ft_strlen((*prompt)), "\x1B[31m]");
     }
-	free(tmp);
+	ft_memdel((void **)&line);
 	remove(PATH_GIT);
-	close(fd);
+	close(fdout);
     return (len ? (6 + len - 2) : len);
 }
 
-static int          get_str_from_pwd(char **prompt, int fderr)
+static size_t		get_str_from_pwd(char **prompt, int fderr)
 {
-    char        *tmp;
-    int         i;
-    size_t        s;
-	int         fd;
+	static char	*command[] = {"/bin/pwd", NULL};
+	char        *line;
+	size_t		len;
+	int         fdout;
 
-    tmp = NULL;
-    my_pwd(fderr);
-    fd = open(PATH_PWD, O_RDONLY);
-    my_gnl(fd, &tmp);
-    s = 0;
-    i = -1;
-    while (tmp && tmp[++i])
-        if (tmp[i] == '/')
-            s = i;
-    ft_strcpy((*prompt) + ft_strlen(*prompt), (!s) ? tmp : tmp + s + 1);
-    s = ft_strlen(tmp + s + 1);
-    free(tmp);
+	if ((fdout = open(PATH_PWD, O_CREAT | O_TRUNC | O_WRONLY, 0644)) == -1)
+		return (0);
+	personnal_command(command, fdout, fderr);
+	if ((fdout = open(PATH_PWD, O_RDONLY)) == -1)
+		return (0);
+	if ((my_gnl(fdout, &line)) != 1)
+		return (0);
+    len = ft_strlen(line) - 1;
+	while (line[len] != '/')
+		len--;
+	(*prompt) = (char *)ft_realloc((void **)prompt, ft_strlen(*prompt), ft_strlen(*prompt) + (len) ? len : 1);
+	ft_strcpy((*prompt) + ft_strlen((*prompt)), line + (len ? len + 1 : len));
+	len = ft_strlen(line + (len ? len + 1 : len));
+	ft_memdel((void **)&line);
 	remove(PATH_PWD);
-    close(fd);
-    return (!s ? 1 : s);
+    return (len ?  : 1);
 }
 
 void			init_prompt(void)
 {
-	static int      fderr = 0;
-    static char    	*prompt;
-    int             i;
-    int             len;
+	int				fderr;
+    static char		*prompt;
+    size_t			len;
 
-    i = -1;
-    len = 3;
 	fderr = open(PATH_ERR, O_WRONLY);
-	(!prompt) ? prompt = (char *)ft_memalloc(127) : ft_bzero(prompt, 127);
-    ft_strcpy(prompt, "\x1B[1m\x1B[34m");
-    len += get_str_from_pwd(&prompt, fderr);
+	len = 3;
+	prompt = (char *)ft_realloc((void **)&prompt, 0, ft_strlen("\x1B[1m\x1B[34m"));
+	ft_strcpy(prompt, "\x1B[1m\x1B[34m");
+	len += get_str_from_pwd(&prompt, fderr);
     len += get_str_from_branch(&prompt, fderr);
+	prompt = (char *)ft_realloc((void **)&prompt, ft_strlen(prompt),
+		ft_strlen(prompt) + ft_strlen("\x1B[31m √ \x1B[0m"));
 	ft_strcpy(prompt + ft_strlen(prompt), var_return(424242) ? GRN : RED);
     ft_strcpy(prompt + ft_strlen(prompt), " √ \x1B[0m");
 	my_prompt(prompt);
-    get_len_prompt(len);
+    get_len_prompt((int)len);
+	(prompt) = NULL;
     close(fderr);
 }
