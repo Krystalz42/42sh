@@ -224,4 +224,6 @@ include_directories(
         libs/printf/incs
         )
 
+target_link_libraries(libft ncurses)
+
 add_executable(42sh ${SOURCE_FILES})

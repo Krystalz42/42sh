@@ -14,7 +14,7 @@
 
 int			main(void)
 {
-	fdb = open("./logger", O_TRUNC | O_WRONLY, 0000);
+	g_fdb = open("./logger", O_TRUNC | O_WRONLY, 0000);
 	errno = ENOMEM;
 		perror("");
 	init_env();

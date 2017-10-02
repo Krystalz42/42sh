@@ -1,4 +1,8 @@
 /Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /Users/aroulin/42sh
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/aroulin/42sh/cmake-build-default
+CMake Error at CMakeLists.txt:227 (target_link_libraries):
+  Cannot specify link libraries for target "libft" which is not built by this
+  project.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/aroulin/42sh/cmake-build-default/CMakeFiles/CMakeOutput.log".

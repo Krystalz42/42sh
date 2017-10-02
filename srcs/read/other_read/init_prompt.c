@@ -46,7 +46,7 @@ static void				personnal_command(char *command[], int fdout, int fderr)
 		ft_memdel((void **)&line);
 	if ((len = ft_strlen(line)))
     {
-		(*prompt) = (char *)ft_realloc((void **)prompt, ft_strlen(*prompt), ft_strlen("\x1B[31m git[\x1B[32m\x1B[31m]") + len - 1);
+		(*prompt) = (char *)ft_realloc((void **)prompt, ft_strlen(*prompt), ft_strlen(*prompt) + ft_strlen("\x1B[31m git[\x1B[32m\x1B[31m]") + len - 1);
         ft_strcpy((*prompt) + ft_strlen((*prompt)), "\x1B[31m git[\x1B[32m");
         ft_strcpy((*prompt) + ft_strlen((*prompt)), line + 2);
         ft_strcpy((*prompt) + ft_strlen((*prompt)), "\x1B[31m]");
@@ -90,6 +90,7 @@ void			init_prompt(void)
 
 	fderr = open(PATH_ERR, O_WRONLY);
 	len = 3;
+	ft_memdel((void **)&prompt);
 	prompt = (char *)ft_realloc((void **)&prompt, 0, ft_strlen("\x1B[1m\x1B[34m"));
 	ft_strcpy(prompt, "\x1B[1m\x1B[34m");
 	len += get_str_from_pwd(&prompt, fderr);
@@ -100,6 +101,5 @@ void			init_prompt(void)
     ft_strcpy(prompt + ft_strlen(prompt), " √ \x1B[0m");
 	my_prompt(prompt);
     get_len_prompt((int)len);
-	(prompt) = NULL;
     close(fderr);
 }
