@@ -14,12 +14,12 @@
 
 void    write_hash(void)
 {
-    char *path_hash;
-    int 	a;
-    if (!(get_str_from_hash()));
-        return ;
-    if ((fd = open(path_hash, O_CREAT | O_TRUNC | O_WRONLY, 0644)) == -1)
-        return ;
-    hash_print(fd);
+//    char *path_hash;
+//    int 	a;
+//    if (!(get_str_from_hash()));
+//        return ;
+//    if ((fd = open(path_hash, O_CREAT | O_TRUNC | O_WRONLY, 0644)) == -1)
+//        return ;
+//    hash_print(fd);
 }
 

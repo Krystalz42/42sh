@@ -13,11 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b5ac3e16-7338-47d4-bb3b-5cd56dad5d2a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/define.h" afterPath="$PROJECT_DIR$/incs/define.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/sh.h" afterPath="$PROJECT_DIR$/incs/sh.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/main.c" afterPath="$PROJECT_DIR$/srcs/cores/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/init_prompt.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/init_prompt.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/outstanding/add_outstanding.c" afterPath="$PROJECT_DIR$/srcs/read/outstanding/add_outstanding.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/hash/write_hash.c" afterPath="$PROJECT_DIR$/srcs/hash/write_hash.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-default/" />
@@ -34,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sh.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sh.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/incs/sh.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="90" column="64" lean-forward="false" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
+            <state relative-caret-position="756">
+              <caret line="167" column="77" lean-forward="false" selection-start-line="167" selection-start-column="77" selection-end-line="167" selection-end-column="77" />
               <folding>
                 <element signature="e#920#939#0" expanded="true" />
               </folding>
@@ -46,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
-              <caret line="223" column="18" lean-forward="false" selection-start-line="223" selection-start-column="18" selection-end-line="223" selection-end-column="18" />
+            <state relative-caret-position="306">
+              <caret line="200" column="39" lean-forward="true" selection-start-line="200" selection-start-column="39" selection-end-line="200" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -81,6 +78,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="630">
               <caret line="42" column="49" lean-forward="false" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="write_hash.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/srcs/hash/write_hash.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -126,16 +133,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="struct.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/incs/struct.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="193" column="25" lean-forward="false" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -172,7 +169,6 @@
         <option value="$PROJECT_DIR$/srcs/hash/hash_board.c" />
         <option value="$PROJECT_DIR$/srcs/cores/shell.c" />
         <option value="$PROJECT_DIR$/srcs/hash/built_in_hash.c" />
-        <option value="$PROJECT_DIR$/srcs/hash/write_hash.c" />
         <option value="$PROJECT_DIR$/srcs/error_function/error_fork.c" />
         <option value="$PROJECT_DIR$/srcs/error_function/error_open.c" />
         <option value="$PROJECT_DIR$/incs/struct.h" />
@@ -182,8 +178,9 @@
         <option value="$PROJECT_DIR$/incs/define.h" />
         <option value="$PROJECT_DIR$/srcs/cores/main.c" />
         <option value="$PROJECT_DIR$/srcs/read/outstanding/add_outstanding.c" />
-        <option value="$PROJECT_DIR$/incs/sh.h" />
+        <option value="$PROJECT_DIR$/srcs/hash/write_hash.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/incs/sh.h" />
       </list>
     </option>
   </component>
@@ -679,12 +676,12 @@
       <workItem from="1506699124908" duration="3794000" />
       <workItem from="1506722157880" duration="2560000" />
       <workItem from="1506847777067" duration="8121000" />
-      <workItem from="1506940433493" duration="8892000" />
+      <workItem from="1506940433493" duration="9432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26989000" />
+    <option name="totallyTimeSpent" value="27529000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1024,14 +1021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/hash/write_hash.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/hash/get_str_from_hash.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1136,21 +1125,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/incs/sh.h">
+    <entry file="file://$PROJECT_DIR$/srcs/hash/write_hash.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="90" column="64" lean-forward="false" selection-start-line="90" selection-start-column="64" selection-end-line="90" selection-end-column="64" />
-          <folding>
-            <element signature="e#920#939#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="223" column="18" lean-forward="false" selection-start-line="223" selection-start-column="18" selection-end-line="223" selection-end-column="18" />
+        <state relative-caret-position="306">
+          <caret line="200" column="39" lean-forward="true" selection-start-line="200" selection-start-column="39" selection-end-line="200" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/incs/sh.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="167" column="77" lean-forward="false" selection-start-line="167" selection-start-column="77" selection-end-line="167" selection-end-column="77" />
+          <folding>
+            <element signature="e#920#939#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -469,6 +469,13 @@ CMakeFiles/42sh.dir/srcs/error_function/bip.c.o
  ../libs/libft/incs/get_next_line.h
  ../libs/libft/incs/libft.h
  /Users/aroulin/42sh/srcs/error_function/bip.c
+CMakeFiles/42sh.dir/srcs/error_function/puterror.c.o
+ ../incs/define.h
+ ../incs/sh.h
+ ../incs/struct.h
+ ../libs/libft/incs/get_next_line.h
+ ../libs/libft/incs/libft.h
+ /Users/aroulin/42sh/srcs/error_function/puterror.c
 CMakeFiles/42sh.dir/srcs/hash/built_in_hash.c.o
  ../incs/define.h
  ../incs/sh.h

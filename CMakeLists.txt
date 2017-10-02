@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.7)
 project(42sh)
 
+set (CMAKE_C_FLAGS "-g -Wall -Werror -Wextra")
+
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
@@ -224,6 +226,7 @@ include_directories(
         libs/printf/incs
         )
 
-target_link_libraries(libft ncurses)
-
 add_executable(42sh ${SOURCE_FILES})
+
+target_link_libraries(curses)
+

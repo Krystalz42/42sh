@@ -469,6 +469,13 @@ CMakeFiles/42sh.dir/srcs/error_function/bip.c.o: ../libs/libft/incs/get_next_lin
 CMakeFiles/42sh.dir/srcs/error_function/bip.c.o: ../libs/libft/incs/libft.h
 CMakeFiles/42sh.dir/srcs/error_function/bip.c.o: ../srcs/error_function/bip.c
 
+CMakeFiles/42sh.dir/srcs/error_function/puterror.c.o: ../incs/define.h
+CMakeFiles/42sh.dir/srcs/error_function/puterror.c.o: ../incs/sh.h
+CMakeFiles/42sh.dir/srcs/error_function/puterror.c.o: ../incs/struct.h
+CMakeFiles/42sh.dir/srcs/error_function/puterror.c.o: ../libs/libft/incs/get_next_line.h
+CMakeFiles/42sh.dir/srcs/error_function/puterror.c.o: ../libs/libft/incs/libft.h
+CMakeFiles/42sh.dir/srcs/error_function/puterror.c.o: ../srcs/error_function/puterror.c
+
 CMakeFiles/42sh.dir/srcs/hash/built_in_hash.c.o: ../incs/define.h
 CMakeFiles/42sh.dir/srcs/hash/built_in_hash.c.o: ../incs/sh.h
 CMakeFiles/42sh.dir/srcs/hash/built_in_hash.c.o: ../incs/struct.h

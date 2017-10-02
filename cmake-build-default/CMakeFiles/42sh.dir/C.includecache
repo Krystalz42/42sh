@@ -9,6 +9,8 @@
 ../incs/define.h
 
 ../incs/sh.h
+errno.h
+-
 libft.h
 -
 unistd.h
@@ -719,6 +721,10 @@ sh.h
 -
 
 /Users/aroulin/42sh/srcs/error_function/bip.c
+sh.h
+-
+
+/Users/aroulin/42sh/srcs/error_function/puterror.c
 sh.h
 -
 
