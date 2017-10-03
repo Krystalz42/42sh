@@ -1,8 +1,0 @@
-/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /Users/aroulin/42sh
-CMake Error at CMakeLists.txt:231 (target_link_libraries):
-  Cannot specify link libraries for target "curses" which is not built by
-  this project.
-
-
--- Configuring incomplete, errors occurred!
-See also "/Users/aroulin/42sh/cmake-build-default/CMakeFiles/CMakeOutput.log".

@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 17:05:11 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/10/02 17:33:45 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef struct		s_env
 }					t_env;
 
 /*
-**			STRUCT FOR MOUSE 
+**			STRUCT FOR MOUSE
 */
 
 typedef struct		s_mouse
@@ -86,7 +86,7 @@ typedef struct		s_tab
 	int				nbr;
 	int				elem_page;
 	int				page;
-    char            *from;
+	char			*from;
 }					t_tab;
 
 /*
@@ -99,7 +99,6 @@ typedef struct		s_cursor
 	int				co;
 	int				save;
 }					t_cursor;
-
 
 /*
 **			STRUCT HISTORY
@@ -118,22 +117,23 @@ typedef struct		s_hist
 
 typedef struct		s_hash
 {
-	char         *binary;
+	char			*binary;
 	char			*path;
-    size_t          times;
+	size_t			times;
+	struct s_hash	*next;
 }					t_hash;
 
 /*
 **          STRUCT FOR LIST HASH
 */
 
-typedef struct      s_table_hash
+typedef struct		s_table_hash
 {
-    t_hash                  **hash;
-    unsigned int            index;
-    struct s_table_hash     *next;
-    struct s_table_hash     *prev;
-}                   t_table_hash;
+	t_hash					**hash;
+	unsigned int			index;
+	struct s_table_hash		*next;
+	struct s_table_hash		*prev;
+}					t_table_hash;
 
 /*
 **			STRUCT FOR SEARCH IN HISTORY
@@ -155,11 +155,11 @@ typedef struct		s_read
 	t_tab			*tab_;
 	t_lfh			*hist_search;
 	int				completion;
-	int             history_search;
+	int				history_search;
 	t_cursor		cur;
 	int				history;
 	int				finish;
-	int             print;
+	int				print;
 }					t_read;
 
 /*
@@ -172,26 +172,17 @@ typedef struct		s_cmp
 	int				(*function)(struct s_read **read_std, unsigned long buff);
 }					t_cmp;
 
-typedef struct      s_do
-{
-	unsigned long   cmd;
-	int				(*function)(struct s_read **read_std, unsigned long buff);
+/*
+**			STRUCT FOR UNDO (OUTSTANDING)
+*/
 
-}                   t_do;
-
-typedef struct      s_outstanding
+typedef struct		s_outstanding
 {
-	t_cmd           *cmd;
-	unsigned long   movement;
-	unsigned long   buff;
-	struct s_outstanding *next;
-	struct s_outstanding *prev;
-}                   t_outstanding;
-
-typedef struct 		s_error
-{
-	int 			err;
-	char 			*msg;
-}					t_error;
+	t_cmd					*cmd;
+	unsigned long			movement;
+	unsigned long			buff;
+	struct s_outstanding	*next;
+	struct s_outstanding	*prev;
+}					t_outstanding;
 
 #endif

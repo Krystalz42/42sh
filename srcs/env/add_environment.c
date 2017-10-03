@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bip.c                                              :+:      :+:    :+:   */
+/*   add_environment.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/13 04:15:14 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 15:08:30 by aroulin          ###   ########.fr       */
+/*   Created: 2017/10/03 03:06:18 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/03 03:06:19 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			bip(void)
+void		add_environment(char *string)
 {
-	CHAR_FD(7, 2);
-	return (1);
+	char		**table;
+	char		**cpy;
+	size_t		len;
+	int 		i;
+
+	table = env_table(NULL, ENV_REC);
+	len = ft_tablen(table);
+	cpy = (char **)ft_memalloc(sizeof(char *) * (len + 2));
+	i = -1;
+	while (table[++i])
+		cpy[i] = table[i];
+	cpy[i] = ft_strdup(string);
+	cpy[i + 1] = NULL;
+	ft_memdel((void **)&table);
+	env_table(cpy, ENV_INIT);
 }

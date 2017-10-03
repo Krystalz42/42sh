@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atoui.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/29 16:44:27 by aroulin          ###   ########.fr       */
+/*   Created: 2017/10/02 19:10:10 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/02 19:10:11 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sh.h>
+#include <libft.h>
 
-int			main(void)
+static int	check_pass(char c)
 {
-	g_fdb = open("/Users/aroulin/42sh/logger",
-				O_CREAT | O_TRUNC | O_WRONLY, 0644);
-	init_env();
-	write_history_in_sh();
-	init_hash();
-	if (init_term())
+	if (c == 32 || c == 11 || c == 9 || c == '\r' || c == '\n' || c == '\f')
 		return (1);
-	var_return(1);
-	init_fd();
-	shell();
-	b_write_history_in_file(get_str_from_history());
 	return (0);
+}
+
+
+unsigned int		ft_atoui(const char *str)
+{
+	unsigned int	number;
+
+	if (!str)
+		return (0);
+	while (check_pass((unsigned char)(*str)))
+		str++;
+	number = 0;
+	while (*str && ft_isdigit(*str))
+	{
+		number = number * 10 + (unsigned char)(*str) - '0';
+		str++;
+	}
+	return (number);
 }

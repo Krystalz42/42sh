@@ -17,8 +17,6 @@
 **			INITIALIZATION FLAGS
 */
 
-# define LEN_BUFFER         7
-
 # define ENV_NULL	        1
 # define ENV_INIT	        2
 # define ENV_REC	        4
@@ -44,14 +42,6 @@
 # define PATH_GIT           "/tmp/.git_info"
 # define PATH_PWD           "/tmp/.pwd_info"
 # define PATH_ERR           "/dev/null"
-
-# define FD_ERR             0
-# define FD_GIT             1
-# define FD_PWD             2
-# define FD_HISTORY         4
-# define FD_HASH            8
-
-# define LEN_HASH           UINT_MAX - 1
 
 /*
 **			INITIALIZATION READ

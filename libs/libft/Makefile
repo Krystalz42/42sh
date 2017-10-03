@@ -48,6 +48,9 @@ NAME		= libft.a
 
 SRCS = \
 	   ft_atoi.c				\
+	   ft_atoui.c				\
+	   ft_firstchar.c			\
+	   ft_tablen.c              \
 	   ft_atoi_base.c			\
 	   ft_bzero.c				\
 	   ft_chrchar.c				\

@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
-/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/10/02 18:20:43 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char			*ft_uitoa(unsigned int n)
 		nbr[++len] = (n % 10) + 48;
 		n /= 10;
 	}
-    nbr[++len] = 0;
+	nbr[++len] = 0;
 	return (ft_strrev(nbr));
 }

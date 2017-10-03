@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/05 18:09:58 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/10/02 18:07:21 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 # define GET_NEXT_LINE_H
 # define BUFF_SIZE 25600
 
-typedef struct	s_fd
+typedef struct			s_fd
 {
-    int					fd;
-    char				*keep;
-} t_fd;
+	int					fd;
+	char				*keep;
+}						t_fd;
 
 typedef struct			s_struct
 {
@@ -41,14 +41,7 @@ typedef struct			s_tree
 	struct s_tree		*right;
 }						t_tree;
 
-typedef	enum			e_bool
-{
-	true = 1,
-	false = -1
-}						t_bool;
-
-int				get_next_line(int fd, char **line);
-int             my_gnl(int fd, char **line);
-
+int						get_next_line(int fd, char **line);
+int						my_gnl(int fd, char **line);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/13 19:55:50 by aroulin           #+#    #+#             */
-/*   Updated: 2017/04/18 17:17:18 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/10/02 18:17:18 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <fcntl.h>
 #include <stdio.h>
 
-void        add_size(char **buff, int *max_len)
+void				add_size(char **buff, int *max_len)
 {
 	char *tmp;
 
@@ -28,11 +28,11 @@ void        add_size(char **buff, int *max_len)
 	(*buff) = tmp;
 }
 
-int         my_gnl(int fd, char **line)
+int					my_gnl(int fd, char **line)
 {
-	int     max_len;
-	int     i;
-	int     ret;
+	int		max_len;
+	int		i;
+	int		ret;
 
 	if (fd == -1 || !line)
 		return (0);
@@ -51,9 +51,7 @@ int         my_gnl(int fd, char **line)
 		(*line)[i] = '\0';
 		return (1);
 	}
-	else if ((!ret && !i))
+	else
 		ft_memdel((void **)line);
 	return (ret);
 }
-
-

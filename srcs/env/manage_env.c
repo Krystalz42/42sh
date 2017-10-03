@@ -1,19 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bip.c                                              :+:      :+:    :+:   */
+/*   manage_env.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/13 04:15:14 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 15:08:30 by aroulin          ###   ########.fr       */
+/*   Created: 2017/10/03 04:25:19 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/03 04:25:22 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			bip(void)
+char				**manage_option(char *string)
 {
-	CHAR_FD(7, 2);
-	return (1);
+	char		**table;
+
+	table = env_table(NULL, ENV_REC);
+	if (string)
+	{
+
+	}
+	return (usage())
+}
+
+
+char				**manage_env(char *flag, char *str)
+{
+	int 		opt;
+
+	opt = 0;
+	if (flag && *flag == '-')
+	{
+		while (*flag++)
+			if (*flag == 'i' || *flag == 'u')
+				opt = *flag;
+		return ((opt == u) ? manage_option(str) : NULL);
+	}
+	return (table);
 }

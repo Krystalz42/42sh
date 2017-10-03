@@ -15,7 +15,7 @@
 unsigned int		hash_value(char *str)
 {
 	int					i;
-	unsigned int		nb;
+	unsigned short		nb;
 
 	i = -1;
 	nb = 0;
@@ -28,6 +28,6 @@ unsigned int		hash_value(char *str)
 	nb += (nb << 3);
 	nb ^= (nb >> 11);
 	nb += (nb << 15);
-	nb = (nb % LEN_HASH);
+	nb = (nb % USHRT_MAX);
 	return (nb);
 }

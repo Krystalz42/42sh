@@ -56,24 +56,15 @@ static void		writetable(char const *s, char **table, char c)
 	table[countwords] = 0;
 }
 
-char			**ft_strsplit(char	const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**table;
 
-	if (!s)
+	if (!s || !*s)
 		return (NULL);
-	if (*s != 0)
-	{
-		table = (char **)malloc(sizeof(char *) * (ft_count(s, c) + 1));
-		if (table == NULL)
-			return (NULL);
-		writetable(s, table, c);
-	}
-	else
-	{
-		table = (char **)malloc(sizeof(char*));
-		table[0] = (char *)malloc(1);
-		table[0] = 0;
-	}
+	table = (char **)malloc(sizeof(char *) * (ft_count(s, c) + 1));
+	if (table == NULL)
+		return (NULL);
+	writetable(s, table, c);
 	return (table);
 }

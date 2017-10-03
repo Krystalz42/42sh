@@ -41,7 +41,8 @@ int							g_fdb;
 
 int							shell(void);
 void						insert_one_line(void);
-char						var_return(int ret);
+unsigned char				var_return(int ret);
+
 
 /*
 **				FUNCTION READ && PRINT && RETURN A STRUCT
@@ -81,12 +82,12 @@ t_outstanding				*get_os_pointer(t_outstanding *get,
 **				HASH FUNCTION
 */
 
+void						init_hash(void);
 unsigned int				hash_value(char *str);
-t_table_hash				*gbl_save_table_hash(t_table_hash *hash,
-															int flags);
-void						inventory_hash(t_hash **hash,
-													unsigned int index);
+void						inventory_hash(unsigned int new_index);
 t_hash						**hash_board(void);
+unsigned int				*index_of_hash(void);
+char						*search_path(char *binary);
 void						add_hash(char *bin, char *path,
 														size_t index);
 void						init_hash(void);
@@ -96,7 +97,6 @@ char						*get_str_from_hash(void);
 **              BUILT IN FUNCTION
 */
 
-void						write_hash(void);
 void						hash_reset(void);
 void						hash_print(int fd);
 int							b_write_history(void);
@@ -147,13 +147,17 @@ static inline int			management_wildcard(char *data, char *comp);
 int							key_print_(t_read **read_std, unsigned long buff);
 int							key_tab(t_read **read_std, unsigned long buff);
 int							key_enter_(t_read **read_std, unsigned long buff);
-int							key_interrupt(t_read **read_std, unsigned long buff);
+int							key_interrupt(t_read **read_std,
+											unsigned long buff);
 int							key_clear_(t_read **read_std, unsigned long buff);
 int							key_eof(t_read **read_std, unsigned long buff);
-int							key_arrow_left(t_read **read_std, unsigned long buff);
-int							key_arrow_right(t_read **read_std, unsigned long buff);
+int							key_arrow_left(t_read **read_std,
+											unsigned long buff);
+int							key_arrow_right(t_read **read_std,
+											unsigned long buff);
 int							key_arrow_up(t_read **read_std, unsigned long buff);
-int							key_arrow_down(t_read **read_std, unsigned long buff);
+int							key_arrow_down(t_read **read_std,
+											unsigned long buff);
 int							key_home_(t_read **read_std, unsigned long buff);
 int							key_del(t_read **read_std, unsigned long buff);
 int							key_shift_up(t_read **read, unsigned long buff);
@@ -161,14 +165,19 @@ int							key_shift_down(t_read **read, unsigned long buff);
 int							key_shift_left(t_read **read, unsigned long buff);
 int							key_shift_right(t_read **read, unsigned long buff);
 int							key_end_(t_read **read_std, unsigned long buff);
-int							key_delete_here(t_read **read_std, unsigned long buff);
-int							key_search_history(t_read **read_std, unsigned long buff);
+int							key_delete_here(t_read **read_std,
+											unsigned long buff);
+int							key_search_history(t_read **read_std,
+												unsigned long buff);
 int							key_undo_(t_read **read_std, unsigned long buff);
 int							key_reprint(t_read **read_std, unsigned long buff);
-int							key_reprint_here(t_read **read_std, unsigned long);
+int							key_reprint_here(t_read **read_std,
+												unsigned long buff);
 int							key_kill_k(t_read **read_std, unsigned long buff);
-int							key_kill_word(t_read **read_std, unsigned long buff);
-int							key_kill_prev_word(t_read **read_std, unsigned long buff);
+int							key_kill_word(t_read **read_std,
+											unsigned long buff);
+int							key_kill_prev_word(t_read **read_std,
+												unsigned long buff);
 int							key_del_buff(t_read **read_std, unsigned long buff);
 int							key_yank(t_read **read_std, unsigned long buff);
 
@@ -176,74 +185,75 @@ int							key_yank(t_read **read_std, unsigned long buff);
 **              SEARCH HISTORY FUNCTION
 */
 
-int                 init_research(t_read **read_std);
-int		            print_struct_history(t_read **read_std);
-int                 reset_cur_hist(t_lfh *hist);
-int                 prompt_history(int p);
-int                 new_line_after_bloc(t_read **read_std, int to);
-int		        	key_print_fct(t_cmd *cmd, char c);
-void                compare_history(t_read **read_std);
-int                 list_compare(t_cmd *little, t_cmd *big);
-t_hist              *first_history(void);
-int                 last_resultat(int res);
-char                *get_str_from_history(void);
+int							init_research(t_read **read_std);
+int							print_struct_history(t_read **read_std);
+int							reset_cur_hist(t_lfh *hist);
+int							prompt_history(int p);
+int							new_line_after_bloc(t_read **read_std, int to);
+int							key_print_fct(t_cmd *cmd, char c);
+void						compare_history(t_read **read_std);
+int							list_compare(t_cmd *little, t_cmd *big);
+t_hist						*first_history(void);
+int							last_resultat(int res);
+char						*get_str_from_history(void);
 
 /*
 **				ENVIRONEMENT FUNCTION
 */
 
-void                create_table_env(void);
-t_env				*gbl_save_env(unsigned short flags, t_env *env);
-void				init_env(void);
-void				split_env(char *env);
-void				add_list_env(char *name, char *value);
-char				*my_getenv(char *str);
-
+char						**manage_env(char *flag, char *str);
+void						add_environment(char *string);
+void						init_env(void);
+char						*my_getenv(char *str);
+size_t						compare_environment(char *s1, char *s2);
+void						remove_environment(char *string);
+char						**env_table(char **env, int flags);
 /*
 **				HISTORY FUNCTION
 */
 
-t_hist             *set_history_to_last(void);
-void		        reset_history(void);
-void				write_history_in_sh(void);
-void				copy_cmd(t_read **read_std, t_cmd *cpy);
-t_hist				*gbl_save_history(t_hist *hist, int flags);
-void				make_list_hist(t_read *read_std);
-void				previous_history(t_read **read_std);
-void				next_history(t_read **read_std);
-int                 b_write_history_in_file(char *path);
+t_hist						*set_history_to_last(void);
+void						reset_history(void);
+void						write_history_in_sh(void);
+void						copy_cmd(t_read **read_std, t_cmd *cpy);
+t_hist						*gbl_save_history(t_hist *hist, int flags);
+void						make_list_hist(t_read *read_std);
+void						previous_history(t_read **read_std);
+void						next_history(t_read **read_std);
+int							b_write_history_in_file(char *path);
 
 /*
 **				SIGNAL FUNCTION
 */
 
-void				init_signal(void);
-void				reset_signal(void);
+void						init_signal(void);
+void						reset_signal(void);
 
 /*
 **				TERMIOS FUNCTION
 */
 
-struct termios		keep_term_struct(unsigned short flags, struct termios *term);
-void				set_termios(unsigned short flags);
-int					init_fd(void);
-int					init_term(void);
+struct termios				keep_term_struct(unsigned short flags,
+											struct termios *term);
+void						set_termios(unsigned short flags);
+int							init_fd(void);
+int							init_term(void);
 
 /*
 **				FUNCTION MEMDEL STRUCTURE
 */
 
-int					memdel_completion(t_tab **tab_);
-int					memdel_read(t_read **read_std);
-int                 memdel_lfh(t_lfh **hist_search);
-int					memdel_cmd(t_cmd **cmd);
-void                memdel_outstanding(void);
+int							memdel_completion(t_tab **tab_);
+int							memdel_read(t_read **read_std);
+int							memdel_lfh(t_lfh **hist_search);
+int							memdel_cmd(t_cmd **cmd);
+void						memdel_outstanding(void);
 
 /*
 **			   	ERROR FUNCTION
 */
 
-void								puterror(char *err);
-int									bip(void);
+void						puterror(char *err);
+int							bip(void);
 
 #endif

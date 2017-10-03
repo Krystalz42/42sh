@@ -3,20 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
-/*   Updated: 2016/01/01 00:00:42 by aroulin          ###   ########.fr       */
+/*   Created: 2017/10/02 18:08:28 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/02 18:08:30 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <string.h>
-#include <sys/types.h>
-#include <sys/uio.h>
-#include <unistd.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
+# include <limits.h>
 # include <get_next_line.h>
 
 # define ABS(x)	(x > 0 ? x : -x)
@@ -49,21 +52,16 @@
 # define CHAR(x)	ft_putchar(x)
 # define CHAR_FD(x, y)	ft_putchar_fd(x, y)
 
-# define UINT_MAX 4294967295
 # define BASE_HEX "0123456789ABCDEF"
 # define BASE_DEC "0123456789"
 # define BASE_OCT "01234567"
 # define BASE_BIN "01"
 
-
-
-
 typedef struct		s_remain
 {
-    int				fd;
-    char			*content;
+	int				fd;
+	char			*content;
 }					t_remain;
-# define IFRETURN(a, b) if(1){if (a){return (b);}}
 
 void				ft_memdel_tab(char **ta);
 char				**ft_str_to_tab(char *str);
@@ -72,6 +70,7 @@ char				*ft_strrev(char *str);
 int					ft_recursive_power(int nb, int power);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
+size_t				ft_tablen(char **ta);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
@@ -94,8 +93,10 @@ int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_nbrlen(int nbr);
 int					ft_atoi(const char *str);
+unsigned int		ft_atoui(const char *str);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
+int					ft_firstchar(char *str, char c);
 int					ft_isprint(int c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
@@ -139,7 +140,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 char				*ft_filetostr(char *filepath);
-void            	*ft_realloc(void **ptr, size_t oldsize, size_t newsize);
+void				*ft_realloc(void **ptr, size_t oldsize, size_t newsize);
 char				*ft_newcat(char *str1, char *str2);
 char				**ft_split(const char *str, const char *separator);
 int					ft_countchar(const char *s, char c);

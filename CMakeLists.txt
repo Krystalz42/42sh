@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.7)
 project(42sh)
 
-set (CMAKE_C_FLAGS "-g -Wall -Werror -Wextra")
-
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
@@ -101,7 +99,6 @@ set(SOURCE_FILES
         libs/libft/srcs/get_next_line.c
         libs/libft/srcs/my_gnl.c
         libs/printf/incs/ft_printf.h
-        libs/printf/incs/libft.h
         libs/printf/srcs/clean_struct.c
         libs/printf/srcs/clear_flag.c
         libs/printf/srcs/converted.c
@@ -129,13 +126,9 @@ set(SOURCE_FILES
         srcs/cores/main.c
         srcs/cores/shell.c
         srcs/cores/var_return.c
-        srcs/env/add_list_env.c
-        srcs/env/env_table.c
-        srcs/env/global_save_env.c
         srcs/env/init_env.c
-        srcs/env/my_getenv.c
-        srcs/env/split.c
         srcs/error_function/bip.c
+        srcs/error_function/puterror.c
         srcs/hash/built_in_hash.c
         srcs/hash/get_str_from_hash.c
         srcs/hash/hash_board.c
@@ -218,15 +211,10 @@ set(SOURCE_FILES
         srcs/term/init_fd.c
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
-        srcs/term/set_term.c srcs/hash/write_hash.c srcs/error_function/puterror.c)
+        srcs/term/set_term.c libs/libft/srcs/ft_atoui.c srcs/env/my_getenv.c libs/libft/srcs/ft_firstchar.c srcs/env/add_environment.c libs/libft/srcs/ft_tablen.cpp libs/libft/srcs/ft_tablen.c srcs/env/remove_environment.c srcs/env/manage_env.c)
 
-include_directories(
-        incs
-        libs/libft/incs
-        libs/printf/incs
-        )
+include_directories(incs)
+include_directories(libs/libft/incs)
+include_directories(libs/printf/incs)
 
 add_executable(42sh ${SOURCE_FILES})
-
-target_link_libraries(curses)
-

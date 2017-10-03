@@ -3,6 +3,10 @@
   <component name="ProjectCodeStyleSettingsManager">
     <option name="PER_PROJECT_SETTINGS">
       <value>
+        <option name="RIGHT_MARGIN" value="80" />
+        <Objective-C>
+          <option name="INDENT_DIRECTIVE_AS_CODE" value="true" />
+        </Objective-C>
         <Objective-C-extensions>
           <file>
             <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Import" />
@@ -29,6 +33,7 @@
           </extensions>
         </Objective-C-extensions>
         <codeStyleSettings language="ObjectiveC">
+          <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="false" />
           <indentOptions>
             <option name="USE_TAB_CHARACTER" value="true" />
             <option name="SMART_TABS" value="true" />

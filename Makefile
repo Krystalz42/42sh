@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/09/21 15:34:52 by aroulin          ###   ########.fr        #
+#    Updated: 2017/10/03 01:35:15 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -125,12 +125,11 @@ SRCS = \
 	   history/gbl_save_history.c							\
 	   history/copy_cmd.c									\
 	   signal/ft_signal.c									\
-	   env/split.c											\
+	   env/add_environment.c                                \
+	   env/remove_environment.c                             \
+	   env/manage_env.c                                     \
 	   env/init_env.c										\
 	   env/my_getenv.c										\
-	   env/add_list_env.c									\
-	   env/global_save_env.c								\
-	   env/env_table.c                                      \
 	   term/init_fd.c										\
 	   term/init_term.c										\
 	   term/set_term.c										\
@@ -279,10 +278,7 @@ exe			:
 	make && ./$(NAME)
 
 leaks		:
-	while true ; do leaks $(NAME)| grep 'total\|malloced' ; sleep 3 ; clear ; done
-
-leaks1		:
-	while true ; do leaks $(NAME) ; sleep 1 ; clear ; done
+	while true ; do leaks $(NAME) ; sleep 2 ; clear ; done
 
 log			:
 	while true ; do cat logger ; sleep 2 ; clear ; done

@@ -11,9 +11,6 @@
 /* ************************************************************************** */
 
 #include <libft.h>
-#include <get_next_line.h>
-#include <stdlib.h>
-#include <unistd.h>
 
 static t_struct	*ft_newnode(void)
 {

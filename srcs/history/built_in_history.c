@@ -85,6 +85,7 @@ int			b_delete_history_offset(int offset)
 			to_kill = hist;
 			(hist->prev) && (hist->prev->next = hist->next);
 			(hist->next) && (hist->next->prev = hist->prev);
+			ft_memdel((void **)&to_kill);
 			break ;
 		}
 		hist = hist->next;

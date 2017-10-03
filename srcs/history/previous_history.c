@@ -12,8 +12,7 @@
 
 #include <sh.h>
 
-
-void		previous_history(t_read **read_std)
+void			previous_history(t_read **read_std)
 {
 	t_hist		*hist;
 

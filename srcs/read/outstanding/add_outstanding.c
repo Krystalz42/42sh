@@ -12,10 +12,10 @@
 
 #include <sh.h>
 
-static t_outstanding       *create_element_os(t_cmd *cmd, unsigned long move,
-                                       unsigned long buff)
+static t_outstanding		*create_element_os(t_cmd *cmd, unsigned long move,
+													unsigned long buff)
 {
-	t_outstanding       *tmp;
+	t_outstanding		*tmp;
 
 	tmp = (t_outstanding *)ft_memalloc(sizeof(t_outstanding));
 	tmp->cmd = cmd;
@@ -26,16 +26,14 @@ static t_outstanding       *create_element_os(t_cmd *cmd, unsigned long move,
 	return (tmp);
 }
 
-void                add_outstanding(t_cmd *cmd, unsigned long move,
-                                    unsigned long buff)
+void						add_outstanding(t_cmd *cmd, unsigned long move,
+											unsigned long buff)
 {
 	t_outstanding *element;
 
 	if (!move)
 		return ;
 	keep_buffer(cmd, 0);
-	dprintf(g_fdb, "In add outstanding [Pointer = %d][move = %lu] [buff = "
-			"%lu]\n", (cmd ? 1 : 0), move, buff);
 	if (!(element = get_os_pointer(NULL, 0)))
 		get_os_pointer(create_element_os(cmd, move, buff), 0);
 	else

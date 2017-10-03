@@ -27,14 +27,14 @@ int		init_term(void)
 	static struct termios our_term;
 
 	if (!my_getenv("TERM"))
-		add_list_env("TERM", "vt100");
-	if (tgetent(NULL, my_getenv("TERM")))
+		;
+	if (tgetent(NULL, my_getenv("TERM")) == 1)
 	{
 		tcgetattr(STDIN_FILENO, &old_term);
 		keep_term_struct(SAVE_OLD, &old_term);
 	}
 	else
-		exit(127);
+		puterror("tgetent");
 	if (!(tcgetattr(2, &our_term)) && init_our_term(&our_term))
 		keep_term_struct(SAVE_OUR, &our_term);
 	return (0);

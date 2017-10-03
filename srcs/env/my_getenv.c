@@ -5,25 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/10 05:07:35 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/11 00:03:41 by aroulin          ###   ########.fr       */
+/*   Created: 2017/10/03 02:48:59 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/03 02:49:01 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-char		*my_getenv(char *str)
+size_t				compare_environment(char *s1, char *s2)
 {
-	t_env		*env;
+	size_t		len;
 
-	env = gbl_save_env(ENV_REC, NULL);
-	if (str)
-		while (env)
+	len = 0;
+	while (s1 && s2 && *s1 && *s2 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+		len++;
+	}
+	if (*s2 == '=')
+		return (len);
+	return (0);
+}
+
+char				*my_getenv(char *name)
+{
+	char	**environ;
+	int 	i;
+	size_t	len;
+
+	i = -1;
+	environ = env_table(NULL, ENV_REC);
+	if (environ)
+		while (environ[++i])
 		{
-			if (!ft_strcmp(env->name, str))
-				return (env->value);
-			else
-				env = env->next;
+			if ((len = compare_environment(name, environ[i])))
+				return (environ[i] + len + 1);
 		}
 	return (NULL);
 }

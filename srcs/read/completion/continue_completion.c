@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   complete_tab_.c                              :+:      :+:    :+:   */
+/*   continue_completion.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/13 04:40:22 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/23 17:07:28 by aroulin          ###   ########.fr       */
+/*   Created: 2017/10/02 22:29:39 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/02 22:29:43 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void			continue_completion(t_read **read_std)
 			tmp = tmp->prev;
 			print_element(tmp, 1);
 			(tmp->prev) && (tmp = tmp->prev);
-			break;
+			break ;
 		}
 		tmp = tmp->next;
 	}

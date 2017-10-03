@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bip.c                                              :+:      :+:    :+:   */
+/*   ft_firstchar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/13 04:15:14 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 15:08:30 by aroulin          ###   ########.fr       */
+/*   Created: 2017/10/03 02:53:46 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/03 02:53:47 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sh.h>
+#include <libft.h>
 
-int			bip(void)
+int			ft_firstchar(char *str, char c)
 {
-	CHAR_FD(7, 2);
-	return (1);
+	int		i;
+
+	i = -1;
+	while (str[++i])
+		if (str[i] == c)
+			return (i);
+	return (0);
 }

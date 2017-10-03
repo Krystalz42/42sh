@@ -17,7 +17,8 @@ int			len_cmd(t_cmd **cmd)
 	int		i;
 
 	i = -1;
-	while (++i >= 0 && (*cmd)->prev && (*cmd)->prev->c != 32 && (*cmd)->prev->c != 9)
+	while (++i >= 0 && (*cmd)->prev &&
+			(*cmd)->prev->c != 32 && (*cmd)->prev->c != 9)
 		(*cmd) = (*cmd)->prev;
 	return (i);
 }
@@ -38,7 +39,7 @@ char		*list_to_str(t_read **read_std, t_cmd *cmd)
 	while (++i < len)
 	{
 		str[i] = cmd->c;
-		cmd = cmd->next;	
+		cmd = cmd->next;
 	}
 	str[i] = '\0';
 	return (str);
@@ -68,19 +69,19 @@ char		*get_last_word(char *path)
 
 void		completion(t_read **read_std)
 {
-	t_path f;
-	char *tmp;
-
+	t_path		f;
+	char		*tmp;
 
 	f.to_comp = NULL;
 	f.path = list_to_str(read_std, (*read_std)->cmd);
-	if (f.path && (f.path[0] != '.' && f.path[0] != '/')) {
+	if (f.path && (f.path[0] != '.' && f.path[0] != '/'))
+	{
 		tmp = ft_strjoin("./", f.path);
 		ft_strdel(&f.path);
 		f.path = tmp;
 	}
 	f.to_comp = get_last_word(f.path);
 	complete_path(read_std, f);
-	ft_memdel((void **) &(f.path));
-	ft_memdel((void **) &(f.to_comp));
+	ft_memdel((void **)&(f.path));
+	ft_memdel((void **)&(f.to_comp));
 }

@@ -102,6 +102,7 @@ LDLIBS		= \
 
 CPPFLAGS	= \
 			  -I$(DIR_INCS)	\
+			  -I../libft/$(DIR_INCS)\
 
 CFLAGS		= \
 			  -Wall -Werror -Wextra	\

@@ -52,9 +52,10 @@ int			key_print_(t_read **read_std, unsigned long buff)
                 key_print_fct((*read_std)->hist_search->cmd, c);
                 compare_history(read_std);
                 (*read_std)->history_search++;
-            } else {
-                (*read_std)->print = 2;
+            } else
+            {
                 key_print_fct((*read_std)->cmd, c);
+                (*read_std)->print = 2;
             }
         }
         buff /= (UCHAR_MAX + 1);
