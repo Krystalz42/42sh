@@ -11,7 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="916dc799-bb65-42b2-98a3-60c53c6ce801" name="Default" comment="" />
+    <list default="true" id="916dc799-bb65-42b2-98a3-60c53c6ce801" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/env/manage_env.c" afterPath="$PROJECT_DIR$/srcs/env/manage_env.c" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +38,8 @@
       <file leaf-file-name="manage_env.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/srcs/env/manage_env.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="585">
+              <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -646,12 +648,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1506963953722</updated>
-      <workItem from="1506963955958" duration="22704000" />
+      <workItem from="1506963955958" duration="22765000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22704000" />
+    <option name="totallyTimeSpent" value="22765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1795" height="1440" extended-state="0" />
@@ -1090,8 +1092,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/env/manage_env.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="585">
+          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
           <folding />
         </state>
       </provider>

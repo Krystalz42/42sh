@@ -25,7 +25,7 @@
 //}
 
 
-char				**manage_env(char *flag, char *str)
+char				**manage_env(char *flag, char *str __attribute__((unused)))
 {
 	int 		opt;
 
@@ -37,5 +37,5 @@ char				**manage_env(char *flag, char *str)
 				opt = *flag;
 //		return ((opt == u) ? manage_option(str) : NULL);
 	}
-	return (table);
+	return 0;
 }
