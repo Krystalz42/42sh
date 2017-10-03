@@ -12,17 +12,17 @@
 
 #include <sh.h>
 
-char				**manage_option(char *string)
-{
-	char		**table;
-
-	table = env_table(NULL, ENV_REC);
-	if (string)
-	{
-
-	}
-	return (usage())
-}
+//char				**manage_option(char *string)
+//{
+//	char		**table;
+//
+//	table = env_table(NULL, ENV_REC);
+//	if (string)
+//	{
+//
+//	}
+//	return (usage())
+//}
 
 
 char				**manage_env(char *flag, char *str)
@@ -35,7 +35,7 @@ char				**manage_env(char *flag, char *str)
 		while (*flag++)
 			if (*flag == 'i' || *flag == 'u')
 				opt = *flag;
-		return ((opt == u) ? manage_option(str) : NULL);
+//		return ((opt == u) ? manage_option(str) : NULL);
 	}
 	return (table);
 }
