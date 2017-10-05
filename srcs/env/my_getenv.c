@@ -32,15 +32,12 @@ char				*my_getenv(char *name)
 {
 	char	**environ;
 	int 	i;
-	size_t	len;
 
 	i = -1;
 	environ = env_table(NULL, ENV_REC);
 	if (environ)
 		while (environ[++i])
-		{
-			if ((len = compare_environment(name, environ[i])))
-				return (environ[i] + len + 1);
-		}
+			if (compare_environment(name, environ[i]))
+				return (ft_strchr(environ[i], '=') + 1);
 	return (NULL);
 }

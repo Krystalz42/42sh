@@ -15,11 +15,8 @@
 
 void			puterror(char *err)
 {
-	int		i;
-
 	STR_FD("42sh: ", STDERR_FILENO);
 	STR_FD(err, STDERR_FILENO);
-	STR_FD(": ", STDERR_FILENO);
-	i = -1;
 	CHAR_FD(10, STDERR_FILENO);
+	exit(EXIT_FAILURE);
 }

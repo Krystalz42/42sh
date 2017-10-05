@@ -35,13 +35,18 @@ int         new_line_after_bloc(t_read **read_std, int to)
     return (1);
 }
 
-int         prompt_history(int p)
+t_cursor				prompt_history(int p)
 {
-    static const char prompt[] = "search in history : ";
+	static const char	prompt[] = "search in history : ";
+	t_cursor			cur;
+	int 				co;
 
-    if (p)
-        STR_FD("\x1B[31m", 2);
-    STR_FD(prompt, 2);
-    P_RST_FD(2);
-    return (ft_strlen(prompt) + 3);
+	co = tgetnum("co");
+	if (p)
+		STR_FD("\x1B[31m", 2);
+	STR_FD(prompt, 2);
+	P_RST_FD(2);
+	cur.line = ((int)ft_strlen(prompt) / co) + 1;
+	cur.co = ((int)ft_strlen(prompt) % co);
+	return (cur);
 }

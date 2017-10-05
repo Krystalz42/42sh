@@ -23,8 +23,9 @@ void		add_environment(char *string)
 	len = ft_tablen(table);
 	cpy = (char **)ft_memalloc(sizeof(char *) * (len + 2));
 	i = -1;
-	while (table[++i])
-		cpy[i] = table[i];
+	if (table)
+		while (table[++i])
+			cpy[i] = table[i];
 	cpy[i] = ft_strdup(string);
 	cpy[i + 1] = NULL;
 	ft_memdel((void **)&table);

@@ -29,6 +29,8 @@
 # include <sys/types.h>
 # include <dirent.h>
 # include <signal.h>
+#include <logger.h>
+#include <logger_utils.h>
 
 /*
 **				A virer avant de push
@@ -51,7 +53,7 @@ unsigned char				var_return(int ret);
 t_read						*read_stdin(void);
 char						*my_prompt(char *prompt);
 void						init_prompt(void);
-int							prompt(unsigned char flags);
+t_cursor					prompt(unsigned char flags);
 t_cmd						*create_element(char c);
 int							print_struct(t_read *read_std);
 int							my_put(int c);
@@ -188,7 +190,7 @@ int							key_yank(t_read **read_std, unsigned long buff);
 int							init_research(t_read **read_std);
 int							print_struct_history(t_read **read_std);
 int							reset_cur_hist(t_lfh *hist);
-int							prompt_history(int p);
+t_cursor					prompt_history(int p);
 int							new_line_after_bloc(t_read **read_std, int to);
 int							key_print_fct(t_cmd *cmd, char c);
 void						compare_history(t_read **read_std);
@@ -201,13 +203,15 @@ char						*get_str_from_history(void);
 **				ENVIRONEMENT FUNCTION
 */
 
-char						**manage_env(char *flag, char *str);
+uint8_t						builtin_env(char **command);
 void						add_environment(char *string);
 void						init_env(void);
 char						*my_getenv(char *str);
 size_t						compare_environment(char *s1, char *s2);
 void						remove_environment(char *string);
 char						**env_table(char **env, int flags);
+int							usage_environement(char *string);
+
 /*
 **				HISTORY FUNCTION
 */

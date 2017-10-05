@@ -14,10 +14,11 @@
 
 void	ft_putstrtab(char **tab, char separator)
 {
-	while (*tab)
-	{
-		ft_putstr(*tab);
-		ft_putchar(separator);
-		tab++;
-	}
+	if (tab)
+		while (*tab)
+		{
+			ft_putstr(*tab);
+			ft_putchar(separator);
+			tab++;
+		}
 }

@@ -12,9 +12,25 @@
 
 #include <sh.h>
 
+char		**cpy_table(char **env)
+{
+	char	**cpy;
+	int		i;
+
+	i = -1;
+	if (env)
+	{
+		cpy = (char **)ft_memalloc(sizeof(char *) * (ft_tablen(env) + 1));
+		while (env[++i])
+			cpy[i] = ft_strdup(env[i]);
+		return (cpy);
+	}
+	return (NULL);
+}
+
 char 		**env_table(char **env, int flags)
 {
-	static char **save;
+	static char		**save;
 
 	if ((ENV_NULL & flags))
 		save = NULL;
@@ -22,6 +38,8 @@ char 		**env_table(char **env, int flags)
 		save = env;
 	if ((ENV_REC & flags))
 		return (save);
+	if ((ENV_CPY & flags))
+		return (cpy_table(save));
 	return (NULL);
 }
 
@@ -33,6 +51,7 @@ void		init_env(void)
 
 	i = -1;
 	env = NULL;
+	log_error("bonjour j'init l'env");
 	if (environ)
 	{
 		while (environ[++i])

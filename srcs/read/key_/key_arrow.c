@@ -14,6 +14,7 @@
 
 int			key_arrow_left(t_read **read_std, unsigned long buff)
 {
+	log_info("key_arrow_left");
 	if ((*read_std)->history_search && bip())
 	{
 		memdel_lfh(&((*read_std)->hist_search));
@@ -35,6 +36,7 @@ int			key_arrow_left(t_read **read_std, unsigned long buff)
 
 int			key_arrow_right(t_read **read_std, unsigned long buff)
 {
+	log_info("key_arrow_right");
 	if ((*read_std)->history_search && bip())
 	{
 		memdel_lfh(&((*read_std)->hist_search));
@@ -78,6 +80,7 @@ int			key_arrow_up(t_read **read_std, unsigned long buff)
 
 int			key_arrow_down(t_read **read_std, unsigned long buff)
 {
+	log_info("key_arrow_down");
 	(void)buff;
 	if ((*read_std)->history_search && bip())
 	{

@@ -17,7 +17,6 @@ int			print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_cursor *cur)
 	int			co;
 
 	co = tgetnum("co");
-	cur->line = 1;
 	while ((!to_select && cmd->c) || (to_select && cmd != stop))
 	{
 		if (cmd->c == 10 || cur->co >= co)
@@ -33,20 +32,12 @@ int			print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_cursor *cur)
 	return (1);
 }
 
-inline int	reset_cur(t_cursor *cur)
-{
-	cur->line = 0;
-	cur->co = 0;
-	return (1);
-}
-
 static inline  void print_to_end(t_read *read_std, t_cmd *cmd, int end)
 {
 	restore_cursor_(read_std->cur);
 	if (!end)
 		CLEAR_FROM_CUR;
-	reset_cur(&(read_std->cur));
-	read_std->cur.co = prompt(PRINT);
+	read_std->cur = prompt(PRINT);
 	print_list(end, cmd, read_std->cmd, &(read_std->cur));
 }
 

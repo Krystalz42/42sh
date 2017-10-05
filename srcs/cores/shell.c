@@ -22,9 +22,7 @@ int		shell(void)
 	add_hash("    Je suis pas la    ", "    Je suis Didier", 42);
 	add_hash("    Je segfault sans stress    ", "    Je suis le rebeu", 42);
 	hash_print(STDOUT_FILENO);
-	manage_env("---------------i--------------u-----------", NULL);
 	read_stdin();
-	var_return(0);
 	read_stdin();
 	reset_signal();
 	return (1);

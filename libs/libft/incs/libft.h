@@ -63,7 +63,7 @@ typedef struct		s_remain
 	char			*content;
 }					t_remain;
 
-void				ft_memdel_tab(char **ta);
+void				ft_memdel_tab(char ***ta);
 char				**ft_str_to_tab(char *str);
 char				*ft_str_charnoutrev(char const *s, char *l, size_t start);
 char				*ft_strrev(char *str);

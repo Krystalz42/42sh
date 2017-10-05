@@ -16,20 +16,15 @@ void 		remove_environment(char *string)
 {
 	char		**table;
 	char		**cpy;
-	size_t		len;
 	int 		i;
 
 	table = env_table(NULL, ENV_REC);
-	len = ft_tablen(table);
-	cpy = (char **)ft_memalloc(sizeof(char *) * (len));
+	cpy = (char **)ft_memalloc(sizeof(char *) * (ft_tablen(table)));
 	i = -1;
-	while (table[++i])
-		if (!compare_environment(string, table[i]))
-		{
-			cpy[i] = table[i];
-			STR_FD(table[i], g_fdb);
-			CHAR_FD(10, g_fdb);
-		}
+	if (table)
+		while (table[++i])
+			if (ft_strcmp(string, ft_strchr(table[i], '=')))
+				cpy[i] = table[i];
 	cpy[i] = NULL;
 	ft_memdel((void **)&table);
 	env_table(cpy, ENV_INIT);

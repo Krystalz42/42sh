@@ -12,11 +12,11 @@
 
 #include <sh.h>
 
-unsigned char		var_return(int ret)
+uint8_t		var_return(int ret)
 {
-	static unsigned save;
+	static int save;
 
 	if (ret >= 0 && ret <= UCHAR_MAX)
-		save = (unsigned char)ret;
-	return ((unsigned char)save);
+		save = (uint8_t)ret;
+	return ((uint8_t)save);
 }

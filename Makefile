@@ -129,6 +129,7 @@ SRCS = \
 	   env/remove_environment.c                             \
 	   env/manage_env.c                                     \
 	   env/init_env.c										\
+	   env/usage_environment.c                              \
 	   env/my_getenv.c										\
 	   term/init_fd.c										\
 	   term/init_term.c										\
@@ -167,20 +168,24 @@ RST   =		\x1B[0m
 LIBS		= \
 			  $(DIR_LIBS)/libft/libft.a				\
 			  $(DIR_LIBS)/printf/libprintf.a		\
+			  logger/liblogger.a                    \
 
 LDFLAGS		= \
 			  -L $(DIR_LIBS)/libft					\
 			  -L $(DIR_LIBS)/printf					\
+			  -L logger/    					\
 
 LDLIBS		= \
 			  -lft									\
 			  -lprintf								\
 			  -lncurses								\
+			  -llogger                              \
 
 CPPFLAGS	= \
 			  -I$(DIR_INCS)							\
 			  -I$(DIR_LIBS)/libft/$(DIR_INCS)		\
 			  -I$(DIR_LIBS)/printf/$(DIR_INCS)		\
+			  -Ilogger/$(DIR_INCS)
 
 CFLAGS		= \
 			  -g									\

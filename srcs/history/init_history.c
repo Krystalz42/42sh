@@ -30,11 +30,13 @@ int					convert_to_hist(char *buff)
 		if (ft_isprint(buff[i]) && ++cmd_len)
 			key_print_fct(read_std->cmd, buff[i]);
 	if (check_cmd(&read_std) && ++cmd_len)
+	{
+		key_print_fct(read_std->cmd, 10);
 		return (0);
+	}
 	else
 	{
 		cmd_len = 0;
-		key_print_fct(read_std->cmd, 10);
 		make_list_hist(read_std);
 		read_std = NULL;
 		return (1);

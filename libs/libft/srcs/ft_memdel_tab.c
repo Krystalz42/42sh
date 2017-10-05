@@ -14,14 +14,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void	ft_memdel_tab(char **ta)
+void	ft_memdel_tab(char ***ta)
 {
-	int i;
+	int		index;
 
-	i = -1;
-	if (!ta)
-		return ;
-	while (ta[++i])
-		ft_strdel(&(ta[i]));
-	ft_memdel((void **)&ta);
+	index = -1;
+	if (*ta)
+	{
+		while ((*ta)[++index])
+			free((*ta)[index]);
+		ft_memdel((void **)ta);
+	}
+
 }

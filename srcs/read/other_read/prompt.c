@@ -12,7 +12,18 @@
 
 #include <sh.h>
 
-int 			prompt(unsigned char flags)
+static inline t_cursor		init_cursor(int len)
+{
+	t_cursor		cur;
+	int		co;
+
+	co = tgetnum("co");
+	cur.co = len % co;
+	cur.line = (len / co) + 1;
+	return (cur);
+}
+
+t_cursor					prompt(unsigned char flags)
 {
 	static char		*prompt;
 
@@ -28,6 +39,6 @@ int 			prompt(unsigned char flags)
 		prompt = my_prompt(NULL);
 	if (flags & PRINT)
 		STR_FD(prompt, 2);
-	return ((get_len_prompt(-42) == -1) ? (int)ft_strlen(prompt) :
-	        get_len_prompt(-42));
+	return (init_cursor((get_len_prompt(-42) == -1) ? (int)ft_strlen(prompt) :
+	        get_len_prompt(-42)));
 }

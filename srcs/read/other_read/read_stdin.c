@@ -48,59 +48,65 @@ static const t_cmp		g_tab_are_key[] = {
 
 static inline int		chk_and_print(unsigned long *buff, t_read **read_std)
 {
-    (void )buff;
-    print_struct(*read_std);
-    if ((*read_std)->completion) {
-        (*read_std)->completion -= 1;
-    }
-    if ((*read_std)->history_search) {
-        (*read_std)->history_search -= 1;
-    }
+	(void)buff;
+	print_struct(*read_std);
+	if ((*read_std)->completion) {
+		(*read_std)->completion -= 1;
+	}
+	if ((*read_std)->history_search) {
+		(*read_std)->history_search -= 1;
+	}
 	if ((*read_std)->history_search)
 		print_struct_history(read_std);
-    (*read_std)->print = 0;
-    return (1);
+	(*read_std)->print = 0;
+	return (1);
 }
 
-static inline void      initialize_fct(t_read **read_std, unsigned long *buff)
+static inline void		initialize_fct(t_read **read_std, unsigned long *buff)
 {
-    init_prompt();
-    init_signal();
-    set_termios(SET_OUR_TERM);
-    (*read_std)->cur.co = prompt(DEFAULT | PRINT);
-    last_resultat(0);
-    chk_and_print(buff, read_std);
+	(*buff) = 0;
+	init_prompt();
+//	init_signal();
+	set_termios(SET_OUR_TERM);
+	(*read_std)->cur = prompt(DEFAULT | PRINT);
+	last_resultat(0);
 	get_os_pointer(NULL, 1);
+}
+
+static inline void		finalize_fct(t_read **read_std)
+{
+	reset_signal();
+	set_termios(SET_OLD_TERM);
+	finish_read_std(read_std);
 }
 
 t_read					*read_stdin(void)
 {
-    t_read		*read_std;
-    int			index;
-    static unsigned long buff = 0;
+	t_read						*read_std;
+	int							index;
+	static unsigned long		buff;
 
-    if (!(read_std = init_struct_for_read()))
-        return (NULL);
-    initialize_fct(&read_std, &buff);
-    while ((index = -1) && read(STDIN_FILENO, &buff, sizeof(unsigned long)))
-    {
-        while (g_tab_are_key[++index].key)
-	        if (g_tab_are_key[index].key == buff)
-            {
-                g_tab_are_key[index].function(&read_std, buff);
-                chk_and_print(&buff, &read_std);
-            }
-		if (!g_tab_are_key[index].key && ft_isprint(buff))
-        {
-            key_print_(&read_std, buff);
-            chk_and_print(&buff, &read_std);
-        }
-        (buff) = 0;
-        if ((read_std)->finish)
-            break ;
-    }
-    set_termios(SET_OLD_TERM);
-    finish_read_std(&read_std);
-    NL;
-    return (read_std);
+	if (!(read_std = init_struct_for_read()))
+		return (NULL);
+	initialize_fct(&read_std, &buff);
+	while ((index = -1) && read(STDIN_FILENO, &buff, sizeof(unsigned long)))
+	{
+		while (g_tab_are_key[++index].key)
+			if (g_tab_are_key[index].key == buff)
+			{
+				g_tab_are_key[index].function(&read_std, buff);
+				chk_and_print(&buff, &read_std);
+			}
+		if (!g_tab_are_key[index].key && ft_isprint(buff % (UCHAR_MAX + 1)))
+		{
+			key_print_(&read_std, buff);
+			chk_and_print(&buff, &read_std);
+		}
+		(buff) = 0;
+		if ((read_std)->finish)
+			break ;
+	}
+	finalize_fct(&read_std);
+	NL;
+	return (read_std);
 }

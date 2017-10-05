@@ -47,7 +47,7 @@ void					create_comp_bin(t_read **read_std, char **path)
 			closedir(dir);
 		}
 	(*read_std)->tab_->element = index;
-	ft_memdel_tab(path);
+	ft_memdel_tab(&path);
 }
 
 void					complete_binary(t_read **read_std)

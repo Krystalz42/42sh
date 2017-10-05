@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.8)
 project(42sh)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -11,6 +11,7 @@ set(SOURCE_FILES
         libs/libft/incs/libft.h
         libs/libft/srcs/ft_atoi.c
         libs/libft/srcs/ft_atoi_base.c
+        libs/libft/srcs/ft_atoui.c
         libs/libft/srcs/ft_bzero.c
         libs/libft/srcs/ft_chrchar.c
         libs/libft/srcs/ft_convert_base.c
@@ -19,6 +20,7 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_debug.c
         libs/libft/srcs/ft_double_delete.c
         libs/libft/srcs/ft_filetostr.c
+        libs/libft/srcs/ft_firstchar.c
         libs/libft/srcs/ft_ftoa.c
         libs/libft/srcs/ft_isalnum.c
         libs/libft/srcs/ft_isalpha.c
@@ -89,6 +91,7 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_strstr.c
         libs/libft/srcs/ft_strsub.c
         libs/libft/srcs/ft_strtrim.c
+        libs/libft/srcs/ft_tablen.c
         libs/libft/srcs/ft_tolower.c
         libs/libft/srcs/ft_toupper.c
         libs/libft/srcs/ft_uitoa.c
@@ -126,7 +129,12 @@ set(SOURCE_FILES
         srcs/cores/main.c
         srcs/cores/shell.c
         srcs/cores/var_return.c
+        srcs/env/add_environment.c
         srcs/env/init_env.c
+        srcs/env/manage_env.c
+        srcs/env/my_getenv.c
+        srcs/env/remove_environment.c
+        srcs/env/usage_environment.c
         srcs/error_function/bip.c
         srcs/error_function/puterror.c
         srcs/hash/built_in_hash.c
@@ -211,10 +219,13 @@ set(SOURCE_FILES
         srcs/term/init_fd.c
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
-        srcs/term/set_term.c libs/libft/srcs/ft_atoui.c srcs/env/my_getenv.c libs/libft/srcs/ft_firstchar.c srcs/env/add_environment.c libs/libft/srcs/ft_tablen.cpp libs/libft/srcs/ft_tablen.c srcs/env/remove_environment.c srcs/env/manage_env.c)
-
-include_directories(incs)
-include_directories(libs/libft/incs)
-include_directories(libs/printf/incs)
+        srcs/term/set_term.c)
 
 add_executable(42sh ${SOURCE_FILES})
+
+include_directories(
+        incs
+        libs/libft/incs
+        libs/printf/incs
+        logger/incs
+)

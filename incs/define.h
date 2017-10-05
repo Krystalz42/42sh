@@ -20,6 +20,7 @@
 # define ENV_NULL	        1
 # define ENV_INIT	        2
 # define ENV_REC	        4
+# define ENV_CPY	        8
 
 # define OLD_TERM	        1
 # define OUR_TERM	        2
