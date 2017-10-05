@@ -18,6 +18,7 @@ void		finish_read_std(t_read **read_std)
 
 	tmp = first_cmd(gbl_save_read(NULL), 1);
 	reset_history();
+	memdel_outstanding();
 	if ((*read_std)->history)
 		memdel_cmd(&tmp);
 	if ((*read_std)->finish == 2 ||

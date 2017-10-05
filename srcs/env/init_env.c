@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-char		**cpy_table(char **env)
+static char		**cpy_table(char **env)
 {
 	char	**cpy;
 	int		i;

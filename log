@@ -1,0 +1,2523 @@
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 14:10:39 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 14:11:11 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:11 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:11:11 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:11 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 14:11:12 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:11:12 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:12 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:11:12 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 14:11:12 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:11:12 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:13 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:11:13 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:13 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:11:13 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:13 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 14:11:13 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:11:18 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:18 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 14:11:18 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:18 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:11:19 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:19 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:11:19 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:20 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 14:11:20 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 14:11:20 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 14:11:20 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 14:11:22 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:22 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:22 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:22 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:11:22 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:11:22 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 14:11:27 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 14:11:58 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 14:12:02 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 14:12:02 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:12:02 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 14:14:10 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 14:14:15 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:15 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:15 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:15 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:15 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:15 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:16 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:16 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:16 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:16 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:16 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:16 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:16 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:16 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 14:14:16 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 14:15:12 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:11:45 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:11:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:50 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:51 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:51 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:51 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:51 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:51 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:51 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:51 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:51 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:51 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:51 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:51 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:51 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:51 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:52 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:53 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:53 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:53 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:53 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:58 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:58 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:58 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:58 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:58 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:58 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:58 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:59 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:59 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:59 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:59 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:59 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:59 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:11:59 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:11:59 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:12:00 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:12:00 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:13:24 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:13:25 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:13:28 ] (l. 39) key_arrow.c          -> key_arrow_right42[0m
+[36m[ 15:13:29 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:13:29 ] (l. 39) key_arrow.c          -> key_arrow_right42[0m
+[36m[ 15:13:29 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:13:29 ] (l. 39) key_arrow.c          -> key_arrow_right42[0m
+[36m[ 15:13:30 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:13:32 ] (l. 39) key_arrow.c          -> key_arrow_right42[0m
+[36m[ 15:13:32 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:13:32 ] (l. 39) key_arrow.c          -> key_arrow_right42[0m
+[36m[ 15:13:32 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:20:59 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:22:36 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:24:00 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:24:02 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:24:02 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:24:06 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:24:06 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:24:06 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:24:06 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:24:06 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:24:06 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:24:06 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:24:06 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:24:06 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:24:06 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:24:06 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:24:06 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:25:36 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:25:37 ] (l. 94) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:25:37 ] (l. 94) read_stdin.c         -> Buffer dans le read [97][0m
+[0m[ 15:25:40 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:25:40 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:25:40 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:26:38 ] (l. 94) read_stdin.c         -> Buffer dans le read [109][0m
+[36m[ 15:26:38 ] (l. 94) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:26:38 ] (l. 94) read_stdin.c         -> Buffer dans le read [107][0m
+[36m[ 15:26:38 ] (l. 94) read_stdin.c         -> Buffer dans le read [101][0m
+[36m[ 15:26:38 ] (l. 94) read_stdin.c         -> Buffer dans le read [10][0m
+[36m[ 15:26:39 ] (l. 94) read_stdin.c         -> Buffer dans le read [10][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:26:42 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:26:43 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:43 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:43 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:49 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:49 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:50 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:50 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:50 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:50 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:51 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:51 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:51 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:51 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:51 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:51 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:51 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:51 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:51 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:51 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:51 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:51 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:52 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:52 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:52 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:52 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:52 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:52 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:52 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:52 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:52 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:52 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:26:52 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:26:52 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:26:52 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:27:16 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:27:16 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:27:17 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:27:17 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:27:17 ] (l. 94) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:27:17 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:29:06 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:29:07 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:29:07 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:29:07 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:29:11 ] (l. 94) read_stdin.c         -> Buffer dans le read [10][0m
+[36m[ 15:29:12 ] (l. 94) read_stdin.c         -> Buffer dans le read [10][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:29:14 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:29:15 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:29:15 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:29:15 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:29:36 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:29:36 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:29:36 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:29:37 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:29:37 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:29:37 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:29:38 ] (l. 93) read_stdin.c         -> Buffer dans le read [10][0m
+[36m[ 15:29:38 ] (l. 93) read_stdin.c         -> Buffer dans le read [10][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:30:20 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:30:21 ] (l. 93) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:30:21 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:30:22 ] (l. 93) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:30:22 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:30:22 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:23 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:23 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:24 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:24 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:24 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:24 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:25 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:25 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:28 ] (l. 93) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:30:28 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:30:29 ] (l. 93) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:30:29 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:30:31 ] (l. 93) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:30:31 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:30:31 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:31 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:32 ] (l. 93) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:30:32 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:30:32 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:32 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:32 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:32 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:32 ] (l. 93) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:30:32 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:30:32 ] (l. 93) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:30:32 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:30:32 ] (l. 93) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:30:32 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:30:33 ] (l. 93) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:30:33 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:30:33 ] (l. 93) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:30:33 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:30:33 ] (l. 93) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:30:33 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:30:33 ] (l. 93) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:30:33 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:30:33 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:33 ] (l. 93) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:30:33 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:30:33 ] (l. 93) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:30:33 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:30:34 ] (l. 93) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:30:34 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:30:34 ] (l. 93) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:30:34 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:30:34 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:34 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:35 ] (l. 93) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:30:35 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:30:35 ] (l. 93) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:30:35 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:30:38 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:38 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:39 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:39 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:39 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:39 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:39 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:40 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:40 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:40 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:40 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:40 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:40 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:40 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:40 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:40 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:40 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:40 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:40 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:40 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:40 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:40 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:40 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:40 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:40 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:40 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:40 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:41 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:41 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:41 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:41 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:41 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:41 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:41 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:41 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:41 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:41 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:41 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:41 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:42 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:43 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:44 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:44 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:44 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:44 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:44 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:44 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:44 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:44 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:44 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:44 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:44 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:44 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:44 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:44 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:44 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:44 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:44 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:44 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:45 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:46 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:47 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:47 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:47 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:47 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:47 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:47 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:47 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:47 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:47 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:47 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:47 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:47 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:48 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:48 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:49 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:49 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:30:50 ] (l. 93) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:30:50 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[0m[ 15:30:51 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:51 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:51 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:54 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:54 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:54 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:55 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:55 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:55 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:56 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:56 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:56 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:56 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:56 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:56 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:56 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:56 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:56 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:56 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:56 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:56 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:56 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:56 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:56 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:56 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:56 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:56 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[0m[ 15:30:56 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:30:56 ] (l. 93) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:30:56 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:31:09 ] (l. 93) read_stdin.c         -> Buffer dans le read [10][0m
+[36m[ 15:31:09 ] (l. 93) read_stdin.c         -> Buffer dans le read [10][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:31:13 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:31:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [3][0m
+[0m[ 15:31:16 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:31:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[0m[ 15:31:17 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:31:17 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[0m[ 15:31:17 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:31:17 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:31:36 ] (l. 92) read_stdin.c         -> Buffer dans le read [109][0m
+[36m[ 15:31:36 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:31:36 ] (l. 92) read_stdin.c         -> Buffer dans le read [107][0m
+[36m[ 15:31:36 ] (l. 92) read_stdin.c         -> Buffer dans le read [101][0m
+[36m[ 15:31:36 ] (l. 92) read_stdin.c         -> Buffer dans le read [10][0m
+[36m[ 15:31:37 ] (l. 92) read_stdin.c         -> Buffer dans le read [10][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:31:39 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:31:40 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:31:40 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[0m[ 15:31:41 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:31:41 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[0m[ 15:31:41 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:31:41 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[0m[ 15:31:41 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:31:41 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[0m[ 15:31:42 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:31:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:31:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [10][0m
+[36m[ 15:31:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [10][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:32:02 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:32:03 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:32:03 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:32:03 ] (l. 17) key_interrupt.c      -> SIGINT[0m
+[0m[ 15:32:05 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:32:05 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:32:05 ] (l. 17) key_interrupt.c      -> SIGINT[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:32:22 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:32:23 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:32:23 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:32:23 ] (l. 17) key_interrupt.c      -> SIGINT[0m
+[0m[ 15:32:29 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:32:29 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:32:29 ] (l. 17) key_interrupt.c      -> SIGINT[0m
+[36m[ 15:32:31 ] (l. 93) read_stdin.c         -> Buffer dans le read [10][0m
+[36m[ 15:32:32 ] (l. 93) read_stdin.c         -> Buffer dans le read [10][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:32:34 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:32:39 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:32:39 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:32:39 ] (l. 17) key_interrupt.c      -> SIGINT[0m
+[0m[ 15:32:46 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:32:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:32:46 ] (l. 17) key_interrupt.c      -> SIGINT[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:36:58 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:36:58 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:36:58 ] (l. 92) read_stdin.c         -> Buffer dans le read [106][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [98][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [106][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [107][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [98][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [106][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [104][0m
+[36m[ 15:36:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[0m[ 15:37:09 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:37:09 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:37:09 ] (l. 17) key_interrupt.c      -> SIGINT[0m
+[36m[ 15:38:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [10][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:38:29 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:38:32 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:38:32 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:38:32 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:38:32 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:38:32 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:38:33 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:38:33 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:38:33 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:38:34 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[38;5;239m[ 15:38:34 ] (l. 25) memdel_completion.c  -> Memdel -> [][0m
+[36m[ 15:38:35 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[36m[ 15:38:35 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[36m[ 15:38:35 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[36m[ 15:38:35 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[36m[ 15:38:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [10][0m
+[36m[ 15:38:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:38:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [113][0m
+[36m[ 15:38:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[38;5;239m[ 15:38:44 ] (l. 25) memdel_completion.c  -> Memdel -> [][0m
+[36m[ 15:38:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[38;5;239m[ 15:38:45 ] (l. 25) memdel_completion.c  -> Memdel -> [][0m
+[36m[ 15:38:51 ] (l. 92) read_stdin.c         -> Buffer dans le read [10][0m
+[36m[ 15:38:51 ] (l. 92) read_stdin.c         -> Buffer dans le read [10][0m
+[38;5;239m[ 15:38:51 ] (l. 25) memdel_completion.c  -> Memdel -> [][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:38:54 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:38:56 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:38:56 ] (l. 92) read_stdin.c         -> Buffer dans le read [114][0m
+[36m[ 15:38:57 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:38:57 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[38;5;239m[ 15:38:57 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+[36m[ 15:38:59 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:39:00 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:39:00 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:39:00 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:39:00 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:39:00 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[38;5;239m[ 15:39:00 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[0m[ 15:39:03 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:39:03 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:39:03 ] (l. 17) key_interrupt.c      -> SIGINT[0m
+[38;5;239m[ 15:39:03 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 15:40:24 ] (l. 92) read_stdin.c         -> Buffer dans le read [10][0m
+[38;5;239m[ 15:40:24 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:40:30 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:40:32 ] (l. 19) ft_signal.c          -> handler sigint 2[0m
+[36m[ 15:40:32 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[36m[ 15:40:32 ] (l. 17) key_interrupt.c      -> SIGINT[0m
+[38;5;239m[ 15:40:32 ] (l. 34) memdel_read.c        -> Memdel read[0m
+[38;5;239m[ 15:40:32 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:40:32 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+[36m[ 15:40:54 ] (l. 92) read_stdin.c         -> Buffer dans le read [10][0m
+[38;5;239m[ 15:40:54 ] (l. 34) memdel_read.c        -> Memdel read[0m
+[38;5;239m[ 15:40:54 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:40:54 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:40:56 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:40:58 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:40:58 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:41:00 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[38;5;239m[ 15:41:00 ] (l. 28) +emdel_outstanding.c -> Memdel -> [1][0m
+[38;5;239m[ 15:41:00 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:41:00 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:41:00 ] (l. 34) memdel_read.c        -> Memdel read[0m
+[38;5;239m[ 15:41:00 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:41:00 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+[36m[ 15:42:55 ] (l. 92) read_stdin.c         -> Buffer dans le read [10][0m
+[38;5;239m[ 15:42:55 ] (l. 34) memdel_read.c        -> Memdel read[0m
+[38;5;239m[ 15:42:55 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:42:55 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:42:58 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:42:58 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[38;5;239m[ 15:42:58 ] (l. 34) memdel_read.c        -> Memdel read[0m
+[38;5;239m[ 15:42:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:42:58 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+[36m[ 15:43:05 ] (l. 92) read_stdin.c         -> Buffer dans le read [114][0m
+[36m[ 15:43:05 ] (l. 92) read_stdin.c         -> Buffer dans le read [119][0m
+[36m[ 15:43:05 ] (l. 92) read_stdin.c         -> Buffer dans le read [101][0m
+[36m[ 15:43:06 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[38;5;239m[ 15:43:06 ] (l. 28) +emdel_outstanding.c -> Memdel OUTSTANDING ^_^ -> [1][0m
+[38;5;239m[ 15:43:06 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:06 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:06 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:06 ] (l. 34) memdel_read.c        -> Memdel read[0m
+[38;5;239m[ 15:43:06 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:06 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:43:46 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [119][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [106][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [113][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [105][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [98][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [119][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [104][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [106][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [113][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [98][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [113][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [106][0m
+[36m[ 15:43:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [104][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [119][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [98][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [113][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [106][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [104][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [98][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [119][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [106][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [113][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [104][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [98][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [106][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [113][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [104][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [119][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [98][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:43:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:43:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [106][0m
+[36m[ 15:43:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [29032][0m
+[36m[ 15:43:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:43:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:43:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [104][0m
+[36m[ 15:43:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [106][0m
+[36m[ 15:43:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [113][0m
+[36m[ 15:43:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [119][0m
+[36m[ 15:43:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [98][0m
+[36m[ 15:43:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:43:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:43:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:49 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:43:50 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:43:51 ] (l. 92) read_stdin.c         -> Buffer dans le read [11][0m
+[36m[ 15:43:58 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[38;5;239m[ 15:43:58 ] (l. 28) +emdel_outstanding.c -> Memdel OUTSTANDING ^_^ -> [1][0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 34) memdel_read.c        -> Memdel read[0m
+[38;5;239m[ 15:43:58 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:43:58 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+[36m[ 15:44:03 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:44:03 ] (l. 92) read_stdin.c         -> Buffer dans le read [113][0m
+[36m[ 15:44:03 ] (l. 92) read_stdin.c         -> Buffer dans le read [119][0m
+[36m[ 15:44:05 ] (l. 92) read_stdin.c         -> Buffer dans le read [11][0m
+[36m[ 15:44:06 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:44:06 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:44:06 ] (l. 92) read_stdin.c         -> Buffer dans le read [4479771][0m
+[36m[ 15:44:06 ] (l. 17) key_arrow.c          -> key_arrow_left[0m
+[36m[ 15:44:07 ] (l. 92) read_stdin.c         -> Buffer dans le read [11][0m
+[36m[ 15:44:07 ] (l. 92) read_stdin.c         -> Buffer dans le read [11][0m
+[36m[ 15:44:07 ] (l. 92) read_stdin.c         -> Buffer dans le read [11][0m
+[36m[ 15:44:07 ] (l. 92) read_stdin.c         -> Buffer dans le read [11][0m
+[36m[ 15:44:08 ] (l. 92) read_stdin.c         -> Buffer dans le read [11][0m
+[36m[ 15:44:08 ] (l. 92) read_stdin.c         -> Buffer dans le read [11][0m
+[36m[ 15:44:08 ] (l. 92) read_stdin.c         -> Buffer dans le read [11][0m
+[36m[ 15:44:09 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:10 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:10 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:10 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:10 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:10 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:10 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:10 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:10 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [22][0m
+[36m[ 15:44:13 ] (l. 92) read_stdin.c         -> Buffer dans le read [4741915][0m
+[36m[ 15:44:14 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:44:14 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:44:14 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:44:14 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:44:15 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:44:15 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:44:15 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:44:15 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:44:15 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [4610843][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [2117294875][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [4610843][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [2117294875][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [100][0m
+[36m[ 15:44:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:44:17 ] (l. 92) read_stdin.c         -> Buffer dans le read [97][0m
+[36m[ 15:44:17 ] (l. 92) read_stdin.c         -> Buffer dans le read [45][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [31][0m
+[36m[ 15:44:23 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[38;5;239m[ 15:44:23 ] (l. 34) memdel_read.c        -> Memdel read[0m
+[38;5;239m[ 15:44:23 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:44:23 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:45:30 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[36m[ 15:45:31 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:45:31 ] (l. 92) read_stdin.c         -> Buffer dans le read [114][0m
+[36m[ 15:45:31 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:45:32 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[38;5;239m[ 15:45:32 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+[36m[ 15:45:32 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:51:08 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:51:08 ] (l. 29) init_term.c          -> Init _ Term [0m
+[0m[ 15:51:08 ] (l. 42) init_term.c          -> Save old _ struct[0m
+[0m[ 15:51:08 ] (l. 46) init_term.c          -> Save out _ struct[0m
+[36m[ 15:51:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:51:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [114][0m
+[36m[ 15:51:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [99][0m
+[36m[ 15:51:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:51:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [32][0m
+[36m[ 15:51:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:51:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[38;5;239m[ 15:51:20 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+[36m[ 15:51:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[38;5;239m[ 15:51:25 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 15:51:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[38;5;239m[ 15:51:26 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 15:51:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:53:44 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:53:44 ] (l. 29) init_term.c          -> Init _ Term [0m
+[0m[ 15:53:44 ] (l. 42) init_term.c          -> Save old _ struct[0m
+[0m[ 15:53:44 ] (l. 46) init_term.c          -> Save out _ struct[0m
+[36m[ 15:53:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [47][0m
+[36m[ 15:53:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [46][0m
+[36m[ 15:53:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [127][0m
+[36m[ 15:53:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [127][0m
+[36m[ 15:53:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [46][0m
+[36m[ 15:53:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [47][0m
+[36m[ 15:53:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:53:51 ] (l. 92) read_stdin.c         -> Buffer dans le read [114][0m
+[36m[ 15:53:51 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:53:51 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 15:53:51 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+[36m[ 15:53:57 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:53:57 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 15:53:57 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 15:54:05 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:54:05 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 15:54:05 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 15:54:12 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:54:12 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:56:06 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:56:06 ] (l. 29) init_term.c          -> Init _ Term [0m
+[0m[ 15:56:06 ] (l. 42) init_term.c          -> Save old _ struct[0m
+[0m[ 15:56:06 ] (l. 46) init_term.c          -> Save out _ struct[0m
+[36m[ 15:56:08 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:56:08 ] (l. 92) read_stdin.c         -> Buffer dans le read [127][0m
+[36m[ 15:56:09 ] (l. 92) read_stdin.c         -> Buffer dans le read [46][0m
+[36m[ 15:56:09 ] (l. 92) read_stdin.c         -> Buffer dans le read [47][0m
+[36m[ 15:56:09 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:56:09 ] (l. 92) read_stdin.c         -> Buffer dans le read [114][0m
+[36m[ 15:56:10 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:10 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 15:56:10 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+[36m[ 15:56:11 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:11 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 15:56:11 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 15:56:13 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:13 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 15:56:13 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 15:56:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:16 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:16 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:16 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:16 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:18 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:18 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:18 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:18 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:20 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:20 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:20 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:20 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:21 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:21 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:21 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:21 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:22 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:22 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:22 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:22 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:22 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:22 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:22 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:22 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:23 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:23 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:23 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:23 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:23 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:24 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:24 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:24 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:24 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:24 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:24 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:24 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:24 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:24 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:24 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:24 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:24 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:24 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:25 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:25 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:25 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:25 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:27 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:27 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:27 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:27 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:27 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:27 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:27 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:27 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:27 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:27 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:28 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:28 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:28 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:28 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:28 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:28 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:28 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:28 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:28 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:28 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:28 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:28 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:28 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:28 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:29 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:29 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:29 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:29 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:29 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:30 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:30 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:30 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:30 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:30 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:30 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:30 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:30 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:30 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:30 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:30 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:30 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:30 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:30 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:30 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:31 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:31 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:31 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:31 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:31 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:31 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:31 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:31 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:31 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:31 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:31 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:31 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:31 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:31 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:31 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:31 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:31 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:31 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:31 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:31 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:31 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:31 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:31 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:34 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:34 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:34 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:34 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:34 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:34 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:34 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:34 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:34 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:34 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:34 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:34 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:34 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:34 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:34 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:34 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:34 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:34 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:34 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:34 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:34 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:34 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:34 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:34 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:34 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:35 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:35 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:35 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:35 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:35 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:35 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:35 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:35 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:35 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:35 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:35 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:35 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:35 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:35 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:35 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:36 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:36 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:36 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:36 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:36 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:36 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:36 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:36 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:36 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:36 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:36 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:36 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:36 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:36 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:36 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:36 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:36 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:36 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:37 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:37 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:37 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:37 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:37 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:37 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:37 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:37 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:37 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:37 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:38 ] (l. 92) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:56:38 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[0m[ 15:56:38 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:38 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:38 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:38 ] (l. 92) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:56:38 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[0m[ 15:56:38 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:38 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:38 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:38 ] (l. 92) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:56:38 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[0m[ 15:56:38 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:38 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:38 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:39 ] (l. 92) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:56:39 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[0m[ 15:56:39 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:39 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:39 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:39 ] (l. 92) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:56:39 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[0m[ 15:56:39 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:39 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:39 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:39 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:39 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:39 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:39 ] (l. 92) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:56:39 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[0m[ 15:56:39 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:39 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:39 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:40 ] (l. 92) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:56:40 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[0m[ 15:56:40 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:40 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:40 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:40 ] (l. 92) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:56:40 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[0m[ 15:56:40 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:40 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:40 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:40 ] (l. 92) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:56:40 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[0m[ 15:56:40 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:40 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:40 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:40 ] (l. 92) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 15:56:40 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[0m[ 15:56:40 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:40 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:40 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:40 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:40 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:41 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:41 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:41 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:41 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:42 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:42 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:43 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:43 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 15:56:44 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:44 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:45 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:45 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:45 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:45 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:45 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:45 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:45 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:45 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:45 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:45 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:45 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:56:46 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:56:46 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:56:46 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:46 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:46 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:46 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:46 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:56:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:56:47 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:56:47 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:56:47 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:56:47 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[38;5;239m[ 15:57:37 ] (l. 28) +emdel_outstanding.c -> Memdel OUTSTANDING ^_^ -> [1][0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:57:37 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 15:58:45 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 15:58:45 ] (l. 29) init_term.c          -> Init _ Term [0m
+[0m[ 15:58:45 ] (l. 42) init_term.c          -> Save old _ struct[0m
+[0m[ 15:58:45 ] (l. 46) init_term.c          -> Save out _ struct[0m
+[36m[ 15:58:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:58:46 ] (l. 92) read_stdin.c         -> Buffer dans le read [114][0m
+[36m[ 15:58:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [127][0m
+[36m[ 15:58:47 ] (l. 92) read_stdin.c         -> Buffer dans le read [127][0m
+[36m[ 15:58:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [46][0m
+[36m[ 15:58:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [47][0m
+[36m[ 15:58:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 15:58:48 ] (l. 92) read_stdin.c         -> Buffer dans le read [114][0m
+[36m[ 15:58:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:49 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 15:58:49 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+[36m[ 15:58:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:49 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 15:58:49 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 15:58:49 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:49 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 15:58:49 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 15:58:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:50 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:50 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:50 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:50 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:50 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:50 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:50 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:50 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:50 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:50 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:50 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:50 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:50 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:51 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:51 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:51 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:51 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:51 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:51 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:51 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:51 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:51 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:51 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:51 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:51 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:51 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:51 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:51 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:51 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:51 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:51 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:51 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:51 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:52 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:52 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:52 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:52 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:52 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:52 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:52 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:52 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:52 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:52 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:58:52 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:58:52 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:58:52 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:58:52 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:52 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:52 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:52 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:52 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:52 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:52 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:52 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:52 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:52 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:53 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:53 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:53 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:53 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:53 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:53 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:53 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:53 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:53 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:53 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:54 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:54 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:54 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:54 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:54 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:54 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:54 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:54 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:54 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:54 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:54 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:54 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:54 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:54 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:54 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:55 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:55 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:55 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:55 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:55 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:55 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:55 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:55 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:55 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:55 ] (l. 38) move_horizontal.c    -> Instance 2[0m
+[0m[ 15:58:55 ] (l. 40) move_horizontal.c    -> Instance 3[0m
+[0m[ 15:58:55 ] (l. 42) move_horizontal.c    -> Instance 4[0m
+[0m[ 15:58:55 ] (l. 44) move_horizontal.c    -> Instance 5[0m
+[36m[ 15:58:55 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:55 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:55 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:55 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:55 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:55 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:55 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:55 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:55 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:55 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:56 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:56 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:56 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:56 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:56 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:56 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:56 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:56 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:56 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:56 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:56 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:56 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:56 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:56 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:56 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:57 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:57 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:57 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:57 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:57 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[36m[ 15:58:57 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 15:58:57 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[0m[ 15:58:57 ] (l. 33) move_horizontal.c    -> Instance 0[0m
+[0m[ 15:58:57 ] (l. 35) move_horizontal.c    -> Instance 1[0m
+[0m[ 15:58:57 ] (l. 48) move_horizontal.c    -> Instance 2[0m
+[38;5;239m[ 15:59:52 ] (l. 28) +emdel_outstanding.c -> Memdel OUTSTANDING ^_^ -> [1][0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 15:59:52 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 16:01:13 ] (l. 54) init_env.c           -> bonjour j'init l'env[0m
+[0m[ 16:01:13 ] (l. 29) init_term.c          -> Init _ Term [0m
+[0m[ 16:01:13 ] (l. 42) init_term.c          -> Save old _ struct[0m
+[0m[ 16:01:13 ] (l. 46) init_term.c          -> Save out _ struct[0m
+[36m[ 16:01:14 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 16:01:15 ] (l. 92) read_stdin.c         -> Buffer dans le read [127][0m
+[36m[ 16:01:15 ] (l. 92) read_stdin.c         -> Buffer dans le read [46][0m
+[36m[ 16:01:15 ] (l. 92) read_stdin.c         -> Buffer dans le read [47][0m
+[36m[ 16:01:15 ] (l. 92) read_stdin.c         -> Buffer dans le read [115][0m
+[36m[ 16:01:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [101][0m
+[36m[ 16:01:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:16 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 16:01:16 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m
+[36m[ 16:01:16 ] (l. 92) read_stdin.c         -> Buffer dans le read [127][0m
+[36m[ 16:01:17 ] (l. 92) read_stdin.c         -> Buffer dans le read [114][0m
+[36m[ 16:01:17 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:17 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 16:01:17 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 16:01:17 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:17 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 16:01:17 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 16:01:17 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:17 ] (l. 30) key_tabulation.c     -> Init completion[0m
+[38;5;239m[ 16:01:17 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 16:01:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:18 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:18 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:18 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:19 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:19 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:19 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:20 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:20 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:21 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:21 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:21 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:22 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:22 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:22 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:23 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:23 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:23 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:23 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:23 ] (l. 92) read_stdin.c         -> Buffer dans le read [9][0m
+[0m[ 16:01:23 ] (l. 24) key_tabulation.c     -> Continue completion[0m
+[36m[ 16:01:24 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:24 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:24 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:24 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:25 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:25 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4348699][0m
+[36m[ 16:01:26 ] (l. 83) key_arrow.c          -> key_arrow_down[0m
+[36m[ 16:01:26 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:27 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:30 ] (l. 92) read_stdin.c         -> Buffer dans le read [4414235][0m
+[36m[ 16:01:30 ] (l. 39) key_arrow.c          -> key_arrow_right[0m
+[36m[ 16:01:30 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[38;5;239m[ 16:01:30 ] (l. 28) +emdel_outstanding.c -> Memdel OUTSTANDING ^_^ -> [1][0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 34) memdel_read.c        -> Memdel read[0m
+[38;5;239m[ 16:01:30 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:30 ] (l. 25) memdel_completion.c  -> Memdel -> [1][0m
+[36m[ 16:01:31 ] (l. 92) read_stdin.c         -> Buffer dans le read [4283163][0m
+[36m[ 16:01:31 ] (l. 92) read_stdin.c         -> Buffer dans le read [2][0m
+[38;5;239m[ 16:01:31 ] (l. 28) +emdel_outstanding.c -> Memdel OUTSTANDING ^_^ -> [1][0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 34) memdel_read.c        -> Memdel read[0m
+[38;5;239m[ 16:01:31 ] (l. 19) memdel_read.c        -> Memdel cmd[0m
+[38;5;239m[ 16:01:31 ] (l. 25) memdel_completion.c  -> Memdel -> [0][0m

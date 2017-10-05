@@ -12,13 +12,20 @@
 
 #include <sh.h>
 
+
+void				handler_sigint(int sig)
+{
+	(void)sig;
+	ioctl(STDIN_FILENO, TIOCSTI, "\x2\x0");
+}
+
 void				init_signal(void)
 {
 	int i = -1;
 
 	while (++i < 32)
 		signal(i, SIG_IGN);
-	signal(SIGINT, SIG_DFL);
+	signal(SIGINT, handler_sigint);
 }
 
 void				reset_signal(void)

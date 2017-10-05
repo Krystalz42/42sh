@@ -16,12 +16,10 @@ void		add_environment(char *string)
 {
 	char		**table;
 	char		**cpy;
-	size_t		len;
-	int 		i;
+	int			i;
 
 	table = env_table(NULL, ENV_REC);
-	len = ft_tablen(table);
-	cpy = (char **)ft_memalloc(sizeof(char *) * (len + 2));
+	cpy = (char **)ft_memalloc(sizeof(char *) * (ft_tablen(table) + 2));
 	i = -1;
 	if (table)
 		while (table[++i])

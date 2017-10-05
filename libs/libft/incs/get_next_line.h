@@ -29,9 +29,8 @@ typedef struct			s_struct
 typedef struct			s_list
 {
 	char				*content;
-	size_t				flag;
 	struct s_list		*next;
-	struct s_list		*before;
+	struct s_list		*prev;
 }						t_list;
 
 typedef struct			s_tree

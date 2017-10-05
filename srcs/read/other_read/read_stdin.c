@@ -30,11 +30,9 @@ static const t_cmp		g_tab_are_key[] = {
     (t_cmp){CTRL_K, key_kill_k},
     (t_cmp){CTRL_V, key_yank},
     (t_cmp){CTRL_UNDO, key_undo_},
-    (t_cmp){CTRL_B, key_arrow_left},
     (t_cmp){META_DEL, key_kill_prev_word},
     (t_cmp){META_F, key_shift_right},
     (t_cmp){META_D, key_kill_word},
-    (t_cmp){META_B, key_shift_left},
     (t_cmp){ARROW_DOWN, key_arrow_down},
     (t_cmp){ARROW_LEFT, key_arrow_left},
     (t_cmp){ARROW_RIGHT, key_arrow_right},
@@ -66,7 +64,7 @@ static inline void		initialize_fct(t_read **read_std, unsigned long *buff)
 {
 	(*buff) = 0;
 	init_prompt();
-//	init_signal();
+	init_signal();
 	set_termios(SET_OUR_TERM);
 	(*read_std)->cur = prompt(DEFAULT | PRINT);
 	last_resultat(0);
@@ -91,6 +89,7 @@ t_read					*read_stdin(void)
 	initialize_fct(&read_std, &buff);
 	while ((index = -1) && read(STDIN_FILENO, &buff, sizeof(unsigned long)))
 	{
+		log_info("Buffer dans le read [%lu]", buff);
 		while (g_tab_are_key[++index].key)
 			if (g_tab_are_key[index].key == buff)
 			{

@@ -12,20 +12,22 @@
 
 #include <sh.h>
 
-void 		remove_environment(char *string)
+void		remove_environment(char *string)
 {
 	char		**table;
 	char		**cpy;
-	int 		i;
+	int			i;
+	int			c;
 
 	table = env_table(NULL, ENV_REC);
 	cpy = (char **)ft_memalloc(sizeof(char *) * (ft_tablen(table)));
+	c = -1;
 	i = -1;
 	if (table)
 		while (table[++i])
-			if (ft_strcmp(string, ft_strchr(table[i], '=')))
-				cpy[i] = table[i];
-	cpy[i] = NULL;
+			if (!compare_environment(string, table[i]))
+				cpy[++c] = table[i];
+	cpy[++c] = NULL;
 	ft_memdel((void **)&table);
 	env_table(cpy, ENV_INIT);
 }

@@ -29,8 +29,9 @@
 # include <sys/types.h>
 # include <dirent.h>
 # include <signal.h>
-#include <logger.h>
-#include <logger_utils.h>
+# include <sys/ioctl.h>
+# include <logger.h>
+# include <logger_utils.h>
 
 /*
 **				A virer avant de push

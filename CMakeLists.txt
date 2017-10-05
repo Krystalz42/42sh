@@ -229,3 +229,5 @@ include_directories(
         libs/printf/incs
         logger/incs
 )
+
+target_link_libraries(lncurses)

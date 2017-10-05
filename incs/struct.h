@@ -51,7 +51,6 @@ typedef struct		s_mouse
 typedef struct		s_cmd
 {
 	char			c;
-	int				s;
 	struct s_cmd	*next;
 	struct s_cmd	*prev;
 }					t_cmd;

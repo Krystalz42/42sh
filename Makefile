@@ -285,9 +285,6 @@ exe			:
 leaks		:
 	while true ; do leaks $(NAME) ; sleep 2 ; clear ; done
 
-log			:
-	while true ; do cat logger ; sleep 2 ; clear ; done
-
 # ---------------------------------------------------------------------------- #
 #						 	/!\ PRIVATE RULES /!\							   #
 # ---------------------------------------------------------------------------- #
