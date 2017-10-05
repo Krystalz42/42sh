@@ -12,15 +12,6 @@
 
 #include <sh.h>
 
-void			print_back(t_read **read_std, t_file *tmp)
-{
-	(*read_std)->tab_->index--;
-	print_element(tmp, 0);
-	tmp = tmp->next;
-	P_RST_FD(2);
-	print_element(tmp, 1);
-}
-
 void			back_completion(t_read **read_std)
 {
 	t_file	*tmp;
@@ -60,7 +51,6 @@ void			continue_completion(t_read **read_std)
 			print_element(tmp, 0);
 			tmp = tmp->prev;
 			print_element(tmp, 1);
-			(tmp->prev) && (tmp = tmp->prev);
 			break ;
 		}
 		tmp = tmp->next;

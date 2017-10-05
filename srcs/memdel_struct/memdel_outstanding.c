@@ -25,7 +25,6 @@ void		memdel_outstanding(void)
 
 	if ((ptr = get_os_pointer(NULL, 0)))
 	{
-		log_trace("Memdel OUTSTANDING ^_^ -> [%d]", (ptr) ? 1 : 0);
 		reset_os(&ptr);
 		while (ptr)
 		{

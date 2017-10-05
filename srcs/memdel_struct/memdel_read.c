@@ -16,7 +16,6 @@ int			memdel_cmd(t_cmd **cmd)
 {
 	t_cmd *tmp;
 
-	log_trace("Memdel cmd");
 	while ((*cmd) && (*cmd)->prev)
 		(*cmd) = (*cmd)->prev;
 	while ((*cmd))
@@ -31,7 +30,6 @@ int			memdel_cmd(t_cmd **cmd)
 
 int			memdel_read(t_read **read_std)
 {
-	log_trace("Memdel read");
 	memdel_cmd(&((*read_std)->cmd));
 	memdel_completion(&((*read_std)->tab_));
 	ft_memdel((void **)read_std);

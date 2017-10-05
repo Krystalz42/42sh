@@ -22,12 +22,16 @@ void		reset(t_read **read_std, int to)
 
 int			place_cursor(t_read **read_std, int t)
 {
+	int			save;
+
 	if (t)
 	{
-		(*read_std)->cur.save = (*read_std)->cur.line;
+		save = (*read_std)->cur.line;
 		reset(read_std, 0);
+		(*read_std)->cur.save = save;
 		insert_one_line();
 		CLEAR_FROM_CUR;
+		log_info("Post print completion cur. save [%d] line [%d] co [%d]", (*read_std)->cur.save, (*read_std)->cur.line, (*read_std)->cur.co);
 	}
 	else
 	{

@@ -26,25 +26,25 @@ int		init_term(void)
 	static struct termios old_term;
 	static struct termios our_term;
 
-	log_debug("Init _ Term ");
 	if (!my_getenv("TERM"))
-	{
-		log_debug("return my_getenv() == NULL");
 		add_environment("TERM=vt100");
-
-	}
 	if (tgetent(NULL, my_getenv("TERM")) == ERR)
 		puterror("tgetent");
 
 	if (!(tcgetattr(STDIN_FILENO, &old_term)))
 	{
+		log_debug("OLD_TERM Init");
 		keep_term_struct(SAVE_OLD, &old_term);
-		log_debug("Save old _ struct");
+
 	}
+	else
+		log_fatal("OLD_TERM BUG");
 	if (!(tcgetattr(0, &our_term)) && init_our_term(&our_term))
 	{
-		log_debug("Save out _ struct");
+		log_debug("OUR_TERM Init");
 		keep_term_struct(SAVE_OUR, &our_term);
 	}
+	else
+		log_fatal("OLD TERM BUG");
 	return (0);
 }

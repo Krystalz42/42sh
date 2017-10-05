@@ -62,13 +62,22 @@ static inline int		chk_and_print(unsigned long *buff, t_read **read_std)
 
 static inline void		initialize_fct(t_read **read_std, unsigned long *buff)
 {
+	int i = -1;
+
 	(*buff) = 0;
+	log_trace("Init read_std begin");
 	init_prompt();
+	log_debug("Instance [%d]", ++i);
 	init_signal();
+	log_debug("Instance [%d]", ++i);
 	set_termios(SET_OUR_TERM);
+	log_debug("Instance [%d]", ++i);
 	(*read_std)->cur = prompt(DEFAULT | PRINT);
+	log_debug("Instance [%d]", ++i);
 	last_resultat(0);
+	log_debug("Instance [%d]", ++i);
 	get_os_pointer(NULL, 1);
+	log_trace("Init read_std finish");
 }
 
 static inline void		finalize_fct(t_read **read_std)
@@ -89,7 +98,6 @@ t_read					*read_stdin(void)
 	initialize_fct(&read_std, &buff);
 	while ((index = -1) && read(STDIN_FILENO, &buff, sizeof(unsigned long)))
 	{
-		log_info("Buffer dans le read [%lu]", buff);
 		while (g_tab_are_key[++index].key)
 			if (g_tab_are_key[index].key == buff)
 			{

@@ -24,14 +24,20 @@ int			init_page(t_read **read_std, t_file **tmp)
 
 int			print_element(t_file *file, int color)
 {
-	(!color) ? P_INV_FD(2) : NULL;
-	color_completion(file->type, color);
-	my_togo(file->ms.y, file->ms.x);
-	STR_FD(file->name, 2);
-	STR_FD(RST, 2);
-	add_little_char(file->type);
-	my_tobackto(file->ms.y, file->ms.x + 100);
-	P_RST_FD(2);
+	if (!color)
+	log_info("Ligne [%d] && Column [%d]",file->ms.y, file->ms.x);
+	if (file)
+	{
+
+		(!color) ? P_INV_FD(2) : NULL;
+		color_completion(file->type, color);
+		my_togo(file->ms.y, file->ms.x);
+		STR_FD(file->name, 2);
+		STR_FD(RST, 2);
+		add_little_char(file->type);
+		my_tobackto(file->ms.y, file->ms.x + 100);
+		P_RST_FD(2);
+	}
 	return (1);
 }
 
@@ -57,6 +63,7 @@ int			print_tab(t_read **read_std)
 			(tmp->index == (*read_std)->tab_->index)
 				? print_element(tmp, 0) : print_element(tmp, 1);
 			tmp->ms.y += ((*read_std)->cur.line - (*read_std)->cur.save);
+			log_info("Completion initialisation X [%d] && Y [%d]", tmp->ms.x,tmp->ms.y);
 			tmp = tmp->next;
 		}
 	}

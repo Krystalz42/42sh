@@ -51,9 +51,9 @@ void		init_env(void)
 
 	i = -1;
 	env = NULL;
-	log_error("bonjour j'init l'env");
 	if (environ)
 	{
+		log_trace("Init env !");
 		while (environ[++i])
 			;
 		env = (char **)ft_memalloc(sizeof(char *) * (i  + 1));

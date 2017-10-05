@@ -21,13 +21,11 @@ int			key_tab(t_read **read_std,
 	}
 	if ((*read_std)->completion)
 	{
-		log_debug("Continue completion");
 		move_completion_right(read_std);
 
 	}
 	else
 	{
-		log_debug("Init completion");
 		memdel_completion(&((*read_std)->tab_));
 		init_completion(read_std);
 	}

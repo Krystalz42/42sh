@@ -22,7 +22,6 @@ int			memdel_completion(t_tab **tab_)
 {
 	t_file	*tmp;
 
-	log_trace("Memdel -> [%d]", (*tab_) ? 1 : 0);
 	if (*tab_)
 	{
 		if ((*tab_)->from)

@@ -59,6 +59,7 @@ void				write_history_in_sh(void)
 	}
 	command = 0;
 	buff = NULL;
+	log_trace("Init history");
 	while (command < HISTSIZE && my_gnl(fd, &buff))
 	{
 		command += convert_to_hist(buff);
