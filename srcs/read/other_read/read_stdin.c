@@ -28,7 +28,7 @@ static const t_cmp		g_tab_are_key[] = {
     (t_cmp){CTRL_F, key_arrow_right},
     (t_cmp){CTRL_R, key_search_history},
     (t_cmp){CTRL_K, key_kill_k},
-    (t_cmp){CTRL_V, key_yank},
+    (t_cmp){META_Y, key_yank},
     (t_cmp){CTRL_UNDO, key_undo_},
     (t_cmp){META_DEL, key_kill_prev_word},
     (t_cmp){META_F, key_shift_right},
@@ -62,27 +62,17 @@ static inline int		chk_and_print(unsigned long *buff, t_read **read_std)
 
 static inline void		initialize_fct(t_read **read_std, unsigned long *buff)
 {
-	int i = -1;
-
 	(*buff) = 0;
 	log_trace("Init read_std begin");
 	init_prompt();
-	log_debug("Instance [%d]", ++i);
-	init_signal();
-	log_debug("Instance [%d]", ++i);
 	set_termios(SET_OUR_TERM);
-	log_debug("Instance [%d]", ++i);
 	(*read_std)->cur = prompt(DEFAULT | PRINT);
-	log_debug("Instance [%d]", ++i);
 	last_resultat(0);
-	log_debug("Instance [%d]", ++i);
 	get_os_pointer(NULL, 1);
-	log_trace("Init read_std finish");
 }
 
 static inline void		finalize_fct(t_read **read_std)
 {
-	reset_signal();
 	set_termios(SET_OLD_TERM);
 	finish_read_std(read_std);
 }
@@ -98,6 +88,7 @@ t_read					*read_stdin(void)
 	initialize_fct(&read_std, &buff);
 	while ((index = -1) && read(STDIN_FILENO, &buff, sizeof(unsigned long)))
 	{
+		log_trace("buffering [%lu]", buff);
 		while (g_tab_are_key[++index].key)
 			if (g_tab_are_key[index].key == buff)
 			{

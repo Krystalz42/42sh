@@ -62,7 +62,10 @@ int         key_undo_(t_read **read_std, unsigned long buff)
 	{
 		while (to_do[++i].key)
 			if (to_do[i].key == undo->movement)
+			{
+				log_trace("Undo do %d", i);
 				to_do[i].function(read_std, 0);
+			}
 		place_new_undo(undo);
 	}
 	return (1);

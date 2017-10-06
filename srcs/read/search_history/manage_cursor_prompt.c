@@ -12,27 +12,31 @@
 
 #include <sh.h>
 
-int         new_line_after_bloc(t_read **read_std, int to)
+int				new_line_after_bloc(t_read **read_std, int to)
 {
-    if (to == 2)
-    {
-        (*read_std)->cur.save = (*read_std)->cur.line;
-        reset(read_std, 0);
-        insert_one_line();
+	int		save;
 
-    }
-    else if (to == 1)
-    {
-        (*read_std)->cur.save = (*read_std)->cur.line;
-        reset(read_std, 0);
-        MV_BOT;
-    }
-    else
-    {
-        MV_TOP;
-        reset(read_std, 1);
-    }
-    return (1);
+	if (to == 2)
+	{
+		save = (*read_std)->cur.line;
+		reset(read_std, 0);
+		(*read_std)->cur.line = save;
+		insert_one_line();
+
+	}
+	else if (to == 1)
+	{
+		save = (*read_std)->cur.line;
+		reset(read_std, 0);
+		(*read_std)->cur.line = save;
+		MV_BOT;
+	}
+	else
+	{
+		MV_TOP;
+		reset(read_std, 1);
+	}
+	return (1);
 }
 
 t_cursor				prompt_history(int p)

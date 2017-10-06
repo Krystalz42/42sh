@@ -15,15 +15,18 @@
 static void				personnal_command(char *command[], int fdout, int fderr)
 {
 	pid_t 		father;
-	int			status;
 
 	father = fork();
 	if (father == -1)
 		;
 	else if (father)
-		waitpid(father, &status, 0);
+	{
+		setpgid(father, father);
+		waitpid(father, 0, 0);
+	}
 	else
 	{
+		setpgid(0, getpid());
 		dup2(fdout, STDOUT_FILENO);
 		dup2(fderr, STDERR_FILENO);
 		execve(command[0], command, NULL);
@@ -62,10 +65,10 @@ static size_t			get_str_from_branch(char **prompt, int fderr)
 
 static size_t			get_str_from_pwd(char **prompt, int fderr)
 {
-	static char	*command[] = {"/bin/pwd", NULL};
-	char		*line;
-	size_t		len;
-	int			fdout;
+	static char		*command[] = {"/bin/pwd", NULL};
+	char			*line;
+	size_t			len;
+	int				fdout;
 
 	if ((fdout = open(PATH_PWD, O_CREAT | O_TRUNC | O_WRONLY, 0644)) == -1)
 		return (0);
@@ -74,7 +77,7 @@ static size_t			get_str_from_pwd(char **prompt, int fderr)
 		return (0);
 	if ((my_gnl(fdout, &line)) != 1)
 		return (0);
-    len = ft_strlen(line) - 1;
+	len = ft_strlen(line) - 1;
 	while (line[len] != '/')
 		len--;
 	(*prompt) = (char *)ft_realloc((void **)prompt, ft_strlen(*prompt),
@@ -83,7 +86,7 @@ static size_t			get_str_from_pwd(char **prompt, int fderr)
 	len = ft_strlen(line + (len ? len + 1 : len));
 	ft_memdel((void **)&line);
 	remove(PATH_PWD);
-    return (len ?  : 1);
+	return (len ?  : 1);
 }
 
 void				init_prompt(void)

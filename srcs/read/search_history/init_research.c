@@ -12,9 +12,7 @@
 
 #include <sh.h>
 
-
-
-int         init_research(t_read **read_std)
+int				init_research(t_read **read_std)
 {
 	if (!((*read_std)->hist_search = (t_lfh *)ft_memalloc(sizeof(t_lfh))))
 		return (--(*read_std)->history_search);

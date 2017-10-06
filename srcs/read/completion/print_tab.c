@@ -25,7 +25,7 @@ int			init_page(t_read **read_std, t_file **tmp)
 int			print_element(t_file *file, int color)
 {
 	if (!color)
-	log_info("Ligne [%d] && Column [%d]",file->ms.y, file->ms.x);
+	log_trace("Ligne [%d] && Column [%d]",file->ms.y, file->ms.x);
 	if (file)
 	{
 
@@ -63,7 +63,6 @@ int			print_tab(t_read **read_std)
 			(tmp->index == (*read_std)->tab_->index)
 				? print_element(tmp, 0) : print_element(tmp, 1);
 			tmp->ms.y += ((*read_std)->cur.line - (*read_std)->cur.save);
-			log_info("Completion initialisation X [%d] && Y [%d]", tmp->ms.x,tmp->ms.y);
 			tmp = tmp->next;
 		}
 	}

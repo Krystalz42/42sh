@@ -13,6 +13,8 @@
 #ifndef STRUCT_H
 # define STRUCT_H
 
+#include <stdbool.h>
+
 /*
 **			STRUCT FOR COMPLETION'S PATH
 */
@@ -183,5 +185,17 @@ typedef struct		s_outstanding
 	struct s_outstanding	*next;
 	struct s_outstanding	*prev;
 }					t_outstanding;
+
+/*
+**			STRUCT FOR JOB'S CONTROL
+*/
+
+typedef struct 		s_jobs
+{
+	pid_t 			ppid;
+	int				status;
+	bool			foreground;
+	int 			index;
+}					t_jobs;
 
 #endif

@@ -228,6 +228,16 @@ void						next_history(t_read **read_std);
 int							b_write_history_in_file(char *path);
 
 /*
+**				JOB'S CONTROL FUNCTION
+*/
+
+void						my_execve(char **command, char **env);
+void						jobs_control(unsigned int flags, pid_t child,
+										int status, int sig);
+void						my_wait(pid_t child, bool foreground);
+
+
+/*
 **				SIGNAL FUNCTION
 */
 

@@ -37,12 +37,12 @@
 # define DEFAULT				16
 # define PRINT					32
 
-# define HISTSIZE				500
-# define PATH_HISTORY			"/.42sh_history"
-# define PATH_HASH				"/.42sh_hash"
-# define PATH_GIT				"/tmp/.git_info"
-# define PATH_PWD				"/tmp/.pwd_info"
-# define PATH_ERR				"/dev/null"
+# define NEW_CHILD_FG			1
+# define NEW_CHILD_BG			2
+# define UPDATE_CHILD			4
+# define SIGNAL_RECEPTION		8
+# define INITIALIZE_TO_ZERO		16
+# define FOREGROUND				32
 
 /*
 **			INITIALIZATION READ
@@ -53,19 +53,19 @@
 # define ENTER_KEY				10
 # define CLEAR_KEY				12
 
-# define CTRL_V					22
 # define INTERRUPT_KEY			2
 # define CTRL_F					6
 # define CTRL_D					4
 # define CTRL_A					1
 # define CTRL_E					5
 # define CTRL_K					11
-# define CTRL_W 				23
 # define CTRL_R					18
+# define CTRL_V					22
+# define CTRL_W 				23
 # define CTRL_UNDO				31
 # define PRINT_KEY				424242
 
-# define META_Y					31003
+# define META_Y					42434
 # define META_F					26139
 # define META_D					25627
 # define META_DEL				32539
@@ -90,6 +90,19 @@
 
 # define CTRL_SHIFT_RIGHT_KEY	73900200385307
 # define CTRL_SHIFT_LEFT_KEY	74999712013083
+
+/*
+**			VARIOUS DEFINE
+*/
+
+# define MAX_CHILD				8096
+
+# define HISTSIZE				500
+# define PATH_HISTORY			"/.42sh_history"
+# define PATH_HASH				"/.42sh_hash"
+# define PATH_GIT				"/tmp/.git_info"
+# define PATH_PWD				"/tmp/.pwd_info"
+# define PATH_ERR				"/dev/null"
 
 # define MV_RIGHT				tputs(tgetstr("nd", 0), 0, &my_put)
 # define MV_LEFT				tputs(tgetstr("le", 0), 0, &my_put)

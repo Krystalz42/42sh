@@ -125,6 +125,9 @@ SRCS = \
 	   history/gbl_save_history.c							\
 	   history/copy_cmd.c									\
 	   signal/ft_signal.c									\
+	   jobs_control/jobs_control.c                          \
+	   jobs_control/my_wait.c                               \
+	   jobs_control/my_execve.c                             \
 	   env/add_environment.c                                \
 	   env/remove_environment.c                             \
 	   env/manage_env.c                                     \

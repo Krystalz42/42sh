@@ -15,8 +15,7 @@
 
 void				handler_sigint(int sig)
 {
-	(void)sig;
-	ioctl(STDIN_FILENO, TIOCSTI, "\x2\x0");
+	jobs_control(SIGNAL_RECEPTION, 0, 0, sig);
 }
 
 void				init_signal(void)
@@ -24,14 +23,13 @@ void				init_signal(void)
 	int i = -1;
 
 	while (++i < 32)
-		signal(i, SIG_IGN);
-	signal(SIGINT, handler_sigint);
+		signal(i, handler_sigint);
 }
 
 void				reset_signal(void)
 {
-int i = -1;
+	int i = -1;
 
-while (++i < 32)
-	signal(i, SIG_DFL);
+	while (++i < 32)
+		signal(i, SIG_DFL);
 }

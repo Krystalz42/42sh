@@ -125,6 +125,20 @@ set(SOURCE_FILES
         libs/printf/srcs/part_str.c
         libs/printf/srcs/part_unisgned.c
         libs/printf/srcs/printf_part.c
+        logger/incs/logger.h
+        logger/incs/logger_utils.h
+        logger/srcs/display/logger_debug.c
+        logger/srcs/display/logger_error.c
+        logger/srcs/display/logger_fatal.c
+        logger/srcs/display/logger_info.c
+        logger/srcs/display/logger_success.c
+        logger/srcs/display/logger_trace.c
+        logger/srcs/display/logger_warn.c
+        logger/srcs/logger/logger_close.c
+        logger/srcs/logger/logger_init.c
+        logger/srcs/utils/logger_get_time.c
+        logger/srcs/utils/logger_init_open_file.c
+        logger/test/main.c
         srcs/cores/insert_one_line.c
         srcs/cores/main.c
         srcs/cores/shell.c
@@ -153,6 +167,9 @@ set(SOURCE_FILES
         srcs/history/previous_history.c
         srcs/history/reset_history.c
         srcs/history/write_history.c
+        srcs/jobs_control/jobs_control.c
+        srcs/jobs_control/my_execve.c
+        srcs/jobs_control/my_wait.c
         srcs/memdel_struct/memdel_completion.c
         srcs/memdel_struct/memdel_outstanding.c
         srcs/memdel_struct/memdel_read.c
@@ -221,13 +238,9 @@ set(SOURCE_FILES
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c)
 
+include_directories(incs)
+include_directories(libs/libft/incs)
+include_directories(libs/printf/incs)
+include_directories(logger/incs)
+
 add_executable(42sh ${SOURCE_FILES})
-
-include_directories(
-        incs
-        libs/libft/incs
-        libs/printf/incs
-        logger/incs
-)
-
-target_link_libraries(lncurses)

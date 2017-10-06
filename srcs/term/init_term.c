@@ -32,18 +32,11 @@ int		init_term(void)
 		puterror("tgetent");
 
 	if (!(tcgetattr(STDIN_FILENO, &old_term)))
-	{
-		log_debug("OLD_TERM Init");
 		keep_term_struct(SAVE_OLD, &old_term);
-
-	}
 	else
 		log_fatal("OLD_TERM BUG");
 	if (!(tcgetattr(0, &our_term)) && init_our_term(&our_term))
-	{
-		log_debug("OUR_TERM Init");
 		keep_term_struct(SAVE_OUR, &our_term);
-	}
 	else
 		log_fatal("OLD TERM BUG");
 	return (0);

@@ -29,6 +29,7 @@ void		finish_read_std(t_read **read_std)
 		(*read_std)->finish = 0;
 		make_list_hist((*read_std));
         key_end_(read_std, KEY_END);
+        key_end_(read_std, KEY_END);
         print_struct(*read_std);
 	}
 }
