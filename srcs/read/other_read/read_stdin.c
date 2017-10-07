@@ -65,6 +65,7 @@ static inline void		initialize_fct(t_read **read_std, unsigned long *buff)
 	(*buff) = 0;
 	log_trace("Init read_std begin");
 	init_prompt();
+	init_signal();
 	set_termios(SET_OUR_TERM);
 	(*read_std)->cur = prompt(DEFAULT | PRINT);
 	last_resultat(0);

@@ -14,9 +14,9 @@
 
 uint8_t		var_return(int ret)
 {
-	static int save;
+	static uint8_t		save;
 
 	if (ret >= 0 && ret <= UCHAR_MAX)
 		save = (uint8_t)ret;
-	return ((uint8_t)save);
+	return (save);
 }

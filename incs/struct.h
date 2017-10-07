@@ -195,7 +195,6 @@ typedef struct 		s_jobs
 	pid_t 			ppid;
 	int				status;
 	bool			foreground;
-	int 			index;
 }					t_jobs;
 
 #endif

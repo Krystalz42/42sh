@@ -52,6 +52,7 @@ unsigned char				var_return(int ret);
 */
 
 t_read						*read_stdin(void);
+int							rd(int	status);
 char						*my_prompt(char *prompt);
 void						init_prompt(void);
 t_cursor					prompt(unsigned char flags);
@@ -207,7 +208,7 @@ char						*get_str_from_history(void);
 uint8_t						builtin_env(char **command);
 void						add_environment(char *string);
 void						init_env(void);
-char						*my_getenv(char *str);
+char						*my_getenv(char *name);
 size_t						compare_environment(char *s1, char *s2);
 void						remove_environment(char *string);
 char						**env_table(char **env, int flags);

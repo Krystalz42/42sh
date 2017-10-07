@@ -97,6 +97,7 @@ void				init_prompt(void)
 
 	fderr = open(PATH_ERR, O_WRONLY);
 	len = 3;
+	reset_signal();
 	ft_memdel((void **)&prompt);
 	prompt = (char *)ft_realloc((void **)&prompt, 0,
 								ft_strlen("\x1B[1m\x1B[34m"));
@@ -105,9 +106,10 @@ void				init_prompt(void)
 	len += get_str_from_branch(&prompt, fderr);
 	prompt = (char *)ft_realloc((void **)&prompt, ft_strlen(prompt),
 		ft_strlen(prompt) + ft_strlen("\x1B[31m √ \x1B[0m"));
-	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? GRN : RED);
+	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? RED : GRN);
 	ft_strcpy(prompt + ft_strlen(prompt), " √ \x1B[0m");
 	my_prompt(prompt);
 	get_len_prompt((int)len);
 	close(fderr);
+	init_signal();
 }

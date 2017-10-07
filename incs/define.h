@@ -41,8 +41,11 @@
 # define NEW_CHILD_BG			2
 # define UPDATE_CHILD			4
 # define SIGNAL_RECEPTION		8
-# define INITIALIZE_TO_ZERO		16
-# define FOREGROUND				32
+# define SIGNAL_SIGCHLD			16
+# define INITIALIZE_TO_ZERO		32
+# define FOREGROUND				64
+# define BACKGROUND				128
+
 
 /*
 **			INITIALIZATION READ
