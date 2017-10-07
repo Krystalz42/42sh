@@ -171,12 +171,12 @@ RST   =		\x1B[0m
 LIBS		= \
 			  $(DIR_LIBS)/libft/libft.a				\
 			  $(DIR_LIBS)/printf/libprintf.a		\
-			  logger/liblogger.a                    \
+			  $(DIR_LIBS)/logger/liblogger.a                    \
 
 LDFLAGS		= \
 			  -L $(DIR_LIBS)/libft					\
 			  -L $(DIR_LIBS)/printf					\
-			  -L logger/    					\
+			  -L $(DIR_LIBS)/logger/    					\
 
 LDLIBS		= \
 			  -lft									\
@@ -188,7 +188,7 @@ CPPFLAGS	= \
 			  -I$(DIR_INCS)							\
 			  -I$(DIR_LIBS)/libft/$(DIR_INCS)		\
 			  -I$(DIR_LIBS)/printf/$(DIR_INCS)		\
-			  -Ilogger/$(DIR_INCS)
+			  -I $(DIR_LIBS)/logger/$(DIR_INCS)     \
 
 CFLAGS		= \
 			  -g									\
