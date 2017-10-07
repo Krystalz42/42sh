@@ -233,8 +233,7 @@ int							b_write_history_in_file(char *path);
 */
 
 void						my_execve(char **command, char **env);
-void						jobs_control(unsigned int flags, pid_t child,
-										int status, int sig);
+void						jobs_control(unsigned int flags, t_jobs jobs_id, int sig);
 void						my_wait(pid_t child, bool foreground);
 
 

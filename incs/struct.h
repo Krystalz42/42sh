@@ -192,9 +192,12 @@ typedef struct		s_outstanding
 
 typedef struct 		s_jobs
 {
-	pid_t 			ppid;
+	pid_t 			pid;
+	pid_t 			pgid;
 	int				status;
 	bool			foreground;
+	bool			pipeline;
+	bool			running;
 }					t_jobs;
 
 #endif

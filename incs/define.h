@@ -37,14 +37,13 @@
 # define DEFAULT				16
 # define PRINT					32
 
-# define NEW_CHILD_FG			1
-# define NEW_CHILD_BG			2
-# define UPDATE_CHILD			4
-# define SIGNAL_RECEPTION		8
-# define SIGNAL_SIGCHLD			16
-# define INITIALIZE_TO_ZERO		32
-# define FOREGROUND				64
-# define BACKGROUND				128
+# define NEW_CHILD				1
+# define UPDATE_CHILD			2
+# define SIGNAL_RECEPTION		4
+# define SIGNAL_SIGCHLD			8
+# define INITIALIZE_TO_ZERO		16
+# define FOREGROUND				32
+# define BACKGROUND				64
 
 
 /*

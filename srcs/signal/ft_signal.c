@@ -16,9 +16,9 @@
 void				handler_sigint(int sig)
 {
 	if (SIGCHLD == sig)
-		jobs_control(SIGNAL_SIGCHLD, 0, 0, sig);
+		jobs_control(SIGNAL_SIGCHLD, (t_jobs){0, 0, 0, 0, 0, 0}, sig);
 	else
-		jobs_control(SIGNAL_RECEPTION, 0, 0, sig);
+		jobs_control(SIGNAL_RECEPTION, (t_jobs){0, 0, 0, 0, 0, 0}, sig);
 }
 
 void				init_signal(void)

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(42sh)
+project(42sh_)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -101,6 +101,8 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_ustrncmp.c
         libs/libft/srcs/get_next_line.c
         libs/libft/srcs/my_gnl.c
+        libs/logger/incs/logger.h
+        libs/logger/incs/logger_utils.h
         libs/printf/incs/ft_printf.h
         libs/printf/srcs/clean_struct.c
         libs/printf/srcs/clear_flag.c
@@ -125,20 +127,6 @@ set(SOURCE_FILES
         libs/printf/srcs/part_str.c
         libs/printf/srcs/part_unisgned.c
         libs/printf/srcs/printf_part.c
-        logger/incs/logger.h
-        logger/incs/logger_utils.h
-        logger/srcs/display/logger_debug.c
-        logger/srcs/display/logger_error.c
-        logger/srcs/display/logger_fatal.c
-        logger/srcs/display/logger_info.c
-        logger/srcs/display/logger_success.c
-        logger/srcs/display/logger_trace.c
-        logger/srcs/display/logger_warn.c
-        logger/srcs/logger/logger_close.c
-        logger/srcs/logger/logger_init.c
-        logger/srcs/utils/logger_get_time.c
-        logger/srcs/utils/logger_init_open_file.c
-        logger/test/main.c
         srcs/cores/insert_one_line.c
         srcs/cores/main.c
         srcs/cores/shell.c
@@ -240,7 +228,7 @@ set(SOURCE_FILES
 
 include_directories(incs)
 include_directories(libs/libft/incs)
+include_directories(libs/logger/incs)
 include_directories(libs/printf/incs)
-include_directories(logger/incs)
 
-add_executable(42sh ${SOURCE_FILES})
+add_executable(42sh_ ${SOURCE_FILES})
