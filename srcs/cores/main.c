@@ -30,7 +30,7 @@ int			main(void)
 	return (0);
 }
 
-void execute(char **command, bool foreground)
+void my_execute(char **command, bool foreground)
 {
 	pid_t child;
 
@@ -40,11 +40,52 @@ void execute(char **command, bool foreground)
 		;
 	else if (child)
 	{
-		my_wait(child, foreground);
+		my_wait(child, foreground, true);
 	}
 	else
 	{
 		my_execve(command, NULL);
+	}
+}
+
+#include <sys/mman.h>
+
+void my_execute_pipe(char **command, char **command1, bool foreground)
+{
+	pid_t child;
+	pid_t child1;
+	int 	fildes[2];
+	t_jobs	*ptitchild = mmap(NULL, sizeof(t_jobs), PROT_READ | PROT_WRITE,
+							MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+
+	child = fork();
+	if (child == -1)
+		;
+	else if (child)
+	{
+		my_wait(child, foreground, true);
+	}
+	else
+	{
+		pipe(fildes);
+		child1 = fork();
+		if (child1 == -1)
+			perror("");
+		else if (child1)
+		{
+			close(fildes[1]);
+			dup2(fildes[0], STDIN_FILENO);
+			close(fildes[0]);
+			my_execve(command1, NULL);
+		}
+		else
+		{
+			ptitchild[0] = (t_jobs){getpid(), getpgid(0), 0, foreground, false, true};
+			close(fildes[0]);
+			dup2(fildes[1], STDOUT_FILENO);
+			close(fildes[1]);
+			my_execve(command, NULL);
+		}
 	}
 }
 
@@ -57,12 +98,16 @@ void test_cmd()
 	(void)ls;
 	(void)cat;
 	(void)lsl;
+	int i = 1;
 	log_success("Mon PID [%d] && MOn PPID [%d]", getpid(), getpgid(getpid()));
-	read_stdin();
-	execute(lsl, true);
-	read_stdin();
-	execute(lsl, true);
-	read_stdin();
-	jobs_control(FOREGROUND, (t_jobs){-1, 0, 0, 0, 0, 0}, 0);
-	read_stdin();
+	while (i)
+	{
+		read_stdin();
+		my_execute(ls, true);
+		read_stdin();
+		my_execute_pipe(lsl, cat, true);
+		read_stdin();
+		jobs_control(FOREGROUND, (t_jobs){0,0,0,0,0,0},0);
+
+	}
 }

@@ -16,11 +16,11 @@
 # include <errno.h>
 # include <libft.h>
 # include <unistd.h>
+# include <define.h>
 # include <struct.h>
 # include <limits.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <define.h>
 # include <termios.h>
 # include <fcntl.h>
 # include <curses.h>
@@ -233,9 +233,9 @@ int							b_write_history_in_file(char *path);
 */
 
 void						my_execve(char **command, char **env);
-void						jobs_control(unsigned int flags, t_jobs jobs_id, int sig);
-void						my_wait(pid_t child, bool foreground);
-
+void						jobs_control(unsigned int flags, t_jobs jobs_id,
+										int sig);
+void						my_wait(pid_t child, bool foreground, bool pipe);
 
 /*
 **				SIGNAL FUNCTION

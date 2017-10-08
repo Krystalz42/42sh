@@ -16,9 +16,10 @@
 void				handler_sigint(int sig)
 {
 	if (SIGCHLD == sig)
-		jobs_control(SIGNAL_SIGCHLD, (t_jobs){0, 0, 0, 0, 0, 0}, sig);
+		jobs_control(SIGNAL_SIGCHLD, (t_jobs){-1, 0, 0, 0, 0, 0}, sig);
 	else
-		jobs_control(SIGNAL_RECEPTION, (t_jobs){0, 0, 0, 0, 0, 0}, sig);
+		jobs_control(SIGNAL_RECEPTION, (t_jobs){-1, 0, 0, 0, 0, 0}, sig);
+
 }
 
 void				init_signal(void)
@@ -27,6 +28,7 @@ void				init_signal(void)
 
 	while (++i < 32)
 		signal(i, handler_sigint);
+	signal(3, SIG_DFL);
 }
 
 void				reset_signal(void)

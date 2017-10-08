@@ -12,104 +12,56 @@
 
 #include <sh.h>
 
-static void				personnal_command(char *command[], int fdout, int fderr)
+static char				*my_getcwd(void)
 {
-	pid_t 		father;
-
-	father = fork();
-	if (father == -1)
-		;
-	else if (father)
-	{
-		setpgid(father, father);
-		waitpid(father, 0, 0);
-	}
-	else
-	{
-		setpgid(0, getpid());
-		dup2(fdout, STDOUT_FILENO);
-		dup2(fderr, STDERR_FILENO);
-		execve(command[0], command, NULL);
-		exit(EXIT_FAILURE);
-	}
-	close(fdout);
-}
-
-static size_t			get_str_from_branch(char **prompt, int fderr)
-{
-	static char		*command[] = {"/usr/bin/git", "branch", NULL};
-	char			*line;
-	int				fdout;
+	char			str[PATH_MAX];
 	size_t			len;
 
-	if ((fdout = open(PATH_GIT, O_CREAT | O_TRUNC | O_WRONLY, 0644)) == -1)
-		return (0);
-	personnal_command(command, fdout, fderr);
-	if ((fdout = open(PATH_GIT, O_RDONLY)) == -1)
-		return (0);
-	while (my_gnl(fdout, &line) == 1 && line[0] != '*')
-		ft_memdel((void **)&line);
-	if ((len = ft_strlen(line)))
+	if (getcwd(str, PATH_MAX))
 	{
-		(*prompt) = (char *)ft_realloc((void **)prompt, ft_strlen(*prompt),
-	ft_strlen(*prompt) + ft_strlen("\x1B[31m git[\x1B[32m\x1B[31m]") + len - 1);
-		ft_strcpy((*prompt) + ft_strlen((*prompt)), "\x1B[31m git[\x1B[32m");
-		ft_strcpy((*prompt) + ft_strlen((*prompt)), line + 2);
-		ft_strcpy((*prompt) + ft_strlen((*prompt)), "\x1B[31m]");
+		if (!ft_strcmp(str, "/"))
+			return (ft_strdup(str));
+		len = ft_strlen(str) - 1;
+		while (str[len] && str[len] != '/')
+			len--;
+		return  (ft_strdup(str + (len + 1)));
 	}
-	ft_memdel((void **)&line);
-	remove(PATH_GIT);
-	close(fdout);
-	return (len ? (6 + len - 2) : len);
+	return (NULL);
 }
 
-static size_t			get_str_from_pwd(char **prompt, int fderr)
+static char 			*my_color(void)
 {
-	static char		*command[] = {"/bin/pwd", NULL};
-	char			*line;
-	size_t			len;
-	int				fdout;
+	static int 		color = 236;
+	static bool		dir = false;
 
-	if ((fdout = open(PATH_PWD, O_CREAT | O_TRUNC | O_WRONLY, 0644)) == -1)
-		return (0);
-	personnal_command(command, fdout, fderr);
-	if ((fdout = open(PATH_PWD, O_RDONLY)) == -1)
-		return (0);
-	if ((my_gnl(fdout, &line)) != 1)
-		return (0);
-	len = ft_strlen(line) - 1;
-	while (line[len] != '/')
-		len--;
-	(*prompt) = (char *)ft_realloc((void **)prompt, ft_strlen(*prompt),
-					ft_strlen(*prompt) + (len) ? len : 1);
-	ft_strcpy((*prompt) + ft_strlen((*prompt)), line + (len ? len + 1 : len));
-	len = ft_strlen(line + (len ? len + 1 : len));
-	ft_memdel((void **)&line);
-	remove(PATH_PWD);
-	return (len ?  : 1);
+	dir = (color == 236) ? true : dir;
+	dir = (color == 255) ? false : dir;
+	color = (dir) ? color + 1 : color - 1;
+	return (ft_itoa(color));
 }
+/*
+**	"\e[38;5;$CLR$PATH$RST"
+*/
 
 void				init_prompt(void)
 {
-	int				fderr;
 	static char		*prompt;
-	size_t			len;
+	char			*path;
+	char			*color;
 
-	fderr = open(PATH_ERR, O_WRONLY);
-	len = 3;
-	reset_signal();
+	path = my_getcwd();
+	color = my_color();
 	ft_memdel((void **)&prompt);
-	prompt = (char *)ft_realloc((void **)&prompt, 0,
-								ft_strlen("\x1B[1m\x1B[34m"));
-	ft_strcpy(prompt, "\x1B[1m\x1B[34m");
-	len += get_str_from_pwd(&prompt, fderr);
-	len += get_str_from_branch(&prompt, fderr);
-	prompt = (char *)ft_realloc((void **)&prompt, ft_strlen(prompt),
-		ft_strlen(prompt) + ft_strlen("\x1B[31m √ \x1B[0m"));
+	prompt = (char *)ft_memalloc(sizeof(char) * (27 + ft_strlen(path)));
+	ft_memcpy(prompt + ft_strlen(prompt), "\e[38;5;", 10);
+	ft_strcpy(prompt + ft_strlen(prompt), color);
+	ft_strcpy(prompt + ft_strlen(prompt), "m");
+	ft_strcpy(prompt + ft_strlen(prompt), path);
 	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? RED : GRN);
-	ft_strcpy(prompt + ft_strlen(prompt), " √ \x1B[0m");
+	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? " ✗ " : " √ ");
+	ft_strcpy(prompt + ft_strlen(prompt), "\x1B[0m");
 	my_prompt(prompt);
-	get_len_prompt((int)len);
-	close(fderr);
-	init_signal();
+	get_len_prompt(ft_strlen(path) + 3);
+	free((void *)path);
+	free((void *)color);
 }

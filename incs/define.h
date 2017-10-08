@@ -102,8 +102,6 @@
 # define HISTSIZE				500
 # define PATH_HISTORY			"/.42sh_history"
 # define PATH_HASH				"/.42sh_hash"
-# define PATH_GIT				"/tmp/.git_info"
-# define PATH_PWD				"/tmp/.pwd_info"
 # define PATH_ERR				"/dev/null"
 
 # define MV_RIGHT				tputs(tgetstr("nd", 0), 0, &my_put)

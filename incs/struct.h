@@ -196,7 +196,7 @@ typedef struct 		s_jobs
 	pid_t 			pgid;
 	int				status;
 	bool			foreground;
-	bool			pipeline;
+	bool			parent;
 	bool			running;
 }					t_jobs;
 

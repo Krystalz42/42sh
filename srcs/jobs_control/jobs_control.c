@@ -2,25 +2,10 @@
 
 #include <sh.h>
 
-void pj(t_jobs jobs)
+void pj(t_jobs jobs, int i, char *inc)
 {
-	log_info("PID [%d] PGID [%d] RUNING [%d] FG [%d] PIPE [%d] INDEX [%d]", jobs.pid,jobs.pgid, jobs.running, jobs.foreground, jobs.pipeline);
+	log_info("%s PID [%d] PGID [%d] RUNING [%d] FG [%d] PARENT [%d] INDEX [%d]",inc,  jobs.pid,jobs.pgid, jobs.running, jobs.foreground, jobs.parent, i);
 
-}
-
-void print(t_jobs *jobs)
-{
-	int 		index;
-
-	index = MAX_CHILD;
-	log_trace("Print Beg : Struct Job's");
-	while (index >= 0)
-	{
-		if (jobs[index].pid)
-			pj(jobs[index]);
-		index--;
-	}
-	log_trace("Print End : Struct Job's");
 }
 
 static void		add_new_child(t_jobs *jobs, t_jobs jobs_id)
@@ -32,8 +17,8 @@ static void		add_new_child(t_jobs *jobs, t_jobs jobs_id)
 		index--;
 	if (index != MAX_CHILD)
 	{
-		log_info("NEW_CHILD : PID [%d] & PGID [%d] & FG [%d] INDEX [%d]", jobs_id.pid,jobs_id.pgid,jobs_id.foreground,index + 1);
 		jobs[index + 1] = jobs_id;
+		pj(jobs[index + 1], index +1 , "NEW_CHILD");
 	}
 }
 
@@ -42,19 +27,20 @@ static void		update_status(t_jobs *jobs, t_jobs jobs_id)
 	int		index;
 
 	index = MAX_CHILD;
+	log_info("Updating ...");
 	while (index >= 0)
 	{
 		if (jobs[index].pid == jobs_id.pid)
 		{
 			if (WIFEXITED(jobs_id.status))
 			{
-				log_info("EXIT Pid [%d] has been exited by [%d]", jobs_id.pid, WEXITSTATUS(jobs_id.status));
+				pj(jobs[index], index, "EXITED");
 				var_return(WEXITSTATUS(jobs_id.status));
 				jobs[index] = (t_jobs){0, 0, 0, 0, 0, 0};
 			}
 			else if (WIFSIGNALED(jobs_id.status))
 			{
-				log_info("SIGN Pid [%d] has been killed by [%d]", jobs_id.pid, WTERMSIG(jobs_id.status));
+				pj(jobs[index], index, "SIGNALED");
 				jobs[index] = (t_jobs){0, 0, 0, 0, 0, 0};
 				var_return(WTERMSIG(jobs_id.status) + 128);
 			}
@@ -71,8 +57,14 @@ static void		update_status(t_jobs *jobs, t_jobs jobs_id)
 				jobs[index].foreground = false;
 				jobs[index].running = false;
 				var_return(WTERMSIG(jobs_id.status) + 128);
-				print(jobs);
 			}
+			else
+			{
+				log_fatal("There is probleme");
+				jobs[index] = (t_jobs){0,0,0,0,0,0};
+			}
+			pj(jobs[index], index, "UPDATE STATUS");
+
 			break ;
 		}
 		index--;
@@ -84,21 +76,26 @@ static void		send_signal(t_jobs *jobs, t_jobs jobs_id, int sig)
 	int			index;
 
 	index = MAX_CHILD;
+	(void)jobs_id;
 	log_error("SIGNAL_RECEPTION [%d]", sig);
-	sleep(1);
-	if (jobs_id.pid)
-	{
-		kill(-jobs_id.pid, sig);
-		perror("");
-	}
-	else
-	{
-		while (index >= 0 && !jobs[index].foreground)
-			index--;
-		if (index != -1)
+//	if (jobs_id.pid != -1)
+//	{
+//
+//		kill(-jobs_id.pid, sig);
+//		perror("");
+//	}
+//	else
+//	{
+		while (index >= 0)
+			if (jobs[index].pid && jobs[index].foreground)
+				break;
+			else
+				index--;
+		log_trace("%d", index);
+	if (index != -1)
 		{
-			log_info("SIGNAL_RECEPTION to PID [%d] PGID [%d]", jobs[index].pid,jobs[index].pgid);
-			kill(-jobs[index].pid, sig);
+			pj(jobs[index], index, "KILL SEND");
+			kill(-jobs[index].pgid, sig);
 		}
 		else if (sig == SIGINT)
 		{
@@ -110,7 +107,7 @@ static void		send_signal(t_jobs *jobs, t_jobs jobs_id, int sig)
 			log_warn("Signal nothing done ! ");
 			bip();
 		}
-	}
+//	}
 
 }
 
@@ -125,19 +122,23 @@ static void		put_in_foreground(t_jobs *jobs, t_jobs jobs_id)
 	if (jobs_id.pid != -1)
 		index = jobs_id.pid;
 	else
-		while (index >= 0 && !jobs[index].pid && jobs[index].foreground)
+		while (index >= 0)
+			if (jobs[index].pid && !jobs[index].foreground)
+				break ;
+			else
 			index--;
+	log_info("INdex in fg %d", index);
 	if (index != -1)
 	{
-		pj(jobs[index]);
+		jobs[index].foreground = true;
+		jobs[index].running = true;
+		pj(jobs[index], index, "FOREGROUND");
 		kill(-jobs[index].pgid, SIGCONT);
 		waitpid(jobs[index].pgid, &(jobs[index].status), WUNTRACED);
 		jobs_control(UPDATE_CHILD, jobs[index], 0);
-		jobs[index].foreground = true;
 	}
 	else if (var_return(1))
 		STR_FD("Job's control : no current job\n", STDERR_FILENO);
-	print(jobs);
 }
 
 static void		put_in_background(t_jobs *jobs, t_jobs jobs_id)
@@ -150,21 +151,24 @@ static void		put_in_background(t_jobs *jobs, t_jobs jobs_id)
 	if (jobs_id.pid != -1)
 		index = jobs_id.pid;
 	else
-		while (index >= 0 && !jobs[index].pid && !jobs[index].foreground && !jobs[index].running)
-			index--;
+		while (index >= 0)
+			if (jobs[index].pid && !jobs[index].running && !jobs[index].foreground)
+				break;
+			else
+				index--;
+	log_info("INdex in bg %d", index);
 	if (index != -1)
 	{
-		pj(jobs[index]);
-		kill(-jobs[index].pgid, SIGCONT);
+		jobs[index].running = true;
 		jobs[index].foreground = false;
+		pj(jobs[index], index, "BACKGROUND");
+		kill(-jobs[index].pgid, SIGCONT);
 		waitpid(jobs[index].pgid, &(jobs[index].status), WUNTRACED | WCONTINUED | WNOHANG);
 		jobs_control(UPDATE_CHILD, jobs[index], 0);
 		log_info("BG END Find a background PPID [%d]", jobs[index].pid);
-		pj(jobs[index]);
 	}
 	else if (var_return(1))
 		STR_FD("Job's control : no current job\n", STDERR_FILENO);
-	print(jobs);
 }
 void		full_update(t_jobs *jobs)
 {
