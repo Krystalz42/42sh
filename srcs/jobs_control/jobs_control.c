@@ -28,7 +28,7 @@ static void		update_status(t_jobs *jobs, t_jobs jobs_id)
 	int		index;
 
 	index = MAX_CHILD;
-	log_error("Updating ...");
+	log_info("Updating ...");
 	while (index >= 0)
 	{
 		if (jobs[index].pid == jobs_id.pid)
@@ -75,7 +75,11 @@ static void		update_status(t_jobs *jobs, t_jobs jobs_id)
 static void		send_signal(t_jobs *jobs, t_jobs jobs_id, int sig)
 {
 	int index;
+static int i;
 
+	i++;
+	if (i == 10)
+		exit(45);
 	index = MAX_CHILD;
 	(void) jobs_id;
 	log_error("SIGNAL_RECEPTION [%d] [%d]", sig, jobs_id.pid);
@@ -179,7 +183,7 @@ void		full_update(t_jobs *jobs)
 	index = MAX_CHILD;
 	while (index >= 0)
 	{
-		if (jobs[index].pid)
+		if (jobs[index].pid && !jobs[index].running)
 		{
 			pj(jobs[index],index, "FULL UPDATE");
 			if ((waitpid(jobs[index].pid, &(jobs[index].status),

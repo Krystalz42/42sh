@@ -75,7 +75,7 @@ void my_execute_pipe(char **command, char **command1, bool foreground)
 		;
 	else if (child) // Pere
 	{
-//		setpgid(child,child);
+		setpgid(child,child);
 		t_jobs child_jobs = (t_jobs){child, getpgid(child), 0, foreground, true,true};
 		jobs_control(NEW_CHILD, child_jobs, 0);
 		child1 = fork();
