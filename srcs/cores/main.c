@@ -16,11 +16,11 @@ void test_cmd();
 
 int			main(void)
 {
-	logger_init(7, "log");
 	init_env();
+	logger_init(7, "log");
 	jobs_control(INITIALIZE_TO_ZERO, (t_jobs){0, 0, 0, 0, 0, 0}, 0);
-	write_history_in_sh();
 	init_term();
+	write_history_in_sh();
 	var_return(0);
 	init_signal();
 	test_cmd();
@@ -40,7 +40,8 @@ void my_execute(char **command, bool foreground)
 		;
 	else if (child)
 	{
-		my_wait(child, foreground, true);
+		(void)foreground;
+//		my_wait(child, foreground, true);
 	}
 	else
 	{
@@ -48,44 +49,64 @@ void my_execute(char **command, bool foreground)
 	}
 }
 
-#include <sys/mman.h>
+/*
+setpgid(child,child);
+t_jobs child_jobs = (t_jobs){child, getpgid(child), 0, foreground, true, true};
+waitpid(child, &child_jobs.status, WNOHANG);
+jobs_control(NEW_CHILD, child_jobs, 0);
+
+
+setpgid(child1, child);
+t_jobs child1_jobs = (t_jobs){child1, getpgid(child1), 0, foreground, false, true};
+waitpid(child, &child1_jobs.status, WNOHANG);
+jobs_control(NEW_CHILD, child1_jobs, 0);
+*/
 
 void my_execute_pipe(char **command, char **command1, bool foreground)
 {
-	pid_t child;
-	pid_t child1;
-	int 	fildes[2];
-	t_jobs	*ptitchild = mmap(NULL, sizeof(t_jobs), PROT_READ | PROT_WRITE,
-							MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+	pid_t	child;
+	pid_t	child1;
+	int		fildes[2];
 
+	(void)foreground;
+	pipe(fildes);
 	child = fork();
 	if (child == -1)
 		;
-	else if (child)
+	else if (child) // Pere
 	{
-		my_wait(child, foreground, true);
-	}
-	else
-	{
-		pipe(fildes);
+//		setpgid(child,child);
+		t_jobs child_jobs = (t_jobs){child, getpgid(child), 0, foreground, true,true};
+		jobs_control(NEW_CHILD, child_jobs, 0);
 		child1 = fork();
 		if (child1 == -1)
 			perror("");
 		else if (child1)
 		{
+//			t_jobs child1_job = (t_jobs){child1, getpgid(child1), 0, foreground, true,true};
+//			setpgid(child1, child);
+//			jobs_control(NEW_CHILD, child1_job, 0);
+//			my_wait(child_jobs);
+//			jobs_control(UPDATE_CHILD, child_jobs,0);
+			waitpid(-1, NULL, WUNTRACED);
+		}
+		else
+		{
+//			setpgid(0,child);
 			close(fildes[1]);
 			dup2(fildes[0], STDIN_FILENO);
 			close(fildes[0]);
 			my_execve(command1, NULL);
 		}
-		else
-		{
-			ptitchild[0] = (t_jobs){getpid(), getpgid(0), 0, foreground, false, true};
-			close(fildes[0]);
-			dup2(fildes[1], STDOUT_FILENO);
-			close(fildes[1]);
-			my_execve(command, NULL);
-		}
+	}
+	else
+	{
+//		setpgid(0,0);
+		close(fildes[0]);
+		dup2(fildes[1], STDOUT_FILENO);
+		close(fildes[1]);
+		my_execve(command, NULL);
+
 	}
 }
 
@@ -103,11 +124,8 @@ void test_cmd()
 	while (i)
 	{
 		read_stdin();
-		my_execute(ls, true);
-		read_stdin();
 		my_execute_pipe(lsl, cat, true);
 		read_stdin();
-		jobs_control(FOREGROUND, (t_jobs){0,0,0,0,0,0},0);
-
+		jobs_control(FOREGROUND, (t_jobs){-1,0,0,0,0,0},0);
 	}
 }

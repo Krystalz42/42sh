@@ -4,7 +4,8 @@
 
 void pj(t_jobs jobs, int i, char *inc)
 {
-	log_info("%s PID [%d] PGID [%d] RUNING [%d] FG [%d] PARENT [%d] INDEX [%d]",inc,  jobs.pid,jobs.pgid, jobs.running, jobs.foreground, jobs.parent, i);
+	log_info("%s PID [%d] PGID [%d] RUNING [%d] FG [%d] PARENT [%d] INDEX [%d]"
+	,inc, jobs.pid,jobs.pgid, jobs.running, jobs.foreground, jobs.parent, i);
 
 }
 
@@ -27,7 +28,7 @@ static void		update_status(t_jobs *jobs, t_jobs jobs_id)
 	int		index;
 
 	index = MAX_CHILD;
-	log_info("Updating ...");
+	log_error("Updating ...");
 	while (index >= 0)
 	{
 		if (jobs[index].pid == jobs_id.pid)
@@ -73,26 +74,23 @@ static void		update_status(t_jobs *jobs, t_jobs jobs_id)
 
 static void		send_signal(t_jobs *jobs, t_jobs jobs_id, int sig)
 {
-	int			index;
+	int index;
 
 	index = MAX_CHILD;
-	(void)jobs_id;
-	log_error("SIGNAL_RECEPTION [%d]", sig);
-//	if (jobs_id.pid != -1)
-//	{
-//
-//		kill(-jobs_id.pid, sig);
-//		perror("");
-//	}
-//	else
-//	{
+	(void) jobs_id;
+	log_error("SIGNAL_RECEPTION [%d] [%d]", sig, jobs_id.pid);
+	if (jobs_id.pid != -1)
+		index = jobs_id.pid;
+	else
+	{
 		while (index >= 0)
 			if (jobs[index].pid && jobs[index].foreground)
 				break;
 			else
 				index--;
+	}
 		log_trace("%d", index);
-	if (index != -1)
+		if (index != -1)
 		{
 			pj(jobs[index], index, "KILL SEND");
 			kill(-jobs[index].pgid, sig);
@@ -116,7 +114,7 @@ static void		put_in_foreground(t_jobs *jobs, t_jobs jobs_id)
 	//check if status is WIFSTOPPED(status)
 	int index;
 
-	log_error("In Foreground");
+	log_error("In Foreground [%d]",jobs_id.pid);
 	index = MAX_CHILD;
 	(void)jobs_id;
 	if (jobs_id.pid != -1)
@@ -131,9 +129,10 @@ static void		put_in_foreground(t_jobs *jobs, t_jobs jobs_id)
 	if (index != -1)
 	{
 		jobs[index].foreground = true;
-		jobs[index].running = true;
 		pj(jobs[index], index, "FOREGROUND");
-		kill(-jobs[index].pgid, SIGCONT);
+		if (jobs[index].running == false)
+			kill(-jobs[index].pgid, SIGCONT);
+		jobs[index].running = true;
 		waitpid(jobs[index].pgid, &(jobs[index].status), WUNTRACED);
 		jobs_control(UPDATE_CHILD, jobs[index], 0);
 	}
@@ -159,9 +158,11 @@ static void		put_in_background(t_jobs *jobs, t_jobs jobs_id)
 	log_info("INdex in bg %d", index);
 	if (index != -1)
 	{
-		jobs[index].running = true;
 		jobs[index].foreground = false;
 		pj(jobs[index], index, "BACKGROUND");
+		if (jobs[index].running == false)
+			kill(-jobs[index].pgid, SIGCONT);
+		jobs[index].running = true;
 		kill(-jobs[index].pgid, SIGCONT);
 		waitpid(jobs[index].pgid, &(jobs[index].status), WUNTRACED | WCONTINUED | WNOHANG);
 		jobs_control(UPDATE_CHILD, jobs[index], 0);
@@ -178,9 +179,9 @@ void		full_update(t_jobs *jobs)
 	index = MAX_CHILD;
 	while (index >= 0)
 	{
-		if (jobs[index].pid && !jobs[index].running)
+		if (jobs[index].pid)
 		{
-			log_trace("Update ... PID [%d] & PGID [%d] & RUNING [%d]",jobs[index].pid,jobs[index].pgid,jobs[index].running);
+			pj(jobs[index],index, "FULL UPDATE");
 			if ((waitpid(jobs[index].pid, &(jobs[index].status),
 						 WUNTRACED | WNOHANG | WCONTINUED)) != -1)
 			{

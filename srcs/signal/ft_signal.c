@@ -29,6 +29,7 @@ void				init_signal(void)
 	while (++i < 32)
 		signal(i, handler_sigint);
 	signal(3, SIG_DFL);
+	signal(11, SIG_DFL);
 }
 
 void				reset_signal(void)

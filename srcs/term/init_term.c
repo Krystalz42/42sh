@@ -31,13 +31,18 @@ int		init_term(void)
 	if (tgetent(NULL, my_getenv("TERM")) == ERR)
 		puterror("tgetent");
 
+	log_error("test %d",tcgetattr(STDIN_FILENO, &old_term));
+
 	if (!(tcgetattr(STDIN_FILENO, &old_term)))
 		keep_term_struct(SAVE_OLD, &old_term);
 	else
-		log_fatal("OLD_TERM BUG");
+		log_fatal("OUR_TERM BUG");
 	if (!(tcgetattr(0, &our_term)) && init_our_term(&our_term))
 		keep_term_struct(SAVE_OUR, &our_term);
 	else
+	{
+		perror("TC");
 		log_fatal("OLD TERM BUG");
+	}
 	return (0);
 }

@@ -4,23 +4,17 @@
 
 #include <sh.h>
 
-void		my_wait(pid_t child, bool foreground, bool parent)
+void						my_wait(t_jobs jobs_id)
 {
-	t_jobs		jobs_id;
-
-	setpgid(child, child);
-	jobs_id = (t_jobs){child, getpgid(child), 0, foreground, parent, true};
-	jobs_control(NEW_CHILD, jobs_id, 0);
-	if (foreground)
+	pid_t test;
+	if (jobs_id.foreground)
 	{
-		if ((waitpid(jobs_id.pid, &(jobs_id.status), WUNTRACED | WCONTINUED)) != -1)
+		while ((test = waitpid(jobs_id.pid, &(jobs_id.status), WNOHANG)) != -1)
 		{
-			jobs_control(UPDATE_CHILD, jobs_id, 0);
+			if (WIFSIGNALED(jobs_id.status) || WIFSTOPPED(jobs_id.status))
+				break ;
 		}
-		else
-		{
-			log_error("Waitpid return -1 nothing to do");
-		}
+		jobs_control(UPDATE_CHILD, jobs_id, 0);
 	}
 	else
 	{

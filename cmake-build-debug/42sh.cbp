@@ -46,8 +46,9 @@
 				<Compiler>
 					<Add directory="/Users/aroulin/42sh/incs"/>
 					<Add directory="/Users/aroulin/42sh/libs/libft/incs"/>
+					<Add directory="/Users/aroulin/42sh/libs/logger/incs"/>
 					<Add directory="/Users/aroulin/42sh/libs/printf/incs"/>
-					<Add directory="/Users/aroulin/42sh/logger/incs"/>
+					<Add directory="/Users/aroulin/42sh/srcs"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
@@ -72,8 +73,9 @@
 				<Compiler>
 					<Add directory="/Users/aroulin/42sh/incs"/>
 					<Add directory="/Users/aroulin/42sh/libs/libft/incs"/>
+					<Add directory="/Users/aroulin/42sh/libs/logger/incs"/>
 					<Add directory="/Users/aroulin/42sh/libs/printf/incs"/>
-					<Add directory="/Users/aroulin/42sh/logger/incs"/>
+					<Add directory="/Users/aroulin/42sh/srcs"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
@@ -381,6 +383,12 @@
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/my_gnl.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/libs/logger/incs/logger.h">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/libs/logger/incs/logger_utils.h">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/libs/printf/incs/ft_printf.h">
 			<Option target="42sh"/>
 		</Unit>
@@ -451,48 +459,6 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/printf_part.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/incs/logger.h">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/incs/logger_utils.h">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/srcs/display/logger_debug.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/srcs/display/logger_error.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/srcs/display/logger_fatal.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/srcs/display/logger_info.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/srcs/display/logger_success.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/srcs/display/logger_trace.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/srcs/display/logger_warn.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/srcs/logger/logger_close.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/srcs/logger/logger_init.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/srcs/utils/logger_get_time.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/srcs/utils/logger_init_open_file.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/logger/test/main.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/cores/insert_one_line.c">
