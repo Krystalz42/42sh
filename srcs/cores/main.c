@@ -29,7 +29,16 @@ int			main(void)
 	logger_close();
 	return (0);
 }
+t_jobs		init_jobs(pid_t child, pid_t parent_pid, bool foreground, bool parent)
+{
+	t_jobs		jobs;
 
+	setpgid(child, parent_pid);
+	jobs = (t_jobs){child, getpgid(child), 0, foreground, parent, true};
+	waitpid(child, &jobs.status, WNOHANG);
+	jobs_control(NEW_CHILD, jobs, 0);
+	return (jobs);
+}
 void my_execute(char **command, bool foreground)
 {
 	pid_t child;
@@ -40,14 +49,15 @@ void my_execute(char **command, bool foreground)
 		;
 	else if (child)
 	{
-		(void)foreground;
-//		my_wait(child, foreground, true);
+		my_wait(init_jobs(child, child, foreground, true));
 	}
 	else
 	{
 		my_execve(command, NULL);
 	}
 }
+
+
 
 /*
 setpgid(child,child);
@@ -67,6 +77,8 @@ void my_execute_pipe(char **command, char **command1, bool foreground)
 	pid_t	child;
 	pid_t	child1;
 	int		fildes[2];
+	t_jobs	parent;
+
 
 	(void)foreground;
 	pipe(fildes);
@@ -75,24 +87,18 @@ void my_execute_pipe(char **command, char **command1, bool foreground)
 		;
 	else if (child) // Pere
 	{
-		setpgid(child,child);
-		t_jobs child_jobs = (t_jobs){child, getpgid(child), 0, foreground, true,true};
-		jobs_control(NEW_CHILD, child_jobs, 0);
+		parent = init_jobs(child, child, foreground, true);
 		child1 = fork();
 		if (child1 == -1)
 			perror("");
 		else if (child1)
 		{
-//			t_jobs child1_job = (t_jobs){child1, getpgid(child1), 0, foreground, true,true};
-//			setpgid(child1, child);
-//			jobs_control(NEW_CHILD, child1_job, 0);
-//			my_wait(child_jobs);
-//			jobs_control(UPDATE_CHILD, child_jobs,0);
-			waitpid(-1, NULL, WUNTRACED);
+			init_jobs(child1, child, foreground, false);
+			my_wait(parent);
 		}
 		else
 		{
-//			setpgid(0,child);
+			setpgid(0,child);
 			close(fildes[1]);
 			dup2(fildes[0], STDIN_FILENO);
 			close(fildes[0]);
@@ -101,7 +107,7 @@ void my_execute_pipe(char **command, char **command1, bool foreground)
 	}
 	else
 	{
-//		setpgid(0,0);
+		setpgid(0,0);
 		close(fildes[0]);
 		dup2(fildes[1], STDOUT_FILENO);
 		close(fildes[1]);
@@ -115,8 +121,12 @@ void test_cmd()
 	char *lsl[] = {"/bin/ls", "-lR", "/", NULL};
 	char *ls[] = {"/bin/ls", "-l", NULL};
 	char *cat[] = {"/bin/cat", "-e", NULL};
+	char *vim[] = {"/usr/bin/vim", NULL};
+	char *emacs[] = {"/usr/bin/emacs", NULL};
 
 	(void)ls;
+	(void)vim;
+	(void)emacs;
 	(void)cat;
 	(void)lsl;
 	int i = 1;
@@ -124,7 +134,13 @@ void test_cmd()
 	while (i)
 	{
 		read_stdin();
+		my_execute(ls, true);
+		read_stdin();
 		my_execute_pipe(lsl, cat, true);
+		read_stdin();
+		jobs_control(FOREGROUND, (t_jobs){-1,0,0,0,0,0},0);
+		read_stdin();
+		jobs_control(BACKGROUND, (t_jobs){-1,0,0,0,0,0},0);
 		read_stdin();
 		jobs_control(FOREGROUND, (t_jobs){-1,0,0,0,0,0},0);
 	}

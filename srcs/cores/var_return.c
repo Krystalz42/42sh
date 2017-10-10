@@ -17,6 +17,9 @@ uint8_t		var_return(int ret)
 	static uint8_t		save;
 
 	if (ret >= 0 && ret <= UCHAR_MAX)
+	{
+		log_debug("var_return(%d)",save);
 		save = (uint8_t)ret;
+	}
 	return (save);
 }

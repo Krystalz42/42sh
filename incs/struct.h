@@ -189,6 +189,21 @@ typedef struct		s_outstanding
 /*
 **			STRUCT FOR JOB'S CONTROL
 */
+/*typedef struct 		s_process
+{
+	pid_t 			pid;
+	pid_t 			pgid;
+	int				status;
+	bool			foreground;
+	bool			parent;
+	bool			running;
+}					t_process;
+
+typedef struct 		s_jobs
+{
+	t_process		father;
+	t_process		child[MAX_CHILD];
+}					t_jobs;*/
 
 typedef struct 		s_jobs
 {
