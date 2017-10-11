@@ -240,12 +240,12 @@ void						put_in_foreground(t_jobs *jobs, t_jobs jobs_id);
 void						print_jobs(t_jobs *jobs);
 void						update_status(t_process *identify);
 void						my_execve(char **command, char **env);
-void						jobs_control(unsigned int flags, t_jobs jobs_id,
+int							jobs_control(unsigned int flags, t_jobs jobs_id,
 										int sig);
 void						my_wait(t_jobs jobs_id);
 t_jobs						new_jobs(int set);
 void						full_update(t_jobs *jobs);
-void						add_new_child(t_jobs *jobs, t_jobs jobs_id);
+int							add_new_child(t_jobs *jobs, t_jobs jobs_id);
 void						reset_process(t_process *to_kill);
 t_jobs 						new_jobs(int set);
 

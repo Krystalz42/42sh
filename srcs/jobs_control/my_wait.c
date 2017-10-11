@@ -6,7 +6,11 @@
 
 void						my_wait(t_jobs jobs_id)
 {
-	jobs_control(NEW_CHILD, jobs_id, 0);
+	int			jobs_spec;
+	int			index;
+
+	index = -1;
+	jobs_spec = jobs_control(NEW_CHILD, jobs_id, 0);
 	if (jobs_id.father.foreground)
 	{
 		if ((waitpid(jobs_id.father.pid, &jobs_id.father.status, WUNTRACED)) != -1)
@@ -15,6 +19,8 @@ void						my_wait(t_jobs jobs_id)
 		}
 	}
 	else
+	{
 		if ((waitpid(jobs_id.father.pid, &jobs_id.father.status, WUNTRACED | WNOHANG)) != -1)
 			jobs_control(UPDATE_CHILD, jobs_id, 0);
+	}
 }

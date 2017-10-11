@@ -18,7 +18,6 @@ int			main(void)
 {
 	init_env();
 	logger_init(7, "log");
-//	jobs_control(INITIALIZE_TO_ZERO, (t_jobs){0, 0, 0, 0, 0, 0}, 0);
 	init_term();
 	write_history_in_sh();
 	var_return(0);
@@ -43,9 +42,8 @@ void my_execute(char **command, bool foreground)
 	pid_t child;
 	t_jobs jobs;
 
-	ft_memset(&jobs, 0, sizeof(t_jobs));
+	jobs = new_jobs(0);
 	child = fork();
-
 	if (child == -1)
 		;
 	else if (child)
@@ -120,7 +118,7 @@ void test_cmd()
 	while (i)
 	{
 		read_stdin();
-		my_execute_pipe(lsl, cat, true);
+		my_execute(ls,false);
 		read_stdin();
 		jobs_control(PRINT_JOBS, new_jobs(0), 0);
 		read_stdin();

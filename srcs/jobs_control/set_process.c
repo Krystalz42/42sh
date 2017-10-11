@@ -26,7 +26,7 @@ void		reset_process(t_process *to_kill)
 	*to_kill = (t_process){0, 0, 0, 0, 0, NULL};
 }
 
-void		add_new_child(t_jobs *jobs, t_jobs jobs_id)
+int			add_new_child(t_jobs *jobs, t_jobs jobs_id)
 {
 	int			index;
 
@@ -38,4 +38,5 @@ void		add_new_child(t_jobs *jobs, t_jobs jobs_id)
 		jobs[index + 1] = jobs_id;
 		pjt(jobs_id, index + 1);
 	}
+	return (index + 2);
 }

@@ -18,5 +18,3 @@ void			my_execve(char **command, char **env)
 	if ((execve(command[0], command, env)) == -1)
 		exit(EXIT_FAILURE);
 }
-
-

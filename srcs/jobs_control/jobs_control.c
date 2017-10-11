@@ -127,12 +127,12 @@ t_process		*looking_for(t_jobs *jobs, t_process id)
 	return (NULL);
 }
 
-void		jobs_control(unsigned int flags, t_jobs jobs_id, int sig)
+int		jobs_control(unsigned int flags, t_jobs jobs_id, int sig)
 {
 	static t_jobs			jobs[MAX_CHILD + 1];
 
 	if ((flags & NEW_CHILD))
-		add_new_child(jobs, jobs_id);
+		return (add_new_child(jobs, jobs_id));
 	else if ((flags & SIGNAL_RECEPTION))
 		send_signal(jobs, jobs_id, sig);
 	else if ((flags & SIGNAL_SIGCHLD))
@@ -145,4 +145,5 @@ void		jobs_control(unsigned int flags, t_jobs jobs_id, int sig)
 		put_in_background(jobs, jobs_id);
 	else if ((flags & PRINT_JOBS))
 		print_jobs(jobs);
+	return (-1);
 }
