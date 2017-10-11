@@ -11,14 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d38057-4ed9-4568-a80f-42a71baa072b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/sh.h" afterPath="$PROJECT_DIR$/incs/sh.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/main.c" afterPath="$PROJECT_DIR$/srcs/cores/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/set_process.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/set_process.c" />
-    </list>
+    <list default="true" id="14d38057-4ed9-4568-a80f-42a71baa072b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,8 +28,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -128,7 +121,7 @@
         <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
-              <caret line="98" column="74" lean-forward="true" selection-start-line="98" selection-start-column="74" selection-end-line="98" selection-end-column="74" />
+              <caret line="98" column="74" lean-forward="false" selection-start-line="98" selection-start-column="74" selection-end-line="98" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -398,12 +391,12 @@
       <workItem from="1507567547673" duration="6412000" />
       <workItem from="1507647253006" duration="4402000" />
       <workItem from="1507657033668" duration="3372000" />
-      <workItem from="1507721529419" duration="16465000" />
+      <workItem from="1507721529419" duration="16466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133641000" />
+    <option name="totallyTimeSpent" value="133642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="707" y="0" width="1853" height="1440" extended-state="0" />
@@ -793,15 +786,15 @@
     <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
-          <caret line="98" column="74" lean-forward="true" selection-start-line="98" selection-start-column="74" selection-end-line="98" selection-end-column="74" />
+          <caret line="98" column="74" lean-forward="false" selection-start-line="98" selection-start-column="74" selection-end-line="98" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>

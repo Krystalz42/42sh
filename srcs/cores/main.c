@@ -20,7 +20,6 @@ int			main(void)
 	logger_init(7, "log");
 	init_term();
 	write_history_in_sh();
-	var_return(0);
 	init_signal();
 	test_cmd();
 //	shell();
