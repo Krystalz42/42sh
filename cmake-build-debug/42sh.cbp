@@ -545,6 +545,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/history/write_history.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/builtins_jobs.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/jobs_control.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -552,6 +555,12 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/my_wait.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/set_process.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/log_info_bug_dnt_care_of_norminette_bitch.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_completion.c">

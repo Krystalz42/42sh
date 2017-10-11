@@ -41,7 +41,7 @@
 # define UPDATE_CHILD			2
 # define SIGNAL_RECEPTION		4
 # define SIGNAL_SIGCHLD			8
-# define INITIALIZE_TO_ZERO		16
+# define PRINT_JOBS				16
 # define FOREGROUND				32
 # define BACKGROUND				64
 

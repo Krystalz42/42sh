@@ -224,7 +224,7 @@ set(SOURCE_FILES
         srcs/term/init_fd.c
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
-        srcs/term/set_term.c)
+        srcs/term/set_term.c srcs/jobs_control/builtins_jobs.c srcs/jobs_control/set_process.c srcs/log_info_bug_dnt_care_of_norminette_bitch.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

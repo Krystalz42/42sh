@@ -212,6 +212,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/42sh.dir/srcs/term/init_term.c.o"
   "CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o"
   "CMakeFiles/42sh.dir/srcs/term/set_term.c.o"
+  "CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o"
+  "CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o"
+  "CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o"
   "42sh.pdb"
   "42sh"
 )

@@ -15,6 +15,7 @@
 
 # include <errno.h>
 # include <libft.h>
+# include <ft_printf.h>
 # include <unistd.h>
 # include <define.h>
 # include <struct.h>
@@ -34,10 +35,12 @@
 # include <logger_utils.h>
 
 /*
-**				A virer avant de push
+** A VIRER
 */
 
-int							g_fdb;
+void pjt(t_jobs jobs, int index);
+void pj(t_process identify, int index, char *inc);
+
 /*
 **				FUNCTION CORES
 */
@@ -228,14 +231,23 @@ void						previous_history(t_read **read_std);
 void						next_history(t_read **read_std);
 int							b_write_history_in_file(char *path);
 
+
 /*
 **				JOB'S CONTROL FUNCTION
 */
-
+void						put_in_background(t_jobs *jobs, t_jobs jobs_id);
+void						put_in_foreground(t_jobs *jobs, t_jobs jobs_id);
+void						print_jobs(t_jobs *jobs);
+void						update_status(t_process *identify);
 void						my_execve(char **command, char **env);
 void						jobs_control(unsigned int flags, t_jobs jobs_id,
 										int sig);
 void						my_wait(t_jobs jobs_id);
+t_jobs						new_jobs(int set);
+void						full_update(t_jobs *jobs);
+void						add_new_child(t_jobs *jobs, t_jobs jobs_id);
+void						reset_process(t_process *to_kill);
+t_jobs 						new_jobs(int set);
 
 /*
 **				SIGNAL FUNCTION
@@ -247,6 +259,8 @@ void						reset_signal(void);
 /*
 **				TERMIOS FUNCTION
 */
+
+void						update_status(t_process *identify);
 
 struct termios				keep_term_struct(unsigned short flags,
 											struct termios *term);

@@ -46,6 +46,7 @@ RM			= rm -rf
 NAME		= 42sh
 
 SRCS = \
+       log_info_bug_dnt_care_of_norminette_bitch.c          \
 	   cores/main.c											\
 	   cores/shell.c										\
 	   cores/insert_one_line.c								\
@@ -126,6 +127,8 @@ SRCS = \
 	   history/copy_cmd.c									\
 	   signal/ft_signal.c									\
 	   jobs_control/jobs_control.c                          \
+	   jobs_control/builtins_jobs.c                         \
+	   jobs_control/set_process.c                           \
 	   jobs_control/my_wait.c                               \
 	   jobs_control/my_execve.c                             \
 	   env/add_environment.c                                \

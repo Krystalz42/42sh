@@ -3984,6 +3984,33 @@ srcs/history/write_history.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/history/write_history.c.s
 .PHONY : srcs/history/write_history.c.s
 
+srcs/jobs_control/builtins_jobs.o: srcs/jobs_control/builtins_jobs.c.o
+
+.PHONY : srcs/jobs_control/builtins_jobs.o
+
+# target to build an object file
+srcs/jobs_control/builtins_jobs.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o
+.PHONY : srcs/jobs_control/builtins_jobs.c.o
+
+srcs/jobs_control/builtins_jobs.i: srcs/jobs_control/builtins_jobs.c.i
+
+.PHONY : srcs/jobs_control/builtins_jobs.i
+
+# target to preprocess a source file
+srcs/jobs_control/builtins_jobs.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.i
+.PHONY : srcs/jobs_control/builtins_jobs.c.i
+
+srcs/jobs_control/builtins_jobs.s: srcs/jobs_control/builtins_jobs.c.s
+
+.PHONY : srcs/jobs_control/builtins_jobs.s
+
+# target to generate assembly for a file
+srcs/jobs_control/builtins_jobs.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.s
+.PHONY : srcs/jobs_control/builtins_jobs.c.s
+
 srcs/jobs_control/jobs_control.o: srcs/jobs_control/jobs_control.c.o
 
 .PHONY : srcs/jobs_control/jobs_control.o
@@ -4064,6 +4091,60 @@ srcs/jobs_control/my_wait.s: srcs/jobs_control/my_wait.c.s
 srcs/jobs_control/my_wait.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/my_wait.c.s
 .PHONY : srcs/jobs_control/my_wait.c.s
+
+srcs/jobs_control/set_process.o: srcs/jobs_control/set_process.c.o
+
+.PHONY : srcs/jobs_control/set_process.o
+
+# target to build an object file
+srcs/jobs_control/set_process.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o
+.PHONY : srcs/jobs_control/set_process.c.o
+
+srcs/jobs_control/set_process.i: srcs/jobs_control/set_process.c.i
+
+.PHONY : srcs/jobs_control/set_process.i
+
+# target to preprocess a source file
+srcs/jobs_control/set_process.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.i
+.PHONY : srcs/jobs_control/set_process.c.i
+
+srcs/jobs_control/set_process.s: srcs/jobs_control/set_process.c.s
+
+.PHONY : srcs/jobs_control/set_process.s
+
+# target to generate assembly for a file
+srcs/jobs_control/set_process.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.s
+.PHONY : srcs/jobs_control/set_process.c.s
+
+srcs/log_info_bug_dnt_care_of_norminette_bitch.o: srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o
+
+.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.o
+
+# target to build an object file
+srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o
+.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o
+
+srcs/log_info_bug_dnt_care_of_norminette_bitch.i: srcs/log_info_bug_dnt_care_of_norminette_bitch.c.i
+
+.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.i
+
+# target to preprocess a source file
+srcs/log_info_bug_dnt_care_of_norminette_bitch.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.i
+.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.c.i
+
+srcs/log_info_bug_dnt_care_of_norminette_bitch.s: srcs/log_info_bug_dnt_care_of_norminette_bitch.c.s
+
+.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.s
+
+# target to generate assembly for a file
+srcs/log_info_bug_dnt_care_of_norminette_bitch.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.s
+.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.c.s
 
 srcs/memdel_struct/memdel_completion.o: srcs/memdel_struct/memdel_completion.c.o
 
@@ -6312,6 +6393,9 @@ help:
 	@echo "... srcs/history/write_history.o"
 	@echo "... srcs/history/write_history.i"
 	@echo "... srcs/history/write_history.s"
+	@echo "... srcs/jobs_control/builtins_jobs.o"
+	@echo "... srcs/jobs_control/builtins_jobs.i"
+	@echo "... srcs/jobs_control/builtins_jobs.s"
 	@echo "... srcs/jobs_control/jobs_control.o"
 	@echo "... srcs/jobs_control/jobs_control.i"
 	@echo "... srcs/jobs_control/jobs_control.s"
@@ -6321,6 +6405,12 @@ help:
 	@echo "... srcs/jobs_control/my_wait.o"
 	@echo "... srcs/jobs_control/my_wait.i"
 	@echo "... srcs/jobs_control/my_wait.s"
+	@echo "... srcs/jobs_control/set_process.o"
+	@echo "... srcs/jobs_control/set_process.i"
+	@echo "... srcs/jobs_control/set_process.s"
+	@echo "... srcs/log_info_bug_dnt_care_of_norminette_bitch.o"
+	@echo "... srcs/log_info_bug_dnt_care_of_norminette_bitch.i"
+	@echo "... srcs/log_info_bug_dnt_care_of_norminette_bitch.s"
 	@echo "... srcs/memdel_struct/memdel_completion.o"
 	@echo "... srcs/memdel_struct/memdel_completion.i"
 	@echo "... srcs/memdel_struct/memdel_completion.s"
