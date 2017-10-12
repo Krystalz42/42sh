@@ -143,7 +143,6 @@ set(SOURCE_FILES
         srcs/hash/get_str_from_hash.c
         srcs/hash/hash_board.c
         srcs/hash/hash_value.c
-        srcs/hash/init_hash.c
         srcs/hash/table_hash.c
         srcs/history/built_in_history.c
         srcs/history/copy_cmd.c
@@ -224,7 +223,7 @@ set(SOURCE_FILES
         srcs/term/init_fd.c
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
-        srcs/term/set_term.c srcs/jobs_control/builtins_jobs.c srcs/jobs_control/set_process.c srcs/log_info_bug_dnt_care_of_norminette_bitch.c)
+        srcs/term/set_term.c srcs/jobs_control/builtins_jobs.c srcs/jobs_control/set_process.c srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/jobs_control/modify_status_jobs.c srcs/execution/builtins_functions/builtin_jobs.c srcs/execution/builtins_functions/builtin_history.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

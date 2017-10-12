@@ -15,14 +15,21 @@
 t_jobs		new_jobs(int set)
 {
 	t_jobs		to_kill;
+	int 		i;
 
+	i = 0;
 	ft_memset((void *)&to_kill, set, sizeof(t_jobs));
+	while (i < MAX_CHILD)
+	{
+		to_kill.child[i] = (t_process){0, 0, 0, 0, 0, NULL};
+		i++;
+	}
 	return (to_kill);
 }
 
 void		reset_process(t_process *to_kill)
 {
-	free(to_kill->command);
+	ft_memdel((void **)&(to_kill->command));
 	*to_kill = (t_process){0, 0, 0, 0, 0, NULL};
 }
 

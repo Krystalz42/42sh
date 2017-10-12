@@ -497,6 +497,12 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/error_function/puterror.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_history.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_jobs.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/hash/built_in_hash.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -507,9 +513,6 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/hash/hash_value.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/hash/init_hash.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/hash/table_hash.c">
@@ -549,6 +552,9 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/jobs_control.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/modify_status_jobs.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/my_execve.c">

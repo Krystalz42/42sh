@@ -15,19 +15,22 @@
 /*
 **  [-c]            Supprimme l'historique dans le 42sh
 **                  (b_write_history)
+**
 **  [-d] offset     Supprime l'index de l'historique dans le 42sh
 **                  (b_delete_history_offset)
-**	[-a]            Ecrit l'historique dans le fichier PATH_HIST
+**
+**	[-a]            Ecrit l'historique dans le fichier pathname
 **                  (b_write_history_in_file)
-** 	[-n]            ?
-**  [-r]            Ecrit le contenu de PATH_HIST dans l'historique du 42sh
+**
+**  [-r]            Ecrit le contenu de (char *pathname) dans l'historique du 42sh
 **                  (write_history_in_sh)
-**  [-w]            Ecrit l'historique dans le PATH_HIST
-**  [-p]            Ecrit les args sur la sortie standart
-**  [-s]            Ajoute les args dans l'historique
+**
+**  [-w]            Ecrit l'historique dans le pathname
+**						(b_write_history_in_file)
+**  [-s]            Ajoute les args dans l'historique A FAIRE
 */
 
-int			b_write_history(void)
+uint8_t		b_write_history(void)
 {
 	t_hist	*hist;
 	int		index;
@@ -48,17 +51,17 @@ int			b_write_history(void)
 		hist = hist->next;
 		CHAR(10);
 	}
-	return (index);
+	return (0);
 }
 
-int			b_clear_history(void)
+uint8_t			b_clear_history(void)
 {
 	t_hist		*hist;
 	t_hist		*to_kill;
 
 	reset_history();
 	if (!(hist = gbl_save_history(NULL, 1)))
-		return (0);
+		return (var_return(1));
 	while (hist)
 	{
 		memdel_read(&(hist->hist));
@@ -67,10 +70,10 @@ int			b_clear_history(void)
 		ft_memdel((void **)&to_kill);
 	}
 	gbl_save_history(NULL, 0);
-	return (1);
+	return (0);
 }
 
-int			b_delete_history_offset(int offset)
+uint8_t			b_delete_history_offset(int offset)
 {
 	t_hist		*hist;
 	t_hist		*to_kill;
@@ -90,5 +93,5 @@ int			b_delete_history_offset(int offset)
 		}
 		hist = hist->next;
 	}
-	return ((i == offset) ? 1 : 0);
+	return ((uint8_t)(i == offset ? 0 : 1));
 }

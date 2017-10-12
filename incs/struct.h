@@ -189,13 +189,14 @@ typedef struct		s_outstanding
 /*
 **			STRUCT FOR JOB'S CONTROL
 */
+
 typedef struct 		s_process
 {
 	pid_t 			pid;
 	pid_t 			pgid;
 	int				status;
-	bool			foreground;
-	bool			running;
+	int				foreground;
+	int				running;
 	char			*command;
 }					t_process;
 

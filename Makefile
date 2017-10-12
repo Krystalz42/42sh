@@ -89,7 +89,6 @@ SRCS = \
 	   hash/table_hash.c									\
 	   hash/hash_board.c	    							\
 	   hash/built_in_hash.c                                 \
-	   hash/init_hash.c                                     \
 	   hash/get_str_from_hash.c                             \
 	   read/outstanding/add_outstanding.c                   \
 	   read/outstanding/get_os_pointer.c                    \
@@ -126,11 +125,13 @@ SRCS = \
 	   history/gbl_save_history.c							\
 	   history/copy_cmd.c									\
 	   signal/ft_signal.c									\
+	   jobs_control/modify_status_jobs.c                    \
 	   jobs_control/jobs_control.c                          \
 	   jobs_control/builtins_jobs.c                         \
 	   jobs_control/set_process.c                           \
 	   jobs_control/my_wait.c                               \
 	   jobs_control/my_execve.c                             \
+	   execution/builtins_functions/builtin_jobs.c          \
 	   env/add_environment.c                                \
 	   env/remove_environment.c                             \
 	   env/manage_env.c                                     \
@@ -191,7 +192,7 @@ CPPFLAGS	= \
 			  -I$(DIR_INCS)							\
 			  -I$(DIR_LIBS)/libft/$(DIR_INCS)		\
 			  -I$(DIR_LIBS)/printf/$(DIR_INCS)		\
-			  -I $(DIR_LIBS)/logger/$(DIR_INCS)     \
+			  -I$(DIR_LIBS)/logger/$(DIR_INCS)     \
 
 CFLAGS		= \
 			  -g									\

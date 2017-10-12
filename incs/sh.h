@@ -63,7 +63,6 @@ t_cmd						*create_element(char c);
 int							print_struct(t_read *read_std);
 int							my_put(int c);
 t_read						*init_struct_for_read(void);
-void						make_list_hist(t_read *read_std);
 t_cmd						*first_cmd(t_cmd *cmd, int history);
 t_cmd						*gbl_save_read(t_cmd *read_std);
 int							print_list(int to_select, t_cmd *cmd,
@@ -89,7 +88,6 @@ t_outstanding				*get_os_pointer(t_outstanding *get,
 **				HASH FUNCTION
 */
 
-void						init_hash(void);
 unsigned int				hash_value(char *str);
 void						inventory_hash(unsigned int new_index);
 t_hash						**hash_board(void);
@@ -97,19 +95,20 @@ unsigned int				*index_of_hash(void);
 char						*search_path(char *binary);
 void						add_hash(char *bin, char *path,
 														size_t index);
-void						init_hash(void);
 char						*get_str_from_hash(void);
 
 /*
 **              BUILT IN FUNCTION
 */
 
-void						hash_reset(void);
-void						hash_print(int fd);
-int							b_write_history(void);
-int							b_clear_history(void);
 int							convert_to_hist(char *buff);
-int							b_delete_history_offset(int offset);
+uint8_t						hash_reset(void);
+uint8_t						hash_print(int fd);
+uint8_t						b_write_history(void);
+uint8_t						b_clear_history(void);
+uint8_t						b_delete_history_offset(int offset);
+uint8_t						write_history_in_sh(char *pathname);
+uint8_t						builtin_jobs(char **command, char **env);
 
 /*
 **				FUNCTION FOR COMPLETION
@@ -133,10 +132,8 @@ void						back_completion(t_read **read_std);
 void						add_little_char(unsigned char type);
 void						init_completion(t_read **read_std);
 void						complete_path(t_read **read_std, t_path f);
-void						complete_binary(t_read **read_std);
 void						continue_completion(t_read **read_std);
 void						complete_command(t_read **read_std);
-int							print_tab(t_read **read_std);
 int							print_element(t_file *file, int color);
 void						create_comp(t_read **read_std, t_path f);
 void						color_completion(unsigned char type, int color);
@@ -223,13 +220,12 @@ int							usage_environement(char *string);
 
 t_hist						*set_history_to_last(void);
 void						reset_history(void);
-void						write_history_in_sh(void);
 void						copy_cmd(t_read **read_std, t_cmd *cpy);
 t_hist						*gbl_save_history(t_hist *hist, int flags);
 void						make_list_hist(t_read *read_std);
 void						previous_history(t_read **read_std);
 void						next_history(t_read **read_std);
-int							b_write_history_in_file(char *path);
+uint8_t						b_write_history_in_file(char *path);
 
 
 /*
@@ -237,17 +233,20 @@ int							b_write_history_in_file(char *path);
 */
 void						put_in_background(t_jobs *jobs, t_jobs jobs_id);
 void						put_in_foreground(t_jobs *jobs, t_jobs jobs_id);
-void						print_jobs(t_jobs *jobs);
+void						print_jobs(t_jobs *jobs, int option);
 void						update_status(t_process *identify);
 void						my_execve(char **command, char **env);
 int							jobs_control(unsigned int flags, t_jobs jobs_id,
 										int sig);
 void						my_wait(t_jobs jobs_id);
-t_jobs						new_jobs(int set);
 void						full_update(t_jobs *jobs);
 int							add_new_child(t_jobs *jobs, t_jobs jobs_id);
 void						reset_process(t_process *to_kill);
 t_jobs 						new_jobs(int set);
+void						modify_runing(t_jobs *jobs, int change);
+void						modify_foreground(t_jobs *jobs, int change);
+
+
 
 /*
 **				SIGNAL FUNCTION
@@ -260,8 +259,6 @@ void						reset_signal(void);
 **				TERMIOS FUNCTION
 */
 
-void						update_status(t_process *identify);
-
 struct termios				keep_term_struct(unsigned short flags,
 											struct termios *term);
 void						set_termios(unsigned short flags);
@@ -269,7 +266,7 @@ int							init_fd(void);
 int							init_term(void);
 
 /*
-**				FUNCTION MEMDEL STRUCTURE
+**				FUNCTION MEMDEL STRUCTUR
 */
 
 int							memdel_completion(t_tab **tab_);

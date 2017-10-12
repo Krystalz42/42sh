@@ -22,7 +22,7 @@ t_hist			*set_history_to_last(void)
 	return (hist);
 }
 
-int				b_write_history_in_file(char *path)
+uint8_t			b_write_history_in_file(char *path)
 {
 	t_hist	*hist;
 	int		fd;

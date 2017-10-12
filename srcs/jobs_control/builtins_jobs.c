@@ -12,32 +12,52 @@
 
 #include <sh.h>
 
-void			print_jobs(t_jobs *jobs)
+/*
+**		[0]		List all process.
+**	-p	[1]		List only the process ID of the job’s process group leader.
+**	-r	[2]		Display only running jobs.
+**	-s	[4]		Display only stopped jobs.
+*/
+
+void			print_evrything(t_jobs jobs, int option)
 {
 	int		index;
-	int		index_child;
 
 	index = 0;
-	ft_printf("%8s %20s %14s %10s %10s\n", "jobs_spec", "command",
-			"status", "PID", "PGID");
+	if (!(option % 2))
+		while (index < MAX_CHILD && jobs.child[index].pid)
+		{
+			ft_printf("          %20s %14s %10d %10d\n",
+		jobs.child[index].command, jobs.father.running
+		? "running" : "suspended", jobs.child[index].pid,
+		jobs.child[index].pgid);
+		index++;
+		}
+}
+
+void			print_jobs(t_jobs *jobs, int option)
+{
+	int		index;
+	int		print;
+
+
+	index = 0;
+	print = 0;
 	while (index < MAX_CHILD)
 	{
-		if (jobs[index].father.pid)
+		if (jobs[index].father.pid && (option >= 0 || ((option == 2)
+				&& jobs[index].father.running) || ((option == 4)
+								&& !jobs[index].father.running)))
 		{
-			index_child = 0;
+			if (!print++)
+				ft_printf("%8s %20s %14s %10s %10s\n", "jobs_spec", "command",
+						  "status", "PID", "PGID");
 			ft_printf("%9d %20s %14s %10d %10d\n", index + 1,
-	jobs[index].father.command, jobs[index].father.running ? "running" :
-	"suspended", jobs[index].father.pid, jobs[index].father.pgid);
-			while (index < MAX_CHILD && jobs[index].child[index_child].pid)
-			{
-				ft_printf("%s %20s %14s %10d %10d\n", "         ",
-	jobs[index].child[index_child].command, jobs[index].father.running
-	? "running" : "suspended", jobs[index].child[index_child].pid,
-						jobs[index].child[index_child].pgid);
-				index_child++;
-			}
+		jobs[index].father.command, jobs[index].father.running ? "running" :
+		"suspended", jobs[index].father.pid, jobs[index].father.pgid);
+					 print_evrything(jobs[index], option);
 		}
-		index++;
+	index++;
 	}
 }
 
@@ -55,10 +75,10 @@ void			put_in_foreground(t_jobs *jobs, t_jobs jobs_id)
 			index--;
 	if (index != -1)
 	{
-		jobs[index].father.foreground = true;
+		modify_foreground(&(jobs[index]), true);
 		if (jobs[index].father.running == false)
 			kill(-jobs[index].father.pgid, SIGCONT);
-		jobs[index].father.running = true;
+		modify_runing(&(jobs[index]), true);
 		full_update(jobs);
 		waitpid(jobs[index].father.pid, &(jobs[index].father.status),
 				WUNTRACED);
@@ -77,15 +97,13 @@ void			put_in_background(t_jobs *jobs, t_jobs jobs_id)
 	if (jobs_id.father.pid != -1)
 		index = jobs_id.father.pid;
 	else
-		while (index >= 0 && !((jobs[index].father.pid &&
-				!jobs[index].father.running && !jobs[index].father.foreground)))
+		while (index >= 0 && !(jobs[index].father.pid &&
+				!jobs[index].father.running && !jobs[index].father.foreground))
 			index--;
 	if (index != -1 && jobs[index].father.pid)
 	{
-		jobs[index].father.foreground = false;
-		if (jobs[index].father.running == false)
-			kill(-jobs[index].father.pgid, SIGCONT);
-		jobs[index].father.running = true;
+		modify_foreground(&(jobs[index]), false);
+		modify_runing(&(jobs[index]), true);
 		full_update(jobs);
 		waitpid(jobs[index].father.pid, &(jobs[index].father.status),
 			WUNTRACED | WCONTINUED | WNOHANG);

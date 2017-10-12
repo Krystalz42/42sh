@@ -14,12 +14,14 @@
 
 void test_cmd();
 
-int			main(void)
+int			main(int ac, char **av)
 {
+	(void)ac;
+	(void)av;
 	init_env();
 	logger_init(7, "log");
 	init_term();
-	write_history_in_sh();
+	write_history_in_sh(get_str_from_history());
 	init_signal();
 	test_cmd();
 //	shell();
@@ -106,7 +108,15 @@ void test_cmd()
 	char *cat[] = {"/bin/cat", "-e", NULL};
 	char *vim[] = {"/usr/bin/vim", NULL};
 	char *emacs[] = {"/usr/bin/emacs", NULL};
+	char *jobs[] = {"jobs", NULL};
+	char *jobsR[] = {"jobs", "-r", NULL};
+	char *jobsP[] = {"jobs", "-p", NULL};
+	char *jobsS[] = {"jobs", "-s", NULL};
 
+	(void)jobs;
+	(void)jobsR;
+	(void)jobsS;
+	(void)jobsP;
 	(void)ls;
 	(void)vim;
 	(void)emacs;
@@ -117,13 +127,9 @@ void test_cmd()
 	while (i)
 	{
 		read_stdin();
-		my_execute(ls,false);
+		my_execute(ls, true);
 		read_stdin();
-		jobs_control(PRINT_JOBS, new_jobs(0), 0);
-		read_stdin();
-		jobs_control(BACKGROUND, new_jobs(-1),0);
-		read_stdin();
-		jobs_control(PRINT_JOBS, new_jobs(0), 0);
+		builtin_jobs(jobs, NULL);
 		read_stdin();
 	}
 }

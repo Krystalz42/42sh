@@ -43,28 +43,24 @@ int					convert_to_hist(char *buff)
 	}
 }
 
-void				write_history_in_sh(void)
+uint8_t				write_history_in_sh(char *pathname)
 {
-	char		*path_hist;
 	int			fd;
 	char		*buff;
 	int			command;
 
-	if (!(path_hist = get_str_from_history()))
-		return ;
-	if ((fd = open(path_hist, O_RDONLY)) == -1)
+	if ((fd = open(pathname, O_RDONLY)) != -1)
 	{
-		free(path_hist);
-		return ;
+		command = 0;
+		buff = NULL;
+		log_trace("Init history");
+		while (command < HISTSIZE && my_gnl(fd, &buff))
+		{
+			command += convert_to_hist(buff);
+			ft_memdel((void **)&buff);
+		}
+		close(fd);
 	}
-	command = 0;
-	buff = NULL;
-	log_trace("Init history");
-	while (command < HISTSIZE && my_gnl(fd, &buff))
-	{
-		command += convert_to_hist(buff);
-		ft_memdel((void **)&buff);
-	}
-	free(path_hist);
-	close(fd);
+	free(pathname);
+	return (var_return((uint8_t)(fd != 1 ? 0 : 1)));
 }

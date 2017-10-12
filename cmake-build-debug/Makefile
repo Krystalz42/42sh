@@ -3552,6 +3552,60 @@ srcs/error_function/puterror.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/puterror.c.s
 .PHONY : srcs/error_function/puterror.c.s
 
+srcs/execution/builtins_functions/builtin_history.o: srcs/execution/builtins_functions/builtin_history.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_history.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_history.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_history.c.o
+
+srcs/execution/builtins_functions/builtin_history.i: srcs/execution/builtins_functions/builtin_history.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_history.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_history.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_history.c.i
+
+srcs/execution/builtins_functions/builtin_history.s: srcs/execution/builtins_functions/builtin_history.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_history.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_history.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_history.c.s
+
+srcs/execution/builtins_functions/builtin_jobs.o: srcs/execution/builtins_functions/builtin_jobs.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_jobs.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_jobs.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_jobs.c.o
+
+srcs/execution/builtins_functions/builtin_jobs.i: srcs/execution/builtins_functions/builtin_jobs.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_jobs.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_jobs.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_jobs.c.i
+
+srcs/execution/builtins_functions/builtin_jobs.s: srcs/execution/builtins_functions/builtin_jobs.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_jobs.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_jobs.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_jobs.c.s
+
 srcs/hash/built_in_hash.o: srcs/hash/built_in_hash.c.o
 
 .PHONY : srcs/hash/built_in_hash.o
@@ -3659,33 +3713,6 @@ srcs/hash/hash_value.s: srcs/hash/hash_value.c.s
 srcs/hash/hash_value.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/hash/hash_value.c.s
 .PHONY : srcs/hash/hash_value.c.s
-
-srcs/hash/init_hash.o: srcs/hash/init_hash.c.o
-
-.PHONY : srcs/hash/init_hash.o
-
-# target to build an object file
-srcs/hash/init_hash.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o
-.PHONY : srcs/hash/init_hash.c.o
-
-srcs/hash/init_hash.i: srcs/hash/init_hash.c.i
-
-.PHONY : srcs/hash/init_hash.i
-
-# target to preprocess a source file
-srcs/hash/init_hash.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/hash/init_hash.c.i
-.PHONY : srcs/hash/init_hash.c.i
-
-srcs/hash/init_hash.s: srcs/hash/init_hash.c.s
-
-.PHONY : srcs/hash/init_hash.s
-
-# target to generate assembly for a file
-srcs/hash/init_hash.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/hash/init_hash.c.s
-.PHONY : srcs/hash/init_hash.c.s
 
 srcs/hash/table_hash.o: srcs/hash/table_hash.c.o
 
@@ -4037,6 +4064,33 @@ srcs/jobs_control/jobs_control.s: srcs/jobs_control/jobs_control.c.s
 srcs/jobs_control/jobs_control.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/jobs_control.c.s
 .PHONY : srcs/jobs_control/jobs_control.c.s
+
+srcs/jobs_control/modify_status_jobs.o: srcs/jobs_control/modify_status_jobs.c.o
+
+.PHONY : srcs/jobs_control/modify_status_jobs.o
+
+# target to build an object file
+srcs/jobs_control/modify_status_jobs.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o
+.PHONY : srcs/jobs_control/modify_status_jobs.c.o
+
+srcs/jobs_control/modify_status_jobs.i: srcs/jobs_control/modify_status_jobs.c.i
+
+.PHONY : srcs/jobs_control/modify_status_jobs.i
+
+# target to preprocess a source file
+srcs/jobs_control/modify_status_jobs.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.i
+.PHONY : srcs/jobs_control/modify_status_jobs.c.i
+
+srcs/jobs_control/modify_status_jobs.s: srcs/jobs_control/modify_status_jobs.c.s
+
+.PHONY : srcs/jobs_control/modify_status_jobs.s
+
+# target to generate assembly for a file
+srcs/jobs_control/modify_status_jobs.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.s
+.PHONY : srcs/jobs_control/modify_status_jobs.c.s
 
 srcs/jobs_control/my_execve.o: srcs/jobs_control/my_execve.c.o
 
@@ -6345,6 +6399,12 @@ help:
 	@echo "... srcs/error_function/puterror.o"
 	@echo "... srcs/error_function/puterror.i"
 	@echo "... srcs/error_function/puterror.s"
+	@echo "... srcs/execution/builtins_functions/builtin_history.o"
+	@echo "... srcs/execution/builtins_functions/builtin_history.i"
+	@echo "... srcs/execution/builtins_functions/builtin_history.s"
+	@echo "... srcs/execution/builtins_functions/builtin_jobs.o"
+	@echo "... srcs/execution/builtins_functions/builtin_jobs.i"
+	@echo "... srcs/execution/builtins_functions/builtin_jobs.s"
 	@echo "... srcs/hash/built_in_hash.o"
 	@echo "... srcs/hash/built_in_hash.i"
 	@echo "... srcs/hash/built_in_hash.s"
@@ -6357,9 +6417,6 @@ help:
 	@echo "... srcs/hash/hash_value.o"
 	@echo "... srcs/hash/hash_value.i"
 	@echo "... srcs/hash/hash_value.s"
-	@echo "... srcs/hash/init_hash.o"
-	@echo "... srcs/hash/init_hash.i"
-	@echo "... srcs/hash/init_hash.s"
 	@echo "... srcs/hash/table_hash.o"
 	@echo "... srcs/hash/table_hash.i"
 	@echo "... srcs/hash/table_hash.s"
@@ -6399,6 +6456,9 @@ help:
 	@echo "... srcs/jobs_control/jobs_control.o"
 	@echo "... srcs/jobs_control/jobs_control.i"
 	@echo "... srcs/jobs_control/jobs_control.s"
+	@echo "... srcs/jobs_control/modify_status_jobs.o"
+	@echo "... srcs/jobs_control/modify_status_jobs.i"
+	@echo "... srcs/jobs_control/modify_status_jobs.s"
 	@echo "... srcs/jobs_control/my_execve.o"
 	@echo "... srcs/jobs_control/my_execve.i"
 	@echo "... srcs/jobs_control/my_execve.s"

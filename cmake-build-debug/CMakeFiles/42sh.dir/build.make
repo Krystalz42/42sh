@@ -3201,33 +3201,9 @@ CMakeFiles/42sh.dir/srcs/hash/hash_value.c.o.provides: CMakeFiles/42sh.dir/srcs/
 CMakeFiles/42sh.dir/srcs/hash/hash_value.c.o.provides.build: CMakeFiles/42sh.dir/srcs/hash/hash_value.c.o
 
 
-CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o: CMakeFiles/42sh.dir/flags.make
-CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o: ../srcs/hash/init_hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o   -c /Users/aroulin/42sh/srcs/hash/init_hash.c
-
-CMakeFiles/42sh.dir/srcs/hash/init_hash.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42sh.dir/srcs/hash/init_hash.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/42sh/srcs/hash/init_hash.c > CMakeFiles/42sh.dir/srcs/hash/init_hash.c.i
-
-CMakeFiles/42sh.dir/srcs/hash/init_hash.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42sh.dir/srcs/hash/init_hash.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/42sh/srcs/hash/init_hash.c -o CMakeFiles/42sh.dir/srcs/hash/init_hash.c.s
-
-CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o.requires:
-
-.PHONY : CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o.requires
-
-CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o.provides: CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o.requires
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o.provides.build
-.PHONY : CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o.provides
-
-CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o.provides.build: CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o
-
-
 CMakeFiles/42sh.dir/srcs/hash/table_hash.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/hash/table_hash.c.o: ../srcs/hash/table_hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/42sh.dir/srcs/hash/table_hash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/42sh.dir/srcs/hash/table_hash.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/hash/table_hash.c.o   -c /Users/aroulin/42sh/srcs/hash/table_hash.c
 
 CMakeFiles/42sh.dir/srcs/hash/table_hash.c.i: cmake_force
@@ -3251,7 +3227,7 @@ CMakeFiles/42sh.dir/srcs/hash/table_hash.c.o.provides.build: CMakeFiles/42sh.dir
 
 CMakeFiles/42sh.dir/srcs/history/built_in_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/history/built_in_history.c.o: ../srcs/history/built_in_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/42sh.dir/srcs/history/built_in_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/42sh.dir/srcs/history/built_in_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/history/built_in_history.c.o   -c /Users/aroulin/42sh/srcs/history/built_in_history.c
 
 CMakeFiles/42sh.dir/srcs/history/built_in_history.c.i: cmake_force
@@ -3275,7 +3251,7 @@ CMakeFiles/42sh.dir/srcs/history/built_in_history.c.o.provides.build: CMakeFiles
 
 CMakeFiles/42sh.dir/srcs/history/copy_cmd.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/history/copy_cmd.c.o: ../srcs/history/copy_cmd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/42sh.dir/srcs/history/copy_cmd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/42sh.dir/srcs/history/copy_cmd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/history/copy_cmd.c.o   -c /Users/aroulin/42sh/srcs/history/copy_cmd.c
 
 CMakeFiles/42sh.dir/srcs/history/copy_cmd.c.i: cmake_force
@@ -3299,7 +3275,7 @@ CMakeFiles/42sh.dir/srcs/history/copy_cmd.c.o.provides.build: CMakeFiles/42sh.di
 
 CMakeFiles/42sh.dir/srcs/history/gbl_save_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/history/gbl_save_history.c.o: ../srcs/history/gbl_save_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/42sh.dir/srcs/history/gbl_save_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/42sh.dir/srcs/history/gbl_save_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/history/gbl_save_history.c.o   -c /Users/aroulin/42sh/srcs/history/gbl_save_history.c
 
 CMakeFiles/42sh.dir/srcs/history/gbl_save_history.c.i: cmake_force
@@ -3323,7 +3299,7 @@ CMakeFiles/42sh.dir/srcs/history/gbl_save_history.c.o.provides.build: CMakeFiles
 
 CMakeFiles/42sh.dir/srcs/history/get_str_from_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/history/get_str_from_history.c.o: ../srcs/history/get_str_from_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/42sh.dir/srcs/history/get_str_from_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/42sh.dir/srcs/history/get_str_from_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/history/get_str_from_history.c.o   -c /Users/aroulin/42sh/srcs/history/get_str_from_history.c
 
 CMakeFiles/42sh.dir/srcs/history/get_str_from_history.c.i: cmake_force
@@ -3347,7 +3323,7 @@ CMakeFiles/42sh.dir/srcs/history/get_str_from_history.c.o.provides.build: CMakeF
 
 CMakeFiles/42sh.dir/srcs/history/init_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/history/init_history.c.o: ../srcs/history/init_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/42sh.dir/srcs/history/init_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/42sh.dir/srcs/history/init_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/history/init_history.c.o   -c /Users/aroulin/42sh/srcs/history/init_history.c
 
 CMakeFiles/42sh.dir/srcs/history/init_history.c.i: cmake_force
@@ -3371,7 +3347,7 @@ CMakeFiles/42sh.dir/srcs/history/init_history.c.o.provides.build: CMakeFiles/42s
 
 CMakeFiles/42sh.dir/srcs/history/make_list_hist.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/history/make_list_hist.c.o: ../srcs/history/make_list_hist.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/42sh.dir/srcs/history/make_list_hist.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/42sh.dir/srcs/history/make_list_hist.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/history/make_list_hist.c.o   -c /Users/aroulin/42sh/srcs/history/make_list_hist.c
 
 CMakeFiles/42sh.dir/srcs/history/make_list_hist.c.i: cmake_force
@@ -3395,7 +3371,7 @@ CMakeFiles/42sh.dir/srcs/history/make_list_hist.c.o.provides.build: CMakeFiles/4
 
 CMakeFiles/42sh.dir/srcs/history/next_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/history/next_history.c.o: ../srcs/history/next_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/42sh.dir/srcs/history/next_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/42sh.dir/srcs/history/next_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/history/next_history.c.o   -c /Users/aroulin/42sh/srcs/history/next_history.c
 
 CMakeFiles/42sh.dir/srcs/history/next_history.c.i: cmake_force
@@ -3419,7 +3395,7 @@ CMakeFiles/42sh.dir/srcs/history/next_history.c.o.provides.build: CMakeFiles/42s
 
 CMakeFiles/42sh.dir/srcs/history/previous_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/history/previous_history.c.o: ../srcs/history/previous_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/42sh.dir/srcs/history/previous_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/42sh.dir/srcs/history/previous_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/history/previous_history.c.o   -c /Users/aroulin/42sh/srcs/history/previous_history.c
 
 CMakeFiles/42sh.dir/srcs/history/previous_history.c.i: cmake_force
@@ -3443,7 +3419,7 @@ CMakeFiles/42sh.dir/srcs/history/previous_history.c.o.provides.build: CMakeFiles
 
 CMakeFiles/42sh.dir/srcs/history/reset_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/history/reset_history.c.o: ../srcs/history/reset_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/42sh.dir/srcs/history/reset_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/42sh.dir/srcs/history/reset_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/history/reset_history.c.o   -c /Users/aroulin/42sh/srcs/history/reset_history.c
 
 CMakeFiles/42sh.dir/srcs/history/reset_history.c.i: cmake_force
@@ -3467,7 +3443,7 @@ CMakeFiles/42sh.dir/srcs/history/reset_history.c.o.provides.build: CMakeFiles/42
 
 CMakeFiles/42sh.dir/srcs/history/write_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/history/write_history.c.o: ../srcs/history/write_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/42sh.dir/srcs/history/write_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/42sh.dir/srcs/history/write_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/history/write_history.c.o   -c /Users/aroulin/42sh/srcs/history/write_history.c
 
 CMakeFiles/42sh.dir/srcs/history/write_history.c.i: cmake_force
@@ -3491,7 +3467,7 @@ CMakeFiles/42sh.dir/srcs/history/write_history.c.o.provides.build: CMakeFiles/42
 
 CMakeFiles/42sh.dir/srcs/jobs_control/jobs_control.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/jobs_control/jobs_control.c.o: ../srcs/jobs_control/jobs_control.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/42sh.dir/srcs/jobs_control/jobs_control.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/42sh.dir/srcs/jobs_control/jobs_control.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/jobs_control/jobs_control.c.o   -c /Users/aroulin/42sh/srcs/jobs_control/jobs_control.c
 
 CMakeFiles/42sh.dir/srcs/jobs_control/jobs_control.c.i: cmake_force
@@ -3515,7 +3491,7 @@ CMakeFiles/42sh.dir/srcs/jobs_control/jobs_control.c.o.provides.build: CMakeFile
 
 CMakeFiles/42sh.dir/srcs/jobs_control/my_execve.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/jobs_control/my_execve.c.o: ../srcs/jobs_control/my_execve.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/42sh.dir/srcs/jobs_control/my_execve.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/42sh.dir/srcs/jobs_control/my_execve.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/jobs_control/my_execve.c.o   -c /Users/aroulin/42sh/srcs/jobs_control/my_execve.c
 
 CMakeFiles/42sh.dir/srcs/jobs_control/my_execve.c.i: cmake_force
@@ -3539,7 +3515,7 @@ CMakeFiles/42sh.dir/srcs/jobs_control/my_execve.c.o.provides.build: CMakeFiles/4
 
 CMakeFiles/42sh.dir/srcs/jobs_control/my_wait.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/jobs_control/my_wait.c.o: ../srcs/jobs_control/my_wait.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/42sh.dir/srcs/jobs_control/my_wait.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/42sh.dir/srcs/jobs_control/my_wait.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/jobs_control/my_wait.c.o   -c /Users/aroulin/42sh/srcs/jobs_control/my_wait.c
 
 CMakeFiles/42sh.dir/srcs/jobs_control/my_wait.c.i: cmake_force
@@ -3563,7 +3539,7 @@ CMakeFiles/42sh.dir/srcs/jobs_control/my_wait.c.o.provides.build: CMakeFiles/42s
 
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_completion.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_completion.c.o: ../srcs/memdel_struct/memdel_completion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_completion.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_completion.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_completion.c.o   -c /Users/aroulin/42sh/srcs/memdel_struct/memdel_completion.c
 
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_completion.c.i: cmake_force
@@ -3587,7 +3563,7 @@ CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_completion.c.o.provides.build: CMa
 
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_outstanding.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_outstanding.c.o: ../srcs/memdel_struct/memdel_outstanding.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_outstanding.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_outstanding.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_outstanding.c.o   -c /Users/aroulin/42sh/srcs/memdel_struct/memdel_outstanding.c
 
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_outstanding.c.i: cmake_force
@@ -3611,7 +3587,7 @@ CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_outstanding.c.o.provides.build: CM
 
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_read.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_read.c.o: ../srcs/memdel_struct/memdel_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_read.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_read.c.o   -c /Users/aroulin/42sh/srcs/memdel_struct/memdel_read.c
 
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_read.c.i: cmake_force
@@ -3635,7 +3611,7 @@ CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_read.c.o.provides.build: CMakeFile
 
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_search_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_search_history.c.o: ../srcs/memdel_struct/memdel_search_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_search_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_search_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_search_history.c.o   -c /Users/aroulin/42sh/srcs/memdel_struct/memdel_search_history.c
 
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_search_history.c.i: cmake_force
@@ -3659,7 +3635,7 @@ CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_search_history.c.o.provides.build:
 
 CMakeFiles/42sh.dir/srcs/read/completion/check_binary_path.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/check_binary_path.c.o: ../srcs/read/completion/check_binary_path.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/check_binary_path.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/check_binary_path.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/check_binary_path.c.o   -c /Users/aroulin/42sh/srcs/read/completion/check_binary_path.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/check_binary_path.c.i: cmake_force
@@ -3683,7 +3659,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/check_binary_path.c.o.provides.build: C
 
 CMakeFiles/42sh.dir/srcs/read/completion/color_completion.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/color_completion.c.o: ../srcs/read/completion/color_completion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/color_completion.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/color_completion.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/color_completion.c.o   -c /Users/aroulin/42sh/srcs/read/completion/color_completion.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/color_completion.c.i: cmake_force
@@ -3707,7 +3683,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/color_completion.c.o.provides.build: CM
 
 CMakeFiles/42sh.dir/srcs/read/completion/complete_binary.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/complete_binary.c.o: ../srcs/read/completion/complete_binary.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/complete_binary.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/complete_binary.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/complete_binary.c.o   -c /Users/aroulin/42sh/srcs/read/completion/complete_binary.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/complete_binary.c.i: cmake_force
@@ -3731,7 +3707,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/complete_binary.c.o.provides.build: CMa
 
 CMakeFiles/42sh.dir/srcs/read/completion/complete_path.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/complete_path.c.o: ../srcs/read/completion/complete_path.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/complete_path.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/complete_path.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/complete_path.c.o   -c /Users/aroulin/42sh/srcs/read/completion/complete_path.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/complete_path.c.i: cmake_force
@@ -3755,7 +3731,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/complete_path.c.o.provides.build: CMake
 
 CMakeFiles/42sh.dir/srcs/read/completion/completion.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/completion.c.o: ../srcs/read/completion/completion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/completion.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/completion.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/completion.c.o   -c /Users/aroulin/42sh/srcs/read/completion/completion.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/completion.c.i: cmake_force
@@ -3779,7 +3755,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/completion.c.o.provides.build: CMakeFil
 
 CMakeFiles/42sh.dir/srcs/read/completion/continue_completion.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/continue_completion.c.o: ../srcs/read/completion/continue_completion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/continue_completion.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/continue_completion.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/continue_completion.c.o   -c /Users/aroulin/42sh/srcs/read/completion/continue_completion.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/continue_completion.c.i: cmake_force
@@ -3803,7 +3779,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/continue_completion.c.o.provides.build:
 
 CMakeFiles/42sh.dir/srcs/read/completion/create_comp.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/create_comp.c.o: ../srcs/read/completion/create_comp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/create_comp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/create_comp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/create_comp.c.o   -c /Users/aroulin/42sh/srcs/read/completion/create_comp.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/create_comp.c.i: cmake_force
@@ -3827,7 +3803,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/create_comp.c.o.provides.build: CMakeFi
 
 CMakeFiles/42sh.dir/srcs/read/completion/init_completion.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/init_completion.c.o: ../srcs/read/completion/init_completion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/init_completion.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/init_completion.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/init_completion.c.o   -c /Users/aroulin/42sh/srcs/read/completion/init_completion.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/init_completion.c.i: cmake_force
@@ -3851,7 +3827,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/init_completion.c.o.provides.build: CMa
 
 CMakeFiles/42sh.dir/srcs/read/completion/init_files.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/init_files.c.o: ../srcs/read/completion/init_files.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/init_files.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/init_files.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/init_files.c.o   -c /Users/aroulin/42sh/srcs/read/completion/init_files.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/init_files.c.i: cmake_force
@@ -3875,7 +3851,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/init_files.c.o.provides.build: CMakeFil
 
 CMakeFiles/42sh.dir/srcs/read/completion/init_tab.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/init_tab.c.o: ../srcs/read/completion/init_tab.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/init_tab.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/init_tab.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/init_tab.c.o   -c /Users/aroulin/42sh/srcs/read/completion/init_tab.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/init_tab.c.i: cmake_force
@@ -3899,7 +3875,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/init_tab.c.o.provides.build: CMakeFiles
 
 CMakeFiles/42sh.dir/srcs/read/completion/move_horizontal.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/move_horizontal.c.o: ../srcs/read/completion/move_horizontal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/move_horizontal.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/move_horizontal.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/move_horizontal.c.o   -c /Users/aroulin/42sh/srcs/read/completion/move_horizontal.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/move_horizontal.c.i: cmake_force
@@ -3923,7 +3899,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/move_horizontal.c.o.provides.build: CMa
 
 CMakeFiles/42sh.dir/srcs/read/completion/move_vertical.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/move_vertical.c.o: ../srcs/read/completion/move_vertical.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/move_vertical.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/move_vertical.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/move_vertical.c.o   -c /Users/aroulin/42sh/srcs/read/completion/move_vertical.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/move_vertical.c.i: cmake_force
@@ -3947,7 +3923,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/move_vertical.c.o.provides.build: CMake
 
 CMakeFiles/42sh.dir/srcs/read/completion/my_togo.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/my_togo.c.o: ../srcs/read/completion/my_togo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/my_togo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/my_togo.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/my_togo.c.o   -c /Users/aroulin/42sh/srcs/read/completion/my_togo.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/my_togo.c.i: cmake_force
@@ -3971,7 +3947,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/my_togo.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/42sh.dir/srcs/read/completion/print_tab.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/print_tab.c.o: ../srcs/read/completion/print_tab.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/print_tab.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/print_tab.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/print_tab.c.o   -c /Users/aroulin/42sh/srcs/read/completion/print_tab.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/print_tab.c.i: cmake_force
@@ -3995,7 +3971,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/print_tab.c.o.provides.build: CMakeFile
 
 CMakeFiles/42sh.dir/srcs/read/completion/update_index.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/completion/update_index.c.o: ../srcs/read/completion/update_index.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/update_index.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building C object CMakeFiles/42sh.dir/srcs/read/completion/update_index.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/completion/update_index.c.o   -c /Users/aroulin/42sh/srcs/read/completion/update_index.c
 
 CMakeFiles/42sh.dir/srcs/read/completion/update_index.c.i: cmake_force
@@ -4019,7 +3995,7 @@ CMakeFiles/42sh.dir/srcs/read/completion/update_index.c.o.provides.build: CMakeF
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_arrow.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_arrow.c.o: ../srcs/read/key_/key_arrow.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_arrow.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_arrow.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_arrow.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_arrow.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_arrow.c.i: cmake_force
@@ -4043,7 +4019,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_arrow.c.o.provides.build: CMakeFiles/42sh
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_clear.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_clear.c.o: ../srcs/read/key_/key_clear.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_clear.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_clear.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_clear.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_clear.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_clear.c.i: cmake_force
@@ -4067,7 +4043,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_clear.c.o.provides.build: CMakeFiles/42sh
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_del_buff.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_del_buff.c.o: ../srcs/read/key_/key_del_buff.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_del_buff.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_del_buff.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_del_buff.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_del_buff.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_del_buff.c.i: cmake_force
@@ -4091,7 +4067,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_del_buff.c.o.provides.build: CMakeFiles/4
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_delete.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_delete.c.o: ../srcs/read/key_/key_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_delete.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_delete.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_delete.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_delete.c.i: cmake_force
@@ -4115,7 +4091,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_delete.c.o.provides.build: CMakeFiles/42s
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_delete_here.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_delete_here.c.o: ../srcs/read/key_/key_delete_here.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_delete_here.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_delete_here.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_delete_here.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_delete_here.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_delete_here.c.i: cmake_force
@@ -4139,7 +4115,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_delete_here.c.o.provides.build: CMakeFile
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_enter.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_enter.c.o: ../srcs/read/key_/key_enter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_enter.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_enter.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_enter.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_enter.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_enter.c.i: cmake_force
@@ -4163,7 +4139,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_enter.c.o.provides.build: CMakeFiles/42sh
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_eof.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_eof.c.o: ../srcs/read/key_/key_eof.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_eof.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_eof.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_eof.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_eof.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_eof.c.i: cmake_force
@@ -4187,7 +4163,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_eof.c.o.provides.build: CMakeFiles/42sh.d
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_home_end.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_home_end.c.o: ../srcs/read/key_/key_home_end.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_home_end.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_home_end.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_home_end.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_home_end.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_home_end.c.i: cmake_force
@@ -4211,7 +4187,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_home_end.c.o.provides.build: CMakeFiles/4
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_interrupt.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_interrupt.c.o: ../srcs/read/key_/key_interrupt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_interrupt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_interrupt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_interrupt.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_interrupt.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_interrupt.c.i: cmake_force
@@ -4235,7 +4211,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_interrupt.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_kill_k.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_kill_k.c.o: ../srcs/read/key_/key_kill_k.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_kill_k.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_kill_k.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_kill_k.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_kill_k.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_kill_k.c.i: cmake_force
@@ -4259,7 +4235,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_kill_k.c.o.provides.build: CMakeFiles/42s
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_kill_prev_word.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_kill_prev_word.c.o: ../srcs/read/key_/key_kill_prev_word.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_kill_prev_word.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_kill_prev_word.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_kill_prev_word.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_kill_prev_word.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_kill_prev_word.c.i: cmake_force
@@ -4283,7 +4259,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_kill_prev_word.c.o.provides.build: CMakeF
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_kill_word.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_kill_word.c.o: ../srcs/read/key_/key_kill_word.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_kill_word.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_kill_word.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_kill_word.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_kill_word.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_kill_word.c.i: cmake_force
@@ -4307,7 +4283,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_kill_word.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_print.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_print.c.o: ../srcs/read/key_/key_print.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_print.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_print.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_print.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_print.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_print.c.i: cmake_force
@@ -4331,7 +4307,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_print.c.o.provides.build: CMakeFiles/42sh
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_reprint.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_reprint.c.o: ../srcs/read/key_/key_reprint.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_reprint.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_reprint.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_reprint.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_reprint.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_reprint.c.i: cmake_force
@@ -4355,7 +4331,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_reprint.c.o.provides.build: CMakeFiles/42
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_search_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_search_history.c.o: ../srcs/read/key_/key_search_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_search_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_search_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_search_history.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_search_history.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_search_history.c.i: cmake_force
@@ -4379,7 +4355,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_search_history.c.o.provides.build: CMakeF
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_shift.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_shift.c.o: ../srcs/read/key_/key_shift.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_shift.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_shift.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_shift.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_shift.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_shift.c.i: cmake_force
@@ -4403,7 +4379,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_shift.c.o.provides.build: CMakeFiles/42sh
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_tabulation.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_tabulation.c.o: ../srcs/read/key_/key_tabulation.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_tabulation.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_tabulation.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_tabulation.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_tabulation.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_tabulation.c.i: cmake_force
@@ -4427,7 +4403,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_tabulation.c.o.provides.build: CMakeFiles
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_undo.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_undo.c.o: ../srcs/read/key_/key_undo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_undo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_undo.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_undo.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_undo.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_undo.c.i: cmake_force
@@ -4451,7 +4427,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_undo.c.o.provides.build: CMakeFiles/42sh.
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_yank.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/key_/key_yank.c.o: ../srcs/read/key_/key_yank.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_yank.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building C object CMakeFiles/42sh.dir/srcs/read/key_/key_yank.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/key_/key_yank.c.o   -c /Users/aroulin/42sh/srcs/read/key_/key_yank.c
 
 CMakeFiles/42sh.dir/srcs/read/key_/key_yank.c.i: cmake_force
@@ -4475,7 +4451,7 @@ CMakeFiles/42sh.dir/srcs/read/key_/key_yank.c.o.provides.build: CMakeFiles/42sh.
 
 CMakeFiles/42sh.dir/srcs/read/other_read/check_cmd.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/check_cmd.c.o: ../srcs/read/other_read/check_cmd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/check_cmd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/check_cmd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/check_cmd.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/check_cmd.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/check_cmd.c.i: cmake_force
@@ -4499,7 +4475,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/check_cmd.c.o.provides.build: CMakeFile
 
 CMakeFiles/42sh.dir/srcs/read/other_read/finish_read_std.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/finish_read_std.c.o: ../srcs/read/other_read/finish_read_std.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/finish_read_std.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/finish_read_std.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/finish_read_std.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/finish_read_std.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/finish_read_std.c.i: cmake_force
@@ -4523,7 +4499,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/finish_read_std.c.o.provides.build: CMa
 
 CMakeFiles/42sh.dir/srcs/read/other_read/first_cmd.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/first_cmd.c.o: ../srcs/read/other_read/first_cmd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/first_cmd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/first_cmd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/first_cmd.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/first_cmd.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/first_cmd.c.i: cmake_force
@@ -4547,7 +4523,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/first_cmd.c.o.provides.build: CMakeFile
 
 CMakeFiles/42sh.dir/srcs/read/other_read/gbl_save_read.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/gbl_save_read.c.o: ../srcs/read/other_read/gbl_save_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/gbl_save_read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/gbl_save_read.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/gbl_save_read.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/gbl_save_read.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/gbl_save_read.c.i: cmake_force
@@ -4571,7 +4547,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/gbl_save_read.c.o.provides.build: CMake
 
 CMakeFiles/42sh.dir/srcs/read/other_read/get_len_prompt.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/get_len_prompt.c.o: ../srcs/read/other_read/get_len_prompt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/get_len_prompt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/get_len_prompt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/get_len_prompt.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/get_len_prompt.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/get_len_prompt.c.i: cmake_force
@@ -4595,7 +4571,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/get_len_prompt.c.o.provides.build: CMak
 
 CMakeFiles/42sh.dir/srcs/read/other_read/init_prompt.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/init_prompt.c.o: ../srcs/read/other_read/init_prompt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/init_prompt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/init_prompt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/init_prompt.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/init_prompt.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/init_prompt.c.i: cmake_force
@@ -4619,7 +4595,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/init_prompt.c.o.provides.build: CMakeFi
 
 CMakeFiles/42sh.dir/srcs/read/other_read/init_struct_for_read.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/init_struct_for_read.c.o: ../srcs/read/other_read/init_struct_for_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/init_struct_for_read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/init_struct_for_read.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/init_struct_for_read.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/init_struct_for_read.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/init_struct_for_read.c.i: cmake_force
@@ -4643,7 +4619,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/init_struct_for_read.c.o.provides.build
 
 CMakeFiles/42sh.dir/srcs/read/other_read/keep_buffer.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/keep_buffer.c.o: ../srcs/read/other_read/keep_buffer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/keep_buffer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/keep_buffer.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/keep_buffer.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/keep_buffer.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/keep_buffer.c.i: cmake_force
@@ -4667,7 +4643,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/keep_buffer.c.o.provides.build: CMakeFi
 
 CMakeFiles/42sh.dir/srcs/read/other_read/last_cmd.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/last_cmd.c.o: ../srcs/read/other_read/last_cmd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/last_cmd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/last_cmd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/last_cmd.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/last_cmd.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/last_cmd.c.i: cmake_force
@@ -4691,7 +4667,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/last_cmd.c.o.provides.build: CMakeFiles
 
 CMakeFiles/42sh.dir/srcs/read/other_read/my_prompt.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/my_prompt.c.o: ../srcs/read/other_read/my_prompt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/my_prompt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/my_prompt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/my_prompt.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/my_prompt.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/my_prompt.c.i: cmake_force
@@ -4715,7 +4691,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/my_prompt.c.o.provides.build: CMakeFile
 
 CMakeFiles/42sh.dir/srcs/read/other_read/my_put.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/my_put.c.o: ../srcs/read/other_read/my_put.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/my_put.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/my_put.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/my_put.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/my_put.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/my_put.c.i: cmake_force
@@ -4739,7 +4715,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/my_put.c.o.provides.build: CMakeFiles/4
 
 CMakeFiles/42sh.dir/srcs/read/other_read/print_struct.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/print_struct.c.o: ../srcs/read/other_read/print_struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/print_struct.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/print_struct.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/print_struct.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/print_struct.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/print_struct.c.i: cmake_force
@@ -4763,7 +4739,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/print_struct.c.o.provides.build: CMakeF
 
 CMakeFiles/42sh.dir/srcs/read/other_read/prompt.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/prompt.c.o: ../srcs/read/other_read/prompt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/prompt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/prompt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/prompt.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/prompt.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/prompt.c.i: cmake_force
@@ -4787,7 +4763,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/prompt.c.o.provides.build: CMakeFiles/4
 
 CMakeFiles/42sh.dir/srcs/read/other_read/read_stdin.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/read_stdin.c.o: ../srcs/read/other_read/read_stdin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/read_stdin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/read_stdin.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/read_stdin.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/read_stdin.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/read_stdin.c.i: cmake_force
@@ -4811,7 +4787,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/read_stdin.c.o.provides.build: CMakeFil
 
 CMakeFiles/42sh.dir/srcs/read/other_read/restore_cursor.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/other_read/restore_cursor.c.o: ../srcs/read/other_read/restore_cursor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/restore_cursor.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building C object CMakeFiles/42sh.dir/srcs/read/other_read/restore_cursor.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/other_read/restore_cursor.c.o   -c /Users/aroulin/42sh/srcs/read/other_read/restore_cursor.c
 
 CMakeFiles/42sh.dir/srcs/read/other_read/restore_cursor.c.i: cmake_force
@@ -4835,7 +4811,7 @@ CMakeFiles/42sh.dir/srcs/read/other_read/restore_cursor.c.o.provides.build: CMak
 
 CMakeFiles/42sh.dir/srcs/read/outstanding/add_outstanding.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/outstanding/add_outstanding.c.o: ../srcs/read/outstanding/add_outstanding.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building C object CMakeFiles/42sh.dir/srcs/read/outstanding/add_outstanding.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building C object CMakeFiles/42sh.dir/srcs/read/outstanding/add_outstanding.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/outstanding/add_outstanding.c.o   -c /Users/aroulin/42sh/srcs/read/outstanding/add_outstanding.c
 
 CMakeFiles/42sh.dir/srcs/read/outstanding/add_outstanding.c.i: cmake_force
@@ -4859,7 +4835,7 @@ CMakeFiles/42sh.dir/srcs/read/outstanding/add_outstanding.c.o.provides.build: CM
 
 CMakeFiles/42sh.dir/srcs/read/outstanding/get_os_pointer.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/outstanding/get_os_pointer.c.o: ../srcs/read/outstanding/get_os_pointer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building C object CMakeFiles/42sh.dir/srcs/read/outstanding/get_os_pointer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building C object CMakeFiles/42sh.dir/srcs/read/outstanding/get_os_pointer.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/outstanding/get_os_pointer.c.o   -c /Users/aroulin/42sh/srcs/read/outstanding/get_os_pointer.c
 
 CMakeFiles/42sh.dir/srcs/read/outstanding/get_os_pointer.c.i: cmake_force
@@ -4883,7 +4859,7 @@ CMakeFiles/42sh.dir/srcs/read/outstanding/get_os_pointer.c.o.provides.build: CMa
 
 CMakeFiles/42sh.dir/srcs/read/search_history/compare_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/search_history/compare_history.c.o: ../srcs/read/search_history/compare_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/compare_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/compare_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/search_history/compare_history.c.o   -c /Users/aroulin/42sh/srcs/read/search_history/compare_history.c
 
 CMakeFiles/42sh.dir/srcs/read/search_history/compare_history.c.i: cmake_force
@@ -4907,7 +4883,7 @@ CMakeFiles/42sh.dir/srcs/read/search_history/compare_history.c.o.provides.build:
 
 CMakeFiles/42sh.dir/srcs/read/search_history/compare_list.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/search_history/compare_list.c.o: ../srcs/read/search_history/compare_list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/compare_list.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/compare_list.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/search_history/compare_list.c.o   -c /Users/aroulin/42sh/srcs/read/search_history/compare_list.c
 
 CMakeFiles/42sh.dir/srcs/read/search_history/compare_list.c.i: cmake_force
@@ -4931,7 +4907,7 @@ CMakeFiles/42sh.dir/srcs/read/search_history/compare_list.c.o.provides.build: CM
 
 CMakeFiles/42sh.dir/srcs/read/search_history/first_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/search_history/first_history.c.o: ../srcs/read/search_history/first_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/first_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/first_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/search_history/first_history.c.o   -c /Users/aroulin/42sh/srcs/read/search_history/first_history.c
 
 CMakeFiles/42sh.dir/srcs/read/search_history/first_history.c.i: cmake_force
@@ -4955,7 +4931,7 @@ CMakeFiles/42sh.dir/srcs/read/search_history/first_history.c.o.provides.build: C
 
 CMakeFiles/42sh.dir/srcs/read/search_history/init_research.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/search_history/init_research.c.o: ../srcs/read/search_history/init_research.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/init_research.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/init_research.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/search_history/init_research.c.o   -c /Users/aroulin/42sh/srcs/read/search_history/init_research.c
 
 CMakeFiles/42sh.dir/srcs/read/search_history/init_research.c.i: cmake_force
@@ -4979,7 +4955,7 @@ CMakeFiles/42sh.dir/srcs/read/search_history/init_research.c.o.provides.build: C
 
 CMakeFiles/42sh.dir/srcs/read/search_history/last_result.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/search_history/last_result.c.o: ../srcs/read/search_history/last_result.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/last_result.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/last_result.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/search_history/last_result.c.o   -c /Users/aroulin/42sh/srcs/read/search_history/last_result.c
 
 CMakeFiles/42sh.dir/srcs/read/search_history/last_result.c.i: cmake_force
@@ -5003,7 +4979,7 @@ CMakeFiles/42sh.dir/srcs/read/search_history/last_result.c.o.provides.build: CMa
 
 CMakeFiles/42sh.dir/srcs/read/search_history/manage_cursor_prompt.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/search_history/manage_cursor_prompt.c.o: ../srcs/read/search_history/manage_cursor_prompt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/manage_cursor_prompt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/manage_cursor_prompt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/search_history/manage_cursor_prompt.c.o   -c /Users/aroulin/42sh/srcs/read/search_history/manage_cursor_prompt.c
 
 CMakeFiles/42sh.dir/srcs/read/search_history/manage_cursor_prompt.c.i: cmake_force
@@ -5027,7 +5003,7 @@ CMakeFiles/42sh.dir/srcs/read/search_history/manage_cursor_prompt.c.o.provides.b
 
 CMakeFiles/42sh.dir/srcs/read/search_history/print_struct_history.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/read/search_history/print_struct_history.c.o: ../srcs/read/search_history/print_struct_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/print_struct_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building C object CMakeFiles/42sh.dir/srcs/read/search_history/print_struct_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/read/search_history/print_struct_history.c.o   -c /Users/aroulin/42sh/srcs/read/search_history/print_struct_history.c
 
 CMakeFiles/42sh.dir/srcs/read/search_history/print_struct_history.c.i: cmake_force
@@ -5051,7 +5027,7 @@ CMakeFiles/42sh.dir/srcs/read/search_history/print_struct_history.c.o.provides.b
 
 CMakeFiles/42sh.dir/srcs/signal/ft_signal.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/signal/ft_signal.c.o: ../srcs/signal/ft_signal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building C object CMakeFiles/42sh.dir/srcs/signal/ft_signal.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building C object CMakeFiles/42sh.dir/srcs/signal/ft_signal.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/signal/ft_signal.c.o   -c /Users/aroulin/42sh/srcs/signal/ft_signal.c
 
 CMakeFiles/42sh.dir/srcs/signal/ft_signal.c.i: cmake_force
@@ -5075,7 +5051,7 @@ CMakeFiles/42sh.dir/srcs/signal/ft_signal.c.o.provides.build: CMakeFiles/42sh.di
 
 CMakeFiles/42sh.dir/srcs/term/init_fd.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/term/init_fd.c.o: ../srcs/term/init_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building C object CMakeFiles/42sh.dir/srcs/term/init_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building C object CMakeFiles/42sh.dir/srcs/term/init_fd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/term/init_fd.c.o   -c /Users/aroulin/42sh/srcs/term/init_fd.c
 
 CMakeFiles/42sh.dir/srcs/term/init_fd.c.i: cmake_force
@@ -5099,7 +5075,7 @@ CMakeFiles/42sh.dir/srcs/term/init_fd.c.o.provides.build: CMakeFiles/42sh.dir/sr
 
 CMakeFiles/42sh.dir/srcs/term/init_term.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/term/init_term.c.o: ../srcs/term/init_term.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building C object CMakeFiles/42sh.dir/srcs/term/init_term.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building C object CMakeFiles/42sh.dir/srcs/term/init_term.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/term/init_term.c.o   -c /Users/aroulin/42sh/srcs/term/init_term.c
 
 CMakeFiles/42sh.dir/srcs/term/init_term.c.i: cmake_force
@@ -5123,7 +5099,7 @@ CMakeFiles/42sh.dir/srcs/term/init_term.c.o.provides.build: CMakeFiles/42sh.dir/
 
 CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o: ../srcs/term/keep_term_struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building C object CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building C object CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o   -c /Users/aroulin/42sh/srcs/term/keep_term_struct.c
 
 CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.i: cmake_force
@@ -5147,7 +5123,7 @@ CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o.provides.build: CMakeFiles/42
 
 CMakeFiles/42sh.dir/srcs/term/set_term.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/term/set_term.c.o: ../srcs/term/set_term.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building C object CMakeFiles/42sh.dir/srcs/term/set_term.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building C object CMakeFiles/42sh.dir/srcs/term/set_term.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/term/set_term.c.o   -c /Users/aroulin/42sh/srcs/term/set_term.c
 
 CMakeFiles/42sh.dir/srcs/term/set_term.c.i: cmake_force
@@ -5171,7 +5147,7 @@ CMakeFiles/42sh.dir/srcs/term/set_term.c.o.provides.build: CMakeFiles/42sh.dir/s
 
 CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o: ../srcs/jobs_control/builtins_jobs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building C object CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building C object CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o   -c /Users/aroulin/42sh/srcs/jobs_control/builtins_jobs.c
 
 CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.i: cmake_force
@@ -5195,7 +5171,7 @@ CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o.provides.build: CMakeFil
 
 CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o: ../srcs/jobs_control/set_process.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building C object CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building C object CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o   -c /Users/aroulin/42sh/srcs/jobs_control/set_process.c
 
 CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.i: cmake_force
@@ -5219,7 +5195,7 @@ CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o.provides.build: CMakeFiles
 
 CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o: CMakeFiles/42sh.dir/flags.make
 CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o: ../srcs/log_info_bug_dnt_care_of_norminette_bitch.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building C object CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building C object CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o   -c /Users/aroulin/42sh/srcs/log_info_bug_dnt_care_of_norminette_bitch.c
 
 CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.i: cmake_force
@@ -5239,6 +5215,78 @@ CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o.provides:
 .PHONY : CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o.provides
 
 CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o.provides.build: CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o
+
+
+CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o: CMakeFiles/42sh.dir/flags.make
+CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o: ../srcs/jobs_control/modify_status_jobs.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building C object CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o   -c /Users/aroulin/42sh/srcs/jobs_control/modify_status_jobs.c
+
+CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/42sh/srcs/jobs_control/modify_status_jobs.c > CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.i
+
+CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/42sh/srcs/jobs_control/modify_status_jobs.c -o CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.s
+
+CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o.requires:
+
+.PHONY : CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o.requires
+
+CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o.provides: CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o.requires
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o.provides.build
+.PHONY : CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o.provides
+
+CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o.provides.build: CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o
+
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o: CMakeFiles/42sh.dir/flags.make
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o: ../srcs/execution/builtins_functions/builtin_jobs.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building C object CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o   -c /Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_jobs.c
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_jobs.c > CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.i
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_jobs.c -o CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.s
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o.requires:
+
+.PHONY : CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o.requires
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o.provides: CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o.requires
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o.provides.build
+.PHONY : CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o.provides
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o.provides.build: CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o
+
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o: CMakeFiles/42sh.dir/flags.make
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o: ../srcs/execution/builtins_functions/builtin_history.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building C object CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o   -c /Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_history.c
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_history.c > CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.i
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_history.c -o CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.s
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o.requires:
+
+.PHONY : CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o.requires
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o.provides: CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o.requires
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o.provides.build
+.PHONY : CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o.provides
+
+CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o.provides.build: CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o
 
 
 # Object files for target 42sh
@@ -5374,7 +5422,6 @@ CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o.provides.
 "CMakeFiles/42sh.dir/srcs/hash/get_str_from_hash.c.o" \
 "CMakeFiles/42sh.dir/srcs/hash/hash_board.c.o" \
 "CMakeFiles/42sh.dir/srcs/hash/hash_value.c.o" \
-"CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o" \
 "CMakeFiles/42sh.dir/srcs/hash/table_hash.c.o" \
 "CMakeFiles/42sh.dir/srcs/history/built_in_history.c.o" \
 "CMakeFiles/42sh.dir/srcs/history/copy_cmd.c.o" \
@@ -5458,7 +5505,10 @@ CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o.provides.
 "CMakeFiles/42sh.dir/srcs/term/set_term.c.o" \
 "CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o" \
 "CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o" \
-"CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o"
+"CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o" \
+"CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o" \
+"CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o" \
+"CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o"
 
 # External object files for target 42sh
 42sh_EXTERNAL_OBJECTS =
@@ -5594,7 +5644,6 @@ CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o.provides.
 42sh: CMakeFiles/42sh.dir/srcs/hash/get_str_from_hash.c.o
 42sh: CMakeFiles/42sh.dir/srcs/hash/hash_board.c.o
 42sh: CMakeFiles/42sh.dir/srcs/hash/hash_value.c.o
-42sh: CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o
 42sh: CMakeFiles/42sh.dir/srcs/hash/table_hash.c.o
 42sh: CMakeFiles/42sh.dir/srcs/history/built_in_history.c.o
 42sh: CMakeFiles/42sh.dir/srcs/history/copy_cmd.c.o
@@ -5679,9 +5728,12 @@ CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o.provides.
 42sh: CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o
 42sh: CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o
 42sh: CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o
+42sh: CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o
+42sh: CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o
+42sh: CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o
 42sh: CMakeFiles/42sh.dir/build.make
 42sh: CMakeFiles/42sh.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Linking C executable 42sh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Linking C executable 42sh"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/42sh.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -5820,7 +5872,6 @@ CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/hash/built_in_hash.c.o.re
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/hash/get_str_from_hash.c.o.requires
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/hash/hash_board.c.o.requires
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/hash/hash_value.c.o.requires
-CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o.requires
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/hash/table_hash.c.o.requires
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/history/built_in_history.c.o.requires
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/history/copy_cmd.c.o.requires
@@ -5905,6 +5956,9 @@ CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/term/set_term.c.o.require
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o.requires
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o.requires
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o.requires
+CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o.requires
+CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o.requires
+CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o.requires
 
 .PHONY : CMakeFiles/42sh.dir/requires
 

@@ -130,7 +130,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/42sh.dir/srcs/hash/get_str_from_hash.c.o"
   "CMakeFiles/42sh.dir/srcs/hash/hash_board.c.o"
   "CMakeFiles/42sh.dir/srcs/hash/hash_value.c.o"
-  "CMakeFiles/42sh.dir/srcs/hash/init_hash.c.o"
   "CMakeFiles/42sh.dir/srcs/hash/table_hash.c.o"
   "CMakeFiles/42sh.dir/srcs/history/built_in_history.c.o"
   "CMakeFiles/42sh.dir/srcs/history/copy_cmd.c.o"
@@ -215,6 +214,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o"
   "CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.o"
   "CMakeFiles/42sh.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o"
+  "CMakeFiles/42sh.dir/srcs/jobs_control/modify_status_jobs.c.o"
+  "CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.o"
+  "CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_history.c.o"
   "42sh.pdb"
   "42sh"
 )

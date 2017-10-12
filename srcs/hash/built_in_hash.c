@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-void		hash_reset(void)
+uint8_t		hash_reset(void)
 {
 	int				index;
 	unsigned int	*table;
@@ -37,9 +37,10 @@ void		hash_reset(void)
 		}
 		table_hash[table[index]] = NULL;
 	}
+	return (0);
 }
 
-void		hash_print(int fd)
+uint8_t		hash_print(int fd)
 {
 	int				index;
 	unsigned int	*table;
@@ -63,4 +64,5 @@ void		hash_print(int fd)
 			tmp = tmp->next;
 		}
 	}
+	return (0);
 }
