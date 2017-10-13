@@ -60,7 +60,7 @@ uint8_t			looking_for_fct(char **command, int option)
 			return (write_history_in_sh(ft_strdup(*command ? ft_strdup(*command) :
 												  get_str_from_history())));
 		else
-			b_write_history();
+			return (b_write_history());
 
 	}
 	return (usage_history((char)option));
