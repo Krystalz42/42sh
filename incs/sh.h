@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 17:20:38 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/10/13 14:58:00 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,41 @@
 # include <logger_utils.h>
 
 /*
+** JEFF
+*/
+
+typedef struct				s_parsing
+{
+	char					*str;
+	struct s_parsing		*prev;
+	struct s_parsing		*next;
+}							t_parsing;
+
+// FUNCTION
+
+void						lexing(t_parsing **new, char *str);
+void						last(t_parsing **node);
+void						operaters(t_parsing **node);
+void						commands(t_parsing **node);
+void						stds(t_parsing *node);
+void						redirections(t_parsing **node);
+
+
+// LIB
+
+void						ptrnext(t_parsing **node, size_t stop);
+void						lstdel(t_parsing **node);
+void						lstnew(t_parsing **node, char *str);
+size_t						lstlen(t_parsing *node);
+void						arraydel(char ***array);
+
+// TOOLS
+
+bool						chk_operaters(char c);
+bool						chk_slash(const char *str, size_t index);
+void						chk_quotes(char c, char quote, const int *flag, int *value);
+
+/*
 ** A VIRER
 */
 
@@ -55,7 +90,6 @@ unsigned char				var_return(int ret);
 */
 
 t_read						*read_stdin(void);
-int							rd(int	status);
 char						*my_prompt(char *prompt);
 void						init_prompt(void);
 t_cursor					prompt(unsigned char flags);

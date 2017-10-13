@@ -139,6 +139,8 @@ set(SOURCE_FILES
         srcs/env/usage_environment.c
         srcs/error_function/bip.c
         srcs/error_function/puterror.c
+        srcs/execution/builtins_functions/builtin_history.c
+        srcs/execution/builtins_functions/builtin_jobs.c
         srcs/hash/built_in_hash.c
         srcs/hash/get_str_from_hash.c
         srcs/hash/hash_board.c
@@ -154,9 +156,12 @@ set(SOURCE_FILES
         srcs/history/previous_history.c
         srcs/history/reset_history.c
         srcs/history/write_history.c
+        srcs/jobs_control/builtins_jobs.c
         srcs/jobs_control/jobs_control.c
+        srcs/jobs_control/modify_status_jobs.c
         srcs/jobs_control/my_execve.c
         srcs/jobs_control/my_wait.c
+        srcs/jobs_control/set_process.c
         srcs/memdel_struct/memdel_completion.c
         srcs/memdel_struct/memdel_outstanding.c
         srcs/memdel_struct/memdel_read.c
@@ -223,12 +228,12 @@ set(SOURCE_FILES
         srcs/term/init_fd.c
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
-        srcs/term/set_term.c srcs/jobs_control/builtins_jobs.c srcs/jobs_control/set_process.c srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/jobs_control/modify_status_jobs.c srcs/execution/builtins_functions/builtin_jobs.c srcs/execution/builtins_functions/builtin_history.c)
+        srcs/term/set_term.c
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/parsing/lexing.c srcs/parsing/tools.c srcs/parsing/lib.c srcs/parsing/last.c srcs/parsing/operaters.c srcs/parsing/commands.c srcs/parsing/stds.c srcs/parsing/redirections.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)
 include_directories(libs/logger/incs)
 include_directories(libs/printf/incs)
-include_directories(srcs)
 
 add_executable(42sh ${SOURCE_FILES})

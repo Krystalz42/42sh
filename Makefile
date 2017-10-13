@@ -119,7 +119,7 @@ SRCS = \
 	   history/write_history.c                              \
 	   history/reset_history.c                              \
 	   history/init_history.c								\
-	   history/previous_history.c							\
+	   history/previous_history.c			        		\
 	   history/next_history.c								\
 	   history/make_list_hist.c								\
 	   history/gbl_save_history.c							\
@@ -148,6 +148,14 @@ SRCS = \
 	   memdel_struct/memdel_read.c							\
 	   error_function/bip.c									\
 	   error_function/puterror.c							\
+	   parsing/commands.c                                   \
+	   parsing/last.c                                       \
+	   parsing/lexing.c                                     \
+	   parsing/lib.c                                        \
+	   parsing/operaters.c                                  \
+	   parsing/redirections.c                               \
+	   parsing/stds.c                                       \
+	   parsing/tools.c                                      \
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #

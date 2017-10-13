@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/aroulin/42sh
+CMAKE_SOURCE_DIR = /Users/jle-quel/Desktop/42sh
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/aroulin/42sh/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jle-quel/Desktop/42sh/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aroulin/42sh/cmake-build-debug/CMakeFiles /Users/aroulin/42sh/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jle-quel/Desktop/42sh/cmake-build-debug/CMakeFiles /Users/jle-quel/Desktop/42sh/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aroulin/42sh/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jle-quel/Desktop/42sh/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -4308,6 +4308,222 @@ srcs/memdel_struct/memdel_search_history.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_search_history.c.s
 .PHONY : srcs/memdel_struct/memdel_search_history.c.s
 
+srcs/parsing/commands.o: srcs/parsing/commands.c.o
+
+.PHONY : srcs/parsing/commands.o
+
+# target to build an object file
+srcs/parsing/commands.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/commands.c.o
+.PHONY : srcs/parsing/commands.c.o
+
+srcs/parsing/commands.i: srcs/parsing/commands.c.i
+
+.PHONY : srcs/parsing/commands.i
+
+# target to preprocess a source file
+srcs/parsing/commands.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/commands.c.i
+.PHONY : srcs/parsing/commands.c.i
+
+srcs/parsing/commands.s: srcs/parsing/commands.c.s
+
+.PHONY : srcs/parsing/commands.s
+
+# target to generate assembly for a file
+srcs/parsing/commands.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/commands.c.s
+.PHONY : srcs/parsing/commands.c.s
+
+srcs/parsing/last.o: srcs/parsing/last.c.o
+
+.PHONY : srcs/parsing/last.o
+
+# target to build an object file
+srcs/parsing/last.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/last.c.o
+.PHONY : srcs/parsing/last.c.o
+
+srcs/parsing/last.i: srcs/parsing/last.c.i
+
+.PHONY : srcs/parsing/last.i
+
+# target to preprocess a source file
+srcs/parsing/last.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/last.c.i
+.PHONY : srcs/parsing/last.c.i
+
+srcs/parsing/last.s: srcs/parsing/last.c.s
+
+.PHONY : srcs/parsing/last.s
+
+# target to generate assembly for a file
+srcs/parsing/last.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/last.c.s
+.PHONY : srcs/parsing/last.c.s
+
+srcs/parsing/lexing.o: srcs/parsing/lexing.c.o
+
+.PHONY : srcs/parsing/lexing.o
+
+# target to build an object file
+srcs/parsing/lexing.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing.c.o
+.PHONY : srcs/parsing/lexing.c.o
+
+srcs/parsing/lexing.i: srcs/parsing/lexing.c.i
+
+.PHONY : srcs/parsing/lexing.i
+
+# target to preprocess a source file
+srcs/parsing/lexing.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing.c.i
+.PHONY : srcs/parsing/lexing.c.i
+
+srcs/parsing/lexing.s: srcs/parsing/lexing.c.s
+
+.PHONY : srcs/parsing/lexing.s
+
+# target to generate assembly for a file
+srcs/parsing/lexing.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing.c.s
+.PHONY : srcs/parsing/lexing.c.s
+
+srcs/parsing/lib.o: srcs/parsing/lib.c.o
+
+.PHONY : srcs/parsing/lib.o
+
+# target to build an object file
+srcs/parsing/lib.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lib.c.o
+.PHONY : srcs/parsing/lib.c.o
+
+srcs/parsing/lib.i: srcs/parsing/lib.c.i
+
+.PHONY : srcs/parsing/lib.i
+
+# target to preprocess a source file
+srcs/parsing/lib.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lib.c.i
+.PHONY : srcs/parsing/lib.c.i
+
+srcs/parsing/lib.s: srcs/parsing/lib.c.s
+
+.PHONY : srcs/parsing/lib.s
+
+# target to generate assembly for a file
+srcs/parsing/lib.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lib.c.s
+.PHONY : srcs/parsing/lib.c.s
+
+srcs/parsing/operaters.o: srcs/parsing/operaters.c.o
+
+.PHONY : srcs/parsing/operaters.o
+
+# target to build an object file
+srcs/parsing/operaters.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/operaters.c.o
+.PHONY : srcs/parsing/operaters.c.o
+
+srcs/parsing/operaters.i: srcs/parsing/operaters.c.i
+
+.PHONY : srcs/parsing/operaters.i
+
+# target to preprocess a source file
+srcs/parsing/operaters.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/operaters.c.i
+.PHONY : srcs/parsing/operaters.c.i
+
+srcs/parsing/operaters.s: srcs/parsing/operaters.c.s
+
+.PHONY : srcs/parsing/operaters.s
+
+# target to generate assembly for a file
+srcs/parsing/operaters.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/operaters.c.s
+.PHONY : srcs/parsing/operaters.c.s
+
+srcs/parsing/redirections.o: srcs/parsing/redirections.c.o
+
+.PHONY : srcs/parsing/redirections.o
+
+# target to build an object file
+srcs/parsing/redirections.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/redirections.c.o
+.PHONY : srcs/parsing/redirections.c.o
+
+srcs/parsing/redirections.i: srcs/parsing/redirections.c.i
+
+.PHONY : srcs/parsing/redirections.i
+
+# target to preprocess a source file
+srcs/parsing/redirections.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/redirections.c.i
+.PHONY : srcs/parsing/redirections.c.i
+
+srcs/parsing/redirections.s: srcs/parsing/redirections.c.s
+
+.PHONY : srcs/parsing/redirections.s
+
+# target to generate assembly for a file
+srcs/parsing/redirections.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/redirections.c.s
+.PHONY : srcs/parsing/redirections.c.s
+
+srcs/parsing/stds.o: srcs/parsing/stds.c.o
+
+.PHONY : srcs/parsing/stds.o
+
+# target to build an object file
+srcs/parsing/stds.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/stds.c.o
+.PHONY : srcs/parsing/stds.c.o
+
+srcs/parsing/stds.i: srcs/parsing/stds.c.i
+
+.PHONY : srcs/parsing/stds.i
+
+# target to preprocess a source file
+srcs/parsing/stds.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/stds.c.i
+.PHONY : srcs/parsing/stds.c.i
+
+srcs/parsing/stds.s: srcs/parsing/stds.c.s
+
+.PHONY : srcs/parsing/stds.s
+
+# target to generate assembly for a file
+srcs/parsing/stds.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/stds.c.s
+.PHONY : srcs/parsing/stds.c.s
+
+srcs/parsing/tools.o: srcs/parsing/tools.c.o
+
+.PHONY : srcs/parsing/tools.o
+
+# target to build an object file
+srcs/parsing/tools.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/tools.c.o
+.PHONY : srcs/parsing/tools.c.o
+
+srcs/parsing/tools.i: srcs/parsing/tools.c.i
+
+.PHONY : srcs/parsing/tools.i
+
+# target to preprocess a source file
+srcs/parsing/tools.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/tools.c.i
+.PHONY : srcs/parsing/tools.c.i
+
+srcs/parsing/tools.s: srcs/parsing/tools.c.s
+
+.PHONY : srcs/parsing/tools.s
+
+# target to generate assembly for a file
+srcs/parsing/tools.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/tools.c.s
+.PHONY : srcs/parsing/tools.c.s
+
 srcs/read/completion/check_binary_path.o: srcs/read/completion/check_binary_path.c.o
 
 .PHONY : srcs/read/completion/check_binary_path.o
@@ -6483,6 +6699,30 @@ help:
 	@echo "... srcs/memdel_struct/memdel_search_history.o"
 	@echo "... srcs/memdel_struct/memdel_search_history.i"
 	@echo "... srcs/memdel_struct/memdel_search_history.s"
+	@echo "... srcs/parsing/commands.o"
+	@echo "... srcs/parsing/commands.i"
+	@echo "... srcs/parsing/commands.s"
+	@echo "... srcs/parsing/last.o"
+	@echo "... srcs/parsing/last.i"
+	@echo "... srcs/parsing/last.s"
+	@echo "... srcs/parsing/lexing.o"
+	@echo "... srcs/parsing/lexing.i"
+	@echo "... srcs/parsing/lexing.s"
+	@echo "... srcs/parsing/lib.o"
+	@echo "... srcs/parsing/lib.i"
+	@echo "... srcs/parsing/lib.s"
+	@echo "... srcs/parsing/operaters.o"
+	@echo "... srcs/parsing/operaters.i"
+	@echo "... srcs/parsing/operaters.s"
+	@echo "... srcs/parsing/redirections.o"
+	@echo "... srcs/parsing/redirections.i"
+	@echo "... srcs/parsing/redirections.s"
+	@echo "... srcs/parsing/stds.o"
+	@echo "... srcs/parsing/stds.i"
+	@echo "... srcs/parsing/stds.s"
+	@echo "... srcs/parsing/tools.o"
+	@echo "... srcs/parsing/tools.i"
+	@echo "... srcs/parsing/tools.s"
 	@echo "... srcs/read/completion/check_binary_path.o"
 	@echo "... srcs/read/completion/check_binary_path.i"
 	@echo "... srcs/read/completion/check_binary_path.s"

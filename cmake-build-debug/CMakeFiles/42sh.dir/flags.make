@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/aroulin/42sh/incs -I/Users/aroulin/42sh/libs/libft/incs -I/Users/aroulin/42sh/libs/logger/incs -I/Users/aroulin/42sh/libs/printf/incs -I/Users/aroulin/42sh/srcs 
+C_INCLUDES = -I/Users/jle-quel/Desktop/42sh/incs -I/Users/jle-quel/Desktop/42sh/libs/libft/incs -I/Users/jle-quel/Desktop/42sh/libs/logger/incs -I/Users/jle-quel/Desktop/42sh/libs/printf/incs 
 
