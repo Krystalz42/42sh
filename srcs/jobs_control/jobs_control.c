@@ -145,6 +145,6 @@ int		jobs_control(unsigned int flags, t_jobs jobs_id, int sig)
 	else if ((flags & BACKGROUND))
 		put_in_background(jobs, jobs_id);
 	else if ((flags & PRINT_JOBS))
-		print_jobs(jobs, sig);
+		return (print_jobs(jobs, sig));
 	return (-1);
 }

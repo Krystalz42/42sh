@@ -31,10 +31,10 @@ static char				*my_getcwd(void)
 
 static char 			*my_color(void)
 {
-	static int 		color = 236;
+	static int 		color = 233;
 	static bool		dir = false;
 
-	dir = (color == 236) ? true : dir;
+	dir = (color == 233) ? true : dir;
 	dir = (color == 255) ? false : dir;
 	color = (dir) ? color + 1 : color - 1;
 	return (ft_itoa(color));

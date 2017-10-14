@@ -12,6 +12,7 @@ static void		error(t_parsing **node)
 {
 	ft_putendl_fd("21sh: syntax not respected", 2);
 	lstdel(node);
+	var_return(1);
 }
 
 static bool		chk(const char *str)

@@ -15,15 +15,23 @@
 
 int		shell(void)
 {
-//	add_hash("    El patron    ", "    Je suis Alexandre", 42);
-//	add_hash("    Je rm -rf mon 21sh OKLM    ", "    Je suis Jefferson", 42);
-//	add_hash("    Mon 21sh marche pas    ", "    Je suis Gregoire", 42);
-//	add_hash("    Je suis malade    ", "    Je suis Sofiane", 42);
-//	add_hash("    Je suis pas la    ", "    Je suis Didier", 42);
-//	add_hash("    Je segfault sans stress    ", "    Je suis le rebeu", 42);
-//	hash_print(STDOUT_FILENO);
-	read_stdin();
-	read_stdin();
-	reset_signal();
-	return (1);
+	char		*input;
+	t_parsing	*parse_struct;
+	char 		**tmp;
+	add_hash("    El patron    ", "    Je suis Alexandre", 42);
+	add_hash("    Je rm -rf mon 21sh OKLM    ", "    Je suis Jefferson", 42);
+	add_hash("    Mon 21sh marche pas    ", "    Je suis Gregoire", 42);
+	add_hash("    Je suis malade    ", "    Je suis Sofiane", 42);
+	builtin_hash((char *[]){"hash", "------", "-eqweqw q-ewq-e-qw", NULL}, NULL);
+	while (42)
+	{
+		if (!(input = read_stdin(DEFAULT)))
+			continue ;
+		check_if_builtin((tmp = ft_strsplit(input, 32)), NULL);
+		ft_memdel_tab(&(tmp));
+		if (!(parse_struct = parsing(input)))
+			continue ;
+		lstdel(&parse_struct);
+//		var_return(0);
+	}
 }

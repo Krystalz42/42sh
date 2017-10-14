@@ -35,29 +35,33 @@ int			key_print_fct(t_cmd *cmd, char c)
 	return (1);
 }
 
-int			key_print_(t_read **read_std, unsigned long buff)
+int			key_print_(t_read **read_std, unsigned long *buff)
 {
 	unsigned char		c;
 
+	log_trace("key_print function [%lu]", *buff);
 	if (!(*read_std)->history_search)
-		add_outstanding(NULL, PRINT_KEY, buff);
-	while (buff)
+		add_outstanding(NULL, PRINT_KEY, *buff);
+	while (*buff)
 	{
-		c = buff % (UCHAR_MAX + 1);
-		if (ft_isprint(c) || c == 10)
+		c = (unsigned char)(*buff % (UCHAR_MAX + 1));
+		*buff /= (UCHAR_MAX + 1);
+		if (c == 10)
+			return (key_enter_(read_std, *buff));
+		else if (ft_isprint(c))
 		{
 			if ((*read_std)->history_search)
 			{
 				key_print_fct((*read_std)->hist_search->cmd, c);
 				compare_history(read_std);
 				(*read_std)->history_search++;
-			} else
+			}
+			else
 			{
 				key_print_fct((*read_std)->cmd, c);
 				(*read_std)->print = 2;
 			}
 		}
-		buff /= (UCHAR_MAX + 1);
 	}
 	return (1);
 }

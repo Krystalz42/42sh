@@ -46,11 +46,11 @@ RM			= rm -rf
 NAME		= 42sh
 
 SRCS = \
-       log_info_bug_dnt_care_of_norminette_bitch.c          \
+       log_info_bug_dnt_care_of_norminette_bitch.c			\
 	   cores/main.c											\
 	   cores/shell.c										\
 	   cores/insert_one_line.c								\
-	   cores/var_return.c                                   \
+	   cores/var_return.c									\
 	   read/other_read/read_stdin.c							\
 	   read/other_read/finish_read_std.c					\
 	   read/other_read/print_struct.c						\
@@ -59,14 +59,14 @@ SRCS = \
 	   read/other_read/prompt.c								\
 	   read/other_read/check_cmd.c							\
 	   read/other_read/gbl_save_read.c						\
-	   read/other_read/keep_buffer.c                        \
-	   read/other_read/init_struct_for_read.c               \
-	   read/other_read/last_cmd.c                           \
-	   read/other_read/restore_cursor.c                     \
-	   read/other_read/init_prompt.c                        \
-	   read/other_read/my_prompt.c                          \
-	   read/other_read/get_len_prompt.c                     \
-	   read/key_/key_yank.c                                 \
+	   read/other_read/keep_buffer.c						\
+	   read/other_read/init_struct_for_read.c				\
+	   read/other_read/last_cmd.c							\
+	   read/other_read/restore_cursor.c						\
+	   read/other_read/init_prompt.c						\
+	   read/other_read/my_prompt.c							\
+	   read/other_read/get_len_prompt.c						\
+	   read/key_/key_yank.c									\
 	   read/key_/key_print.c								\
 	   read/key_/key_delete.c								\
 	   read/key_/key_shift.c								\
@@ -78,84 +78,89 @@ SRCS = \
 	   read/key_/key_enter.c								\
 	   read/key_/key_interrupt.c							\
 	   read/key_/key_clear.c								\
-	   read/key_/key_undo.c                                 \
-	   read/key_/key_reprint.c                              \
-	   read/key_/key_kill_k.c                               \
-	   read/key_/key_kill_word.c                            \
-	   read/key_/key_kill_prev_word.c                       \
-	   read/key_/key_del_buff.c                             \
-	   read/key_/key_search_history.c                       \
+	   read/key_/key_undo.c									\
+	   read/key_/key_reprint.c								\
+	   read/key_/key_kill_k.c								\
+	   read/key_/key_kill_word.c							\
+	   read/key_/key_kill_prev_word.c						\
+	   read/key_/key_del_buff.c								\
+	   read/key_/key_search_history.c						\
 	   hash/hash_value.c									\
 	   hash/table_hash.c									\
-	   hash/hash_board.c	    							\
-	   hash/built_in_hash.c                                 \
-	   hash/get_str_from_hash.c                             \
-	   read/outstanding/add_outstanding.c                   \
-	   read/outstanding/get_os_pointer.c                    \
+	   hash/hash_board.c									\
+	   hash/built_in_hash.c									\
+	   hash/get_str_from_hash.c								\
+	   read/outstanding/add_outstanding.c					\
+	   read/outstanding/get_os_pointer.c					\
 	   read/completion/init_tab.c							\
-	   read/completion/check_binary_path.c                  \
+	   read/completion/check_binary_path.c					\
 	   read/completion/color_completion.c					\
-	   read/completion/update_index.c                       \
+	   read/completion/update_index.c						\
 	   read/completion/my_togo.c							\
 	   read/completion/init_completion.c					\
-	   read/completion/move_vertical.c                      \
+	   read/completion/move_vertical.c						\
 	   read/completion/print_tab.c							\
 	   read/completion/complete_path.c						\
 	   read/completion/continue_completion.c				\
-	   read/completion/move_horizontal.c                    \
+	   read/completion/move_horizontal.c					\
 	   read/completion/complete_binary.c					\
 	   read/completion/create_comp.c						\
 	   read/completion/init_files.c							\
 	   read/completion/completion.c							\
-	   read/search_history/compare_history.c                \
-	   read/search_history/compare_list.c                   \
-	   read/search_history/first_history.c                  \
-	   read/search_history/last_result.c                    \
-	   read/search_history/init_research.c                  \
-	   read/search_history/print_struct_history.c           \
-	   read/search_history/manage_cursor_prompt.c           \
-	   history/built_in_history.c                           \
-	   history/get_str_from_history.c                       \
-	   history/write_history.c                              \
-	   history/reset_history.c                              \
+	   read/search_history/compare_history.c				\
+	   read/search_history/compare_list.c					\
+	   read/search_history/first_history.c					\
+	   read/search_history/last_result.c					\
+	   read/search_history/init_research.c					\
+	   read/search_history/print_struct_history.c			\
+	   read/search_history/manage_cursor_prompt.c			\
+	   history/built_in_history.c							\
+	   history/get_str_from_history.c						\
+	   history/write_history.c								\
+	   history/reset_history.c								\
 	   history/init_history.c								\
-	   history/previous_history.c			        		\
+	   history/previous_history.c							\
 	   history/next_history.c								\
 	   history/make_list_hist.c								\
 	   history/gbl_save_history.c							\
 	   history/copy_cmd.c									\
 	   signal/ft_signal.c									\
-	   jobs_control/modify_status_jobs.c                    \
-	   jobs_control/jobs_control.c                          \
-	   jobs_control/builtins_jobs.c                         \
-	   jobs_control/set_process.c                           \
-	   jobs_control/my_wait.c                               \
-	   jobs_control/my_execve.c                             \
-	   execution/builtins_functions/builtin_jobs.c          \
-	   env/add_environment.c                                \
-	   env/remove_environment.c                             \
-	   env/manage_env.c                                     \
+	   execution/check_if_builtins.c							\
+	   execution/builtins_functions/builtin_jobs.c			\
+	   execution/builtins_functions/builtin_history.c		\
+	   execution/builtins_functions/builtin_hash.c			\
+	   jobs_control/modify_status_jobs.c					\
+	   jobs_control/jobs_control.c							\
+	   jobs_control/builtins_jobs.c							\
+	   jobs_control/set_process.c							\
+	   jobs_control/my_wait.c								\
+	   jobs_control/my_execve.c								\
+	   parsing/commands.c									\
+	   parsing/parsing.c									\
+	   parsing/last.c										\
+	   parsing/lexing.c										\
+	   parsing/lib.c										\
+	   parsing/operaters.c									\
+	   parsing/redirections.c								\
+	   parsing/stds.c										\
+	   parsing/tools.c										\
+	   env/add_environment.c								\
+	   env/remove_environment.c								\
+	   env/manage_env.c										\
 	   env/init_env.c										\
-	   env/usage_environment.c                              \
+	   env/usage_environment.c								\
 	   env/my_getenv.c										\
 	   term/init_fd.c										\
 	   term/init_term.c										\
 	   term/set_term.c										\
 	   term/keep_term_struct.c								\
-	   memdel_struct/memdel_outstanding.c                   \
+	   memdel_struct/memdel_outstanding.c					\
 	   memdel_struct/memdel_completion.c					\
-	   memdel_struct/memdel_search_history.c                \
+	   memdel_struct/memdel_search_history.c				\
 	   memdel_struct/memdel_read.c							\
 	   error_function/bip.c									\
 	   error_function/puterror.c							\
-	   parsing/commands.c                                   \
-	   parsing/last.c                                       \
-	   parsing/lexing.c                                     \
-	   parsing/lib.c                                        \
-	   parsing/operaters.c                                  \
-	   parsing/redirections.c                               \
-	   parsing/stds.c                                       \
-	   parsing/tools.c                                      \
+
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #
@@ -298,7 +303,7 @@ exe			:
 	make && ./$(NAME)
 
 leaks		:
-	while true ; do leaks $(NAME) ; sleep 2 ; clear ; done
+	while true ; do leaks $(NAME) ; sleep 5 ; clear ; done
 
 # ---------------------------------------------------------------------------- #
 #						 	/!\ PRIVATE RULES /!\							   #

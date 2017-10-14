@@ -35,41 +35,6 @@
 # include <logger_utils.h>
 
 /*
-** JEFF
-*/
-
-typedef struct				s_parsing
-{
-	char					*str;
-	struct s_parsing		*prev;
-	struct s_parsing		*next;
-}							t_parsing;
-
-// FUNCTION
-
-void						lexing(t_parsing **new, char *str);
-void						last(t_parsing **node);
-void						operaters(t_parsing **node);
-void						commands(t_parsing **node);
-void						stds(t_parsing *node);
-void						redirections(t_parsing **node);
-
-
-// LIB
-
-void						ptrnext(t_parsing **node, size_t stop);
-void						lstdel(t_parsing **node);
-void						lstnew(t_parsing **node, char *str);
-size_t						lstlen(t_parsing *node);
-void						arraydel(char ***array);
-
-// TOOLS
-
-bool						chk_operaters(char c);
-bool						chk_slash(const char *str, size_t index);
-void						chk_quotes(char c, char quote, const int *flag, int *value);
-
-/*
 ** A VIRER
 */
 
@@ -89,7 +54,7 @@ unsigned char				var_return(int ret);
 **				FUNCTION READ && PRINT && RETURN A STRUCT
 */
 
-t_read						*read_stdin(void);
+char						*read_stdin(unsigned char flags);
 char						*my_prompt(char *prompt);
 void						init_prompt(void);
 t_cursor					prompt(unsigned char flags);
@@ -106,7 +71,7 @@ int							check_cmd(t_read **read_std);
 int							reset_cur(t_cursor *cur);
 int							get_len_prompt(int len);
 t_cmd						*last_cmd(t_cmd *cmd);
-void						finish_read_std(t_read **read_std);
+char						*finish_read_std(t_read **read_std);
 t_cmd						*keep_buffer(t_cmd *cmd, int flags);
 
 /*
@@ -135,6 +100,8 @@ char						*get_str_from_hash(void);
 **              BUILT IN FUNCTION
 */
 
+uint8_t						print_jobs(t_jobs *jobs, int option);
+int							check_if_builtin(char **command, char **env);
 int							convert_to_hist(char *buff);
 uint8_t						hash_reset(void);
 uint8_t						hash_print(int fd);
@@ -143,6 +110,8 @@ uint8_t						b_clear_history(void);
 uint8_t						b_delete_history_offset(int offset);
 uint8_t						write_history_in_sh(char *pathname);
 uint8_t						builtin_jobs(char **command, char **env);
+uint8_t						builtin_hash(char **command, char **env);
+uint8_t						builtin_history(char **command, char **env);
 
 /*
 **				FUNCTION FOR COMPLETION
@@ -182,7 +151,7 @@ static inline int			management_wildcard(char *data, char *comp);
 **				POINTER ON FUNCTION FOR READ
 */
 
-int							key_print_(t_read **read_std, unsigned long buff);
+int							key_print_(t_read **read_std, unsigned long *buff);
 int							key_tab(t_read **read_std, unsigned long buff);
 int							key_enter_(t_read **read_std, unsigned long buff);
 int							key_interrupt(t_read **read_std,
@@ -261,13 +230,44 @@ void						previous_history(t_read **read_std);
 void						next_history(t_read **read_std);
 uint8_t						b_write_history_in_file(char *path);
 
+/*
+**				PARSING FUNCTION
+*/
+
+
+
+void						lexing(t_parsing **new, char *str);
+void						last(t_parsing **node);
+void						operaters(t_parsing **node);
+void						commands(t_parsing **node);
+t_parsing					*parsing(char *str);
+void						stds(t_parsing *node);
+void						redirections(t_parsing **node);
+
+/*
+**				BASIC FUNCTION
+*/
+
+void						ptrnext(t_parsing **node, size_t stop);
+void						lstdel(t_parsing **node);
+void						lstnew(t_parsing **node, char *str);
+size_t						lstlen(t_parsing *node);
+void						arraydel(char ***array);
+
+/*
+**				TOOL'S PARSING FUNTION
+*/
+
+bool						chk_operaters(char c);
+bool						chk_slash(const char *str, size_t index);
+void						chk_quotes(char c, char quote, const int *flag,
+							int *value);
 
 /*
 **				JOB'S CONTROL FUNCTION
 */
 void						put_in_background(t_jobs *jobs, t_jobs jobs_id);
 void						put_in_foreground(t_jobs *jobs, t_jobs jobs_id);
-void						print_jobs(t_jobs *jobs, int option);
 void						update_status(t_process *identify);
 void						my_execve(char **command, char **env);
 int							jobs_control(unsigned int flags, t_jobs jobs_id,

@@ -14,6 +14,7 @@ uint8_t			builtin_jobs(char **command, char **env)
 	table = 1;
 	index = 0;
 	(void)env;
+	log_debug("Jobs'control builtins");
 	while (command[table] && command[table][index] == '-')
 		while (command[table][index])
 		{
@@ -21,6 +22,5 @@ uint8_t			builtin_jobs(char **command, char **env)
 			option += (command[table][index] == 'r') ? 2 : 0;
 			option += (command[table][index] == 's') ? 4 : 0;
 		}
-	jobs_control(PRINT_JOBS, new_jobs(0), option);
-	return (var_return((uint8_t)0));
+	return (var_return(jobs_control(PRINT_JOBS, new_jobs(0), option)));
 }

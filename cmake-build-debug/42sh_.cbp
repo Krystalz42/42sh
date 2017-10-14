@@ -495,6 +495,18 @@
 		<Unit filename="/Users/aroulin/42sh_/srcs/error_function/puterror.c">
 			<Option target="42sh_"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/execution/builtins_functions/builtin_hash.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/execution/builtins_functions/builtin_history.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/execution/builtins_functions/builtin_jobs.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/execution/check_if_builtins.c">
+			<Option target="42sh_"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/hash/built_in_hash.c">
 			<Option target="42sh_"/>
 		</Unit>
@@ -505,9 +517,6 @@
 			<Option target="42sh_"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/hash/hash_value.c">
-			<Option target="42sh_"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh_/srcs/hash/init_hash.c">
 			<Option target="42sh_"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/hash/table_hash.c">
@@ -543,13 +552,25 @@
 		<Unit filename="/Users/aroulin/42sh_/srcs/history/write_history.c">
 			<Option target="42sh_"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/jobs_control/builtins_jobs.c">
+			<Option target="42sh_"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/jobs_control/jobs_control.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/jobs_control/modify_status_jobs.c">
 			<Option target="42sh_"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/jobs_control/my_execve.c">
 			<Option target="42sh_"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/jobs_control/my_wait.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/jobs_control/set_process.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/log_info_bug_dnt_care_of_norminette_bitch.c">
 			<Option target="42sh_"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/memdel_struct/memdel_completion.c">
@@ -562,6 +583,33 @@
 			<Option target="42sh_"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/memdel_struct/memdel_search_history.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/parsing/commands.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/parsing/last.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/parsing/lexing.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/parsing/lib.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/parsing/operaters.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/parsing/parsing.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/parsing/redirections.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/parsing/stds.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/parsing/tools.c">
 			<Option target="42sh_"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/read/completion/check_binary_path.c">

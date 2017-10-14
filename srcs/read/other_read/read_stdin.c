@@ -44,9 +44,8 @@ static const t_cmp		g_tab_are_key[] = {
     (t_cmp){0, NULL}
 };
 
-static inline int		chk_and_print(unsigned long *buff, t_read **read_std)
+static inline int		chk_and_print(t_read **read_std)
 {
-	(void)buff;
 	print_struct(*read_std);
 	if ((*read_std)->completion) {
 		(*read_std)->completion -= 1;
@@ -60,25 +59,31 @@ static inline int		chk_and_print(unsigned long *buff, t_read **read_std)
 	return (1);
 }
 
-static inline void		initialize_fct(t_read **read_std, unsigned long *buff)
+static inline void		initialize_fct(t_read **read_std, unsigned char flags)
 {
-	(*buff) = 0;
 	log_trace("Init read_std begin");
 	init_prompt();
 	init_signal();
 	set_termios(SET_OUR_TERM);
-	(*read_std)->cur = prompt(DEFAULT | PRINT);
+	(*read_std)->cur = prompt(flags | PRINT);
 	last_resultat(0);
 	get_os_pointer(NULL, 1);
 }
 
-static inline void		finalize_fct(t_read **read_std)
+static inline void		inline_print_(t_read **read_std, unsigned long *buff)
 {
-	set_termios(SET_OLD_TERM);
-	finish_read_std(read_std);
+	key_print_(read_std, buff);
+	chk_and_print(read_std);
 }
 
-t_read					*read_stdin(void)
+static inline void		inline_other(t_read **read_std, unsigned long buff, int(*fct)(t_read **, unsigned long))
+{
+	fct(read_std, buff);
+	chk_and_print(read_std);
+
+}
+
+char					*read_stdin(unsigned char flags)
 {
 	t_read						*read_std;
 	int							index;
@@ -86,26 +91,20 @@ t_read					*read_stdin(void)
 
 	if (!(read_std = init_struct_for_read()))
 		return (NULL);
-	initialize_fct(&read_std, &buff);
-	while ((index = -1) && read(STDIN_FILENO, &buff, sizeof(unsigned long)))
+	initialize_fct(&read_std, flags);
+	inline_print_(&read_std, &buff);
+	while (!(read_std)->finish && (index = -1) && read(STDIN_FILENO, &buff, sizeof(unsigned long)))
 	{
-		log_trace("buffering [%lu]", buff);
 		while (g_tab_are_key[++index].key)
 			if (g_tab_are_key[index].key == buff)
-			{
-				g_tab_are_key[index].function(&read_std, buff);
-				chk_and_print(&buff, &read_std);
-			}
-		if (!g_tab_are_key[index].key && ft_isprint(buff % (UCHAR_MAX + 1)))
-		{
-			key_print_(&read_std, buff);
-			chk_and_print(&buff, &read_std);
-		}
-		(buff) = 0;
+				inline_other(&read_std, buff, g_tab_are_key[index].function);
+		if (!g_tab_are_key[index].key && ((ft_isprint(buff % (UCHAR_MAX + 1)) || (buff % (UCHAR_MAX + 1) == 10))))
+			inline_print_(&read_std, &buff);
 		if ((read_std)->finish)
 			break ;
+		buff = 0;
 	}
-	finalize_fct(&read_std);
+	set_termios(SET_OLD_TERM);
 	NL;
-	return (read_std);
+	return (finish_read_std(&read_std));
 }

@@ -31,7 +31,7 @@ char		*list_to_str(t_read **read_std, t_cmd *cmd)
 
 	if (!(len = len_cmd(&cmd)))
 		return (NULL);
-	if (len == 1 && cmd && cmd->c == '.' && key_print_(read_std, '/'))
+	if (len == 1 && cmd->c == '.' && key_print_fct((*read_std)->cmd, '/'))
 		return (NULL);
 	if (!(str = (char *)ft_memalloc(sizeof(char) * (len + 1))))
 		return (NULL);

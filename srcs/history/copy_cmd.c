@@ -22,7 +22,7 @@ void			copy_cmd(t_read **read_std, t_cmd *cpy)
 	cpy = first_cmd(cpy, 1);
 	while (cpy->c)
 	{
-		key_print_(read_std, cpy->c);
+		key_print_fct((*read_std)->cmd, cpy->c);
 		cpy = cpy->next;
 	}
 }

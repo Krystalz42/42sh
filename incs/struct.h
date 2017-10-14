@@ -172,7 +172,14 @@ typedef struct		s_cmp
 	unsigned long	key;
 	int				(*function)(struct s_read **read_std, unsigned long buff);
 }					t_cmp;
-
+/*
+**			STRUCT FOR BUILTINS
+*/
+typedef struct		s_builtin
+{
+	const char		*str;
+	uint8_t			(*function)(char **, char **);
+}					t_builtin;
 /*
 **			STRUCT FOR UNDO (OUTSTANDING)
 */
@@ -205,5 +212,12 @@ typedef struct 		s_jobs
 	t_process		father;
 	t_process		child[MAX_CHILD];
 }					t_jobs;
+
+typedef struct				s_parsing
+{
+	char					*str;
+	struct s_parsing		*prev;
+	struct s_parsing		*next;
+}							t_parsing;
 
 #endif

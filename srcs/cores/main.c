@@ -14,25 +14,6 @@
 
 void test_cmd();
 
-t_parsing	*parsing(char *str)
-{
-	t_parsing	*new;
-
-	new = NULL;
-	lexing(&new, str);
-	last(&new);
-	operaters(&new);
-	commands(&new);
-	stds(new);
-	redirections(&new);
-	while (new)
-	{
-		ft_putendl(new->str);
-		new = new->next;
-	}
-	return (new);
-}
-
 int			main(int ac, char **av)
 {
 	(void)ac;
@@ -42,8 +23,8 @@ int			main(int ac, char **av)
 	init_term();
 	write_history_in_sh(get_str_from_history());
 	init_signal();
-	test_cmd();
-//	shell();
+//	test_cmd();
+	shell();
 	b_write_history_in_file(get_str_from_history());
 	logger_close();
 	return (0);
@@ -145,11 +126,10 @@ void test_cmd()
 	log_success("Mon PID [%d] && MOn PPID [%d]", getpid(), getpgid(getpid()));
 	while (i)
 	{
-		read_stdin();
+		read_stdin(DEFAULT);
 		my_execute(ls, true);
-		read_stdin();
-		builtin_jobs(jobs, NULL);
-		read_stdin();
-		parsing("ls > test 1 2 3 > ok 4 5 6");
+		read_stdin(DEFAULT);
+		my_execute_pipe(ls, cat, true);
+		read_stdin(DEFAULT);
 	}
 }

@@ -19,7 +19,13 @@
 **	-s	[4]		Display only stopped jobs.
 */
 
-void			print_evrything(t_jobs jobs, int option)
+static uint8_t		error_jobs(void)
+{
+	ft_putstr_fd("jobs: no current jobs\n", STDERR_FILENO);
+	return (1);
+}
+
+static void			print_evrything(t_jobs jobs, int option)
 {
 	int		index;
 
@@ -35,7 +41,7 @@ void			print_evrything(t_jobs jobs, int option)
 		}
 }
 
-void			print_jobs(t_jobs *jobs, int option)
+uint8_t			print_jobs(t_jobs *jobs, int option)
 {
 	int		index;
 	int		print;
@@ -59,6 +65,7 @@ void			print_jobs(t_jobs *jobs, int option)
 		}
 	index++;
 	}
+	return (print ? 0 : error_jobs());
 }
 
 void			put_in_foreground(t_jobs *jobs, t_jobs jobs_id)

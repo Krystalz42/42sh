@@ -20,7 +20,7 @@ int     key_yank(t_read **read_std, unsigned long buff)
 	buffer = keep_buffer(NULL, 0);
 	while (buffer)
 	{
-		key_print_(read_std, buffer->c);
+		key_print_fct((*read_std)->cmd, buffer->c);
 		buffer = buffer->next;
 	}
 	return (1);

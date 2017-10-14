@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/11 06:33:09 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 20:22:27 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/10/14 15:53:36 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ static t_cmd    *key_del_fct(t_cmd *cmd, unsigned long buff)
 		}
 		else
 			cmd->prev = NULL;
-			if (!buff)
-				free(kill);
-			else
-			{
-				kill->next = NULL;
-				kill->prev = NULL;
-				return (kill);
-			}
+		if (!buff)
+			free(kill);
+		else
+		{
+			kill->next = NULL;
+			kill->prev = NULL;
+			return (kill);
+		}
 	}
 	return (NULL);
 }
@@ -45,18 +45,18 @@ int			    key_del(t_read **read_std, unsigned long buff)
 		memdel_completion(&((*read_std)->tab_));
 		(*read_std)->print = 2;
 	}
-    if ((*read_std)->history_search)
-    {
-        key_del_fct((*read_std)->hist_search->cmd, 0);
-	    compare_history(read_std);
-	    (*read_std)->history_search++;
-    }
-    else if ((*read_std)->cmd->prev)
-    {
-	    add_outstanding(key_del_fct((*read_std)->cmd, buff), buff, 0);
-	    (*read_std)->print = 2;
-    }
+	if ((*read_std)->history_search)
+	{
+		key_del_fct((*read_std)->hist_search->cmd, 0);
+		compare_history(read_std);
+		(*read_std)->history_search++;
+	}
+	else if ((*read_std)->cmd->prev)
+	{
+		add_outstanding(key_del_fct((*read_std)->cmd, buff), buff, 0);
+		(*read_std)->print = 2;
+	}
 	else
-	    bip();
-    return (1);
+		bip();
+	return (1);
 }

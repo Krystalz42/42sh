@@ -62,5 +62,5 @@ uint8_t				write_history_in_sh(char *pathname)
 		close(fd);
 	}
 	free(pathname);
-	return (var_return((uint8_t)(fd != 1 ? 0 : 1)));
+	return ((uint8_t)(fd != 1 ? 0 : 1));
 }

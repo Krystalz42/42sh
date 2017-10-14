@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(42sh)
+project(42sh_)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -166,6 +166,14 @@ set(SOURCE_FILES
         srcs/memdel_struct/memdel_outstanding.c
         srcs/memdel_struct/memdel_read.c
         srcs/memdel_struct/memdel_search_history.c
+        srcs/parsing/commands.c
+        srcs/parsing/last.c
+        srcs/parsing/lexing.c
+        srcs/parsing/lib.c
+        srcs/parsing/operaters.c
+        srcs/parsing/redirections.c
+        srcs/parsing/stds.c
+        srcs/parsing/tools.c
         srcs/read/completion/check_binary_path.c
         srcs/read/completion/color_completion.c
         srcs/read/completion/complete_binary.c
@@ -229,11 +237,11 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/parsing/lexing.c srcs/parsing/tools.c srcs/parsing/lib.c srcs/parsing/last.c srcs/parsing/operaters.c srcs/parsing/commands.c srcs/parsing/stds.c srcs/parsing/redirections.c)
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/parsing/parsing.c srcs/execution/builtins_functions/builtin_hash.c srcs/execution/check_if_builtins.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)
 include_directories(libs/logger/incs)
 include_directories(libs/printf/incs)
 
-add_executable(42sh ${SOURCE_FILES})
+add_executable(42sh_ ${SOURCE_FILES})

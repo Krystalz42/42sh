@@ -13,6 +13,7 @@ static void		error(char *str, t_parsing **node)
 	ft_putstr_fd("21sh: parse error near: ", 2);
 	ft_putendl_fd(str, 2);
 	lstdel(node);
+	var_return(1);
 }
 
 static bool		chk(char *str)

@@ -73,6 +73,7 @@ uint8_t			builtin_history(char **command, char **env)
 	int			c;
 	int			ret;
 
+	(void)env;
 	option = 0;
 	index = 1;
 	while (command[index])
@@ -90,5 +91,5 @@ uint8_t			builtin_history(char **command, char **env)
 			}
 		index++;
 	}
-	return (var_return(looking_for_fct(command + index, option)));
+	return (looking_for_fct(command + index, option));
 }
