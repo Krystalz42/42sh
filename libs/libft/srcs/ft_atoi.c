@@ -24,7 +24,7 @@ int			ft_atoi(const char *str)
 	int		signe;
 	long	number;
 
-	if (!*str)
+	if (!str)
 		return (0);
 	while (check_pass((unsigned char)(*str)))
 		str++;

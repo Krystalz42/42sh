@@ -13,7 +13,6 @@ static const t_builtin	builtin[] = {
 	(t_builtin){"jobs", builtin_jobs},
 	(t_builtin){"history", builtin_history},
 	(t_builtin){"hash", builtin_hash},
-	(t_builtin){"env", NULL},
 	(t_builtin){"exit", NULL},
 	(t_builtin){NULL, NULL}
 };

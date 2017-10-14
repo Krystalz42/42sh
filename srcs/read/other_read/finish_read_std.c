@@ -35,6 +35,17 @@ static char		*convert_to_str(t_cmd *cmd)
 	return (line);
 }
 
+static int		empty_cmd(t_cmd *cmd)
+{
+	while (cmd->c)
+	{
+		if (cmd->c != 32)
+			return (0);
+		cmd = cmd->next;
+	}
+	return (1);
+}
+
 char			*finish_read_std(t_read **read_std)
 {
 	t_cmd		*tmp;
@@ -44,14 +55,13 @@ char			*finish_read_std(t_read **read_std)
 	memdel_outstanding();
 	if ((*read_std)->history)
 		memdel_cmd(&tmp);
-	if ((*read_std)->finish == 2 ||
-			(!(*read_std)->cmd->c && !(*read_std)->cmd->prev))
+	if ((*read_std)->finish == 2 || empty_cmd(first_cmd((*read_std)->cmd, 1)))
 		memdel_read(read_std);
 	else 
 	{
 		(*read_std)->finish = 0;
 		make_list_hist((*read_std));
-		key_end_(read_std, KEY_END);
+//		key_end_(read_std, KEY_END);
 		print_struct(*read_std);
 		return (convert_to_str(first_cmd((*read_std)->cmd, 1)));
 	}

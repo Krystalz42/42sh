@@ -51,8 +51,8 @@ uint8_t			print_jobs(t_jobs *jobs, int option)
 	print = 0;
 	while (index < MAX_CHILD)
 	{
-		if (jobs[index].father.pid && (option >= 0 || ((option == 2)
-				&& jobs[index].father.running) || ((option == 4)
+		if (jobs[index].father.pid && (!option  || option % 2 || (!(option % 2)
+				&& jobs[index].father.running) || (!(option % 4)
 								&& !jobs[index].father.running)))
 		{
 			if (!print++)
@@ -65,7 +65,7 @@ uint8_t			print_jobs(t_jobs *jobs, int option)
 		}
 	index++;
 	}
-	return (print ? 0 : error_jobs());
+	return ((uint8_t)(print ? 0 : error_jobs()));
 }
 
 void			put_in_foreground(t_jobs *jobs, t_jobs jobs_id)

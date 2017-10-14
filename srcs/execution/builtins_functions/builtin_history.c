@@ -8,14 +8,15 @@
 static uint8_t	help_history()
 {
 	ft_putstr_fd("-c            : Clear the history list.\n", STDERR_FILENO);
-	ft_putstr_fd("-d offset     : Delete the history entry at     \
-						position offset.\n", STDERR_FILENO);
-	ft_putstr_fd("-a [pathname] : Append the new history lines to  \
-						the history file.\n", STDERR_FILENO);
-	ft_putstr_fd("-r [pathname] : Read the history file and append its \
-						contents to the history list.\n", STDERR_FILENO);
-	ft_putstr_fd("-w [pathname] : Write out the current history list \
-						to the history file.\n", STDERR_FILENO);
+	ft_putstr_fd("-d offset     : Delete the history ", STDERR_FILENO);
+	ft_putstr_fd("entry at position offset.\n", STDERR_FILENO);
+	ft_putstr_fd("-a [pathname] : Append the new ", STDERR_FILENO);
+	ft_putstr_fd("history lines to the history file.\n", STDERR_FILENO);
+	ft_putstr_fd("-r [pathname] : Read the history file and ", STDERR_FILENO);
+	ft_putstr_fd("append its contents to the history list.\n", STDERR_FILENO);
+	ft_putstr_fd("-w [pathname] : Write out the current", STDERR_FILENO);
+	ft_putstr_fd(" history list to the history file.\n", STDERR_FILENO);
+	ft_putstr_fd("-default      : Print history list\n", STDERR_FILENO);
 	return ((uint8_t)0);
 }
 
@@ -47,23 +48,18 @@ static int		check_option_history(char c)
 
 uint8_t			looking_for_fct(char **command, int option)
 {
-	if (option)
-	{
-		if (option == 'c')
-			return (b_clear_history());
-		else if (option == 'd')
-			return (b_delete_history_offset(ft_atoi(*command)));
-		else if (option == 'a')
-			return (b_write_history_in_file(*command ? ft_strdup(*command) :
-									get_str_from_history()));
-		else if (option == 'r')
-			return (write_history_in_sh(ft_strdup(*command ? ft_strdup(*command) :
-												  get_str_from_history())));
-		else
-			return (b_write_history());
-
-	}
-	return (usage_history((char)option));
+	if (option == 'c')
+		return (b_clear_history());
+	else if (option == 'd')
+		return (b_delete_history_offset(ft_atoi(*command)));
+	else if (option == 'w')
+		return (b_write_history_in_file(*command ? ft_strdup(*command) :
+								get_str_from_history()));
+	else if (option == 'r')
+		return (write_history_in_sh(ft_strdup(*command ? ft_strdup(*command) :
+									  get_str_from_history())));
+	else
+		return (b_write_history());
 }
 
 uint8_t			builtin_history(char **command, char **env)
@@ -76,19 +72,20 @@ uint8_t			builtin_history(char **command, char **env)
 	(void)env;
 	option = 0;
 	index = 1;
-	while (command[index])
+	while (command[index] && command[index][0] == '-')
 	{
+		if (!ft_strcmp("--help", command[1]))
+			return (var_return(help_history()));
 		c = 0;
-		if (command[index][c] == '-')
-			while (command[index][c])
-			{
-				ret = check_option_history(command[index][c]);
-				if (ret == 1)
+		while (command[index][c])
+		{
+			ret = check_option_history(command[index][c]);
+			if (ret == 1)
 					option = command[index][c];
-				else if (ret == -1)
-					return (var_return(usage_history(command[index][c])));
-				c++;
-			}
+			else if (ret == -1)
+				return (var_return(usage_history(command[index][c])));
+			c++;
+		}
 		index++;
 	}
 	return (looking_for_fct(command + index, option));

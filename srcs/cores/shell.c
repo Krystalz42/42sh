@@ -18,10 +18,10 @@ int		shell(void)
 	char		*input;
 	t_parsing	*parse_struct;
 	char 		**tmp;
-	add_hash("    El patron    ", "    Je suis Alexandre", 42);
-	add_hash("    Je rm -rf mon 21sh OKLM    ", "    Je suis Jefferson", 42);
-	add_hash("    Mon 21sh marche pas    ", "    Je suis Gregoire", 42);
-	add_hash("    Je suis malade    ", "    Je suis Sofiane", 42);
+	add_hash("    El patron  del job control   ", "    Je suis Alexandre", 42);
+	add_hash("    Je rm -rf mon 21sh OKLM  && jsuis content parceque je fais un cat << EOF  ", "    Je suis Jefferson", 42);
+	add_hash("    Mon 21sh marche pas && du coup je le fais en group   ", "    Je suis Gregoire", 42);
+	add_hash("    Je suis malade et je parle avec un chatbot   ", "    Je suis Sofiane", 42);
 	builtin_hash((char *[]){"hash", "------", "-eqweqw q-ewq-e-qw", NULL}, NULL);
 	while (42)
 	{
@@ -31,6 +31,7 @@ int		shell(void)
 		ft_memdel_tab(&(tmp));
 		if (!(parse_struct = parsing(input)))
 			continue ;
+		ft_strdel(&input);
 		lstdel(&parse_struct);
 //		var_return(0);
 	}
