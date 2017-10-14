@@ -125,8 +125,9 @@ SRCS = \
 	   history/gbl_save_history.c							\
 	   history/copy_cmd.c									\
 	   signal/ft_signal.c									\
-	   execution/check_if_builtins.c							\
+	   execution/check_if_builtins.c						\
 	   execution/builtins_functions/builtin_jobs.c			\
+	   execution/builtins_functions/builtin_switch.c		\
 	   execution/builtins_functions/builtin_history.c		\
 	   execution/builtins_functions/builtin_hash.c			\
 	   jobs_control/modify_status_jobs.c					\
@@ -150,6 +151,7 @@ SRCS = \
 	   env/init_env.c										\
 	   env/usage_environment.c								\
 	   env/my_getenv.c										\
+	   env/initialise_environment.c							\
 	   term/init_fd.c										\
 	   term/init_term.c										\
 	   term/set_term.c										\
@@ -160,6 +162,7 @@ SRCS = \
 	   memdel_struct/memdel_read.c							\
 	   error_function/bip.c									\
 	   error_function/puterror.c							\
+	   error_function/error_env.c							\
 
 
 # ---------------------------------------------------------------------------- #

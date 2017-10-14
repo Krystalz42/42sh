@@ -60,7 +60,7 @@ uint8_t			b_clear_history(void)
 	t_hist		*to_kill;
 
 	reset_history();
-	if (!(hist = gbl_save_history(NULL, 1)))
+	if (!(hist = gbl_save_history(NULL, REC_STRUCT)))
 		return (var_return(1));
 	while (hist)
 	{
@@ -69,14 +69,14 @@ uint8_t			b_clear_history(void)
 		hist = hist->prev;
 		ft_memdel((void **)&to_kill);
 	}
-	gbl_save_history(NULL, 0);
+	gbl_save_history(NULL, RESET_STRUCT);
 	return (0);
 }
 
 uint8_t			b_delete_history_offset(int offset)
 {
 	t_hist		*hist;
-	t_hist		*to_kill;
+	static t_hist		*to_kill;
 	int			i;
 
 	i = 0;
@@ -88,6 +88,7 @@ uint8_t			b_delete_history_offset(int offset)
 			to_kill = hist;
 			(hist->prev) && (hist->prev->next = hist->next);
 			(hist->next) && (hist->next->prev = hist->prev);
+			memdel_read(&(to_kill->hist));
 			ft_memdel((void **)&to_kill);
 			break ;
 		}

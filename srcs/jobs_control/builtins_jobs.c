@@ -80,7 +80,7 @@ void			put_in_foreground(t_jobs *jobs, t_jobs jobs_id)
 		while (index >= 0 && !(jobs[index].father.pid &&
 				!jobs[index].father.foreground))
 			index--;
-	if (index != -1)
+	if (index != -1 && !var_return(0))
 	{
 		modify_foreground(&(jobs[index]), true);
 		if (jobs[index].father.running == false)
@@ -92,7 +92,7 @@ void			put_in_foreground(t_jobs *jobs, t_jobs jobs_id)
 		jobs_control(UPDATE_CHILD, jobs[index], 0);
 	}
 	else if (var_return(1))
-		STR_FD("job's control : no current job\n", STDERR_FILENO);
+		STR_FD("fg: no current job\n", STDERR_FILENO);
 }
 
 void			put_in_background(t_jobs *jobs, t_jobs jobs_id)
@@ -107,7 +107,7 @@ void			put_in_background(t_jobs *jobs, t_jobs jobs_id)
 		while (index >= 0 && !(jobs[index].father.pid &&
 				!jobs[index].father.running && !jobs[index].father.foreground))
 			index--;
-	if (index != -1 && jobs[index].father.pid)
+	if (index != -1 && jobs[index].father.pid && !var_return(0))
 	{
 		modify_foreground(&(jobs[index]), false);
 		modify_runing(&(jobs[index]), true);
@@ -117,5 +117,5 @@ void			put_in_background(t_jobs *jobs, t_jobs jobs_id)
 		jobs_control(UPDATE_CHILD, jobs[index], 0);
 	}
 	else if (var_return(1))
-		STR_FD("Job's control : no current job\n", STDERR_FILENO);
+		STR_FD("bg: no current job\n", STDERR_FILENO);
 }

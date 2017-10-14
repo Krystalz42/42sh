@@ -47,7 +47,7 @@ int			key_print_(t_read **read_std, unsigned long *buff)
 		c = (unsigned char)(*buff % (UCHAR_MAX + 1));
 		*buff /= (UCHAR_MAX + 1);
 		if (c == 10)
-			return (key_enter_(read_std, *buff));
+			return (key_enter_(read_std, c));
 		else if (ft_isprint(c))
 		{
 			if ((*read_std)->history_search)
@@ -57,11 +57,9 @@ int			key_print_(t_read **read_std, unsigned long *buff)
 				(*read_std)->history_search++;
 			}
 			else
-			{
 				key_print_fct((*read_std)->cmd, c);
-				(*read_std)->print = 2;
-			}
 		}
 	}
+	(*read_std)->print = 2;
 	return (1);
 }

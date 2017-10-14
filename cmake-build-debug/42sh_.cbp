@@ -477,6 +477,9 @@
 		<Unit filename="/Users/aroulin/42sh_/srcs/env/init_env.c">
 			<Option target="42sh_"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/env/initialise_environment.c">
+			<Option target="42sh_"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/env/manage_env.c">
 			<Option target="42sh_"/>
 		</Unit>
@@ -492,6 +495,9 @@
 		<Unit filename="/Users/aroulin/42sh_/srcs/error_function/bip.c">
 			<Option target="42sh_"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/error_function/error_env.c">
+			<Option target="42sh_"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/error_function/puterror.c">
 			<Option target="42sh_"/>
 		</Unit>
@@ -502,6 +508,9 @@
 			<Option target="42sh_"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/execution/builtins_functions/builtin_jobs.c">
+			<Option target="42sh_"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/srcs/execution/builtins_functions/builtin_switch.c">
 			<Option target="42sh_"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/srcs/execution/check_if_builtins.c">

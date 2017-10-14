@@ -16,11 +16,12 @@ void			previous_history(t_read **read_std)
 {
 	t_hist		*hist;
 
-	hist = gbl_save_history(NULL, 1);
+	hist = gbl_save_history(NULL, REC_STRUCT);
 	if (!(*read_std)->history && hist)
 	{
 		memdel_outstanding();
 		copy_cmd(read_std, hist->hist->cmd);
+		(*read_std)->history = 1;
 	}
 	else if ((*read_std)->history && hist && hist->prev)
 	{
@@ -31,6 +32,5 @@ void			previous_history(t_read **read_std)
 	}
 	else
 		bip();
-	(*read_std)->history = 1;
-	gbl_save_history(hist, 1);
+	gbl_save_history(hist, SAVE_STRUCT);
 }

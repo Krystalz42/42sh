@@ -3390,6 +3390,33 @@ srcs/env/init_env.c.s:
 	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/env/init_env.c.s
 .PHONY : srcs/env/init_env.c.s
 
+srcs/env/initialise_environment.o: srcs/env/initialise_environment.c.o
+
+.PHONY : srcs/env/initialise_environment.o
+
+# target to build an object file
+srcs/env/initialise_environment.c.o:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/env/initialise_environment.c.o
+.PHONY : srcs/env/initialise_environment.c.o
+
+srcs/env/initialise_environment.i: srcs/env/initialise_environment.c.i
+
+.PHONY : srcs/env/initialise_environment.i
+
+# target to preprocess a source file
+srcs/env/initialise_environment.c.i:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/env/initialise_environment.c.i
+.PHONY : srcs/env/initialise_environment.c.i
+
+srcs/env/initialise_environment.s: srcs/env/initialise_environment.c.s
+
+.PHONY : srcs/env/initialise_environment.s
+
+# target to generate assembly for a file
+srcs/env/initialise_environment.c.s:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/env/initialise_environment.c.s
+.PHONY : srcs/env/initialise_environment.c.s
+
 srcs/env/manage_env.o: srcs/env/manage_env.c.o
 
 .PHONY : srcs/env/manage_env.o
@@ -3525,6 +3552,33 @@ srcs/error_function/bip.c.s:
 	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/error_function/bip.c.s
 .PHONY : srcs/error_function/bip.c.s
 
+srcs/error_function/error_env.o: srcs/error_function/error_env.c.o
+
+.PHONY : srcs/error_function/error_env.o
+
+# target to build an object file
+srcs/error_function/error_env.c.o:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/error_function/error_env.c.o
+.PHONY : srcs/error_function/error_env.c.o
+
+srcs/error_function/error_env.i: srcs/error_function/error_env.c.i
+
+.PHONY : srcs/error_function/error_env.i
+
+# target to preprocess a source file
+srcs/error_function/error_env.c.i:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/error_function/error_env.c.i
+.PHONY : srcs/error_function/error_env.c.i
+
+srcs/error_function/error_env.s: srcs/error_function/error_env.c.s
+
+.PHONY : srcs/error_function/error_env.s
+
+# target to generate assembly for a file
+srcs/error_function/error_env.c.s:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/error_function/error_env.c.s
+.PHONY : srcs/error_function/error_env.c.s
+
 srcs/error_function/puterror.o: srcs/error_function/puterror.c.o
 
 .PHONY : srcs/error_function/puterror.o
@@ -3632,6 +3686,33 @@ srcs/execution/builtins_functions/builtin_jobs.s: srcs/execution/builtins_functi
 srcs/execution/builtins_functions/builtin_jobs.c.s:
 	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/execution/builtins_functions/builtin_jobs.c.s
 .PHONY : srcs/execution/builtins_functions/builtin_jobs.c.s
+
+srcs/execution/builtins_functions/builtin_switch.o: srcs/execution/builtins_functions/builtin_switch.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_switch.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_switch.c.o:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/execution/builtins_functions/builtin_switch.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_switch.c.o
+
+srcs/execution/builtins_functions/builtin_switch.i: srcs/execution/builtins_functions/builtin_switch.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_switch.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_switch.c.i:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/execution/builtins_functions/builtin_switch.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_switch.c.i
+
+srcs/execution/builtins_functions/builtin_switch.s: srcs/execution/builtins_functions/builtin_switch.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_switch.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_switch.c.s:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/execution/builtins_functions/builtin_switch.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_switch.c.s
 
 srcs/execution/check_if_builtins.o: srcs/execution/check_if_builtins.c.o
 
@@ -6678,6 +6759,9 @@ help:
 	@echo "... srcs/env/init_env.o"
 	@echo "... srcs/env/init_env.i"
 	@echo "... srcs/env/init_env.s"
+	@echo "... srcs/env/initialise_environment.o"
+	@echo "... srcs/env/initialise_environment.i"
+	@echo "... srcs/env/initialise_environment.s"
 	@echo "... srcs/env/manage_env.o"
 	@echo "... srcs/env/manage_env.i"
 	@echo "... srcs/env/manage_env.s"
@@ -6693,6 +6777,9 @@ help:
 	@echo "... srcs/error_function/bip.o"
 	@echo "... srcs/error_function/bip.i"
 	@echo "... srcs/error_function/bip.s"
+	@echo "... srcs/error_function/error_env.o"
+	@echo "... srcs/error_function/error_env.i"
+	@echo "... srcs/error_function/error_env.s"
 	@echo "... srcs/error_function/puterror.o"
 	@echo "... srcs/error_function/puterror.i"
 	@echo "... srcs/error_function/puterror.s"
@@ -6705,6 +6792,9 @@ help:
 	@echo "... srcs/execution/builtins_functions/builtin_jobs.o"
 	@echo "... srcs/execution/builtins_functions/builtin_jobs.i"
 	@echo "... srcs/execution/builtins_functions/builtin_jobs.s"
+	@echo "... srcs/execution/builtins_functions/builtin_switch.o"
+	@echo "... srcs/execution/builtins_functions/builtin_switch.i"
+	@echo "... srcs/execution/builtins_functions/builtin_switch.s"
 	@echo "... srcs/execution/check_if_builtins.o"
 	@echo "... srcs/execution/check_if_builtins.i"
 	@echo "... srcs/execution/check_if_builtins.s"

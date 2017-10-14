@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-static t_cmd    *key_del_fct(t_cmd *cmd, unsigned long buff)
+t_cmd			*key_del_fct(t_cmd *cmd, unsigned long buff)
 {
 	t_cmd		*kill;
 
@@ -38,7 +38,7 @@ static t_cmd    *key_del_fct(t_cmd *cmd, unsigned long buff)
 	return (NULL);
 }
 
-int			    key_del(t_read **read_std, unsigned long buff)
+int				key_del(t_read **read_std, unsigned long buff)
 {
 	if ((*read_std)->completion && bip())
 	{

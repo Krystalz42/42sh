@@ -16,7 +16,7 @@ t_hist			*set_history_to_last(void)
 {
 	t_hist *hist;
 
-	hist = gbl_save_history(NULL, 1);
+	hist = gbl_save_history(NULL, REC_STRUCT);
 	while (hist && hist->prev)
 		hist = hist->prev;
 	return (hist);

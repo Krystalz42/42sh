@@ -17,6 +17,10 @@
 **			INITIALIZATION FLAGS
 */
 
+# define RESET_STRUCT			0
+# define SAVE_STRUCT			1
+# define REC_STRUCT				2
+
 # define ENV_NULL				1
 # define ENV_INIT				2
 # define ENV_REC				4

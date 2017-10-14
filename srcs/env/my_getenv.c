@@ -19,12 +19,12 @@ size_t				compare_environment(char *s1, char *s2)
 	len = 0;
 	while (s1 && s2 && *s1 && *s2 && *s1 == *s2)
 	{
+		if (*s2 == '=')
+			return (len);
 		s1++;
 		s2++;
 		len++;
 	}
-	if (*s2 == '=')
-		return (len);
 	return (0);
 }
 

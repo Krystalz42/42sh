@@ -16,7 +16,7 @@ void			next_history(t_read **read_std)
 {
 	t_hist		*hist;
 
-	hist = gbl_save_history(NULL, 1);
+	hist = gbl_save_history(NULL, REC_STRUCT);
 	if (hist && hist->next)
 	{
 		memdel_outstanding();
@@ -34,5 +34,5 @@ void			next_history(t_read **read_std)
 	}
 	else
 		bip();
-	gbl_save_history(hist, 1);
+	gbl_save_history(hist, SAVE_STRUCT);
 }

@@ -26,9 +26,10 @@ int		init_term(void)
 	static struct termios old_term;
 	static struct termios our_term;
 
-	if (!my_getenv("TERM"))
+	if (!my_getenv("TERM="))
 		add_environment("TERM=vt100");
-	if (tgetent(NULL, my_getenv("TERM")) == ERR)
+
+	if (tgetent(NULL, my_getenv("TERM=")) == ERR)
 		puterror("tgetent");
 
 	log_error("test %d",tcgetattr(STDIN_FILENO, &old_term));

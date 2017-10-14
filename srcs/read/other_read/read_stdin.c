@@ -76,11 +76,11 @@ static inline void		inline_print_(t_read **read_std, unsigned long *buff)
 	chk_and_print(read_std);
 }
 
-static inline void		inline_other(t_read **read_std, unsigned long buff, int(*fct)(t_read **, unsigned long))
+static inline void		inline_other(t_read **read_std, unsigned long *buff, int(*fct)(t_read **, unsigned long))
 {
-	fct(read_std, buff);
+	fct(read_std, *buff);
 	chk_and_print(read_std);
-
+	*buff = 0;
 }
 
 char					*read_stdin(unsigned char flags)
@@ -97,12 +97,11 @@ char					*read_stdin(unsigned char flags)
 	{
 		while (g_tab_are_key[++index].key)
 			if (g_tab_are_key[index].key == buff)
-				inline_other(&read_std, buff, g_tab_are_key[index].function);
-		if (!g_tab_are_key[index].key && ((ft_isprint(buff % (UCHAR_MAX + 1)) || (buff % (UCHAR_MAX + 1) == 10))))
+				inline_other(&read_std, &buff, g_tab_are_key[index].function);
+		if (ft_isprint(buff % (UCHAR_MAX + 1)) || (buff != 10 && buff % (UCHAR_MAX + 1) == 10))
 			inline_print_(&read_std, &buff);
 		if ((read_std)->finish)
 			break ;
-		buff = 0;
 	}
 	set_termios(SET_OLD_TERM);
 	NL;

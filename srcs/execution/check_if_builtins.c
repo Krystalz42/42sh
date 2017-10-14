@@ -4,8 +4,15 @@
 
 #include <sh.h>
 
+uint8_t env(char **c, char **e)
+{
+	(void)c;
+	ft_putstrtab(e, 10);
+	return (0);
+}
+
 static const t_builtin	builtin[] = {
-	(t_builtin){"env", NULL},
+	(t_builtin){"env", env},
 	(t_builtin){"setenv", NULL},
 	(t_builtin){"unsetenv", NULL},
 	(t_builtin){"cd", NULL},
@@ -13,6 +20,8 @@ static const t_builtin	builtin[] = {
 	(t_builtin){"jobs", builtin_jobs},
 	(t_builtin){"history", builtin_history},
 	(t_builtin){"hash", builtin_hash},
+	(t_builtin){"fg", builtin_foreground},
+	(t_builtin){"bg", builtin_background},
 	(t_builtin){"exit", NULL},
 	(t_builtin){NULL, NULL}
 };

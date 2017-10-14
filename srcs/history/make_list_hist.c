@@ -30,15 +30,15 @@ void		make_list_hist(t_read *read_std)
 {
 	t_hist	*lst;
 
-	lst = gbl_save_history(NULL, 1);
+	lst = gbl_save_history(NULL, REC_STRUCT);
 	if (lst)
 	{
 		while (lst->next)
 			lst = lst->next;
 		lst->next = create_hist(read_std);
 		lst->next->prev = lst;
-		gbl_save_history(lst->next, 1);
+		gbl_save_history(lst->next, SAVE_STRUCT);
 	}
 	else
-		gbl_save_history(create_hist(read_std), 1);
+		gbl_save_history(create_hist(read_std), SAVE_STRUCT);
 }

@@ -10,8 +10,6 @@ static uint8_t	help_history()
 	ft_putstr_fd("-c            : Clear the history list.\n", STDERR_FILENO);
 	ft_putstr_fd("-d offset     : Delete the history ", STDERR_FILENO);
 	ft_putstr_fd("entry at position offset.\n", STDERR_FILENO);
-	ft_putstr_fd("-a [pathname] : Append the new ", STDERR_FILENO);
-	ft_putstr_fd("history lines to the history file.\n", STDERR_FILENO);
 	ft_putstr_fd("-r [pathname] : Read the history file and ", STDERR_FILENO);
 	ft_putstr_fd("append its contents to the history list.\n", STDERR_FILENO);
 	ft_putstr_fd("-w [pathname] : Write out the current", STDERR_FILENO);
@@ -56,8 +54,8 @@ uint8_t			looking_for_fct(char **command, int option)
 		return (b_write_history_in_file(*command ? ft_strdup(*command) :
 								get_str_from_history()));
 	else if (option == 'r')
-		return (write_history_in_sh(ft_strdup(*command ? ft_strdup(*command) :
-									  get_str_from_history())));
+		return (write_history_in_sh(*command ? ft_strdup(*command) :
+									  get_str_from_history()));
 	else
 		return (b_write_history());
 }

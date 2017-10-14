@@ -16,9 +16,11 @@ t_hist		*gbl_save_history(t_hist *hist, int flags)
 {
 	static t_hist		*save;
 
-	if (!flags)
+	if (flags & RESET_STRUCT)
 		save = NULL;
-	else if (hist)
+	else if (flags & SAVE_STRUCT)
 		save = hist;
-	return (save);
+	else if (flags & REC_STRUCT)
+		return (save);
+	return (NULL);
 }

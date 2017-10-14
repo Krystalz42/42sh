@@ -73,9 +73,10 @@ int							get_len_prompt(int len);
 t_cmd						*last_cmd(t_cmd *cmd);
 char						*finish_read_std(t_read **read_std);
 t_cmd						*keep_buffer(t_cmd *cmd, int flags);
+t_cmd						*key_del_fct(t_cmd *cmd, unsigned long buff);
 
 /*
-**              OUTSTANDING FUNCTION
+**				OUTSTANDING FUNCTION
 */
 
 void						add_outstanding(t_cmd *cmd,
@@ -101,8 +102,9 @@ char						*get_str_from_hash(void);
 */
 
 uint8_t						print_jobs(t_jobs *jobs, int option);
+uint8_t						builtin_background(char **command, char **env);
+uint8_t						builtin_foreground(char **command, char **env);
 int							check_if_builtin(char **command, char **env);
-int							convert_to_hist(char *buff);
 uint8_t						hash_reset(void);
 uint8_t						hash_print(int fd);
 uint8_t						b_write_history(void);
@@ -208,7 +210,7 @@ char						*get_str_from_history(void);
 **				ENVIRONEMENT FUNCTION
 */
 
-uint8_t						builtin_env(char **command);
+char						**builtin_env(char **command);
 void						add_environment(char *string);
 void						init_env(void);
 char						*my_getenv(char *name);
@@ -216,6 +218,9 @@ size_t						compare_environment(char *s1, char *s2);
 void						remove_environment(char *string);
 char						**env_table(char **env, int flags);
 int							usage_environement(char *string);
+char						**start_from_null(char **command);
+char						**start_from_less(char **command);
+char						**start_from_full(char **command);
 
 /*
 **				HISTORY FUNCTION
@@ -313,6 +318,7 @@ void						memdel_outstanding(void);
 **			   	ERROR FUNCTION
 */
 
+void						*error_env(void);
 void						puterror(char *err);
 int							bip(void);
 

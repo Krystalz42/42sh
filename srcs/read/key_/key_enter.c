@@ -25,9 +25,9 @@ void        insert_completion(t_read **read_std, t_file *tmp)
 	{
 		while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32
 		       && (*read_std)->cmd->prev->c != '/')
-			key_del(read_std, DELETE_KEY);
+			key_del_fct((*read_std)->cmd, 0);
 		while (tmp->name[++i])
-			key_print_(read_std,  (unsigned long *)&(tmp->name[i]));
+			key_print_fct((*read_std)->cmd, tmp->name[i]);
 	}
 	(*read_std)->print = 2;
 }
@@ -47,7 +47,7 @@ void		complete_command(t_read **read_std)
 
 int			key_enter_(t_read **read_std, unsigned long buff)
 {
-	buff = 10;
+	log_trace("key_enter_");
 	if ((*read_std)->completion)
 		complete_command(read_std);
 	else
@@ -59,7 +59,7 @@ int			key_enter_(t_read **read_std, unsigned long buff)
 			(*read_std)->print = 2;
 			(*read_std)->history = 0;
 			(*read_std)->cmd = last_cmd((*read_std)->cmd);
-			key_print_(read_std,  &buff);
+			key_print_fct((*read_std)->cmd, buff);
 			insert_one_line();
 		}
 	}
