@@ -71,11 +71,11 @@ static void		send_signal(t_jobs *jobs, t_jobs jobs_id, int sig)
 	{
 		log_info("Send KEY_INTERRUPT to shell");
 		ioctl(0, TIOCSTI, "\2\0");
+		signal_reception(var_return(131));
 	}
 	else
 	{
 		log_warn("Signal nothing done ! ");
-		bip();
 	}
 }
 

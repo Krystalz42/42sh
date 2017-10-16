@@ -11,31 +11,33 @@
 /* ************************************************************************** */
 
 #include <sh.h>
-#include "../../../libs/libft/incs/libft.h"
 
 static const t_cmp		g_tab_are_key[] = {
 		(t_cmp){DELETE_KEY, key_del},
 		(t_cmp){TAB_KEY, key_tab},
-		(t_cmp){INTERRUPT_KEY, key_interrupt},
 		(t_cmp){CLEAR_KEY, key_clear_},
 		(t_cmp){HOME_KEY, key_home_},
 		(t_cmp){DEL_KEY, key_delete_here},
 		(t_cmp){END_KEY, key_end_},
 		(t_cmp){CTRL_D, key_eof},
-		(t_cmp){CTRL_A, key_home_},
+		(t_cmp){CTRL_B, key_arrow_left},
 		(t_cmp){CTRL_E, key_end_},
-		(t_cmp){CTRL_F, key_arrow_right},
 		(t_cmp){CTRL_R, key_search_history},
 		(t_cmp){CTRL_K, key_kill_k},
-		(t_cmp){META_Y, key_yank},
+		(t_cmp){CTRL_A, key_home_},
 		(t_cmp){CTRL_UNDO, key_undo_},
+		(t_cmp){CTRL_F, key_arrow_right},
+		(t_cmp){META_U, key_upcase_word},
+		(t_cmp){META_L, key_downcase_word},
+		(t_cmp){META_Y, key_yank},
 		(t_cmp){META_DEL, key_kill_prev_word},
 		(t_cmp){META_D, key_kill_word},
-		(t_cmp){ARROW_DOWN, key_arrow_down},
+		(t_cmp){META_B, key_shift_left},
+		(t_cmp){META_F, key_shift_right},
 		(t_cmp){ARROW_LEFT, key_arrow_left},
 		(t_cmp){ARROW_RIGHT, key_arrow_right},
 		(t_cmp){ARROW_UP, key_arrow_up},
-		(t_cmp){META_F, key_shift_right},
+		(t_cmp){ARROW_DOWN, key_arrow_down},
 		(t_cmp){SHIFT_UP_KEY, key_shift_up},
 		(t_cmp){SHIFT_DOWN_KEY, key_shift_down},
 		(t_cmp){SHIFT_RIGHT_KEY, key_shift_right},
@@ -63,7 +65,7 @@ static inline void		initialize_fct(t_read **read_std, unsigned char flags)
 	init_signal();
 	set_termios(SET_OUR_TERM);
 	(*read_std)->cur = prompt(flags | PRINT);
-	last_resultat(0);
+	signal_reception(0);
 	get_os_pointer(NULL, 1);
 }
 
@@ -99,7 +101,7 @@ char					*read_stdin(unsigned char flags)
 		while (g_tab_are_key[++index].key)
 			if (g_tab_are_key[index].key == buf)
 				inline_other(&read_std, &buf, g_tab_are_key[index].function);
-		if ((read_std)->finish)
+		if ((read_std)->finish || signal_reception(-1))
 			break ;
 		buf = 0;
 	}

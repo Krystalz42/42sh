@@ -12,11 +12,25 @@
 
 #include <sh.h>
 
-int			key_delete_here(t_read **read_std, unsigned long buff)
+void		delete_here(t_read **read_std, unsigned long buff)
 {
 	t_cmd		*kill;
 
-	if ((*read_std)->completion && bip())
+	kill = (*read_std)->cmd;
+	(*read_std)->cmd = (*read_std)->cmd->next;
+	if ((*read_std)->cmd->prev->prev)
+		(*read_std)->cmd->prev->prev->next = (*read_std)->cmd;
+	(*read_std)->cmd->prev = (*read_std)->cmd->prev->prev;
+	kill->next = NULL;
+	kill->prev = NULL;
+	add_outstanding(kill, buff, 0);
+	(*read_std)->print = 2;
+}
+
+int			key_delete_here(t_read **read_std, unsigned long buff)
+{
+
+	if ((*read_std)->completion)
 	{
 		memdel_completion(&((*read_std)->tab_));
 		(*read_std)->print = 2;
@@ -27,16 +41,6 @@ int			key_delete_here(t_read **read_std, unsigned long buff)
 		(*read_std)->print = 2;
 	}
 	if (!(*read_std)->history_search && (*read_std)->cmd->c)
-	{
-		kill = (*read_std)->cmd;
-		(*read_std)->cmd = (*read_std)->cmd->next;
-		if ((*read_std)->cmd->prev->prev)
-			(*read_std)->cmd->prev->prev->next = (*read_std)->cmd;
-		(*read_std)->cmd->prev = (*read_std)->cmd->prev->prev;
-		add_outstanding(kill, buff, 0);
-		(*read_std)->print = 2;
-	}
-	else
-		bip();
+		delete_here(read_std, buff);
 	return (1);
 }

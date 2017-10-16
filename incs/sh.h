@@ -74,6 +74,7 @@ t_cmd						*last_cmd(t_cmd *cmd);
 char						*finish_read_std(t_read **read_std);
 t_cmd						*keep_buffer(t_cmd *cmd, int flags);
 t_cmd						*key_del_fct(t_cmd *cmd, unsigned long buff);
+int							signal_reception(int brk);
 
 /*
 **				OUTSTANDING FUNCTION
@@ -98,7 +99,7 @@ void						add_hash(char *bin, char *path,
 char						*get_str_from_hash(void);
 
 /*
-**              BUILT IN FUNCTION
+**				BUILT IN FUNCTION
 */
 
 uint8_t						print_jobs(t_jobs *jobs, int option);
@@ -160,6 +161,10 @@ int							key_interrupt(t_read **read_std,
 											unsigned long buff);
 int							key_clear_(t_read **read_std, unsigned long buff);
 int							key_eof(t_read **read_std, unsigned long buff);
+int							key_upcase_word(t_read **read_std,
+										unsigned long buff);
+int							key_downcase_word(t_read **read_std,
+												unsigned long buff);
 int							key_arrow_left(t_read **read_std,
 											unsigned long buff);
 int							key_arrow_right(t_read **read_std,

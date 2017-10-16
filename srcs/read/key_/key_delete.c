@@ -40,7 +40,7 @@ t_cmd			*key_del_fct(t_cmd *cmd, unsigned long buff)
 
 int				key_del(t_read **read_std, unsigned long buff)
 {
-	if ((*read_std)->completion && bip())
+	if ((*read_std)->completion)
 	{
 		memdel_completion(&((*read_std)->tab_));
 		(*read_std)->print = 2;
@@ -56,7 +56,5 @@ int				key_del(t_read **read_std, unsigned long buff)
 		add_outstanding(key_del_fct((*read_std)->cmd, buff), buff, 0);
 		(*read_std)->print = 2;
 	}
-	else
-		bip();
 	return (1);
 }

@@ -12,25 +12,23 @@
 
 #include <sh.h>
 
-void        compare_history(t_read **read_std)
+void			compare_history(t_read **read_std)
 {
-    t_hist       *hist;
-    t_cmd       *little;
+	t_hist		*hist;
+	t_cmd		*little;
 
-    hist = first_history();
-    little = first_cmd((*read_std)->hist_search->cmd, 1);
-    while (hist && !list_compare(little, first_cmd(hist->hist->cmd, 1)))
-        hist = hist->prev;
-    if (hist)
-    {
-	    memdel_outstanding();
-	    (*read_std)->history_search = 0;
-	    if ((*read_std)->history)
-		    memdel_cmd(&((*read_std)->cmd));
-	    else
-		    (*read_std)->history = 1;
-	    copy_cmd(read_std, hist->hist->cmd);
-	    (*read_std)->history_search = 1;
-    }
-    last_resultat((hist) || !little->c ? 0 : 1);
+	hist = first_history();
+	little = first_cmd((*read_std)->hist_search->cmd, 1);
+	while (hist && !list_compare(little, first_cmd(hist->hist->cmd, 1)))
+		hist = hist->prev;
+	if (hist)
+	{
+		memdel_outstanding();
+		if ((*read_std)->history)
+			memdel_cmd(&((*read_std)->cmd));
+		else
+			(*read_std)->history = 1;
+		copy_cmd(read_std, hist->hist->cmd);
+	}
+	last_resultat((hist) || !little->c ? 0 : 1);
 }

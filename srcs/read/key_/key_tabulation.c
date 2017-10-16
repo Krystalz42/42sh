@@ -15,7 +15,7 @@
 int			key_tab(t_read **read_std, unsigned long buff)
 {
 	(void)buff;
-	if ((*read_std)->history_search && bip())
+	if ((*read_std)->history_search)
 	{
 		memdel_lfh(&((*read_std)->hist_search));
 	}

@@ -5253,6 +5253,33 @@ srcs/read/key_/key_delete_here.c.s:
 	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/key_/key_delete_here.c.s
 .PHONY : srcs/read/key_/key_delete_here.c.s
 
+srcs/read/key_/key_downcase_word.o: srcs/read/key_/key_downcase_word.c.o
+
+.PHONY : srcs/read/key_/key_downcase_word.o
+
+# target to build an object file
+srcs/read/key_/key_downcase_word.c.o:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/key_/key_downcase_word.c.o
+.PHONY : srcs/read/key_/key_downcase_word.c.o
+
+srcs/read/key_/key_downcase_word.i: srcs/read/key_/key_downcase_word.c.i
+
+.PHONY : srcs/read/key_/key_downcase_word.i
+
+# target to preprocess a source file
+srcs/read/key_/key_downcase_word.c.i:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/key_/key_downcase_word.c.i
+.PHONY : srcs/read/key_/key_downcase_word.c.i
+
+srcs/read/key_/key_downcase_word.s: srcs/read/key_/key_downcase_word.c.s
+
+.PHONY : srcs/read/key_/key_downcase_word.s
+
+# target to generate assembly for a file
+srcs/read/key_/key_downcase_word.c.s:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/key_/key_downcase_word.c.s
+.PHONY : srcs/read/key_/key_downcase_word.c.s
+
 srcs/read/key_/key_enter.o: srcs/read/key_/key_enter.c.o
 
 .PHONY : srcs/read/key_/key_enter.o
@@ -5603,6 +5630,33 @@ srcs/read/key_/key_undo.s: srcs/read/key_/key_undo.c.s
 srcs/read/key_/key_undo.c.s:
 	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/key_/key_undo.c.s
 .PHONY : srcs/read/key_/key_undo.c.s
+
+srcs/read/key_/key_upcase_word.o: srcs/read/key_/key_upcase_word.c.o
+
+.PHONY : srcs/read/key_/key_upcase_word.o
+
+# target to build an object file
+srcs/read/key_/key_upcase_word.c.o:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/key_/key_upcase_word.c.o
+.PHONY : srcs/read/key_/key_upcase_word.c.o
+
+srcs/read/key_/key_upcase_word.i: srcs/read/key_/key_upcase_word.c.i
+
+.PHONY : srcs/read/key_/key_upcase_word.i
+
+# target to preprocess a source file
+srcs/read/key_/key_upcase_word.c.i:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/key_/key_upcase_word.c.i
+.PHONY : srcs/read/key_/key_upcase_word.c.i
+
+srcs/read/key_/key_upcase_word.s: srcs/read/key_/key_upcase_word.c.s
+
+.PHONY : srcs/read/key_/key_upcase_word.s
+
+# target to generate assembly for a file
+srcs/read/key_/key_upcase_word.c.s:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/key_/key_upcase_word.c.s
+.PHONY : srcs/read/key_/key_upcase_word.c.s
 
 srcs/read/key_/key_yank.o: srcs/read/key_/key_yank.c.o
 
@@ -6035,6 +6089,33 @@ srcs/read/other_read/restore_cursor.s: srcs/read/other_read/restore_cursor.c.s
 srcs/read/other_read/restore_cursor.c.s:
 	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/other_read/restore_cursor.c.s
 .PHONY : srcs/read/other_read/restore_cursor.c.s
+
+srcs/read/other_read/signal_reception.o: srcs/read/other_read/signal_reception.c.o
+
+.PHONY : srcs/read/other_read/signal_reception.o
+
+# target to build an object file
+srcs/read/other_read/signal_reception.c.o:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/other_read/signal_reception.c.o
+.PHONY : srcs/read/other_read/signal_reception.c.o
+
+srcs/read/other_read/signal_reception.i: srcs/read/other_read/signal_reception.c.i
+
+.PHONY : srcs/read/other_read/signal_reception.i
+
+# target to preprocess a source file
+srcs/read/other_read/signal_reception.c.i:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/other_read/signal_reception.c.i
+.PHONY : srcs/read/other_read/signal_reception.c.i
+
+srcs/read/other_read/signal_reception.s: srcs/read/other_read/signal_reception.c.s
+
+.PHONY : srcs/read/other_read/signal_reception.s
+
+# target to generate assembly for a file
+srcs/read/other_read/signal_reception.c.s:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/srcs/read/other_read/signal_reception.c.s
+.PHONY : srcs/read/other_read/signal_reception.c.s
 
 srcs/read/outstanding/add_outstanding.o: srcs/read/outstanding/add_outstanding.c.o
 
@@ -6993,6 +7074,9 @@ help:
 	@echo "... srcs/read/key_/key_delete_here.o"
 	@echo "... srcs/read/key_/key_delete_here.i"
 	@echo "... srcs/read/key_/key_delete_here.s"
+	@echo "... srcs/read/key_/key_downcase_word.o"
+	@echo "... srcs/read/key_/key_downcase_word.i"
+	@echo "... srcs/read/key_/key_downcase_word.s"
 	@echo "... srcs/read/key_/key_enter.o"
 	@echo "... srcs/read/key_/key_enter.i"
 	@echo "... srcs/read/key_/key_enter.s"
@@ -7032,6 +7116,9 @@ help:
 	@echo "... srcs/read/key_/key_undo.o"
 	@echo "... srcs/read/key_/key_undo.i"
 	@echo "... srcs/read/key_/key_undo.s"
+	@echo "... srcs/read/key_/key_upcase_word.o"
+	@echo "... srcs/read/key_/key_upcase_word.i"
+	@echo "... srcs/read/key_/key_upcase_word.s"
 	@echo "... srcs/read/key_/key_yank.o"
 	@echo "... srcs/read/key_/key_yank.i"
 	@echo "... srcs/read/key_/key_yank.s"
@@ -7080,6 +7167,9 @@ help:
 	@echo "... srcs/read/other_read/restore_cursor.o"
 	@echo "... srcs/read/other_read/restore_cursor.i"
 	@echo "... srcs/read/other_read/restore_cursor.s"
+	@echo "... srcs/read/other_read/signal_reception.o"
+	@echo "... srcs/read/other_read/signal_reception.i"
+	@echo "... srcs/read/other_read/signal_reception.s"
 	@echo "... srcs/read/outstanding/add_outstanding.o"
 	@echo "... srcs/read/outstanding/add_outstanding.i"
 	@echo "... srcs/read/outstanding/add_outstanding.s"

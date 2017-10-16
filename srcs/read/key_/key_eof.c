@@ -24,7 +24,5 @@ int			key_eof(t_read **read_std, unsigned long buff)
 		key_delete_here(read_std, buff);
 		(*read_std)->print = 2;
 	}
-	else
-		bip();
 	return (1);
 }

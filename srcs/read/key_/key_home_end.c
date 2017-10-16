@@ -14,12 +14,12 @@
 
 int			key_home_(t_read **read_std, unsigned long buff)
 {
-	if ((*read_std)->history_search && bip())
+	if ((*read_std)->history_search)
 	{
 		memdel_lfh(&((*read_std)->hist_search));
 		(*read_std)->print = 2;
 	}
-	else if ((*read_std)->completion && bip())
+	else if ((*read_std)->completion)
 	{
 		memdel_completion(&((*read_std)->tab_));
 		(*read_std)->print = 2;
@@ -35,18 +35,16 @@ int			key_home_(t_read **read_std, unsigned long buff)
 		}
 		(*read_std)->print = 2;
 	}
-	else
-		bip();
 	return (1);
 }
 int			key_end_(t_read **read_std, unsigned long buff)
 {
-	if ((*read_std)->history_search && bip())
+	if ((*read_std)->history_search)
 	{
 		memdel_lfh(&((*read_std)->hist_search));
 		(*read_std)->print = 2;
 	}
-	else if ((*read_std)->completion && bip())
+	else if ((*read_std)->completion)
 	{
 		memdel_completion(&((*read_std)->tab_));
 		(*read_std)->print = 2;
@@ -58,7 +56,5 @@ int			key_end_(t_read **read_std, unsigned long buff)
 			(*read_std)->cmd = (*read_std)->cmd->next;
 		(*read_std)->print = 2;
 	}
-	else
-		bip();
 	return (1);
 }

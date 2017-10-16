@@ -66,6 +66,7 @@ SRCS = \
 	   read/other_read/init_prompt.c						\
 	   read/other_read/my_prompt.c							\
 	   read/other_read/get_len_prompt.c						\
+	   read/other_read/signal_reception.c					\
 	   read/key_/key_yank.c									\
 	   read/key_/key_print.c								\
 	   read/key_/key_delete.c								\
@@ -85,6 +86,8 @@ SRCS = \
 	   read/key_/key_kill_prev_word.c						\
 	   read/key_/key_del_buff.c								\
 	   read/key_/key_search_history.c						\
+	   read/key_/key_upcase_word.c							\
+	   read/key_/key_downcase_word.c						\
 	   hash/hash_value.c									\
 	   hash/table_hash.c									\
 	   hash/hash_board.c									\

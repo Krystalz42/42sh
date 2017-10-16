@@ -55,9 +55,13 @@ char			*finish_read_std(t_read **read_std)
 	memdel_outstanding();
 	if ((*read_std)->history)
 		memdel_cmd(&tmp);
-	if ((*read_std)->finish == 2 || empty_cmd(first_cmd((*read_std)->cmd, 1)))
+	if (signal_reception(-1) || empty_cmd(first_cmd((*read_std)->cmd, 1)))
+	{
+		if (signal_reception(-1))
+			NL;
 		memdel_read(read_std);
-	else 
+	}
+	else
 	{
 		(*read_std)->finish = 0;
 		make_list_hist((*read_std));

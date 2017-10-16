@@ -16,13 +16,16 @@ int			memdel_cmd(t_cmd **cmd)
 {
 	t_cmd *tmp;
 
-	while ((*cmd) && (*cmd)->prev)
-		(*cmd) = (*cmd)->prev;
-	while ((*cmd))
+	if (*cmd)
 	{
-		tmp = (*cmd);
-		(*cmd) = (*cmd)->next;
-		free(tmp);
+		while ((*cmd) && (*cmd)->prev)
+			(*cmd) = (*cmd)->prev;
+		while ((*cmd))
+		{
+			tmp = (*cmd);
+			(*cmd) = (*cmd)->next;
+			free(tmp);
+		}
 	}
 	(*cmd) = NULL;
 	return (1);

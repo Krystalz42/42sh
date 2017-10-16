@@ -237,13 +237,11 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/parsing/parsing.c srcs/execution/builtins_functions/builtin_hash.c srcs/execution/check_if_builtins.c srcs/error_function/error_env.c srcs/env/initialise_environment.c srcs/execution/builtins_functions/builtin_switch.c libs/libft/srcs/ft_iscrlf.c)
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/parsing/parsing.c srcs/execution/builtins_functions/builtin_hash.c srcs/execution/check_if_builtins.c srcs/error_function/error_env.c srcs/env/initialise_environment.c srcs/execution/builtins_functions/builtin_switch.c libs/libft/srcs/ft_iscrlf.c srcs/read/other_read/signal_reception.c srcs/read/key_/key_upcase_word.c srcs/read/key_/key_downcase_word.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)
 include_directories(libs/logger/incs)
 include_directories(libs/printf/incs)
-
-target_link_libraries(lncurses)
 
 add_executable(42sh_ ${SOURCE_FILES})

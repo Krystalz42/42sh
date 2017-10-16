@@ -24,6 +24,7 @@ int				key_search_history(t_read **read_std, unsigned long buff)
 		(*read_std)->history_search++;
 	else
 	{
+		last_resultat(0);
 		init_research(read_std);
 		(*read_std)->history_search = 2;
 	}

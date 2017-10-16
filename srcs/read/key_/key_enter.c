@@ -18,9 +18,8 @@ void        insert_completion(t_read **read_std, t_file *tmp)
 
 	i = -1;
 	((*read_std)->completion) && ((*read_std)->completion = 0);
-	if (!ft_strcmp((*read_std)->tab_->from, tmp->name))
-		(DT_DIR & tmp->type) ? (key_print_fct((*read_std)->cmd, '/'))
-						: bip();
+	if (!ft_strcmp((*read_std)->tab_->from, tmp->name) && (DT_DIR & tmp->type))
+		key_print_fct((*read_std)->cmd, '/');
 	else
 	{
 		while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32
@@ -57,9 +56,7 @@ int			key_enter_(t_read **read_std, unsigned long buff)
 		print_struct(*read_std);
 		insert_one_line();
 		if (!(check_cmd(read_std)))
-		{
 			(*read_std)->finish = 1;
-		}
 		else
 		{
 			(*read_std)->print = 2;

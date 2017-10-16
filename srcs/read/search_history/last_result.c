@@ -12,11 +12,11 @@
 
 #include <sh.h>
 
-int         last_resultat(int res)
+int			last_resultat(int res)
 {
-    static int save;
+	static int save;
 
-    if (res != -42)
-        save = res;
-    return (save);
+	if (res != -42)
+		save = res;
+	return (save);
 }

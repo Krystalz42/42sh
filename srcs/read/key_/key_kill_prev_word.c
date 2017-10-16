@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-static void kill_prev_word(t_read **read_std, unsigned long buff)
+static void			kill_prev_word(t_read **read_std, unsigned long buff)
 {
 	t_cmd   *tmp;
 
@@ -31,21 +31,19 @@ static void kill_prev_word(t_read **read_std, unsigned long buff)
 	}
 }
 
-int     key_kill_prev_word(t_read **read_std, unsigned long buff)
+int					key_kill_prev_word(t_read **read_std, unsigned long buff)
 {
-	if ((*read_std)->completion && bip())
+	if ((*read_std)->completion)
 	{
 		(*read_std)->print = 2;
 		memdel_completion(&((*read_std)->tab_));
 	}
-	else if  ((*read_std)->history_search && bip())
+	else if  ((*read_std)->history_search)
 	{
 		(*read_std)->print = 2;
 		memdel_lfh(&((*read_std)->hist_search));
 	}
 	if ((*read_std)->cmd->prev)
 		kill_prev_word(read_std, buff);
-	else
-		bip();
 	return (1);
 }
