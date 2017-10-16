@@ -54,7 +54,7 @@ void my_execute(char **command, bool foreground)
 	}
 	else
 	{
-		my_execve(command, NULL);
+		my_execve(command, env_table(NULL, ENV_REC));
 	}
 }
 
@@ -112,8 +112,10 @@ void test_cmd()
 	char *jobsR[] = {"jobs", "-r", NULL};
 	char *jobsP[] = {"jobs", "-p", NULL};
 	char *jobsS[] = {"jobs", "-s", NULL};
+	char *my_shell[] = {"./42sh", NULL};
 
 	(void)jobs;
+	(void)my_shell;
 	(void)jobsR;
 	(void)jobsS;
 	(void)jobsP;
@@ -127,9 +129,15 @@ void test_cmd()
 	while (i)
 	{
 		read_stdin(DEFAULT);
-		my_execute(ls, true);
-		read_stdin(DEFAULT);
-		my_execute_pipe(ls, cat, true);
+		pid_t lol = fork();
+		if (lol)
+		{
+			wait(0);
+		} else
+		{
+			builtin_history((char *[]){"history", NULL}, NULL);
+			exit(0);
+		}
 		read_stdin(DEFAULT);
 	}
 }

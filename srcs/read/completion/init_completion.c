@@ -29,7 +29,7 @@ void		init_completion(t_read **read_std)
 {
 	if (check_word((*read_std)->cmd))
 	{
-        (*read_std)->completion = 2;
+		(*read_std)->completion = 2;
 		complete_binary(read_std);
 	}
 	else

@@ -54,25 +54,23 @@
 **			INITIALIZATION READ
 */
 
-# define DELETE_KEY				127
-# define TAB_KEY				9
-# define ENTER_KEY				10
-# define CLEAR_KEY				12
-
-# define INTERRUPT_KEY			2
-# define CTRL_F					6
-# define CTRL_D					4
 # define CTRL_A					1
+# define INTERRUPT_KEY			2
+# define CTRL_D					4
 # define CTRL_E					5
+# define CTRL_F					6
+# define TAB_KEY				9
 # define CTRL_K					11
+# define CLEAR_KEY				12
 # define CTRL_R					18
 # define CTRL_V					22
 # define CTRL_W 				23
 # define CTRL_UNDO				31
+# define DELETE_KEY				127
 # define PRINT_KEY				424242
 
 # define META_Y					42434
-# define META_F					26139
+# define META_F					37574
 # define META_D					25627
 # define META_DEL				32539
 # define META_B					25115

@@ -12,18 +12,15 @@
 
 #include <sh.h>
 
-int			key_tab(t_read **read_std,
-                       unsigned long buff __attribute__((unused)))
+int			key_tab(t_read **read_std, unsigned long buff)
 {
+	(void)buff;
 	if ((*read_std)->history_search && bip())
 	{
 		memdel_lfh(&((*read_std)->hist_search));
 	}
 	if ((*read_std)->completion)
-	{
 		move_completion_right(read_std);
-
-	}
 	else
 	{
 		memdel_completion(&((*read_std)->tab_));

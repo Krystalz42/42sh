@@ -52,15 +52,20 @@ int			key_enter_(t_read **read_std, unsigned long buff)
 		complete_command(read_std);
 	else
 	{
+		(*read_std)->cmd = last_cmd((*read_std)->cmd);
+		(*read_std)->print = 2;
+		print_struct(*read_std);
+		insert_one_line();
 		if (!(check_cmd(read_std)))
+		{
 			(*read_std)->finish = 1;
+		}
 		else
 		{
 			(*read_std)->print = 2;
-			(*read_std)->history = 0;
-			(*read_std)->cmd = last_cmd((*read_std)->cmd);
+			(*read_std)->cur.line = 1;
 			key_print_fct((*read_std)->cmd, buff);
-			insert_one_line();
+			(*read_std)->history = 0;
 		}
 	}
 	return (1);

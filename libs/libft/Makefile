@@ -61,6 +61,7 @@ SRCS = \
 	   ft_filetostr.c			\
 	   ft_ftoa.c				\
 	   ft_isalnum.c				\
+	   ft_iscrlf.c				\
 	   ft_isalpha.c				\
 	   ft_isascii.c				\
 	   ft_isdigit.c				\

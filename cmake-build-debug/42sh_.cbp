@@ -153,6 +153,9 @@
 		<Unit filename="/Users/aroulin/42sh_/libs/libft/srcs/ft_isascii.c">
 			<Option target="42sh_"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh_/libs/libft/srcs/ft_iscrlf.c">
+			<Option target="42sh_"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh_/libs/libft/srcs/ft_isdigit.c">
 			<Option target="42sh_"/>
 		</Unit>

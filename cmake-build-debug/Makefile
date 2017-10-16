@@ -555,6 +555,33 @@ libs/libft/srcs/ft_isascii.c.s:
 	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/libs/libft/srcs/ft_isascii.c.s
 .PHONY : libs/libft/srcs/ft_isascii.c.s
 
+libs/libft/srcs/ft_iscrlf.o: libs/libft/srcs/ft_iscrlf.c.o
+
+.PHONY : libs/libft/srcs/ft_iscrlf.o
+
+# target to build an object file
+libs/libft/srcs/ft_iscrlf.c.o:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/libs/libft/srcs/ft_iscrlf.c.o
+.PHONY : libs/libft/srcs/ft_iscrlf.c.o
+
+libs/libft/srcs/ft_iscrlf.i: libs/libft/srcs/ft_iscrlf.c.i
+
+.PHONY : libs/libft/srcs/ft_iscrlf.i
+
+# target to preprocess a source file
+libs/libft/srcs/ft_iscrlf.c.i:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/libs/libft/srcs/ft_iscrlf.c.i
+.PHONY : libs/libft/srcs/ft_iscrlf.c.i
+
+libs/libft/srcs/ft_iscrlf.s: libs/libft/srcs/ft_iscrlf.c.s
+
+.PHONY : libs/libft/srcs/ft_iscrlf.s
+
+# target to generate assembly for a file
+libs/libft/srcs/ft_iscrlf.c.s:
+	$(MAKE) -f CMakeFiles/42sh_.dir/build.make CMakeFiles/42sh_.dir/libs/libft/srcs/ft_iscrlf.c.s
+.PHONY : libs/libft/srcs/ft_iscrlf.c.s
+
 libs/libft/srcs/ft_isdigit.o: libs/libft/srcs/ft_isdigit.c.o
 
 .PHONY : libs/libft/srcs/ft_isdigit.o
@@ -6444,6 +6471,9 @@ help:
 	@echo "... libs/libft/srcs/ft_isascii.o"
 	@echo "... libs/libft/srcs/ft_isascii.i"
 	@echo "... libs/libft/srcs/ft_isascii.s"
+	@echo "... libs/libft/srcs/ft_iscrlf.o"
+	@echo "... libs/libft/srcs/ft_iscrlf.i"
+	@echo "... libs/libft/srcs/ft_iscrlf.s"
 	@echo "... libs/libft/srcs/ft_isdigit.o"
 	@echo "... libs/libft/srcs/ft_isdigit.i"
 	@echo "... libs/libft/srcs/ft_isdigit.s"

@@ -40,13 +40,12 @@ int			key_print_(t_read **read_std, unsigned long *buff)
 	unsigned char		c;
 
 	log_trace("key_print function [%lu]", *buff);
-	if (!(*read_std)->history_search)
-		add_outstanding(NULL, PRINT_KEY, *buff);
 	while (*buff)
 	{
 		c = (unsigned char)(*buff % (UCHAR_MAX + 1));
 		*buff /= (UCHAR_MAX + 1);
-		if (c == 10)
+		log_trace("Char have to be traited frere [%d][%c]",c,c);
+		if (ft_iscrlf(c))
 			return (key_enter_(read_std, c));
 		else if (ft_isprint(c))
 		{
@@ -57,7 +56,10 @@ int			key_print_(t_read **read_std, unsigned long *buff)
 				(*read_std)->history_search++;
 			}
 			else
+			{
+				add_outstanding(NULL, PRINT_KEY, *buff);
 				key_print_fct((*read_std)->cmd, c);
+			}
 		}
 	}
 	(*read_std)->print = 2;

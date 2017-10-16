@@ -25,19 +25,24 @@ int		shell(void)
 	add_hash("    Mon 21sh marche pas && du coup je le fais en group   ", "    Je suis Gregoire", 42);
 	add_hash("    Je suis malade et je parle avec un chatbot   ", "    Je suis Sofiane", 42);
 	builtin_hash((char *[]){"hash", "------", "-eqweqw q-ewq-e-qw", NULL}, NULL);
-	
+
+	input = NULL;
+	parse_struct = NULL;
+	command = NULL;
+	env = NULL;
 	while (42)
 	{
+		ft_strdel(&input);
+		ft_memdel_tab(&(env));
+		ft_memdel_tab(&(command));
+		lstdel(&parse_struct);
 		if (!(input = read_stdin(DEFAULT)))
 			continue ;
 		command = ft_strsplit(input, 32);
 		env = builtin_env(command);
 		check_if_builtin(command , env);
-		ft_memdel_tab(&(env));
-		ft_memdel_tab(&(command));
 		if (!(parse_struct = parsing(input)))
 			continue ;
-		ft_strdel(&input);
-		lstdel(&parse_struct);
+
 	}
 }

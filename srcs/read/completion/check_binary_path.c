@@ -28,6 +28,8 @@ int			check_word(t_cmd *cmd)
 {
 	if (cmd->c == '.' || cmd->c == '/')
 		return (0);
+	if (is_token(cmd->c))
+		return (1);
 	while (cmd->prev)
 	{
 		if (cmd->prev->c == 32)
@@ -36,7 +38,7 @@ int			check_word(t_cmd *cmd)
 			{
 				if (is_token(cmd->prev->c))
 					return (1);
-				else if (ft_isalnum(cmd->prev->c))
+				else if (cmd->prev->c == 32)
 					return (0);
 				cmd = cmd->prev;
 			}
