@@ -31,7 +31,7 @@ t_cmp		g_to_do[] = {
 		(t_cmp){META_B, key_shift_right},
 		(t_cmp){META_F, key_shift_left},
 		(t_cmp){ARROW_LEFT, key_arrow_right},
-		(t_cmp){ARROW_RIGHT, key_arrow_left},
+		(t_cmp){ARROW_RIGHT, key_arrow_left}, 
 		(t_cmp){SHIFT_UP_KEY, key_shift_down},
 		(t_cmp){SHIFT_DOWN_KEY, key_shift_up},
 		(t_cmp){SHIFT_RIGHT_KEY, key_shift_left},
