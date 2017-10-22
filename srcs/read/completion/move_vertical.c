@@ -21,14 +21,14 @@ static inline void		change_page(t_read **read_std)
 
 static inline void		change_element(t_read **read_std, t_file *tmp)
 {
-	SAVE;
-	MV_BOT;
+	tputs(tgetstr("sc", 0), STDIN_FILENO, &my_put);
+	tputs(tgetstr(MV_BOT, 0), STDIN_FILENO, &my_put);
 	print_element(tmp, 1);
 	tmp = (*read_std)->tab_->file;
 	while (tmp->index != (*read_std)->tab_->index)
 		tmp = tmp->next;
 	print_element(tmp, 0);
-	RESTORE;
+	tputs(tgetstr(RESTORE, 0), STDIN_FILENO, &my_put);
 }
 
 void					move_vertical(t_read **read_std, int pos)

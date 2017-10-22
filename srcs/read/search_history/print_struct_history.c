@@ -16,14 +16,14 @@ void         print_in_search_history(t_read *read_std)
 {
 	t_cmd       *cmd;
 
-	CURSOR_INVIS;
+	tputs(tgetstr(CURSOR_INVIS, 0), STDIN_FILENO, &my_put);
 	cmd = first_cmd(read_std->hist_search->cmd, 1);
-	CLEAR_FROM_CUR;
+	tputs(tgetstr(CLEAR_FROM_CUR, 0), STDIN_FILENO, &my_put);
 	read_std->hist_search->cur = prompt_history(last_resultat(-42));
 	print_list(1, cmd, read_std->hist_search->cmd, &(read_std->hist_search->cur));
     CHAR_FD('_', 2);
 	restore_cursor_(read_std->hist_search->cur);
-    CURSOR_BACK;
+    tputs(tgetstr(CURSOR_BACK, 0), STDIN_FILENO, &my_put);
 }
 
 int		print_struct_history(t_read **read_std)

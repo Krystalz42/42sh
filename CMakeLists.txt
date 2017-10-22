@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(42sh_)
+project(42sh)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -25,6 +25,7 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_isalnum.c
         libs/libft/srcs/ft_isalpha.c
         libs/libft/srcs/ft_isascii.c
+        libs/libft/srcs/ft_iscrlf.c
         libs/libft/srcs/ft_isdigit.c
         libs/libft/srcs/ft_islower.c
         libs/libft/srcs/ft_isprint.c
@@ -133,14 +134,19 @@ set(SOURCE_FILES
         srcs/cores/var_return.c
         srcs/env/add_environment.c
         srcs/env/init_env.c
+        srcs/env/initialise_environment.c
         srcs/env/manage_env.c
         srcs/env/my_getenv.c
         srcs/env/remove_environment.c
         srcs/env/usage_environment.c
         srcs/error_function/bip.c
+        srcs/error_function/error_env.c
         srcs/error_function/puterror.c
+        srcs/execution/builtins_functions/builtin_hash.c
         srcs/execution/builtins_functions/builtin_history.c
         srcs/execution/builtins_functions/builtin_jobs.c
+        srcs/execution/builtins_functions/builtin_switch.c
+        srcs/execution/check_if_builtins.c
         srcs/hash/built_in_hash.c
         srcs/hash/get_str_from_hash.c
         srcs/hash/hash_board.c
@@ -171,6 +177,7 @@ set(SOURCE_FILES
         srcs/parsing/lexing.c
         srcs/parsing/lib.c
         srcs/parsing/operaters.c
+        srcs/parsing/parsing.c
         srcs/parsing/redirections.c
         srcs/parsing/stds.c
         srcs/parsing/tools.c
@@ -194,6 +201,7 @@ set(SOURCE_FILES
         srcs/read/key_/key_del_buff.c
         srcs/read/key_/key_delete.c
         srcs/read/key_/key_delete_here.c
+        srcs/read/key_/key_downcase_word.c
         srcs/read/key_/key_enter.c
         srcs/read/key_/key_eof.c
         srcs/read/key_/key_home_end.c
@@ -207,6 +215,7 @@ set(SOURCE_FILES
         srcs/read/key_/key_shift.c
         srcs/read/key_/key_tabulation.c
         srcs/read/key_/key_undo.c
+        srcs/read/key_/key_upcase_word.c
         srcs/read/key_/key_yank.c
         srcs/read/other_read/check_cmd.c
         srcs/read/other_read/finish_read_std.c
@@ -223,6 +232,7 @@ set(SOURCE_FILES
         srcs/read/other_read/prompt.c
         srcs/read/other_read/read_stdin.c
         srcs/read/other_read/restore_cursor.c
+        srcs/read/other_read/signal_reception.c
         srcs/read/outstanding/add_outstanding.c
         srcs/read/outstanding/get_os_pointer.c
         srcs/read/search_history/compare_history.c
@@ -237,11 +247,11 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/parsing/parsing.c srcs/execution/builtins_functions/builtin_hash.c srcs/execution/check_if_builtins.c srcs/error_function/error_env.c srcs/env/initialise_environment.c srcs/execution/builtins_functions/builtin_switch.c libs/libft/srcs/ft_iscrlf.c srcs/read/other_read/signal_reception.c srcs/read/key_/key_upcase_word.c srcs/read/key_/key_downcase_word.c)
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)
 include_directories(libs/logger/incs)
 include_directories(libs/printf/incs)
 
-add_executable(42sh_ ${SOURCE_FILES})
+add_executable(42sh ${SOURCE_FILES})

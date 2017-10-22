@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/24 16:43:48 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 19:18:26 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/10/18 21:57:36 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,25 @@ static int		empty_cmd(t_cmd *cmd)
 	return (1);
 }
 
+static char 	*return_line(t_read **read_std)
+{
+	char		*line;
+
+	if (*read_std)
+	{
+		(*read_std)->finish = 0;
+		if (get_len_prompt(-42) != -2)
+			make_list_hist((*read_std));
+		key_end_(read_std, 0);
+		print_struct(*read_std);
+		line = convert_to_str(first_cmd((*read_std)->cmd, 1));
+		if (get_len_prompt(-42) == -2)
+			memdel_read(read_std);
+		return (line);
+	}
+	return (NULL);
+}
+
 char			*finish_read_std(t_read **read_std)
 {
 	t_cmd		*tmp;
@@ -61,13 +80,5 @@ char			*finish_read_std(t_read **read_std)
 			NL;
 		memdel_read(read_std);
 	}
-	else
-	{
-		(*read_std)->finish = 0;
-		make_list_hist((*read_std));
-		key_end_(read_std, KEY_END);
-		print_struct(*read_std);
-		return (convert_to_str(first_cmd((*read_std)->cmd, 1)));
-	}
-	return (NULL);
+	return (return_line(read_std));
 }

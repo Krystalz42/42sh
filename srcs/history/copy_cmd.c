@@ -20,7 +20,7 @@ void			copy_cmd(t_read **read_std, t_cmd *cpy)
 	(*read_std)->cmd = cmd;
 	(*read_std)->cmd = create_element('\0');
 	cpy = first_cmd(cpy, 1);
-	while (cpy)
+	while (cpy->c)
 	{
 		key_print_fct((*read_std)->cmd, cpy->c);
 		cpy = cpy->next;

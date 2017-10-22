@@ -14,7 +14,8 @@
 
 void			my_execve(char **command, char **env)
 {
-	log_info("Will execute [%s] PID [%d] PPID [%d] in my_execve ", command[0], getpid(), getpgid(0));
+	reset_signal();
+	log_info("Will execute [%s] PID [%d] PPID [%d] PGID [%d] in my_execve ", command[0], getpid(), getppid(), getpgid(0));
 	if ((execve(command[0], command, env)) == -1)
 		exit(EXIT_FAILURE);
 }

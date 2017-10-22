@@ -48,6 +48,7 @@
 # define PRINT_JOBS				16
 # define FOREGROUND				32
 # define BACKGROUND				64
+# define GET_INDEX				128
 
 
 /*
@@ -100,16 +101,17 @@
 # define PATH_HASH				"/.42sh_hash"
 # define PATH_ERR				"/dev/null"
 
-# define MV_RIGHT				tputs(tgetstr("nd", 0), 0, &my_put)
-# define MV_LEFT				tputs(tgetstr("le", 0), 0, &my_put)
-# define MV_BOT					tputs(tgetstr("do", 0), 0, &my_put)
-# define MV_TOP					tputs(tgetstr("up", 0), 0, &my_put)
-# define SAVE 					tputs(tgetstr("sc", 0), 0, &my_put)
-# define RESTORE				tputs(tgetstr("rc", 0), 0, &my_put)
-# define CURSOR_INVIS			tputs(tgetstr("vi", 0), 0, &my_put)
-# define CURSOR_BACK			tputs(tgetstr("ve", 0), 0, &my_put)
-# define CLEAR_FROM_CUR			tputs(tgetstr("cd", 0), 0, &my_put)
-# define BACK_N					tputs(tgetstr("cr", 0), 0, &my_put)
-# define CLEAR					tputs(tgetstr("cl", 0), 0, &my_put)
+# define MV_LEFT				"le"
+# define MV_BOT					"do"
+# define MV_TOP					"up"
+# define SAVE 					"sc"
+# define RESTORE				"rc"
+# define CURSOR_INVIS			"vi"
+# define CURSOR_BACK			"ve"
+# define CLEAR_FROM_CUR			"cd"
+# define BACK_N					"cr"
+# define MV_RIGHT				"nd"
+
+# define CLEAR					"cl"
 
 #endif

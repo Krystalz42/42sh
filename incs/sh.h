@@ -276,13 +276,12 @@ void						chk_quotes(char c, char quote, const int *flag,
 /*
 **				JOB'S CONTROL FUNCTION
 */
-void						put_in_background(t_jobs *jobs, t_jobs jobs_id);
-void						put_in_foreground(t_jobs *jobs, t_jobs jobs_id);
 void						update_status(t_process *identify);
 void						my_execve(char **command, char **env);
-int							jobs_control(unsigned int flags, t_jobs jobs_id,
-										int sig);
 void						my_wait(t_jobs jobs_id);
+void						put_in_foreground(t_jobs *jobs, pid_t jobs_id);
+void						put_in_background(t_jobs *jobs,pid_t jobs_id);
+int							jobs_control(unsigned int flags, t_jobs jobs_id, int sig);
 void						full_update(t_jobs *jobs);
 int							add_new_child(t_jobs *jobs, t_jobs jobs_id);
 void						reset_process(t_process *to_kill);

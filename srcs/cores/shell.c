@@ -41,6 +41,7 @@ int		shell(void)
 		command = ft_strsplit(input, 32);
 		env = builtin_env(command);
 		check_if_builtin(command , env);
+		log_error("Passage au parsing");
 		if (!(parse_struct = parsing(input)))
 			continue ;
 

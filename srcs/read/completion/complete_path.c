@@ -30,11 +30,11 @@ int			place_cursor(t_read **read_std, int t)
 		reset(read_std, 0);
 		(*read_std)->cur.save = save;
 		insert_one_line();
-		CLEAR_FROM_CUR;
+		tputs(tgetstr(CLEAR_FROM_CUR, 0), STDIN_FILENO, &my_put);
 	}
 	else
 	{
-		MV_TOP;
+		tputs(tgetstr(MV_TOP, 0), STDIN_FILENO, &my_put);
 		reset(read_std, 1);
 	}
 	return (1);

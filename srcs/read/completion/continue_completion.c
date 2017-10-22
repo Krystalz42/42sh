@@ -17,8 +17,8 @@ void			back_completion(t_read **read_std)
 	t_file	*tmp;
 
 	tmp = (*read_std)->tab_->file;
-	SAVE;
-	MV_BOT;
+	tputs(tgetstr(SAVE, 0), STDIN_FILENO, &my_put);
+	tputs(tgetstr(MV_BOT, 0), STDIN_FILENO, &my_put);
 	while (tmp)
 	{
 		if (tmp->index == (*read_std)->tab_->index)
@@ -34,7 +34,7 @@ void			back_completion(t_read **read_std)
 		}
 		tmp = tmp->next;
 	}
-	RESTORE;
+	tputs(tgetstr(RESTORE, 0), STDIN_FILENO, &my_put);
 }
 
 void			continue_completion(t_read **read_std)
@@ -42,8 +42,8 @@ void			continue_completion(t_read **read_std)
 	t_file	*tmp;
 
 	tmp = (*read_std)->tab_->file;
-	SAVE;
-	MV_BOT;
+	tputs(tgetstr("sc", 0), STDIN_FILENO, &my_put);
+	tputs(tgetstr(MV_BOT, 0), STDIN_FILENO, &my_put);
 	while (tmp)
 	{
 		if (tmp->index == (*read_std)->tab_->index)
@@ -55,5 +55,5 @@ void			continue_completion(t_read **read_std)
 		}
 		tmp = tmp->next;
 	}
-	RESTORE;
+	tputs(tgetstr(RESTORE, 0), STDIN_FILENO, &my_put);
 }

@@ -68,41 +68,38 @@ uint8_t			print_jobs(t_jobs *jobs, int option)
 	return ((uint8_t)(print ? 0 : error_jobs()));
 }
 
-void			put_in_foreground(t_jobs *jobs, t_jobs jobs_id)
+void			put_in_foreground(t_jobs *jobs, pid_t jobs_id)
 {
 	int index;
 
-	log_error("In Foreground [%d]", jobs_id.father.pid);
+	log_error("In Foreground [%d]", jobs_id);
 	index = MAX_CHILD;
-	if (jobs_id.father.pid != -1)
-		index = jobs_id.father.pid;
+	if (jobs_id != -1)
+		index = jobs_id;
 	else
 		while (index >= 0 && !(jobs[index].father.pid &&
 				!jobs[index].father.foreground))
 			index--;
-	if (index != -1 && !var_return(0))
+	if (index != -1)
 	{
 		modify_foreground(&(jobs[index]), true);
 		if (jobs[index].father.running == false)
 			kill(-jobs[index].father.pgid, SIGCONT);
 		modify_runing(&(jobs[index]), true);
-		full_update(jobs);
-		waitpid(jobs[index].father.pid, &(jobs[index].father.status),
-				WUNTRACED);
-		jobs_control(UPDATE_CHILD, jobs[index], 0);
+		jobs_control(UPDATE_CHILD, jobs[index], WUNTRACED | WCONTINUED);
 	}
 	else if (var_return(1))
 		STR_FD("fg: no current job\n", STDERR_FILENO);
 }
 
-void			put_in_background(t_jobs *jobs, t_jobs jobs_id)
+void			put_in_background(t_jobs *jobs, pid_t jobs_id)
 {
 	int index;
 
 	log_error("In background");
 	index = MAX_CHILD;
-	if (jobs_id.father.pid != -1)
-		index = jobs_id.father.pid;
+	if (jobs_id != -1)
+		index = jobs_id;
 	else
 		while (index >= 0 && !(jobs[index].father.pid &&
 				!jobs[index].father.running && !jobs[index].father.foreground))
@@ -111,10 +108,7 @@ void			put_in_background(t_jobs *jobs, t_jobs jobs_id)
 	{
 		modify_foreground(&(jobs[index]), false);
 		modify_runing(&(jobs[index]), true);
-		full_update(jobs);
-		waitpid(jobs[index].father.pid, &(jobs[index].father.status),
-			WUNTRACED | WCONTINUED | WNOHANG);
-		jobs_control(UPDATE_CHILD, jobs[index], 0);
+		jobs_control(UPDATE_CHILD, jobs[index], WUNTRACED | WCONTINUED | WNOHANG);
 	}
 	else if (var_return(1))
 		STR_FD("bg: no current job\n", STDERR_FILENO);

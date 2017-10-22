@@ -23,8 +23,8 @@ int			main(int ac, char **av)
 	init_term();
 	write_history_in_sh(get_str_from_history());
 	init_signal();
-//	test_cmd();
-	shell();
+	test_cmd();
+//	shell();
 	b_write_history_in_file(get_str_from_history());
 	logger_close();
 	return (0);
@@ -34,11 +34,12 @@ t_process		init_jobs(pid_t child, pid_t parent_pid, bool foreground, char *comma
 	t_process		identify;
 
 	setpgid(child, parent_pid);
+	if (child == parent_pid)
+	log_trace("Return tcsetpgrp(%d) of %d", tcsetpgrp(init_fd(), parent_pid), parent_pid);
 	identify = (t_process){child, getpgid(child), 0, foreground, true, ft_strdup(command)};
-	waitpid(child, &identify.status, WNOHANG);
 	return (identify);
 }
-void my_execute(char **command, bool foreground)
+void my_execute(char **command, char **env, bool foreground)
 {
 	pid_t child;
 	t_jobs jobs;
@@ -54,7 +55,8 @@ void my_execute(char **command, bool foreground)
 	}
 	else
 	{
-		my_execve(command, env_table(NULL, ENV_REC));
+		setpgrp();
+		my_execve(command, env);
 	}
 }
 
@@ -78,12 +80,14 @@ void my_execute_pipe(char **command, char **command1, bool foreground)
 			perror("");
 		else if (child1)
 		{
+
 			jobs.child[0] = init_jobs(child1, child, foreground, *command1);
 			my_wait(jobs);
 		}
 		else
 		{
-			setpgid(0,child);
+
+			setpgid(0, child);
 			close(fildes[1]);
 			dup2(fildes[0], STDIN_FILENO);
 			close(fildes[0]);
@@ -92,7 +96,7 @@ void my_execute_pipe(char **command, char **command1, bool foreground)
 	}
 	else
 	{
-		setpgid(0,0);
+		setpgid(0, child);
 		close(fildes[0]);
 		dup2(fildes[1], STDOUT_FILENO);
 		close(fildes[1]);
@@ -104,6 +108,7 @@ void my_execute_pipe(char **command, char **command1, bool foreground)
 void test_cmd()
 {
 	char *lsl[] = {"/bin/ls", "-lR", "/", NULL};
+	char *wc[] = {"/usr/bin/wc", NULL};
 	char *ls[] = {"/bin/ls", "-l", NULL};
 	char *cat[] = {"/bin/cat", "-e", NULL};
 	char *vim[] = {"/usr/bin/vim", NULL};
@@ -114,6 +119,7 @@ void test_cmd()
 	char *jobsS[] = {"jobs", "-s", NULL};
 	char *my_shell[] = {"./42sh", NULL};
 
+	(void)wc;
 	(void)jobs;
 	(void)my_shell;
 	(void)jobsR;
@@ -125,19 +131,13 @@ void test_cmd()
 	(void)cat;
 	(void)lsl;
 	int i = 1;
-	log_success("Mon PID [%d] && MOn PPID [%d]", getpid(), getpgid(getpid()));
+	log_success("Mon PID [%d] && Mon PPID [%d] && Mon PGID [%d]", getpid(), getppid(), getpgid(getpid()));
 	while (i)
 	{
 		read_stdin(DEFAULT);
-		pid_t lol = fork();
-		if (lol)
-		{
-			wait(0);
-		} else
-		{
-			builtin_history((char *[]){"history", NULL}, NULL);
-			exit(0);
-		}
+		my_execute_pipe(cat , ls, true);
 		read_stdin(DEFAULT);
-	}
+		jobs_control(FOREGROUND, new_jobs(0), -1);
+		read_stdin(DEFAULT);
+		}
 }

@@ -27,7 +27,7 @@ t_cursor					prompt(unsigned char flags)
 {
 	static char		*prompt;
 
-	if (flags & HEREDOC && get_len_prompt(-1))
+	if (flags & HEREDOC && get_len_prompt(-2))
 		prompt = "heredoc > ";
 	else if (flags & DQUOTE && get_len_prompt(-1))
 		prompt = "dquote > ";
@@ -39,6 +39,6 @@ t_cursor					prompt(unsigned char flags)
 		prompt = my_prompt(NULL);
 	if (flags & PRINT)
 		STR_FD(prompt, 2);
-	return (init_cursor((get_len_prompt(-42) == -1) ? (int)ft_strlen(prompt) :
-	        get_len_prompt(-42)));
+	return (init_cursor((get_len_prompt(-42) < 0) ? (int)ft_strlen(prompt) :
+			get_len_prompt(-42)));
 }

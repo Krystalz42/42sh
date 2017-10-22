@@ -17,13 +17,13 @@ int			my_tobackto(int li, int co)
 	if (li >= 0)
 		while (li)
 		{
-			MV_TOP;
+			tputs(tgetstr(MV_TOP, 0), STDIN_FILENO, &my_put);
 			li--;
 		}
 	if (co >= 0)
 		while (co)
 		{
-			MV_LEFT;
+			tputs(tgetstr(MV_LEFT, 0), STDIN_FILENO, &my_put);
 			co--;
 		}
 
@@ -35,13 +35,13 @@ int			my_togo(int li, int co)
 	if (li >= 0)
 		while (li)
 		{
-			MV_BOT;
+			tputs(tgetstr(MV_BOT, 0), STDIN_FILENO, &my_put);
 			li--;
 		}
 	if (co >= 0)
 		while (co)
 		{
-			MV_RIGHT;
+			tputs(tgetstr(MV_RIGHT, 0), STDIN_FILENO, &my_put);
 			co--;
 		}
 	return (1);

@@ -38,12 +38,14 @@ int			add_new_child(t_jobs *jobs, t_jobs jobs_id)
 	int			index;
 
 	index = MAX_CHILD;
-	while (index >= 0 && !jobs[index].father.pid)
+	while (index >= 0 && jobs[index].father.pid == 0)
 		index--;
 	if (index != MAX_CHILD)
 	{
 		jobs[index + 1] = jobs_id;
 		pjt(jobs_id, index + 1);
+		return (index + 2);
 	}
-	return (index + 2);
+	else
+		return (-1);
 }

@@ -28,7 +28,8 @@ int			key_print_fct(t_cmd *cmd, char c)
 	t_cmd			*element;
 
 	element = create_element(c);
-	element->prev = cmd->prev;element->next = cmd;
+	element->prev = cmd->prev;
+	element->next = cmd;
 	if (cmd->prev)
 		cmd->prev->next = element;
 	cmd->prev = element;
@@ -39,7 +40,6 @@ int			key_print_(t_read **read_std, unsigned long *buff)
 {
 	unsigned char		c;
 
-	log_trace("key_print function [%lu]", *buff);
 	if (!(*read_std)->history_search)
 		add_outstanding(NULL, PRINT_KEY, *buff);
 	else
@@ -54,13 +54,11 @@ int			key_print_(t_read **read_std, unsigned long *buff)
 		{
 			if ((*read_std)->history_search)
 			{
-				log_trace("HIST Char have to be traited frere [%d][%c]",c,c);
 				key_print_fct((*read_std)->hist_search->cmd, c);
 				compare_history(read_std);
 			}
 			else
 			{
-				log_trace("REAL Char have to be traited frere [%d][%c]",c,c);
 				key_print_fct((*read_std)->cmd, c);
 				(*read_std)->print = 2;
 			}

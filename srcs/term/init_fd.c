@@ -16,7 +16,7 @@ int		init_fd(void)
 {
 	static int fd;
 
-	if (!(fd) && (fd = open(ttyname(STDIN_FILENO), O_RDWR)) == -1)
+	if (!(fd) && (fd = open(ttyname(STDIN_FILENO), O_WRONLY)) == -1)
 		STR_FD("Failed to open a tty\n", 2);
 	return (fd);
 }

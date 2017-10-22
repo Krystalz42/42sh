@@ -14,9 +14,9 @@
 
 void		restore_cursor_(t_cursor cur)
 {
-    BACK_N;
+    tputs(tgetstr(BACK_N, 0), STDIN_FILENO, &my_put);
     while (--cur.co > 0)
-        MV_LEFT;
+        tputs(tgetstr(MV_LEFT, 0), 0, &my_put);
     while (--cur.line > 0)
-        MV_TOP;
+        tputs(tgetstr(MV_TOP, 0), STDIN_FILENO, &my_put);
 }

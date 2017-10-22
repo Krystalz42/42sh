@@ -14,7 +14,7 @@
 
 int			key_clear_(t_read **read_std, unsigned long buff)
 {
-	CLEAR;
+	tputs(tgetstr(CLEAR, 0), STDIN_FILENO, &my_put);
 	(void)buff;
 	if ((*read_std)->completion)
 	{

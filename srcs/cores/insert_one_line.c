@@ -14,6 +14,6 @@
 
 void		insert_one_line(void)
 {
-	MV_BOT;
+	tputs(tgetstr(MV_BOT, 0), STDIN_FILENO, &my_put);
 	tputs(tgetstr("al", 0), 0, &my_put);
 }

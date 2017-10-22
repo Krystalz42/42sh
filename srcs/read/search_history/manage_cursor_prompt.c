@@ -29,11 +29,11 @@ int				new_line_after_bloc(t_read **read_std, int to)
 		save = (*read_std)->cur.line;
 		reset(read_std, 0);
 		(*read_std)->cur.line = save;
-		MV_BOT;
+		tputs(tgetstr(MV_BOT, 0), STDIN_FILENO, &my_put);
 	}
 	else
 	{
-		MV_TOP;
+		tputs(tgetstr(MV_TOP, 0), STDIN_FILENO, &my_put);
 		reset(read_std, 1);
 	}
 	return (1);

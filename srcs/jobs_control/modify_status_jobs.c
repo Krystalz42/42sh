@@ -17,10 +17,10 @@ void		modify_runing(t_jobs *jobs, int change)
 	int			index;
 
 	index = 0;
-	jobs->father.running = change;
-	while (jobs->child[index].pid)
+	(*jobs).father.running = change;
+	while ((*jobs).child[index].pid)
 	{
-		jobs->child[index].running = change;
+		(*jobs).child[index].running = change;
 		index++;
 	}
 }
@@ -30,10 +30,10 @@ void		modify_foreground(t_jobs *jobs, int change)
 	int index;
 
 	index = 0;
-	jobs->father.foreground = change;
-	while (jobs->child[index].pid)
+	(*jobs).father.foreground = change;
+	while ((*jobs).child[index].pid)
 	{
-		jobs->child[index].foreground = change;
+		(*jobs).child[index].foreground = change;
 		index++;
 	}
 }
