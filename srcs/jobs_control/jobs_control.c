@@ -61,24 +61,24 @@ int					get_jobs_index(pid_t search)
 	}
 }
 
-void			print_status(t_process *process, int index)
+void			print_status(t_process *process, int jobs_spec)
 {
-	log_warn("/!\\  [PROCESS %d HAS BEEN MODIFY] /!\\", index);
-	int			index_child;
+	log_warn("/!\\  [PROCESS %d HAS BEEN MODIFY] /!\\", jobs_spec);
+	int			index;
 
-	index_child = 0;
-	while (process[index_child].pid)
+	index = 0;
+	while (process[index].pid)
 	{
-		index_child ? CHAR('\t') : ft_printf("[%d]\t", index + 1);
-		if (WIFEXITED(process[index_child].status))
-			ft_printf("%d %s %d %s\n", process[index_child].pid, WEXITSTATUS(process[index_child].status) ? "exit" : "done", WEXITSTATUS(process[index_child].status), process[index_child].command);
-		else if (WIFSIGNALED(process[index_child].status))
-			ft_printf("%d %s %d %s\n", process[index_child].pid, "killed", WTERMSIG(process[index_child].status), process[index_child].command);
-		else if (WIFCONTINUED(process[index_child].status))
-			ft_printf("%d %s %s\n", process[index_child].pid,"continued", process[index_child].command);
-		else if (WIFSTOPPED(process[index_child].status))
-			ft_printf("%d %s %d %s\n", process[index_child].pid, "suspended", WSTOPSIG(process[index_child].status), process[index_child].command);
-		index_child++;
+		index ? CHAR('\t') : ft_printf("[%d]\t", jobs_spec + 1);
+		if (WIFEXITED(process[index].status))
+			ft_printf("%d %s %d %s\n", process[index].pid, WEXITSTATUS(process[index].status) ? "exit" : "done", WEXITSTATUS(process[index].status), process[index].command);
+		else if (WIFSIGNALED(process[index].status))
+			ft_printf("%d %s %d %s\n", process[index].pid, "killed", WTERMSIG(process[index].status), process[index].command);
+		else if (WIFCONTINUED(process[index].status))
+			ft_printf("%d %s %s\n", process[index].pid,"continued", process[index].command);
+		else if (WIFSTOPPED(process[index].status))
+			ft_printf("%d %s %d %s\n", process[index].pid, "suspended", WSTOPSIG(process[index].status), process[index].command);
+		index++;
 	}
 	ioctl(STDIN_FILENO, TIOCSTI, "\16");
 }

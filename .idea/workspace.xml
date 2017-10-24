@@ -15,12 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d38057-4ed9-4568-a80f-42a71baa072b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/main.c" afterPath="$PROJECT_DIR$/srcs/cores/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/shell.c" afterPath="$PROJECT_DIR$/srcs/cores/shell.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/key_/key_enter.c" afterPath="$PROJECT_DIR$/srcs/read/key_/key_enter.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,14 +29,14 @@
     <favorites_list name="42sh" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44346178">
+    <splitter split-orientation="horizontal" split-proportion="0.9">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="jobs_control.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="76">
-                  <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+                <state relative-caret-position="1050">
+                  <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -81,7 +76,7 @@
             <entry file="file://$PROJECT_DIR$/incs/define.h">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="90">
-                  <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+                  <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -115,7 +110,7 @@
             <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="405">
-                  <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+                  <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
                   <folding>
                     <element signature="e#1202#1631#0" expanded="false" />
                   </folding>
@@ -157,7 +152,7 @@
             <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="405">
-                  <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+                  <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -167,7 +162,7 @@
             <entry file="file://$PROJECT_DIR$/srcs/read/other_read/check_cmd.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="960">
-                  <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+                  <caret line="64" column="23" lean-forward="false" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -242,7 +237,6 @@
       <replace>(*jobs)</replace>
       <replace>MV_BOT</replace>
       <replace>jobs[index]</replace>
-      <replace>index</replace>
       <replace>my_fork</replace>
       <replace>process[index].status</replace>
       <replace>(process[index].status)</replace>
@@ -251,6 +245,7 @@
       <replace>index_child</replace>
       <replace>STDIN_FILENO</replace>
       <replace>opt</replace>
+      <replace>index</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/libs/libft/srcs</dir>
@@ -364,10 +359,10 @@
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" />
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" />
-        <option value="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
         <option value="$PROJECT_DIR$/srcs/cores/main.c" />
         <option value="$PROJECT_DIR$/srcs/cores/shell.c" />
         <option value="$PROJECT_DIR$/srcs/read/key_/key_enter.c" />
+        <option value="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
       </list>
     </option>
   </component>
@@ -583,12 +578,12 @@
       <workItem from="1508680997040" duration="15499000" />
       <workItem from="1508707902997" duration="2289000" />
       <workItem from="1508759781150" duration="16036000" />
-      <workItem from="1508849267516" duration="18975000" />
+      <workItem from="1508849267516" duration="19243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268487000" />
+    <option name="totallyTimeSpent" value="268755000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -961,15 +956,7 @@
     <entry file="file://$PROJECT_DIR$/incs/define.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -977,7 +964,7 @@
     <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -985,7 +972,7 @@
     <entry file="file://$PROJECT_DIR$/srcs/read/other_read/check_cmd.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
-          <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+          <caret line="64" column="23" lean-forward="false" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -993,7 +980,7 @@
     <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
           <folding>
             <element signature="e#1202#1631#0" expanded="false" />
           </folding>
@@ -1012,6 +999,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
           <folding />
         </state>
       </provider>
