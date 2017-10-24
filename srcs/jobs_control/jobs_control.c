@@ -109,7 +109,6 @@ int				update_status(t_process *process)
 		log_trace("Status %d", status);
 		index++;
 	}
-	log_error("Return update_status %d", ret);
 	return (1);
 }
 
