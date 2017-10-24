@@ -17,7 +17,7 @@ void        insert_completion(t_read **read_std, t_file *tmp)
 	int		i;
 
 	i = -1;
-	((*read_std)->completion) && ((*read_std)->completion = 0);
+	(*read_std)->completion = 0;
 	if (!ft_strcmp((*read_std)->tab_->from, tmp->name) && (DT_DIR & tmp->type))
 		key_print_fct((*read_std)->cmd, '/');
 	else

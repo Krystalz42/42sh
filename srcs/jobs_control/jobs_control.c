@@ -139,9 +139,15 @@ void				handler_sigchld(int sig)
 			if (terminate_process(jobs[index].process))
 			{
 				log_warn("/!\\  [PROCESS %%%d TERMINATED] /!\\", index);
+				update_jobs(jobs[index].process, index);
 				reset_process(jobs[index].process);
-				pjt(jobs[index], index);
 			}
+			else
+			{
+				modify_runing(jobs[index].process, false);
+				modify_foreground(jobs[index].process, false);
+			}
+			pjt(jobs[index], index);
 		}
 		index--;
 	}

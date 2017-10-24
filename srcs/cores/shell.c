@@ -38,6 +38,7 @@ int		shell(void)
 		lstdel(&parse_struct);
 		if (!(input = read_stdin(DEFAULT)))
 			continue ;
+		STR(input);
 		command = ft_strsplit(input, 32);
 		//env = builtin_env(command);
 		check_if_builtin(command, env_table(NULL, ENV_REC));

@@ -23,8 +23,8 @@ int			main(int ac, char **av)
 	init_term();
 	write_history_in_sh(get_str_from_history());
 	init_signal();
-	test_cmd();
-//	shell();
+//	test_cmd();
+	shell();
 	b_write_history_in_file(get_str_from_history());
 	logger_close();
 	return (0);

@@ -22,7 +22,7 @@ uint8_t				fg_switch_process(t_jobs *jobs, int index, char *from)
 		{
 			kill(-(jobs[index].process->pgid), SIGCONT);
 			modify_runing(jobs[index].process, true);
-//			update_status(jobs[index].process);
+			update_status(jobs[index].process);
 			print_status(jobs[index].process, index);
 		}
 		wait_process(jobs[index].process, index);
