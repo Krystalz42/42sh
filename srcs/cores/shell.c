@@ -7,7 +7,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:56:07 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/29 16:34:46 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/10/24 16:32:35 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		shell(void)
 	t_parsing	*parse_struct;
 	char 		**command;
 	char 		**env;
-	
+
 	add_hash("    El patron  del job control   ", "    Je suis Alexandre", 42);
 	add_hash("    Je rm -rf mon 21sh OKLM  && jsuis content parceque je fais un cat << EOF  ", "    Je suis Jefferson", 42);
 	add_hash("    Mon 21sh marche pas && du coup je le fais en group   ", "    Je suis Gregoire", 42);
@@ -39,8 +39,8 @@ int		shell(void)
 		if (!(input = read_stdin(DEFAULT)))
 			continue ;
 		command = ft_strsplit(input, 32);
-		env = builtin_env(command);
-		check_if_builtin(command , env);
+		//env = builtin_env(command);
+		check_if_builtin(command, env_table(NULL, ENV_REC));
 		log_error("Passage au parsing");
 		if (!(parse_struct = parsing(input)))
 			continue ;

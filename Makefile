@@ -6,13 +6,13 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/10/23 18:57:08 by aroulin          ###   ########.fr        #
+#    Updated: 2017/10/24 15:46:05 by sbelazou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # ---------------------------------------------------------------------------- #
 # PROJECT CONFIGURATION                                                        #
-# ---------------------------------------------------------------------------- # 
+# ---------------------------------------------------------------------------- #
 # - The 'DIR*' variables describe all directories of the project.              #
 # ---------------------------------------------------------------------------- #
 
@@ -134,6 +134,15 @@ SRCS = \
 	   execution/builtins_functions/builtin_switch.c		\
 	   execution/builtins_functions/builtin_history.c		\
 	   execution/builtins_functions/builtin_hash.c			\
+	   execution/builtins_functions/data_builtin.c			\
+	   execution/builtins_functions/ft_cd.c					\
+	   execution/builtins_functions/ft_echo.c				\
+	   execution/builtins_functions/ft_env.c				\
+	   execution/builtins_functions/ft_setenv.c				\
+	   execution/builtins_functions/ft_unsetenv.c			\
+	   execution/builtins_functions/refresh_varenv.c		\
+	   execution/builtins_functions/utils.c					\
+	   execution/builtins_functions/error.c					\
 	   jobs_control/modify_status_jobs.c					\
 	   jobs_control/jobs_control.c							\
 	   jobs_control/builtins_jobs.c							\
@@ -167,7 +176,6 @@ SRCS = \
 	   error_function/bip.c									\
 	   error_function/puterror.c							\
 	   error_function/error_env.c							\
-
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #
@@ -286,7 +294,7 @@ clean		:
 	@$(RM) $(DIR_OBJS)
 	@$(RM) $(DIR_DEPS)
 	@printf "$(RED)[ Deleted directory ] $(RST)%s\n$(RED)[ Deleted directory ] $(RST)%s\n" $(DIR_DEPS) $(DIR_OBJS)
-	
+
 
 fclean		: fcleanlibs clean
 	@$(RM)	$(NAME)
@@ -321,7 +329,7 @@ $(DIR_OBJS)/%.o	:	$(DIR_SRCS)/%.c $(DIR_DEPS)/%.d
 	@mkdir -p $(dir $@)
 	@mkdir -p $(dir $(word 2, $^))
 	@printf "$(YEL)[ Checked ]$(RST) $(word 2,$^)\n"
-	@printf "$(GRN)[ Created ]$(RST) $@  \n" 
+	@printf "$(GRN)[ Created ]$(RST) $@  \n"
 	@$(COMPILE.c) $(OUTPUT_OPTION) $<
 	@$(POSTCOMPILE)
 

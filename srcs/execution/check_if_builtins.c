@@ -12,11 +12,11 @@ uint8_t env(char **c, char **e)
 }
 
 static const t_builtin	builtin[] = {
-	(t_builtin){"env", env},
-	(t_builtin){"setenv", NULL},
-	(t_builtin){"unsetenv", NULL},
-	(t_builtin){"cd", NULL},
-	(t_builtin){"echo", NULL},
+	(t_builtin){"env", ft_env},
+	(t_builtin){"setenv", ft_setenv},
+	(t_builtin){"unsetenv", ft_unsetenv},
+	(t_builtin){"cd", ft_cd},
+	(t_builtin){"echo", ft_echo},
 	(t_builtin){"jobs", builtin_jobs},
 	(t_builtin){"history", builtin_history},
 	(t_builtin){"hash", builtin_hash},
