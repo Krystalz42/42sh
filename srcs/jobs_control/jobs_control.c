@@ -77,39 +77,31 @@ void			print_status(t_process *process, int index)
 		else if (WIFCONTINUED(process[index_child].status))
 			ft_printf("%d %s %s\n", process[index_child].pid,"continued", process[index_child].command);
 		else if (WIFSTOPPED(process[index_child].status))
-			ft_printf("%d %s %d %s\n", process[index_child].pid, "suspend", WSTOPSIG(process[index_child].status), process[index_child].command);
+			ft_printf("%d %s %d %s\n", process[index_child].pid, "suspended", WSTOPSIG(process[index_child].status), process[index_child].command);
 		index_child++;
 	}
 	ioctl(STDIN_FILENO, TIOCSTI, "\16");
 }
-void	update_unique_status(t_process *process, int status, pid_t child)
-{
-	int				index;
 
-	index = 0;
-	log_warn("update_unique_status status %d child %d", status, child);
-	while (process[index].pid)
-	{
-		if (process[index].pid == child)
-			process[index].status = status;
-		index++;
-	}
-}
 int				update_status(t_process *process)
 {
-	int		status;
-	int		index;
+	int				ret;
+	int				index;
+	int				status;
 
 	index = 0;
+	ret = 0;
 	while (process[index].pid)
 	{
-		log_trace("Pid %d init_status : %d", process[index].pid, status);
-		if ((waitpid(process[index].pid, &status, WCONTINUED | WUNTRACED | WNOHANG)) > 0)
+		if ((waitpid(process[index].pid, &status, WCONTINUED | WNOHANG | WUNTRACED)) > 0)
+		{
+			ret = 1;
 			process[index].status = status;
-		log_trace("Status %d", status);
+		}
 		index++;
 	}
-	return (1);
+	log_trace("Return update_status %d", ret);
+	return (ret);
 }
 
 int					terminate_process(t_process *process)
@@ -121,12 +113,12 @@ int					terminate_process(t_process *process)
 	ret = 1;
 	while (process[index_child].pid)
 	{
-		log_trace("In terminated process for %d [%d.%d]",process[index_child].pid,WIFSIGNALED(process[index_child].status),WIFEXITED(process[index_child].status));
+		log_trace("In terminated process for %d [%d.%d]",process[index_child].pid, WIFSIGNALED(process[index_child].status), WIFEXITED(process[index_child].status));
 		if (!WIFSIGNALED(process[index_child].status) && !WIFEXITED(process[index_child].status))
 			ret = 0;
 		index_child++;
 	}
-	log_error("Return terminated_status %d", ret);
+	log_trace("Return terminated_status %d", ret);
 	return (ret);
 }
 
@@ -142,7 +134,7 @@ void				handler_sigchld(int sig)
 	{
 		if (jobs[index].process->pid && !jobs[index].process->foreground)
 		{
-			if (update_status(jobs[index].process) || terminate_process(jobs[index].process))
+			if (update_status(jobs[index].process))
 				print_status(jobs[index].process, index);
 			if (terminate_process(jobs[index].process))
 			{

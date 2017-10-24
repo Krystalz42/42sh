@@ -23,10 +23,8 @@ int			main(int ac, char **av)
 	init_term();
 	write_history_in_sh(get_str_from_history());
 	init_signal();
-	log_trace("Return tcgetpgrp (%d)", tcgetpgrp(STDIN_FILENO));
-	log_trace("Return tcsetpgrp (%d)", tcsetpgrp(STDIN_FILENO, getpgid(0)));
-//	test_cmd();
-	shell();
+	test_cmd();
+//	shell();
 	b_write_history_in_file(get_str_from_history());
 	logger_close();
 	return (0);
@@ -38,7 +36,7 @@ int			my_fork(t_process *process, pid_t parent, bool foreground, char *command)
 	process->running = true;
 	process->foreground = foreground;
 	process->command = ft_strdup(command);
-	log_debug("%s setpgid(%d, %d)", process->pid ? "Daddy" : "Fiston",process->pid, parent ? parent : process->pid);
+	log_trace("%s setpgid(%d, %d)", process->pid ? "Daddy" : "Fiston",process->pid, parent ? parent : process->pid);
 	setpgid(process->pid, parent ? parent : process->pid);
 	process->pgid = getpgid(process->pid);
 	return 0;
@@ -57,8 +55,8 @@ void my_execute(char **command, char **env, bool foreground)
 		;
 	else if (jobs[index].process->pid)
 	{
+		pjt(*jobs, index);
 		my_wait(index);
-
 	}
 	else
 	{
@@ -74,31 +72,28 @@ void my_execute_pipe(char **command, char **command1, bool foreground)
 
 	jobs = jobs_table();
 	index = get_jobs_index(-1);
-
-
-
 	pipe(fildes);
 	my_fork(jobs[index].process + 0, 0, foreground, *command1);
-	if (jobs[index].process[0].pid)
+	if (jobs[index].process[0].pid) //father
 	{
-		close(fildes[0]);
-		close(fildes[1]);
 		my_fork(jobs[index].process + 1, jobs[index].process[0].pid, foreground, *command);
-		if (jobs[index].process[1].pid)
+		if (jobs[index].process[1].pid) //father
 		{
-
+			close(fildes[0]);
+ 			close(fildes[1]);
 			pjt(*jobs, index);
 			my_wait(index);
 		}
-		else
+		else //child2 ls
 		{
+			close(fildes[0]);
 			dup2(fildes[1], STDOUT_FILENO);
+			close(fildes[1]);
 			my_execve(command, NULL);
 		}
 	}
-	else
+	else //child1 cat
 	{
-		jobs[index].process[0].pid = getpid();
 		close(fildes[1]);
 		dup2(fildes[0], STDIN_FILENO);
 		close(fildes[0]);
@@ -138,15 +133,24 @@ void test_cmd()
 	while (i)
 	{
 		read_stdin(DEFAULT);
-		my_execute_pipe(ls , cat, false); // ls -l | cat -e &
-		read_stdin(DEFAULT);
+//		builtin_jobs((char *[]){"jobs", "-rrpprpr", NULL},NULL);
+//		read_stdin(DEFAULT);
+//		my_execute(lsl, NULL, false); // ls -lR / &
+//		read_stdin(DEFAULT);
+//		read_stdin(DEFAULT);
+//		builtin_background((char *[]){"bg", NULL}, NULL); // bg
+//		my_execute_pipe(cat , ls, true); // ls -l | cat -e &
+//		read_stdin(DEFAULT);
 //		my_execute(ls_, NULL, false); // ls &
 //		read_stdin(DEFAULT);
 //		my_execute(ls_, NULL, true); // ls
 //		read_stdin(DEFAULT);
-//		my_execute(cat, NULL, false); // cat &
+		my_execute(cat, NULL, false); // cat &
 //		read_stdin(DEFAULT);
+		read_stdin(DEFAULT);
+		builtin_foreground((char *[]){"fg", NULL}, NULL); // fg
 //		my_execute(cat, NULL, true); // cat -e
 		read_stdin(DEFAULT);
+
 		}
 }

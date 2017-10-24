@@ -48,7 +48,6 @@ void pj(t_process identify, int index, char *inc);
 
 int							shell(void);
 void						insert_one_line(void);
-unsigned char				var_return(int ret);
 
 
 /*
@@ -69,7 +68,6 @@ int							print_list(int to_select, t_cmd *cmd,
 										t_cmd *stop, t_cursor *cur);
 void						restore_cursor_(t_cursor cur);
 int							check_cmd(t_read **read_std);
-int							reset_cur(t_cursor *cur);
 int							get_len_prompt(int len);
 t_cmd						*last_cmd(t_cmd *cmd);
 char						*finish_read_std(t_read **read_std);
@@ -97,16 +95,14 @@ unsigned int				*index_of_hash(void);
 char						*search_path(char *binary);
 void						add_hash(char *bin, char *path,
 														size_t index);
-char						*get_str_from_hash(void);
 
 /*
 **				BUILT IN FUNCTION
 */
 
-uint8_t						print_jobs(t_jobs *jobs, int option);
+int							check_if_builtin(char **command, char **env);
 uint8_t						builtin_background(char **command, char **env);
 uint8_t						builtin_foreground(char **command, char **env);
-int							check_if_builtin(char **command, char **env);
 uint8_t						hash_reset(void);
 uint8_t						hash_print(int fd);
 uint8_t						b_write_history(void);
@@ -285,14 +281,15 @@ void						my_execve(char **command, char **env);
 void						handler_sigchld(int sig);
 void						put_in_foreground(t_jobs *jobs, pid_t jobs_id);
 void						put_in_background(t_jobs *jobs,pid_t jobs_id);
-int							jobs_control(unsigned int flags, t_jobs jobs_id, int sig);
 int							get_jobs_index(pid_t search);
 void						my_wait(int index);
 void						reset_process(t_process *to_kill);
-void						update_unique_status(t_process *process, int status, pid_t child);
 int							terminate_process(t_process *process);
-
-
+void						modify_runing(t_process *process, bool change);
+void						modify_foreground(t_process *process, bool change);
+void						print_status(t_process *process, int index);
+void						wait_process(t_process *process, int index);
+void						set_fidles(pid_t pgid);
 
 /*
 **				SIGNAL FUNCTION

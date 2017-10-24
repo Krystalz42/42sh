@@ -42,7 +42,7 @@ static char				rec_brackets(t_cmd *cmd, char c)
 {
 	if (cmd == NULL)
 		return (!c ? (char)'\\' : c);
-	if (cmd->c == '\\')
+	if (cmd->c == '\\' && c != '\'')
 		return (rec_brackets(cmd->next->next, c));
 	if (launch_rec(cmd->c, c))
 		return (rec_brackets(cmd->next, cmd->c));
@@ -55,11 +55,9 @@ static char				rec_brackets(t_cmd *cmd, char c)
 
 int					check_cmd(t_read **read_std)
 {
-	t_cmd		*tmp;
 	char		c;
 
-	tmp = first_cmd((*read_std)->cmd, 1);
-	c = rec_brackets(tmp, '\0');
+	c = rec_brackets(first_cmd((*read_std)->cmd, 1), '\0');
 	if (c == '\'')
 		prompt(QUOTE);
 	else if (c == '\"')

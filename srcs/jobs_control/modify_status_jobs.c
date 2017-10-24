@@ -12,26 +12,26 @@
 
 #include <sh.h>
 
-void		modify_runing(t_jobs *jobs, int change)
+void		modify_runing(t_process *process, bool change)
 {
 	int			index;
 
 	index = 0;
-	while (jobs)
+	while (process[index].pid)
 	{
-		change++;
+		process[index].running = change;
 		index++;
 	}
 }
 
-void		modify_foreground(t_jobs *jobs, int change)
+void		modify_foreground(t_process *process, bool change)
 {
-	int index;
+	int			index;
 
 	index = 0;
-	while (jobs)
+	while (process[index].pid)
 	{
-		change++;
+		process[index].foreground = change;
 		index++;
 	}
 }

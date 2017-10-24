@@ -4,23 +4,43 @@
 
 #include <sh.h>
 
+uint8_t			print_jobs(t_jobs *jobs, int opt)
+{
+	int			index;
+
+	index = 0;
+	opt++;
+	while (index < MAX_CHILD)
+	{
+		if (jobs[index].process->pid)
+		{
+
+		}
+		index++;
+	}
+	return (0);
+}
+
 uint8_t			builtin_jobs(char **command, char **env)
 {
 	int			table;
-	int			option;
+	int			opt;
 	int			index;
 
-	option = 0;
+	opt = 0;
 	table = 1;
-	index = 0;
 	(void)env;
-	log_debug("Jobs'control builtins");
-	while (command[table] && command[table][index] == '-')
+	while (command[table] && command[table][0] == '-')
+	{
+		index = 0;
 		while (command[table][index])
 		{
-			option += (command[table][index] == 'p') ? 1 : 0;
-			option += (command[table][index] == 'r') ? 2 : 0;
-			option += (command[table][index] == 's') ? 4 : 0;
+			opt += (command[table][index] == 'p' && !(opt % 2)) ? 1 : 0;
+			opt += (command[table][index] == 'r' && (opt % 4 < 2)) ? 2 : 0;
+			opt += (command[table][index] == 's' && (opt < 4)) ? 4 : 0;
+			index++;
 		}
-	return (var_return(1));
+		table++;
+	}
+	return (var_return(print_jobs(jobs_table(), opt)));
 }
