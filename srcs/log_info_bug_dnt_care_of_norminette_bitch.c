@@ -18,9 +18,9 @@ void pjt(t_jobs jobs, int index)
 	i = 0;
 	while (jobs.process[i].pid)
 	{
-		log_trace("PID [%d] PGID [%d] RUNING [%d] FOREGROUND [%d] INDEX [%d] INDEX_CHILD [%d]", jobs.process[index].pid,jobs.process[index].pgid,jobs.process[index].running,jobs.process[index].foreground, index, i);
+		log_trace("PID [%d] PGID [%d] RUNING [%d] FOREGROUND [%d] INDEX [%d] INDEX_CHILD [%d]", jobs.process[i].pid,jobs.process[i].pgid,jobs.process[i].running,jobs.process[i].foreground, index, i);
 		i++;
 	}
 	if (i == 0)
-		log_trace("PID [%d] PGID [%d] RUNING [%d] FOREGROUND [%d] INDEX [%d] INDEX_CHILD [%d]", jobs.process[index].pid,jobs.process[index].pgid,jobs.process[index].running,jobs.process[index].foreground, index, i);
+		log_trace("PID [%d] PGID [%d] RUNING [%d] FOREGROUND [%d] i [%d] INDEX_CHILD [%d]", jobs.process[i].pid,jobs.process[i].pgid,jobs.process[i].running,jobs.process[i].foreground, index, i);
 }

@@ -81,7 +81,6 @@ static inline void		initialize_fct(t_read **read_std, unsigned char flags,
 static char 			*finitialize_fct(t_read **read_std)
 {
 	set_termios(SET_OLD_TERM);
-	reset_signal();
 	return (finish_read_std(read_std));
 
 }
@@ -103,6 +102,8 @@ char					*read_stdin(unsigned char flags)
 	{
 		index = -1;
 		log_trace("In read [%lu]",buf);
+		if (!buf)
+			sleep(1);
 		if (ft_isprint(buf % (UCHAR_MAX + 1)) || ft_iscrlf(buf % (UCHAR_MAX + 1)))
 			inline_print_(&read_std, &buf);
 		while (g_tab_are_key[++index].key)

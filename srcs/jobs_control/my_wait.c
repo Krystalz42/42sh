@@ -30,12 +30,12 @@ void		my_wait(int index)
 	jobs = jobs_table();
 	if (jobs[index].process->foreground)
 	{
-		log_trace("FG Return tcsetpgrp (%d)  of (%d)", tcsetpgrp(init_fd(), jobs[index].process->pgid), jobs[index].process->pgid);
+		log_trace("FG Return tcsetpgrp (%d)  of (%d)", tcsetpgrp(STDIN_FILENO, jobs[index].process->pgid), jobs[index].process->pgid);
 		if ((child = waitpid(-jobs[index].process[0].pgid, &status, WUNTRACED | WCONTINUED))> 0)
 			update_unique_status(jobs[index].process, status, child);
 		signal(SIGTTIN, SIG_IGN);
 		signal(SIGTTOU, SIG_IGN);
-		log_trace("Return tcsetpgrp (%d)  of (%d)", tcsetpgrp(init_fd(), getpgid(0)), getpgid(0));
+		log_trace("Return tcsetpgrp (%d)  of (%d)", tcsetpgrp(STDIN_FILENO, getpgid(0)), getpgid(0));
 		update_status(jobs[index].process);
 		if (terminate_process(jobs[index].process))
 			reset_process(jobs[index].process);
@@ -43,9 +43,8 @@ void		my_wait(int index)
 	else
 	{
 		print_info_jobs(jobs[index], index);
-		log_trace("BG Return tcsetpgrp (%d)  of (%d)", tcsetpgrp(init_fd(), jobs[index].process->pgid), jobs[index].process->pgid);
 		signal(SIGTTIN, SIG_IGN);
 		signal(SIGTTOU, SIG_IGN);
-		log_trace("Return tcsetpgrp (%d)  of (%d)", tcsetpgrp(init_fd(), getpgid(0)), getpgid(0));
+		log_trace("Return tcsetpgrp (%d)  of (%d)", tcsetpgrp(STDIN_FILENO, getpgid(0)), getpgid(0));
 	}
 }

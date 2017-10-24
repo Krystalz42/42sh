@@ -98,28 +98,19 @@ void	update_unique_status(t_process *process, int status, pid_t child)
 int				update_status(t_process *process)
 {
 	int		status;
-	int		ret;
 	int		index;
 
 	index = 0;
-	ret = 0;
 	while (process[index].pid)
 	{
-		status = process[index].status;
-		log_trace("Pid %d", process[index].pid);
-		log_trace("Status %d", status);
-		log_trace("Wait [%d]", waitpid(process[index].pid, &status, WNOHANG | WCONTINUED | WUNTRACED));
-		log_trace("Status %d", status);
-		if (status != process[index].status)
-		{
-			log_fatal("%d", status);
-			ret = 1;
+		log_trace("Pid %d init_status : %d", process[index].pid, status);
+		if ((waitpid(process[index].pid, &status, WCONTINUED | WUNTRACED | WNOHANG)) > 0)
 			process[index].status = status;
-		}
+		log_trace("Status %d", status);
 		index++;
 	}
 	log_error("Return update_status %d", ret);
-	return (ret);
+	return (1);
 }
 
 int					terminate_process(t_process *process)
@@ -131,7 +122,8 @@ int					terminate_process(t_process *process)
 	ret = 1;
 	while (process[index_child].pid)
 	{
-		if (!WIFSIGNALED(process[index_child].status) || !WIFEXITED(process[index_child].status))
+		log_trace("In terminated process for %d [%d.%d]",process[index_child].pid,WIFSIGNALED(process[index_child].status),WIFEXITED(process[index_child].status));
+		if (!WIFSIGNALED(process[index_child].status) && !WIFEXITED(process[index_child].status))
 			ret = 0;
 		index_child++;
 	}
