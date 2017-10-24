@@ -13,14 +13,14 @@ void pj(t_process identify, int index, char *inc)
 
 void pjt(t_jobs jobs, int index)
 {
-	int 	i;
+	int 		i;
 
 	i = 0;
-	log_info("Print Job's");
-	pj(jobs.father,index, "Parent ... ");
-	while (jobs.child[i].pid)
+	while (jobs.process[i].pid)
 	{
-		pj(jobs.child[i], i, "Child ...");
+		log_trace("PID [%d] PGID [%d] RUNING [%d] FOREGROUND [%d] INDEX [%d] INDEX_CHILD [%d]", jobs.process[index].pid,jobs.process[index].pgid,jobs.process[index].running,jobs.process[index].foreground, index, i);
 		i++;
 	}
+	if (i == 0)
+		log_trace("PID [%d] PGID [%d] RUNING [%d] FOREGROUND [%d] INDEX [%d] INDEX_CHILD [%d]", jobs.process[index].pid,jobs.process[index].pgid,jobs.process[index].running,jobs.process[index].foreground, index, i);
 }

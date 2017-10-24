@@ -12,171 +12,154 @@
 
 #include <sh.h>
 
-int 		getindex(t_jobs *jobs, pid_t find)
+t_jobs				*jobs_table(void)
 {
-	int			index;
+	static t_jobs		jobs[MAX_CHILD];
 
-	index = MAX_CHILD;
-	while (index >= 0)
-	{
-		if (jobs[index].father.pid == find)
-			return (index);
-		index--;
-	}
-	return (-1);
+	return (jobs);
 }
 
-void		print_info(t_process identify, uint8_t info)
+void			update_jobs(t_process *process, int index)
 {
-	int			index;
+	log_warn("/!\\  [PROCESS %d HAS BEEN FINISH] /!\\", index);
+	int			index_child;
 
-	(void)info;
-	index = jobs_control(GET_INDEX, new_jobs(-1), identify.pid);
-	if (identify.foreground == false)
-	{
-	}
-}
-
-void		update_status(t_process *identify)
-{
-	if (WIFEXITED(identify->status))
-	{
-		pj(*identify, 42, "EXITED");
-		var_return(WEXITSTATUS(identify->status));
-		reset_process(identify);
-	}
-	else if (WIFSIGNALED(identify->status))
-	{
-		pj(*identify, 42, "SIGNALED");
-		var_return(WTERMSIG(identify->status) + 128);
-		reset_process(identify);
-	}
-	else if (WIFCONTINUED(identify->status))
-	{
-		log_info("Continued [%d]", identify->pid);
-		identify->running = true;
-	}
-	else if (WIFSTOPPED(identify->status))
-	{
-		log_info("Stopped [%d] id [%d]", identify->pid, WSTOPSIG(identify->status));
-		identify->running = false;
-		identify->foreground = false;
-		var_return(WSTOPSIG(identify->status) + 128);
-	}
-	pj(*identify, 42, "UPDATE STATUS");
-}
-
-static void		send_signal(t_jobs *jobs, t_jobs jobs_id, int sig)
-{
-	int index;
-	char send[] ={sig,0};
-
-
-	index = MAX_CHILD;
-	log_error("SIGNAL_RECEPTION [%d] [%d]", sig, jobs_id.father.pid);
-	if (jobs_id.father.pid != -1)
-		index = jobs_id.father.pid;
-	else
-		while (index >= 0 && !(jobs[index].father.pid
-					&& jobs[index].father.foreground))
-			index--;
-	if (index != -1)
-	{
-		pj(jobs[index].father, index, "KILL SEND");
-		kill(-jobs[index].father.pgid, sig);
-	}
-	else if (sig == SIGINT)
-	{
-		log_info("Send KEY_INTERRUPT to shell");
-		ioctl(0, TIOCSTI, send);
-		signal_reception(var_return(131));
-	}
-	else
-	{
-		log_warn("Signal nothing done ! ");
-	}
-}
-
-void		update_process(t_jobs *jobs)
-{
-	int		index_child;
-
-	log_error("Update process %d", jobs->father.pid);
-	pjt(*jobs, 42);
-	update_status(&(jobs->father));
 	index_child = 0;
-	while (jobs->child[index_child].pid)
+	while (process[index_child].pid)
 	{
-		pj(jobs->child[index_child], index_child, "FULL UPDATE");
-		if ((waitpid((*jobs).child[index_child].pid, &(jobs->child[index_child].status), WUNTRACED | WNOHANG | WCONTINUED)) != -1)
-		{
-			log_info("Updating [%d]", jobs->child[index_child].pid);
-			update_status(&((*jobs).child[index_child]));
-		}
+		if (WIFEXITED(process[index_child].status))
+			var_return(WEXITSTATUS(process[index_child].status));
+		else if (WIFSIGNALED(process[index_child].status))
+			var_return(WTERMSIG(process[index_child].status) + 128);
+		else if (WIFCONTINUED(process[index_child].status))
+			;
+		else if (WIFSTOPPED(process[index_child].status))
+			var_return(WSTOPSIG(process[index_child].status) + 128);
 		index_child++;
 	}
-
 }
 
-void		full_update(t_jobs *jobs)
+int					get_jobs_index(pid_t search)
 {
-	int			index;
+	t_jobs			*jobs;
+	int				index;
 
-	log_error("[SIGCHLD] Update.. ");
-	index = MAX_CHILD;
-	while (index >= 0)
+	jobs = jobs_table();
+	index = MAX_CHILD - 1;
+	if (search == -1)
 	{
-		if (jobs[index].father.pid && jobs[index].father.foreground == false)
-		{
-			log_trace("Find in SIGCHILD %d", index);
-			update_process(&(jobs[index]));
-		}
-		index--;
+		while (index >= 0 && jobs[index].process->pid == 0)
+			index--;
+		log_trace("Get new index [%d]", index + 1);
+		return (index + 1);
+	}
+	else
+	{
+		while (index >= 0 && jobs[index].process->pid != search)
+			index--;
+		return (index);
 	}
 }
 
-void		update_special(t_jobs *jobs, t_process id, int option)
+void			print_status(t_process *process, int index)
 {
-	int			index;
+	log_warn("/!\\  [PROCESS %d HAS BEEN MODIFY] /!\\", index);
+	int			index_child;
 
+	index_child = 0;
+	while (process[index_child].pid)
+	{
+		index_child ? CHAR('\t') : ft_printf("[%d]\t", index + 1);
+		if (WIFEXITED(process[index_child].status))
+			ft_printf("%d %s %d %s\n", process[index_child].pid, WEXITSTATUS(process[index_child].status) ? "exit" : "done", WEXITSTATUS(process[index_child].status), process[index_child].command);
+		else if (WIFSIGNALED(process[index_child].status))
+			ft_printf("%d %s %d %s\n", process[index_child].pid, "killed", WTERMSIG(process[index_child].status), process[index_child].command);
+		else if (WIFCONTINUED(process[index_child].status))
+			ft_printf("%d %s %s\n", process[index_child].pid,"continued", process[index_child].command);
+		else if (WIFSTOPPED(process[index_child].status))
+			ft_printf("%d %s %d %s\n", process[index_child].pid, "suspend", WSTOPSIG(process[index_child].status), process[index_child].command);
+		index_child++;
+	}
+	ioctl(STDIN_FILENO, TIOCSTI, "\16");
+}
+void	update_unique_status(t_process *process, int status, pid_t child)
+{
+	int				index;
 
-	log_error("Update a parent .. %d", id.pid);
-	index = MAX_CHILD;
-	while (--index >= 0)
-		if (jobs[index].father.pid == id.pid)
+	index = 0;
+	log_warn("update_unique_status status %d child %d", status, child);
+	while (process[index].pid)
+	{
+		if (process[index].pid == child)
+			process[index].status = status;
+		index++;
+	}
+}
+int				update_status(t_process *process)
+{
+	int		status;
+	int		ret;
+	int		index;
+
+	index = 0;
+	ret = 0;
+	while (process[index].pid)
+	{
+		status = process[index].status;
+		log_trace("Pid %d", process[index].pid);
+		log_trace("Status %d", status);
+		log_trace("Wait [%d]", waitpid(process[index].pid, &status, WNOHANG | WCONTINUED | WUNTRACED));
+		log_trace("Status %d", status);
+		if (status != process[index].status)
 		{
-			if ((waitpid(jobs[index].father.pid, &(jobs[index].father.status), option)) != -1)
-			{
-				pj(jobs[index].father, index, "Update special");
-				update_process(&(jobs[index]));
-			}
+			log_fatal("%d", status);
+			ret = 1;
+			process[index].status = status;
 		}
-	signal(SIGTTOU, SIG_IGN);
-	signal(SIGTTIN, SIG_IGN);
-	log_trace("Return tsetpgrp(%d) of (%d)", tcsetpgrp(init_fd(), getpgid(0)), getpgid(0));
-	init_signal();
+		index++;
+	}
+	log_error("Return update_status %d", ret);
+	return (ret);
 }
 
-t_jobs		*jobs_control(unsigned int flags, t_jobs jobs_id, int sig)
+int					terminate_process(t_process *process)
 {
-	static t_jobs			jobs[MAX_CHILD + 1];
+	int			index_child;
+	int			ret;
 
-	
-	if ((flags & NEW_CHILD))
-		return (add_new_child(jobs, jobs_id));
-	else if ((flags & SIGNAL_RECEPTION))
-		send_signal(jobs, jobs_id, sig);
-	else if ((flags & SIGNAL_SIGCHLD))
-		full_update(jobs);
-	else if ((flags & UPDATE_CHILD))
-		update_special(jobs, jobs_id.father, sig);
-	else if ((flags & FOREGROUND))
-		put_in_foreground(jobs, sig);
-	else if ((flags & BACKGROUND))
-		put_in_background(jobs, sig);
-	else if ((flags & PRINT_JOBS))
-		return (print_jobs(jobs, sig));
-	else if ((flags & GET_INDEX))
-		return (getindex(jobs, sig));
-	return (-1);
+	index_child = 0;
+	ret = 1;
+	while (process[index_child].pid)
+	{
+		if (!WIFSIGNALED(process[index_child].status) || !WIFEXITED(process[index_child].status))
+			ret = 0;
+		index_child++;
+	}
+	log_error("Return terminated_status %d", ret);
+	return (ret);
+}
+
+void				handler_sigchld(int sig)
+{
+	t_jobs			*jobs;
+	int				index;
+
+	log_warn("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
+	index = MAX_CHILD -1;
+	jobs = jobs_table();
+	while (index >= 0)
+	{
+		if (jobs[index].process->pid && !jobs[index].process->foreground)
+		{
+			if (update_status(jobs[index].process) || terminate_process(jobs[index].process))
+				print_status(jobs[index].process, index);
+			if (terminate_process(jobs[index].process))
+			{
+				log_warn("/!\\  [PROCESS %%%d TERMINATED] /!\\", index);
+				reset_process(jobs[index].process);
+				pjt(jobs[index], index);
+			}
+		}
+		index--;
+	}
 }

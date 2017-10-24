@@ -41,6 +41,7 @@
 # define DEFAULT				16
 # define PRINT					32
 
+# define JOIN_STRUCT			0
 # define NEW_CHILD				1
 # define UPDATE_CHILD			2
 # define SIGNAL_RECEPTION		4
@@ -63,6 +64,7 @@
 # define TAB_KEY				9
 # define CTRL_K					11
 # define CLEAR_KEY				12
+# define REFRESH				14
 # define CTRL_R					18
 # define CTRL_UNDO				31
 # define DELETE_KEY				127

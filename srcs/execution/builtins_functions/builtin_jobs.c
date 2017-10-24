@@ -22,5 +22,5 @@ uint8_t			builtin_jobs(char **command, char **env)
 			option += (command[table][index] == 'r') ? 2 : 0;
 			option += (command[table][index] == 's') ? 4 : 0;
 		}
-	return (var_return(jobs_control(PRINT_JOBS, new_jobs(0), option)));
+	return (var_return(1));
 }

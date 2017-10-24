@@ -5496,6 +5496,33 @@ srcs/read/key_/key_print.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/key_/key_print.c.s
 .PHONY : srcs/read/key_/key_print.c.s
 
+srcs/read/key_/key_refresh.o: srcs/read/key_/key_refresh.c.o
+
+.PHONY : srcs/read/key_/key_refresh.o
+
+# target to build an object file
+srcs/read/key_/key_refresh.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/key_/key_refresh.c.o
+.PHONY : srcs/read/key_/key_refresh.c.o
+
+srcs/read/key_/key_refresh.i: srcs/read/key_/key_refresh.c.i
+
+.PHONY : srcs/read/key_/key_refresh.i
+
+# target to preprocess a source file
+srcs/read/key_/key_refresh.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/key_/key_refresh.c.i
+.PHONY : srcs/read/key_/key_refresh.c.i
+
+srcs/read/key_/key_refresh.s: srcs/read/key_/key_refresh.c.s
+
+.PHONY : srcs/read/key_/key_refresh.s
+
+# target to generate assembly for a file
+srcs/read/key_/key_refresh.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/key_/key_refresh.c.s
+.PHONY : srcs/read/key_/key_refresh.c.s
+
 srcs/read/key_/key_reprint.o: srcs/read/key_/key_reprint.c.o
 
 .PHONY : srcs/read/key_/key_reprint.o
@@ -7101,6 +7128,9 @@ help:
 	@echo "... srcs/read/key_/key_print.o"
 	@echo "... srcs/read/key_/key_print.i"
 	@echo "... srcs/read/key_/key_print.s"
+	@echo "... srcs/read/key_/key_refresh.o"
+	@echo "... srcs/read/key_/key_refresh.i"
+	@echo "... srcs/read/key_/key_refresh.s"
 	@echo "... srcs/read/key_/key_reprint.o"
 	@echo "... srcs/read/key_/key_reprint.i"
 	@echo "... srcs/read/key_/key_reprint.s"

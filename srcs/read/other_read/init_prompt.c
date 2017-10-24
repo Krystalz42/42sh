@@ -31,7 +31,7 @@ static char				*my_getcwd(void)
 
 static char 			*my_color(void)
 {
-	static int 		color = 233;
+	static int 		color = 255;
 	static bool		dir = false;
 
 	dir = (color == 233) ? true : dir;
@@ -39,9 +39,6 @@ static char 			*my_color(void)
 	color = (dir) ? color + 1 : color - 1;
 	return (ft_itoa(color));
 }
-/*
-**	"\e[38;5;$CLR$PATH$RST"
-*/
 
 void				init_prompt(void)
 {

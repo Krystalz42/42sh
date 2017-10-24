@@ -13,6 +13,7 @@
 #include <sh.h>
 
 static const t_cmp		g_tab_are_key[] = {
+		(t_cmp){REFRESH, key_refresh_},
 		(t_cmp){DELETE_KEY, key_del},
 		(t_cmp){TAB_KEY, key_tab},
 		(t_cmp){CLEAR_KEY, key_clear_},
@@ -79,8 +80,8 @@ static inline void		initialize_fct(t_read **read_std, unsigned char flags,
 }
 static char 			*finitialize_fct(t_read **read_std)
 {
-	reset_signal();
 	set_termios(SET_OLD_TERM);
+	reset_signal();
 	return (finish_read_std(read_std));
 
 }

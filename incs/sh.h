@@ -194,9 +194,10 @@ int							key_kill_prev_word(t_read **read_std,
 												unsigned long buff);
 int							key_del_buff(t_read **read_std, unsigned long buff);
 int							key_yank(t_read **read_std, unsigned long buff);
+int							key_refresh_(t_read **read_std, unsigned long buff);
 
 /*
-**              SEARCH HISTORY FUNCTION
+**				SEARCH HISTORY FUNCTION
 */
 
 int							init_research(t_read **read_std);
@@ -276,18 +277,19 @@ void						chk_quotes(char c, char quote, const int *flag,
 /*
 **				JOB'S CONTROL FUNCTION
 */
-void						update_status(t_process *identify);
+int							update_status(t_process *process);
+void						update_jobs(t_process *process, int index);
+t_jobs						*jobs_table(void);
 void						my_execve(char **command, char **env);
-void						my_wait(t_jobs jobs_id);
+void						handler_sigchld(int sig);
 void						put_in_foreground(t_jobs *jobs, pid_t jobs_id);
 void						put_in_background(t_jobs *jobs,pid_t jobs_id);
 int							jobs_control(unsigned int flags, t_jobs jobs_id, int sig);
-void						full_update(t_jobs *jobs);
-int							add_new_child(t_jobs *jobs, t_jobs jobs_id);
+int							get_jobs_index(pid_t search);
+void						my_wait(int index);
 void						reset_process(t_process *to_kill);
-t_jobs 						new_jobs(int set);
-void						modify_runing(t_jobs *jobs, int change);
-void						modify_foreground(t_jobs *jobs, int change);
+void						update_unique_status(t_process *process, int status, pid_t child);
+int							terminate_process(t_process *process);
 
 
 

@@ -209,8 +209,7 @@ typedef struct 		s_process
 
 typedef struct 		s_jobs
 {
-	t_process		father;
-	t_process		child[MAX_CHILD];
+	t_process		process[256];
 }					t_jobs;
 
 typedef struct				s_parsing

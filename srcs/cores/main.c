@@ -23,85 +23,86 @@ int			main(int ac, char **av)
 	init_term();
 	write_history_in_sh(get_str_from_history());
 	init_signal();
+	log_trace("Return tcsetpgrp (%d)", tcsetpgrp(init_fd(), getpgid(0)), getpgid(0));
 	test_cmd();
 //	shell();
 	b_write_history_in_file(get_str_from_history());
 	logger_close();
 	return (0);
 }
-t_process		init_jobs(pid_t child, pid_t parent_pid, bool foreground, char *command)
-{
-	t_process		identify;
 
-	setpgid(child, parent_pid);
-	if (child == parent_pid)
-	log_trace("Return tcsetpgrp(%d) of %d", tcsetpgrp(init_fd(), parent_pid), parent_pid);
-	identify = (t_process){child, getpgid(child), 0, foreground, true, ft_strdup(command)};
-	return (identify);
+int			my_fork(t_process *process, pid_t parent, bool foreground, char *command)
+{
+	process->pid = fork();
+	process->running = true;
+	process->foreground = foreground;
+	process->command = ft_strdup(command);
+	process->status = -1;
+	log_debug("setpgid(%d, %d)",process->pid, parent ? parent : process->pid);
+	setpgid(process->pid, parent ? parent : process->pid);
+	process->pgid = getpgid(process->pid);
+	return 0;
 }
+
+
 void my_execute(char **command, char **env, bool foreground)
 {
-	pid_t child;
-	t_jobs jobs;
+	t_jobs		*jobs;
+	int			index;
 
-	jobs = new_jobs(0);
-	child = fork();
-	if (child == -1)
+	jobs = jobs_table();
+	index = get_jobs_index(-1);
+	my_fork(jobs[index].process, 0, foreground, *command);
+	if (jobs[index].process->pid == -1)
 		;
-	else if (child)
+	else if (jobs[index].process->pid)
 	{
-		jobs.father = init_jobs(child, child, foreground, command[0]);
-		my_wait(jobs);
+		pjt(jobs[index], index);
+		my_wait(index);
+
 	}
 	else
 	{
-		setpgrp();
 		my_execve(command, env);
 	}
 }
 
 void my_execute_pipe(char **command, char **command1, bool foreground)
 {
-	pid_t	child;
-	pid_t	child1;
+	t_jobs		*jobs;
+	int			index;
 	int		fildes[2];
-	t_jobs	jobs;
 
-	jobs = new_jobs(0);
+	jobs = jobs_table();
+	index = get_jobs_index(-1);
+
+
+
 	pipe(fildes);
-	child = fork();
-	if (child == -1)
-		;
-	else if (child)
+	my_fork(jobs[index].process + 0, 0, foreground, *command1);
+	if (jobs[index].process[0].pid)
 	{
-		jobs.father = init_jobs(child, child, foreground, *command);
-		child1 = fork();
-		if (child1 == -1)
-			perror("");
-		else if (child1)
+		my_fork(jobs[index].process + 1, jobs[index].process[0].pid, foreground, *command);
+		if (jobs[index].process[1].pid)
 		{
-
-			jobs.child[0] = init_jobs(child1, child, foreground, *command1);
-			my_wait(jobs);
+			pjt(jobs[index], index);
+			my_wait(index);
 		}
 		else
 		{
-
-			setpgid(0, child);
-			close(fildes[1]);
-			dup2(fildes[0], STDIN_FILENO);
 			close(fildes[0]);
-			my_execve(command1, NULL);
+			dup2(fildes[1], STDOUT_FILENO);
+			close(fildes[1]);
+			my_execve(command, NULL);
+
 		}
 	}
 	else
 	{
-		setpgid(0, child);
-		close(fildes[0]);
-		dup2(fildes[1], STDOUT_FILENO);
 		close(fildes[1]);
-		my_execve(command, NULL);
-
+		dup2(fildes[0], STDIN_FILENO);
+		close(fildes[0]);
+		my_execve(command1, NULL);
 	}
 }
 
@@ -110,6 +111,7 @@ void test_cmd()
 	char *lsl[] = {"/bin/ls", "-lR", "/", NULL};
 	char *wc[] = {"/usr/bin/wc", NULL};
 	char *ls[] = {"/bin/ls", "-l", NULL};
+	char *ls_[] = {"/bin/ls", NULL};
 	char *cat[] = {"/bin/cat", "-e", NULL};
 	char *vim[] = {"/usr/bin/vim", NULL};
 	char *emacs[] = {"/usr/bin/emacs", NULL};
@@ -126,6 +128,7 @@ void test_cmd()
 	(void)jobsS;
 	(void)jobsP;
 	(void)ls;
+	(void)ls_;
 	(void)vim;
 	(void)emacs;
 	(void)cat;
@@ -135,9 +138,15 @@ void test_cmd()
 	while (i)
 	{
 		read_stdin(DEFAULT);
-		my_execute_pipe(cat , ls, true);
+		my_execute_pipe(ls , cat, false); // ls -l | cat -e &
 		read_stdin(DEFAULT);
-		jobs_control(FOREGROUND, new_jobs(0), -1);
+		my_execute(ls_, NULL, false); // ls &
+		read_stdin(DEFAULT);
+		my_execute(ls_, NULL, true); // ls
+		read_stdin(DEFAULT);
+		my_execute(cat, NULL, false); // cat &
+		read_stdin(DEFAULT);
+		my_execute(cat, NULL, true); // cat -e
 		read_stdin(DEFAULT);
 		}
 }

@@ -32,8 +32,6 @@ int		init_term(void)
 	if (tgetent(NULL, my_getenv("TERM=")) == ERR)
 		puterror("tgetent");
 
-	log_error("test %d",tcgetattr(STDIN_FILENO, &old_term));
-
 	if (!(tcgetattr(STDIN_FILENO, &old_term)))
 		keep_term_struct(SAVE_OLD, &old_term);
 	else

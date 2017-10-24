@@ -21,7 +21,6 @@ t_jobs		new_jobs(int set)
 	ft_memset((void *)&to_kill, set, sizeof(t_jobs));
 	while (i < MAX_CHILD)
 	{
-		to_kill.child[i] = (t_process){0, 0, 0, 0, 0, NULL};
 		i++;
 	}
 	return (to_kill);
@@ -29,8 +28,16 @@ t_jobs		new_jobs(int set)
 
 void		reset_process(t_process *to_kill)
 {
-	ft_memdel((void **)&(to_kill->command));
-	*to_kill = (t_process){0, 0, 0, 0, 0, NULL};
+	int 	index;
+
+	index = 0;
+	update_jobs(to_kill, 42);
+	while (to_kill[index].pid)
+	{
+		ft_memdel((void **)&(to_kill[index].command));
+		to_kill[index] = (t_process){0, 0, 0, 0, 0, NULL};
+		index++;
+	}
 }
 
 int			add_new_child(t_jobs *jobs, t_jobs jobs_id)
@@ -38,8 +45,6 @@ int			add_new_child(t_jobs *jobs, t_jobs jobs_id)
 	int			index;
 
 	index = MAX_CHILD;
-	while (index >= 0 && jobs[index].father.pid == 0)
-		index--;
 	if (index != MAX_CHILD)
 	{
 		jobs[index + 1] = jobs_id;

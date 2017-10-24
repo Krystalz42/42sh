@@ -35,6 +35,7 @@ int			key_home_(t_read **read_std, unsigned long buff)
 		}
 		(*read_std)->print = 2;
 	}
+	(*read_std)->print = 2;
 	return (1);
 }
 int			key_end_(t_read **read_std, unsigned long buff)

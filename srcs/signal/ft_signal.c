@@ -13,12 +13,9 @@
 #include <sh.h>
 
 
-void				handler_sigint(int sig)
+void				handler_sig(int sig)
 {
-	if (SIGCHLD == sig)
-		jobs_control(SIGNAL_SIGCHLD, new_jobs(-1), sig);
-	else
-		jobs_control(SIGNAL_RECEPTION, new_jobs(-1), sig);
+	log_warn("Signal Reception [%d]", sig);
 
 }
 
@@ -27,7 +24,11 @@ void				init_signal(void)
 	int i = -1;
 
 	while (++i < 32)
-		signal(i, handler_sigint);
+	{
+		signal(i, handler_sig);
+		if (i == SIGCHLD)
+			signal(i, handler_sigchld);
+	}
 	signal(3, SIG_DFL);
 	signal(11, SIG_DFL);
 }
@@ -37,5 +38,5 @@ void				reset_signal(void)
 	int i = -1;
 
 	while (++i < 32)
-;//		signal(i, SIG_DFL);
+		signal(i, SIG_DFL);
 }

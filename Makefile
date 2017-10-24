@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/10/03 01:35:15 by aroulin          ###   ########.fr        #
+#    Updated: 2017/10/23 18:57:08 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,6 +87,7 @@ SRCS = \
 	   read/key_/key_del_buff.c								\
 	   read/key_/key_search_history.c						\
 	   read/key_/key_upcase_word.c							\
+	   read/key_/key_refresh.c								\
 	   read/key_/key_downcase_word.c						\
 	   hash/hash_value.c									\
 	   hash/table_hash.c									\

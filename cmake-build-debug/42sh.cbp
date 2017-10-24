@@ -711,6 +711,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/read/key_/key_print.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/read/key_/key_refresh.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/read/key_/key_reprint.c">
 			<Option target="42sh"/>
 		</Unit>
