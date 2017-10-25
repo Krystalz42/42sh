@@ -47,6 +47,7 @@ void pj(t_process identify, int index, char *inc);
 */
 
 int							shell(void);
+int							cursor_placement(void);
 void						insert_one_line(void);
 
 
@@ -279,8 +280,6 @@ void						update_jobs(t_process *process, int index);
 t_jobs						*jobs_table(void);
 void						my_execve(char **command, char **env);
 void						handler_sigchld(int sig);
-void						put_in_foreground(t_jobs *jobs, pid_t jobs_id);
-void						put_in_background(t_jobs *jobs,pid_t jobs_id);
 int							get_jobs_index(pid_t search);
 void						my_wait(int index);
 void						reset_process(t_process *to_kill);
@@ -289,7 +288,10 @@ void						modify_runing(t_process *process, bool change);
 void						modify_foreground(t_process *process, bool change);
 void						print_status(t_process *process, int index);
 void						wait_process(t_process *process, int index);
-void						set_fidles(pid_t pgid);
+
+void						set_fildes(pid_t pgid);
+const char					*status_signal(int signal);
+const char					*status_exit(int signal);
 
 /*
 **				SIGNAL FUNCTION

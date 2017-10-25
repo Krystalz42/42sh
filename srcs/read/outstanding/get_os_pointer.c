@@ -12,9 +12,9 @@
 
 #include <sh.h>
 
-t_outstanding       *get_os_pointer(t_outstanding *get, int flags)
+t_outstanding			*get_os_pointer(t_outstanding *get, int flags)
 {
-	static t_outstanding        *save;
+	static t_outstanding			*save;
 
 	if (flags)
 		save = NULL;

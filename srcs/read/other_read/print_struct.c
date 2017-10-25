@@ -19,14 +19,17 @@ int			print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_cursor *cur)
 	co = tgetnum("co");
 	while ((!to_select && cmd->c) || (to_select && cmd != stop))
 	{
-		(cmd->c != 10) ? CHAR_FD(cmd->c, 2): 0 ;
+		(cmd->c != 10) ? CHAR_FD(cmd->c, init_fd()): 0 ;
 		if (cmd->c == 10 || cur->co >= co - 1)
 		{
-			(to_select) ? tputs(tgetstr(MV_BOT, 0), STDIN_FILENO, &my_put) : insert_one_line();
+			if (to_select)
+				tputs(tgetstr(MV_BOT, 0), STDIN_FILENO, &my_put);
+			else
+				insert_one_line();
 			cur->line += 1;
 			cur->co = 0;
-			}
-		cur->co += (cmd->c == 9) ? 4 : 1;
+		}
+		cur->co ++;
 		cmd = cmd->next;
 	}
 	return (1);

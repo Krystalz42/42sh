@@ -17,7 +17,7 @@ uint8_t				fg_switch_process(t_jobs *jobs, int index, char *from)
 	{
 		reset_signal();
 		modify_foreground(jobs[index].process, true);
-		set_fidles(jobs[index].process->pgid);
+		set_fildes(jobs[index].process->pgid);
 		if (!jobs[index].process->running)
 		{
 			kill(-(jobs[index].process->pgid), SIGCONT);
@@ -26,7 +26,7 @@ uint8_t				fg_switch_process(t_jobs *jobs, int index, char *from)
 			print_status(jobs[index].process, index);
 		}
 		wait_process(jobs[index].process, index);
-		set_fidles(getpgid(0));
+		set_fildes(getpgid(0));
 		init_signal();
 		return (0);
 	}

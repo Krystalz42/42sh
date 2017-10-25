@@ -21,7 +21,7 @@ void		print_info_jobs(t_jobs jobs, int index)
 	ft_putchar(10);
 }
 
-void			set_fidles(pid_t pgid)
+void			set_fildes(pid_t pgid)
 {
 	signal(SIGTTIN, SIG_IGN);
 	signal(SIGTTOU, SIG_IGN);
@@ -29,19 +29,17 @@ void			set_fidles(pid_t pgid)
 }
 void			wait_process(t_process *process, int index)
 {
-	int			index_child;
+	int			ind_c;
 
-	index_child = 0;
-	while (process[index_child].pid)
+	ind_c = 0;
+	while (process[ind_c].pid)
 	{
-		log_error("Wait [%d]",waitpid(process[index_child].pid, &process[index_child].status, WUNTRACED));
-		index_child++;
+		log_error("Wait [%d]",waitpid(process[ind_c].pid, &process[ind_c].status, WUNTRACED));
+		ind_c++;
 	}
+	update_jobs(process, index);
 	if (terminate_process(process))
-	{
-		update_jobs(process, index);
 		reset_process(process);
-	}
 	else
 	{
 		print_status(process, index);
@@ -58,13 +56,21 @@ void		my_wait(int index)
 	jobs = jobs_table();
 	if (jobs[index].process->foreground)
 	{
-		set_fidles(jobs[index].process->pgid);
+		set_fildes(jobs[index].process->pgid);
 		wait_process(jobs[index].process, index);
 		pjt(jobs[index], index);
-		set_fidles(getpgid(0));
+		set_fildes(getpgid(0));
 	}
 	else
 	{
 		print_info_jobs(jobs[index], index);
+		int			ind_c;
+
+		ind_c = 0;
+		while (jobs[index].process[ind_c].pid)
+		{
+			log_error("Wait [%d]",waitpid(jobs[index].process[ind_c].pid, &jobs[index].process[ind_c].status, WNOHANG));
+			ind_c++;
+		}
 	}
 }

@@ -212,11 +212,25 @@ typedef struct 		s_jobs
 	t_process		process[256];
 }					t_jobs;
 
+/*
+**			STRUCT FOR PARSING
+*/
+
 typedef struct				s_parsing
 {
 	char					*str;
 	struct s_parsing		*prev;
 	struct s_parsing		*next;
 }							t_parsing;
+
+/*
+**			STRUCT FOR STATUS SIGNAL
+*/
+
+typedef struct 				s_signal
+{
+	int 					signal;
+	char					*status;
+}							t_signal;
 
 #endif

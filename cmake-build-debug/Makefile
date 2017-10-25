@@ -3255,6 +3255,33 @@ libs/printf/srcs/printf_part.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/printf/srcs/printf_part.c.s
 .PHONY : libs/printf/srcs/printf_part.c.s
 
+srcs/cores/cursor_placement.o: srcs/cores/cursor_placement.c.o
+
+.PHONY : srcs/cores/cursor_placement.o
+
+# target to build an object file
+srcs/cores/cursor_placement.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/cores/cursor_placement.c.o
+.PHONY : srcs/cores/cursor_placement.c.o
+
+srcs/cores/cursor_placement.i: srcs/cores/cursor_placement.c.i
+
+.PHONY : srcs/cores/cursor_placement.i
+
+# target to preprocess a source file
+srcs/cores/cursor_placement.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/cores/cursor_placement.c.i
+.PHONY : srcs/cores/cursor_placement.c.i
+
+srcs/cores/cursor_placement.s: srcs/cores/cursor_placement.c.s
+
+.PHONY : srcs/cores/cursor_placement.s
+
+# target to generate assembly for a file
+srcs/cores/cursor_placement.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/cores/cursor_placement.c.s
+.PHONY : srcs/cores/cursor_placement.c.s
+
 srcs/cores/insert_one_line.o: srcs/cores/insert_one_line.c.o
 
 .PHONY : srcs/cores/insert_one_line.o
@@ -4334,6 +4361,33 @@ srcs/jobs_control/set_process.s: srcs/jobs_control/set_process.c.s
 srcs/jobs_control/set_process.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/set_process.c.s
 .PHONY : srcs/jobs_control/set_process.c.s
+
+srcs/jobs_control/status_signals.o: srcs/jobs_control/status_signals.c.o
+
+.PHONY : srcs/jobs_control/status_signals.o
+
+# target to build an object file
+srcs/jobs_control/status_signals.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/status_signals.c.o
+.PHONY : srcs/jobs_control/status_signals.c.o
+
+srcs/jobs_control/status_signals.i: srcs/jobs_control/status_signals.c.i
+
+.PHONY : srcs/jobs_control/status_signals.i
+
+# target to preprocess a source file
+srcs/jobs_control/status_signals.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/status_signals.c.i
+.PHONY : srcs/jobs_control/status_signals.c.i
+
+srcs/jobs_control/status_signals.s: srcs/jobs_control/status_signals.c.s
+
+.PHONY : srcs/jobs_control/status_signals.s
+
+# target to generate assembly for a file
+srcs/jobs_control/status_signals.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/status_signals.c.s
+.PHONY : srcs/jobs_control/status_signals.c.s
 
 srcs/log_info_bug_dnt_care_of_norminette_bitch.o: srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o
 
@@ -6879,6 +6933,9 @@ help:
 	@echo "... libs/printf/srcs/printf_part.o"
 	@echo "... libs/printf/srcs/printf_part.i"
 	@echo "... libs/printf/srcs/printf_part.s"
+	@echo "... srcs/cores/cursor_placement.o"
+	@echo "... srcs/cores/cursor_placement.i"
+	@echo "... srcs/cores/cursor_placement.s"
 	@echo "... srcs/cores/insert_one_line.o"
 	@echo "... srcs/cores/insert_one_line.i"
 	@echo "... srcs/cores/insert_one_line.s"
@@ -6999,6 +7056,9 @@ help:
 	@echo "... srcs/jobs_control/set_process.o"
 	@echo "... srcs/jobs_control/set_process.i"
 	@echo "... srcs/jobs_control/set_process.s"
+	@echo "... srcs/jobs_control/status_signals.o"
+	@echo "... srcs/jobs_control/status_signals.i"
+	@echo "... srcs/jobs_control/status_signals.s"
 	@echo "... srcs/log_info_bug_dnt_care_of_norminette_bitch.o"
 	@echo "... srcs/log_info_bug_dnt_care_of_norminette_bitch.i"
 	@echo "... srcs/log_info_bug_dnt_care_of_norminette_bitch.s"

@@ -144,6 +144,7 @@ SRCS = \
 	   execution/builtins_functions/utils.c					\
 	   execution/builtins_functions/error.c					\
 	   jobs_control/modify_status_jobs.c					\
+	   jobs_control/status_signals.c							\
 	   jobs_control/jobs_control.c							\
 	   jobs_control/builtins_jobs.c							\
 	   jobs_control/set_process.c							\

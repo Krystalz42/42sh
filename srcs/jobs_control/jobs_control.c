@@ -31,10 +31,10 @@ void			update_jobs(t_process *process, int index)
 			var_return(WEXITSTATUS(process[index_child].status));
 		else if (WIFSIGNALED(process[index_child].status))
 			var_return(WTERMSIG(process[index_child].status) + 128);
-		else if (WIFCONTINUED(process[index_child].status))
-			;
 		else if (WIFSTOPPED(process[index_child].status))
 			var_return(WSTOPSIG(process[index_child].status) + 128);
+		else if (WIFCONTINUED(process[index_child].status))
+			;
 		index_child++;
 	}
 }
@@ -63,21 +63,22 @@ int					get_jobs_index(pid_t search)
 
 void			print_status(t_process *process, int jobs_spec)
 {
-	log_warn("/!\\  [PROCESS %d HAS BEEN MODIFY] /!\\", jobs_spec);
+	log_warn("/!\\  [PROCESS %d HAS BEEN MODIFY PID [%d]] /!\\", jobs_spec,process[0].pid);
 	int			index;
 
+	write(1, &(index), 1);
 	index = 0;
 	while (process[index].pid)
 	{
 		index ? CHAR('\t') : ft_printf("[%d]\t", jobs_spec + 1);
 		if (WIFEXITED(process[index].status))
-			ft_printf("%d %s %d %s\n", process[index].pid, WEXITSTATUS(process[index].status) ? "exit" : "done", WEXITSTATUS(process[index].status), process[index].command);
+			ft_printf("%d %s %s\n", process[index].pid, status_exit(WEXITSTATUS(process[index].status)), process[index].command);
 		else if (WIFSIGNALED(process[index].status))
-			ft_printf("%d %s %d %s\n", process[index].pid, "killed", WTERMSIG(process[index].status), process[index].command);
+			ft_printf("%d %s %s\n", process[index].pid, status_signal(WTERMSIG(process[index].status)), process[index].command);
 		else if (WIFCONTINUED(process[index].status))
-			ft_printf("%d %s %s\n", process[index].pid,"continued", process[index].command);
+			ft_printf("%d %s %s\n", process[index].pid, status_signal(18), process[index].command);
 		else if (WIFSTOPPED(process[index].status))
-			ft_printf("%d %s %d %s\n", process[index].pid, "suspended", WSTOPSIG(process[index].status), process[index].command);
+			ft_printf("%d %s %s\n", process[index].pid, status_signal(WSTOPSIG(process[index].status)), process[index].command);
 		index++;
 	}
 	ioctl(STDIN_FILENO, TIOCSTI, "\16");
@@ -87,17 +88,13 @@ int				update_status(t_process *process)
 {
 	int				ret;
 	int				index;
-	int				status;
 
 	index = 0;
 	ret = 0;
 	while (process[index].pid)
 	{
-		if ((waitpid(process[index].pid, &status, WCONTINUED | WNOHANG | WUNTRACED)) > 0)
-		{
+		log_info("%d", waitpid(process[index].pid, &process[index].status, WCONTINUED | WNOHANG | WUNTRACED));
 			ret = 1;
-			process[index].status = status;
-		}
 		index++;
 	}
 	log_trace("Return update_status %d", ret);
@@ -134,11 +131,11 @@ void				handler_sigchld(int sig)
 	{
 		if (jobs[index].process->pid && !jobs[index].process->foreground)
 		{
-			if (update_status(jobs[index].process))
-				print_status(jobs[index].process, index);
+			update_status(jobs[index].process);
 			if (terminate_process(jobs[index].process))
 			{
-				log_warn("/!\\  [PROCESS %%%d TERMINATED] /!\\", index);
+				print_status(jobs[index].process, index);
+				log_warn("/!\\  [PROCESS %d TERMINATED] /!\\", index);
 				update_jobs(jobs[index].process, index);
 				reset_process(jobs[index].process);
 			}
