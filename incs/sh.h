@@ -49,7 +49,7 @@ void pj(t_process identify, int index, char *inc);
 int							shell(void);
 int							cursor_placement(void);
 void						insert_one_line(void);
-
+void						exit_(void);
 
 /*
 **				FUNCTION READ && PRINT && RETURN A STRUCT
@@ -115,6 +115,7 @@ uint8_t						builtin_hash(char **command, char **env);
 uint8_t						builtin_history(char **command, char **env);
 uint8_t						builtin_kill(char **command, char **env);
 uint8_t						builtin_env(char **command, char **env);
+uint8_t						builtin_exit(char **command, char **env);
 
 /*
 **				FUNCTION FOR COMPLETION
@@ -223,9 +224,9 @@ size_t						compare_environment(char *s1, char *s2);
 void						remove_environment(char *string);
 char						**env_table(char **env, int flags);
 int							usage_environement(char *string);
-uint8_t						start_from_null(char **command, char ***env);
-uint8_t						start_from_full(char **command, char ***env);
-uint8_t						start_from_less(char **command, char ***env);
+int						start_from_null(char **command, char ***env);
+int						start_from_full(char **command, char ***env);
+int						start_from_less(char **command, char ***env);
 
 /*
 **				HISTORY FUNCTION

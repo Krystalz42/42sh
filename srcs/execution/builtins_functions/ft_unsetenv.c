@@ -45,8 +45,10 @@ uint8_t				ft_unsetenv(char **command, char **env)
 		i++;
 	}
 	if (env[i])
+	{
 		ft_putendl("SUCCESS");
-		//remove_environment(command[1]);
+		remove_environment(command[1]);
+	}
 	else
 		RETVAR(ft_error(command[1], " not found.", 1));
 	RETVAR(0);

@@ -135,7 +135,6 @@ set(SOURCE_FILES
         srcs/env/add_environment.c
         srcs/env/init_env.c
         srcs/env/initialise_environment.c
-        srcs/env/manage_env.c
         srcs/env/my_getenv.c
         srcs/env/remove_environment.c
         srcs/env/usage_environment.c
@@ -246,7 +245,23 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/read/key_/key_refresh.c srcs/cores/cursor_placement.c srcs/jobs_control/status_signals.c srcs/execution/builtins_functions/builtin_kill.c libs/libft/srcs/ft_strisdigit.c libs/libft/srcs/ft_strisalpha.c srcs/execution/builtins_functions/builtin_env.c)
+        srcs/execution/builtins_functions/data_builtin.c
+        srcs/execution/builtins_functions/error.c
+        srcs/execution/builtins_functions/ft_cd.c
+        srcs/execution/builtins_functions/ft_echo
+        srcs/execution/builtins_functions/ft_setenv.c
+        srcs/execution/builtins_functions/ft_unsetenv.c
+        srcs/execution/builtins_functions/refresh_varenv.c
+        srcs/execution/builtins_functions/utils.c
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c
+        srcs/read/key_/key_refresh.c
+        srcs/jobs_control/status_signals.c
+        srcs/execution/builtins_functions/builtin_kill.c
+        libs/libft/srcs/ft_strisdigit.c
+        libs/libft/srcs/ft_strisalpha.c
+        srcs/execution/builtins_functions/builtin_env.c
+        srcs/cores/exit.c
+        srcs/execution/builtins_functions/builtin_exit.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

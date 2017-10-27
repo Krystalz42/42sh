@@ -468,7 +468,7 @@
 		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/printf_part.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/cores/cursor_placement.c">
+		<Unit filename="/Users/aroulin/42sh/srcs/cores/exit.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/cores/insert_one_line.c">
@@ -492,9 +492,6 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/env/initialise_environment.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/env/manage_env.c">
-			<Option target="42sh"/>
-		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/env/my_getenv.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -516,6 +513,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_env.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_exit.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_hash.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -529,6 +529,30 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_switch.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/data_builtin.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/error.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/ft_cd.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/ft_echo.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/ft_setenv.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/ft_unsetenv.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/refresh_varenv.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/utils.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/check_if_builtins.c">

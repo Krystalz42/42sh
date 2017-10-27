@@ -24,7 +24,7 @@ static int			check_env(char *str, char **env)
       i++;
     }
   str[i] = 0;
-  size = ft_strlen(str);
+  size = (unsigned int)ft_strlen(str);
   while (env[i])
     {
       if (!(ft_strncmp(str, env[i], size)) && env[i][size] == '=')

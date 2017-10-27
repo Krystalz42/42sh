@@ -39,7 +39,7 @@ void					create_comp_bin(t_read **read_std, char **path)
 			while ((repo = readdir(dir)))
 				if ((!(*read_std)->tab_->from && repo->d_name[0] != '.') ||
 					(!ft_strncmp((*read_std)->tab_->from, repo->d_name,
-								ft_strlen((*read_std)->tab_->from) - 1)))
+								ft_strlen((*read_std)->tab_->from))))
 				{
 					init_files(&((*read_std)->tab_->file), repo->d_name,
 							repo->d_type, index++);
@@ -54,7 +54,9 @@ void					complete_binary(t_read **read_std)
 {
 	init_completion_bin(read_std);
 	create_comp_bin(read_std, ft_split(my_getenv("PATH="), ":"));
-	((*read_std)->tab_->element) && place_cursor(read_std, 1);
+	log_trace("%s %d",(*read_std)->tab_->from,(*read_std)->tab_->element);
+	if ((*read_std)->tab_->element)
+		place_cursor(read_std, 1);
 	if (!(init_tab_((*read_std)->tab_, (*read_std)->cur.line)))
 	{
 		(*read_std)->completion = 0;

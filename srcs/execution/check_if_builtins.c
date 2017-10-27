@@ -22,7 +22,8 @@ static const t_builtin	builtin[] = {
 	(t_builtin){"hash", builtin_hash},
 	(t_builtin){"fg", builtin_foreground},
 	(t_builtin){"bg", builtin_background},
-	(t_builtin){"exit", NULL},
+	(t_builtin){"kill", builtin_kill},
+	(t_builtin){"exit", builtin_exit},
 	(t_builtin){NULL, NULL}
 };
 

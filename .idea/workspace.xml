@@ -15,12 +15,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d38057-4ed9-4568-a80f-42a71baa072b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/libft/srcs/ft_strisalpha.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/libft/srcs/ft_strisdigit.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_kill.c" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/ft_env.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/jobs_control/builtins_jobs.c" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/srcs/cores/exit.c" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/builtins/data_builtin.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/builtins/error.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/builtins/ft_cd.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/builtins/ft_echo.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/builtins/ft_env.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/builtins/ft_setenv.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/builtins/ft_unsetenv.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/builtins/refresh_varenv.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/builtins/utils.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/cores/cursor_placement.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/srcs/env/manage_env.c" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
@@ -28,19 +34,20 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/define.h" afterPath="$PROJECT_DIR$/incs/define.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/sh.h" afterPath="$PROJECT_DIR$/incs/sh.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/Makefile" afterPath="$PROJECT_DIR$/libs/libft/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/incs/libft.h" afterPath="$PROJECT_DIR$/libs/libft/incs/libft.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/srcs/ft_atoi.c" afterPath="$PROJECT_DIR$/libs/libft/srcs/ft_atoi.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/srcs/ft_strisdigit.c" afterPath="$PROJECT_DIR$/libs/libft/srcs/ft_strisdigit.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/main.c" afterPath="$PROJECT_DIR$/srcs/cores/main.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/shell.c" afterPath="$PROJECT_DIR$/srcs/cores/shell.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/env/initialise_environment.c" afterPath="$PROJECT_DIR$/srcs/env/initialise_environment.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_kill.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_kill.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/ft_echo.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/ft_echo.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/ft_setenv.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/ft_setenv.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/ft_unsetenv.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/ft_unsetenv.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/check_if_builtins.c" afterPath="$PROJECT_DIR$/srcs/execution/check_if_builtins.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/history/init_history.c" afterPath="$PROJECT_DIR$/srcs/history/init_history.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/set_process.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/set_process.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/status_signals.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/status_signals.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/complete_binary.c" afterPath="$PROJECT_DIR$/srcs/read/completion/complete_binary.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/init_completion.c" afterPath="$PROJECT_DIR$/srcs/read/completion/init_completion.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/key_/key_eof.c" afterPath="$PROJECT_DIR$/srcs/read/key_/key_eof.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,14 +61,64 @@
     <favorites_list name="42sh" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5027503">
+    <splitter split-orientation="horizontal" split-proportion="0.54076433">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="jobs_control.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
+          <file leaf-file-name="check_if_builtins.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/check_if_builtins.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="406">
-                  <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="20" selection-end-line="52" selection-end-column="51" />
+                <state relative-caret-position="375">
+                  <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="key_eof.c" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_eof.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="builtin_jobs.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="375">
+                  <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="exit.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/cores/exit.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="read_stdin.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1200">
+                  <caret line="263" column="8" lean-forward="false" selection-start-line="263" selection-start-column="8" selection-end-line="263" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -70,81 +127,38 @@
           <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Makefile">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="670">
-                  <caret line="161" column="61" lean-forward="false" selection-start-line="161" selection-start-column="61" selection-end-line="161" selection-end-column="61" />
+                <state relative-caret-position="285">
+                  <caret line="53" column="48" lean-forward="false" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
+          <file leaf-file-name="builtin_exit.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_exit.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="601">
-                  <caret line="177" column="16" lean-forward="true" selection-start-line="177" selection-start-column="16" selection-end-line="177" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#1672#2035#0" expanded="false" />
-                    <element signature="e#2037#2105#0" expanded="false" />
-                  </folding>
+                <state relative-caret-position="315">
+                  <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="utils.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/utils.c">
+          <file leaf-file-name="jobs_control.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1261">
+                  <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="var_return.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/cores/var_return.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="builtin_env.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="check_if_builtins.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/execution/check_if_builtins.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="error.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/builtins/error.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="error_env.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/error_function/error_env.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="define.h" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/incs/define.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="855">
-                  <caret line="92" column="66" lean-forward="true" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
                   <folding />
                 </state>
               </provider>
@@ -154,71 +168,21 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ft_cd.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/ft_cd.c">
+          <file leaf-file-name="my_getenv.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/env/my_getenv.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1350">
-                  <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="builtin_kill.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_kill.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="795">
-                  <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="init_history.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/history/init_history.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="930">
-                  <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="manage_env.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/env/manage_env.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="35" selection-end-column="46" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="initialise_environment.c" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/srcs/env/initialise_environment.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ft_strisalpha.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_strisalpha.c">
+          <file leaf-file-name="builtin_env.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="285">
-                  <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ft_strisdigit.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_strisdigit.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+                  <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -227,8 +191,8 @@
           <file leaf-file-name="shell.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/cores/shell.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="42" column="53" lean-forward="false" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+                <state relative-caret-position="375">
+                  <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -237,8 +201,18 @@
           <file leaf-file-name="sh.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/incs/sh.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="226" column="12" lean-forward="false" selection-start-line="226" selection-start-column="12" selection-end-line="226" selection-end-column="12" />
+                <state relative-caret-position="495">
+                  <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="define.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/incs/define.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="49" column="33" lean-forward="true" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -250,17 +224,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>update_status</find>
-      <find>(index)</find>
-      <find>init_fd()</find>
-      <find>pjt</find>
-      <find>reset_signa</find>
-      <find>waitpid</find>
-      <find>tcset</find>
       <find>modify</find>
-      <find>index</find>
       <find>opt</find>
-      <find>option</find>
       <find>print_jobs</find>
       <find>CLEAR</find>
       <find>index_c</find>
@@ -280,12 +245,17 @@
       <find>t</find>
       <find>builtin_env</find>
       <find>start</find>
+      <find>compare</find>
+      <find>cpy</find>
+      <find>uint8_t</find>
+      <find>index</find>
+      <find>option</find>
+      <find>manage_env</find>
+      <find>builtin_jobs</find>
+      <find>manage</find>
+      <find>EOF</find>
     </findStrings>
     <replaceStrings>
-      <replace>tputs(tgetstr(&quot;up&quot;, 0), STDIN_FILENO, &amp;my_put)</replace>
-      <replace>tputs(tgetstr(&quot;sc&quot;, 0), STDIN_FILENO, &amp;my_put)</replace>
-      <replace>tputs(tgetstr(RESTORE, 0), STDIN_FILENO, &amp;my_put)</replace>
-      <replace>tputs(tgetstr(CURSOR_INVIS, 0), STDIN_FILENO, &amp;my_put)</replace>
       <replace>tputs(tgetstr(CURSOR_BACK, 0), STDIN_FILENO, &amp;my_put)</replace>
       <replace>tputs(tgetstr(CLEAR_FROM_CUR, 0), STDIN_FILENO, &amp;my_put)</replace>
       <replace>tputs(tgetstr(BACK_N, 0), STDIN_FILENO, &amp;my_put)</replace>
@@ -302,7 +272,6 @@
       <replace>id</replace>
       <replace>index_child</replace>
       <replace>STDIN_FILENO</replace>
-      <replace>opt</replace>
       <replace>index</replace>
       <replace>ind</replace>
       <replace>i</replace>
@@ -310,8 +279,13 @@
       <replace>ind_c</replace>
       <replace>NO_CUR_JOB</replace>
       <replace>&quot;}</replace>
-      <replace>error_builtin</replace>
       <replace>table</replace>
+      <replace>index_cpy</replace>
+      <replace>error_builtin</replace>
+      <replace>int</replace>
+      <replace>index_env</replace>
+      <replace>(*env)</replace>
+      <replace>opt</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/libs/libft/srcs</dir>
@@ -379,16 +353,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/srcs/read/key_/key_delete_here.c" />
-        <option value="$PROJECT_DIR$/srcs/read/key_/key_undo.c" />
-        <option value="$PROJECT_DIR$/srcs/read/other_read/prompt.c" />
-        <option value="$PROJECT_DIR$/srcs/history/copy_cmd.c" />
-        <option value="$PROJECT_DIR$/srcs/read/key_/key_print.c" />
-        <option value="$PROJECT_DIR$/srcs/read/key_/key_clear.c" />
-        <option value="$PROJECT_DIR$/srcs/cores/insert_one_line.c" />
-        <option value="$PROJECT_DIR$/srcs/read/completion/complete_path.c" />
-        <option value="$PROJECT_DIR$/srcs/read/completion/my_togo.c" />
-        <option value="$PROJECT_DIR$/srcs/read/completion/continue_completion.c" />
         <option value="$PROJECT_DIR$/srcs/read/other_read/finish_read_std.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" />
         <option value="$PROJECT_DIR$/srcs/term/init_fd.c" />
@@ -407,29 +371,39 @@
         <option value="$PROJECT_DIR$/srcs/read/key_/key_enter.c" />
         <option value="$PROJECT_DIR$/srcs/cores/cursor_placement.c" />
         <option value="$PROJECT_DIR$/libs/libft/srcs/ft_strncmp.c" />
-        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" />
         <option value="$PROJECT_DIR$/srcs/read/other_read/print_struct.c" />
         <option value="$PROJECT_DIR$/incs/struct.h" />
         <option value="$PROJECT_DIR$/libs/libft/srcs/ft_atoi.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/status_signals.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/libs/libft/Makefile" />
         <option value="$PROJECT_DIR$/libs/libft/incs/libft.h" />
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" />
-        <option value="$PROJECT_DIR$/srcs/cores/shell.c" />
         <option value="$PROJECT_DIR$/libs/libft/srcs/ft_strisalpha.c" />
-        <option value="$PROJECT_DIR$/libs/libft/srcs/ft_strisdigit.c" />
-        <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/srcs/history/init_history.c" />
-        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_kill.c" />
-        <option value="$PROJECT_DIR$/srcs/execution/check_if_builtins.c" />
+        <option value="$PROJECT_DIR$/srcs/env/manage_env.c" />
         <option value="$PROJECT_DIR$/srcs/cores/main.c" />
-        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c" />
-        <option value="$PROJECT_DIR$/incs/define.h" />
-        <option value="$PROJECT_DIR$/incs/sh.h" />
+        <option value="$PROJECT_DIR$/srcs/cores/shell.c" />
         <option value="$PROJECT_DIR$/srcs/env/initialise_environment.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_kill.c" />
+        <option value="$PROJECT_DIR$/libs/libft/srcs/ft_strisdigit.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/ft_echo.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/ft_setenv.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/ft_unsetenv.c" />
+        <option value="$PROJECT_DIR$/srcs/read/completion/init_completion.c" />
+        <option value="$PROJECT_DIR$/srcs/read/completion/complete_binary.c" />
+        <option value="$PROJECT_DIR$/incs/define.h" />
+        <option value="$PROJECT_DIR$/srcs/execution/check_if_builtins.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/exit.c" />
+        <option value="$PROJECT_DIR$/incs/sh.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_exit.c" />
+        <option value="$PROJECT_DIR$/srcs/cores/exit.c" />
+        <option value="$PROJECT_DIR$/srcs/read/key_/key_eof.c" />
       </list>
     </option>
   </component>
@@ -527,12 +501,6 @@
             <path>
               <item name="42sh" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="42sh" type="462c0819:PsiDirectoryNode" />
-              <item name=".objs" type="462c0819:PsiDirectoryNode" />
-              <item name="history" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="42sh" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="42sh" type="462c0819:PsiDirectoryNode" />
               <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -557,6 +525,12 @@
               <item name="42sh" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="42sh" type="462c0819:PsiDirectoryNode" />
               <item name="srcs" type="462c0819:PsiDirectoryNode" />
+              <item name="cores" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="42sh" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="42sh" type="462c0819:PsiDirectoryNode" />
+              <item name="srcs" type="462c0819:PsiDirectoryNode" />
               <item name="execution" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -565,12 +539,6 @@
               <item name="srcs" type="462c0819:PsiDirectoryNode" />
               <item name="execution" type="462c0819:PsiDirectoryNode" />
               <item name="builtins_functions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="42sh" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="42sh" type="462c0819:PsiDirectoryNode" />
-              <item name="srcs" type="462c0819:PsiDirectoryNode" />
-              <item name="jobs_control" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -665,12 +633,13 @@
       <workItem from="1508933719618" duration="12735000" />
       <workItem from="1509020300439" duration="7791000" />
       <workItem from="1509034697304" duration="6842000" />
-      <workItem from="1509105401055" duration="1867000" />
+      <workItem from="1509105401055" duration="7160000" />
+      <workItem from="1509116862866" duration="2550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297994000" />
+    <option name="totallyTimeSpent" value="305837000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -682,20 +651,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1818" height="1440" extended-state="0" />
+    <frame x="0" y="0" width="1570" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18591858" sideWeight="0.4971223" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20955414" sideWeight="0.4971223" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29928058" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1548975" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20976563" sideWeight="0.5028777" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15477706" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20976563" sideWeight="0.5028777" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -703,6 +671,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -719,101 +688,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/restore_cursor.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/init_prompt.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_arrow.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_refresh.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/history/reset_history.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_home_end.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_atoi_base.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/modify_status_jobs.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/builtins_jobs.c" />
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/check_cmd.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="23" lean-forward="false" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_enter.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/log_info_bug_dnt_care_of_norminette_bitch.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cores/cursor_placement.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/history/make_list_hist.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -885,14 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/data_builtin.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -904,14 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2460">
-          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -945,10 +803,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/builtins/error.c">
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        <state relative-caret-position="467">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/ft_env.c" />
+    <entry file="file://$PROJECT_DIR$/srcs/env/manage_env.c" />
+    <entry file="file://$PROJECT_DIR$/srcs/history/init_history.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/ft_cd.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -961,27 +837,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c">
+    <entry file="file://$PROJECT_DIR$/srcs/builtins/error.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/ft_cd.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -989,46 +848,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_strisdigit.c">
+    <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="75">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding>
+            <element signature="e#1672#2035#0" expanded="false" />
+            <element signature="e#2037#2105#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/cores/shell.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="53" lean-forward="false" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+        <state relative-caret-position="375">
+          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
+    <entry file="file://$PROJECT_DIR$/srcs/env/my_getenv.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="161" column="61" lean-forward="false" selection-start-line="161" selection-start-column="61" selection-end-line="161" selection-end-column="61" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/history/init_history.c">
+    <entry file="file://$PROJECT_DIR$/srcs/env/initialise_environment.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_kill.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state relative-caret-position="720">
+          <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1041,77 +894,186 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="20" selection-end-line="52" selection-end-column="51" />
+        <state relative-caret-position="285">
+          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/ft_env.c">
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_kill.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="5" lean-forward="false" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_strisdigit.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="45" lean-forward="false" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/ft_echo.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/env/manage_env.c">
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/ft_setenv.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="35" selection-end-column="46" />
+        <state relative-caret-position="1230">
+          <caret line="99" column="19" lean-forward="false" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/ft_unsetenv.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_tabulation.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/completion/init_completion.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_arrow.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/completion/complete_binary.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cores/var_return.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1261">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/check_if_builtins.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="375">
+          <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/exit.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="177" column="16" lean-forward="true" selection-start-line="177" selection-start-column="16" selection-end-line="177" selection-end-column="16" />
-          <folding>
-            <element signature="e#1672#2035#0" expanded="false" />
-            <element signature="e#2037#2105#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="405">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/incs/define.h">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="92" column="66" lean-forward="true" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
+        <state relative-caret-position="1200">
+          <caret line="263" column="8" lean-forward="false" selection-start-line="263" selection-start-column="8" selection-end-line="263" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/incs/sh.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="226" column="12" lean-forward="false" selection-start-line="226" selection-start-column="12" selection-end-line="226" selection-end-column="12" />
+        <state relative-caret-position="495">
+          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/env/initialise_environment.c">
+    <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="285">
+          <caret line="53" column="48" lean-forward="false" selection-start-line="53" selection-start-column="48" selection-end-line="53" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_exit.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/incs/define.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="49" column="33" lean-forward="true" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cores/exit.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_eof.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           <folding />
         </state>
       </provider>

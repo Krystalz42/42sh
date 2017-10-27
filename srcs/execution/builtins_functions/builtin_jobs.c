@@ -5,19 +5,14 @@
 #include <sh.h>
 
 /*
-
--l 8
-
-		List process IDs in addition to the normal information.
--p 1
-
-		List only the process ID of the job’s process group leader.
--r 2
-
-		Display only running jobs.
--s 4
-
-		Display only stopped jobs.
+**	-p 1
+**		List only the process ID of the job’s process group leader.
+**	-r 2
+**		Display only running jobs.
+**	s 4
+**		Display only stopped jobs.
+**	-l 8
+**		List process IDs in addition to the normal information.
 */
 
 int			print_process(t_process process, int info, int parent, int index)
@@ -81,5 +76,6 @@ uint8_t			builtin_jobs(char **command, char **env)
 		}
 		table++;
 	}
+	log_trace("Jobs [%d]",opt);
 	return (var_return(print_jobs(jobs_table(), opt)));
 }

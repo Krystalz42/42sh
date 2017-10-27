@@ -51,7 +51,7 @@ static char				*ft_strndup(char *src, unsigned int len)
 	unsigned int		i;
 
 	i = 0;
-	if (!(res = malloc(sizeof(char) * len + 1)))
+	if (!(res = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	while (src[i] && i != len)
 	{
@@ -96,7 +96,7 @@ uint8_t					ft_setenv(char **command, char **env)
 		i++;
 	}
 	ft_putstr("SUCCESS\n");
-	//add_environment(command[1]);
+	add_environment(command[1]);
 	free(variable);
 	RETVAR(0);
 }

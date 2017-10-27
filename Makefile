@@ -51,6 +51,7 @@ SRCS = \
 	   cores/shell.c										\
 	   cores/insert_one_line.c								\
 	   cores/var_return.c									\
+	   cores/exit.c											\
 	   read/other_read/read_stdin.c							\
 	   read/other_read/finish_read_std.c					\
 	   read/other_read/print_struct.c						\
@@ -135,10 +136,11 @@ SRCS = \
 	   execution/builtins_functions/builtin_switch.c		\
 	   execution/builtins_functions/builtin_history.c		\
 	   execution/builtins_functions/builtin_hash.c			\
+	   execution/builtins_functions/builtin_env.c			\
+	   execution/builtins_functions/builtin_exit.c			\
 	   execution/builtins_functions/data_builtin.c			\
 	   execution/builtins_functions/ft_cd.c					\
 	   execution/builtins_functions/ft_echo.c				\
-	   execution/builtins_functions/ft_env.c				\
 	   execution/builtins_functions/ft_setenv.c				\
 	   execution/builtins_functions/ft_unsetenv.c			\
 	   execution/builtins_functions/refresh_varenv.c		\
@@ -161,7 +163,6 @@ SRCS = \
 	   parsing/tools.c										\
 	   env/add_environment.c								\
 	   env/remove_environment.c								\
-	   env/manage_env.c										\
 	   env/init_env.c										\
 	   env/usage_environment.c								\
 	   env/my_getenv.c										\

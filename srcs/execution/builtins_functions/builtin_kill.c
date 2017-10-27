@@ -93,6 +93,7 @@ uint8_t			kill_process(char *string1, char *string2)
 	int					index;
 
 	index = -1;
+	signal = SIGTERM;
 	if (string1 && ft_strisdigit(string1 + 1))
 		signal = ft_atoi(string1 + 1);
 	else if (string1 && ft_strisalpha(string1 + 1))
@@ -101,11 +102,10 @@ uint8_t			kill_process(char *string1, char *string2)
 			if (ft_strcmp(g_info[index].status, string1 + 1) == 0)
 				signal = g_info[index].signal;
 	}
-	else
-		signal = SIGTERM;
 	if (ft_strisdigit(string2))
 	{
-		if (kill(0, ft_atoi(string2)) < 0)
+		log_trace("Return [%d] of %d",kill(0, ft_atoi(string2)), ft_atoi(string2));
+		if (kill(ft_atoi(string2), 0) != 0)
 			return (error_builtin(KILL, NO_PROCESS, string2));
 		else
 			return (uint8_t)(kill(ft_atoi(string2), signal));
@@ -134,7 +134,7 @@ uint8_t			builtin_kill(char **command, char **env)
 			else if (command[2])
 				return (var_return(kill_process(command[1], command[2])));
 			else
-				return (var_return(error_builtin(KILL, EXPECT, command[1])));
+				return (var_return(error_builtin(KILL, NO_ARGS, command[1])));
 		}
 		else
 			return (var_return(kill_process(NULL, command[1])));

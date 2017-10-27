@@ -86,6 +86,7 @@
 */
 
 # define FG						"fg: "
+# define EXIT					"exit: "
 # define BG						"bg: "
 # define KILL					"kill: "
 # define ENV					"env: "
@@ -97,8 +98,9 @@
 # define NO_ARGS				"not enough arguments: "
 # define NO_PROCESS				"no such process: "
 # define ILLEGAL				"illegal pid: "
-# define EXPECT					"signal name expected"
-
+# define EXPECT					"signal name expected :"
+# define TOO_MANY_ARGS			"too many arguments :"
+# define NUM_REQUIRED			"numeric argument required :"
 
 # define HISTSIZE				500
 

@@ -13,7 +13,7 @@ int		ft_strisdigit(char *string)
 	index = 0;
 	while (string[index])
 	{
-		if (ft_isdigit(string[index]) == 0)
+		if (ft_isdigit(string[index]) == 0 && string[index] != '-')
 			return (0);
 		index++;
 	}

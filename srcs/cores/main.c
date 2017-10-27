@@ -23,8 +23,8 @@ int			main(int ac, char **av)
 	init_term();
 	write_history_in_sh(get_str_from_history());
 	init_signal();
-	test_cmd();
-//	shell();
+//	test_cmd();
+	shell();
 	b_write_history_in_file(get_str_from_history());
 	logger_close();
 	return (0);
@@ -164,6 +164,7 @@ void test_cmd()
 	char *jobsS[] = {"jobs", "-s", NULL};
 	char *my_shell[] = {"./42sh", NULL};
 	char *kill[] = {"kill", "-9", "516156", NULL};
+	char *env[] = {"env", "_=", "PATH=pof", "pa= da", "ls", "-l", NULL};
 
 	(void)wc;
 	(void)kill;
@@ -183,7 +184,7 @@ void test_cmd()
 	while (i)
 	{
 		read_stdin(DEFAULT);
-		builtin_kill(kill, NULL);
+		builtin_env(env, env_table(NULL, ENV_REC));
 		read_stdin(DEFAULT);
 //		my_execute_pipe(lsl, cat, true); // ls -lR | cat -e
 //		read_stdin(DEFAULT);
