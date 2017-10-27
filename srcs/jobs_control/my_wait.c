@@ -31,13 +31,14 @@ void			wait_process(t_process *process, int index)
 {
 	int			ind_c;
 
+	(void)index;
 	ind_c = 0;
 	while (process[ind_c].pid)
 	{
-		log_error("Wait [%d]",waitpid(process[ind_c].pid, &process[ind_c].status, WUNTRACED));
+		log_error("Wait [%d]", waitpid(process[ind_c].pid, &process[ind_c].status, WUNTRACED));
 		ind_c++;
 	}
-	update_jobs(process, index);
+	update_jobs(process);
 	if (terminate_process(process))
 		reset_process(process);
 	else
@@ -52,14 +53,13 @@ void		my_wait(int index)
 {
 	t_jobs		*jobs;
 
-
 	jobs = jobs_table();
 	if (jobs[index].process->foreground)
 	{
 		set_fildes(jobs[index].process->pgid);
 		wait_process(jobs[index].process, index);
-		pjt(jobs[index], index);
 		set_fildes(getpgid(0));
+		pjt(jobs[index], index);
 	}
 	else
 	{

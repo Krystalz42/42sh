@@ -19,9 +19,9 @@ t_jobs				*jobs_table(void)
 	return (jobs);
 }
 
-void			update_jobs(t_process *process, int index)
+void			update_jobs(t_process *process)
 {
-	log_warn("/!\\  [PROCESS %d HAS BEEN FINISH] /!\\", index);
+	log_warn("/!\\  [PROCESS %d LL BE UPDATE] /!\\");
 	int			index_child;
 
 	index_child = 0;
@@ -63,7 +63,7 @@ int					get_jobs_index(pid_t search)
 
 void			print_status(t_process *process, int jobs_spec)
 {
-	log_warn("/!\\  [PROCESS %d HAS BEEN MODIFY PID [%d]] /!\\", jobs_spec,process[0].pid);
+	log_warn("/!\\  [PROCESS %d WILL BE PRINT]] /!\\", jobs_spec);
 	int			index;
 
 	write(1, &(index), 1);
@@ -110,7 +110,7 @@ int					terminate_process(t_process *process)
 	ret = 1;
 	while (process[index_child].pid)
 	{
-		log_trace("In terminated process for %d [%d.%d]",process[index_child].pid, WIFSIGNALED(process[index_child].status), WIFEXITED(process[index_child].status));
+		log_trace("In terminated process for %d [%d.%d]", process[index_child].pid, WIFSIGNALED(process[index_child].status), WIFEXITED(process[index_child].status));
 		if (!WIFSIGNALED(process[index_child].status) && !WIFEXITED(process[index_child].status))
 			ret = 0;
 		index_child++;
@@ -135,8 +135,6 @@ void				handler_sigchld(int sig)
 			if (terminate_process(jobs[index].process))
 			{
 				print_status(jobs[index].process, index);
-				log_warn("/!\\  [PROCESS %d TERMINATED] /!\\", index);
-				update_jobs(jobs[index].process, index);
 				reset_process(jobs[index].process);
 			}
 			else

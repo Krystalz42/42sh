@@ -12,7 +12,7 @@ uint8_t env(char **c, char **e)
 }
 
 static const t_builtin	builtin[] = {
-	(t_builtin){"env", ft_env},
+	(t_builtin){"env", builtin_env},
 	(t_builtin){"setenv", ft_setenv},
 	(t_builtin){"unsetenv", ft_unsetenv},
 	(t_builtin){"cd", ft_cd},

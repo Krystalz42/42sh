@@ -68,34 +68,46 @@ void my_execute(char **command, char **env, bool foreground)
 //void fg(int i, t_process *process, int fildes[2], bool foreground)
 //{
 //	t_jobs		*jobs;
-//	int			index;
+//	static int			index;
+//	pid_t pgid;
 //
-//	pipe(fildes);
 //	jobs = jobs_table();
-//	index = get_jobs_index(-1);
-//	if (i == 2)
-//		return ;
+//	pipe(fildes);
+//
 //	if (process == NULL)
 //	{
+//		index = get_jobs_index(-1);
 //		process = my_fork(jobs[index].process, 0, foreground, 0);
 //	}
 //	else
 //	{
+//		pgid = process->pgid;
 //		(process) += 1;
-//		process = my_fork(process, process->pgid, foreground, 0);
+//		i++;
+//		process = my_fork(process, pgid, foreground, 0);
 //	}
 //	if (process->pid)
 //	{
 //		//[READ_PIPE]
-//		fg(i + 1, process + 1, fildes, foreground);
-////		execute_ast(ast->right);
+//		if (i == 5)
+//		{
+//			log_warn("Finish PIPELINE [C{1}:C{0}] %d", i);
+//			pjt(jobs[index], index);
+//		}
+//		else
+//		{
+//			log_warn("Daddy[TEST PIPELINE > %i Execution qui ecrit [C{0}:D{1,1}:C{1}]", i + 1);
+//			fg(i, process, fildes, foreground);
+//		}
+////		execute_ast(ast->left);
 //	}
 //	else
 //	{
+//		//execution droite de l'abre qui lis tout le temps
 //		//[WRITE_PIPE]
-//		log_warn("[TEST PIPELINE > %i ]", i);
+//		//execute_ast(ast->right);
+//		log_warn("Child[TEST PIPELINE > %i Execution qui lis [C{1}:D{0,0}:C{0}]", i);
 //		exit(EXIT_SUCCESS);
-//		//execute_ast(ast->left);
 //	}
 //}
 
@@ -108,10 +120,10 @@ void my_execute_pipe(char **command, char **command1, bool foreground)
 	jobs = jobs_table();
 	index = get_jobs_index(-1);
 	pipe(fildes);
-	my_fork(jobs[index].process,0, foreground, *command);
+	my_fork(jobs[index].process,0, foreground, *command1);
 	if (jobs[index].process[0].pid) //father
 	{
-		my_fork(jobs[index].process + 1, jobs[index].process[0].pid, foreground, *command1);
+		my_fork(jobs[index].process + 1, jobs[index].process[0].pid, foreground, *command);
 		if (jobs[index].process[1].pid) //father
 		{
 			close(fildes[0]);
@@ -121,19 +133,19 @@ void my_execute_pipe(char **command, char **command1, bool foreground)
 		}
 		else //child2 ls
 		{
-			close(fildes[1]);
-			dup2(fildes[0], STDIN_FILENO);
 			close(fildes[0]);
-			my_execve(command1, NULL);
+			dup2(fildes[1], STDOUT_FILENO);
+			close(fildes[1]);
+			my_execve(command, NULL);
+
 		}
 	}
 	else //child1 cat
 	{
-		close(fildes[0]);
-		dup2(fildes[1], STDOUT_FILENO);
 		close(fildes[1]);
-		my_execve(command, NULL);
-
+		dup2(fildes[0], STDIN_FILENO);
+		close(fildes[0]);
+		my_execve(command1, NULL);
 	}
 }
 
@@ -151,8 +163,10 @@ void test_cmd()
 	char *jobsP[] = {"jobs", "-p", NULL};
 	char *jobsS[] = {"jobs", "-s", NULL};
 	char *my_shell[] = {"./42sh", NULL};
+	char *kill[] = {"kill", "-9", "516156", NULL};
 
 	(void)wc;
+	(void)kill;
 	(void)jobs;
 	(void)my_shell;
 	(void)jobsR;
@@ -169,15 +183,19 @@ void test_cmd()
 	while (i)
 	{
 		read_stdin(DEFAULT);
-		my_execute_pipe(ls, cat, true);
+		builtin_kill(kill, NULL);
 		read_stdin(DEFAULT);
-//		my_execute(cat, NULL, false); // cat &
+//		my_execute_pipe(lsl, cat, true); // ls -lR | cat -e
 //		read_stdin(DEFAULT);
+//		builtin_jobs((char *[]){"jobs", "-ls", NULL},NULL); // jobs -ls
 //		read_stdin(DEFAULT);
-//		builtin_jobs((char *[]){"jobs", "-s", NULL},NULL);
+//		builtin_foreground((char *[]){"fg", NULL}, NULL); // fg
+//		read_stdin(DEFAULT);
+//		my_execute(cat, NULL, false); // cat -e &
+//		read_stdin(DEFAULT);
+//		builtin_foreground((char *[]){"fg", NULL}, NULL); // fg
 //		read_stdin(DEFAULT);
 //		builtin_jobs((char *[]){"jobs", "-l", NULL},NULL);
-//		read_stdin(DEFAULT);
 //		builtin_jobs((char *[]){"jobs", "-lr", NULL},NULL);
 //		read_stdin(DEFAULT);
 //		builtin_jobs((char *[]){"jobs", "-ps", NULL},NULL);
@@ -189,16 +207,16 @@ void test_cmd()
 //		read_stdin(DEFAULT);
 //		builtin_background((char *[]){"bg", NULL}, NULL); // bg
 //		my_execute_pipe(cat , ls, false); // ls -l | cat -e &
+//		my_execute(cat, NULL, false); // cat &
+//		fg(0, NULL, fildes, true);
 //		read_stdin(DEFAULT);
 //		my_execute(ls_, NULL, false); // ls &
 //		read_stdin(DEFAULT);
 //		my_execute(ls_, NULL, true); // ls
 //		read_stdin(DEFAULT);
 //		read_stdin(DEFAULT);
-//		builtin_foreground((char *[]){"fg", NULL}, NULL); // fg
 //		read_stdin(DEFAULT);
-//		my_execute(cat, NULL, true); // cat -e
-		read_stdin(DEFAULT);
-
+//		read_stdin(DEFAULT);
+//
 		}
 }

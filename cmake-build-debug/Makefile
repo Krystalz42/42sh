@@ -1851,6 +1851,60 @@ libs/libft/srcs/ft_strequ.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/libft/srcs/ft_strequ.c.s
 .PHONY : libs/libft/srcs/ft_strequ.c.s
 
+libs/libft/srcs/ft_strisalpha.o: libs/libft/srcs/ft_strisalpha.c.o
+
+.PHONY : libs/libft/srcs/ft_strisalpha.o
+
+# target to build an object file
+libs/libft/srcs/ft_strisalpha.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/libft/srcs/ft_strisalpha.c.o
+.PHONY : libs/libft/srcs/ft_strisalpha.c.o
+
+libs/libft/srcs/ft_strisalpha.i: libs/libft/srcs/ft_strisalpha.c.i
+
+.PHONY : libs/libft/srcs/ft_strisalpha.i
+
+# target to preprocess a source file
+libs/libft/srcs/ft_strisalpha.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/libft/srcs/ft_strisalpha.c.i
+.PHONY : libs/libft/srcs/ft_strisalpha.c.i
+
+libs/libft/srcs/ft_strisalpha.s: libs/libft/srcs/ft_strisalpha.c.s
+
+.PHONY : libs/libft/srcs/ft_strisalpha.s
+
+# target to generate assembly for a file
+libs/libft/srcs/ft_strisalpha.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/libft/srcs/ft_strisalpha.c.s
+.PHONY : libs/libft/srcs/ft_strisalpha.c.s
+
+libs/libft/srcs/ft_strisdigit.o: libs/libft/srcs/ft_strisdigit.c.o
+
+.PHONY : libs/libft/srcs/ft_strisdigit.o
+
+# target to build an object file
+libs/libft/srcs/ft_strisdigit.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/libft/srcs/ft_strisdigit.c.o
+.PHONY : libs/libft/srcs/ft_strisdigit.c.o
+
+libs/libft/srcs/ft_strisdigit.i: libs/libft/srcs/ft_strisdigit.c.i
+
+.PHONY : libs/libft/srcs/ft_strisdigit.i
+
+# target to preprocess a source file
+libs/libft/srcs/ft_strisdigit.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/libft/srcs/ft_strisdigit.c.i
+.PHONY : libs/libft/srcs/ft_strisdigit.c.i
+
+libs/libft/srcs/ft_strisdigit.s: libs/libft/srcs/ft_strisdigit.c.s
+
+.PHONY : libs/libft/srcs/ft_strisdigit.s
+
+# target to generate assembly for a file
+libs/libft/srcs/ft_strisdigit.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/libft/srcs/ft_strisdigit.c.s
+.PHONY : libs/libft/srcs/ft_strisdigit.c.s
+
 libs/libft/srcs/ft_striter.o: libs/libft/srcs/ft_striter.c.o
 
 .PHONY : libs/libft/srcs/ft_striter.o
@@ -3660,6 +3714,33 @@ srcs/error_function/puterror.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/puterror.c.s
 .PHONY : srcs/error_function/puterror.c.s
 
+srcs/execution/builtins_functions/builtin_env.o: srcs/execution/builtins_functions/builtin_env.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_env.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_env.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_env.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_env.c.o
+
+srcs/execution/builtins_functions/builtin_env.i: srcs/execution/builtins_functions/builtin_env.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_env.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_env.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_env.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_env.c.i
+
+srcs/execution/builtins_functions/builtin_env.s: srcs/execution/builtins_functions/builtin_env.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_env.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_env.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_env.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_env.c.s
+
 srcs/execution/builtins_functions/builtin_hash.o: srcs/execution/builtins_functions/builtin_hash.c.o
 
 .PHONY : srcs/execution/builtins_functions/builtin_hash.o
@@ -3740,6 +3821,33 @@ srcs/execution/builtins_functions/builtin_jobs.s: srcs/execution/builtins_functi
 srcs/execution/builtins_functions/builtin_jobs.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_jobs.c.s
 .PHONY : srcs/execution/builtins_functions/builtin_jobs.c.s
+
+srcs/execution/builtins_functions/builtin_kill.o: srcs/execution/builtins_functions/builtin_kill.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_kill.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_kill.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_kill.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_kill.c.o
+
+srcs/execution/builtins_functions/builtin_kill.i: srcs/execution/builtins_functions/builtin_kill.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_kill.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_kill.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_kill.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_kill.c.i
+
+srcs/execution/builtins_functions/builtin_kill.s: srcs/execution/builtins_functions/builtin_kill.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_kill.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_kill.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_kill.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_kill.c.s
 
 srcs/execution/builtins_functions/builtin_switch.o: srcs/execution/builtins_functions/builtin_switch.c.o
 
@@ -4199,33 +4307,6 @@ srcs/history/write_history.s: srcs/history/write_history.c.s
 srcs/history/write_history.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/history/write_history.c.s
 .PHONY : srcs/history/write_history.c.s
-
-srcs/jobs_control/builtins_jobs.o: srcs/jobs_control/builtins_jobs.c.o
-
-.PHONY : srcs/jobs_control/builtins_jobs.o
-
-# target to build an object file
-srcs/jobs_control/builtins_jobs.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.o
-.PHONY : srcs/jobs_control/builtins_jobs.c.o
-
-srcs/jobs_control/builtins_jobs.i: srcs/jobs_control/builtins_jobs.c.i
-
-.PHONY : srcs/jobs_control/builtins_jobs.i
-
-# target to preprocess a source file
-srcs/jobs_control/builtins_jobs.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.i
-.PHONY : srcs/jobs_control/builtins_jobs.c.i
-
-srcs/jobs_control/builtins_jobs.s: srcs/jobs_control/builtins_jobs.c.s
-
-.PHONY : srcs/jobs_control/builtins_jobs.s
-
-# target to generate assembly for a file
-srcs/jobs_control/builtins_jobs.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/builtins_jobs.c.s
-.PHONY : srcs/jobs_control/builtins_jobs.c.s
 
 srcs/jobs_control/jobs_control.o: srcs/jobs_control/jobs_control.c.o
 
@@ -6777,6 +6858,12 @@ help:
 	@echo "... libs/libft/srcs/ft_strequ.o"
 	@echo "... libs/libft/srcs/ft_strequ.i"
 	@echo "... libs/libft/srcs/ft_strequ.s"
+	@echo "... libs/libft/srcs/ft_strisalpha.o"
+	@echo "... libs/libft/srcs/ft_strisalpha.i"
+	@echo "... libs/libft/srcs/ft_strisalpha.s"
+	@echo "... libs/libft/srcs/ft_strisdigit.o"
+	@echo "... libs/libft/srcs/ft_strisdigit.i"
+	@echo "... libs/libft/srcs/ft_strisdigit.s"
 	@echo "... libs/libft/srcs/ft_striter.o"
 	@echo "... libs/libft/srcs/ft_striter.i"
 	@echo "... libs/libft/srcs/ft_striter.s"
@@ -6978,6 +7065,9 @@ help:
 	@echo "... srcs/error_function/puterror.o"
 	@echo "... srcs/error_function/puterror.i"
 	@echo "... srcs/error_function/puterror.s"
+	@echo "... srcs/execution/builtins_functions/builtin_env.o"
+	@echo "... srcs/execution/builtins_functions/builtin_env.i"
+	@echo "... srcs/execution/builtins_functions/builtin_env.s"
 	@echo "... srcs/execution/builtins_functions/builtin_hash.o"
 	@echo "... srcs/execution/builtins_functions/builtin_hash.i"
 	@echo "... srcs/execution/builtins_functions/builtin_hash.s"
@@ -6987,6 +7077,9 @@ help:
 	@echo "... srcs/execution/builtins_functions/builtin_jobs.o"
 	@echo "... srcs/execution/builtins_functions/builtin_jobs.i"
 	@echo "... srcs/execution/builtins_functions/builtin_jobs.s"
+	@echo "... srcs/execution/builtins_functions/builtin_kill.o"
+	@echo "... srcs/execution/builtins_functions/builtin_kill.i"
+	@echo "... srcs/execution/builtins_functions/builtin_kill.s"
 	@echo "... srcs/execution/builtins_functions/builtin_switch.o"
 	@echo "... srcs/execution/builtins_functions/builtin_switch.i"
 	@echo "... srcs/execution/builtins_functions/builtin_switch.s"
@@ -7038,9 +7131,6 @@ help:
 	@echo "... srcs/history/write_history.o"
 	@echo "... srcs/history/write_history.i"
 	@echo "... srcs/history/write_history.s"
-	@echo "... srcs/jobs_control/builtins_jobs.o"
-	@echo "... srcs/jobs_control/builtins_jobs.i"
-	@echo "... srcs/jobs_control/builtins_jobs.s"
 	@echo "... srcs/jobs_control/jobs_control.o"
 	@echo "... srcs/jobs_control/jobs_control.i"
 	@echo "... srcs/jobs_control/jobs_control.s"

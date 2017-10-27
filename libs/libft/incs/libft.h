@@ -33,13 +33,6 @@
 # define WHT   "\x1B[37m"
 # define RST   "\x1B[0m"
 
-# define PRED   ft_putstr("\x1B[31m")
-# define PGRN   ft_putstr("\x1B[32m")
-# define PYEL   ft_putstr("\x1B[33m")
-# define PBLU   ft_putstr("\x1B[34m")
-# define PMAG   ft_putstr("\x1B[35m")
-# define PCYN   ft_putstr("\x1B[36m")
-# define PWHT   ft_putstr("\x1B[37m")
 # define P_INV_FD(x)   ft_putstr_fd("\x1B[7m", x)
 # define P_RST_FD(x)   ft_putstr_fd("\x1B[0m", x)
 
@@ -48,7 +41,6 @@
 # define NBR_FD(x, y)		ft_putnbr_fd(x, y)
 # define STR(x)		ft_putstr(x)
 # define STR_FD(x, y)		ft_putstr_fd(x, y)
-# define END(x)		ft_putendl(x)
 # define CHAR(x)	ft_putchar(x)
 # define CHAR_FD(x, y)	ft_putchar_fd(x, y)
 
@@ -63,6 +55,8 @@ typedef struct		s_remain
 	char			*content;
 }					t_remain;
 
+int					ft_strisalpha(char *string);
+int					ft_strisdigit(char *string);
 int					ft_iscrlf(char c);
 void				ft_memdel_tab(char ***ta);
 char				**ft_str_to_tab(char *str);

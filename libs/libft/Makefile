@@ -140,6 +140,8 @@ SRCS = \
 	   ft_ustrncmp.c			\
 	   ft_double_delete.c		\
 	   get_next_line.c			\
+	   ft_strisdigit.c			\
+	   ft_strisalpha.c			\
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #

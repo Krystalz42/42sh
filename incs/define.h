@@ -41,17 +41,6 @@
 # define DEFAULT				16
 # define PRINT					32
 
-# define JOIN_STRUCT			0
-# define NEW_CHILD				1
-# define UPDATE_CHILD			2
-# define SIGNAL_RECEPTION		4
-# define SIGNAL_SIGCHLD			8
-# define PRINT_JOBS				16
-# define FOREGROUND				32
-# define BACKGROUND				64
-# define GET_INDEX				128
-
-
 /*
 **			INITIALIZATION READ
 */
@@ -96,9 +85,24 @@
 **			VARIOUS DEFINE
 */
 
-# define MAX_CHILD				8096
+# define FG						"fg: "
+# define BG						"bg: "
+# define KILL					"kill: "
+# define ENV					"env: "
+# define INVALID				"Invalid argument : "
+# define NO_ARGS_U				"option requires an argument -- u"
+# define NO_JOB					"job not found: "
+# define NO_CUR_JOB				"no current job :"
+# define UNKNOWN				"unknown signal: "
+# define NO_ARGS				"not enough arguments: "
+# define NO_PROCESS				"no such process: "
+# define ILLEGAL				"illegal pid: "
+# define EXPECT					"signal name expected"
+
 
 # define HISTSIZE				500
+
+# define MAX_CHILD				8096
 # define PATH_HISTORY			"/.42sh_history"
 # define PATH_HASH				"/.42sh_hash"
 # define PATH_ERR				"/dev/null"

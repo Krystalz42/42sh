@@ -131,6 +131,7 @@ SRCS = \
 	   signal/ft_signal.c									\
 	   execution/check_if_builtins.c						\
 	   execution/builtins_functions/builtin_jobs.c			\
+	   execution/builtins_functions/builtin_kill.c			\
 	   execution/builtins_functions/builtin_switch.c		\
 	   execution/builtins_functions/builtin_history.c		\
 	   execution/builtins_functions/builtin_hash.c			\
@@ -144,9 +145,8 @@ SRCS = \
 	   execution/builtins_functions/utils.c					\
 	   execution/builtins_functions/error.c					\
 	   jobs_control/modify_status_jobs.c					\
-	   jobs_control/status_signals.c							\
+	   jobs_control/status_signals.c						\
 	   jobs_control/jobs_control.c							\
-	   jobs_control/builtins_jobs.c							\
 	   jobs_control/set_process.c							\
 	   jobs_control/my_wait.c								\
 	   jobs_control/my_execve.c								\

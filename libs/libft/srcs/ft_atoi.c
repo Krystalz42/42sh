@@ -21,14 +21,14 @@ static int	check_pass(char c)
 
 int			ft_atoi(const char *str)
 {
-	int		signe;
+	int		sign;
 	long	number;
 
 	if (!str)
 		return (0);
 	while (check_pass((unsigned char)(*str)))
 		str++;
-	signe = *(str) == '-' ? -1 : 1;
+	sign = *(str) == '-' ? -1 : 1;
 	if (*str == '-' || *str == '+')
 		str++;
 	number = 0;
@@ -37,5 +37,5 @@ int			ft_atoi(const char *str)
 		number = number * 10 + (unsigned char)*str - '0';
 		str++;
 	}
-	return ((int)(number * signe));
+	return ((int)(number * sign));
 }

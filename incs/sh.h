@@ -113,6 +113,8 @@ uint8_t						write_history_in_sh(char *pathname);
 uint8_t						builtin_jobs(char **command, char **env);
 uint8_t						builtin_hash(char **command, char **env);
 uint8_t						builtin_history(char **command, char **env);
+uint8_t						builtin_kill(char **command, char **env);
+uint8_t						builtin_env(char **command, char **env);
 
 /*
 **				FUNCTION FOR COMPLETION
@@ -214,7 +216,6 @@ char						*get_str_from_history(void);
 **				ENVIRONEMENT FUNCTION
 */
 
-char						**builtin_env(char **command);
 void						add_environment(char *string);
 void						init_env(void);
 char						*my_getenv(char *name);
@@ -222,9 +223,9 @@ size_t						compare_environment(char *s1, char *s2);
 void						remove_environment(char *string);
 char						**env_table(char **env, int flags);
 int							usage_environement(char *string);
-char						**start_from_null(char **command);
-char						**start_from_less(char **command);
-char						**start_from_full(char **command);
+uint8_t						start_from_null(char **command, char ***env);
+uint8_t						start_from_full(char **command, char ***env);
+uint8_t						start_from_less(char **command, char ***env);
 
 /*
 **				HISTORY FUNCTION
@@ -276,7 +277,7 @@ void						chk_quotes(char c, char quote, const int *flag,
 **				JOB'S CONTROL FUNCTION
 */
 int							update_status(t_process *process);
-void						update_jobs(t_process *process, int index);
+void						update_jobs(t_process *process);
 t_jobs						*jobs_table(void);
 void						my_execve(char **command, char **env);
 void						handler_sigchld(int sig);
@@ -288,7 +289,6 @@ void						modify_runing(t_process *process, bool change);
 void						modify_foreground(t_process *process, bool change);
 void						print_status(t_process *process, int index);
 void						wait_process(t_process *process, int index);
-
 void						set_fildes(pid_t pgid);
 const char					*status_signal(int signal);
 const char					*status_exit(int signal);
@@ -324,6 +324,7 @@ void						memdel_outstanding(void);
 **			   	ERROR FUNCTION
 */
 
+uint8_t						error_builtin(char *from, char *error, char *args);
 void						*error_env(void);
 void						puterror(char *err);
 int							bip(void);

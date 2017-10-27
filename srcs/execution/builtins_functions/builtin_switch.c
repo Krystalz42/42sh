@@ -4,14 +4,16 @@
 
 #include <sh.h>
 
-static uint8_t		error_switch(char *from, char *error)
+uint8_t		error_builtin(char *from, char *error, char *args)
 {
 	ft_putstr_fd(from, STDERR_FILENO);
 	ft_putstr_fd(error, STDERR_FILENO);
+	ft_putstr_fd(args, STDERR_FILENO);
+	ft_putchar_fd(10, STDERR_FILENO);
 	return (1);
 }
 
-uint8_t				fg_switch_process(t_jobs *jobs, int index, char *from)
+uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
 {
 	if (index != -1 && jobs[index].process->pid)
 	{
@@ -31,10 +33,10 @@ uint8_t				fg_switch_process(t_jobs *jobs, int index, char *from)
 		return (0);
 	}
 	else
-		return (error_switch("fg:", from));
+		return (error_builtin(FG, error, args));
 }
 
-uint8_t				bg_switch_process(t_jobs *jobs, int index, char *from)
+uint8_t		bg_switch_process(t_jobs *jobs, int index, char *error, char *args)
 {
 	if (index != -1 && jobs[index].process->pid)
 	{
@@ -47,10 +49,10 @@ uint8_t				bg_switch_process(t_jobs *jobs, int index, char *from)
 		return (0);
 	}
 	else
-		return (error_switch("bg:", from));
+		return (error_builtin(BG, error, args));
 }
 
-uint8_t				builtin_foreground(char **command, char **env)
+uint8_t		builtin_foreground(char **command, char **env)
 {
 	int			id;
 	t_jobs		*jobs;
@@ -59,20 +61,21 @@ uint8_t				builtin_foreground(char **command, char **env)
 	jobs = jobs_table();
 	if (command[1] && command[1][0] == '%')
 	{
-		id = ft_atoi(command[1] + 1);
-		return (var_return(fg_switch_process(jobs, id, command[1] + 1)));
+		id = (ft_atoi(command[1] + 1) - 1);
+		return (var_return(fg_switch_process(jobs, id, NO_JOB, command[1] + 1)));
 
 	}
 	else
 	{
 		id = MAX_CHILD - 1;
-		while (jobs[id].process->pid == 0 && jobs[id].process->foreground == false)
+		while (id >= 0 && !jobs[id].process->pid && !jobs[id].process->foreground)
 			id--;
-		return (fg_switch_process(jobs, id, " no current jobs\n"));
+		log_trace("Find in foreground %d", id);
+		return (fg_switch_process(jobs, id, NO_CUR_JOB, NULL));
 	}
 }
 
-uint8_t				builtin_background(char **command, char **env)
+uint8_t		builtin_background(char **command, char **env)
 {
 	int			id;
 	t_jobs		*jobs;
@@ -81,14 +84,14 @@ uint8_t				builtin_background(char **command, char **env)
 	jobs = jobs_table();
 	if (command[1] && command[1][0] == '%')
 	{
-		id = ft_atoi(command[1] + 1);
-		return (var_return(bg_switch_process(jobs, id, command[1] + 1)));
+		id = (ft_atoi(command[1] + 1) - 1);
+		return (var_return(bg_switch_process(jobs, id, NO_JOB, command[1] + 1)));
 	}
 	else
 	{
 		id = MAX_CHILD - 1;
 		while (jobs[id].process->pid == 0 && jobs[id].process->running == false)
 			id--;
-		return (var_return(bg_switch_process(jobs, id, " no current jobs\n")));
+		return (var_return(bg_switch_process(jobs, id, NO_CUR_JOB, NULL)));
 	}
 }

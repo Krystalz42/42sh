@@ -60,7 +60,7 @@ const char				*status_exit(int signal)
 	if (signal)
 	{
 		temp = ft_itoa(signal);
-		strcpy(status, "exit");
+		strcpy(status, "exit ");
 		strcpy(status + 5, temp);
 		free(temp);
 	}

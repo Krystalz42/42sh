@@ -17,7 +17,7 @@ void		reset_process(t_process *to_kill)
 	int 	index;
 
 	index = 0;
-	update_jobs(to_kill, 42);
+	update_jobs(to_kill);
 	while (to_kill[index].pid)
 	{
 		ft_memdel((void **)&(to_kill[index].command));

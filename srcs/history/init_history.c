@@ -49,7 +49,6 @@ uint8_t				write_history_in_sh(char *pathname)
 	char		*buff;
 	int			command;
 
-	log_trace("Salut %s", pathname);
 	if ((fd = open(pathname, O_RDONLY)) != -1)
 	{
 		command = 0;
