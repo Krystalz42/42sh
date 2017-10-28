@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:48:03 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/31 16:42:42 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/10/28 16:20:11 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ static int				management_wildcard(char *data, char *tab_)
 	if (*data != '\0' && *tab_ == '?')
 		return (management_wildcard(data + 1, tab_ + 1));
 	if (*data != '\0' && *tab_ == '*')
-		return (management_wildcard(data + 1, tab_) + \
-				management_wildcard(data, tab_ + 1));
+	{
+		return (management_wildcard(data + 1, tab_)
+				+ management_wildcard(data, tab_ + 1));
+	}
 	if (*data == '\0' && *tab_ == '*')
 		return (management_wildcard(data, tab_ + 1));
 	if (*data && *tab_ && *data == *tab_)

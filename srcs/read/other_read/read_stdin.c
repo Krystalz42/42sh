@@ -39,7 +39,7 @@ static const t_cmp		g_tab_are_key[] = {
 		(t_cmp){ARROW_RIGHT, key_arrow_right},
 		(t_cmp){ARROW_UP, key_arrow_up},
 		(t_cmp){ARROW_DOWN, key_arrow_down},
-		(t_cmp){CTRL_B, key_arrow_up},
+		(t_cmp){CTRL_P, key_arrow_up},
 		(t_cmp){CTRL_N, key_arrow_down},
 		(t_cmp){SHIFT_UP_KEY, key_shift_up},
 		(t_cmp){SHIFT_DOWN_KEY, key_shift_down},

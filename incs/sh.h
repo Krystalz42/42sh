@@ -274,11 +274,12 @@ void						arraydel(char ***array);
 bool						chk_operaters(char c);
 bool						chk_slash(const char *str, size_t index);
 void						chk_quotes(char c, char quote, const int *flag,
-							int *value);
+											int *value);
 
 /*
 **				JOB'S CONTROL FUNCTION
 */
+
 int							update_status(t_process *process);
 void						update_jobs(t_process *process);
 t_jobs						*jobs_table(void);

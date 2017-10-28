@@ -37,22 +37,54 @@ static void			help_kill_and_yank(void)
 	ft_putstr(H_MY);
 }
 
+static void			print_help(int option)
+{
+	if (option & 1)
+	{
+		ft_putstr(H_HJ);
+		ft_putstr(H_HE);
+		ft_putstr(H_HK);
+		ft_putstr(H_HH);
+		ft_putstr(H_HB);
+	}
+	else
+	{
+		(option & 2) && ft_putstr(H_J) &&  usage_jobs();
+		(option & 4) && ft_putstr(H_E) && usage_env();
+		(option & 8) && ft_putstr(H_B) && usage_hash();
+		(option & 16) && ft_putstr(H_H) && usage_history();
+		(option & 32) && ft_putstr(H_K) && usage_kill();
+	}
+}
+
 uint8_t				builtin_help(char **command, char **env)
 {
-	(void)command;
+	int			option;
+	int			index;
+
+	option = 0;
+	index = 0;
 	(void)env;
-	ft_putstr("Usage for env :\n");
-	usage_env();
-	ft_putstr("Usage for hash :\n");
-	usage_hash();
-	ft_putstr("Usage for history :\n");
-	usage_history();
-	ft_putstr("Usage for jobs :\n");
-	usage_jobs();
-	ft_putstr("Usage for kill :\n");
-	usage_kill();
-	help_move();
-	help_history();
-	help_kill_and_yank();
+	if (command[1] && !ft_strcmp(command[1], HELP))
+		print_help(1);
+	else if (command[1] && command[1][0] == '-')
+	{
+		while (command[1][index])
+		{
+			option += command[1][index] == 'j' && !(option & 2) ? 2 : 0;
+			option += command[1][index] == 'e' && !(option & 4) ? 4 : 0;
+			option += command[1][index] == 'b' && !(option & 8) ? 8 : 0;
+			option += command[1][index] == 'h' && !(option & 16) ? 16 : 0;
+			option += command[1][index] == 'k' && !(option & 32) ? 32 : 0;
+			index++;
+		}
+		print_help(option);
+	}
+	else
+	{
+		help_move();
+		help_history();
+		help_kill_and_yank();
+	}
 	return (0);
 }

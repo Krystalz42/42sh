@@ -136,7 +136,7 @@ uint8_t			builtin_kill(char **command, char **env)
 			else if (command[2])
 				return (var_return(kill_process(command[1], command[2])));
 			else
-				return (var_return(error_builtin(KILL, NO_ARGS, command[1])));
+				return (var_return(error_builtin(KILL, UNKNOWN, command[1] + 1)));
 		}
 		else
 			return (var_return(kill_process(NULL, command[1])));

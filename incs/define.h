@@ -87,6 +87,18 @@
 **			USAGE DEFINE
 */
 
+# define H_J					"Usage for jobs :\n"
+# define H_E					"Usage for env :\n"
+# define H_B					"Usage for hash :\n"
+# define H_H					"Usage for history :\n"
+# define H_K					"Usage for kill :\n"
+
+# define H_HJ					"-j                      : usage jobs\n"
+# define H_HE					"-e                      : usage env\n"
+# define H_HB					"-b                      : usage hash\n"
+# define H_HH					"-h                      : usage history\n"
+# define H_HK					"-k                      : usage kill\n"
+
 # define H_MOVE					"Commands For Moving :\n"
 # define H_CA					"C-a                     : Move to the start of the current line. \n"
 # define H_CE					"C-e                     : Move to the end of the line. \n"
@@ -169,13 +181,14 @@ own env temporarily.\n"
 # define KILL					"kill: "
 # define ENV					"env: "
 # define HISTORY				"history: "
+
 # define INVALID				"Invalid argument : "
 # define NO_ARGS_U				"option requires an argument -- u"
 # define OPTION_NO_FOUND		"option not found : "
 # define NO_JOB					"job not found: "
 # define NO_CUR_JOB				"no current job :"
 # define UNKNOWN				"unknown signal: "
-# define NO_ARGS				"not enough arguments: "
+# define NO_ARGS				"not enough arguments : "
 # define NO_PROCESS				"no such process: "
 # define ILLEGAL				"illegal pid: "
 # define EXPECT					"signal name expected :"
