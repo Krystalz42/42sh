@@ -6,7 +6,7 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/10/28 16:02:29 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/10/28 17:06:04 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ char				*ft_path(char *var, unsigned int begin)
 	return (path);
 }
 
+//Access and stat for check if it's file
 static int			cd_home(char **env)
 {
 	char			*path;
@@ -73,7 +74,6 @@ static int			cd_oldpwd(char **env)
 	return (0);
 }
 
-//Pointer of env and call refresh_varenv at end of function (?)
 uint8_t				ft_cd(char **command, char **env)
 {
 	int				ret;
@@ -86,6 +86,6 @@ uint8_t				ft_cd(char **command, char **env)
 	else
 		ret = cd_path(command[1]);
 	if (ret == 0)
-		refresh_varenv(env_table(NULL, ENV_REC));
+		refresh_varenv(env);
 	return (var_return(ret));
 }

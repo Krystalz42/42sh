@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_unsetenv.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbelazou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/10/24 15:38:20 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/10/28 17:02:08 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static unsigned int	which_len(char *str)
 	return (len);
 }
 
+// Only delete with an = sign at the end
 uint8_t				ft_unsetenv(char **command, char **env)
 {
 	unsigned int	i;
@@ -46,7 +47,7 @@ uint8_t				ft_unsetenv(char **command, char **env)
 	}
 	if (env[i])
 	{
-		ft_putendl("SUCCESS");
+		ft_putendl("Success.");
 		remove_environment(command[1]);
 	}
 	else
