@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cd.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbelazou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/10/24 15:42:03 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/10/28 16:02:29 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,13 +78,14 @@ uint8_t				ft_cd(char **command, char **env)
 {
 	int				ret;
 
-	if (!command[1] || !ft_strcmp(command[1], "~"))
+	if (!command[1] || !ft_strcmp(command[1], "~") ||
+	!ft_strcmp(command[1], "--"))
 		ret = cd_home(env);
 	else if (!ft_strcmp(command[1], "-"))
 		ret = cd_oldpwd(env);
 	else
 		ret = cd_path(command[1]);
-	//if (ret == 0)
-	//	refresh_varenv(env);
+	if (ret == 0)
+		refresh_varenv(env_table(NULL, ENV_REC));
 	return (var_return(ret));
 }
