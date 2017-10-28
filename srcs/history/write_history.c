@@ -28,21 +28,25 @@ uint8_t			b_write_history_in_file(char *path)
 	int		fd;
 	int		i;
 
-	fd = open(path, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-	hist = set_history_to_last();
-	i = -1;
-	while (hist)
+	if (path)
 	{
-		hist->hist->cmd = first_cmd(hist->hist->cmd, 1);
-		while (hist->hist->cmd->c)
+		fd = open(path, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+		hist = set_history_to_last();
+		i = -1;
+		while (hist)
 		{
-			CHAR_FD(hist->hist->cmd->c, fd);
-			hist->hist->cmd = hist->hist->cmd->next;
+			hist->hist->cmd = first_cmd(hist->hist->cmd, 1);
+			while (hist->hist->cmd->c)
+			{
+				CHAR_FD(hist->hist->cmd->c, fd);
+				hist->hist->cmd = hist->hist->cmd->next;
+			}
+			CHAR_FD(10, fd);
+			hist = hist->next;
 		}
-		CHAR_FD(10, fd);
-		hist = hist->next;
+		free(path);
+		close(fd);
+		return (0);
 	}
-	free(path);
-	close(fd);
 	return (1);
 }

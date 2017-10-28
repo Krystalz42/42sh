@@ -3687,6 +3687,33 @@ srcs/error_function/puterror.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/puterror.c.s
 .PHONY : srcs/error_function/puterror.c.s
 
+srcs/error_function/usage_builtins.o: srcs/error_function/usage_builtins.c.o
+
+.PHONY : srcs/error_function/usage_builtins.o
+
+# target to build an object file
+srcs/error_function/usage_builtins.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/usage_builtins.c.o
+.PHONY : srcs/error_function/usage_builtins.c.o
+
+srcs/error_function/usage_builtins.i: srcs/error_function/usage_builtins.c.i
+
+.PHONY : srcs/error_function/usage_builtins.i
+
+# target to preprocess a source file
+srcs/error_function/usage_builtins.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/usage_builtins.c.i
+.PHONY : srcs/error_function/usage_builtins.c.i
+
+srcs/error_function/usage_builtins.s: srcs/error_function/usage_builtins.c.s
+
+.PHONY : srcs/error_function/usage_builtins.s
+
+# target to generate assembly for a file
+srcs/error_function/usage_builtins.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/usage_builtins.c.s
+.PHONY : srcs/error_function/usage_builtins.c.s
+
 srcs/execution/builtins_functions/builtin_env.o: srcs/execution/builtins_functions/builtin_env.c.o
 
 .PHONY : srcs/execution/builtins_functions/builtin_env.o
@@ -3767,6 +3794,33 @@ srcs/execution/builtins_functions/builtin_hash.s: srcs/execution/builtins_functi
 srcs/execution/builtins_functions/builtin_hash.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_hash.c.s
 .PHONY : srcs/execution/builtins_functions/builtin_hash.c.s
+
+srcs/execution/builtins_functions/builtin_help.o: srcs/execution/builtins_functions/builtin_help.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_help.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_help.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_help.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_help.c.o
+
+srcs/execution/builtins_functions/builtin_help.i: srcs/execution/builtins_functions/builtin_help.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_help.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_help.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_help.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_help.c.i
+
+srcs/execution/builtins_functions/builtin_help.s: srcs/execution/builtins_functions/builtin_help.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_help.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_help.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_help.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_help.c.s
 
 srcs/execution/builtins_functions/builtin_history.o: srcs/execution/builtins_functions/builtin_history.c.o
 
@@ -5495,6 +5549,33 @@ srcs/read/key_/key_arrow.s: srcs/read/key_/key_arrow.c.s
 srcs/read/key_/key_arrow.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/key_/key_arrow.c.s
 .PHONY : srcs/read/key_/key_arrow.c.s
+
+srcs/read/key_/key_capitalize_word.o: srcs/read/key_/key_capitalize_word.c.o
+
+.PHONY : srcs/read/key_/key_capitalize_word.o
+
+# target to build an object file
+srcs/read/key_/key_capitalize_word.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/key_/key_capitalize_word.c.o
+.PHONY : srcs/read/key_/key_capitalize_word.c.o
+
+srcs/read/key_/key_capitalize_word.i: srcs/read/key_/key_capitalize_word.c.i
+
+.PHONY : srcs/read/key_/key_capitalize_word.i
+
+# target to preprocess a source file
+srcs/read/key_/key_capitalize_word.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/key_/key_capitalize_word.c.i
+.PHONY : srcs/read/key_/key_capitalize_word.c.i
+
+srcs/read/key_/key_capitalize_word.s: srcs/read/key_/key_capitalize_word.c.s
+
+.PHONY : srcs/read/key_/key_capitalize_word.s
+
+# target to generate assembly for a file
+srcs/read/key_/key_capitalize_word.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/key_/key_capitalize_word.c.s
+.PHONY : srcs/read/key_/key_capitalize_word.c.s
 
 srcs/read/key_/key_clear.o: srcs/read/key_/key_clear.c.o
 
@@ -7278,6 +7359,9 @@ help:
 	@echo "... srcs/error_function/puterror.o"
 	@echo "... srcs/error_function/puterror.i"
 	@echo "... srcs/error_function/puterror.s"
+	@echo "... srcs/error_function/usage_builtins.o"
+	@echo "... srcs/error_function/usage_builtins.i"
+	@echo "... srcs/error_function/usage_builtins.s"
 	@echo "... srcs/execution/builtins_functions/builtin_env.o"
 	@echo "... srcs/execution/builtins_functions/builtin_env.i"
 	@echo "... srcs/execution/builtins_functions/builtin_env.s"
@@ -7287,6 +7371,9 @@ help:
 	@echo "... srcs/execution/builtins_functions/builtin_hash.o"
 	@echo "... srcs/execution/builtins_functions/builtin_hash.i"
 	@echo "... srcs/execution/builtins_functions/builtin_hash.s"
+	@echo "... srcs/execution/builtins_functions/builtin_help.o"
+	@echo "... srcs/execution/builtins_functions/builtin_help.i"
+	@echo "... srcs/execution/builtins_functions/builtin_help.s"
 	@echo "... srcs/execution/builtins_functions/builtin_history.o"
 	@echo "... srcs/execution/builtins_functions/builtin_history.i"
 	@echo "... srcs/execution/builtins_functions/builtin_history.s"
@@ -7479,6 +7566,9 @@ help:
 	@echo "... srcs/read/key_/key_arrow.o"
 	@echo "... srcs/read/key_/key_arrow.i"
 	@echo "... srcs/read/key_/key_arrow.s"
+	@echo "... srcs/read/key_/key_capitalize_word.o"
+	@echo "... srcs/read/key_/key_capitalize_word.i"
+	@echo "... srcs/read/key_/key_capitalize_word.s"
 	@echo "... srcs/read/key_/key_clear.o"
 	@echo "... srcs/read/key_/key_clear.i"
 	@echo "... srcs/read/key_/key_clear.s"

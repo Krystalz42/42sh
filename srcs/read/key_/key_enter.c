@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-void        insert_completion(t_read **read_std, t_file *tmp)
+void		insert_completion(t_read **read_std, t_file *tmp)
 {
 	int		i;
 

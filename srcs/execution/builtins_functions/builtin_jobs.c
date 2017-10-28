@@ -10,7 +10,7 @@
 **	-r 2
 **		Display only running jobs.
 **	s 4
-**		Display only stopped jobs.
+**		Display only STOP jobs.
 **	-l 8
 **		List process IDs in addition to the normal information.
 */
@@ -24,9 +24,10 @@ int			print_process(t_process process, int info, int parent, int index)
 	else
 		ft_putchar('\t');
 	if (info)
-		ft_printf("\t%d %s %s\n", process.pid, process.running ? "Runing" : "Stopped", process.command);
+		ft_printf("\t%d %d %s %s\n", process.pid, process.pgid,
+				process.running ? RUN : STOP, process.command);
 	else
-		ft_printf("\t%s %s\n", process.running ? "Runing" : "Stopped", process.command);
+		ft_printf("\t%s %s\n", process.running ? RUN : STOP, process.command);
 	return (1);
 }
 
@@ -60,9 +61,11 @@ uint8_t			builtin_jobs(char **command, char **env)
 	int					opt;
 	int					index;
 
+	(void)env;
 	opt = 0;
 	table = 1;
-	(void)env;
+	if (command[1] && ft_strcmp(command[1], HELP) == 0)
+		return (var_return(usage_jobs()));
 	while (command[table] && command[table][0] == '-')
 	{
 		index = 0;

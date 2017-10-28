@@ -6,7 +6,7 @@
 #    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/10/24 15:46:05 by sbelazou         ###   ########.fr        #
+#    Updated: 2017/10/28 14:36:17 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ SRCS = \
 	   read/key_/key_print.c								\
 	   read/key_/key_delete.c								\
 	   read/key_/key_shift.c								\
+	   read/key_/key_capitalize_word.c						\
 	   read/key_/key_home_end.c								\
 	   read/key_/key_eof.c									\
 	   read/key_/key_tabulation.c							\
@@ -139,6 +140,7 @@ SRCS = \
 	   execution/builtins_functions/builtin_env.c			\
 	   execution/builtins_functions/builtin_exit.c			\
 	   execution/builtins_functions/data_builtin.c			\
+	   execution/builtins_functions/builtin_help.c			\
 	   execution/builtins_functions/ft_cd.c					\
 	   execution/builtins_functions/ft_echo.c				\
 	   execution/builtins_functions/ft_setenv.c				\
@@ -177,6 +179,7 @@ SRCS = \
 	   memdel_struct/memdel_read.c							\
 	   error_function/bip.c									\
 	   error_function/puterror.c							\
+	   error_function/usage_builtins.c						\
 	   error_function/error_env.c							\
 
 # ---------------------------------------------------------------------------- #

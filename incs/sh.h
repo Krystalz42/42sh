@@ -116,6 +116,7 @@ uint8_t						builtin_history(char **command, char **env);
 uint8_t						builtin_kill(char **command, char **env);
 uint8_t						builtin_env(char **command, char **env);
 uint8_t						builtin_exit(char **command, char **env);
+uint8_t						builtin_help(char **command, char **env);
 
 /*
 **				FUNCTION FOR COMPLETION
@@ -132,7 +133,7 @@ int							place_cursor(t_read **read_std, int t);
 void						reset(t_read **read_std, int to);
 int							check_word(t_cmd *cmd);
 int							len_cmd(t_cmd **cmd);
-int							print_tab(t_read **read_std);
+void						print_tab(t_read **read_std);
 int							my_togo(int li, int co);
 int							my_tobackto(int li, int co);
 void						back_completion(t_read **read_std);
@@ -154,7 +155,7 @@ static inline int			management_wildcard(char *data, char *comp);
 /*
 **				POINTER ON FUNCTION FOR READ
 */
-
+int							key_capitalize_word(t_read **read_std, unsigned long buff);
 int							key_print_(t_read **read_std, unsigned long *buff);
 int							key_tab(t_read **read_std, unsigned long buff);
 int							key_enter_(t_read **read_std, unsigned long buff);
@@ -196,6 +197,7 @@ int							key_kill_prev_word(t_read **read_std,
 int							key_del_buff(t_read **read_std, unsigned long buff);
 int							key_yank(t_read **read_std, unsigned long buff);
 int							key_refresh_(t_read **read_std, unsigned long buff);
+int							capitalize_word_undo(t_read **read_std, unsigned long buff);
 
 /*
 **				SEARCH HISTORY FUNCTION
@@ -330,4 +332,9 @@ void						*error_env(void);
 void						puterror(char *err);
 int							bip(void);
 
+uint8_t						usage_kill(void);
+uint8_t						usage_jobs(void);
+uint8_t						usage_history(void);
+uint8_t						usage_env(void);
+uint8_t						usage_hash(void);
 #endif

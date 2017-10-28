@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-void        move_completion_left(t_read **read_std)
+void			move_completion_left(t_read **read_std)
 {
 	update_index(read_std, -1);
 	if ((*read_std)->tab_->index == ((*read_std)->tab_->element - 1) ||
@@ -30,7 +30,7 @@ void        move_completion_left(t_read **read_std)
 void			move_completion_right(t_read **read_std)
 {
 	update_index(read_std, 1);
-	if (!((*read_std)->tab_->index % (*read_std)->tab_->elem_page))
+	if (!((*read_std)->tab_->index % (*read_std)->tab_->elem_page) )
 	{
 		place_cursor(read_std, 1);
 		print_tab(read_std);

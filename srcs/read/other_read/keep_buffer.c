@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-t_cmd           *keep_buffer(t_cmd *cmd, int flags)
+t_cmd			*keep_buffer(t_cmd *cmd, int flags)
 {
 	static t_cmd *save;
 

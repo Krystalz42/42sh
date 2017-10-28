@@ -55,8 +55,6 @@ static char 	*return_line(t_read **read_std)
 		(*read_std)->finish = 0;
 		if (get_len_prompt(-42) != -2)
 			make_list_hist((*read_std));
-		key_end_(read_std, 0);
-		print_struct(*read_std);
 		line = convert_to_str(first_cmd((*read_std)->cmd, 1));
 		if (get_len_prompt(-42) == -2)
 			memdel_read(read_std);

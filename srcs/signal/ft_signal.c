@@ -19,6 +19,13 @@ void				handler_sig(int sig)
 
 }
 
+void				handler_sigint(int sig)
+{
+	log_warn("Signal Reception [%d]", sig);
+	signal_reception(1);
+	ioctl(0, TIOCSTI, "\2\0");
+}
+
 void				init_signal(void)
 {
 	int i = -1;
@@ -28,6 +35,8 @@ void				init_signal(void)
 		signal(i, handler_sig);
 		if (i == SIGCHLD)
 			signal(i, handler_sigchld);
+		else if (i == SIGINT)
+			signal(i, handler_sigint);
 	}
 	signal(3, SIG_DFL);
 	signal(11, SIG_DFL);

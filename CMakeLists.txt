@@ -261,7 +261,7 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_strisalpha.c
         srcs/execution/builtins_functions/builtin_env.c
         srcs/cores/exit.c
-        srcs/execution/builtins_functions/builtin_exit.c)
+        srcs/execution/builtins_functions/builtin_exit.c srcs/error_function/usage_builtins.c srcs/execution/builtins_functions/builtin_help.c srcs/read/key_/key_capitalize_word.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

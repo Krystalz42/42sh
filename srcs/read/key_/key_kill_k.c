@@ -12,10 +12,10 @@
 
 #include <sh.h>
 
-static int     kill_k(t_read **read_std, unsigned long buff)
+static void		kill_k(t_read **read_std, unsigned long buff)
 {
-	t_cmd *kill;
-	t_cmd   *tmp;
+	t_cmd		*kill;
+	t_cmd		*tmp;
 
 	kill = (*read_std)->cmd;
 	tmp = (*read_std)->cmd;
@@ -29,10 +29,9 @@ static int     kill_k(t_read **read_std, unsigned long buff)
 	kill->prev = NULL;
 	tmp->next = NULL;
 	add_outstanding(kill, buff, 0);
-	return (1);
 }
 
-int     key_kill_k(t_read **read_std, unsigned long buff)
+int				key_kill_k(t_read **read_std, unsigned long buff)
 {
 	if ((*read_std)->completion)
 	{

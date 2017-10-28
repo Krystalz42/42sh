@@ -40,7 +40,7 @@ uint8_t		b_write_history(void)
 	index = 0;
 	while (hist)
 	{
-		NBR(++index);
+		ft_putnbr(++index);
 		CHAR(32);
 		tmp = first_cmd(hist->hist->cmd, 1);
 		while (tmp->c)
@@ -69,6 +69,7 @@ uint8_t			b_clear_history(void)
 		hist = hist->prev;
 		ft_memdel((void **)&to_kill);
 	}
+	log_trace("Apelle du NULL");
 	gbl_save_history(NULL, RESET_STRUCT);
 	return (0);
 }

@@ -4,29 +4,6 @@
 
 #include <sh.h>
 
-
-static uint8_t	help_history()
-{
-	ft_putstr_fd("-c            : Clear the history list.\n", STDERR_FILENO);
-	ft_putstr_fd("-d offset     : Delete the history ", STDERR_FILENO);
-	ft_putstr_fd("entry at position offset.\n", STDERR_FILENO);
-	ft_putstr_fd("-r [pathname] : Read the history file and ", STDERR_FILENO);
-	ft_putstr_fd("append its contents to the history list.\n", STDERR_FILENO);
-	ft_putstr_fd("-w [pathname] : Write out the current", STDERR_FILENO);
-	ft_putstr_fd(" history list to the history file.\n", STDERR_FILENO);
-	ft_putstr_fd("-default      : Print history list\n", STDERR_FILENO);
-	return ((uint8_t)0);
-}
-
-static uint8_t	usage_history(char c)
-{
-	ft_putstr_fd("history: option not found :-- ",STDERR_FILENO);
-	ft_putchar_fd(c, STDERR_FILENO);
-	ft_putchar_fd(10, STDERR_FILENO);
-	help_history();
-	return ((uint8_t)1);
-}
-
 static int		check_option_history(char c)
 {
 	static const char	potential[] = "rdawsc";
@@ -46,6 +23,7 @@ static int		check_option_history(char c)
 
 uint8_t			looking_for_fct(char **command, int option)
 {
+	log_trace("%s, %d", *command, option);
 	if (option == 'c')
 		return (b_clear_history());
 	else if (option == 'd')
@@ -73,15 +51,15 @@ uint8_t			builtin_history(char **command, char **env)
 	while (command[index] && command[index][0] == '-')
 	{
 		if (!ft_strcmp("--help", command[1]))
-			return (var_return(help_history()));
+			return (var_return(usage_history()));
 		c = 0;
 		while (command[index][c])
 		{
 			ret = check_option_history(command[index][c]);
 			if (ret == 1)
-					option = command[index][c];
+				option = command[index][c];
 			else if (ret == -1)
-				return (var_return(usage_history(command[index][c])));
+				return (var_return(error_builtin(HISTORY, OPTION_NO_FOUND, command[index] + 1)));
 			c++;
 		}
 		index++;

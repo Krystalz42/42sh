@@ -24,6 +24,7 @@ static const t_builtin	builtin[] = {
 	(t_builtin){"bg", builtin_background},
 	(t_builtin){"kill", builtin_kill},
 	(t_builtin){"exit", builtin_exit},
+	(t_builtin){"help", builtin_help},
 	(t_builtin){NULL, NULL}
 };
 

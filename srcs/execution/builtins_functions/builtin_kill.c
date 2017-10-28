@@ -121,7 +121,9 @@ uint8_t			builtin_kill(char **command, char **env)
 	{
 		if (command[1][0] == '-')
 		{
-			if (command[1][1] == 'l')
+			if (ft_strcmp(command[1], HELP) == 0)
+				return (var_return(usage_kill()));
+			else if (command[1][1] == 'l')
 			{
 				if (command[2] && ft_strisdigit(command[2] + 1))
 					return (var_return(signal_from_int((uint8_t)

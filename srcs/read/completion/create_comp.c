@@ -17,9 +17,9 @@ static int				management_wildcard(char *data, char *tab_)
 	if (*data != '\0' && *tab_ == '?')
 		return (management_wildcard(data + 1, tab_ + 1));
 	if (*data != '\0' && *tab_ == '*')
-		return (management_wildcard(data + 1, tab_)
-				+ management_wildcard(data, tab_ + 1));
-		if (*data == '\0' && *tab_ == '*')
+		return (management_wildcard(data + 1, tab_) + \
+				management_wildcard(data, tab_ + 1));
+	if (*data == '\0' && *tab_ == '*')
 		return (management_wildcard(data, tab_ + 1));
 	if (*data && *tab_ && *data == *tab_)
 		return (management_wildcard(data + 1, tab_ + 1));
@@ -40,7 +40,7 @@ void					create_comp(t_read **read_std, t_path f)
 		while ((repo = readdir(dir)))
 			if ((!f.to_comp && repo->d_name[0] != '.') ||
 					(f.to_comp && (management_wildcard(repo->d_name, f.to_comp)
-			|| !ft_strncmp(f.to_comp, repo->d_name, ft_strlen(f.to_comp) - 1))))
+			|| !ft_strncmp(f.to_comp, repo->d_name, ft_strlen(f.to_comp)))))
 			{
 				init_files(&((*read_std)->tab_->file), repo->d_name,
 						repo->d_type, index++);

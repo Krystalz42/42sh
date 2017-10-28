@@ -17,9 +17,9 @@
 **			INITIALIZATION FLAGS
 */
 
-# define RESET_STRUCT			0
-# define SAVE_STRUCT			1
-# define REC_STRUCT				2
+# define RESET_STRUCT			1
+# define SAVE_STRUCT			2
+# define REC_STRUCT				4
 
 # define ENV_NULL				1
 # define ENV_INIT				2
@@ -51,17 +51,19 @@
 # define CTRL_E					5
 # define CTRL_F					6
 # define TAB_KEY				9
+# define CTRL_P					16
 # define CTRL_K					11
 # define CLEAR_KEY				12
-# define REFRESH				14
+# define CTRL_N					14
 # define CTRL_R					18
 # define CTRL_UNDO				31
 # define DELETE_KEY				127
 # define PRINT_KEY				424242
 
 # define META_L					27675
+# define META_C					25371
 # define META_U					29979
-# define META_Y					42434
+# define META_Y					31003
 # define META_F					26139
 # define META_D					25627
 # define META_DEL				32539
@@ -82,6 +84,82 @@
 # define SHIFT_LEFT_KEY			74982532143899
 
 /*
+**			USAGE DEFINE
+*/
+
+# define H_MOVE					"Commands For Moving :\n"
+# define H_CA					"C-a                     : Move to the start of the current line. \n"
+# define H_CE					"C-e                     : Move to the end of the line. \n"
+# define H_CF					"C-f                     : Move forward a character.  \n"
+# define H_CB					"C-b                     : Move back a character.  \n"
+# define H_MF					"M-f                     : Move forward to the end of the next word.\n"
+# define H_MB					"M-b                     : Move back to the start of this, or the previous, word.\n"
+# define H_CL					"C-l                     : Clear the screen and redraw the current line.\n"
+
+# define H_HISTORY				"Commands For Manipulating The History :\n"
+# define H_CP					"C-p                     : Move `up' through the history list. \n"
+# define H_CN					"C-n                     : Move `down' through the history list. \n"
+# define H_CR					"C-r                     : Search backward starting at the current line and moving `up' through the history as necessary.\n"
+# define H_CD					"C-d                     : Delete the character under the cursor. If the cursor is at the beginning of the line, there are no characters in the line, and the last character typed was not bound to delete-char, then return EOF.\n"
+# define H_MU					"M-u                     : Uppercase the current (or following) word.\n"
+# define H_ML					"M-l                     : Lowercase the current (or following) word.\n"
+# define H_MC					"M-c                     : A FAIRE :Capitalize the current (or following) word.\n"
+
+# define H_KILL_AND_YANK		"Killing And Yanking :\n"
+# define H_CK					"C-k                     : Kill the text from the current cursor position to the end of the line.\n"
+# define H_MD					"M-d                     : Kill from the cursor to the end of the current word, or if between words, to the end of the next word. \n"
+# define H_MDEL					"M-DEL                   : Kill the word behind the cursor. \n"
+# define H_MY					"M-y                     : A FAIRE :Yank the top of the kill ring into the buffer at the current cursor position.\n"
+
+
+
+
+# define HASH_R					"-r                      : Reset the hash \
+table.\n"
+# define HASH_DEFAULT			"otherwise               : Print the hash \
+list.\n"
+# define HISTORY_L				"-c                      : Clear the history \
+list.\n"
+# define HISTORY_D				"-d offset               : Delete the history\
+entry at \
+position offset.\n"
+# define HISTORY_R				"-r [pathname]           : Read the history \
+file\
+ and append its contents to the history list.\n"
+# define HISTORY_W				"-w [pathname]           : Write out the \
+current\
+ history list to the history file.\n"
+# define HISTORY_DEFAULT		"otherwise               : Print history list\n"
+
+# define JOBS_P					"-p                      : List only the \
+process\
+ID of the job’s process group leader.\n"
+# define JOBS_R					"-r                      : Display only \
+running \
+jobs.\n"
+# define JOBS_S					"-s                      : Display only stopped\
+jobs.\n"
+# define JOBS_L					"-l                      : List process IDs in \
+addition to the normal information.\n"
+# define JOBS_DEFAULT			"otherwise               : Display all jobs.\n"
+
+# define KILL_L					"-l                      : If no operand is \
+given, list the signal names; otherwise, write the signal name corresponding to\
+ exit_status.\n"
+# define KILL_NAME				"-[signal_name]   pid .. : A symbolic signal \
+name specifying the signal \
+to be sent instead of the default TERM.\n"
+# define KILL_NUMBER			"-[signal_number] pid .. : A non-negative \
+decimal integer, specifying \
+the signal to be sent instead of the default TERM.\n"
+# define ENV_DEFAULT			"[name=value ...]        : Add [name=value] to\
+ own env temporarily.\n"
+# define ENV_U					"-i [name=value ...]     : Add [name=value] \
+to empty env temporarily.\n"
+# define ENV_I					"-u [name]               : Remove [name] to \
+own env temporarily.\n"
+
+/*
 **			VARIOUS DEFINE
 */
 
@@ -90,8 +168,10 @@
 # define BG						"bg: "
 # define KILL					"kill: "
 # define ENV					"env: "
+# define HISTORY				"history: "
 # define INVALID				"Invalid argument : "
 # define NO_ARGS_U				"option requires an argument -- u"
+# define OPTION_NO_FOUND		"option not found : "
 # define NO_JOB					"job not found: "
 # define NO_CUR_JOB				"no current job :"
 # define UNKNOWN				"unknown signal: "
@@ -101,9 +181,11 @@
 # define EXPECT					"signal name expected :"
 # define TOO_MANY_ARGS			"too many arguments :"
 # define NUM_REQUIRED			"numeric argument required :"
+# define RUN					"Runing"
+# define STOP					"Stopped"
 
 # define HISTSIZE				500
-
+# define HELP					"--help"
 # define MAX_CHILD				8096
 # define PATH_HISTORY			"/.42sh_history"
 # define PATH_HASH				"/.42sh_hash"
@@ -119,7 +201,6 @@
 # define CLEAR_FROM_CUR			"cd"
 # define BACK_N					"cr"
 # define MV_RIGHT				"nd"
-
 # define CLEAR					"cl"
 
 #endif

@@ -23,7 +23,7 @@ int			main(int ac, char **av)
 	init_term();
 	write_history_in_sh(get_str_from_history());
 	init_signal();
-//	test_cmd();
+	test_cmd();
 	shell();
 	b_write_history_in_file(get_str_from_history());
 	logger_close();
@@ -164,7 +164,7 @@ void test_cmd()
 	char *jobsS[] = {"jobs", "-s", NULL};
 	char *my_shell[] = {"./42sh", NULL};
 	char *kill[] = {"kill", "-9", "516156", NULL};
-	char *env[] = {"env", "_=", "PATH=pof", "pa= da", "ls", "-l", NULL};
+//	char *env[] = {"env", "_=", "PATH=pof", "pa= da", "ls", "-l", NULL};
 
 	(void)wc;
 	(void)kill;
@@ -179,14 +179,14 @@ void test_cmd()
 	(void)emacs;
 	(void)cat;
 	(void)lsl;
-	int i = 1;
+//	int i = 1;
 	log_success("Mon PID [%d] && Mon PPID [%d] && Mon PGID [%d]", getpid(), getppid(), getpgid(getpid()));
-	while (i)
-	{
+//	while (i)
+//	{
 		read_stdin(DEFAULT);
-		builtin_env(env, env_table(NULL, ENV_REC));
-		read_stdin(DEFAULT);
-//		my_execute_pipe(lsl, cat, true); // ls -lR | cat -e
+//		builtin_env(env, env_table(NULL, ENV_REC));
+//		read_stdin(DEFAULT);
+		my_execute_pipe(lsl, cat, true); // ls -lR | cat -e
 //		read_stdin(DEFAULT);
 //		builtin_jobs((char *[]){"jobs", "-ls", NULL},NULL); // jobs -ls
 //		read_stdin(DEFAULT);
@@ -219,5 +219,5 @@ void test_cmd()
 //		read_stdin(DEFAULT);
 //		read_stdin(DEFAULT);
 //
-		}
+//		}
 }

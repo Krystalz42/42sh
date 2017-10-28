@@ -43,11 +43,12 @@ int			print_element(t_file *file, int color)
 
 
 
-int			print_tab(t_read **read_std)
+void		print_tab(t_read **read_std)
 {
 	t_file		*tmp;
 	int			stop;
 
+	tputs(tgetstr(CURSOR_INVIS, NULL), STDIN_FILENO, &my_put);
 	tmp = (*read_std)->tab_->file;
 	if ((*read_std)->tab_->element == 1)
 		insert_completion(read_std, (*read_std)->tab_->file);
@@ -66,5 +67,5 @@ int			print_tab(t_read **read_std)
 			tmp = tmp->next;
 		}
 	}
-	return (1);
+	tputs(tgetstr(CURSOR_BACK, NULL), STDIN_FILENO, &my_put);
 }

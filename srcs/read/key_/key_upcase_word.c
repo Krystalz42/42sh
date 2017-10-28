@@ -6,17 +6,15 @@
 
 int				key_upcase_word(t_read **read_std, unsigned long buff)
 {
-	t_cmd		*tmp;
-
-	tmp = (*read_std)->cmd;
+	(*read_std)->cmd = (*read_std)->cmd;
 	add_outstanding(NULL, buff, 0);
-	while (tmp->c && tmp->c == 32)
-		tmp = tmp->next;
-	while (tmp->c && ft_isalnum(tmp->c))
+	while ((*read_std)->cmd->c && (*read_std)->cmd->c == 32)
+		(*read_std)->cmd = (*read_std)->cmd->next;
+	while ((*read_std)->cmd->c && ft_isalnum((*read_std)->cmd->c))
 	{
-		if (ft_islower(tmp->c))
-			tmp->c -= 32;
-		tmp = tmp->next;
+		if (ft_islower((*read_std)->cmd->c))
+			(*read_std)->cmd->c -= 32;
+		(*read_std)->cmd = (*read_std)->cmd->next;
 	}
 	(*read_std)->print = 2;
 	return (1);

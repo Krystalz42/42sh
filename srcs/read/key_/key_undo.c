@@ -25,6 +25,7 @@ t_cmp		g_to_do[] = {
 		(t_cmp){CTRL_A, key_end_},
 		(t_cmp){CTRL_F, key_arrow_left},
 		(t_cmp){META_U, key_downcase_word},
+		(t_cmp){META_C, capitalize_word_undo},
 		(t_cmp){META_L, key_upcase_word},
 		(t_cmp){META_DEL, key_reprint},
 		(t_cmp){META_D, key_reprint},
@@ -70,9 +71,14 @@ int				key_undo_(t_read **read_std, unsigned long buff)
 			if (g_to_do[i].key == undo->movement)
 			{
 				log_trace("Undo do %d", i);
+				if (undo->movement == META_U || undo->movement == META_L)
+					key_shift_left(read_std, 0);
 				g_to_do[i].function(read_std, 0);
+				if (undo->movement == META_U || undo->movement == META_L)
+					key_shift_left(read_std, 0);
 			}
 		place_new_undo(undo);
 	}
+	(*read_std)->print = 2;
 	return (1);
 }

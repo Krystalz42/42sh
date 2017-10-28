@@ -18,22 +18,18 @@ int		shell(void)
 	char		*input;
 	t_parsing	*parse_struct;
 	char 		**command;
-	char 		**env;
 
 	add_hash("    Free to write  ", "    Je suis Alexandre", 42);
-	add_hash("    Je rm -rf mon 21sh OKLM  && en skate donc afk zepolegepo ", "    Je suis Jefferson", 42);
+	add_hash("    Je rm -rf mon skate et je zepolegepo ", "    Je suis Jefferson", 42);
 	add_hash("    Mon 21sh marche pas && du coup je le fais en group   ", "    Je suis Gregoire", 42);
 	add_hash("    Je suis malade et je parle avec un chatbot   ", "    Je suis Sofiane", 42);
-	builtin_hash((char *[]){"hash", "------", "-eqweqw q-ewq-e-qw", NULL}, NULL);
-
+	add_hash("ls", "/bin/ls", 1);
 	input = NULL;
 	parse_struct = NULL;
 	command = NULL;
-	env = NULL;
 	while (42)
 	{
 		ft_strdel(&input);
-		ft_memdel_tab(&(env));
 		ft_memdel_tab(&(command));
 		lstdel(&parse_struct);
 		if (!(input = read_stdin(DEFAULT)))
@@ -43,6 +39,5 @@ int		shell(void)
 		log_error("Passage au parsing");
 		if (!(parse_struct = parsing(input)))
 			continue ;
-
 	}
 }

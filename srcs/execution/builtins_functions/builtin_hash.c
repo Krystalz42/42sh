@@ -9,6 +9,7 @@
 **	-r	:	reset hash table
 */
 
+
 uint8_t			builtin_hash(char **command, char **env)
 {
 	int		index;
@@ -18,6 +19,9 @@ uint8_t			builtin_hash(char **command, char **env)
 	(void)env;
 	option = 0;
 	index = 0;
+	if (command[1])
+		if (ft_strcmp(command[1], HELP) == 0)
+			return (usage_hash());
 	while (command[++index] && (command[index][0]) == '-' && (c = -1))
 		while (command[index][++c])
 			if (command[index][c] == 'r')

@@ -12,16 +12,18 @@
 
 #include <sh.h>
 
-int     key_yank(t_read **read_std, unsigned long buff)
+int			key_yank(t_read **read_std, unsigned long buff)
 {
-	t_cmd   *buffer;
+	t_cmd			*buffer;
 
 	(void)buff;
 	buffer = keep_buffer(NULL, 0);
+	log_error("buffer [%d]", buffer ? 1 : 0);
 	while (buffer)
 	{
 		key_print_fct((*read_std)->cmd, buffer->c);
 		buffer = buffer->next;
 	}
+	(*read_std)->print = 2;
 	return (1);
 }

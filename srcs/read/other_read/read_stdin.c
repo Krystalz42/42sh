@@ -13,7 +13,6 @@
 #include <sh.h>
 
 static const t_cmp		g_tab_are_key[] = {
-		(t_cmp){REFRESH, key_refresh_},
 		(t_cmp){DELETE_KEY, key_del},
 		(t_cmp){TAB_KEY, key_tab},
 		(t_cmp){CLEAR_KEY, key_clear_},
@@ -30,6 +29,7 @@ static const t_cmp		g_tab_are_key[] = {
 		(t_cmp){CTRL_F, key_arrow_right},
 		(t_cmp){META_U, key_upcase_word},
 		(t_cmp){META_L, key_downcase_word},
+		(t_cmp){META_C, key_capitalize_word},
 		(t_cmp){META_Y, key_yank},
 		(t_cmp){META_DEL, key_kill_prev_word},
 		(t_cmp){META_D, key_kill_word},
@@ -39,6 +39,8 @@ static const t_cmp		g_tab_are_key[] = {
 		(t_cmp){ARROW_RIGHT, key_arrow_right},
 		(t_cmp){ARROW_UP, key_arrow_up},
 		(t_cmp){ARROW_DOWN, key_arrow_down},
+		(t_cmp){CTRL_B, key_arrow_up},
+		(t_cmp){CTRL_N, key_arrow_down},
 		(t_cmp){SHIFT_UP_KEY, key_shift_up},
 		(t_cmp){SHIFT_DOWN_KEY, key_shift_down},
 		(t_cmp){SHIFT_RIGHT_KEY, key_shift_right},
@@ -62,7 +64,9 @@ static inline int		chk_and_print(t_read **read_std)
 static inline void		inline_print_(t_read **read_std, unsigned long *buff)
 {
 	key_print_(read_std, buff);
-	chk_and_print(read_std);
+	log_trace("(*read_std)->finish %d",(*read_std)->finish);
+	if ((*read_std)->finish == 0)
+		chk_and_print(read_std);
 }
 
 static inline void		initialize_fct(t_read **read_std, unsigned char flags,
@@ -102,8 +106,6 @@ char					*read_stdin(unsigned char flags)
 	{
 		index = -1;
 		log_trace("In read [%lu]",buf);
-		if (!buf)
-			sleep(1);
 		if (ft_isprint(buf % (UCHAR_MAX + 1)) || ft_iscrlf(buf % (UCHAR_MAX + 1)))
 			inline_print_(&read_std, &buf);
 		while (g_tab_are_key[++index].key)

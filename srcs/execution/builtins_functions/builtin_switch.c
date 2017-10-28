@@ -90,7 +90,7 @@ uint8_t		builtin_background(char **command, char **env)
 	else
 	{
 		id = MAX_CHILD - 1;
-		while (jobs[id].process->pid == 0 && jobs[id].process->running == false)
+		while (id >= 0 && !jobs[id].process->pid && !jobs[id].process->running)
 			id--;
 		return (var_return(bg_switch_process(jobs, id, NO_CUR_JOB, NULL)));
 	}
