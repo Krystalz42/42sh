@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_setenv.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbelazou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/10/24 15:38:08 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/10/28 17:05:12 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ uint8_t					ft_setenv(char **command, char **env)
 		}
 		i++;
 	}
-	ft_putstr("SUCCESS\n");
+	ft_putstr("Success\n");
 	add_environment(command[1]);
 	free(variable);
 	RETVAR(0);
