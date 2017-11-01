@@ -139,6 +139,8 @@ SRCS = \
 	   execution/tools/manage_pipe.c						\
 	   execution/tools/new_jobs.c							\
 	   execution/executing_function/op_execution.c			\
+	   execution/executing_function/op_or_if.c				\
+	   execution/executing_function/op_and_if.c				\
 	   execution/executing_function/op_pipeline.c			\
 	   execution/executing_function/op_separator.c			\
 	   execution/builtins_functions/builtin_jobs.c			\

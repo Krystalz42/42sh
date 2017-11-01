@@ -564,13 +564,22 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/check_if_builtins.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_and_if.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_execution.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_or_if.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_pipeline.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_separator.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/simple_execution.c">
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_separator_ampersand.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_node.c">

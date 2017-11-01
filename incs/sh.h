@@ -316,9 +316,13 @@ uint8_t						execute_node(t_node *tree, int forked);
 t_jobs						*new_jobs(void);
 t_process					*new_process(t_jobs *jobs);
 t_process					*my_fork(t_jobs *jobs, t_node *node, int info);
-uint8_t						simple_execution(t_node *node, int info);
+uint8_t						op_execution(t_node *node, int info);
 uint8_t						op_separator(t_node *node, int info);
 uint8_t						op_pipeline(t_node *node, int info);
+uint8_t						op_separator_ampersand(t_node *node, int info);
+uint8_t						op_and_if(t_node *node, int info);
+uint8_t						op_or_if(t_node *node, int info);
+
 
 /*
 **				EXECUTION TOOLS

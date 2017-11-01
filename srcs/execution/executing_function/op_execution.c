@@ -36,7 +36,7 @@ uint8_t			do_execution(t_node *node, int info)
 	return (1);
 }
 
-uint8_t			simple_execution(t_node *node, int info)
+uint8_t			op_execution(t_node *node, int info)
 {
 	if (check_if_builtin(node, info) >= 0)
 		;

@@ -17,8 +17,8 @@
 */
 
 /*
-**	(info & 1) == HAVE TO BE FORK
-**	(info & 2) == SHOULD NOT BE FORK
+**	(info & 1) == SHOULD NOT BE FORK
+**	(info & 2) == HAVE TO BE FORK
 ** 	(info & 4) == BACKGROUND
 **	(info & 8) == FOREGROUND
 */

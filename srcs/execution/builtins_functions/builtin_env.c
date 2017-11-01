@@ -17,7 +17,7 @@ uint8_t			fct(t_node *node, int info)
 	if (*node->content->command)
 	{
 		node->content->env_option = 1;
-		simple_execution(node, info);
+		op_execution(node, info);
 	}
 	else
 	{

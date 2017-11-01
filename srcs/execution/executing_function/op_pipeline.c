@@ -22,12 +22,12 @@ uint8_t			pipeline(t_node *node, int info, t_jobs *jobs, int *fildes)
 		if (node->content->value == VALUE_PIPELINE)
 		{
 			write_pipe(fildes) && read_pipe(fildes_s);
-			simple_execution(node->right, info - FORK);
+			op_execution(node->right, info - FORK);
 		}
 		else
 		{
 			write_pipe(fildes);
-			simple_execution(node, info - FORK);
+			op_execution(node, info - FORK);
 		}
 	}
 	return (1);
