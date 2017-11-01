@@ -12,27 +12,17 @@
 
 #include <sh.h>
 
-static char		*convert_to_str(t_cmd *cmd)
+static t_cmd	*copy_command(t_cmd *cmd)
 {
-	int			len;
-	char		*line;
+	t_cmd		*cpy;
 
-	len = 0;
-	while (cmd->next)
-	{
-		len++;
-		cmd = cmd->next;
-	}
-	line = (char *)ft_memalloc(sizeof(char) * (len + 1));
-	cmd = first_cmd(cmd, 1);
-	len = 0;
+	cpy = create_element('\0');
 	while (cmd->c)
 	{
-		line[len] = cmd->c;
+		key_print_fct(cpy, cmd->c);
 		cmd = cmd->next;
-		len++;
 	}
-	return (line);
+	return (cpy);
 }
 
 static int		empty_cmd(t_cmd *cmd)
@@ -46,16 +36,16 @@ static int		empty_cmd(t_cmd *cmd)
 	return (1);
 }
 
-static char 	*return_line(t_read **read_std)
+static t_cmd	*return_line(t_read **read_std)
 {
-	char		*line;
+	t_cmd		*line;
 
 	if (*read_std)
 	{
 		(*read_std)->finish = 0;
 		if (get_len_prompt(-42) != -2)
 			make_list_hist((*read_std));
-		line = convert_to_str(first_cmd((*read_std)->cmd, 1));
+		line = copy_command(first_cmd((*read_std)->cmd, 1));
 		if (get_len_prompt(-42) == -2)
 			memdel_read(read_std);
 		return (line);
@@ -63,7 +53,7 @@ static char 	*return_line(t_read **read_std)
 	return (NULL);
 }
 
-char			*finish_read_std(t_read **read_std)
+t_cmd			*finish_read_std(t_read **read_std)
 {
 	t_cmd		*tmp;
 
@@ -75,7 +65,7 @@ char			*finish_read_std(t_read **read_std)
 	if (signal_reception(-1) || empty_cmd(first_cmd((*read_std)->cmd, 1)))
 	{
 		if (signal_reception(-1))
-			NL;
+			insert_one_line();
 		memdel_read(read_std);
 	}
 	return (return_line(read_std));

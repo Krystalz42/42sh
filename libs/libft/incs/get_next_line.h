@@ -33,12 +33,6 @@ typedef struct			s_list
 	struct s_list		*prev;
 }						t_list;
 
-typedef struct			s_tree
-{
-	char				*content;
-	struct s_tree		*left;
-	struct s_tree		*right;
-}						t_tree;
 
 int						get_next_line(int fd, char **line);
 int						my_gnl(int fd, char **line);

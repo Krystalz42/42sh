@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   builtin_kill.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/30 15:22:40 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/30 15:22:42 by aroulin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
@@ -114,32 +125,32 @@ uint8_t			kill_process(char *string1, char *string2)
 		return (error_builtin(KILL, ILLEGAL, string2));
 }
 
-uint8_t			builtin_kill(char **command, char **env)
+uint8_t			builtin_kill(t_node *node, int info)
 {
-	(void)env;
-	if (command[1])
+	(void)info;
+	if (node->content->command[1])
 	{
-		if (command[1][0] == '-')
+		if (node->content->command[1][0] == '-')
 		{
-			if (ft_strcmp(command[1], HELP) == 0)
+			if (ft_strcmp(node->content->command[1], HELP) == 0)
 				return (var_return(usage_kill()));
-			else if (command[1][1] == 'l')
+			else if (node->content->command[1][1] == 'l')
 			{
-				if (command[2] && ft_strisdigit(command[2] + 1))
+				if (node->content->command[2] && ft_strisdigit(node->content->command[2] + 1))
 					return (var_return(signal_from_int((uint8_t)
-													ft_atoi(command[2] + 1))));
-				else if (command[2] && ft_strisalpha(command[2] + 1))
-					return (var_return(signal_from_str(command[2] + 1)));
+													ft_atoi(node->content->command[2] + 1))));
+				else if (node->content->command[2] && ft_strisalpha(node->content->command[2] + 1))
+					return (var_return(signal_from_str(node->content->command[2] + 1)));
 				else
 					return (var_return(all_signal()));
 			}
-			else if (command[2])
-				return (var_return(kill_process(command[1], command[2])));
+			else if (node->content->command[2])
+				return (var_return(kill_process(node->content->command[1], node->content->command[2])));
 			else
-				return (var_return(error_builtin(KILL, UNKNOWN, command[1] + 1)));
+				return (var_return(error_builtin(KILL, UNKNOWN, node->content->command[1] + 1)));
 		}
 		else
-			return (var_return(kill_process(NULL, command[1])));
+			return (var_return(kill_process(NULL, node->content->command[1])));
 	}
 	return (var_return(error_builtin(KILL, NO_ARGS, NULL)));
 }

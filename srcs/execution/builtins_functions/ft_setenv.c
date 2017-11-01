@@ -73,30 +73,33 @@ static int				check_setenv(char **command)
 	return (0);
 }
 
-uint8_t					ft_setenv(char **command, char **env)
+uint8_t					ft_setenv(t_node *node, int info)
 {
 	char				*variable;
 	unsigned int		len;
 	unsigned int		i;
+	char			**env;
 
+	(void)info;
+	env = node->content->env_option ? node->content->env : env_table(NULL, ENV_REC);
 	i = 0;
-	if (check_setenv(command) == 1)
-		RETVAR(1);
-	len = search_pos_char(command[1], '=');
-	variable = ft_strndup(command[1], search_pos_char(command[1], '='));
+	if (check_setenv(node->content->command) == 1)
+		return (var_return(1));
+	len = search_pos_char(node->content->command[1], '=');
+	variable = ft_strndup(node->content->command[1], search_pos_char(node->content->command[1], '='));
 	while (env[i])
 	{
 		ft_putendl(env[i]);
-		if (!ft_strncmp(env[i], command[1], len))
+		if (!ft_strncmp(env[i], node->content->command[1], len))
 		{
 			ft_error(variable, " is already set.", 0);
 			free(variable);
-			RETVAR(1);
+			return (var_return(1));
 		}
 		i++;
 	}
 	ft_putstr("Success\n");
-	add_environment(command[1]);
+	add_environment(node->content->command[1]);
 	free(variable);
-	RETVAR(0);
+	return (var_return(0));
 }

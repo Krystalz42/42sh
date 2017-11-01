@@ -39,8 +39,7 @@
 ** A VIRER
 */
 
-void pjt(t_jobs jobs, int index);
-void pj(t_process identify, int index, char *inc);
+void                                                pjt(t_jobs *jobs);
 
 /*
 **				FUNCTION CORES
@@ -55,7 +54,8 @@ void						exit_(void);
 **				FUNCTION READ && PRINT && RETURN A STRUCT
 */
 
-char						*read_stdin(unsigned char flags);
+
+t_cmd						*read_stdin(unsigned char flags);
 char						*my_prompt(char *prompt);
 void						init_prompt(void);
 t_cursor					prompt(unsigned char flags);
@@ -71,10 +71,13 @@ void						restore_cursor_(t_cursor cur);
 int							check_cmd(t_read **read_std);
 int							get_len_prompt(int len);
 t_cmd						*last_cmd(t_cmd *cmd);
-char						*finish_read_std(t_read **read_std);
+t_cmd						*finish_read_std(t_read **read_std);
 t_cmd						*keep_buffer(t_cmd *cmd, int flags);
 t_cmd						*key_del_fct(t_cmd *cmd, unsigned long buff);
 int							signal_reception(int brk);
+void						initialize_fct(t_read **read_std,
+										unsigned char flags);
+t_cmd						*finitialize_fct(t_read **read_std);
 
 /*
 **				OUTSTANDING FUNCTION
@@ -101,23 +104,23 @@ void						add_hash(char *bin, char *path,
 **				BUILT IN FUNCTION
 */
 
-int							check_if_builtin(char **command, char **env);
-uint8_t						builtin_background(char **command, char **env);
-uint8_t						builtin_foreground(char **command, char **env);
+int							check_if_builtin(t_node *node, int info);
+uint8_t						builtin_background(t_node *node, int info);
+uint8_t						builtin_foreground(t_node *node, int info);
+uint8_t						builtin_jobs(t_node *node, int info);
+uint8_t						builtin_suspend(t_node *node, int info);
+uint8_t						builtin_hash(t_node *node, int info);
+uint8_t						builtin_history(t_node *node, int info);
+uint8_t						builtin_kill(t_node *node, int info);
+uint8_t						builtin_env(t_node *node, int info);
+uint8_t						builtin_exit(t_node *node, int info);
+uint8_t						builtin_help(t_node *node, int info);
 uint8_t						hash_reset(void);
 uint8_t						hash_print(int fd);
 uint8_t						b_write_history(void);
 uint8_t						b_clear_history(void);
 uint8_t						b_delete_history_offset(int offset);
 uint8_t						write_history_in_sh(char *pathname);
-uint8_t						builtin_jobs(char **command, char **env);
-uint8_t						builtin_hash(char **command, char **env);
-uint8_t						builtin_history(char **command, char **env);
-uint8_t						builtin_kill(char **command, char **env);
-uint8_t						builtin_env(char **command, char **env);
-uint8_t						builtin_exit(char **command, char **env);
-uint8_t						builtin_help(char **command, char **env);
-
 /*
 **				FUNCTION FOR COMPLETION
 */
@@ -229,6 +232,7 @@ int							usage_environement(char *string);
 int						start_from_null(char **command, char ***env);
 int						start_from_full(char **command, char ***env);
 int						start_from_less(char **command, char ***env);
+char					**get_real_env(t_node *node);
 
 /*
 **				HISTORY FUNCTION
@@ -280,22 +284,49 @@ void						chk_quotes(char c, char quote, const int *flag,
 **				JOB'S CONTROL FUNCTION
 */
 
+void						reset_process(t_jobs *jobs);
+void						wait_process(t_jobs *jobs);
 int							update_status(t_process *process);
 void						update_jobs(t_process *process);
 t_jobs						*jobs_table(void);
 void						my_execve(char **command, char **env);
 void						handler_sigchld(int sig);
 int							get_jobs_index(pid_t search);
-void						my_wait(int index);
-void						reset_process(t_process *to_kill);
+void						my_wait(t_jobs *jobs);
 int							terminate_process(t_process *process);
 void						modify_runing(t_process *process, bool change);
 void						modify_foreground(t_process *process, bool change);
 void						print_status(t_process *process, int index);
-void						wait_process(t_process *process, int index);
 void						set_fildes(pid_t pgid);
 const char					*status_signal(int signal);
 const char					*status_exit(int signal);
+
+/*
+**				CREATE BINARY TREE
+*/
+
+t_node						*create_binary_tree(t_parsing *list,
+											t_parsing *compare, int priority);
+uint8_t						execute_node(t_node *tree, int forked);
+
+/*
+**				EXECUTION FUNCTION
+*/
+
+t_jobs						*new_jobs(void);
+t_process					*new_process(t_jobs *jobs);
+t_process					*my_fork(t_jobs *jobs, t_node *node, int info);
+uint8_t						simple_execution(t_node *node, int info);
+uint8_t						op_separator(t_node *node, int info);
+uint8_t						op_pipeline(t_node *node, int info);
+
+/*
+**				EXECUTION TOOLS
+*/
+
+int							read_pipe(int *fildes);
+int							close_pipe(int *fildes);
+int							write_pipe(int *fildes);
 
 /*
 **				SIGNAL FUNCTION
@@ -325,7 +356,7 @@ int							memdel_cmd(t_cmd **cmd);
 void						memdel_outstanding(void);
 
 /*
-**			   	ERROR FUNCTION
+**				ERROR FUNCTION
 */
 
 uint8_t						error_builtin(char *from, char *error, char *args);

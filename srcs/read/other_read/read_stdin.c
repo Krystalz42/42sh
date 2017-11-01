@@ -69,25 +69,6 @@ static inline void		inline_print_(t_read **read_std, unsigned long *buff)
 		chk_and_print(read_std);
 }
 
-static inline void		initialize_fct(t_read **read_std, unsigned char flags,
-										 unsigned long *buff)
-{
-	(*read_std) = init_struct_for_read();
-	log_trace("Init read_std begin");
-	init_prompt();
-	init_signal();
-	set_termios(SET_OUR_TERM);
-	(*read_std)->cur = prompt(flags | PRINT);
-	signal_reception(0);
-	get_os_pointer(NULL, 1);
-	inline_print_(read_std, buff);
-}
-static char 			*finitialize_fct(t_read **read_std)
-{
-	set_termios(SET_OLD_TERM);
-	return (finish_read_std(read_std));
-
-}
 static inline void		inline_other(t_read **read_std, unsigned long *buff, int(*fct)(t_read **, unsigned long))
 {
 	fct(read_std, *buff);
@@ -95,18 +76,20 @@ static inline void		inline_other(t_read **read_std, unsigned long *buff, int(*fc
 	*buff = 0;
 }
 
-char					*read_stdin(unsigned char flags)
+t_cmd					*read_stdin(unsigned char flags)
 {
 	t_read						*read_std;
 	int							index;
 	static unsigned long		buf;
 
-	initialize_fct(&read_std, flags, &buf);
+	int test = 0;
+	initialize_fct(&read_std, flags);
+	inline_print_(&read_std, &buf);
 	while (!read_std->finish && read(STDIN_FILENO, &buf, sizeof(unsigned long)))
 	{
 		index = -1;
-		log_trace("In read [%lu]",buf);
-		if (ft_isprint(buf % (UCHAR_MAX + 1)) || ft_iscrlf(buf % (UCHAR_MAX + 1)))
+		log_trace("In read [%lu] return read [%d]",buf, test);
+		if (ft_isread(buf % (UCHAR_MAX + 1)))
 			inline_print_(&read_std, &buf);
 		while (g_tab_are_key[++index].key)
 			if (g_tab_are_key[index].key == buf)

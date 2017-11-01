@@ -12,6 +12,60 @@
 
 #ifndef DEFINE_H
 # define DEFINE_H
+/*
+**			FLAG EXECUTION
+*/
+
+/*
+**	(info & 1) == HAVE TO BE FORK
+**	(info & 2) == SHOULD NOT BE FORK
+** 	(info & 4) == BACKGROUND
+**	(info & 8) == FOREGROUND
+*/
+
+# define NO_FORK					1
+# define FORK						2
+# define BACKGROUND					4
+# define FOREGROUND					8
+
+/*
+**			TOKEN RECOGNITION
+*/
+
+# define PRIO_SEPARATOR				1
+# define PRIO_CMD_AND_OR			2
+# define PRIO_PIPE					3
+# define PRIO_REDIR					4
+# define PRIO_COMMAND				5
+
+/*
+** COMAND		...
+** SEMI_COLON	;
+** AMPERSAND	&
+** AND_IF		&&
+** OR_IF		||
+** PIPELINE		|
+** LESS			<
+** GREAT		>
+** DLESS		<<
+** DGREAT		>>
+** LESS_AND		<&
+** GREAT_AND	&>
+*/
+
+# define NOTHING					-1
+# define VALUE_COMMAND				0
+# define VALUE_SEMI_COLON			1
+# define VALUE_AMPERSAND			2
+# define VALUE_AND_IF				3
+# define VALUE_OR_IF				4
+# define VALUE_PIPELINE				5
+# define VALUE_LESS					6
+# define VALUE_GREAT				7
+# define VALUE_DLESS				8
+# define VALUE_DGREAT				9
+# define VALUE_LESS_AND				10
+# define VALUE_GREAT_AND			11
 
 /*
 **			INITIALIZATION FLAGS
@@ -100,28 +154,50 @@
 # define H_HK					"-k                      : usage kill\n"
 
 # define H_MOVE					"Commands For Moving :\n"
-# define H_CA					"C-a                     : Move to the start of the current line. \n"
-# define H_CE					"C-e                     : Move to the end of the line. \n"
-# define H_CF					"C-f                     : Move forward a character.  \n"
-# define H_CB					"C-b                     : Move back a character.  \n"
-# define H_MF					"M-f                     : Move forward to the end of the next word.\n"
-# define H_MB					"M-b                     : Move back to the start of this, or the previous, word.\n"
-# define H_CL					"C-l                     : Clear the screen and redraw the current line.\n"
+# define H_CA					"C-a                     : Move to the start of\
+ he current line. \n"
+# define H_CE					"C-e                     : Move to the end of \
+he line. \n"
+# define H_CF					"C-f                     : Move forward a \
+haracter.  \n"
+# define H_CB					"C-b                     : Move back a\
+ character.  \n"
+# define H_MF					"M-f                     : Move forward to the \
+end of the next word.\n"
+# define H_MB					"M-b                     : Move back to the \
+start of this, or the previous, word.\n"
+# define H_CL					"C-l                     : Clear the screen \
+nd redraw the current line.\n"
 
 # define H_HISTORY				"Commands For Manipulating The History :\n"
-# define H_CP					"C-p                     : Move `up' through the history list. \n"
-# define H_CN					"C-n                     : Move `down' through the history list. \n"
-# define H_CR					"C-r                     : Search backward starting at the current line and moving `up' through the history as necessary.\n"
-# define H_CD					"C-d                     : Delete the character under the cursor. If the cursor is at the beginning of the line, there are no characters in the line, and the last character typed was not bound to delete-char, then return EOF.\n"
-# define H_MU					"M-u                     : Uppercase the current (or following) word.\n"
-# define H_ML					"M-l                     : Lowercase the current (or following) word.\n"
-# define H_MC					"M-c                     : A FAIRE :Capitalize the current (or following) word.\n"
+# define H_CP					"C-p                     : Move `up' through\
+ the history list. \n"
+# define H_CN					"C-n                     : Move `down' through \
+the history list. \n"
+# define H_CR					"C-r                     : Search backward \
+starting \
+at the current line and moving `up' through the history as necessary.\n"
+# define H_CD					"C-d                     : Delete the character\
+ under the cursor. If the cursor is at the beginning of the line, there are no \
+characters in the line, and the last character typed was not bound to \
+delete-char, then return EOF.\n"
+# define H_MU					"M-u                     : Uppercase the \
+current (or following) word.\n"
+# define H_ML					"M-l                     : Lowercase the \
+current (or following) word.\n"
+# define H_MC					"M-c                     : A FAIRE :Capitalize \
+the current (or following) word.\n"
 
 # define H_KILL_AND_YANK		"Killing And Yanking :\n"
-# define H_CK					"C-k                     : Kill the text from the current cursor position to the end of the line.\n"
-# define H_MD					"M-d                     : Kill from the cursor to the end of the current word, or if between words, to the end of the next word. \n"
-# define H_MDEL					"M-DEL                   : Kill the word behind the cursor. \n"
-# define H_MY					"M-y                     : A FAIRE :Yank the top of the kill ring into the buffer at the current cursor position.\n"
+# define H_CK					"C-k                     : Kill the text from\
+ the current cursor position to the end of the line.\n"
+# define H_MD					"M-d                     : Kill from the cursor\
+ to the end of the current word, or if between words, to the end of \
+the next word. \n"
+# define H_MDEL					"M-DEL                   : Kill the word behind\
+ the cursor. \n"
+# define H_MY					"M-y                     : A FAIRE :Yank the \
+top of the kill ring into the buffer at the current cursor position.\n"
 
 
 
@@ -182,7 +258,7 @@ own env temporarily.\n"
 # define ENV					"env: "
 # define HISTORY				"history: "
 
-# define INVALID				"Invalid argument : "
+# define INVALID				"invalid argument : "
 # define NO_ARGS_U				"option requires an argument -- u"
 # define OPTION_NO_FOUND		"option not found : "
 # define NO_JOB					"job not found: "

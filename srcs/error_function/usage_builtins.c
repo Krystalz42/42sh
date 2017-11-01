@@ -1,6 +1,15 @@
-//
-// Created by Alexandre ROULIN on 10/27/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   usage_builtins.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/30 15:19:07 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/30 15:19:09 by aroulin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <sh.h>
 
 uint8_t				usage_kill(void)
@@ -38,6 +47,7 @@ uint8_t				usage_env(void)
 	ft_putstr_fd(ENV_DEFAULT, STDERR_FILENO);
 	return (0);
 }
+
 uint8_t				usage_hash(void)
 {
 	ft_putstr_fd(HASH_R, STDERR_FILENO);

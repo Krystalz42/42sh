@@ -74,17 +74,20 @@ static int			cd_oldpwd(char **env)
 	return (0);
 }
 
-uint8_t				ft_cd(char **command, char **env)
+uint8_t				ft_cd(t_node *node, int info)
 {
 	int				ret;
+	char			**env;
 
-	if (!command[1] || !ft_strcmp(command[1], "~") ||
-	!ft_strcmp(command[1], "--"))
+	(void)info;
+	env = node->content->env_option ? node->content->env : env_table(NULL, ENV_REC);
+	if (!node->content->command[1] || !ft_strcmp(node->content->command[1], "~") ||
+	!ft_strcmp(node->content->command[1], "--"))
 		ret = cd_home(env);
-	else if (!ft_strcmp(command[1], "-"))
+	else if (!ft_strcmp(node->content->command[1], "-"))
 		ret = cd_oldpwd(env);
 	else
-		ret = cd_path(command[1]);
+		ret = cd_path(node->content->command[1]);
 	if (ret == 0)
 		refresh_varenv(env);
 	return (var_return(ret));

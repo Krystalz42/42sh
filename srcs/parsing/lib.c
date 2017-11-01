@@ -25,10 +25,9 @@ void			lstnew(t_parsing **node, char *str)
 	t_parsing *new;
 
 	new = (t_parsing*)ft_memalloc(sizeof(t_parsing));
-	new->str = ft_strdup(str);
+	new->input = ft_strdup(str);
 	new->next = NULL;
 	new->prev = NULL;
-
 	if (*node == NULL)
 		*node = new;
 	else
@@ -37,15 +36,12 @@ void			lstnew(t_parsing **node, char *str)
 
 void			lstdel(t_parsing **node)
 {
-	t_parsing	*memory;
-
-	while (*node)
-	{
-		memory = *node;
-		*node = (*node)->next;
-		ft_memdel((void **)&memory->str);
-		ft_memdel((void **) &memory);
-	}
+	if ((*node)->env_option)
+		ft_memdel_tab(&(*node)->env);
+	ft_memdel_tab(&(*node)->command);
+	ft_strdel(&(*node)->input);
+	ft_memdel((void **)&(*node));
+	(*node) = NULL;
 }
 
 void			ptrnext(t_parsing **node, size_t stop)

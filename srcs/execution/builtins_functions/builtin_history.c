@@ -1,13 +1,21 @@
-//
-// Created by Alexandre ROULIN on 10/12/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   builtin_history.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/30 15:22:26 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/30 15:22:28 by aroulin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-static int		check_option_history(char c)
+static int		potential_option(int c)
 {
-	static const char	potential[] = "rdawsc";
-	int					index;
+	static const char		potential[] = "cdrw";
+	int						index;
 
 	index = 0;
 	while (potential[index])
@@ -16,53 +24,51 @@ static int		check_option_history(char c)
 			return (1);
 		index++;
 	}
-	if (c == '-')
-		return (0);
-	return (-1);
+	return (0);
 }
 
 uint8_t			looking_for_fct(char **command, int option)
 {
 	log_trace("%s, %d", *command, option);
-	if (option == 'c')
+	if (option & 1)
 		return (b_clear_history());
-	else if (option == 'd')
+	else if (option & 2)
 		return (b_delete_history_offset(ft_atoi(*command)));
-	else if (option == 'w')
+	else if (option & 8)
 		return (b_write_history_in_file(*command ? ft_strdup(*command) :
 								get_str_from_history()));
-	else if (option == 'r')
+	else if (option & 4)
 		return (write_history_in_sh(*command ? ft_strdup(*command) :
-									  get_str_from_history()));
+									get_str_from_history()));
 	else
 		return (b_write_history());
 }
 
-uint8_t			builtin_history(char **command, char **env)
+uint8_t			builtin_history(t_node *node, int info)
 {
 	int			option;
 	int			index;
 	int			c;
-	int			ret;
 
-	(void)env;
+	(void)info;
 	option = 0;
 	index = 1;
-	while (command[index] && command[index][0] == '-')
+	while (node->content->command[index] && node->content->command[index][0] == '-')
 	{
-		if (!ft_strcmp("--help", command[1]))
+		if (!ft_strcmp("--help", node->content->command[1]))
 			return (var_return(usage_history()));
-		c = 0;
-		while (command[index][c])
+		c = 1;
+		while (node->content->command[index][c])
 		{
-			ret = check_option_history(command[index][c]);
-			if (ret == 1)
-				option = command[index][c];
-			else if (ret == -1)
-				return (var_return(error_builtin(HISTORY, OPTION_NO_FOUND, command[index] + 1)));
+			if (potential_option(node->content->command[index][c]) == 0)
+				return (error_builtin(HISTORY, INVALID, node->content->command[index] + c));
+			option += node->content->command[index][c] == 'c' && !(option & 1) ? 1 : 0;
+			option += node->content->command[index][c] == 'd' && !(option & 2) ? 2 : 0;
+			option += node->content->command[index][c] == 'r' && !(option & 4) ? 4 : 0;
+			option += node->content->command[index][c] == 'w' && !(option & 8) ? 8 : 0;
 			c++;
 		}
 		index++;
 	}
-	return (looking_for_fct(command + index, option));
+	return (looking_for_fct(node->content->command + index, option));
 }

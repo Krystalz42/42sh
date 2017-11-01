@@ -4,23 +4,20 @@
 
 #include <sh.h>
 
-void pj(t_process identify, int index, char *inc)
+void pjt(t_jobs *jobs)
 {
-	log_trace("%s PID [%d] PGID [%d] RUNING [%d] FG [%d] INDEX [%d]"
-	,inc, identify.pid,identify.pgid, identify.running, identify.foreground, index);
+	t_process		*temp;
 
-}
-
-void pjt(t_jobs jobs, int index)
-{
-	int 		i;
-
-	i = 0;
-	while (jobs.process[i].pid)
+	temp = jobs->process;
+	if (temp)
 	{
-		log_trace("PID [%d] PGID [%d] RUNING [%d] FOREGROUND [%d] INDEX [%d] INDEX_CHILD [%d]", jobs.process[i].pid,jobs.process[i].pgid,jobs.process[i].running,jobs.process[i].foreground, index, i);
-		i++;
+		while (temp)
+		{
+			log_trace("PID [%d] PGID [%d] RUNING [%d] FOREGROUND [%d] INDEX [%d]",
+					  jobs->process->pid,jobs->process->pgid,jobs->process->running,jobs->process->foreground, index);
+			temp = temp->next;
+		}
 	}
-	if (i == 0)
-		log_trace("PID [%d] PGID [%d] RUNING [%d] FOREGROUND [%d] i [%d] INDEX_CHILD [%d]", jobs.process[i].pid,jobs.process[i].pgid,jobs.process[i].running,jobs.process[i].foreground, index, i);
+	else
+		log_trace("PROCESS NULLIFIER");
 }

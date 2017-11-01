@@ -137,10 +137,7 @@ set(SOURCE_FILES
         srcs/env/initialise_environment.c
         srcs/env/my_getenv.c
         srcs/env/remove_environment.c
-        srcs/env/usage_environment.c
         srcs/error_function/bip.c
-        srcs/error_function/error_env.c
-        srcs/error_function/puterror.c
         srcs/execution/builtins_functions/builtin_hash.c
         srcs/execution/builtins_functions/builtin_history.c
         srcs/execution/builtins_functions/builtin_jobs.c
@@ -261,7 +258,7 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_strisalpha.c
         srcs/execution/builtins_functions/builtin_env.c
         srcs/cores/exit.c
-        srcs/execution/builtins_functions/builtin_exit.c srcs/error_function/usage_builtins.c srcs/execution/builtins_functions/builtin_help.c srcs/read/key_/key_capitalize_word.c)
+        srcs/execution/builtins_functions/builtin_exit.c srcs/error_function/usage_builtins.c srcs/execution/builtins_functions/builtin_help.c srcs/read/key_/key_capitalize_word.c libs/libft/srcs/ft_isread.c srcs/execution/builtins_functions/builtin_suspend.c srcs/read/other_read/read_gates.c srcs/binary_tree/binary_tree.c srcs/execution/executing_node.c srcs/execution/my_fork.c srcs/execution/executing_function/simple_execution.c srcs/execution/executing_function/op_separator.c srcs/execution/tools/get_real_env.c srcs/execution/executing_function/op_pipeline.c srcs/execution/tools/manage_pipe.c srcs/execution/tools/new_jobs.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

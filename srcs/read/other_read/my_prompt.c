@@ -12,11 +12,11 @@
 
 #include <sh.h>
 
-char        *my_prompt(char *prompt)
+char			*my_prompt(char *prompt)
 {
-    static char        *save;
+	static char		*save;
 
-    if (prompt)
-        save = prompt;
-    return (save);
+	if (prompt)
+		save = prompt;
+	return (save);
 }

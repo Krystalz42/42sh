@@ -15,5 +15,6 @@ t_parsing	*parsing(char *str)
 	commands(&new);
 	stds(new);
 	redirections(&new);
+	new->env = NULL;
 	return (new);
 }

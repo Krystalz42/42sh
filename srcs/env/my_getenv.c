@@ -31,7 +31,7 @@ size_t				compare_environment(char *s1, char *s2)
 char				*my_getenv(char *name)
 {
 	char	**environ;
-	int 	i;
+	int		i;
 
 	i = -1;
 	environ = env_table(NULL, ENV_REC);

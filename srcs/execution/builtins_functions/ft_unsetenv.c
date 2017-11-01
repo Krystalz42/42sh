@@ -27,20 +27,23 @@ static unsigned int	which_len(char *str)
 }
 
 // Only delete with an = sign at the end
-uint8_t				ft_unsetenv(char **command, char **env)
+uint8_t				ft_unsetenv(t_node *node, int info)
 {
 	unsigned int	i;
 	unsigned int	len;
+	char			**env;
 
+	(void)info;
+	env = node->content->env_option ? node->content->env : env_table(NULL, ENV_REC);
 	i = 0;
-	if (tablen(command) == 1 || command[1][0] == 0 ||
-		search_char(command[1], '=') > 1)
-		RETVAR(ft_error("usage: ", "unsetenv VAR", 1));
-	len = which_len(command[1]);
-	ft_putchar(command[1][len]);
+	if (tablen(node->content->command) == 1 || node->content->command[1][0] == 0 ||
+		search_char(node->content->command[1], '=') > 1)
+			return (var_return(ft_error("usage: ", "unsetenv VAR", 1)));
+	len = which_len(node->content->command[1]);
+	ft_putchar(node->content->command[1][len]);
 	while (env[i])
 	{
-		if (!ft_strncmp(env[i], command[1], len) &&
+		if (!ft_strncmp(env[i], node->content->command[1], len) &&
 			(!env[i][len] || (env[i][len] && env[i][len] == '=')))
 			break ;
 		i++;
@@ -48,9 +51,9 @@ uint8_t				ft_unsetenv(char **command, char **env)
 	if (env[i])
 	{
 		ft_putendl("Success.");
-		remove_environment(command[1]);
+		remove_environment(node->content->command[1]);
 	}
 	else
-		RETVAR(ft_error(command[1], " not found.", 1));
-	RETVAR(0);
+		return (var_return(ft_error(node->content->command[1], " not found.", 1)));
+	return (var_return(0));
 }

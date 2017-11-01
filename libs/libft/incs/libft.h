@@ -119,6 +119,7 @@ char				**ft_strsplit(char const *s1, char c);
 char				*ft_itoa(int n);
 void				ft_putchar(char c);
 int					ft_putstr(char const *s);
+int					ft_isread(int c);
 void				ft_putendl(char const *s);
 void				ft_putnbr(int n);
 void				ft_putchar_fd(char c, int fd);

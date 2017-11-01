@@ -663,6 +663,33 @@ libs/libft/srcs/ft_isprint.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/libft/srcs/ft_isprint.c.s
 .PHONY : libs/libft/srcs/ft_isprint.c.s
 
+libs/libft/srcs/ft_isread.o: libs/libft/srcs/ft_isread.c.o
+
+.PHONY : libs/libft/srcs/ft_isread.o
+
+# target to build an object file
+libs/libft/srcs/ft_isread.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/libft/srcs/ft_isread.c.o
+.PHONY : libs/libft/srcs/ft_isread.c.o
+
+libs/libft/srcs/ft_isread.i: libs/libft/srcs/ft_isread.c.i
+
+.PHONY : libs/libft/srcs/ft_isread.i
+
+# target to preprocess a source file
+libs/libft/srcs/ft_isread.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/libft/srcs/ft_isread.c.i
+.PHONY : libs/libft/srcs/ft_isread.c.i
+
+libs/libft/srcs/ft_isread.s: libs/libft/srcs/ft_isread.c.s
+
+.PHONY : libs/libft/srcs/ft_isread.s
+
+# target to generate assembly for a file
+libs/libft/srcs/ft_isread.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/libft/srcs/ft_isread.c.s
+.PHONY : libs/libft/srcs/ft_isread.c.s
+
 libs/libft/srcs/ft_isupper.o: libs/libft/srcs/ft_isupper.c.o
 
 .PHONY : libs/libft/srcs/ft_isupper.o
@@ -3309,6 +3336,33 @@ libs/printf/srcs/printf_part.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/libs/printf/srcs/printf_part.c.s
 .PHONY : libs/printf/srcs/printf_part.c.s
 
+srcs/binary_tree/binary_tree.o: srcs/binary_tree/binary_tree.c.o
+
+.PHONY : srcs/binary_tree/binary_tree.o
+
+# target to build an object file
+srcs/binary_tree/binary_tree.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/binary_tree/binary_tree.c.o
+.PHONY : srcs/binary_tree/binary_tree.c.o
+
+srcs/binary_tree/binary_tree.i: srcs/binary_tree/binary_tree.c.i
+
+.PHONY : srcs/binary_tree/binary_tree.i
+
+# target to preprocess a source file
+srcs/binary_tree/binary_tree.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/binary_tree/binary_tree.c.i
+.PHONY : srcs/binary_tree/binary_tree.c.i
+
+srcs/binary_tree/binary_tree.s: srcs/binary_tree/binary_tree.c.s
+
+.PHONY : srcs/binary_tree/binary_tree.s
+
+# target to generate assembly for a file
+srcs/binary_tree/binary_tree.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/binary_tree/binary_tree.c.s
+.PHONY : srcs/binary_tree/binary_tree.c.s
+
 srcs/cores/exit.o: srcs/cores/exit.c.o
 
 .PHONY : srcs/cores/exit.o
@@ -3579,33 +3633,6 @@ srcs/env/remove_environment.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/env/remove_environment.c.s
 .PHONY : srcs/env/remove_environment.c.s
 
-srcs/env/usage_environment.o: srcs/env/usage_environment.c.o
-
-.PHONY : srcs/env/usage_environment.o
-
-# target to build an object file
-srcs/env/usage_environment.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/env/usage_environment.c.o
-.PHONY : srcs/env/usage_environment.c.o
-
-srcs/env/usage_environment.i: srcs/env/usage_environment.c.i
-
-.PHONY : srcs/env/usage_environment.i
-
-# target to preprocess a source file
-srcs/env/usage_environment.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/env/usage_environment.c.i
-.PHONY : srcs/env/usage_environment.c.i
-
-srcs/env/usage_environment.s: srcs/env/usage_environment.c.s
-
-.PHONY : srcs/env/usage_environment.s
-
-# target to generate assembly for a file
-srcs/env/usage_environment.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/env/usage_environment.c.s
-.PHONY : srcs/env/usage_environment.c.s
-
 srcs/error_function/bip.o: srcs/error_function/bip.c.o
 
 .PHONY : srcs/error_function/bip.o
@@ -3632,60 +3659,6 @@ srcs/error_function/bip.s: srcs/error_function/bip.c.s
 srcs/error_function/bip.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/bip.c.s
 .PHONY : srcs/error_function/bip.c.s
-
-srcs/error_function/error_env.o: srcs/error_function/error_env.c.o
-
-.PHONY : srcs/error_function/error_env.o
-
-# target to build an object file
-srcs/error_function/error_env.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/error_env.c.o
-.PHONY : srcs/error_function/error_env.c.o
-
-srcs/error_function/error_env.i: srcs/error_function/error_env.c.i
-
-.PHONY : srcs/error_function/error_env.i
-
-# target to preprocess a source file
-srcs/error_function/error_env.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/error_env.c.i
-.PHONY : srcs/error_function/error_env.c.i
-
-srcs/error_function/error_env.s: srcs/error_function/error_env.c.s
-
-.PHONY : srcs/error_function/error_env.s
-
-# target to generate assembly for a file
-srcs/error_function/error_env.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/error_env.c.s
-.PHONY : srcs/error_function/error_env.c.s
-
-srcs/error_function/puterror.o: srcs/error_function/puterror.c.o
-
-.PHONY : srcs/error_function/puterror.o
-
-# target to build an object file
-srcs/error_function/puterror.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/puterror.c.o
-.PHONY : srcs/error_function/puterror.c.o
-
-srcs/error_function/puterror.i: srcs/error_function/puterror.c.i
-
-.PHONY : srcs/error_function/puterror.i
-
-# target to preprocess a source file
-srcs/error_function/puterror.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/puterror.c.i
-.PHONY : srcs/error_function/puterror.c.i
-
-srcs/error_function/puterror.s: srcs/error_function/puterror.c.s
-
-.PHONY : srcs/error_function/puterror.s
-
-# target to generate assembly for a file
-srcs/error_function/puterror.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/puterror.c.s
-.PHONY : srcs/error_function/puterror.c.s
 
 srcs/error_function/usage_builtins.o: srcs/error_function/usage_builtins.c.o
 
@@ -3902,6 +3875,33 @@ srcs/execution/builtins_functions/builtin_kill.s: srcs/execution/builtins_functi
 srcs/execution/builtins_functions/builtin_kill.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_kill.c.s
 .PHONY : srcs/execution/builtins_functions/builtin_kill.c.s
+
+srcs/execution/builtins_functions/builtin_suspend.o: srcs/execution/builtins_functions/builtin_suspend.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_suspend.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_suspend.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_suspend.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_suspend.c.o
+
+srcs/execution/builtins_functions/builtin_suspend.i: srcs/execution/builtins_functions/builtin_suspend.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_suspend.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_suspend.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_suspend.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_suspend.c.i
+
+srcs/execution/builtins_functions/builtin_suspend.s: srcs/execution/builtins_functions/builtin_suspend.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_suspend.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_suspend.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_suspend.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_suspend.c.s
 
 srcs/execution/builtins_functions/builtin_switch.o: srcs/execution/builtins_functions/builtin_switch.c.o
 
@@ -4172,6 +4172,222 @@ srcs/execution/check_if_builtins.s: srcs/execution/check_if_builtins.c.s
 srcs/execution/check_if_builtins.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/check_if_builtins.c.s
 .PHONY : srcs/execution/check_if_builtins.c.s
+
+srcs/execution/executing_function/op_pipeline.o: srcs/execution/executing_function/op_pipeline.c.o
+
+.PHONY : srcs/execution/executing_function/op_pipeline.o
+
+# target to build an object file
+srcs/execution/executing_function/op_pipeline.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_pipeline.c.o
+.PHONY : srcs/execution/executing_function/op_pipeline.c.o
+
+srcs/execution/executing_function/op_pipeline.i: srcs/execution/executing_function/op_pipeline.c.i
+
+.PHONY : srcs/execution/executing_function/op_pipeline.i
+
+# target to preprocess a source file
+srcs/execution/executing_function/op_pipeline.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_pipeline.c.i
+.PHONY : srcs/execution/executing_function/op_pipeline.c.i
+
+srcs/execution/executing_function/op_pipeline.s: srcs/execution/executing_function/op_pipeline.c.s
+
+.PHONY : srcs/execution/executing_function/op_pipeline.s
+
+# target to generate assembly for a file
+srcs/execution/executing_function/op_pipeline.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_pipeline.c.s
+.PHONY : srcs/execution/executing_function/op_pipeline.c.s
+
+srcs/execution/executing_function/op_separator.o: srcs/execution/executing_function/op_separator.c.o
+
+.PHONY : srcs/execution/executing_function/op_separator.o
+
+# target to build an object file
+srcs/execution/executing_function/op_separator.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_separator.c.o
+.PHONY : srcs/execution/executing_function/op_separator.c.o
+
+srcs/execution/executing_function/op_separator.i: srcs/execution/executing_function/op_separator.c.i
+
+.PHONY : srcs/execution/executing_function/op_separator.i
+
+# target to preprocess a source file
+srcs/execution/executing_function/op_separator.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_separator.c.i
+.PHONY : srcs/execution/executing_function/op_separator.c.i
+
+srcs/execution/executing_function/op_separator.s: srcs/execution/executing_function/op_separator.c.s
+
+.PHONY : srcs/execution/executing_function/op_separator.s
+
+# target to generate assembly for a file
+srcs/execution/executing_function/op_separator.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_separator.c.s
+.PHONY : srcs/execution/executing_function/op_separator.c.s
+
+srcs/execution/executing_function/simple_execution.o: srcs/execution/executing_function/simple_execution.c.o
+
+.PHONY : srcs/execution/executing_function/simple_execution.o
+
+# target to build an object file
+srcs/execution/executing_function/simple_execution.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/simple_execution.c.o
+.PHONY : srcs/execution/executing_function/simple_execution.c.o
+
+srcs/execution/executing_function/simple_execution.i: srcs/execution/executing_function/simple_execution.c.i
+
+.PHONY : srcs/execution/executing_function/simple_execution.i
+
+# target to preprocess a source file
+srcs/execution/executing_function/simple_execution.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/simple_execution.c.i
+.PHONY : srcs/execution/executing_function/simple_execution.c.i
+
+srcs/execution/executing_function/simple_execution.s: srcs/execution/executing_function/simple_execution.c.s
+
+.PHONY : srcs/execution/executing_function/simple_execution.s
+
+# target to generate assembly for a file
+srcs/execution/executing_function/simple_execution.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/simple_execution.c.s
+.PHONY : srcs/execution/executing_function/simple_execution.c.s
+
+srcs/execution/executing_node.o: srcs/execution/executing_node.c.o
+
+.PHONY : srcs/execution/executing_node.o
+
+# target to build an object file
+srcs/execution/executing_node.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_node.c.o
+.PHONY : srcs/execution/executing_node.c.o
+
+srcs/execution/executing_node.i: srcs/execution/executing_node.c.i
+
+.PHONY : srcs/execution/executing_node.i
+
+# target to preprocess a source file
+srcs/execution/executing_node.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_node.c.i
+.PHONY : srcs/execution/executing_node.c.i
+
+srcs/execution/executing_node.s: srcs/execution/executing_node.c.s
+
+.PHONY : srcs/execution/executing_node.s
+
+# target to generate assembly for a file
+srcs/execution/executing_node.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_node.c.s
+.PHONY : srcs/execution/executing_node.c.s
+
+srcs/execution/my_fork.o: srcs/execution/my_fork.c.o
+
+.PHONY : srcs/execution/my_fork.o
+
+# target to build an object file
+srcs/execution/my_fork.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/my_fork.c.o
+.PHONY : srcs/execution/my_fork.c.o
+
+srcs/execution/my_fork.i: srcs/execution/my_fork.c.i
+
+.PHONY : srcs/execution/my_fork.i
+
+# target to preprocess a source file
+srcs/execution/my_fork.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/my_fork.c.i
+.PHONY : srcs/execution/my_fork.c.i
+
+srcs/execution/my_fork.s: srcs/execution/my_fork.c.s
+
+.PHONY : srcs/execution/my_fork.s
+
+# target to generate assembly for a file
+srcs/execution/my_fork.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/my_fork.c.s
+.PHONY : srcs/execution/my_fork.c.s
+
+srcs/execution/tools/get_real_env.o: srcs/execution/tools/get_real_env.c.o
+
+.PHONY : srcs/execution/tools/get_real_env.o
+
+# target to build an object file
+srcs/execution/tools/get_real_env.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/get_real_env.c.o
+.PHONY : srcs/execution/tools/get_real_env.c.o
+
+srcs/execution/tools/get_real_env.i: srcs/execution/tools/get_real_env.c.i
+
+.PHONY : srcs/execution/tools/get_real_env.i
+
+# target to preprocess a source file
+srcs/execution/tools/get_real_env.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/get_real_env.c.i
+.PHONY : srcs/execution/tools/get_real_env.c.i
+
+srcs/execution/tools/get_real_env.s: srcs/execution/tools/get_real_env.c.s
+
+.PHONY : srcs/execution/tools/get_real_env.s
+
+# target to generate assembly for a file
+srcs/execution/tools/get_real_env.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/get_real_env.c.s
+.PHONY : srcs/execution/tools/get_real_env.c.s
+
+srcs/execution/tools/manage_pipe.o: srcs/execution/tools/manage_pipe.c.o
+
+.PHONY : srcs/execution/tools/manage_pipe.o
+
+# target to build an object file
+srcs/execution/tools/manage_pipe.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/manage_pipe.c.o
+.PHONY : srcs/execution/tools/manage_pipe.c.o
+
+srcs/execution/tools/manage_pipe.i: srcs/execution/tools/manage_pipe.c.i
+
+.PHONY : srcs/execution/tools/manage_pipe.i
+
+# target to preprocess a source file
+srcs/execution/tools/manage_pipe.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/manage_pipe.c.i
+.PHONY : srcs/execution/tools/manage_pipe.c.i
+
+srcs/execution/tools/manage_pipe.s: srcs/execution/tools/manage_pipe.c.s
+
+.PHONY : srcs/execution/tools/manage_pipe.s
+
+# target to generate assembly for a file
+srcs/execution/tools/manage_pipe.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/manage_pipe.c.s
+.PHONY : srcs/execution/tools/manage_pipe.c.s
+
+srcs/execution/tools/new_jobs.o: srcs/execution/tools/new_jobs.c.o
+
+.PHONY : srcs/execution/tools/new_jobs.o
+
+# target to build an object file
+srcs/execution/tools/new_jobs.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/new_jobs.c.o
+.PHONY : srcs/execution/tools/new_jobs.c.o
+
+srcs/execution/tools/new_jobs.i: srcs/execution/tools/new_jobs.c.i
+
+.PHONY : srcs/execution/tools/new_jobs.i
+
+# target to preprocess a source file
+srcs/execution/tools/new_jobs.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/new_jobs.c.i
+.PHONY : srcs/execution/tools/new_jobs.c.i
+
+srcs/execution/tools/new_jobs.s: srcs/execution/tools/new_jobs.c.s
+
+.PHONY : srcs/execution/tools/new_jobs.s
+
+# target to generate assembly for a file
+srcs/execution/tools/new_jobs.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/new_jobs.c.s
+.PHONY : srcs/execution/tools/new_jobs.c.s
 
 srcs/hash/built_in_hash.o: srcs/hash/built_in_hash.c.o
 
@@ -6495,6 +6711,33 @@ srcs/read/other_read/prompt.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/prompt.c.s
 .PHONY : srcs/read/other_read/prompt.c.s
 
+srcs/read/other_read/read_gates.o: srcs/read/other_read/read_gates.c.o
+
+.PHONY : srcs/read/other_read/read_gates.o
+
+# target to build an object file
+srcs/read/other_read/read_gates.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/read_gates.c.o
+.PHONY : srcs/read/other_read/read_gates.c.o
+
+srcs/read/other_read/read_gates.i: srcs/read/other_read/read_gates.c.i
+
+.PHONY : srcs/read/other_read/read_gates.i
+
+# target to preprocess a source file
+srcs/read/other_read/read_gates.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/read_gates.c.i
+.PHONY : srcs/read/other_read/read_gates.c.i
+
+srcs/read/other_read/read_gates.s: srcs/read/other_read/read_gates.c.s
+
+.PHONY : srcs/read/other_read/read_gates.s
+
+# target to generate assembly for a file
+srcs/read/other_read/read_gates.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/read_gates.c.s
+.PHONY : srcs/read/other_read/read_gates.c.s
+
 srcs/read/other_read/read_stdin.o: srcs/read/other_read/read_stdin.c.o
 
 .PHONY : srcs/read/other_read/read_stdin.o
@@ -7023,6 +7266,9 @@ help:
 	@echo "... libs/libft/srcs/ft_isprint.o"
 	@echo "... libs/libft/srcs/ft_isprint.i"
 	@echo "... libs/libft/srcs/ft_isprint.s"
+	@echo "... libs/libft/srcs/ft_isread.o"
+	@echo "... libs/libft/srcs/ft_isread.i"
+	@echo "... libs/libft/srcs/ft_isread.s"
 	@echo "... libs/libft/srcs/ft_isupper.o"
 	@echo "... libs/libft/srcs/ft_isupper.i"
 	@echo "... libs/libft/srcs/ft_isupper.s"
@@ -7317,6 +7563,9 @@ help:
 	@echo "... libs/printf/srcs/printf_part.o"
 	@echo "... libs/printf/srcs/printf_part.i"
 	@echo "... libs/printf/srcs/printf_part.s"
+	@echo "... srcs/binary_tree/binary_tree.o"
+	@echo "... srcs/binary_tree/binary_tree.i"
+	@echo "... srcs/binary_tree/binary_tree.s"
 	@echo "... srcs/cores/exit.o"
 	@echo "... srcs/cores/exit.i"
 	@echo "... srcs/cores/exit.s"
@@ -7347,18 +7596,9 @@ help:
 	@echo "... srcs/env/remove_environment.o"
 	@echo "... srcs/env/remove_environment.i"
 	@echo "... srcs/env/remove_environment.s"
-	@echo "... srcs/env/usage_environment.o"
-	@echo "... srcs/env/usage_environment.i"
-	@echo "... srcs/env/usage_environment.s"
 	@echo "... srcs/error_function/bip.o"
 	@echo "... srcs/error_function/bip.i"
 	@echo "... srcs/error_function/bip.s"
-	@echo "... srcs/error_function/error_env.o"
-	@echo "... srcs/error_function/error_env.i"
-	@echo "... srcs/error_function/error_env.s"
-	@echo "... srcs/error_function/puterror.o"
-	@echo "... srcs/error_function/puterror.i"
-	@echo "... srcs/error_function/puterror.s"
 	@echo "... srcs/error_function/usage_builtins.o"
 	@echo "... srcs/error_function/usage_builtins.i"
 	@echo "... srcs/error_function/usage_builtins.s"
@@ -7383,6 +7623,9 @@ help:
 	@echo "... srcs/execution/builtins_functions/builtin_kill.o"
 	@echo "... srcs/execution/builtins_functions/builtin_kill.i"
 	@echo "... srcs/execution/builtins_functions/builtin_kill.s"
+	@echo "... srcs/execution/builtins_functions/builtin_suspend.o"
+	@echo "... srcs/execution/builtins_functions/builtin_suspend.i"
+	@echo "... srcs/execution/builtins_functions/builtin_suspend.s"
 	@echo "... srcs/execution/builtins_functions/builtin_switch.o"
 	@echo "... srcs/execution/builtins_functions/builtin_switch.i"
 	@echo "... srcs/execution/builtins_functions/builtin_switch.s"
@@ -7413,6 +7656,30 @@ help:
 	@echo "... srcs/execution/check_if_builtins.o"
 	@echo "... srcs/execution/check_if_builtins.i"
 	@echo "... srcs/execution/check_if_builtins.s"
+	@echo "... srcs/execution/executing_function/op_pipeline.o"
+	@echo "... srcs/execution/executing_function/op_pipeline.i"
+	@echo "... srcs/execution/executing_function/op_pipeline.s"
+	@echo "... srcs/execution/executing_function/op_separator.o"
+	@echo "... srcs/execution/executing_function/op_separator.i"
+	@echo "... srcs/execution/executing_function/op_separator.s"
+	@echo "... srcs/execution/executing_function/simple_execution.o"
+	@echo "... srcs/execution/executing_function/simple_execution.i"
+	@echo "... srcs/execution/executing_function/simple_execution.s"
+	@echo "... srcs/execution/executing_node.o"
+	@echo "... srcs/execution/executing_node.i"
+	@echo "... srcs/execution/executing_node.s"
+	@echo "... srcs/execution/my_fork.o"
+	@echo "... srcs/execution/my_fork.i"
+	@echo "... srcs/execution/my_fork.s"
+	@echo "... srcs/execution/tools/get_real_env.o"
+	@echo "... srcs/execution/tools/get_real_env.i"
+	@echo "... srcs/execution/tools/get_real_env.s"
+	@echo "... srcs/execution/tools/manage_pipe.o"
+	@echo "... srcs/execution/tools/manage_pipe.i"
+	@echo "... srcs/execution/tools/manage_pipe.s"
+	@echo "... srcs/execution/tools/new_jobs.o"
+	@echo "... srcs/execution/tools/new_jobs.i"
+	@echo "... srcs/execution/tools/new_jobs.s"
 	@echo "... srcs/hash/built_in_hash.o"
 	@echo "... srcs/hash/built_in_hash.i"
 	@echo "... srcs/hash/built_in_hash.s"
@@ -7671,6 +7938,9 @@ help:
 	@echo "... srcs/read/other_read/prompt.o"
 	@echo "... srcs/read/other_read/prompt.i"
 	@echo "... srcs/read/other_read/prompt.s"
+	@echo "... srcs/read/other_read/read_gates.o"
+	@echo "... srcs/read/other_read/read_gates.i"
+	@echo "... srcs/read/other_read/read_gates.s"
 	@echo "... srcs/read/other_read/read_stdin.o"
 	@echo "... srcs/read/other_read/read_stdin.i"
 	@echo "... srcs/read/other_read/read_stdin.s"

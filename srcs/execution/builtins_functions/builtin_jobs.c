@@ -1,6 +1,14 @@
-//
-// Created by Alexandre ROULIN on 10/12/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   builtin_jobs.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/30 15:22:34 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/30 15:22:36 by aroulin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
@@ -15,7 +23,7 @@
 **		List process IDs in addition to the normal information.
 */
 
-int			print_process(t_process process, int info, int parent, int index)
+int				print_process(t_process process, int info, int parent, int index)
 {
 	if (process.pid == process.pgid)
 		ft_printf("[%d]\t", index + 1);
@@ -55,30 +63,30 @@ uint8_t			print_jobs(t_jobs *jobs, int opt)
 	return (0);
 }
 
-uint8_t			builtin_jobs(char **command, char **env)
+uint8_t			builtin_jobs(t_node *node, int info)
 {
 	int					table;
 	int					opt;
 	int					index;
 
-	(void)env;
+	(void)info;
 	opt = 0;
 	table = 1;
-	if (command[1] && ft_strcmp(command[1], HELP) == 0)
+	if (node->content->command[1] && ft_strcmp(node->content->command[1], HELP) == 0)
 		return (var_return(usage_jobs()));
-	while (command[table] && command[table][0] == '-')
+	while (node->content->command[table] && node->content->command[table][0] == '-')
 	{
 		index = 0;
-		while (command[table][index])
+		while (node->content->command[table][index])
 		{
-			opt += (command[table][index] == 'p' && !(opt & 1)) ? 1 : 0;
-			opt += (command[table][index] == 'r' && !(opt & 2)) ? 2 : 0;
-			opt += (command[table][index] == 's' && !(opt & 4)) ? 4 : 0;
-			opt += (command[table][index] == 'l' && !(opt & 8)) ? 8 : 0;
+			opt += (node->content->command[table][index] == 'p' && !(opt & 1)) ? 1 : 0;
+			opt += (node->content->command[table][index] == 'r' && !(opt & 2)) ? 2 : 0;
+			opt += (node->content->command[table][index] == 's' && !(opt & 4)) ? 4 : 0;
+			opt += (node->content->command[table][index] == 'l' && !(opt & 8)) ? 8 : 0;
 			index++;
 		}
 		table++;
 	}
-	log_trace("Jobs [%d]",opt);
+	log_trace("Jobs [%d]", opt);
 	return (var_return(print_jobs(jobs_table(), opt)));
 }

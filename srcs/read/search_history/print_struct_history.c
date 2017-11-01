@@ -12,21 +12,21 @@
 
 #include <sh.h>
 
-void         print_in_search_history(t_read *read_std)
+void			print_in_search_history(t_read *read_std)
 {
-	t_cmd       *cmd;
+	t_cmd			*cmd;
 
 	tputs(tgetstr(CURSOR_INVIS, 0), STDIN_FILENO, &my_put);
 	cmd = first_cmd(read_std->hist_search->cmd, 1);
 	tputs(tgetstr(CLEAR_FROM_CUR, 0), STDIN_FILENO, &my_put);
 	read_std->hist_search->cur = prompt_history(last_resultat(-42));
 	print_list(1, cmd, read_std->hist_search->cmd, &(read_std->hist_search->cur));
-    CHAR_FD('_', 2);
+	CHAR_FD('_', 2);
 	restore_cursor_(read_std->hist_search->cur);
-    tputs(tgetstr(CURSOR_BACK, 0), STDIN_FILENO, &my_put);
+	tputs(tgetstr(CURSOR_BACK, 0), STDIN_FILENO, &my_put);
 }
 
-int		print_struct_history(t_read **read_std)
+int				print_struct_history(t_read **read_std)
 {
 	if (!(*read_std)->history_search)
 		new_line_after_bloc(read_std, 2);

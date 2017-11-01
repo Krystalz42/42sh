@@ -1,44 +1,90 @@
-//
-// Created by Alexandre ROULIN on 10/27/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   builtin_env.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/30 15:21:59 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/30 15:22:00 by aroulin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-uint8_t			fct(char **command, char **env)
+uint8_t			fct(t_node *node, int info)
 {
-	log_trace("%s", *command);
-	if (*command)
-		check_if_builtin(command, env);
+	if (*node->content->command)
+	{
+		node->content->env_option = 1;
+		simple_execution(node, info);
+	}
 	else
-		ft_putstrtab(env, 10);
+	{
+		node->content->env_option = 1;
+		ft_putstrtab(node->content->env, 10);
+	}
 	return (1);
 }
 
-uint8_t			builtin_env(char **command, char **env)
+int			free_command(char ***command, int ret)
+{
+	char			**t;
+	int				index;
+
+	t = (char **)ft_memalloc(sizeof(char *) * (ft_tablen(*command) - ret + 1));
+	index = 0;
+	while (index < ret)
+	{
+		ft_memdel((void **)&(*command)[index]);
+		index++;
+	}
+	index = 0;
+	while ((*command)[ret + index])
+	{
+		t[index] = (*command)[ret + index];
+		index++;
+	}
+	ft_memdel((void **)&(*command));
+	*command = t;
+	return(1);
+}
+
+uint8_t			check_option(t_node *node, int info, int opt)
+{
+	int			ret;
+	char		**env;
+
+	node->content->env = node->content->env_option ? node->content->env : env_table(NULL, ENV_REC);
+	env = node->content->env_option ? node->content->env : NULL;
+	log_fatal("%d", opt);
+	if (opt == 'i' && (ret = start_from_null(node->content->command, &node->content->env)) >= 0)
+		free_command(&(node->content->command), ret) && fct(node, info);
+	if (opt == 'u' && (ret = start_from_less(node->content->command, &node->content->env)) >= 0)
+		free_command(&(node->content->command), ret) && fct(node, info);
+	if (opt == 0 && (ret = start_from_full(node->content->command, &node->content->env)) >= 0)
+		free_command(&(node->content->command), ret) && fct(node, info);
+	ft_memdel_tab(&env);
+	return (0);
+}
+
+uint8_t			builtin_env(t_node *node, int info)
 {
 	int				index;
 	int				opt;
 	int				table;
-	int				ret;
 
 	table = 0;
 	opt = 0;
-	if (ft_strcmp(command[1], HELP) == 0)
+	if (ft_strcmp(node->content->command[1], HELP) == 0)
 		return (var_return(usage_env()));
-	while (command[++table] && command[table][0] == '-')
+	while (node->content->command[++table] && node->content->command[table][0] == '-')
 	{
 		index = -1;
-		while (command[table][++index])
-			if (command[table][index] == 'u' || command[table][index] == 'i')
-				opt = command[table][index];
+		while (node->content->command[table][++index])
+			if (node->content->command[table][index] == 'u' || node->content->command[table][index] == 'i')
+				opt = node->content->command[table][index];
 	}
-	if (opt == 'i' && (ret = start_from_null(command + table, &env)) != -1)
-		fct(command + table + ret, env);
-	if (opt == 'u' && (ret = start_from_less(command + table, &env)) != -1)
-		fct(command + table + ret, env);
-	if ((opt == 0 && (ret = start_from_full(command + table, &env)) != -1))
-		fct(command + table + ret, env);
-	if (ret != -1)
-		ft_memdel_tab(&env);
-	return (0);
+	free_command(&node->content->command, table);
+	return (check_option(node, info, opt));
 }

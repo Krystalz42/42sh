@@ -48,7 +48,7 @@ void			commands(t_parsing **node)
 	{
 		if (index % 2 == 0)
 		{
-			err = chk(temp->str);
+			err = chk(temp->input);
 			if (err == false)
 			{
 				error(node);

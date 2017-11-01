@@ -48,10 +48,10 @@ void			operaters(t_parsing **node)
 	{
 		if (index % 2 == 1)
 		{
-			err = chk(temp->str);
+			err = chk(temp->input);
 			if (err == false)
 			{
-				error(temp->str, node);
+				error(temp->input, node);
 				return;
 			}
 		}

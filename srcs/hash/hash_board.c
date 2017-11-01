@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/23 19:50:39 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/23 19:50:47 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/10/30 17:49:16 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_hash		**hash_board(void)
 	return (h_board);
 }
 
-char *search_path(char *binary)
+char		*search_path(char *binary)
 {
 	unsigned int		index;
 	t_hash				**hash_tab;
@@ -33,7 +33,7 @@ char *search_path(char *binary)
 			if (ft_strequ(binary, tmp->binary))
 			{
 				tmp->times += 1;
-				return (tmp->path);
+				return (ft_strdup(tmp->path));
 			}
 			tmp = tmp->next;
 		}

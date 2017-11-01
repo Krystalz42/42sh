@@ -24,7 +24,7 @@ static void		remove_last(t_parsing *node)
 	node = node->prev;
 	node->next = NULL;
 
-	ft_memdel((void**)&memory->str);
+	ft_memdel((void**)&memory->input);
 	ft_memdel((void**)&memory);
 }
 
@@ -41,9 +41,9 @@ void			last(t_parsing **node)
 	{
 		ptrnext(&temp, lstlen(temp));
 
-		if (temp->str[0] == ';')
+		if (temp->input[0] == ';')
 			remove_last(temp);
-		else if (chk_operaters(*temp->str) == true)
-			error(temp->str, node);
+		else if (chk_operaters(*temp->input) == true)
+			error(temp->input, node);
 	}
 }

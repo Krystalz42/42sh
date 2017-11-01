@@ -28,7 +28,7 @@ static char		**cpy_table(char **env)
 	return (NULL);
 }
 
-char 		**env_table(char **env, int flags)
+char			**env_table(char **env, int flags)
 {
 	static char		**save;
 
@@ -43,23 +43,29 @@ char 		**env_table(char **env, int flags)
 	return (NULL);
 }
 
-void		init_env(void)
+void			init_env(void)
 {
 	extern char		**environ;
 	int				i;
-	char 			**env;
+	char			**env;
+	int				shlvl;
+	char			*temp;
 
-	i = -1;
 	env = NULL;
 	if (environ)
 	{
-		log_trace("Init env !");
-		while (environ[++i])
-			;
-		env = (char **)ft_memalloc(sizeof(char *) * (i  + 1));
+		env = (char **)ft_memalloc(sizeof(char *) * (ft_tablen(environ) + 1));
 		i = -1;
 		while (environ[++i])
-			env[i] = ft_strdup(environ[i]);
+			if (ft_strncmp(environ[i], "SHLVL=", 6) == 0)
+			{
+				shlvl = ft_atoi(environ[i] + 6);
+				temp = ft_itoa(shlvl + 1);
+				env[i] = ft_strjoin("SHLVL=", temp);
+				ft_memdel((void **)&temp);
+			}
+			else
+				env[i] = ft_strdup(environ[i]);
 		env[i] = NULL;
 	}
 	env_table(env, ENV_INIT);

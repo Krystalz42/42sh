@@ -54,6 +54,7 @@ SRCS = \
 	   cores/exit.c											\
 	   read/other_read/read_stdin.c							\
 	   read/other_read/finish_read_std.c					\
+	   read/other_read/read_gates.c							\
 	   read/other_read/print_struct.c						\
 	   read/other_read/my_put.c								\
 	   read/other_read/first_cmd.c							\
@@ -132,7 +133,16 @@ SRCS = \
 	   history/copy_cmd.c									\
 	   signal/ft_signal.c									\
 	   execution/check_if_builtins.c						\
+	   execution/executing_node.c							\
+	   execution/my_fork.c									\
+	   execution/tools/get_real_env.c						\
+	   execution/tools/manage_pipe.c						\
+	   execution/tools/new_jobs.c							\
+	   execution/executing_function/op_execution.c			\
+	   execution/executing_function/op_pipeline.c			\
+	   execution/executing_function/op_separator.c			\
 	   execution/builtins_functions/builtin_jobs.c			\
+	   execution/builtins_functions/builtin_suspend.c		\
 	   execution/builtins_functions/builtin_kill.c			\
 	   execution/builtins_functions/builtin_switch.c		\
 	   execution/builtins_functions/builtin_history.c		\
@@ -163,10 +173,10 @@ SRCS = \
 	   parsing/redirections.c								\
 	   parsing/stds.c										\
 	   parsing/tools.c										\
+	   binary_tree/binary_tree.c							\
 	   env/add_environment.c								\
 	   env/remove_environment.c								\
 	   env/init_env.c										\
-	   env/usage_environment.c								\
 	   env/my_getenv.c										\
 	   env/initialise_environment.c							\
 	   term/init_fd.c										\
@@ -178,9 +188,7 @@ SRCS = \
 	   memdel_struct/memdel_search_history.c				\
 	   memdel_struct/memdel_read.c							\
 	   error_function/bip.c									\
-	   error_function/puterror.c							\
 	   error_function/usage_builtins.c						\
-	   error_function/error_env.c							\
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #

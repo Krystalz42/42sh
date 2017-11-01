@@ -12,39 +12,23 @@
 
 #include <sh.h>
 
-void test_cmd();
-
 int			main(int ac, char **av)
 {
 	(void)ac;
 	(void)av;
-	init_env();
 	logger_init(7, "log");
+	init_env();
 	init_term();
 	write_history_in_sh(get_str_from_history());
 	init_signal();
 	init_pwd(env_table(NULL, ENV_REC));
-	test_cmd();
 	shell();
 	b_write_history_in_file(get_str_from_history());
 	logger_close();
 	return (0);
 }
 
-t_process			*my_fork(t_process *process, pid_t parent, bool foreground, char *command)
-{
-	process->pid = fork();
-	process->running = true;
-	process->status = -1;
-	process->foreground = foreground;
-	process->command = ft_strdup(command);
-	log_trace("%s setpgid(%d, %d)", process->pid ? "Daddy" : "Fiston",process->pid, parent ? parent : process->pid);
-	setpgid(process->pid, parent ? parent : process->pid);
-	process->pgid = getpgid(process->pid);
-	return (process);
-}
-
-
+/*
 void my_execute(char **command, char **env, bool foreground)
 {
 	t_jobs		*jobs;
@@ -66,58 +50,58 @@ void my_execute(char **command, char **env, bool foreground)
 	}
 }
 
-//void fg(int i, t_process *process, int fildes[2], bool foreground)
-//{
-//	t_jobs		*jobs;
-//	static int			index;
-//	pid_t pgid;
-//
-//	jobs = jobs_table();
-//	pipe(fildes);
-//
-//	if (process == NULL)
-//	{
-//		index = get_jobs_index(-1);
-//		process = my_fork(jobs[index].process, 0, foreground, 0);
-//	}
-//	else
-//	{
-//		pgid = process->pgid;
-//		(process) += 1;
-//		i++;
-//		process = my_fork(process, pgid, foreground, 0);
-//	}
-//	if (process->pid)
-//	{
-//		//[READ_PIPE]
-//		if (i == 5)
-//		{
-//			log_warn("Finish PIPELINE [C{1}:C{0}] %d", i);
-//			pjt(jobs[index], index);
-//		}
-//		else
-//		{
-//			log_warn("Daddy[TEST PIPELINE > %i Execution qui ecrit [C{0}:D{1,1}:C{1}]", i + 1);
-//			fg(i, process, fildes, foreground);
-//		}
-////		execute_ast(ast->left);
-//	}
-//	else
-//	{
-//		//execution droite de l'abre qui lis tout le temps
-//		//[WRITE_PIPE]
-//		//execute_ast(ast->right);
-//		log_warn("Child[TEST PIPELINE > %i Execution qui lis [C{1}:D{0,0}:C{0}]", i);
-//		exit(EXIT_SUCCESS);
-//	}
-//}
+void fg(int i, t_process *process, int fildes[2], bool foreground)
+{
+	t_jobs		*jobs;
+	static int			index;
+	pid_t pgid;
+
+	jobs = jobs_table();
+	pipe(fildes);
+
+	if (process == NULL)
+	{
+		index = get_jobs_index(-1);
+		process = my_fork(jobs[index].process, 0, foreground, 0);
+	}
+	else
+	{
+		pgid = process->pgid;
+		(process) += 1;
+		i++;
+		process = my_fork(process, pgid, foreground, 0);
+	}
+	if (process->pid)
+	{
+		//[READ_PIPE]
+		if (i == 5)
+		{
+			log_warn("Finish PIPELINE [C{1}:C{0}] %d", i);
+			pjt(jobs[index], index);
+		}
+		else
+		{
+			log_warn("Daddy[TEST PIPELINE > %i Execution qui ecrit [C{0}:D{1,1}:C{1}]", i + 1);
+			fg(i, process, fildes, foreground);
+		}
+		execute_ast(ast->left);
+	}
+	else
+	{
+		//execution droite de l'abre qui lis tout le temps
+		//[WRITE_PIPE]
+		//execute_ast(ast->right);
+		log_warn("Child[TEST PIPELINE > %i Execution qui lis [C{1}:D{0,0}:C{0}]", i);
+		exit(EXIT_SUCCESS);
+	}
+}
 
 void my_execute_pipe(char **command, char **command1, bool foreground)
 {
 	t_jobs		*jobs;
 	int			index;
 	int		fildes[2];
-
+//
 	jobs = jobs_table();
 	index = get_jobs_index(-1);
 	pipe(fildes);
@@ -180,18 +164,20 @@ void test_cmd()
 	(void)emacs;
 	(void)cat;
 	(void)lsl;
-//	int i = 1;
+	int i = 1;
 	log_success("Mon PID [%d] && Mon PPID [%d] && Mon PGID [%d]", getpid(), getppid(), getpgid(getpid()));
-//	while (i)
-//	{
+	while (i)
+	{
 		read_stdin(DEFAULT);
+		my_execute(my_shell, env_table(NULL, ENV_REC), true);
+		read_stdin(DEFAULT);
+//		builtin_foreground((char *[]){"fg", NULL}, NULL); // fg
 //		builtin_env(env, env_table(NULL, ENV_REC));
 //		read_stdin(DEFAULT);
-		my_execute_pipe(lsl, cat, true); // ls -lR | cat -e
+//		my_execute_pipe(lsl, cat, true); // ls -lR | cat -e
 //		read_stdin(DEFAULT);
 //		builtin_jobs((char *[]){"jobs", "-ls", NULL},NULL); // jobs -ls
 //		read_stdin(DEFAULT);
-//		builtin_foreground((char *[]){"fg", NULL}, NULL); // fg
 //		read_stdin(DEFAULT);
 //		my_execute(cat, NULL, false); // cat -e &
 //		read_stdin(DEFAULT);
@@ -220,5 +206,6 @@ void test_cmd()
 //		read_stdin(DEFAULT);
 //		read_stdin(DEFAULT);
 //
-//		}
+		}
 }
+*/

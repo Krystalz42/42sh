@@ -79,29 +79,3 @@ signed int			search_in_tab(char **data, char *var)
 	}
 	return (-1);
 }
-
-/*
-int		main(int ac, char **av, char **env)
-{
-  char		**e;
-  char		**tab;
-
-  tab = malloc(1000);
-  tab[0] = ft_strdup("echo");
-  //tab[1] = ft_strdup(av[1]);
-  //tab[] = ft_strdup("");
-  tab[1] = 0;
-  if (!(e = env_cpy(env)))
-    return (1);
-  e = init_pwd(e);
-  //ft_aff_tab(e, "\n");
-  ft_echo(av, e);
-  ft_echo(av, e);
-  ft_echo(av, e);
-  //e = refresh_varenv(e);
-  //ft_putendl("\n------------------------\n\n");
-  //ft_aff_tab(e, "\n");
-  while (1)
-	  ;
-  return (0);
-  }*/

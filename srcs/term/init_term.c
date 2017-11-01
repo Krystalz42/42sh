@@ -23,25 +23,27 @@ int		init_our_term(struct termios *term)
 
 int		init_term(void)
 {
-	static struct termios old_term;
-	static struct termios our_term;
+	static struct termios	old_term;
+	static struct termios	our_term;
+	int						ret;
 
+	ret = 0;
 	if (!my_getenv("TERM="))
 		add_environment("TERM=vt100");
-
-	if (tgetent(NULL, my_getenv("TERM=")) == ERR)
-		puterror("tgetent");
-
+	if ((tgetent(NULL, my_getenv("TERM="))) == ERR)
+		ret += 1;
 	if (!(tcgetattr(STDIN_FILENO, &old_term)))
 		keep_term_struct(SAVE_OLD, &old_term);
 	else
-		log_fatal("OUR_TERM BUG");
+		ret += 2;
 	if (!(tcgetattr(0, &our_term)) && init_our_term(&our_term))
 		keep_term_struct(SAVE_OUR, &our_term);
 	else
+		ret += 4;
+	if (ret)
 	{
-		perror("TC");
-		log_fatal("OLD TERM BUG");
+		error_builtin("termios : ", "can't be initialize\n", NULL);
+		exit(255);
 	}
 	return (0);
 }

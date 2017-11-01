@@ -12,16 +12,20 @@
 
 #include <sh.h>
 
-void		reset_process(t_process *to_kill)
+void		reset_process(t_jobs *jobs)
 {
-	int 	index;
-
-	index = 0;
-	update_jobs(to_kill);
-	while (to_kill[index].pid)
+	t_process		*to_kill;
+	if (jobs && jobs->process)
 	{
-		ft_memdel((void **)&(to_kill[index].command));
-		to_kill[index] = (t_process){0, 0, 0, 0, 0, NULL};
-		index++;
+		while (jobs->process && jobs->process->prev)
+			jobs->process = jobs->process->prev;
+		while (jobs->process)
+		{
+			to_kill = jobs->process;
+			jobs->process = jobs->process->next;
+			ft_memdel((void **)&to_kill->command);
+			ft_memdel((void **)&to_kill);
+		}
 	}
+	jobs->process = NULL;
 }

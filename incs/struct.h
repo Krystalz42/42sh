@@ -53,6 +53,7 @@ typedef struct		s_mouse
 typedef struct		s_cmd
 {
 	char			c;
+	int				value;
 	struct s_cmd	*next;
 	struct s_cmd	*prev;
 }					t_cmd;
@@ -172,13 +173,39 @@ typedef struct		s_cmp
 	unsigned long	key;
 	int				(*function)(struct s_read **read_std, unsigned long buff);
 }					t_cmp;
+
+/*
+**			STRUCT FOR PARSING
+*/
+
+typedef struct				s_parsing
+{
+	char					*input;
+	char					**command;
+	char					**env;
+	int 					env_option;
+	int						value;
+	int						priority;
+	struct s_parsing		*prev;
+	struct s_parsing		*next;
+}							t_parsing;
+
+
+typedef struct 				s_node
+{
+	t_parsing				*content;
+	struct s_node			*right;
+	struct s_node			*left;
+}							t_node;
+
 /*
 **			STRUCT FOR BUILTINS
 */
+
 typedef struct		s_builtin
 {
 	const char		*str;
-	uint8_t			(*function)(char **, char **);
+	uint8_t			(*function)(t_node *node, int info);
 }					t_builtin;
 /*
 **			STRUCT FOR UNDO (OUTSTANDING)
@@ -199,29 +226,21 @@ typedef struct		s_outstanding
 
 typedef struct 		s_process
 {
-	pid_t 			pid;
-	pid_t 			pgid;
-	int				status;
-	int				foreground;
-	int				running;
-	char			*command;
+	pid_t 				pid;
+	pid_t 				pgid;
+	int					status;
+	int					foreground;
+	int					running;
+	char				*command;
+	struct s_process	*next;
+	struct s_process	*prev;
 }					t_process;
 
 typedef struct 		s_jobs
 {
-	t_process		process[256];
+	int				index;
+	t_process		*process;
 }					t_jobs;
-
-/*
-**			STRUCT FOR PARSING
-*/
-
-typedef struct				s_parsing
-{
-	char					*str;
-	struct s_parsing		*prev;
-	struct s_parsing		*next;
-}							t_parsing;
 
 /*
 **			STRUCT FOR STATUS SIGNAL
@@ -232,5 +251,13 @@ typedef struct 				s_signal
 	int 					signal;
 	char					*status;
 }							t_signal;
+
+
+typedef struct 				s_exec
+{
+	short					value;
+	uint8_t					(*function)(t_node *node, int info);
+
+}							t_exec;
 
 #endif

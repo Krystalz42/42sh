@@ -1,6 +1,14 @@
-//
-// Created by Alexandre ROULIN on 10/13/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   builtin_hash.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/30 15:22:12 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/30 15:22:14 by aroulin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
@@ -9,22 +17,21 @@
 **	-r	:	reset hash table
 */
 
-
-uint8_t			builtin_hash(char **command, char **env)
+uint8_t			builtin_hash(t_node *node, int info)
 {
 	int		index;
 	int		option;
 	int		c;
 
-	(void)env;
+	(void)info;
 	option = 0;
 	index = 0;
-	if (command[1])
-		if (ft_strcmp(command[1], HELP) == 0)
+	if (node->content->command[1])
+		if (ft_strcmp(node->content->command[1], HELP) == 0)
 			return (usage_hash());
-	while (command[++index] && (command[index][0]) == '-' && (c = -1))
-		while (command[index][++c])
-			if (command[index][c] == 'r')
+	while (node->content->command[++index] && (node->content->command[index][0]) == '-' && (c = -1))
+		while (node->content->command[index][++c])
+			if (node->content->command[index][c] == 'r')
 				option = 1;
 	return (option ? hash_reset() : hash_print(STDOUT_FILENO));
 }

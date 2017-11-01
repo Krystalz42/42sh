@@ -8,17 +8,17 @@
 *************** PRIVATE ********************************************************
 */
 
-static size_t	chk(char *str)
+static size_t	chk(char *input)
 {
 	size_t		occurence;
 	size_t		length;
 
 	occurence = 0;
-	length = ft_strlen(str) - 1;
+	length = ft_strlen(input) - 1;
 
-	while (str[length])
+	while (input[length])
 	{
-		if (ft_isdigit(str[length]) == 1)
+		if (ft_isdigit(input[length]) == 1)
 			occurence++;
 		else
 			break ;
@@ -57,10 +57,10 @@ void			stds(t_parsing *node)
 	{
 		old = node;
 		node = node->next;
-		if (node && node->str[0] == '>')
+		if (node && node->input[0] == '>')
 		{
-			nb = chk(old->str);
-			nb > 0 ? do_reconversion(&old->str, &node->str, nb) : 0;
+			nb = chk(old->input);
+			nb > 0 ? do_reconversion(&old->input, &node->input, nb) : 0;
 		}
 	}
 }

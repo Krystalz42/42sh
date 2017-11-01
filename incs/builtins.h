@@ -13,8 +13,6 @@
 #ifndef BUILTINS_H
 # define BUILTINS_H
 
-# define RETVAR(x) return(var_return(x));
-
 //Linux
 //typedef int uint8_t;
 
@@ -32,7 +30,7 @@ t_bdata			*b_data();
 /*
 ** CD
 */
-uint8_t			ft_cd(char **command, char **env);
+uint8_t			ft_cd(t_node *node, int info);
 signed int		search_in_tab(char **data, char *var);
 char			**refresh_varenv(char **env);
 char			*ft_path(char *var, unsigned int begin);
@@ -42,15 +40,15 @@ char			**init_pwd(char **env);
 /*
 ** ECHO
 */
-uint8_t			ft_echo(char **command, char **env);
+uint8_t			ft_echo(t_node *node, int info);
 
 /*
 ** ENV, SETENV, UNSETENV
 */
-uint8_t			ft_env(char **command, char **env);
-uint8_t			ft_setenv(char **command, char **env);
+uint8_t			ft_env(t_node *node, int info);
+uint8_t			ft_setenv(t_node *node, int info);
 unsigned int	search_char(char *str, char c);
-uint8_t			ft_unsetenv(char **command, char **env);
+uint8_t			ft_unsetenv(t_node *node, int info);
 
 /*
 ** UTILS

@@ -27,20 +27,17 @@ int					convert_to_hist(char *buff)
 		read_std->history = 1;
 	}
 	while (buff[++i])
-		if (ft_isprint(buff[i]) && ++cmd_len)
+		if (ft_isprint(buff[i]) && ++cmd_len < MAX_INPUT)
 			key_print_fct(read_std->cmd, buff[i]);
-	if (check_cmd(&read_std) && ++cmd_len)
-	{
+	if (check_cmd(&read_std))
 		key_print_fct(read_std->cmd, 10);
-		return (0);
-	}
 	else
 	{
-		cmd_len = 0;
 		make_list_hist(read_std);
 		read_std = NULL;
 		return (1);
 	}
+	return (0);
 }
 
 uint8_t				write_history_in_sh(char *pathname)

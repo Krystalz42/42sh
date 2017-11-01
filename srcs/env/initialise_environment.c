@@ -1,6 +1,14 @@
-//
-// Created by Alexandre ROULIN on 10/14/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   initialise_environment.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/30 15:16:47 by aroulin           #+#    #+#             */
+/*   Updated: 2017/10/30 15:16:48 by aroulin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
@@ -47,7 +55,7 @@ int					start_from_full(char **command, char ***env)
 	index_env = -1;
 	while ((*env)[++index_env])
 		if (check_from_local_env(cpy, (*env)[index_env]) == 0)
-		cpy[++index_cpy] = ft_strdup((*env)[index_env]);
+			cpy[++index_cpy] = ft_strdup((*env)[index_env]);
 	cpy[++index_cpy] = NULL;
 	(*env) = cpy;
 	return (index);
@@ -81,6 +89,7 @@ int					start_from_less(char **command, char ***env)
 	error_builtin(ENV, NO_ARGS_U, NULL);
 	return (-1);
 }
+
 int					start_from_null(char **command, char ***env)
 {
 	int			index;
@@ -94,7 +103,7 @@ int					start_from_null(char **command, char ***env)
 	index_cpy = 0;
 	while (command[index] && ft_chrchar(command[index], '='))
 	{
-		log_trace("%d",check_from_local_env((*env), command[index]));
+		log_trace("%d", check_from_local_env((*env), command[index]));
 		if (check_from_local_env((*env), command[index]) == 0)
 		{
 			(*env)[index_cpy] = ft_strdup(command[index]);

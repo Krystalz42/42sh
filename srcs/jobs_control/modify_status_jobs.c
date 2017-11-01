@@ -14,24 +14,20 @@
 
 void		modify_runing(t_process *process, bool change)
 {
-	int			index;
 
-	index = 0;
-	while (process[index].pid)
+	while (process)
 	{
-		process[index].running = change;
-		index++;
+		process->running = change;
+		process = process->next;
 	}
 }
 
 void		modify_foreground(t_process *process, bool change)
 {
-	int			index;
 
-	index = 0;
-	while (process[index].pid)
+	while (process)
 	{
-		process[index].foreground = change;
-		index++;
+		process->foreground = change;
+		process = process->next;
 	}
 }

@@ -8,11 +8,11 @@
 *************** PRIVATE ********************************************************
 */
 
-size_t			get_length(const char *str, unsigned int index, char c)
+size_t			get_length(const char *input, unsigned int index, char c)
 {
-	while (str[index])
+	while (input[index])
 	{
-		if (str[index] != c)
+		if (input[index] != c)
 			break ;
 		index++;
 	}
@@ -43,9 +43,9 @@ static char		*get_rest(t_parsing *node)
 	rest = NULL;
 	if (node)
 	{
-		length = get_length(node->str, 0, ' ');
-		temp = ft_strsplit(node->str, ' ');
-		rest = temp[1] ? node->str + (length + ft_strlen(temp[0])) : NULL;
+		length = get_length(node->input, 0, ' ');
+		temp = ft_strsplit(node->input, ' ');
+		rest = temp[1] ? node->input + (length + ft_strlen(temp[0])) : NULL;
 		arraydel(&temp);
 	}
 	return (rest);
@@ -57,18 +57,18 @@ static void		remove_rest(t_parsing *node, char *rest)
 
 	if (node)
 	{
-		new = ft_strsub(node->str, 0, ft_strlen(node->str) - ft_strlen(rest));
-		ft_memdel((void**)&node->str);
-		node->str = new;
+		new = ft_strsub(node->input, 0, ft_strlen(node->input) - ft_strlen(rest));
+		ft_memdel((void**)&node->input);
+		node->input = new;
 	}
 }
 
-static void		add_rest(char **str, char **argv)
+static void		add_rest(char **input, char **argv)
 {
 	char    *memory;
 
-	memory = *str;
-	*str = ft_strjoin(*str, *argv);
+	memory = *input;
+	*input = ft_strjoin(*input, *argv);
 	ft_memdel((void**)&memory);
 	ft_memdel((void**)argv);
 }
@@ -100,12 +100,12 @@ void			redirections(t_parsing **node)
 	ptrnext(&temp, lstlen(temp));
 	while (temp)
 	{
-		if (*temp->str == '>' || ft_isdigit(*temp->str) == 1)
+		if (*temp->input == '>' || ft_isdigit(*temp->input) == 1)
 			get_argv(temp->next, &argv);
-		else if (chk(*temp->str) == true)
-			add_rest(&temp->next->str, &argv);
+		else if (chk(*temp->input) == true)
+			add_rest(&temp->next->input, &argv);
 		else if (!temp->prev)
-			add_rest(&temp->str, &argv);
+			add_rest(&temp->input, &argv);
 		temp = temp->prev;
 	}
 }

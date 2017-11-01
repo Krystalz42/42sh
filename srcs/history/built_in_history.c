@@ -22,7 +22,8 @@
 **	[-a]            Ecrit l'historique dans le fichier pathname
 **                  (b_write_history_in_file)
 **
-**  [-r]            Ecrit le contenu de (char *pathname) dans l'historique du 42sh
+**  [-r]            Ecrit le contenu de (char *pathname) dans
+**														l'historique du 42sh
 **                  (write_history_in_sh)
 **
 **  [-w]            Ecrit l'historique dans le pathname
@@ -30,7 +31,7 @@
 **  [-s]            Ajoute les args dans l'historique A FAIRE
 */
 
-uint8_t		b_write_history(void)
+uint8_t			b_write_history(void)
 {
 	t_hist	*hist;
 	int		index;
@@ -41,15 +42,15 @@ uint8_t		b_write_history(void)
 	while (hist)
 	{
 		ft_putnbr(++index);
-		CHAR(32);
+		ft_putchar(32);
 		tmp = first_cmd(hist->hist->cmd, 1);
 		while (tmp->c)
 		{
-			CHAR(tmp->c);
+			ft_putchar(tmp->c);
 			tmp = tmp->next;
 		}
 		hist = hist->next;
-		CHAR(10);
+		ft_putchar(10);
 	}
 	return (0);
 }
@@ -76,9 +77,9 @@ uint8_t			b_clear_history(void)
 
 uint8_t			b_delete_history_offset(int offset)
 {
-	t_hist		*hist;
+	t_hist				*hist;
 	static t_hist		*to_kill;
-	int			i;
+	int					i;
 
 	i = 0;
 	hist = set_history_to_last();

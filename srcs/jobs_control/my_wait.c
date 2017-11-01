@@ -4,19 +4,17 @@
 
 #include <sh.h>
 
-
-
-void		print_info_jobs(t_jobs jobs, int index)
+void		print_info_jobs(t_jobs *jobs)
 {
-	int			index_child;
+	t_process *process;
 
-	index_child = 0;
-	ft_printf("[%d] ", index + 1);
-	while (jobs.process[index_child].pid)
+	process = jobs->process;
+	ft_printf("[%d] ", jobs->index);
+	while (process)
 	{
-		ft_putnbr(jobs.process[index_child].pid);
+		ft_putnbr(process->pid);
 		ft_putchar(32);
-		index_child++;
+		process = process->next;
 	}
 	ft_putchar(10);
 }
@@ -27,50 +25,49 @@ void			set_fildes(pid_t pgid)
 	signal(SIGTTOU, SIG_IGN);
 	log_trace("FG Return tcsetpgrp (%d)  of (%d)", tcsetpgrp(STDIN_FILENO, pgid), pgid);
 }
-void			wait_process(t_process *process, int index)
+void			wait_process(t_jobs *jobs)
 {
-	int			ind_c;
+	t_process		*temp;
 
-	(void)index;
-	ind_c = 0;
-	while (process[ind_c].pid)
+	temp = jobs->process;
+	while (temp)
 	{
-		log_error("Wait [%d]", waitpid(process[ind_c].pid, &process[ind_c].status, WUNTRACED));
-		ind_c++;
+		log_error("Wait [%d]", waitpid(temp->pid, &temp->status, WUNTRACED));
+		temp = temp->next;
 	}
-	update_jobs(process);
-	if (terminate_process(process))
-		reset_process(process);
+	update_jobs(jobs->process);
+	if (terminate_process(jobs->process))
+		reset_process(jobs);
 	else
 	{
-		print_status(process, index);
-		modify_runing(process, false);
-		modify_foreground(process, false);
+		print_status(jobs->process, jobs->index);
+		modify_runing(jobs->process, false);
+		modify_foreground(jobs->process, false);
 	}
 }
 
-void		my_wait(int index)
+void		my_wait(t_jobs *jobs)
 {
-	t_jobs		*jobs;
+	t_process *process;
 
-	jobs = jobs_table();
-	if (jobs[index].process->foreground)
+	if (jobs->process)
 	{
-		set_fildes(jobs[index].process->pgid);
-		wait_process(jobs[index].process, index);
-		set_fildes(getpgid(0));
-		pjt(jobs[index], index);
-	}
-	else
-	{
-		print_info_jobs(jobs[index], index);
-		int			ind_c;
-
-		ind_c = 0;
-		while (jobs[index].process[ind_c].pid)
+		if (jobs->process->foreground)
 		{
-			log_error("Wait [%d]",waitpid(jobs[index].process[ind_c].pid, &jobs[index].process[ind_c].status, WNOHANG));
-			ind_c++;
+			set_fildes(jobs->process->pgid);
+			wait_process(jobs);
+			set_fildes(getpgid(0));
+			pjt(jobs);
+		}
+		else
+		{
+			print_info_jobs(jobs);
+			process = jobs->process;
+			while (process)
+			{
+				log_error("Wait [%d]",waitpid(process->pid, &process->status, WNOHANG));
+				process = process->next;
+			}
 		}
 	}
 }
