@@ -4,8 +4,6 @@
 
 #include <sh.h>
 
-
-
 uint8_t					do_execution(t_node *node, int info)
 {
 	t_jobs		*jobs;

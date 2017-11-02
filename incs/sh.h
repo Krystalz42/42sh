@@ -325,6 +325,7 @@ uint8_t						op_ampersand(t_node *node, int info);
 uint8_t						op_and_if(t_node *node, int info);
 uint8_t						op_or_if(t_node *node, int info);
 uint8_t						op_less(t_node *node, int info);
+uint8_t						op_dless(t_node *node, int info);
 
 
 /*

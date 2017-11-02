@@ -13,7 +13,7 @@ t_exec			g_affect_fct[] = {
 		(t_exec){VALUE_OR_IF, &op_or_if},
 		(t_exec){VALUE_PIPELINE, &op_pipeline},
 		(t_exec){VALUE_LESS, &op_less},
-		(t_exec){VALUE_GREAT, NULL},
+		(t_exec){VALUE_GREAT, &op_dless},
 		(t_exec){VALUE_DLESS, NULL},
 		(t_exec){VALUE_DGREAT, NULL},
 		(t_exec){VALUE_LESS_AND, NULL},

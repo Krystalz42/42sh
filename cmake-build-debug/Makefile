@@ -4173,6 +4173,33 @@ srcs/execution/check_if_builtins.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/check_if_builtins.c.s
 .PHONY : srcs/execution/check_if_builtins.c.s
 
+srcs/execution/executing_function/op_ampersand.o: srcs/execution/executing_function/op_ampersand.c.o
+
+.PHONY : srcs/execution/executing_function/op_ampersand.o
+
+# target to build an object file
+srcs/execution/executing_function/op_ampersand.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_ampersand.c.o
+.PHONY : srcs/execution/executing_function/op_ampersand.c.o
+
+srcs/execution/executing_function/op_ampersand.i: srcs/execution/executing_function/op_ampersand.c.i
+
+.PHONY : srcs/execution/executing_function/op_ampersand.i
+
+# target to preprocess a source file
+srcs/execution/executing_function/op_ampersand.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_ampersand.c.i
+.PHONY : srcs/execution/executing_function/op_ampersand.c.i
+
+srcs/execution/executing_function/op_ampersand.s: srcs/execution/executing_function/op_ampersand.c.s
+
+.PHONY : srcs/execution/executing_function/op_ampersand.s
+
+# target to generate assembly for a file
+srcs/execution/executing_function/op_ampersand.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_ampersand.c.s
+.PHONY : srcs/execution/executing_function/op_ampersand.c.s
+
 srcs/execution/executing_function/op_and_if.o: srcs/execution/executing_function/op_and_if.c.o
 
 .PHONY : srcs/execution/executing_function/op_and_if.o
@@ -4199,6 +4226,33 @@ srcs/execution/executing_function/op_and_if.s: srcs/execution/executing_function
 srcs/execution/executing_function/op_and_if.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_and_if.c.s
 .PHONY : srcs/execution/executing_function/op_and_if.c.s
+
+srcs/execution/executing_function/op_dless.o: srcs/execution/executing_function/op_dless.c.o
+
+.PHONY : srcs/execution/executing_function/op_dless.o
+
+# target to build an object file
+srcs/execution/executing_function/op_dless.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_dless.c.o
+.PHONY : srcs/execution/executing_function/op_dless.c.o
+
+srcs/execution/executing_function/op_dless.i: srcs/execution/executing_function/op_dless.c.i
+
+.PHONY : srcs/execution/executing_function/op_dless.i
+
+# target to preprocess a source file
+srcs/execution/executing_function/op_dless.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_dless.c.i
+.PHONY : srcs/execution/executing_function/op_dless.c.i
+
+srcs/execution/executing_function/op_dless.s: srcs/execution/executing_function/op_dless.c.s
+
+.PHONY : srcs/execution/executing_function/op_dless.s
+
+# target to generate assembly for a file
+srcs/execution/executing_function/op_dless.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_dless.c.s
+.PHONY : srcs/execution/executing_function/op_dless.c.s
 
 srcs/execution/executing_function/op_execution.o: srcs/execution/executing_function/op_execution.c.o
 
@@ -4334,33 +4388,6 @@ srcs/execution/executing_function/op_separator.s: srcs/execution/executing_funct
 srcs/execution/executing_function/op_separator.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_separator.c.s
 .PHONY : srcs/execution/executing_function/op_separator.c.s
-
-srcs/execution/executing_function/op_separator_ampersand.o: srcs/execution/executing_function/op_separator_ampersand.c.o
-
-.PHONY : srcs/execution/executing_function/op_separator_ampersand.o
-
-# target to build an object file
-srcs/execution/executing_function/op_separator_ampersand.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_separator_ampersand.c.o
-.PHONY : srcs/execution/executing_function/op_separator_ampersand.c.o
-
-srcs/execution/executing_function/op_separator_ampersand.i: srcs/execution/executing_function/op_separator_ampersand.c.i
-
-.PHONY : srcs/execution/executing_function/op_separator_ampersand.i
-
-# target to preprocess a source file
-srcs/execution/executing_function/op_separator_ampersand.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_separator_ampersand.c.i
-.PHONY : srcs/execution/executing_function/op_separator_ampersand.c.i
-
-srcs/execution/executing_function/op_separator_ampersand.s: srcs/execution/executing_function/op_separator_ampersand.c.s
-
-.PHONY : srcs/execution/executing_function/op_separator_ampersand.s
-
-# target to generate assembly for a file
-srcs/execution/executing_function/op_separator_ampersand.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_separator_ampersand.c.s
-.PHONY : srcs/execution/executing_function/op_separator_ampersand.c.s
 
 srcs/execution/executing_node.o: srcs/execution/executing_node.c.o
 
@@ -7872,9 +7899,15 @@ help:
 	@echo "... srcs/execution/check_if_builtins.o"
 	@echo "... srcs/execution/check_if_builtins.i"
 	@echo "... srcs/execution/check_if_builtins.s"
+	@echo "... srcs/execution/executing_function/op_ampersand.o"
+	@echo "... srcs/execution/executing_function/op_ampersand.i"
+	@echo "... srcs/execution/executing_function/op_ampersand.s"
 	@echo "... srcs/execution/executing_function/op_and_if.o"
 	@echo "... srcs/execution/executing_function/op_and_if.i"
 	@echo "... srcs/execution/executing_function/op_and_if.s"
+	@echo "... srcs/execution/executing_function/op_dless.o"
+	@echo "... srcs/execution/executing_function/op_dless.i"
+	@echo "... srcs/execution/executing_function/op_dless.s"
 	@echo "... srcs/execution/executing_function/op_execution.o"
 	@echo "... srcs/execution/executing_function/op_execution.i"
 	@echo "... srcs/execution/executing_function/op_execution.s"
@@ -7890,9 +7923,6 @@ help:
 	@echo "... srcs/execution/executing_function/op_separator.o"
 	@echo "... srcs/execution/executing_function/op_separator.i"
 	@echo "... srcs/execution/executing_function/op_separator.s"
-	@echo "... srcs/execution/executing_function/op_separator_ampersand.o"
-	@echo "... srcs/execution/executing_function/op_separator_ampersand.i"
-	@echo "... srcs/execution/executing_function/op_separator_ampersand.s"
 	@echo "... srcs/execution/executing_node.o"
 	@echo "... srcs/execution/executing_node.i"
 	@echo "... srcs/execution/executing_node.s"

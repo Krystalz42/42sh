@@ -43,7 +43,7 @@ static t_cmd	*return_line(t_read **read_std)
 	if (*read_std)
 	{
 		(*read_std)->finish = 0;
-		if (get_len_prompt(-42) != -2)
+		if (get_len_prompt(-42) != -2 && empty_cmd(first_cmd((*read_std)->cmd, 1)) == 0)
 			make_list_hist((*read_std));
 		line = copy_command(first_cmd((*read_std)->cmd, 1));
 		if (get_len_prompt(-42) == -2)
@@ -62,10 +62,9 @@ t_cmd			*finish_read_std(t_read **read_std)
 	memdel_outstanding();
 	if ((*read_std)->history)
 		memdel_cmd(&tmp);
-	if (signal_reception(-1) || empty_cmd(first_cmd((*read_std)->cmd, 1)))
+	if (signal_reception(-1))
 	{
-		if (signal_reception(-1))
-			insert_one_line();
+		insert_one_line();
 		memdel_read(read_std);
 	}
 	return (return_line(read_std));

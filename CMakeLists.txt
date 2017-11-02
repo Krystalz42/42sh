@@ -274,14 +274,14 @@ set(SOURCE_FILES
         srcs/execution/executing_function/op_pipeline.c
         srcs/execution/tools/manage_pipe.c
         srcs/execution/tools/new_jobs.c
-        srcs/execution/executing_function/op_separator_ampersand.c
+        srcs/execution/executing_function/op_ampersand.c
         srcs/execution/executing_function/op_and_if.c
         srcs/execution/executing_function/op_or_if.c
         srcs/read/other_read/my_tgetnum.c
         srcs/read/other_read/refresh_command.c
         srcs/execution/tools/check_tree_path.c
         srcs/read/other_read/cursor_column.c
-        srcs/execution/executing_function/op_less.c)
+        srcs/execution/executing_function/op_less.c srcs/execution/executing_function/op_dless.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

@@ -20,9 +20,9 @@ t_jobs				*new_jobs()
 	}
 	else
 	{
-		jobs += index;
-		jobs->index = index + 1;
-		log_trace("jobs [%d] created", index);
+		jobs += index + 1;
+		jobs->index = index + 2;
+		log_trace("jobs [%d] created", index + 1);
 		return (jobs);
 	}
 }

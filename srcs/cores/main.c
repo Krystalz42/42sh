@@ -16,7 +16,7 @@ int			main(int ac, char **av)
 {
 	(void)ac;
 	(void)av;
-	logger_init(7, "log");
+	logger_init(6, "log");
 	init_env();
 	init_term();
 	write_history_in_sh(get_str_from_history());

@@ -74,7 +74,7 @@ uint8_t			signal_from_int(uint8_t signal)
 	{
 		if (g_info[index].signal == signal)
 		{
-			ft_putnbr(g_info[index].signal);
+			ft_putstr(g_info[index].status);
 			ft_putchar(10);
 			return (0);
 		}
@@ -136,11 +136,11 @@ uint8_t			builtin_kill(t_node *node, int info)
 				return (var_return(usage_kill()));
 			else if (node->content->command[1][1] == 'l')
 			{
-				if (node->content->command[2] && ft_strisdigit(node->content->command[2] + 1))
+				if (node->content->command[2] && ft_strisdigit(node->content->command[2]))
 					return (var_return(signal_from_int((uint8_t)
-													ft_atoi(node->content->command[2] + 1))));
+													ft_atoi(node->content->command[2]))));
 				else if (node->content->command[2] && ft_strisalpha(node->content->command[2] + 1))
-					return (var_return(signal_from_str(node->content->command[2] + 1)));
+					return (var_return(signal_from_str(node->content->command[2])));
 				else
 					return (var_return(all_signal()));
 			}
