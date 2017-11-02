@@ -17,7 +17,7 @@ static inline t_cursor		init_cursor(int len)
 	t_cursor		cur;
 	int				co;
 
-	co = tgetnum("co");
+	co = tgetco();
 	cur.co = len % co;
 	cur.line = (len / co) + 1;
 	return (cur);

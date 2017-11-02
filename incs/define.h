@@ -12,6 +12,13 @@
 
 #ifndef DEFINE_H
 # define DEFINE_H
+
+/*
+**			TOOLS
+*/
+
+# define CURSOR					"\033[6n"
+
 /*
 **			FLAG EXECUTION
 */
@@ -27,6 +34,7 @@
 # define FORK						2
 # define BACKGROUND					4
 # define FOREGROUND					8
+# define DONT_EXECUTE				16
 
 /*
 **			TOKEN RECOGNITION
@@ -99,6 +107,7 @@
 **			INITIALIZATION READ
 */
 
+# define REFRESH				0
 # define CTRL_A					1
 # define CTRL_B					2
 # define CTRL_D					4

@@ -54,7 +54,6 @@ void						exit_(void);
 **				FUNCTION READ && PRINT && RETURN A STRUCT
 */
 
-
 t_cmd						*read_stdin(unsigned char flags);
 char						*my_prompt(char *prompt);
 void						init_prompt(void);
@@ -78,6 +77,9 @@ int							signal_reception(int brk);
 void						initialize_fct(t_read **read_std,
 										unsigned char flags);
 t_cmd						*finitialize_fct(t_read **read_std);
+int							tgetli(void);
+int							tgetco(void);
+int							cursor_column(int new_line);
 
 /*
 **				OUTSTANDING FUNCTION
@@ -291,7 +293,6 @@ void						update_jobs(t_process *process);
 t_jobs						*jobs_table(void);
 void						my_execve(char **command, char **env);
 void						handler_sigchld(int sig);
-int							get_jobs_index(pid_t search);
 void						my_wait(t_jobs *jobs);
 int							terminate_process(t_process *process);
 void						modify_runing(t_process *process, bool change);
@@ -308,6 +309,7 @@ const char					*status_exit(int signal);
 t_node						*create_binary_tree(t_parsing *list,
 											t_parsing *compare, int priority);
 uint8_t						execute_node(t_node *tree, int forked);
+void						check_tree_path(t_node *node);
 
 /*
 **				EXECUTION FUNCTION
@@ -319,9 +321,10 @@ t_process					*my_fork(t_jobs *jobs, t_node *node, int info);
 uint8_t						op_execution(t_node *node, int info);
 uint8_t						op_separator(t_node *node, int info);
 uint8_t						op_pipeline(t_node *node, int info);
-uint8_t						op_separator_ampersand(t_node *node, int info);
+uint8_t						op_ampersand(t_node *node, int info);
 uint8_t						op_and_if(t_node *node, int info);
 uint8_t						op_or_if(t_node *node, int info);
+uint8_t						op_less(t_node *node, int info);
 
 
 /*

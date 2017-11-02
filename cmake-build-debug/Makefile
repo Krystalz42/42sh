@@ -4227,6 +4227,33 @@ srcs/execution/executing_function/op_execution.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_execution.c.s
 .PHONY : srcs/execution/executing_function/op_execution.c.s
 
+srcs/execution/executing_function/op_less.o: srcs/execution/executing_function/op_less.c.o
+
+.PHONY : srcs/execution/executing_function/op_less.o
+
+# target to build an object file
+srcs/execution/executing_function/op_less.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_less.c.o
+.PHONY : srcs/execution/executing_function/op_less.c.o
+
+srcs/execution/executing_function/op_less.i: srcs/execution/executing_function/op_less.c.i
+
+.PHONY : srcs/execution/executing_function/op_less.i
+
+# target to preprocess a source file
+srcs/execution/executing_function/op_less.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_less.c.i
+.PHONY : srcs/execution/executing_function/op_less.c.i
+
+srcs/execution/executing_function/op_less.s: srcs/execution/executing_function/op_less.c.s
+
+.PHONY : srcs/execution/executing_function/op_less.s
+
+# target to generate assembly for a file
+srcs/execution/executing_function/op_less.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_less.c.s
+.PHONY : srcs/execution/executing_function/op_less.c.s
+
 srcs/execution/executing_function/op_or_if.o: srcs/execution/executing_function/op_or_if.c.o
 
 .PHONY : srcs/execution/executing_function/op_or_if.o
@@ -4388,6 +4415,33 @@ srcs/execution/my_fork.s: srcs/execution/my_fork.c.s
 srcs/execution/my_fork.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/my_fork.c.s
 .PHONY : srcs/execution/my_fork.c.s
+
+srcs/execution/tools/check_tree_path.o: srcs/execution/tools/check_tree_path.c.o
+
+.PHONY : srcs/execution/tools/check_tree_path.o
+
+# target to build an object file
+srcs/execution/tools/check_tree_path.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/check_tree_path.c.o
+.PHONY : srcs/execution/tools/check_tree_path.c.o
+
+srcs/execution/tools/check_tree_path.i: srcs/execution/tools/check_tree_path.c.i
+
+.PHONY : srcs/execution/tools/check_tree_path.i
+
+# target to preprocess a source file
+srcs/execution/tools/check_tree_path.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/check_tree_path.c.i
+.PHONY : srcs/execution/tools/check_tree_path.c.i
+
+srcs/execution/tools/check_tree_path.s: srcs/execution/tools/check_tree_path.c.s
+
+.PHONY : srcs/execution/tools/check_tree_path.s
+
+# target to generate assembly for a file
+srcs/execution/tools/check_tree_path.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/check_tree_path.c.s
+.PHONY : srcs/execution/tools/check_tree_path.c.s
 
 srcs/execution/tools/get_real_env.o: srcs/execution/tools/get_real_env.c.o
 
@@ -6468,6 +6522,33 @@ srcs/read/other_read/check_cmd.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/check_cmd.c.s
 .PHONY : srcs/read/other_read/check_cmd.c.s
 
+srcs/read/other_read/cursor_column.o: srcs/read/other_read/cursor_column.c.o
+
+.PHONY : srcs/read/other_read/cursor_column.o
+
+# target to build an object file
+srcs/read/other_read/cursor_column.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/cursor_column.c.o
+.PHONY : srcs/read/other_read/cursor_column.c.o
+
+srcs/read/other_read/cursor_column.i: srcs/read/other_read/cursor_column.c.i
+
+.PHONY : srcs/read/other_read/cursor_column.i
+
+# target to preprocess a source file
+srcs/read/other_read/cursor_column.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/cursor_column.c.i
+.PHONY : srcs/read/other_read/cursor_column.c.i
+
+srcs/read/other_read/cursor_column.s: srcs/read/other_read/cursor_column.c.s
+
+.PHONY : srcs/read/other_read/cursor_column.s
+
+# target to generate assembly for a file
+srcs/read/other_read/cursor_column.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/cursor_column.c.s
+.PHONY : srcs/read/other_read/cursor_column.c.s
+
 srcs/read/other_read/finish_read_std.o: srcs/read/other_read/finish_read_std.c.o
 
 .PHONY : srcs/read/other_read/finish_read_std.o
@@ -6738,6 +6819,33 @@ srcs/read/other_read/my_put.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/my_put.c.s
 .PHONY : srcs/read/other_read/my_put.c.s
 
+srcs/read/other_read/my_tgetnum.o: srcs/read/other_read/my_tgetnum.c.o
+
+.PHONY : srcs/read/other_read/my_tgetnum.o
+
+# target to build an object file
+srcs/read/other_read/my_tgetnum.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/my_tgetnum.c.o
+.PHONY : srcs/read/other_read/my_tgetnum.c.o
+
+srcs/read/other_read/my_tgetnum.i: srcs/read/other_read/my_tgetnum.c.i
+
+.PHONY : srcs/read/other_read/my_tgetnum.i
+
+# target to preprocess a source file
+srcs/read/other_read/my_tgetnum.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/my_tgetnum.c.i
+.PHONY : srcs/read/other_read/my_tgetnum.c.i
+
+srcs/read/other_read/my_tgetnum.s: srcs/read/other_read/my_tgetnum.c.s
+
+.PHONY : srcs/read/other_read/my_tgetnum.s
+
+# target to generate assembly for a file
+srcs/read/other_read/my_tgetnum.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/my_tgetnum.c.s
+.PHONY : srcs/read/other_read/my_tgetnum.c.s
+
 srcs/read/other_read/print_struct.o: srcs/read/other_read/print_struct.c.o
 
 .PHONY : srcs/read/other_read/print_struct.o
@@ -6845,6 +6953,33 @@ srcs/read/other_read/read_stdin.s: srcs/read/other_read/read_stdin.c.s
 srcs/read/other_read/read_stdin.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/read_stdin.c.s
 .PHONY : srcs/read/other_read/read_stdin.c.s
+
+srcs/read/other_read/refresh_command.o: srcs/read/other_read/refresh_command.c.o
+
+.PHONY : srcs/read/other_read/refresh_command.o
+
+# target to build an object file
+srcs/read/other_read/refresh_command.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/refresh_command.c.o
+.PHONY : srcs/read/other_read/refresh_command.c.o
+
+srcs/read/other_read/refresh_command.i: srcs/read/other_read/refresh_command.c.i
+
+.PHONY : srcs/read/other_read/refresh_command.i
+
+# target to preprocess a source file
+srcs/read/other_read/refresh_command.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/refresh_command.c.i
+.PHONY : srcs/read/other_read/refresh_command.c.i
+
+srcs/read/other_read/refresh_command.s: srcs/read/other_read/refresh_command.c.s
+
+.PHONY : srcs/read/other_read/refresh_command.s
+
+# target to generate assembly for a file
+srcs/read/other_read/refresh_command.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/read/other_read/refresh_command.c.s
+.PHONY : srcs/read/other_read/refresh_command.c.s
 
 srcs/read/other_read/restore_cursor.o: srcs/read/other_read/restore_cursor.c.o
 
@@ -7743,6 +7878,9 @@ help:
 	@echo "... srcs/execution/executing_function/op_execution.o"
 	@echo "... srcs/execution/executing_function/op_execution.i"
 	@echo "... srcs/execution/executing_function/op_execution.s"
+	@echo "... srcs/execution/executing_function/op_less.o"
+	@echo "... srcs/execution/executing_function/op_less.i"
+	@echo "... srcs/execution/executing_function/op_less.s"
 	@echo "... srcs/execution/executing_function/op_or_if.o"
 	@echo "... srcs/execution/executing_function/op_or_if.i"
 	@echo "... srcs/execution/executing_function/op_or_if.s"
@@ -7761,6 +7899,9 @@ help:
 	@echo "... srcs/execution/my_fork.o"
 	@echo "... srcs/execution/my_fork.i"
 	@echo "... srcs/execution/my_fork.s"
+	@echo "... srcs/execution/tools/check_tree_path.o"
+	@echo "... srcs/execution/tools/check_tree_path.i"
+	@echo "... srcs/execution/tools/check_tree_path.s"
 	@echo "... srcs/execution/tools/get_real_env.o"
 	@echo "... srcs/execution/tools/get_real_env.i"
 	@echo "... srcs/execution/tools/get_real_env.s"
@@ -7992,6 +8133,9 @@ help:
 	@echo "... srcs/read/other_read/check_cmd.o"
 	@echo "... srcs/read/other_read/check_cmd.i"
 	@echo "... srcs/read/other_read/check_cmd.s"
+	@echo "... srcs/read/other_read/cursor_column.o"
+	@echo "... srcs/read/other_read/cursor_column.i"
+	@echo "... srcs/read/other_read/cursor_column.s"
 	@echo "... srcs/read/other_read/finish_read_std.o"
 	@echo "... srcs/read/other_read/finish_read_std.i"
 	@echo "... srcs/read/other_read/finish_read_std.s"
@@ -8022,6 +8166,9 @@ help:
 	@echo "... srcs/read/other_read/my_put.o"
 	@echo "... srcs/read/other_read/my_put.i"
 	@echo "... srcs/read/other_read/my_put.s"
+	@echo "... srcs/read/other_read/my_tgetnum.o"
+	@echo "... srcs/read/other_read/my_tgetnum.i"
+	@echo "... srcs/read/other_read/my_tgetnum.s"
 	@echo "... srcs/read/other_read/print_struct.o"
 	@echo "... srcs/read/other_read/print_struct.i"
 	@echo "... srcs/read/other_read/print_struct.s"
@@ -8034,6 +8181,9 @@ help:
 	@echo "... srcs/read/other_read/read_stdin.o"
 	@echo "... srcs/read/other_read/read_stdin.i"
 	@echo "... srcs/read/other_read/read_stdin.s"
+	@echo "... srcs/read/other_read/refresh_command.o"
+	@echo "... srcs/read/other_read/refresh_command.i"
+	@echo "... srcs/read/other_read/refresh_command.s"
 	@echo "... srcs/read/other_read/restore_cursor.o"
 	@echo "... srcs/read/other_read/restore_cursor.i"
 	@echo "... srcs/read/other_read/restore_cursor.s"

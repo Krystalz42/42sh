@@ -258,7 +258,30 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_strisalpha.c
         srcs/execution/builtins_functions/builtin_env.c
         srcs/cores/exit.c
-        srcs/execution/builtins_functions/builtin_exit.c srcs/error_function/usage_builtins.c srcs/execution/builtins_functions/builtin_help.c srcs/read/key_/key_capitalize_word.c libs/libft/srcs/ft_isread.c srcs/execution/builtins_functions/builtin_suspend.c srcs/read/other_read/read_gates.c srcs/binary_tree/binary_tree.c srcs/execution/executing_node.c srcs/execution/my_fork.c srcs/execution/executing_function/op_execution.c srcs/execution/executing_function/op_separator.c srcs/execution/tools/get_real_env.c srcs/execution/executing_function/op_pipeline.c srcs/execution/tools/manage_pipe.c srcs/execution/tools/new_jobs.c srcs/execution/executing_function/op_separator_ampersand.c srcs/execution/executing_function/op_and_if.c srcs/execution/executing_function/op_or_if.c)
+        srcs/execution/builtins_functions/builtin_exit.c
+        srcs/error_function/usage_builtins.c
+        srcs/execution/builtins_functions/builtin_help.c
+        srcs/read/key_/key_capitalize_word.c
+        libs/libft/srcs/ft_isread.c
+        srcs/execution/builtins_functions/builtin_suspend.c
+        srcs/read/other_read/read_gates.c
+        srcs/binary_tree/binary_tree.c
+        srcs/execution/executing_node.c
+        srcs/execution/my_fork.c
+        srcs/execution/executing_function/op_execution.c
+        srcs/execution/executing_function/op_separator.c
+        srcs/execution/tools/get_real_env.c
+        srcs/execution/executing_function/op_pipeline.c
+        srcs/execution/tools/manage_pipe.c
+        srcs/execution/tools/new_jobs.c
+        srcs/execution/executing_function/op_separator_ampersand.c
+        srcs/execution/executing_function/op_and_if.c
+        srcs/execution/executing_function/op_or_if.c
+        srcs/read/other_read/my_tgetnum.c
+        srcs/read/other_read/refresh_command.c
+        srcs/execution/tools/check_tree_path.c
+        srcs/read/other_read/cursor_column.c
+        srcs/execution/executing_function/op_less.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

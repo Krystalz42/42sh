@@ -4,21 +4,10 @@
 
 #include <sh.h>
 
-void			looking_for_path(char **binary)
+
+
+uint8_t					do_execution(t_node *node, int info)
 {
-	char			*temp;
-
-	if ((temp = search_path(*binary)))
-	{
-		free(*binary);
-		(*binary) = temp;
-	}
-}
-
-uint8_t			do_execution(t_node *node, int info)
-{
-
-
 	t_jobs		*jobs;
 
 	if (FORK & info)
@@ -36,13 +25,15 @@ uint8_t			do_execution(t_node *node, int info)
 	return (1);
 }
 
-uint8_t			op_execution(t_node *node, int info)
+uint8_t					op_execution(t_node *node, int info)
 {
 	if (check_if_builtin(node, info) >= 0)
-		;
+	{
+		if (!(info & FORK))
+			exit(var_return(-1));
+	}
 	else
 	{
-		looking_for_path(&node->content->command[0]);
 		do_execution(node, info);
 	}
 	return (var_return(-1));

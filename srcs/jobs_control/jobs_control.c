@@ -53,7 +53,7 @@ void			print_status(t_process *process, int jobs_spec)
 			ft_printf("%d %s %s\n", process->pid, status_signal(WSTOPSIG(process->status)), process->command);
 		process = process->next;
 	}
-	ioctl(STDIN_FILENO, TIOCSTI, "\16");
+	ioctl(STDIN_FILENO, TIOCSTI, "\0");
 }
 
 int				update_status(t_process *process)

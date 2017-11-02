@@ -39,7 +39,11 @@ int				check_if_builtin(t_node *node, int info)
 	while (index < 14)
 	{
 		if (ft_strcmp(g_builtin[index].str, node->content->command[0]) == 0)
+		{
+			if ((info & DONT_EXECUTE))
+				return (1);
 			return (var_return(g_builtin[index].function(node, info)));
+		}
 		index++;
 	}
 	return (-1);

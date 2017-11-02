@@ -570,6 +570,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_execution.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_less.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_or_if.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -586,6 +589,9 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/my_fork.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/check_tree_path.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/get_real_env.c">
@@ -819,6 +825,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/read/other_read/check_cmd.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/read/other_read/cursor_column.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/read/other_read/finish_read_std.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -849,6 +858,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/read/other_read/my_put.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/read/other_read/my_tgetnum.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/read/other_read/print_struct.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -859,6 +871,9 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/read/other_read/read_stdin.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/read/other_read/refresh_command.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/read/other_read/restore_cursor.c">

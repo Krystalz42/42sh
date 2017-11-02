@@ -36,9 +36,9 @@ char *test(t_cmd *cmd)
 	return (str);
 }
 
-void place_pseudo_prio(t_parsing *p)
+void			place_pseudo_prio(t_parsing *p)
 {
-	char *d[] = {";", "|", "||", "&&", NULL};
+	char *d[] = {";", "|", "||", "&&", "&", NULL};
 	int 	index = 0;
 	p->priority = PRIO_COMMAND;
 	while (p->next)
@@ -52,11 +52,14 @@ void place_pseudo_prio(t_parsing *p)
 			{
 				p->value = ((index == 0)) ? VALUE_SEMI_COLON : p->value;
 				p->value = ((index == 1)) ? VALUE_PIPELINE : p->value;
-				p->priority = (index == 0) ? 1 : p->priority;
-				p->priority = (index == 1) ? 3 : p->priority;
-				p->priority = (index == 2) ? 2 : p->priority;
-				p->priority = (index == 3) ? 2 : p->priority;
-
+				p->value = ((index == 2)) ? VALUE_OR_IF : p->value;
+				p->value = ((index == 3)) ? VALUE_AND_IF : p->value;
+				p->value = ((index == 4)) ? VALUE_AMPERSAND : p->value;
+				p->priority = (index == 0) ? PRIO_SEPARATOR : p->priority;
+				p->priority = (index == 1) ? PRIO_PIPE : p->priority;
+				p->priority = (index == 2) ? PRIO_CMD_AND_OR : p->priority;
+				p->priority = (index == 3) ? PRIO_CMD_AND_OR : p->priority;
+				p->priority = (index == 4) ? PRIO_SEPARATOR : p->priority;
 			}
 			index++;
 		}
@@ -104,19 +107,13 @@ int		shell(void)
 	char 		*input_string;
 	t_node		*tree;
 
-	add_hash("ls", "/bin/ls", 1);
-	add_hash("cat", "/bin/cat", 1);
-	add_hash("wc", "/usr/bin/wc", 1);
 	input = NULL;
 	input_string = NULL;
 	while (42)
 	{
-		parse_struct = NULL;
 		ft_strdel(&input_string);
 		memdel_cmd(&input);
 
-		if (parse_struct == NULL)
-			log_fatal("gg");
 		if ((input = read_stdin(DEFAULT)) == NULL)
 			continue ;
 
@@ -127,8 +124,10 @@ int		shell(void)
 		c(parse_struct);
 		place_pseudo_prio(parse_struct);
 		tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR);
+		check_tree_path(tree);
 //		print_tree(tree, 0);
 		execute_node(tree, FORK | FOREGROUND);
 		free_node(tree);
+		cursor_column(1);
 	}
 }

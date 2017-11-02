@@ -28,7 +28,7 @@ int		key_shift_up(t_read **read_std, unsigned long buff)
 	}
 	else
 		(*read_std)->print = 1;
-	co = tgetnum("co");
+	co = tgetco();
 	if (co)
 		while (co-- && (*read_std)->cmd->prev)
 		{
@@ -56,7 +56,7 @@ int		key_shift_down(t_read **read_std, unsigned long buff)
 	}
 	else
 		(*read_std)->print = 1;
-	co = tgetnum("co");
+	co = tgetco();
 	if (co)
 		while (co-- && (*read_std)->cmd->next)
 			(*read_std)->cmd = (*read_std)->cmd->next;

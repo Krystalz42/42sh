@@ -39,5 +39,6 @@ uint8_t			op_pipeline(t_node *node, int info)
 
 	if ((jobs = new_jobs()) == NULL)
 		return (var_return(255));
+
 	return (pipeline(node, info, jobs, NULL));
 }

@@ -19,7 +19,7 @@ static void		error(char *str, t_parsing **node)
 static bool		chk(char *str)
 {
 	size_t				index;
-	static const char	*operaters[] = {";", "|", "<", "<<", ">", ">>", ">&", "<&", ">>&", NULL};
+	static const char	*operaters[] = {";", "|", "<", "<<", ">", ">>", ">&", "<&", ">>&", "||", "&&", "&", NULL};
 
 	index = 0;
 	while (operaters[index])

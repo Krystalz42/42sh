@@ -45,7 +45,7 @@ t_cursor				prompt_history(int p)
 	t_cursor			cur;
 	int 				co;
 
-	co = tgetnum("co");
+	co = tgetco();
 	if (p)
 		STR_FD("\x1B[31m", 2);
 	STR_FD(prompt, 2);

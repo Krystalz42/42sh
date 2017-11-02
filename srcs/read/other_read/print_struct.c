@@ -16,7 +16,7 @@ int			print_list(int to_select, t_cmd *cmd, t_cmd *stop, t_cursor *cur)
 {
 	int			co;
 
-	co = tgetnum("co");
+	co = tgetco();
 	while ((!to_select && cmd->c) || (to_select && cmd != stop))
 	{
 		(cmd->c != 10) ? CHAR_FD(cmd->c, init_fd()): 0 ;

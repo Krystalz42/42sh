@@ -26,6 +26,12 @@ void				handler_sigint(int sig)
 	ioctl(0, TIOCSTI, "\2\0");
 }
 
+void				handler_sigwinsz(int sig)
+{
+	log_warn("Signal Reception [%d]", sig);
+	ioctl(0, TIOCSTI, "\0");
+}
+
 void				init_signal(void)
 {
 	int i = -1;
@@ -40,6 +46,7 @@ void				init_signal(void)
 	}
 	signal(3, SIG_DFL);
 	signal(11, SIG_DFL);
+	signal(28, &handler_sigwinsz);
 }
 
 void				reset_signal(void)

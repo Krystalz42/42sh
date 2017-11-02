@@ -46,14 +46,13 @@ void		complete_path(t_read **read_std, t_path f)
 		return ;
 	(*read_std)->tab_->from = ft_strdup(f.to_comp);
 	create_comp(read_std, f);
-	log_trace("Element [%d]",(*read_std)->tab_->element);
-	((*read_std)->tab_->element) && place_cursor(read_std, 1);
 	if (!(*read_std)->tab_->element ||
 		(!(init_tab_((*read_std)->tab_, (*read_std)->cur.line))))
 	{
 		(*read_std)->completion = 0;
 		return ;
 	}
+	((*read_std)->tab_->element) && place_cursor(read_std, 1);
 	print_tab(read_std);
 	place_cursor(read_std, 0);
 }
