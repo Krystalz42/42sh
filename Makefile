@@ -141,8 +141,10 @@ SRCS = \
 	   execution/tools/manage_pipe.c							\
 	   execution/tools/new_jobs.c								\
 	   execution/tools/check_tree_path.c						\
+	   execution/tools/do_heredoc.c								\
+	   execution/tools/fildes_previous.c						\
 	   execution/executing_function/op_execution.c				\
-	   execution/executing_function/op_dless.c				\
+	   execution/executing_function/op_dless.c					\
 	   execution/executing_function/op_or_if.c					\
 	   execution/executing_function/op_and_if.c					\
 	   execution/executing_function/op_less.c					\

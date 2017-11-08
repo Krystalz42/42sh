@@ -1,5 +1,5 @@
 //
-// Created by Alexandre ROULIN on 11/2/17.
+// Created by Alexandre ROULIN on 11/4/17.
 //
 
 #include <sh.h>
@@ -42,7 +42,7 @@ static void				collect_path(char **binary)
 	ft_memdel_tab(&path);
 }
 
-static int				looking_for_path(char **binary)
+int					looking_for_path(char **binary)
 {
 	char			*temp;
 
@@ -52,21 +52,7 @@ static int				looking_for_path(char **binary)
 		(*binary) = temp;
 		return (1);
 	}
+	else
+		collect_path(binary);
 	return (0);
 }
-
-void					check_tree_path(t_node *node)
-{
-	if (node)
-	{
-		if (node->content->value == VALUE_DLESS)
-			do_heredoc(node);
-		if (node->content->value == VALUE_COMMAND)
-			if (check_if_builtin(node, DONT_EXECUTE) == -1)
-				if ((looking_for_path(&node->content->command[0])) == 0)
-					collect_path(&node->content->command[0]);
-		check_tree_path(node->left);
-		check_tree_path(node->right);
-	}
-}
-

@@ -281,7 +281,7 @@ set(SOURCE_FILES
         srcs/read/other_read/refresh_command.c
         srcs/execution/tools/check_tree_path.c
         srcs/read/other_read/cursor_column.c
-        srcs/execution/executing_function/op_less.c srcs/execution/executing_function/op_dless.c)
+        srcs/execution/executing_function/op_less.c srcs/execution/executing_function/op_dless.c srcs/execution/tools/fildes_previous.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

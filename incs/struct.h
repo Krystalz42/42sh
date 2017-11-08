@@ -232,6 +232,7 @@ typedef struct 		s_process
 	int					foreground;
 	int					running;
 	char				*command;
+	int					fildes[2];
 	struct s_process	*next;
 	struct s_process	*prev;
 }					t_process;
@@ -256,7 +257,7 @@ typedef struct 				s_signal
 typedef struct 				s_exec
 {
 	short					value;
-	uint8_t					(*function)(t_node *node, int info);
+	uint8_t					(*function)(t_node *node, t_jobs *jobs, int info);
 
 }							t_exec;
 

@@ -50,6 +50,8 @@ void		my_wait(t_jobs *jobs)
 {
 	t_process *process;
 
+	while (jobs->process->prev)
+		jobs->process = jobs->process->prev;
 	if (jobs->process)
 	{
 		if (jobs->process->foreground)

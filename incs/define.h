@@ -23,19 +23,11 @@
 **			FLAG EXECUTION
 */
 
-/*
-**	(info & 1) == SHOULD NOT BE FORK
-**	(info & 2) == HAVE TO BE FORK
-** 	(info & 4) == BACKGROUND
-**	(info & 8) == FOREGROUND
-*/
-
-# define NO_FORK					1
-# define FORK						2
-# define BACKGROUND					4
-# define FOREGROUND					8
+# define FORK						1
+# define FOREGROUND					2
+# define WRITE						4
+# define READ						8
 # define DONT_EXECUTE				16
-
 /*
 **			TOKEN RECOGNITION
 */

@@ -4,41 +4,29 @@
 
 
 
-uint8_t			pipeline(t_node *node, int info, t_jobs *jobs, int *fildes)
+uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 {
-	int				fildes_s[2];
-	t_process		*process;
+	int				fildes[2];
 
-	(node->content->value == VALUE_PIPELINE) && pipe(fildes_s);
-	process = my_fork(jobs, node, info);
-	if (process->pid > 0 && close_pipe(fildes))
+	log_debug("VALUE PIPELINE %d", info);
+
+	if ((jobs = new_jobs(jobs)) == NULL)
+		return (var_return(255));
+	pipe(fildes);
+	jobs->process = my_fork(jobs, node, info);
+	jobs->process->fildes[0] = fildes[0];
+	jobs->process->fildes[1] = fildes[1];
+	if (jobs->process->pid > 0) // PAPA
 	{
-		node->content->value != VALUE_PIPELINE ? my_wait(jobs) : 0;
-		if (node->content->value == VALUE_PIPELINE)
-			pipeline(node->left, info, jobs, fildes_s);
+		log_info("Do left");
+		close_previous(jobs);
+		execute_node(node->left, jobs, info | WRITE);
 	}
-	else
+	else // FILS
 	{
-		if (node->content->value == VALUE_PIPELINE)
-		{
-			write_pipe(fildes) && read_pipe(fildes_s);
-			op_execution(node->right, info - FORK);
-		}
-		else
-		{
-			write_pipe(fildes);
-			op_execution(node, info - FORK);
-		}
+		log_info("Do right");
+		write_previous(jobs);
+		execute_node(node->right, jobs, info ^ FORK);
 	}
 	return (1);
-}
-
-uint8_t			op_pipeline(t_node *node, int info)
-{
-	t_jobs			*jobs;
-
-	if ((jobs = new_jobs()) == NULL)
-		return (var_return(255));
-
-	return (pipeline(node, info, jobs, NULL));
 }

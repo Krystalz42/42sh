@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-static unsigned int		search_pos_char(char *str, char c)
+static unsigned int		search_pos_char(const char *str, char c)
 {
 	int					i;
 
@@ -45,7 +45,7 @@ unsigned int			search_char(char *str, char c)
 	return (match);
 }
 
-static char				*ft_strndup(char *src, unsigned int len)
+static char				*ft_strndup(const char *src, unsigned int len)
 {
 	char				*res;
 	unsigned int		i;
@@ -78,7 +78,7 @@ uint8_t					ft_setenv(t_node *node, int info)
 	char				*variable;
 	unsigned int		len;
 	unsigned int		i;
-	char			**env;
+	char				**env;
 
 	(void)info;
 	env = node->content->env_option ? node->content->env : env_table(NULL, ENV_REC);
@@ -89,7 +89,6 @@ uint8_t					ft_setenv(t_node *node, int info)
 	variable = ft_strndup(node->content->command[1], search_pos_char(node->content->command[1], '='));
 	while (env[i])
 	{
-		ft_putendl(env[i]);
 		if (!ft_strncmp(env[i], node->content->command[1], len))
 		{
 			ft_error(variable, " is already set.", 0);

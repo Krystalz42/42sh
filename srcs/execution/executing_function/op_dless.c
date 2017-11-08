@@ -1,41 +1,47 @@
-//
-// Created by Alexandre ROULIN on 11/2/17.
-//
-
 #include <sh.h>
 
-static int 				compare_heredoc(t_cmd *cmd, char *string)
+
+uint8_t					op_dless(t_node *node, t_jobs *jobs, int info)
 {
-	int			index;
+	int			fildes[2];
+	int			fd;
 
-	index = 0;
-	while (cmd->c && string[index])
+	log_debug("VALUE_DLESS %d", info);
+	if (info & FORK)
 	{
-		if (cmd->c != string[index])
-			break ;
-		cmd = cmd->next;
-		index++;
-	}
-	return (cmd->c - string[index]);
-}
+		pipe(fildes);
+		if ((jobs = new_jobs(jobs)) == NULL)
+			return (var_return(255));
+		jobs->process = my_fork(jobs, node, info);
+		if (jobs->process->pid > 0)
+		{
+			close_previous(jobs);
+			fd = dup(STDOUT_FILENO);
+			close(fildes[0]);
+			dup2(fildes[1], fd);
+			close(fildes[1]);
+			ft_putstrtab_fd(node->right->content->command, 10, fd);
+			close(fd);
+			my_wait(jobs);
+		}
+		else
+		{
 
-uint8_t					op_dless(t_node *node, int info)
-{
-	t_jobs		*jobs;
-	int			fildes;
-
-	if ((jobs = new_jobs()) == NULL)
-		return (var_return(255));
-	jobs->process = my_fork(jobs, node, info);
-	if (jobs->process->pid > 0)
-	{
-		while ((waitpid(jobs->process->pid, &jobs->process->status, WNOHANG)) == -1)
-			;
-		my_wait(jobs);
+			read_pipe(fildes);
+			execute_node(node->left, jobs, info ^ FORK);
+		}
 	}
 	else
 	{
-		execute_node(node->left, (info & FORK) ? info - FORK : info);
+		ft_putstrtab_fd(node->right->content->command, 10, jobs->process->fildes[1]);
+		ft_putstr_fd("Salut je gere les heredocs\n", jobs->process->fildes[1]);
+		close(jobs->process->fildes[1]);
+		dup2(jobs->process->fildes[0], STDIN_FILENO);
+//		fd = dup(STDOUT_FILENO);
+//		dup2(fd, STDIN_FILENO);
+//		close(fd);
+		close(jobs->process->fildes[0]);
+		execute_node(node->left, jobs, info);
 	}
 	return (1);
 }

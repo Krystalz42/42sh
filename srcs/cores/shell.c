@@ -129,8 +129,9 @@ int		shell(void)
 		tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR);
 		print_tree(tree, 0);
 		check_tree_path(tree);
-		execute_node(tree, FORK | FOREGROUND);
+		execute_node(tree, NULL, (FORK | FOREGROUND));
 		free_node(tree);
 		cursor_column(1);
+		add_environment("salut=cava");
 	}
 }

@@ -15,7 +15,12 @@
 int			key_eof(t_read **read_std, unsigned long buff)
 {
 	if (!(*read_std)->cmd->c && !(*read_std)->cmd->prev)
-		exit_();
+	{
+		if (get_len_prompt(-42) == -2)
+			signal_reception(1);
+		else
+			exit_();
+	}
 	else if ((*read_std)->cmd->c)
 	{
 		key_delete_here(read_std, buff);

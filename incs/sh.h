@@ -308,30 +308,34 @@ const char					*status_exit(int signal);
 
 t_node						*create_binary_tree(t_parsing *list,
 											t_parsing *compare, int priority);
-uint8_t						execute_node(t_node *tree, int forked);
+uint8_t						execute_node(t_node *node, t_jobs *jobs, int info);
 void						check_tree_path(t_node *node);
+void						do_heredoc(t_node *node);
 
 /*
 **				EXECUTION FUNCTION
 */
 
-t_jobs						*new_jobs(void);
+t_jobs						*new_jobs(t_jobs *jobs);
 t_process					*new_process(t_jobs *jobs);
 t_process					*my_fork(t_jobs *jobs, t_node *node, int info);
-uint8_t						op_execution(t_node *node, int info);
-uint8_t						op_separator(t_node *node, int info);
-uint8_t						op_pipeline(t_node *node, int info);
-uint8_t						op_ampersand(t_node *node, int info);
-uint8_t						op_and_if(t_node *node, int info);
-uint8_t						op_or_if(t_node *node, int info);
-uint8_t						op_less(t_node *node, int info);
-uint8_t						op_dless(t_node *node, int info);
+uint8_t						op_execution(t_node *node, t_jobs *jobs, int info);
+uint8_t						op_separator(t_node *node, t_jobs *jobs, int info);
+uint8_t						op_pipeline(t_node *node, t_jobs *jobs, int info);
+uint8_t						op_dless(t_node *node, t_jobs *jobs, int info);
+uint8_t						op_ampersand(t_node *node, t_jobs *jobs, int info);
+uint8_t						op_and_if(t_node *node, t_jobs *jobs, int info);
+uint8_t						op_or_if(t_node *node, t_jobs *jobs, int info);
+uint8_t						op_dless(t_node *node, t_jobs *jobs, int info);
 
 
 /*
 **				EXECUTION TOOLS
 */
 
+void						write_previous(t_jobs *jobs);
+void						close_previous(t_jobs *jobs);
+void						read_previous(t_jobs *jobs);
 int							read_pipe(int *fildes);
 int							close_pipe(int *fildes);
 int							write_pipe(int *fildes);

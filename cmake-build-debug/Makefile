@@ -4470,6 +4470,33 @@ srcs/execution/tools/check_tree_path.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/check_tree_path.c.s
 .PHONY : srcs/execution/tools/check_tree_path.c.s
 
+srcs/execution/tools/fildes_previous.o: srcs/execution/tools/fildes_previous.c.o
+
+.PHONY : srcs/execution/tools/fildes_previous.o
+
+# target to build an object file
+srcs/execution/tools/fildes_previous.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/fildes_previous.c.o
+.PHONY : srcs/execution/tools/fildes_previous.c.o
+
+srcs/execution/tools/fildes_previous.i: srcs/execution/tools/fildes_previous.c.i
+
+.PHONY : srcs/execution/tools/fildes_previous.i
+
+# target to preprocess a source file
+srcs/execution/tools/fildes_previous.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/fildes_previous.c.i
+.PHONY : srcs/execution/tools/fildes_previous.c.i
+
+srcs/execution/tools/fildes_previous.s: srcs/execution/tools/fildes_previous.c.s
+
+.PHONY : srcs/execution/tools/fildes_previous.s
+
+# target to generate assembly for a file
+srcs/execution/tools/fildes_previous.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/fildes_previous.c.s
+.PHONY : srcs/execution/tools/fildes_previous.c.s
+
 srcs/execution/tools/get_real_env.o: srcs/execution/tools/get_real_env.c.o
 
 .PHONY : srcs/execution/tools/get_real_env.o
@@ -7932,6 +7959,9 @@ help:
 	@echo "... srcs/execution/tools/check_tree_path.o"
 	@echo "... srcs/execution/tools/check_tree_path.i"
 	@echo "... srcs/execution/tools/check_tree_path.s"
+	@echo "... srcs/execution/tools/fildes_previous.o"
+	@echo "... srcs/execution/tools/fildes_previous.i"
+	@echo "... srcs/execution/tools/fildes_previous.s"
 	@echo "... srcs/execution/tools/get_real_env.o"
 	@echo "... srcs/execution/tools/get_real_env.i"
 	@echo "... srcs/execution/tools/get_real_env.s"
