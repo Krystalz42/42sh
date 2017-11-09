@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/09 18:37:41 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/09 20:09:45 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -231,10 +231,10 @@ size_t						compare_environment(char *s1, char *s2);
 void						remove_environment(char *string);
 char						**env_table(char **env, int flags);
 int							usage_environement(char *string);
-int						start_from_null(char **command, char ***env);
-int						start_from_full(char **command, char ***env);
-int						start_from_less(char **command, char ***env);
-char					**get_real_env(t_node *node);
+int							start_from_null(char **command, char ***env);
+int							start_from_full(char **command, char ***env);
+int							start_from_less(char **command, char ***env);
+char						**get_real_env(t_node *node);
 
 /*
 **				HISTORY FUNCTION
@@ -255,7 +255,7 @@ uint8_t						b_write_history_in_file(char *path);
 
 
 
-t_parsing					*parsing(t_cmd *cmd, char **env);
+t_parsing					*parsing(t_cmd *cmd);
 void						tokenisation(t_cmd *cmd);
 void						lexer(t_cmd *cmd, t_parsing **node);
 void						recognition(t_parsing *node);

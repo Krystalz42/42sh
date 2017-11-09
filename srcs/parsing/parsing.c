@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:11:28 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/09 18:47:45 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/09 20:10:12 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,19 +55,21 @@ static void		lexing(t_parsing **node, t_cmd *cmd)
 	tokenisation(cmd);
 	lexer(cmd, node);
 	recognition(*node);
+	
+	logger_token(cmd);
+	logger_list(*node);
 }
 
 static void		parser(t_parsing **node)
 {
-	// Need to change the ret value for the exit
 	empty(node);
 	order(node);
 	syntax(node);
 }
 
-static void		expanding(t_parsing *node, char **env)
+static void		expanding(t_parsing *node)
 {
-	(void)env; (void)node;
+	(void)node;
 	// tilde(node, env);
 	// variable(node, env);
 	// backslash(node);
@@ -79,16 +81,14 @@ static void		expanding(t_parsing *node, char **env)
 *************** PUBLIC *********************************************************
 */
 
-t_parsing		*parsing(t_cmd *cmd, char **env)
+t_parsing		*parsing(t_cmd *cmd)
 {
 	t_parsing	*node;
 
 	node = NULL;
 	lexing(&node, cmd);
 	parser(&node);
-	expanding(node, env);
+	expanding(node);
 	
-	logger_token(cmd);
-	logger_list(node);
 	return (node);
 }

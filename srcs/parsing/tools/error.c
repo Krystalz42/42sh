@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:07:01 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/09 18:13:05 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/09 19:52:37 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,10 @@ void			ft_err(char *str, int err)
 	while (index < 1)
 	{
 		if (err == g_err[index].err_type)
+		{
 			print_error(str, g_err[index].str);
+			var_return(1);
+		}
 		index++;
 	}
 }

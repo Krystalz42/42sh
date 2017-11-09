@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:58:31 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/09 18:19:06 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/09 20:02:40 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,12 @@ void			lstadd(t_parsing *node, t_parsing *new)
 
 void			lstdel(t_parsing **node)
 {
-	t_parsing	*memory;
-
-	while (*node)
-	{
-		memory = *node;
-		*node = (*node)->next;
-		ft_memdel((void **)&memory->input);
-		ft_arraydel(&memory->command);
-		ft_memdel((void **)&memory);
-	}
+	if ((*node)->env_option)
+		ft_memdel_tab(&(*node)->env);
+	ft_memdel_tab(&(*node)->command);
+	ft_strdel(&(*node)->input);
+	ft_memdel((void **)&(*node));
+	(*node) = NULL;
 }
 
 void			ft_arraydel(char ***array)
