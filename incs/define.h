@@ -3,15 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   define.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 17:13:15 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/09 16:42:41 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DEFINE_H
 # define DEFINE_H
+
+/*
+**			PARSING
+*/
+
+# define TOKEN 1
+# define OPERATER 2
+# define IO_NUMBER 3
+
+/*
+**			ERROR
+*/
+
+# define SYNTAX_ERR 666
 
 /*
 **			TOOLS
@@ -88,11 +102,11 @@
 # define SET_OLD_TERM			1
 # define SET_OUR_TERM			2
 
-# define HEREDOC				1
+# define DEFAULT				1
 # define DQUOTE					2
 # define QUOTE					4
 # define NEXTCMD				8
-# define DEFAULT				16
+# define HEREDOC				16
 # define PRINT					32
 
 /*

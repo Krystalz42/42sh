@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   struct.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/02 17:33:45 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/09 18:09:34 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,30 @@
 # define STRUCT_H
 
 #include <stdbool.h>
+
+
+/*
+**			STRUCT FOR ERROR
+*/
+
+typedef struct			s_error
+{
+	int					err_type;
+	char				*str;
+	int					err_ret;
+}						t_error;
+
+/*
+**			STRUCT FOR TOKEN_RECOGNITION
+*/
+
+typedef struct		s_lexing
+{
+	char			*str;
+	int				value;
+	int				priority;
+}					t_lexing;
+
 
 /*
 **			STRUCT FOR COMPLETION'S PATH

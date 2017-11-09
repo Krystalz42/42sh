@@ -6,16 +6,14 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/28 16:16:55 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/09 14:57:56 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int			main(int ac, char **av)
+int			main(void)
 {
-	(void)ac;
-	(void)av;
 	logger_init(6, "log");
 	init_env();
 	init_term();
