@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 14:11:22 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/30 14:11:24 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/09 14:52:15 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@
 void			exit_(void)
 {
 	b_write_history_in_file(get_str_from_history());
-	ft_putendl("exit");
 	exit(var_return(-1));
 }
