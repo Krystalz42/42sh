@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:11:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/09 20:07:30 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/10 13:01:18 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ int		shell(void)
 		if ((input = read_stdin(DEFAULT)) == NULL)
 			continue ;
 
-
 		if ((parse_struct = parsing(first_cmd(input, 1))) == NULL)
 			continue ;
 
@@ -62,4 +61,5 @@ int		shell(void)
 		cursor_column(1);
 		free_node(&tree);
 	}
+	return (0);
 }

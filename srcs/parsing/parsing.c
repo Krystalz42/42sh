@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:11:28 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/09 20:10:12 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/10 15:29:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,6 @@ static void		lexing(t_parsing **node, t_cmd *cmd)
 	tokenisation(cmd);
 	lexer(cmd, node);
 	recognition(*node);
-	
-	logger_token(cmd);
-	logger_list(*node);
 }
 
 static void		parser(t_parsing **node)
@@ -69,9 +66,8 @@ static void		parser(t_parsing **node)
 
 static void		expanding(t_parsing *node)
 {
-	(void)node;
-	// tilde(node, env);
-	// variable(node, env);
+	tilde(node);
+	//variable(node);
 	// backslash(node);
 	split(node);
 }
@@ -89,6 +85,9 @@ t_parsing		*parsing(t_cmd *cmd)
 	lexing(&node, cmd);
 	parser(&node);
 	expanding(node);
-	
+
+	logger_token(cmd);
+	logger_list(node);
+
 	return (node);
 }

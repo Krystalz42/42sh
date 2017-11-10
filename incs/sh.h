@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/09 20:09:45 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/10 14:17:03 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -263,6 +263,8 @@ void						empty(t_parsing **node);
 void						syntax(t_parsing **node);
 void						order(t_parsing **node);
 void						split(t_parsing *node);
+void						tilde(t_parsing *node);
+void						variable(t_parsing *node);
 
 /*
 **				BASIC FUNCTION
