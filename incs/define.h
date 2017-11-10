@@ -32,6 +32,12 @@
 **			TOKEN RECOGNITION
 */
 
+typedef enum			e_token
+{
+	PRIO_SEPARATOR
+}						t_token;
+
+
 # define PRIO_SEPARATOR				1
 # define PRIO_CMD_AND_OR			2
 # define PRIO_PIPE					3
