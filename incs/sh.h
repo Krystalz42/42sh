@@ -36,9 +36,6 @@
 # include <builtins.h>
 
 
-typedef struct t_executing_node(*function)(t_node *node, t_jobs *jobs, int info);
-
-
 /*
 ** A VIRER
 */
