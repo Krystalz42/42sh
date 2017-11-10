@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/10/28 14:36:17 by aroulin          ###   ########.fr        #
+#    Updated: 2017/11/10 14:16:33 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -174,15 +174,20 @@ SRCS = \
 	   jobs_control/set_process.c								\
 	   jobs_control/my_wait.c									\
 	   jobs_control/my_execve.c									\
-	   parsing/commands.c										\
+	   															\
 	   parsing/parsing.c										\
-	   parsing/last.c											\
-	   parsing/lexing.c											\
-	   parsing/lib.c											\
-	   parsing/operaters.c										\
-	   parsing/redirections.c									\
-	   parsing/stds.c											\
 	   parsing/tools.c											\
+	   parsing/lexing/tokenisation.c							\
+	   parsing/lexing/lexer.c									\
+	   parsing/lexing/recognition.c								\
+	   parsing/parsing/parsing.c								\
+	   parsing/expanding/split.c								\
+	   parsing/expanding/tilde.c								\
+	   parsing/expanding/variable.c								\
+	   parsing/expanding/tools.c								\
+	   parsing/tools/list.c										\
+	   parsing/tools/error.c									\
+	   															\
 	   binary_tree/binary_tree.c								\
 	   env/add_environment.c									\
 	   env/remove_environment.c									\

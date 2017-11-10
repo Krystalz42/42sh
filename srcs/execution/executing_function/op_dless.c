@@ -13,10 +13,12 @@ uint8_t					op_dless(t_node *node, t_jobs *jobs, int info)
 		if ((jobs = new_jobs(jobs)) == NULL)
 			return (var_return(255));
 		jobs->process = my_fork(jobs, node, info);
+		jobs->process->fildes[0] = fildes[0];
+		fd = dup(STDOUT_FILENO);
+		jobs->process->fildes[1] = fd;
 		if (jobs->process->pid > 0)
 		{
 			close_previous(jobs);
-			fd = dup(STDOUT_FILENO);
 			close(fildes[0]);
 			dup2(fildes[1], fd);
 			close(fildes[1]);
@@ -34,13 +36,6 @@ uint8_t					op_dless(t_node *node, t_jobs *jobs, int info)
 	else
 	{
 		ft_putstrtab_fd(node->right->content->command, 10, jobs->process->fildes[1]);
-		ft_putstr_fd("Salut je gere les heredocs\n", jobs->process->fildes[1]);
-		close(jobs->process->fildes[1]);
-		dup2(jobs->process->fildes[0], STDIN_FILENO);
-//		fd = dup(STDOUT_FILENO);
-//		dup2(fd, STDIN_FILENO);
-//		close(fd);
-		close(jobs->process->fildes[0]);
 		execute_node(node->left, jobs, info);
 	}
 	return (1);

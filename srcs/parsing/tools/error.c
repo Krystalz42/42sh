@@ -1,29 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tools.c                                            :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 15:47:53 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/09 15:48:05 by jle-quel         ###   ########.fr       */
+/*   Created: 2017/11/09 18:07:01 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/09 19:52:37 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sh.h"
 
+static const t_error	g_err[] =
+{
+	(t_error){SYNTAX_ERR, "syntax error near unexpected token `", -1},
+};
+
 /*
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			chk_quote(char c, uint8_t *status)
+void			print_error(char *str, char *err)
 {
-	if (c)
+	ft_putstr("21sh: ");
+	ft_putstr(err);
+	ft_putstr(str);
+	ft_putendl("\'");
+}
+
+void			ft_err(char *str, int err)
+{
+	short		index;
+
+	index = 0;
+	while (index < 1)
 	{
-		if (c == '\'' && !(*status & DQUOTE))
-			*status = *status & QUOTE ? DEFAULT : QUOTE;
-		else if (c == '\"' && !(*status & QUOTE))
-			*status = *status & DQUOTE ? DEFAULT : DQUOTE;
+		if (err == g_err[index].err_type)
+		{
+			print_error(str, g_err[index].str);
+			var_return(1);
+		}
+		index++;
 	}
-	return (*status);
 }

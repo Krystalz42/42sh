@@ -6,10 +6,14 @@
 
 void					play_with_fildes(t_jobs *jobs, int info)
 {
-	if (info & WRITE)
-		write_previous(jobs);
-	if (info & READ)
-		read_previous(jobs);
+	info++;
+	log_debug("%d", getpid());
+	if (jobs->process->fildes[0] != -1 && jobs->process->fildes[1] != -1)
+	{
+		close(jobs->process->fildes[0]);
+		dup2(jobs->process->fildes[0], STDIN_FILENO);
+		close(jobs->process->fildes[1]);
+	}
 }
 
 uint8_t					do_execution(t_node *node, t_jobs *jobs, int info)

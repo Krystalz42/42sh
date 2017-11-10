@@ -3,41 +3,48 @@
 /*                                                        :::      ::::::::   */
 /*   my_getenv.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 02:48:59 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/03 02:49:01 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/10 15:24:05 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
+/*
+*************** PRIVATE ********************************************************
+*/
+
 size_t				compare_environment(char *s1, char *s2)
 {
-	size_t		len;
+	size_t		length;
 
-	len = 0;
+	length = 0;
 	while (s1 && s2 && *s1 && *s2 && *s1 == *s2)
 	{
 		if (*s2 == '=')
-			return (len);
+			return (length);
 		s1++;
 		s2++;
-		len++;
+		length++;
 	}
 	return (0);
 }
 
-char				*my_getenv(char *name)
-{
-	char	**environ;
-	int		i;
+/*
+*************** PUBLIC *********************************************************
+*/
 
-	i = -1;
+char			*my_getenv(char *name)
+{
+	int		index;
+	char	**environ;
+
+	index = -1;
 	environ = env_table(NULL, ENV_REC);
-	if (environ)
-		while (environ[++i])
-			if (compare_environment(name, environ[i]))
-				return (ft_strchr(environ[i], '=') + 1);
+	while (environ && environ[++index])
+		if (compare_environment(name, environ[index]))
+			return (ft_strchr(environ[index], '=') + 1);
 	return (NULL);
 }

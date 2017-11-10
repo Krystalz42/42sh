@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   42sh.h                                             :+:      :+:    :+:   */
+/*   sh.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/24 15:36:19 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/10 14:17:03 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -232,10 +232,10 @@ size_t						compare_environment(char *s1, char *s2);
 void						remove_environment(char *string);
 char						**env_table(char **env, int flags);
 int							usage_environement(char *string);
-int						start_from_null(char **command, char ***env);
-int						start_from_full(char **command, char ***env);
-int						start_from_less(char **command, char ***env);
-char					**get_real_env(t_node *node);
+int							start_from_null(char **command, char ***env);
+int							start_from_full(char **command, char ***env);
+int							start_from_less(char **command, char ***env);
+char						**get_real_env(t_node *node);
 
 /*
 **				HISTORY FUNCTION
@@ -256,32 +256,38 @@ uint8_t						b_write_history_in_file(char *path);
 
 
 
-void						lexing(t_parsing **new, char *str);
-void						last(t_parsing **node);
-void						operaters(t_parsing **node);
-void						commands(t_parsing **node);
-t_parsing					*parsing(char *str);
-void						stds(t_parsing *node);
-void						redirections(t_parsing **node);
+t_parsing					*parsing(t_cmd *cmd);
+void						tokenisation(t_cmd *cmd);
+void						lexer(t_cmd *cmd, t_parsing **node);
+void						recognition(t_parsing *node);
+void						empty(t_parsing **node);
+void						syntax(t_parsing **node);
+void						order(t_parsing **node);
+void						split(t_parsing *node);
+void						tilde(t_parsing *node);
+void						variable(t_parsing *node);
 
 /*
 **				BASIC FUNCTION
 */
 
-void						ptrnext(t_parsing **node, size_t stop);
+void						cmddel(t_cmd **cmd);
 void						lstdel(t_parsing **node);
-void						lstnew(t_parsing **node, char *str);
-size_t						lstlen(t_parsing *node);
-void						arraydel(char ***array);
+void						lstadd(t_parsing *node, t_parsing *new);
+t_parsing					*lstnew(char *input, int value, int priority, char **command);
+void						lstdel(t_parsing **node);
+void						ft_arraydel(char ***argv);
+void						cmddel(t_cmd **cmd);
 
 /*
 **				TOOL'S PARSING FUNTION
 */
 
-bool						chk_operaters(char c);
-bool						chk_slash(const char *str, size_t index);
-void						chk_quotes(char c, char quote, const int *flag,
-											int *value);
+uint8_t						chk_quote(char c, uint8_t *status);
+void						ft_err(char *str, int err);
+void						remove_quote(char **str);
+size_t						split_getlength(char *str);
+size_t						split_skip(char *str);
 
 /*
 **				JOB'S CONTROL FUNCTION
