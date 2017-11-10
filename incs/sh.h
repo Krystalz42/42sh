@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/10 14:17:03 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/10 21:30:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -266,6 +266,7 @@ void						order(t_parsing **node);
 void						split(t_parsing *node);
 void						tilde(t_parsing *node);
 void						variable(t_parsing *node);
+void						ret_value(t_parsing *node);
 
 /*
 **				BASIC FUNCTION
@@ -284,10 +285,11 @@ void						cmddel(t_cmd **cmd);
 */
 
 uint8_t						chk_quote(char c, uint8_t *status);
+uint8_t						chk_slash(char c, uint8_t *status);
 void						ft_err(char *str, int err);
-void						remove_quote(char **str);
-size_t						split_getlength(char *str);
-size_t						split_skip(char *str);
+char						*do_skip(char *str, char c);
+size_t						get_length(char *str);
+char						*populating(char *new, char *str, size_t length);
 
 /*
 **				JOB'S CONTROL FUNCTION

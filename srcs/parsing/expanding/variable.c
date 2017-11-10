@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 14:17:08 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/10 15:27:49 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/10 16:45:48 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,54 +19,73 @@
 
 static char		*get_variable(char *str)
 {
+	size_t		skip;
 	size_t		index;
 	char		*new;
 
-	index = 0;
+	skip = 0;
+	while (str && str[skip])
+	{
+		if (str[skip] != '$')
+			break ;
+		skip++;
+	}
+	index = skip;
 	while (str && str[index])
 	{
 		if (str[index] == '\"' || str[index] == ' ' || str[index] == '/')
 			break ;
 		index++;
 	}
-	new = index ? ft_strsub(str, 0, index) : NULL;
+	new = index > skip ? ft_strsub(str, skip, index - skip) : NULL;
 	return (new);
 }
 
-/*static void		populate(char *new, char *str, char *variable, size_t length)*/
-/*{*/
-	/*size_t		index;*/
-	/*char		*temp;*/
+static char		*populate(char *str, char *variable, size_t length)
+{
+	size_t		index;
+	char		*new;
 
-	/*index = 0;*/
-	/*temp = str + length + 5;*/
-	/*while (str && *str && length--)*/
-		/*new[index++] = *str++;*/
-	/*while (variable && *variable)*/
-		/*new[index++] = *variable++;*/
-	/*while (temp && *temp)*/
-		/*new[index++] = *temp++;*/
-/*}*/
+	index = 0;
+	new = (char *)ft_memalloc(sizeof(char) *
+									(ft_strlen(str) + ft_strlen(variable) + 1));
+	while (str && *str && length--)
+		new[index++] = *str++;
+	while (variable && *variable)
+		new[index++] = *variable++;
+	while (str && *str && *str == '$')
+		str++;
+	while (str && *str && *str != '\"' && *str != ' ' && *str != '/')
+		str++;
+	while (str && *str)
+		new[index++] = *str++;
+	return (new);
+}
 
 /*
 *************** PRIVATE ********************************************************
 */
 
-static void		expansion(char **str, size_t index)
+static bool		expansion(char **str, size_t index)
 {
 	char		*temp;
 	char		*memory;
 	char		*variable;
+	char		*new;
 
-	temp = get_variable(*str + (index + 1));
-	memory = temp;
-	temp = ft_strjoin(temp, "=");
-	ft_memdel((void **)&memory);
-
-	variable = my_getenv(temp);
-	ft_putendl(variable);
-	ft_putendl(temp);
-	exit(1);
+	memory = get_variable(*str + index);
+	if (memory)
+	{
+		temp = ft_strjoin(memory, "=");
+		ft_memdel((void **)&memory);
+		variable = my_getenv(temp);
+		ft_memdel((void **)&temp);
+		new = populate(*str, variable, index); 
+		ft_memdel((void **)str);
+		*str = new;
+		return (true);
+	}
+	return (false);
 }
 
 /*
@@ -87,8 +106,9 @@ void			variable(t_parsing *node)
 		while (node->input && node->input[index])
 		{
 			chk_quote(node->input[index], &status);
-			if (status & (DEFAULT | DQUOTE) && node->input[index] == '$')
-				expansion(&node->input, index);
+			if (status & (DEFAULT | DQUOTE) && node->input[index] == '$'
+				&& expansion(&node->input, index))
+				variable(temp);
 			index++;
 		}
 		node = node->next;

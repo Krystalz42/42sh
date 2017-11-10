@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:11:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/10 13:01:18 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/10 20:41:50 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,9 @@ int		shell(void)
 		execute_node(tree, NULL, FORK | FOREGROUND);
 		cursor_column(1);
 		free_node(&tree);
+		log_fatal("");
+		log_fatal("");
+		log_fatal("");
 	}
 	return (0);
 }

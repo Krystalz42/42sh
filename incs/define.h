@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/09 16:42:41 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/10 18:45:50 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # define TOKEN 1
 # define OPERATER 2
 # define IO_NUMBER 3
+# define SLASH 2
 
 /*
 **			ERROR
