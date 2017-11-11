@@ -325,6 +325,7 @@ void						do_heredoc(t_node *node);
 
 t_jobs						*new_jobs(t_jobs *jobs);
 t_process					*new_process(t_jobs *jobs);
+t_process					*get_process(t_jobs *jobs, pid_t pid);
 t_process					*my_fork(t_jobs *jobs, t_node *node, int info);
 uint8_t						op_execution(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_separator(t_node *node, t_jobs *jobs, int info);

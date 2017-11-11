@@ -4,15 +4,30 @@
 
 #include <sh.h>
 
-void					play_with_fildes(t_jobs *jobs, int info)
+static void					play_with_fildes(t_jobs *jobs, int info)
 {
-	info++;
-	log_debug("%d", getpid());
-	if (jobs->process->fildes[0] != -1 && jobs->process->fildes[1] != -1)
+	t_process		*process;
+
+	process = get_process(jobs, getpid());
+	log_debug("%d", process ? 1 : 0);
+	if (WRITE_PREVIOUS & info)
 	{
-		close(jobs->process->fildes[0]);
-		dup2(jobs->process->fildes[0], STDIN_FILENO);
-		close(jobs->process->fildes[1]);
+		log_debug("Write %d", getpid());
+		if (process->prev)
+			log_success("Prev");
+		if (process->next)
+			log_success("Next");
+		write_pipe(process->fildes);
+	}
+	if (READ & info)
+	{
+		log_debug("Read %d", getpid());
+		read_pipe(process->fildes);
+	}
+	if (CLOSE & info)
+	{
+		log_debug("Close %d", getpid());
+		close_pipe(process->fildes);
 	}
 }
 
@@ -26,11 +41,12 @@ uint8_t					do_execution(t_node *node, t_jobs *jobs, int info)
 		jobs->process = my_fork(jobs, node, info);
 		if (jobs->process->pid > 0) // father
 		{
-			close_previous(jobs);
+			log_success("Daddy Exec");
 			my_wait(jobs);
 		}
 		else if (jobs->process->pid == 0) // fils
 		{
+			log_success("baby Exec");
 			play_with_fildes(jobs, info);
 			my_execve(node->content->command, get_real_env(node));
 		}

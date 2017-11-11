@@ -55,7 +55,6 @@ int		shell(void)
 
 		if ((tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR)) == NULL)
 			continue ;
-		print_tree(tree, 0);
 		check_tree_path(tree);
 		execute_node(tree, NULL, FORK | FOREGROUND);
 		cursor_column(1);

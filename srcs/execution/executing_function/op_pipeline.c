@@ -16,18 +16,16 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	jobs->process = my_fork(jobs, node, info);
 	jobs->process->fildes[0] = fildes[0];
 	jobs->process->fildes[1] = fildes[1];
+	log_debug("[%d][%d]", fildes[0], fildes[1]);
 	if (jobs->process->pid > 0) // PAPA
 	{
 		log_info("Do left");
-		close_previous(jobs);
-		execute_node(node->left, jobs, info | WRITE);
+		execute_node(node->left, jobs, info | WRITE_PREVIOUS);
 	}
 	else // FILS
 	{
 		log_info("Do right");
-		write_previous(jobs);
-		read_pipe(fildes);
-		execute_node(node->right, jobs, info ^ FORK);
+		execute_node(node->right, jobs, (info ^ FORK) | READ);
 	}
 	return (1);
 }

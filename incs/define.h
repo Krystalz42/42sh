@@ -39,9 +39,10 @@
 
 # define FORK						1
 # define FOREGROUND					2
-# define WRITE						4
+# define WRITE_PREVIOUS				4
 # define READ						8
-# define DONT_EXECUTE				16
+# define CLOSE						16
+# define DONT_EXECUTE				32
 /*
 **			TOKEN RECOGNITION
 */

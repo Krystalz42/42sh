@@ -46,12 +46,22 @@ void			wait_process(t_jobs *jobs)
 	}
 }
 
+void		close_fildes(t_process *process)
+{
+	while (process)
+	{
+		close_pipe(process->fildes);
+		process = process->next;
+	}
+}
+
 void		my_wait(t_jobs *jobs)
 {
 	t_process *process;
 
 	while (jobs->process->prev)
 		jobs->process = jobs->process->prev;
+	close_fildes(jobs->process);
 	if (jobs->process)
 	{
 		if (jobs->process->foreground)

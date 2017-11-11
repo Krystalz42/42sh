@@ -4,6 +4,7 @@ project(42sh)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
+        incs/builtins.h
         incs/define.h
         incs/sh.h
         incs/struct.h
@@ -29,6 +30,7 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_isdigit.c
         libs/libft/srcs/ft_islower.c
         libs/libft/srcs/ft_isprint.c
+        libs/libft/srcs/ft_isread.c
         libs/libft/srcs/ft_isupper.c
         libs/libft/srcs/ft_itoa.c
         libs/libft/srcs/ft_itounssigned.c
@@ -73,6 +75,8 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_strdel.c
         libs/libft/srcs/ft_strdup.c
         libs/libft/srcs/ft_strequ.c
+        libs/libft/srcs/ft_strisalpha.c
+        libs/libft/srcs/ft_strisdigit.c
         libs/libft/srcs/ft_striter.c
         libs/libft/srcs/ft_striteri.c
         libs/libft/srcs/ft_strjoin.c
@@ -128,6 +132,8 @@ set(SOURCE_FILES
         libs/printf/srcs/part_str.c
         libs/printf/srcs/part_unisgned.c
         libs/printf/srcs/printf_part.c
+        srcs/binary_tree/binary_tree.c
+        srcs/cores/exit.c
         srcs/cores/insert_one_line.c
         srcs/cores/main.c
         srcs/cores/shell.c
@@ -138,11 +144,43 @@ set(SOURCE_FILES
         srcs/env/my_getenv.c
         srcs/env/remove_environment.c
         srcs/error_function/bip.c
+        srcs/error_function/usage_builtins.c
+        srcs/execution/builtins_functions/builtin_env.c
+        srcs/execution/builtins_functions/builtin_exit.c
         srcs/execution/builtins_functions/builtin_hash.c
+        srcs/execution/builtins_functions/builtin_help.c
         srcs/execution/builtins_functions/builtin_history.c
         srcs/execution/builtins_functions/builtin_jobs.c
+        srcs/execution/builtins_functions/builtin_kill.c
+        srcs/execution/builtins_functions/builtin_suspend.c
         srcs/execution/builtins_functions/builtin_switch.c
+        srcs/execution/builtins_functions/data_builtin.c
+        srcs/execution/builtins_functions/error.c
+        srcs/execution/builtins_functions/ft_cd.c
+        srcs/execution/builtins_functions/ft_echo.c
+        srcs/execution/builtins_functions/ft_setenv.c
+        srcs/execution/builtins_functions/ft_unsetenv.c
+        srcs/execution/builtins_functions/refresh_varenv.c
+        srcs/execution/builtins_functions/utils.c
+        srcs/execution/executing_function/op_ampersand.c
+        srcs/execution/executing_function/op_and_if.c
+        srcs/execution/executing_function/op_dless.c
+        srcs/execution/executing_function/op_execution.c
+        srcs/execution/executing_function/op_less.c
+        srcs/execution/executing_function/op_or_if.c
+        srcs/execution/executing_function/op_pipeline.c
+        srcs/execution/executing_function/op_separator.c
+        srcs/execution/tools/check_tree_path.c
+        srcs/execution/tools/do_heredoc.c
+        srcs/execution/tools/fildes_previous.c
+        srcs/execution/tools/get_process.c
+        srcs/execution/tools/get_real_env.c
+        srcs/execution/tools/looking_for_path.c
+        srcs/execution/tools/manage_pipe.c
+        srcs/execution/tools/new_jobs.c
         srcs/execution/check_if_builtins.c
+        srcs/execution/executing_node.c
+        srcs/execution/my_fork.c
         srcs/hash/built_in_hash.c
         srcs/hash/get_str_from_hash.c
         srcs/hash/hash_board.c
@@ -163,18 +201,22 @@ set(SOURCE_FILES
         srcs/jobs_control/my_execve.c
         srcs/jobs_control/my_wait.c
         srcs/jobs_control/set_process.c
+        srcs/jobs_control/status_signals.c
         srcs/memdel_struct/memdel_completion.c
         srcs/memdel_struct/memdel_outstanding.c
         srcs/memdel_struct/memdel_read.c
         srcs/memdel_struct/memdel_search_history.c
-        srcs/parsing/commands.c
-        srcs/parsing/last.c
-        srcs/parsing/lexing.c
-        srcs/parsing/lib.c
-        srcs/parsing/operaters.c
+        srcs/parsing/expanding/split.c
+        srcs/parsing/expanding/tilde.c
+        srcs/parsing/expanding/tools.c
+        srcs/parsing/expanding/variable.c
+        srcs/parsing/lexing/lexer.c
+        srcs/parsing/lexing/recognition.c
+        srcs/parsing/lexing/tokenisation.c
+        srcs/parsing/parsing/parsing.c
+        srcs/parsing/tools/error.c
+        srcs/parsing/tools/list.c
         srcs/parsing/parsing.c
-        srcs/parsing/redirections.c
-        srcs/parsing/stds.c
         srcs/parsing/tools.c
         srcs/read/completion/check_binary_path.c
         srcs/read/completion/color_completion.c
@@ -192,6 +234,7 @@ set(SOURCE_FILES
         srcs/read/completion/print_tab.c
         srcs/read/completion/update_index.c
         srcs/read/key_/key_arrow.c
+        srcs/read/key_/key_capitalize_word.c
         srcs/read/key_/key_clear.c
         srcs/read/key_/key_del_buff.c
         srcs/read/key_/key_delete.c
@@ -205,6 +248,7 @@ set(SOURCE_FILES
         srcs/read/key_/key_kill_prev_word.c
         srcs/read/key_/key_kill_word.c
         srcs/read/key_/key_print.c
+        srcs/read/key_/key_refresh.c
         srcs/read/key_/key_reprint.c
         srcs/read/key_/key_search_history.c
         srcs/read/key_/key_shift.c
@@ -213,6 +257,7 @@ set(SOURCE_FILES
         srcs/read/key_/key_upcase_word.c
         srcs/read/key_/key_yank.c
         srcs/read/other_read/check_cmd.c
+        srcs/read/other_read/cursor_column.c
         srcs/read/other_read/finish_read_std.c
         srcs/read/other_read/first_cmd.c
         srcs/read/other_read/gbl_save_read.c
@@ -223,9 +268,12 @@ set(SOURCE_FILES
         srcs/read/other_read/last_cmd.c
         srcs/read/other_read/my_prompt.c
         srcs/read/other_read/my_put.c
+        srcs/read/other_read/my_tgetnum.c
         srcs/read/other_read/print_struct.c
         srcs/read/other_read/prompt.c
+        srcs/read/other_read/read_gates.c
         srcs/read/other_read/read_stdin.c
+        srcs/read/other_read/refresh_command.c
         srcs/read/other_read/restore_cursor.c
         srcs/read/other_read/signal_reception.c
         srcs/read/outstanding/add_outstanding.c
@@ -242,46 +290,7 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/execution/builtins_functions/data_builtin.c
-        srcs/execution/builtins_functions/error.c
-        srcs/execution/builtins_functions/ft_cd.c
-        srcs/execution/builtins_functions/ft_echo
-        srcs/execution/builtins_functions/ft_setenv.c
-        srcs/execution/builtins_functions/ft_unsetenv.c
-        srcs/execution/builtins_functions/refresh_varenv.c
-        srcs/execution/builtins_functions/utils.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c
-        srcs/read/key_/key_refresh.c
-        srcs/jobs_control/status_signals.c
-        srcs/execution/builtins_functions/builtin_kill.c
-        libs/libft/srcs/ft_strisdigit.c
-        libs/libft/srcs/ft_strisalpha.c
-        srcs/execution/builtins_functions/builtin_env.c
-        srcs/cores/exit.c
-        srcs/execution/builtins_functions/builtin_exit.c
-        srcs/error_function/usage_builtins.c
-        srcs/execution/builtins_functions/builtin_help.c
-        srcs/read/key_/key_capitalize_word.c
-        libs/libft/srcs/ft_isread.c
-        srcs/execution/builtins_functions/builtin_suspend.c
-        srcs/read/other_read/read_gates.c
-        srcs/binary_tree/binary_tree.c
-        srcs/execution/executing_node.c
-        srcs/execution/my_fork.c
-        srcs/execution/executing_function/op_execution.c
-        srcs/execution/executing_function/op_separator.c
-        srcs/execution/tools/get_real_env.c
-        srcs/execution/executing_function/op_pipeline.c
-        srcs/execution/tools/manage_pipe.c
-        srcs/execution/tools/new_jobs.c
-        srcs/execution/executing_function/op_ampersand.c
-        srcs/execution/executing_function/op_and_if.c
-        srcs/execution/executing_function/op_or_if.c
-        srcs/read/other_read/my_tgetnum.c
-        srcs/read/other_read/refresh_command.c
-        srcs/execution/tools/check_tree_path.c
-        srcs/read/other_read/cursor_column.c
-        srcs/execution/executing_function/op_less.c srcs/execution/executing_function/op_dless.c srcs/execution/tools/fildes_previous.c)
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

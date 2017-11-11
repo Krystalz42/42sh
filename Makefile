@@ -143,6 +143,7 @@ SRCS = \
 	   execution/tools/check_tree_path.c						\
 	   execution/tools/do_heredoc.c								\
 	   execution/tools/fildes_previous.c						\
+	   execution/tools/get_process.c							\
 	   execution/executing_function/op_execution.c				\
 	   execution/executing_function/op_dless.c					\
 	   execution/executing_function/op_or_if.c					\
@@ -174,7 +175,6 @@ SRCS = \
 	   jobs_control/set_process.c								\
 	   jobs_control/my_wait.c									\
 	   jobs_control/my_execve.c									\
-	   															\
 	   parsing/parsing.c										\
 	   parsing/tools.c											\
 	   parsing/lexing/tokenisation.c							\
@@ -187,7 +187,6 @@ SRCS = \
 	   parsing/expanding/tools.c								\
 	   parsing/tools/list.c										\
 	   parsing/tools/error.c									\
-	   															\
 	   binary_tree/binary_tree.c								\
 	   env/add_environment.c									\
 	   env/remove_environment.c									\
