@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:47:53 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/10 22:02:59 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/11 11:30:38 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ char			*populating(char *new, char *str, size_t length)
 	while (*str && length--)
 	{
 		chk_quote(*str, &quote);
-		if (*str == '\\' && quote & (DEFAULT | DQUOTE))
+		if (*str == '\\' && !(quote & QUOTE))
 			;
 		else
 			new[index++] = *str;

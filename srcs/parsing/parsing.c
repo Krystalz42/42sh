@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:11:28 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/10 20:40:56 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/11 11:31:05 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ static void		parser(t_parsing **node)
 
 static void		expanding(t_parsing *node)
 {
-	ret_value(node);
+	//ret_value(node);
 	//tilde(node);
 	/*variable(node);*/
 	split(node);
