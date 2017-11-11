@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:05 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/09 14:53:46 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/11 11:17:31 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 *************** PRIVATE ********************************************************
 */
 
-static size_t	get_length(char **argv, size_t length)
+static size_t	get_len(char **argv, size_t length)
 {
-	return ((argv && argv[length]) ? get_length(argv, length + 1) : length);
+	return ((argv && argv[length]) ? get_len(argv, length + 1) : length);
 }
 
 /*
@@ -32,7 +32,7 @@ uint8_t			builtin_exit(t_node *node, int info __attribute__((unused)))
 	size_t		length;
 	int			var;
 
-	if ((length = get_length(node->content->command, 0)) == 2)
+	if ((length = get_len(node->content->command, 0)) == 2)
 	{
 		if (ft_strisdigit(node->content->command[1]))
 			var = ft_atoi(node->content->command[1]);
