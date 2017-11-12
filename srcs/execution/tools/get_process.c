@@ -14,6 +14,9 @@ t_process				*get_process(t_process *process, pid_t pid)
 		{
 			if (process->pid == pid)
 				return (process);
+			if (pid == -1 && process->next == NULL)
+				return (process);
+
 			process = process->next;
 		}
 	}

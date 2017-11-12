@@ -280,12 +280,27 @@ typedef struct 				s_signal
 	char					*status;
 }							t_signal;
 
+/*
+**			ENUM FOR EXECUTING
+*/
 
-typedef struct 				s_exec
+typedef uint8_t			(t_exec)(t_node *node, t_jobs *jobs, int info);
+
+typedef enum 			e_value
 {
-	short					value;
-	uint8_t					(*function)(t_node *node, t_jobs *jobs, int info);
+	VALUE_COMMAND,
+	VALUE_SEMI_COLON,
+	VALUE_AMPERSAND,
+	VALUE_AND_IF,
+	VALUE_OR_IF,
+	VALUE_PIPELINE,
+	VALUE_LESS,
+	VALUE_GREAT,
+	VALUE_DLESS,
+	VALUE_DGREAT,
+	VALUE_LESS_AND,
+	VALUE_GREAT_AND
+}						t_value;
 
-}							t_exec;
 
 #endif

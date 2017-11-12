@@ -1,11 +1,15 @@
 #include <sh.h>
 
-void					intro_heredoc(t_jobs *jobs, t_node *node)
+void					intro_heredoc(t_jobs *jobs)
 {
-	jobs->process->fdout = dup(STDOUT_FILENO);
-	dup2(jobs->process->fildes[1], jobs->process->fdout);
-	ft_putstrtab_fd(node->right->content->heredoc, 10, jobs->process->fdout);
-	close(jobs->process->fdout);
+	t_process		*process;
+
+	if ((process = get_process(jobs->process, getpid())))
+	{
+		process->fdout = dup(STDOUT_FILENO);
+		dup2(process->fildes[1], process->fdout);
+	}
+
 }
 
 uint8_t					op_dless(t_node *node, t_jobs *jobs, int info)
@@ -29,14 +33,15 @@ uint8_t					op_dless(t_node *node, t_jobs *jobs, int info)
 		else
 		{
 			jobs->process->pid = getpid();
-			intro_heredoc(jobs, node);
+			intro_heredoc(jobs);
+			ft_putstrtab_fd(node->right->content->heredoc, 10, jobs->process->fdout);
 			execute_node(node->left, jobs, (info | READ) ^ FORK);
 		}
 	}
 	else
 	{
 		if (jobs->process->fdout == -1)
-			intro_heredoc(jobs, node);
+			intro_heredoc(jobs);
 		ft_putstrtab_fd(node->right->content->heredoc, 10, jobs->process->fdout);
 		execute_node(node->left, jobs, info);
 	}

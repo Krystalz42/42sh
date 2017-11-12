@@ -338,6 +338,9 @@ uint8_t						op_and_if(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_or_if(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_less(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_great(t_node *node, t_jobs *jobs, int info);
+uint8_t						op_great_and(t_node *node, t_jobs *jobs, int info);
+uint8_t						op_dgreat(t_node *node, t_jobs *jobs, int info);
+
 
 
 /*

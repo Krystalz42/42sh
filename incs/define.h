@@ -34,6 +34,7 @@
 
 # define CURSOR					"\033[6n"
 # define OPTION_GREAT			O_CREAT | O_WRONLY | O_TRUNC
+# define OPTION_DGREAT			O_CREAT | O_WRONLY | O_APPEND
 /*
 **			FLAG EXECUTION
 */
@@ -44,6 +45,7 @@
 # define READ						8
 # define CLOSE						16
 # define DONT_EXECUTE				32
+# define FORCE_FORK					64
 /*
 **			TOKEN RECOGNITION
 */
@@ -69,19 +71,7 @@
 ** GREAT_AND	&>
 */
 
-# define NOTHING					-1
-# define VALUE_COMMAND				0
-# define VALUE_SEMI_COLON			1
-# define VALUE_AMPERSAND			2
-# define VALUE_AND_IF				3
-# define VALUE_OR_IF				4
-# define VALUE_PIPELINE				5
-# define VALUE_LESS					6
-# define VALUE_GREAT				7
-# define VALUE_DLESS				8
-# define VALUE_DGREAT				9
-# define VALUE_LESS_AND				10
-# define VALUE_GREAT_AND			11
+
 
 /*
 **			INITIALIZATION FLAGS

@@ -2,8 +2,6 @@
 
 #include <sh.h>
 
-
-
 uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 {
 	int				fildes[2];
@@ -20,7 +18,7 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	if (jobs->process->pid > 0) // PAPA
 	{
 		log_info("Do left");
-		execute_node(node->left, jobs, info | WRITE_PREVIOUS);
+		execute_node(node->left, jobs, (info | WRITE_PREVIOUS) | FORCE_FORK);
 	}
 	else // FILS
 	{

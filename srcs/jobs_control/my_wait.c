@@ -32,7 +32,7 @@ void			wait_process(t_jobs *jobs)
 	temp = jobs->process;
 	while (temp)
 	{
-		log_trace("Wait [%d]", waitpid(temp->pid, &temp->status, WUNTRACED));
+		log_error("Wait [%d]", waitpid(temp->pid, &temp->status, WUNTRACED));
 		temp = temp->next;
 	}
 	update_jobs(jobs->process);
@@ -59,26 +59,29 @@ void		my_wait(t_jobs *jobs)
 {
 	t_process *process;
 
-	while (jobs->process->prev)
-		jobs->process = jobs->process->prev;
-	close_fildes(jobs->process);
-	if (jobs->process)
+	if (jobs)
 	{
-		if (jobs->process->foreground)
+		while (jobs->process->prev)
+			jobs->process = jobs->process->prev;
+		close_fildes(jobs->process);
+		if (jobs->process)
 		{
-			set_fildes(jobs->process->pgid);
-			wait_process(jobs);
-			set_fildes(getpgid(0));
-			pjt(jobs);
-		}
-		else
-		{
-			print_info_jobs(jobs);
-			process = jobs->process;
-			while (process)
+			if (jobs->process->foreground)
 			{
-				log_error("Wait [%d]",waitpid(process->pid, &process->status, WNOHANG));
-				process = process->next;
+				set_fildes(jobs->process->pgid);
+				wait_process(jobs);
+				set_fildes(getpgid(0));
+				pjt(jobs);
+			}
+			else
+			{
+				print_info_jobs(jobs);
+				process = jobs->process;
+				while (process)
+				{
+					log_error("Wait [%d]",waitpid(process->pid, &process->status, WNOHANG));
+					process = process->next;
+				}
 			}
 		}
 	}

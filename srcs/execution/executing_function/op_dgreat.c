@@ -1,14 +1,14 @@
 //
-// Created by Alexandre ROULIN on 11/11/17.
+// Created by Alexandre ROULIN on 11/12/17.
 //
 
 #include <sh.h>
 
-void		jobs_op_great(t_node *node)
+void		jobs_op_dgreat(t_node *node)
 {
 	int			fildes;
 
-	fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
+	fildes = open(node->right->content->command[0], OPTION_DGREAT, 0644);
 	if (node->content->command[0][0] == '&')
 	{
 		dup2(fildes, STDOUT_FILENO);
@@ -24,9 +24,9 @@ void		jobs_op_great(t_node *node)
 	}
 }
 
-uint8_t					op_great(t_node *node, t_jobs *jobs, int info)
+uint8_t					op_dgreat(t_node *node, t_jobs *jobs, int info)
 {
-	log_debug("VALUE GREAT %d", info);
+	log_debug("VALUE DGREAT %d", info);
 
 	if (info & FORK)
 	{
@@ -40,13 +40,13 @@ uint8_t					op_great(t_node *node, t_jobs *jobs, int info)
 		else
 		{
 			jobs->process->pid = getpid();
-			jobs_op_great(node);
+			jobs_op_dgreat(node);
 			execute_node(node->left, jobs, info ^ FORK);
 		}
 	}
 	else
 	{
-		jobs_op_great(node);
+		jobs_op_dgreat(node);
 		execute_node(node->left, jobs, info);
 	}
 	return (1);

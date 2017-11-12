@@ -145,7 +145,9 @@ SRCS = \
 	   execution/tools/fildes_previous.c						\
 	   execution/tools/get_process.c							\
 	   execution/executing_function/op_execution.c				\
+	   execution/executing_function/op_great_and.c				\
 	   execution/executing_function/op_great.c					\
+	   execution/executing_function/op_dgreat.c					\
 	   execution/executing_function/op_dless.c					\
 	   execution/executing_function/op_or_if.c					\
 	   execution/executing_function/op_and_if.c					\

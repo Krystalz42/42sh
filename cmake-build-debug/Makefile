@@ -4227,6 +4227,33 @@ srcs/execution/executing_function/op_and_if.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_and_if.c.s
 .PHONY : srcs/execution/executing_function/op_and_if.c.s
 
+srcs/execution/executing_function/op_dgreat.o: srcs/execution/executing_function/op_dgreat.c.o
+
+.PHONY : srcs/execution/executing_function/op_dgreat.o
+
+# target to build an object file
+srcs/execution/executing_function/op_dgreat.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_dgreat.c.o
+.PHONY : srcs/execution/executing_function/op_dgreat.c.o
+
+srcs/execution/executing_function/op_dgreat.i: srcs/execution/executing_function/op_dgreat.c.i
+
+.PHONY : srcs/execution/executing_function/op_dgreat.i
+
+# target to preprocess a source file
+srcs/execution/executing_function/op_dgreat.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_dgreat.c.i
+.PHONY : srcs/execution/executing_function/op_dgreat.c.i
+
+srcs/execution/executing_function/op_dgreat.s: srcs/execution/executing_function/op_dgreat.c.s
+
+.PHONY : srcs/execution/executing_function/op_dgreat.s
+
+# target to generate assembly for a file
+srcs/execution/executing_function/op_dgreat.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_dgreat.c.s
+.PHONY : srcs/execution/executing_function/op_dgreat.c.s
+
 srcs/execution/executing_function/op_dless.o: srcs/execution/executing_function/op_dless.c.o
 
 .PHONY : srcs/execution/executing_function/op_dless.o
@@ -4307,6 +4334,33 @@ srcs/execution/executing_function/op_great.s: srcs/execution/executing_function/
 srcs/execution/executing_function/op_great.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_great.c.s
 .PHONY : srcs/execution/executing_function/op_great.c.s
+
+srcs/execution/executing_function/op_great_and.o: srcs/execution/executing_function/op_great_and.c.o
+
+.PHONY : srcs/execution/executing_function/op_great_and.o
+
+# target to build an object file
+srcs/execution/executing_function/op_great_and.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_great_and.c.o
+.PHONY : srcs/execution/executing_function/op_great_and.c.o
+
+srcs/execution/executing_function/op_great_and.i: srcs/execution/executing_function/op_great_and.c.i
+
+.PHONY : srcs/execution/executing_function/op_great_and.i
+
+# target to preprocess a source file
+srcs/execution/executing_function/op_great_and.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_great_and.c.i
+.PHONY : srcs/execution/executing_function/op_great_and.c.i
+
+srcs/execution/executing_function/op_great_and.s: srcs/execution/executing_function/op_great_and.c.s
+
+.PHONY : srcs/execution/executing_function/op_great_and.s
+
+# target to generate assembly for a file
+srcs/execution/executing_function/op_great_and.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_great_and.c.s
+.PHONY : srcs/execution/executing_function/op_great_and.c.s
 
 srcs/execution/executing_function/op_less.o: srcs/execution/executing_function/op_less.c.o
 
@@ -8121,6 +8175,9 @@ help:
 	@echo "... srcs/execution/executing_function/op_and_if.o"
 	@echo "... srcs/execution/executing_function/op_and_if.i"
 	@echo "... srcs/execution/executing_function/op_and_if.s"
+	@echo "... srcs/execution/executing_function/op_dgreat.o"
+	@echo "... srcs/execution/executing_function/op_dgreat.i"
+	@echo "... srcs/execution/executing_function/op_dgreat.s"
 	@echo "... srcs/execution/executing_function/op_dless.o"
 	@echo "... srcs/execution/executing_function/op_dless.i"
 	@echo "... srcs/execution/executing_function/op_dless.s"
@@ -8130,6 +8187,9 @@ help:
 	@echo "... srcs/execution/executing_function/op_great.o"
 	@echo "... srcs/execution/executing_function/op_great.i"
 	@echo "... srcs/execution/executing_function/op_great.s"
+	@echo "... srcs/execution/executing_function/op_great_and.o"
+	@echo "... srcs/execution/executing_function/op_great_and.i"
+	@echo "... srcs/execution/executing_function/op_great_and.s"
 	@echo "... srcs/execution/executing_function/op_less.o"
 	@echo "... srcs/execution/executing_function/op_less.i"
 	@echo "... srcs/execution/executing_function/op_less.s"

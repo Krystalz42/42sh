@@ -573,6 +573,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_and_if.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_dgreat.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_dless.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -580,6 +583,9 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_great.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_great_and.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_less.c">
