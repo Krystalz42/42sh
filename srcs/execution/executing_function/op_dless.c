@@ -29,7 +29,7 @@ uint8_t					op_dless(t_node *node, t_jobs *jobs, int info)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)
 			return (var_return(255));
-		jobs->process = my_fork(jobs, node, info);
+		jobs->process = my_fork(jobs, find_executing_node(node), info);
 		if (jobs->process->pid > 0)
 		{
 			my_wait(jobs);

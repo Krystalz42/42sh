@@ -23,40 +23,43 @@
 **		List process IDs in addition to the normal information.
 */
 
-int				print_process(t_process process, int info, int parent, int index)
+int				print_process(t_process *process, int info, int parent, int index)
 {
-	if (process.pid == process.pgid)
+	if (process->pid == process->pgid)
 		ft_printf("[%d]\t", index + 1);
-	else if (parent && process.pid != process.pgid)
+	else if (parent && process->pid != process->pgid)
 		return (1);
 	else
 		ft_putchar('\t');
 	if (info)
-		ft_printf("\t%d %d %s %s\n", process.pid, process.pgid,
-				process.running ? RUN : STOP, process.command);
+		ft_printf("\t%d %d %s %s\n", process->pid, process->pgid,
+				process->running ? RUN : STOP, process->command);
 	else
-		ft_printf("\t%s %s\n", process.running ? RUN : STOP, process.command);
+		ft_printf("\t%s %s\n", process->running ? RUN : STOP, process->command);
 	return (1);
 }
 
 uint8_t			print_jobs(t_jobs *jobs, int opt)
 {
-	int			i;
-	int			ind_c;
+	int					i;
+	t_process			*process;
 
 	i = 0;
 	while (i < MAX_CHILD)
 	{
-		ind_c = 0;
-		while (jobs[i].process[ind_c].pid)
+		if (jobs[i].process)
 		{
-			if ((opt & 2) && jobs[i].process[ind_c].running)
-				print_process(jobs[i].process[ind_c], (opt & 8), (opt & 1), i);
-			else if ((opt & 4) && jobs[i].process[ind_c].running == false)
-				print_process(jobs[i].process[ind_c], (opt & 8), (opt & 1), i);
-			else if (!(opt & 2) && !(opt & 4))
-				print_process(jobs[i].process[ind_c], (opt & 8), (opt & 1), i);
-			ind_c++;
+			process = jobs[i].process;
+			while (process)
+			{
+				if ((opt & 2) && process->running)
+					print_process(process, (opt & 8), (opt & 1), i);
+				else if ((opt & 4) && process->running == false)
+					print_process(process, (opt & 8), (opt & 1), i);
+				else if (!(opt & 2) && !(opt & 4))
+					print_process(process, (opt & 8), (opt & 1), i);
+				process = process->next;
+			}
 		}
 		i++;
 	}

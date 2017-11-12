@@ -278,7 +278,6 @@ void						lstadd(t_parsing *node, t_parsing *new);
 t_parsing					*lstnew(char *input, int value, int priority, char **command);
 void						lstdel(t_parsing **node);
 void						ft_arraydel(char ***argv);
-void						cmddel(t_cmd **cmd);
 
 /*
 **				TOOL'S PARSING FUNTION
@@ -294,7 +293,8 @@ char						*populating(char *new, char *str, size_t length);
 /*
 **				JOB'S CONTROL FUNCTION
 */
-
+t_node						*find_executing_node(t_node *node);
+void						first_process(t_jobs *jobs);
 void						reset_process(t_jobs *jobs);
 void						wait_process(t_jobs *jobs);
 int							update_status(t_process *process);

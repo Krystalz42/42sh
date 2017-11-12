@@ -25,17 +25,18 @@ uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
 {
 	if (index != -1 && jobs[index].process)
 	{
+		log_warn("Will Foreground [%d]", jobs[index].process->pgid);
 		reset_signal();
 		modify_foreground(jobs[index].process, true);
 		set_fildes(jobs[index].process->pgid);
-		if (!jobs[index].process->running)
+		if (jobs[index].process->running == false)
 		{
-			kill(-(jobs[index].process->pgid), SIGCONT);
 			modify_runing(jobs[index].process, true);
+			kill(-(jobs[index].process->pgid), SIGCONT);
 			update_status(jobs[index].process);
 			print_status(jobs[index].process, index);
 		}
-		wait_process(jobs);
+		wait_process(jobs + index);
 		set_fildes(getpgid(0));
 		init_signal();
 		return (0);
@@ -48,6 +49,8 @@ uint8_t		bg_switch_process(t_jobs *jobs, int index, char *error, char *args)
 {
 	if (index != -1 && jobs[index].process)
 	{
+		log_warn("Will Background [%d]", jobs->process->pgid);
+		first_process(jobs + index);
 		modify_runing(jobs[index].process, true);
 		modify_foreground(jobs[index].process, false);
 		kill(-jobs[index].process->pgid, SIGCONT);
@@ -100,8 +103,12 @@ uint8_t		builtin_background(t_node *node, int info)
 	else
 	{
 		id = MAX_CHILD - 1;
-		while (id >= 0 && !jobs[id].process->pid && !jobs[id].process->running)
+		while (id >= 0)
+		{
+			if (jobs[id].process && jobs[id].process->running == false)
+				break ;
 			id--;
+		}
 		return (var_return(bg_switch_process(jobs, id, NO_CUR_JOB, NULL)));
 	}
 }

@@ -13,8 +13,8 @@ void pjt(t_jobs *jobs)
 	{
 		while (temp)
 		{
-			log_trace("PID [%d] PGID [%d] RUNING [%d] FOREGROUND [%d] INDEX [%d]",
-					  jobs->process->pid,jobs->process->pgid,jobs->process->running,jobs->process->foreground, index);
+			log_trace("PID [%d] PGID [%d] RUNING [%d] FOREGROUND [%d]",
+					  jobs->process->pid,jobs->process->pgid,jobs->process->running,jobs->process->foreground);
 			temp = temp->next;
 		}
 	}

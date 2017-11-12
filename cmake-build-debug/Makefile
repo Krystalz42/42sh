@@ -4605,6 +4605,33 @@ srcs/execution/tools/fildes_previous.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/fildes_previous.c.s
 .PHONY : srcs/execution/tools/fildes_previous.c.s
 
+srcs/execution/tools/find_executing_node.o: srcs/execution/tools/find_executing_node.c.o
+
+.PHONY : srcs/execution/tools/find_executing_node.o
+
+# target to build an object file
+srcs/execution/tools/find_executing_node.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/find_executing_node.c.o
+.PHONY : srcs/execution/tools/find_executing_node.c.o
+
+srcs/execution/tools/find_executing_node.i: srcs/execution/tools/find_executing_node.c.i
+
+.PHONY : srcs/execution/tools/find_executing_node.i
+
+# target to preprocess a source file
+srcs/execution/tools/find_executing_node.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/find_executing_node.c.i
+.PHONY : srcs/execution/tools/find_executing_node.c.i
+
+srcs/execution/tools/find_executing_node.s: srcs/execution/tools/find_executing_node.c.s
+
+.PHONY : srcs/execution/tools/find_executing_node.s
+
+# target to generate assembly for a file
+srcs/execution/tools/find_executing_node.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/find_executing_node.c.s
+.PHONY : srcs/execution/tools/find_executing_node.c.s
+
 srcs/execution/tools/get_process.o: srcs/execution/tools/get_process.c.o
 
 .PHONY : srcs/execution/tools/get_process.o
@@ -8217,6 +8244,9 @@ help:
 	@echo "... srcs/execution/tools/fildes_previous.o"
 	@echo "... srcs/execution/tools/fildes_previous.i"
 	@echo "... srcs/execution/tools/fildes_previous.s"
+	@echo "... srcs/execution/tools/find_executing_node.o"
+	@echo "... srcs/execution/tools/find_executing_node.i"
+	@echo "... srcs/execution/tools/find_executing_node.s"
 	@echo "... srcs/execution/tools/get_process.o"
 	@echo "... srcs/execution/tools/get_process.i"
 	@echo "... srcs/execution/tools/get_process.s"

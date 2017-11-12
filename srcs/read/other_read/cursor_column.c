@@ -18,7 +18,8 @@ int			cursor_column(int new_line)
 	while (++index < 9 && buff[index] != ';')
 		;
 	col = ft_atoi(buff + index + 1);
-	if (col != 1 && new_line)
+	log_info("%d", col);
+	if (col > 1 && new_line)
 	{
 		ft_putstr_fd("\x1B[7m%\x1B[0m", init_fd());
 		ft_putchar('\n');

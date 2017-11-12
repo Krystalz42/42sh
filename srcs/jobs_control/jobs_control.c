@@ -46,7 +46,7 @@ void			print_status(t_process *process, int jobs_spec)
 	cursor_column(1);
 	while (process)
 	{
-		process->prev == NULL ? CHAR('\t') : ft_printf("[%d]\t", jobs_spec + 1);
+		process->prev != NULL ? CHAR('\t') : ft_printf("[%d]\t", jobs_spec + 1);
 		if (WIFEXITED(process->status))
 			ft_printf("%d %s %s\n", process->pid, status_exit(WEXITSTATUS(process->status)), process->command);
 		else if (WIFSIGNALED(process->status))
@@ -100,6 +100,7 @@ void				handler_sigchld(int sig)
 	{
 		if (jobs[index].process && jobs[index].process->foreground == false)
 		{
+			first_process(jobs);
 			update_status(jobs[index].process);
 			if (terminate_process(jobs[index].process))
 			{

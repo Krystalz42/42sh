@@ -14,7 +14,7 @@
 
 int			main(void)
 {
-	logger_init(6, "log");
+	logger_init(7, "log");
 	init_env();
 	init_term();
 	write_history_in_sh(get_str_from_history());

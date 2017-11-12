@@ -12,9 +12,9 @@
 
 #include <sh.h>
 
-t_cmd       *last_cmd(t_cmd *cmd)
+t_cmd				*last_cmd(t_cmd *cmd)
 {
-    while (cmd->next)
-        cmd = cmd->next;
+	while (cmd->next)
+		cmd = cmd->next;
     return (cmd);
 }

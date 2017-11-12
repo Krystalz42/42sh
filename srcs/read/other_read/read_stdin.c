@@ -66,7 +66,6 @@ static inline int		chk_and_print(t_read **read_std)
 static inline void		inline_print_(t_read **read_std, unsigned long *buff)
 {
 	key_print_(read_std, buff);
-	log_trace("(*read_std)->finish %d",(*read_std)->finish);
 	if ((*read_std)->finish == 0)
 		chk_and_print(read_std);
 }
@@ -88,11 +87,9 @@ t_cmd					*read_stdin(unsigned char flags)
 	while (!read_std->finish && read(STDIN_FILENO, &buf, sizeof(unsigned long)))
 	{
 		index = -1;
-		log_trace("In read [%lu] return read [%d]",buf);
 		while (g_tab_are_key[++index].key != 89448948)
 			if (g_tab_are_key[index].key == buf)
 				inline_other(&read_std, &buf, g_tab_are_key[index].function);
-		log_trace("In read [%lu] return read [%d]",buf);
 		if (ft_isread(buf % (UCHAR_MAX + 1)))
 			inline_print_(&read_std, &buf);
 		if ((read_std)->finish || signal_reception(-1))

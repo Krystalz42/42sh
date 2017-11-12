@@ -14,7 +14,6 @@
 
 void		modify_runing(t_process *process, bool change)
 {
-
 	while (process)
 	{
 		process->running = change;
@@ -24,7 +23,6 @@ void		modify_runing(t_process *process, bool change)
 
 void		modify_foreground(t_process *process, bool change)
 {
-
 	while (process)
 	{
 		process->foreground = change;

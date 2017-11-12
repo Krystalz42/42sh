@@ -53,6 +53,8 @@ int				key_del(t_read **read_std, unsigned long buff)
 	}
 	else if ((*read_std)->cmd->prev)
 	{
+		if ((*read_std)->cmd->prev->c == 10 && !(*read_std)->history)
+			return (0);
 		add_outstanding(key_del_fct((*read_std)->cmd, buff), buff, 0);
 		(*read_std)->print = 2;
 	}

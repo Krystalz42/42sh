@@ -19,7 +19,7 @@ static const t_signal	g_signal[] = {
 		(t_signal){SIGSYS, "non-existent system call invoked"},
 		(t_signal){SIGPIPE, "write on a pipe with no reader"},
 		(t_signal){SIGALRM, "real-time timer expired"},
-		(t_signal){SIGTERM, "software termination signal"},
+		(t_signal){SIGTERM, "terminated"},
 		(t_signal){SIGURG, "urgent condition present on"},
 		(t_signal){SIGSTOP, "suspended"},
 		(t_signal){SIGTSTP, "suspended"},
@@ -60,13 +60,13 @@ const char				*status_exit(int signal)
 	if (signal)
 	{
 		temp = ft_itoa(signal);
-		strcpy(status, "exit ");
-		strcpy(status + 5, temp);
+		ft_strcpy(status, "exit ");
+		ft_strcpy(status + 5, temp);
 		free(temp);
 	}
 	else
 	{
-		strcpy(status, "done");
+		ft_strcpy(status, "done");
 	}
 	return (status);
 }

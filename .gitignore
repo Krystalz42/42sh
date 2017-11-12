@@ -1,13 +1,9 @@
-*.o
-*.d
 .idea
 .objs
 42sh
 CMakelist.txt
 cmake-build-debug
 log
-test
-test*
 # Prerequisites
 *.d
 

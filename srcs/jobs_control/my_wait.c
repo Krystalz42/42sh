@@ -23,7 +23,7 @@ void			set_fildes(pid_t pgid)
 {
 	signal(SIGTTIN, SIG_IGN);
 	signal(SIGTTOU, SIG_IGN);
-	log_trace("FG Return tcsetpgrp (%d)  of (%d)", tcsetpgrp(STDIN_FILENO, pgid), pgid);
+	log_trace("FG Return tcsetpgrp(0, %d) == [%d]", pgid, tcsetpgrp(STDIN_FILENO, pgid));
 }
 void			wait_process(t_jobs *jobs)
 {
@@ -32,7 +32,8 @@ void			wait_process(t_jobs *jobs)
 	temp = jobs->process;
 	while (temp)
 	{
-		log_error("Wait [%d]", waitpid(temp->pid, &temp->status, WUNTRACED));
+		log_warn("%d",-temp->pgid);
+		log_error("Wait [%d]", waitpid(-temp->pgid, &temp->status, 0));
 		temp = temp->next;
 	}
 	update_jobs(jobs->process);
@@ -79,9 +80,10 @@ void		my_wait(t_jobs *jobs)
 				process = jobs->process;
 				while (process)
 				{
-					log_error("Wait [%d]",waitpid(process->pid, &process->status, WNOHANG));
+					log_error("Wait [%d]", waitpid(process->pid, &process->status, WNOHANG));
 					process = process->next;
 				}
+				pjt(jobs);
 			}
 		}
 	}

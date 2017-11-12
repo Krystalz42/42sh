@@ -15,6 +15,7 @@
 void		reset_process(t_jobs *jobs)
 {
 	t_process		*to_kill;
+
 	if (jobs && jobs->process)
 	{
 		while (jobs->process && jobs->process->prev)
@@ -28,4 +29,10 @@ void		reset_process(t_jobs *jobs)
 		}
 	}
 	jobs->process = NULL;
+}
+
+void		first_process(t_jobs *jobs)
+{
+	while (jobs->process->prev)
+		jobs->process = jobs->process->prev;
 }

@@ -14,19 +14,21 @@
 
 static void			kill_prev_word(t_read **read_std, unsigned long buff)
 {
-	t_cmd   *tmp;
+	t_cmd		*temp;
 
-	tmp = (*read_std)->cmd->prev;
-	if (tmp)
+	temp = (*read_std)->cmd->prev;
+	if (temp)
 	{
-		tmp->next = NULL;
-		while (tmp->prev && tmp->prev->c == 32)
-			tmp = tmp->prev;
-		while (tmp->prev && ft_isalnum(tmp->prev->c))
-			tmp = tmp->prev;
-		(*read_std)->cmd->prev = (tmp->prev) ? (tmp->prev) : NULL;
-		tmp->prev = NULL;
-		add_outstanding(tmp, buff, 0);
+		temp->next = NULL;
+		while (temp->prev && temp->prev->c == 32)
+			temp = temp->prev;
+		while (temp->prev && ft_isalnum(temp->prev->c))
+			temp = temp->prev;
+		(*read_std)->cmd->prev = (temp->prev) ? (temp->prev) : NULL;
+		if ((*read_std)->cmd->prev)
+			(*read_std)->cmd->prev->next = (*read_std)->cmd;
+		temp->prev = NULL;
+		add_outstanding(temp, buff, 0);
 		(*read_std)->print = 2;
 	}
 }

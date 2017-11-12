@@ -29,6 +29,7 @@ void			compare_history(t_read **read_std)
 		else
 			(*read_std)->history = 1;
 		copy_cmd(read_std, hist->hist->cmd);
+		(*read_std)->print = 2;
 	}
 	last_resultat((hist) || !little->c ? 0 : 1);
 }
