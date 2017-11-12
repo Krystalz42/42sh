@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:11:28 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/10 15:29:35 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/11 11:31:05 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,22 @@ void			logger_list(t_parsing *node)
 	close(fd);
 }
 
+void			logger(t_parsing *node)
+{
+	size_t		index;
+
+	while (node)
+	{
+		index = 0;
+		while (node->command && node->command[index])
+		{
+			log_info("[%s]", node->command[index]);
+			index++;
+		}
+		node = node->next;
+	}
+}
+
 /*
 *************** PRIVATE ********************************************************
 */
@@ -66,9 +82,9 @@ static void		parser(t_parsing **node)
 
 static void		expanding(t_parsing *node)
 {
-	tilde(node);
-	//variable(node);
-	// backslash(node);
+	//ret_value(node);
+	//tilde(node);
+	/*variable(node);*/
 	split(node);
 }
 
@@ -88,6 +104,7 @@ t_parsing		*parsing(t_cmd *cmd)
 
 	logger_token(cmd);
 	logger_list(node);
+	logger(node);
 
 	return (node);
 }

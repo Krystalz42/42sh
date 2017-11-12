@@ -46,7 +46,7 @@ static const t_cmp		g_tab_are_key[] = {
 		(t_cmp){SHIFT_RIGHT_KEY, &key_shift_right},
 		(t_cmp){SHIFT_LEFT_KEY, &key_shift_left},
 		(t_cmp){SHIFT_LEFT_KEY, &key_shift_left},
-		(t_cmp){REFRESH, &key_clear_},
+		(t_cmp){REFRESH, &key_refresh_},
 		(t_cmp){89448948, NULL}
 };
 

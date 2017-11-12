@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/09 16:42:41 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/10 18:45:50 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # define TOKEN 1
 # define OPERATER 2
 # define IO_NUMBER 3
+# define SLASH 2
 
 /*
 **			ERROR
@@ -32,7 +33,7 @@
 */
 
 # define CURSOR					"\033[6n"
-
+# define OPTION_GREAT			O_CREAT | O_WRONLY | O_TRUNC
 /*
 **			FLAG EXECUTION
 */
@@ -46,12 +47,6 @@
 /*
 **			TOKEN RECOGNITION
 */
-
-typedef enum			e_token
-{
-	PRIO_SEPARATOR
-}						t_token;
-
 
 # define PRIO_SEPARATOR				1
 # define PRIO_CMD_AND_OR			2

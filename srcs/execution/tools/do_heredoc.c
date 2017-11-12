@@ -79,8 +79,7 @@ void		do_heredoc(t_node *node)
 		cmd = first_cmd(read_stdin(HEREDOC), 1);
 		if (compare_heredoc(cmd, node->right->content->command[0]) == 0 || signal_reception(-1) == 1)
 		{
-			ft_memdel_tab(&node->right->content->command);
-			node->right->content->command = heredoc;
+			node->right->content->heredoc = heredoc;
 			memdel_cmd(&cmd);
 			return ;
 		}

@@ -4281,6 +4281,33 @@ srcs/execution/executing_function/op_execution.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_execution.c.s
 .PHONY : srcs/execution/executing_function/op_execution.c.s
 
+srcs/execution/executing_function/op_great.o: srcs/execution/executing_function/op_great.c.o
+
+.PHONY : srcs/execution/executing_function/op_great.o
+
+# target to build an object file
+srcs/execution/executing_function/op_great.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_great.c.o
+.PHONY : srcs/execution/executing_function/op_great.c.o
+
+srcs/execution/executing_function/op_great.i: srcs/execution/executing_function/op_great.c.i
+
+.PHONY : srcs/execution/executing_function/op_great.i
+
+# target to preprocess a source file
+srcs/execution/executing_function/op_great.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_great.c.i
+.PHONY : srcs/execution/executing_function/op_great.c.i
+
+srcs/execution/executing_function/op_great.s: srcs/execution/executing_function/op_great.c.s
+
+.PHONY : srcs/execution/executing_function/op_great.s
+
+# target to generate assembly for a file
+srcs/execution/executing_function/op_great.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_great.c.s
+.PHONY : srcs/execution/executing_function/op_great.c.s
+
 srcs/execution/executing_function/op_less.o: srcs/execution/executing_function/op_less.c.o
 
 .PHONY : srcs/execution/executing_function/op_less.o
@@ -8100,6 +8127,9 @@ help:
 	@echo "... srcs/execution/executing_function/op_execution.o"
 	@echo "... srcs/execution/executing_function/op_execution.i"
 	@echo "... srcs/execution/executing_function/op_execution.s"
+	@echo "... srcs/execution/executing_function/op_great.o"
+	@echo "... srcs/execution/executing_function/op_great.i"
+	@echo "... srcs/execution/executing_function/op_great.s"
 	@echo "... srcs/execution/executing_function/op_less.o"
 	@echo "... srcs/execution/executing_function/op_less.i"
 	@echo "... srcs/execution/executing_function/op_less.s"

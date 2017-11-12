@@ -290,7 +290,7 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c)
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/execution/executing_function/op_great.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

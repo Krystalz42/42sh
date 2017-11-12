@@ -206,6 +206,7 @@ typedef struct				s_parsing
 {
 	char					*input;
 	char					**command;
+	char					**heredoc;
 	char					**env;
 	int 					env_option;
 	int						value;
@@ -258,6 +259,7 @@ typedef struct 		s_process
 	int					running;
 	char				*command;
 	int					fildes[2];
+	int					fdout;
 	struct s_process	*next;
 	struct s_process	*prev;
 }					t_process;

@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:57:00 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/09 18:22:14 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/11 11:19:53 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 *************** PRIVATE ********************************************************
 */
 
-static size_t	get_length(t_cmd *cmd, uint8_t rounds)
+static size_t	get_len(t_cmd *cmd, uint8_t rounds)
 {
 	size_t		length;
 
@@ -75,7 +75,7 @@ void			lexer(t_cmd *cmd, t_parsing **node)
 	rounds = 1;
 	while (cmd && cmd->c)
 	{
-		length = get_length(cmd, rounds);
+		length = get_len(cmd, rounds);
 		if (length > 0)
 		{
 			new = ft_memalloc(length + 1);

@@ -579,6 +579,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_execution.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_great.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/executing_function/op_less.c">
 			<Option target="42sh"/>
 		</Unit>

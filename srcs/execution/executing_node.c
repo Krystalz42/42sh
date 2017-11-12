@@ -7,12 +7,12 @@
 
 t_exec			g_affect_fct[] = {
 		(t_exec){VALUE_COMMAND, &op_execution},
-//		(t_exec){VALUE_SEMI_COLON, &op_separator},
-//		(t_exec){VALUE_AMPERSAND, &op_ampersand},
-//		(t_exec){VALUE_AND_IF, &op_and_if},
-//		(t_exec){VALUE_OR_IF, &op_or_if},
+		(t_exec){VALUE_SEMI_COLON, &op_separator},
+		(t_exec){VALUE_AMPERSAND, &op_ampersand},
+		(t_exec){VALUE_AND_IF, &op_and_if},
+		(t_exec){VALUE_OR_IF, &op_or_if},
 		(t_exec){VALUE_PIPELINE, &op_pipeline},
-//		(t_exec){VALUE_LESS, NULL},
+		(t_exec){VALUE_LESS, &op_less},
 //		(t_exec){VALUE_GREAT, NULL},
 		(t_exec){VALUE_DLESS, &op_dless},
 //		(t_exec){VALUE_DGREAT, NULL},

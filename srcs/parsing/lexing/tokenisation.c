@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:14:24 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/09 16:38:24 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/11 11:19:02 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 *************** TOOLS **********************************************************
 */
 
-static bool		chk_slash(t_cmd *cmd, int status, size_t occurence)
+static bool		chk(t_cmd *cmd, int status, size_t occurence)
 {
 	if (!(status & QUOTE))
 	{
 		if (cmd && cmd->c && cmd->c == '\\')
-			return (chk_slash(cmd->prev, status, occurence + 1));
+			return (chk(cmd->prev, status, occurence + 1));
 	}
 	return (occurence % 2);
 }
@@ -74,7 +74,7 @@ void			tokenisation(t_cmd *cmd)
 	while (cmd && cmd->c)
 	{
 		cmd->value = TOKEN;
-		if (!chk_slash(cmd->prev, status, 0))
+		if (!chk(cmd->prev, status, 0))
 		{
 			if (chk_quote(cmd->c, &status) && (status & DEFAULT))
 			{

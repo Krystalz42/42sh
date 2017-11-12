@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:11:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/10 13:01:18 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/11 11:13:56 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,11 @@ int		shell(void)
 	while (42)
 	{
 		memdel_cmd(&input);
+		log_success("----------------- Welcome to the new command ! ----------------");
 		if ((input = read_stdin(DEFAULT)) == NULL)
 			continue ;
-
 		if ((parse_struct = parsing(first_cmd(input, 1))) == NULL)
 			continue ;
-
 		if ((tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR)) == NULL)
 			continue ;
 		check_tree_path(tree);

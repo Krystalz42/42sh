@@ -8,8 +8,7 @@ static char 			*create_trial_path(char *path, char *binary)
 {
 	char		*complete_path;
 
-	complete_path = (char *)ft_memalloc(sizeof(char)
-										* (ft_strlen(path) + ft_strlen(binary) + 2));
+	complete_path = (char *)ft_memalloc(sizeof(char) * (ft_strlen(path) + ft_strlen(binary) + 2));
 	ft_strcpy(complete_path, path);
 	ft_strcpy(complete_path + ft_strlen(complete_path), "/");
 	ft_strcpy(complete_path + ft_strlen(complete_path), binary);
@@ -22,7 +21,7 @@ static void				collect_path(char **binary)
 	int				index;
 	char			*temp;
 
-	if ((path = ft_strsplit(my_getenv("PATH="), ':')) == NULL)
+	if (!(path = ft_strsplit(my_getenv("PATH="), ':')) || !ft_strlen(*binary))
 		return ;
 	index = 0;
 	while (path[index])

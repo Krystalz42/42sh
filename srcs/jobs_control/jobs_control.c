@@ -21,18 +21,21 @@ t_jobs				*jobs_table(void)
 
 void			update_jobs(t_process *process)
 {
-	log_warn("/!\\  [PROCESS LL BE UPDATE] /!\\");
+	log_trace("/!\\  [PROCESS LL BE UPDATE] /!\\");
 
 	while (process)
 	{
-		if (WIFEXITED(process->status))
-			var_return(WEXITSTATUS(process->status));
-		else if (WIFSIGNALED(process->status))
-			var_return(WTERMSIG(process->status) + 128);
-		else if (WIFSTOPPED(process->status))
-			var_return(WSTOPSIG(process->status) + 128);
-		else if (WIFCONTINUED(process->status))
-			;
+		if (process->pid == process->pgid)
+		{
+			if (WIFEXITED(process->status))
+				var_return(WEXITSTATUS(process->status));
+			else if (WIFSIGNALED(process->status))
+				var_return(WTERMSIG(process->status) + 128);
+			else if (WIFSTOPPED(process->status))
+				var_return(WSTOPSIG(process->status) + 128);
+			else if (WIFCONTINUED(process->status))
+				;
+		}
 		process = process->next;
 	}
 }
@@ -40,6 +43,7 @@ void			update_jobs(t_process *process)
 void			print_status(t_process *process, int jobs_spec)
 {
 	log_warn("/!\\  [PROCESS %d WILL BE PRINT]] /!\\", jobs_spec);
+	cursor_column(1);
 	while (process)
 	{
 		process->prev == NULL ? CHAR('\t') : ft_printf("[%d]\t", jobs_spec + 1);
@@ -89,7 +93,7 @@ void				handler_sigchld(int sig)
 	t_jobs			*jobs;
 	int				index;
 
-	log_warn("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
+	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
 	index = MAX_CHILD -1;
 	jobs = jobs_table();
 	while (index >= 0)

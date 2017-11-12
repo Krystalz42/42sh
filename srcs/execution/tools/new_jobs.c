@@ -14,9 +14,9 @@ t_jobs				*new_jobs(t_jobs *jobs)
 		jobs = jobs_table();
 		while (index >= 0 && jobs[index].process == NULL)
 			index--;
-
 		if (index == MAX_CHILD - 1)
 		{
+			var_return(255);
 			error_builtin("jobs: ", "too much process: ", NULL);
 			return (NULL);
 		}

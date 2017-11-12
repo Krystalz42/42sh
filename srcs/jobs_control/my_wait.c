@@ -32,7 +32,7 @@ void			wait_process(t_jobs *jobs)
 	temp = jobs->process;
 	while (temp)
 	{
-		log_error("Wait [%d]", waitpid(temp->pid, &temp->status, WUNTRACED));
+		log_trace("Wait [%d]", waitpid(temp->pid, &temp->status, WUNTRACED));
 		temp = temp->next;
 	}
 	update_jobs(jobs->process);

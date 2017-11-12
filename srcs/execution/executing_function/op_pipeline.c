@@ -13,7 +13,7 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	if ((jobs = new_jobs(jobs)) == NULL)
 		return (var_return(255));
 	pipe(fildes);
-	jobs->process = my_fork(jobs, node, info);
+	jobs->process = my_fork(jobs, node->right, info);
 	jobs->process->fildes[0] = fildes[0];
 	jobs->process->fildes[1] = fildes[1];
 	log_debug("[%d][%d]", fildes[0], fildes[1]);
@@ -25,6 +25,7 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	else // FILS
 	{
 		log_info("Do right");
+		jobs->process->pid = getpid();
 		execute_node(node->right, jobs, (info ^ FORK) | READ);
 	}
 	return (1);

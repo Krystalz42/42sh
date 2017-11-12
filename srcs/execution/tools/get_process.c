@@ -4,21 +4,17 @@
 
 #include <sh.h>
 
-t_process			*get_process(t_jobs *jobs, pid_t pid)
+t_process				*get_process(t_process *process, pid_t pid)
 {
-	if (jobs)
+	if (process)
 	{
-		if (jobs->process)
+		while (process->prev)
+			process = process->prev;
+		while (process)
 		{
-			while (jobs->process->prev)
-				jobs->process = jobs->process->prev;
-			while (jobs->process)
-			{
-				if (jobs->process->pid == pid)
-					return (jobs->process);
-				jobs->process = jobs->process->next;
-				if ()
-			}
+			if (process->pid == pid)
+				return (process);
+			process = process->next;
 		}
 	}
 	return (NULL);

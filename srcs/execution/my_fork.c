@@ -34,6 +34,7 @@ t_process			*my_fork(t_jobs *jobs, t_node *node, int info)
 		error_builtin("fork :", "fork failed", NULL);
 	process->fildes[0] = -1;
 	process->fildes[1] = -1;
+	process->fdout = -1;
 	process->running = true;
 	process->command = ft_strdup(node->content->input);
 	setpgid(process->pid, process->prev ? process->prev->pgid : process->pid);
