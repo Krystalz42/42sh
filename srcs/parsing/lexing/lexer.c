@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 15:57:00 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/11 11:19:53 by jle-quel         ###   ########.fr       */
+/*   Created: 2017/11/12 19:58:08 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/12 20:06:18 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 *************** PRIVATE ********************************************************
 */
 
-static size_t	get_len(t_cmd *cmd, uint8_t rounds)
+static size_t	get_length(t_cmd *cmd, uint8_t rounds)
 {
 	size_t		length;
 
@@ -46,9 +46,9 @@ static void		populate(t_cmd *cmd, size_t length, char *new)
 static void		add_to_list(t_parsing **node, char *new)
 {
 	if (*node == NULL)
-		*node = lstnew(new, 0, 0, NULL);
+		*node = lstnew(new);
 	else
-		lstadd(*node, lstnew(new, 0, 0, NULL));
+		lstadd(*node, lstnew(new));
 }
 
 static void		skip(t_cmd **cmd, uint8_t rounds)
@@ -75,8 +75,8 @@ void			lexer(t_cmd *cmd, t_parsing **node)
 	rounds = 1;
 	while (cmd && cmd->c)
 	{
-		length = get_len(cmd, rounds);
-		if (length > 0)
+		length = get_length(cmd, rounds);
+		if (length)
 		{
 			new = ft_memalloc(length + 1);
 			populate(cmd, length, new);

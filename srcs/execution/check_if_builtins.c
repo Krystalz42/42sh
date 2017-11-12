@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_if_builtins.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:20:09 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/30 15:20:11 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/12 20:13:30 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,10 @@ static const t_builtin	g_builtin[] = {
 	(t_builtin){NULL, NULL}
 };
 
-int				check_if_builtin(t_node *node, int info)
+int				check_if_builtin(t_node *node, int info __attribute__((unused)))
 {
 	int		index;
 
-	(void)info;
 	index = 0;
 	while (index < 14)
 	{

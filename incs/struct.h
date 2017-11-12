@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/09 19:36:43 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/12 19:37:18 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ typedef struct		s_cmd
 {
 	char			c;
 	int				value;
+	uint8_t			status;
 	struct s_cmd	*next;
 	struct s_cmd	*prev;
 }					t_cmd;

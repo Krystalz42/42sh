@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/10 21:30:35 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/12 22:08:54 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -251,48 +251,51 @@ void						next_history(t_read **read_std);
 uint8_t						b_write_history_in_file(char *path);
 
 /*
-**				PARSING FUNCTION
+**				LEXING FUNCTION
 */
 
 
 
 t_parsing					*parsing(t_cmd *cmd);
-void						tokenisation(t_cmd *cmd);
+void						special_tokenisation(t_cmd *cmd);
+void						regular_tokenisation(t_cmd *cmd);
 void						lexer(t_cmd *cmd, t_parsing **node);
 void						recognition(t_parsing *node);
+
+/*
+**				PARSING FUNCTION
+*/
+
 void						empty(t_parsing **node);
 void						syntax(t_parsing **node);
 void						order(t_parsing **node);
-void						split(t_parsing *node);
+
+/*
+**				EXPANDING FUNCTION
+*/
+
+void						special(t_parsing *node, char *expand, int to_expand);
 void						tilde(t_parsing *node);
-void						variable(t_parsing *node);
-void						ret_value(t_parsing *node);
+
+/*
+**				TOOLS'S LEXING PARSING EXPANDING FUNCTION
+*/
+
+void						ft_err(char *str, int err);
+size_t						skip_to_occurence(char *str, char c);
 
 /*
 **				BASIC FUNCTION
 */
 
-void						cmddel(t_cmd **cmd);
 void						lstdel(t_parsing **node);
 void						lstadd(t_parsing *node, t_parsing *new);
-t_parsing					*lstnew(char *input, int value, int priority, char **command);
-void						lstdel(t_parsing **node);
-void						ft_arraydel(char ***argv);
-
-/*
-**				TOOL'S PARSING FUNTION
-*/
-
-uint8_t						chk_quote(char c, uint8_t *status);
-uint8_t						chk_slash(char c, uint8_t *status);
-void						ft_err(char *str, int err);
-char						*do_skip(char *str, char c);
-size_t						get_length(char *str);
-char						*populating(char *new, char *str, size_t length);
+t_parsing					*lstnew(char *input);
 
 /*
 **				JOB'S CONTROL FUNCTION
 */
+
 t_node						*find_executing_node(t_node *node);
 void						first_process(t_jobs *jobs);
 void						reset_process(t_jobs *jobs);

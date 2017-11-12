@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 12:25:28 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/10 21:29:48 by jle-quel         ###   ########.fr       */
+/*   Created: 2017/11/12 21:33:52 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/12 22:09:29 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,20 +72,26 @@ static bool		expansion(char **str, size_t index)
 void			tilde(t_parsing *node)
 {
 	size_t		index;
-	uint8_t		status;
 	t_parsing	*temp;
-	
-	status = DEFAULT;
+
 	temp = node;
 	while (node)
 	{
 		index = 0;
 		while (node->input && node->input[index])
 		{
-			chk_quote(node->input[index], &status);
-			if (status & DEFAULT && chk(node->input, index) && expansion(&node->input, index))
-				tilde(temp);
-			index++;
+			if (node->input[index] == '\\')
+				index += 2;
+			else if (node->input[index] == '\'')
+				index += skip_to_occurence(node->input + index, '\'');
+			else if (node->input[index] == '\"')
+				index += skip_to_occurence(node->input + index, '\"');
+			else
+			{
+				if (chk(node->input, index) && expansion(&node->input, index))
+					tilde(temp);
+				index++;
+			}
 		}
 		node = node->next;
 	}
