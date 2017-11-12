@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tilde.c                                            :+:      :+:    :+:   */
+/*   special.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/12 21:33:52 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/12 22:09:29 by jle-quel         ###   ########.fr       */
+/*   Created: 2017/11/12 20:56:06 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/12 21:35:03 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@
 *************** TOOLS **********************************************************
 */
 
-static void		populate(char *new, char *str, char *home, size_t length)
+static void		populate(char *new, char *str, char *variable, size_t length)
 {
 	size_t		index;
 	char		*temp;
 
 	index = 0;
-	temp = str + (length + 1);
+	temp = str + (length + 2);
 	while (str && *str && length--)
 		new[index++] = *str++;
-	while (home && *home)
-		new[index++] = *home++;
+	while (variable && *variable)
+		new[index++] = *variable++;
 	while (temp && *temp)
 		new[index++] = *temp++;
 }
@@ -35,29 +35,17 @@ static void		populate(char *new, char *str, char *home, size_t length)
 *************** PRIVATE ********************************************************
 */
 
-static bool		chk(const char *str, size_t index)
+bool		expansion(char **str, size_t index, char *expand, int to_expand)
 {
-	if (index == 0 || !str[index - 1] || str[index - 1] == ' ')
-	{
-		if (!str[index + 1] || str[index + 1] == ' ' || str[index + 1] == '/')
-		{
-			if (str[index] == '~')
-				return (true);
-		}
-	}
-	return (false);
-}
+	char	*variable;
+	char	*new;
 
-static bool		expansion(char **str, size_t index)
-{
-	char		*home;
-	char		*new;
-
-	home = my_getenv("HOME=");
-	if (home && ft_strlen(home))
+	if (!ft_strncmp(*str + index, expand, 2))
 	{
-		new = (char *)ft_memalloc(sizeof(char) * (ft_strlen(*str) + ft_strlen(home) + 1));
-		populate(new, *str, home, index);
+		variable = ft_itoa(to_expand);
+		new = (char *)ft_memalloc(sizeof(char) * (ft_strlen(variable) + ft_strlen(*str) + 1));
+		populate(new, *str, variable, index);
+		ft_memdel((void **)&variable);
 		ft_memdel((void **)str);
 		*str = new;
 		return (true);
@@ -69,7 +57,7 @@ static bool		expansion(char **str, size_t index)
 *************** PUBLIC *********************************************************
 */
 
-void			tilde(t_parsing *node)
+void			special(t_parsing *node, char *expand, int to_expand)
 {
 	size_t		index;
 	t_parsing	*temp;
@@ -84,13 +72,11 @@ void			tilde(t_parsing *node)
 				index += 2;
 			else if (node->input[index] == '\'')
 				index += skip_to_occurence(node->input + index, '\'');
-			else if (node->input[index] == '\"')
-				index += skip_to_occurence(node->input + index, '\"');
 			else
 			{
-				if (chk(node->input, index) && expansion(&node->input, index))
-					tilde(temp);
-				index++;
+				if (expansion(&node->input, index, expand, to_expand))
+					special(temp, expand, to_expand);
+				index += 1;
 			}
 		}
 		node = node->next;

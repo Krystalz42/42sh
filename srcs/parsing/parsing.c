@@ -6,61 +6,15 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:11:28 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/11 11:31:05 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/12 22:08:37 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-void			logger_token(t_cmd *cmd)
-{
-	int			fd = open("/tmp/token", O_RDWR | O_CREAT | O_TRUNC, 0644);
-
-	while (cmd && cmd->c)
-	{
-		if (cmd->value == 1)
-			dprintf(fd, " \e[34mchar: [%c]		value: [%d]\e[0m\n", cmd->c, cmd->value);
-		else if (cmd->value == 2)
-			dprintf(fd, " \e[32mchar: [%c]		value: [%d]\e[0m\n", cmd->c, cmd->value);
-		cmd = cmd->next;
-	}
-	dprintf(fd, "------------------------------------------\n");
-	close(fd);
-}
-
-void			logger_list(t_parsing *node)
-{
-	int			fd = open("/tmp/list", O_RDWR | O_CREAT | O_TRUNC, 0644);
-
-	while (node)
-	{
-		if (node->priority == SYNTAX_ERR)
-			dprintf(fd, "\e[31mstr: [%s]	value: [%d]		prio: [%d]\e[0m\n", node->input, node->value, node->priority);
-		else if (node->priority == 5)
-			dprintf(fd, "\e[34mstr: [%s]	value: [%d]		prio: [%d]\e[0m\n", node->input, node->value, node->priority);
-		else
-			dprintf(fd, "\e[32mstr: [%s]	value: [%d]		prio: [%d]\e[0m\n", node->input, node->value, node->priority);
-		node = node->next;
-	}
-	dprintf(fd, "------------------------------------------\n");
-	close(fd);
-}
-
-void			logger(t_parsing *node)
-{
-	size_t		index;
-
-	while (node)
-	{
-		index = 0;
-		while (node->command && node->command[index])
-		{
-			log_info("[%s]", node->command[index]);
-			index++;
-		}
-		node = node->next;
-	}
-}
+void			special_logger(t_cmd *cmd);
+void			token_logger(t_cmd *cmd);
+void			list_logger(t_parsing *node);
 
 /*
 *************** PRIVATE ********************************************************
@@ -68,7 +22,8 @@ void			logger(t_parsing *node)
 
 static void		lexing(t_parsing **node, t_cmd *cmd)
 {
-	tokenisation(cmd);
+	special_tokenisation(cmd);
+	regular_tokenisation(cmd);
 	lexer(cmd, node);
 	recognition(*node);
 }
@@ -82,12 +37,10 @@ static void		parser(t_parsing **node)
 
 static void		expanding(t_parsing *node)
 {
-	//ret_value(node);
-	//tilde(node);
-	/*variable(node);*/
-	split(node);
+	special(node, "$?", var_return(-1));
+	special(node, "$$", getpid());
+	tilde(node);
 }
-
 
 /*
 *************** PUBLIC *********************************************************
@@ -102,9 +55,10 @@ t_parsing		*parsing(t_cmd *cmd)
 	parser(&node);
 	expanding(node);
 
-	logger_token(cmd);
-	logger_list(node);
-	logger(node);
+	special_logger(cmd);
+	token_logger(cmd);
+	list_logger(node);
+
 
 	return (node);
 }

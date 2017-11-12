@@ -1,54 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tokenisation.c                                     :+:      :+:    :+:   */
+/*   regular_tokenisation.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 15:14:24 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/11 11:19:02 by jle-quel         ###   ########.fr       */
+/*   Created: 2017/11/12 19:50:25 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/12 19:53:14 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sh.h"
 
 /*
-*************** TOOLS **********************************************************
-*/
-
-static bool		chk(t_cmd *cmd, int status, size_t occurence)
-{
-	if (!(status & QUOTE))
-	{
-		if (cmd && cmd->c && cmd->c == '\\')
-			return (chk(cmd->prev, status, occurence + 1));
-	}
-	return (occurence % 2);
-}
-
-/*
 *************** PRIVATE ********************************************************
 */
 
-static int		get_value(char c)
+int		get_value(char c)
 {
 	short				index;
 	static const char	*operaters = ";|<>&";
 
-	if (c)
+	index = 0;
+	while (c && operaters[index])
 	{
-		index = 0;
-		while (operaters[index])
-		{
-			if (operaters[index] == c)
-				return (OPERATER);
-			index++;
-		}
+		if (operaters[index] == c)
+			return (OPERATER);
+		index++;
 	}
 	return (TOKEN);
 }
 
-static int		populate(t_cmd *cmd)
+int		populate(t_cmd *cmd)
 {
 	if (cmd && cmd->c)
 	{
@@ -66,21 +49,21 @@ static int		populate(t_cmd *cmd)
 *************** PUBLIC *********************************************************
 */
 
-void			tokenisation(t_cmd *cmd)
+void			regular_tokenisation(t_cmd *cmd)
 {
-	uint8_t		status;
+	uint8_t		quote;
+	uint8_t		temp;
 
-	status = DEFAULT;
+	quote = NORMAL;
+	temp = quote;
+
 	while (cmd && cmd->c)
 	{
 		cmd->value = TOKEN;
-		if (!chk(cmd->prev, status, 0))
+		if (cmd->status == NORMAL)
 		{
-			if (chk_quote(cmd->c, &status) && (status & DEFAULT))
-			{
-				cmd->value = get_value(cmd->c);
-				cmd->c == '>' ? populate(cmd->prev) : 0;
-			}
+			cmd->value = get_value(cmd->c);
+			cmd->c == '>' ? populate(cmd->prev) : 0;
 		}
 		cmd = cmd->next;
 	}

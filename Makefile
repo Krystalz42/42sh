@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/10 17:08:21 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/11/12 22:09:05 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -178,19 +178,20 @@ SRCS = \
 	   jobs_control/set_process.c								\
 	   jobs_control/my_wait.c									\
 	   jobs_control/my_execve.c									\
+	   															\
 	   parsing/parsing.c										\
 	   parsing/tools.c											\
-	   parsing/lexing/tokenisation.c							\
+	   parsing/lexing/special_tokenisation.c					\
+	   parsing/lexing/regular_tokenisation.c					\
 	   parsing/lexing/lexer.c									\
 	   parsing/lexing/recognition.c								\
 	   parsing/parsing/parsing.c								\
-	   parsing/expanding/split.c								\
+	   parsing/expanding/special.c								\
 	   parsing/expanding/tilde.c								\
-	   parsing/expanding/variable.c								\
-	   parsing/expanding/ret_value.c							\
-	   parsing/expanding/tools.c								\
 	   parsing/tools/list.c										\
 	   parsing/tools/error.c									\
+	   parsing/tools/logger.c									\
+	   															\
 	   binary_tree/binary_tree.c								\
 	   env/add_environment.c									\
 	   env/remove_environment.c									\
@@ -303,6 +304,7 @@ $(DIR_DEPS) :
 # ---------------------------------------------------------------------------- #
 
 all : libs $(NAME)
+	@afplay ~/Desktop/test.mp3
 
 $(NAME)		: $(DIR_OBJS) $(DIR_DEPS) $(O_SRCS) $(LIBS)
 	@$(CC) $(O_SRCS) -o  $(NAME) $(LDFLAGS) $(LDLIBS)
