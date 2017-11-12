@@ -14,19 +14,14 @@ static void					play_with_fildes(t_jobs *jobs, int info, pid_t pid)
 			if (WRITE_PREVIOUS & info)
 			{
 				log_trace("Write %d", pid);
-				if (pid == -1)
-					write_pipe(process->fildes);
-				else if (process->prev)
-					write_pipe(process->prev->fildes);
+				write_pipe(process->prev->fildes);
 			}
 			if (READ & info)
 			{
 				log_trace("Read %d", pid);
 				read_pipe(process->fildes);
 			}
-			if (pid != -1)
-				close_pipe(process->fildes);
-			close(jobs->process->fdout);
+			close_pipe(process->fildes);
 		}
 
 }

@@ -97,7 +97,6 @@ uint8_t					ft_setenv(t_node *node, int info)
 		}
 		i++;
 	}
-	ft_putstr("Success\n");
 	add_environment(node->content->command[1]);
 	free(variable);
 	return (var_return(0));

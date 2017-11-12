@@ -70,16 +70,25 @@ char 		**build_table(char **heredoc, char *str)
 
 void		do_heredoc(t_node *node)
 {
-	t_cmd		*cmd;
-	char		**heredoc;
+	t_cmd				*cmd;
+	char				**heredoc;
+	int					fildes;
 
+	node->content->heredoc = ft_strjoin("/tmp/", ft_itoa((int)time(NULL)));
+	fildes = open(node->content->heredoc, O_WRONLY | O_CREAT, 0644);
 	heredoc = NULL;
 	while (0x2A)
 	{
 		cmd = first_cmd(read_stdin(HEREDOC), 1);
-		if (compare_heredoc(cmd, node->right->content->command[0]) == 0 || signal_reception(-1) == 1)
+		if (cmd == NULL)
 		{
-			node->right->content->heredoc = heredoc;
+			ft_memdel_tab(&heredoc);
+			return ;
+		}
+		else if (compare_heredoc(cmd, node->right->content->command[0]) == 0 || signal_reception(-1) == 1)
+		{
+			ft_putstrtab_fd(heredoc, 10, fildes);
+			ft_memdel_tab(&heredoc);
 			memdel_cmd(&cmd);
 			return ;
 		}
