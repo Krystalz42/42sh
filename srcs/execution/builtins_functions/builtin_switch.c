@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-uint8_t		error_builtin(char *from, char *error, char *args)
+uint8_t		error_msg(char *from, char *error, char *args)
 {
 	ft_putstr_fd(from, STDERR_FILENO);
 	ft_putstr_fd(error, STDERR_FILENO);
@@ -33,16 +33,18 @@ uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
 		{
 			modify_runing(jobs[index].process, true);
 			kill(-(jobs[index].process->pgid), SIGCONT);
+			print_jobs(jobs + index, 16);
 		}
+		else
+			print_jobs(jobs + index, 0);
 		update_status(jobs[index].process);
-		print_jobs(jobs + index, 0);
 		wait_process(jobs + index);
 		set_fildes(getpgid(0));
 		init_signal();
 		return (0);
 	}
 	else
-		return (error_builtin(FG, error, args));
+		return (error_msg(FG, error, args));
 }
 
 uint8_t		bg_switch_process(t_jobs *jobs, int index, char *error, char *args)
@@ -55,12 +57,12 @@ uint8_t		bg_switch_process(t_jobs *jobs, int index, char *error, char *args)
 		modify_foreground(jobs[index].process, false);
 		kill(-jobs[index].process->pgid, SIGCONT);
 		update_status(jobs[index].process);
-		print_jobs(jobs + index, 0);
+		print_jobs(jobs + index, 16);
 		pjt(jobs + index);
 		return (0);
 	}
 	else
-		return (error_builtin(BG, error, args));
+		return (error_msg(BG, error, args));
 }
 
 uint8_t		builtin_foreground(t_node *node, int info)

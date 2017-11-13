@@ -42,7 +42,7 @@ int		init_term(void)
 		ret += 4;
 	if (ret)
 	{
-		error_builtin("termios : ", "can't be initialize\n", NULL);
+		error_msg("termios : ", "can't be initialize\n", NULL);
 		exit(255);
 	}
 	return (0);

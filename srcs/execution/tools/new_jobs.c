@@ -17,7 +17,7 @@ t_jobs				*new_jobs(t_jobs *jobs)
 		if (index == MAX_CHILD - 1)
 		{
 			var_return(255);
-			error_builtin("jobs: ", "too much process: ", NULL);
+			error_msg(S42H, "too much process: ", NULL);
 			return (NULL);
 		}
 		else

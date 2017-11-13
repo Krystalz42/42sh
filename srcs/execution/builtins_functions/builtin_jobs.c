@@ -21,73 +21,77 @@
 **		Display only STOP jobs.
 **	-l 8
 **		List process IDs in addition to the normal information.
+**	16
+**		Force Continued
 */
 
-int			print_process(t_process *process, int info, int parent, int index)
-{
-	if (process->pid == process->pgid)
-		ft_printf("[%d]\t", index + 1);
-	else if (parent && process->pid != process->pgid)
-		return (1);
-	else
-		ft_putchar('\t');
-	if (info)
-		ft_printf("\t%d %d %s %s\n", process->pid, process->pgid,
-				process->running ? RUN : STOP, process->command);
-	else
-		ft_printf("\t%s %s\n", process->running ? RUN : STOP, process->command);
-	return (1);
-}
 
-uint8_t		print_jobs(t_jobs *jobs, int opt)
+
+static uint8_t			jobs_iter(t_jobs *jobs, int option)
 {
 	int					index;
-	t_process			*process;
 
 	index = 0;
 	while (index < MAX_CHILD)
 	{
 		if (jobs[index].process)
-		{
-			process = jobs[index].process;
-			while (process)
-			{
-				if ((opt & 2) && process->running)
-					print_process(process, (opt & 8), (opt & 1), index);
-				else if ((opt & 4) && process->running == false)
-					print_process(process, (opt & 8), (opt & 1), index);
-				else if (!(opt & 2) && !(opt & 4))
-					print_process(process, (opt & 8), (opt & 1), index);
-				process = process->next;
-			}
-		}
+			print_jobs(jobs + index, option);
 		index++;
 	}
 	return (0);
 }
 
+static int				check_option(char **command)
+{
+	int			index;
+	int			option;
+	int			table;
+
+	option = 0;
+	table = 1;
+	if (command[table] && !ft_strcmp(command[table], HELP))
+		return (var_return(usage_jobs()));
+	while (command[table] && command[table][0] == '-')
+	{
+		index = 0;
+		while (command[table][index])
+		{
+			option += (command[table][index] == 'p' && !(option & 1)) ? 1 : 0;
+			option += (command[table][index] == 'r' && !(option & 2)) ? 2 : 0;
+			option += (command[table][index] == 's' && !(option & 4)) ? 4 : 0;
+			option += (command[table][index] == 'l' && !(option & 8)) ? 8 : 0;
+			index++;
+		}
+		table++;
+	}
+	return (option);
+}
+
+static int				check_jobs_spec(char **command)
+{
+	int			table;
+	int			jobs_spec;
+
+	jobs_spec = -1;
+	table = 1;
+	while (command[table] && command[table][0] == '-')
+		table++;
+	if (command[table] && command[table][0] == '%')
+		jobs_spec = ft_atoi(command[table] + 1);
+	return (jobs_spec);
+}
+
+
 uint8_t			builtin_jobs(t_node *node, int info __attribute__((unused)))
 {
-	int					t;
-	int					opt;
-	int					i;
+	int					option;
+	int					jobs_spec;
+	t_jobs				*jobs;
 
-	opt = 0;
-	t = 1;
-	if (node->content->command[1] && !ft_strcmp(node->content->command[1], HELP))
-		return (var_return(usage_jobs()));
-	while (node->content->command[t] && node->content->command[t][0] == '-')
-	{
-		i = 0;
-		while (node->content->command[t][i])
-		{
-			opt += (node->content->command[t][i] == 'p' && !(opt & 1)) ? 1 : 0;
-			opt += (node->content->command[t][i] == 'r' && !(opt & 2)) ? 2 : 0;
-			opt += (node->content->command[t][i] == 's' && !(opt & 4)) ? 4 : 0;
-			opt += (node->content->command[t][i] == 'l' && !(opt & 8)) ? 8 : 0;
-			i++;
-		}
-		t++;
-	}
-	return (var_return(print_jobs(jobs_table(), opt)));
+	jobs = jobs_table();
+	option = check_option(node->content->command);
+	jobs_spec = check_jobs_spec(node->content->command);
+	if (jobs_spec > 0 && jobs_spec < MAX_CHILD)
+		return (var_return(print_jobs(jobs + (jobs_spec - 1), option)));
+	return (var_return(jobs_iter(jobs_table(), option)));
 }

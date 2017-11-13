@@ -173,13 +173,14 @@ SRCS = \
 	   execution/builtins_functions/refresh_varenv.c			\
 	   execution/builtins_functions/utils.c						\
 	   execution/builtins_functions/error.c						\
+	   execution/builtins_functions/builtin_kill2.c				\
 	   jobs_control/modify_status_jobs.c						\
 	   jobs_control/status_signals.c							\
 	   jobs_control/jobs_control.c								\
 	   jobs_control/set_process.c								\
 	   jobs_control/my_wait.c									\
+	   jobs_control/print_process.c								\
 	   jobs_control/my_execve.c									\
-	   															\
 	   parsing/parsing.c										\
 	   parsing/tools.c											\
 	   parsing/lexing/special_tokenisation.c					\
@@ -193,7 +194,6 @@ SRCS = \
 	   parsing/tools/list.c										\
 	   parsing/tools/error.c									\
 	   parsing/tools/logger.c									\
-	   															\
 	   binary_tree/binary_tree.c								\
 	   env/add_environment.c									\
 	   env/remove_environment.c									\

@@ -264,6 +264,7 @@ own env temporarily.\n"
 # define KILL					"kill: "
 # define ENV					"env: "
 # define HISTORY				"history: "
+# define S42H					"42sh :"
 
 # define INVALID				"invalid argument : "
 # define NO_ARGS_U				"option requires an argument -- u"
@@ -279,6 +280,7 @@ own env temporarily.\n"
 # define NUM_REQUIRED			"numeric argument required :"
 # define RUN					"Running"
 # define STOP					"Stopped"
+# define CONTINUED				"Continued"
 
 # define HISTSIZE				500
 # define HELP					"--help"

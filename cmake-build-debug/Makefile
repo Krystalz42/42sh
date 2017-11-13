@@ -3876,6 +3876,33 @@ srcs/execution/builtins_functions/builtin_kill.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_kill.c.s
 .PHONY : srcs/execution/builtins_functions/builtin_kill.c.s
 
+srcs/execution/builtins_functions/builtin_kill2.o: srcs/execution/builtins_functions/builtin_kill2.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_kill2.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_kill2.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_kill2.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_kill2.c.o
+
+srcs/execution/builtins_functions/builtin_kill2.i: srcs/execution/builtins_functions/builtin_kill2.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_kill2.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_kill2.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_kill2.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_kill2.c.i
+
+srcs/execution/builtins_functions/builtin_kill2.s: srcs/execution/builtins_functions/builtin_kill2.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_kill2.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_kill2.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_kill2.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_kill2.c.s
+
 srcs/execution/builtins_functions/builtin_suspend.o: srcs/execution/builtins_functions/builtin_suspend.c.o
 
 .PHONY : srcs/execution/builtins_functions/builtin_suspend.o
@@ -5279,6 +5306,33 @@ srcs/jobs_control/my_wait.s: srcs/jobs_control/my_wait.c.s
 srcs/jobs_control/my_wait.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/my_wait.c.s
 .PHONY : srcs/jobs_control/my_wait.c.s
+
+srcs/jobs_control/print_process.o: srcs/jobs_control/print_process.c.o
+
+.PHONY : srcs/jobs_control/print_process.o
+
+# target to build an object file
+srcs/jobs_control/print_process.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/print_process.c.o
+.PHONY : srcs/jobs_control/print_process.c.o
+
+srcs/jobs_control/print_process.i: srcs/jobs_control/print_process.c.i
+
+.PHONY : srcs/jobs_control/print_process.i
+
+# target to preprocess a source file
+srcs/jobs_control/print_process.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/print_process.c.i
+.PHONY : srcs/jobs_control/print_process.c.i
+
+srcs/jobs_control/print_process.s: srcs/jobs_control/print_process.c.s
+
+.PHONY : srcs/jobs_control/print_process.s
+
+# target to generate assembly for a file
+srcs/jobs_control/print_process.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/jobs_control/print_process.c.s
+.PHONY : srcs/jobs_control/print_process.c.s
 
 srcs/jobs_control/set_process.o: srcs/jobs_control/set_process.c.o
 
@@ -8217,6 +8271,9 @@ help:
 	@echo "... srcs/execution/builtins_functions/builtin_kill.o"
 	@echo "... srcs/execution/builtins_functions/builtin_kill.i"
 	@echo "... srcs/execution/builtins_functions/builtin_kill.s"
+	@echo "... srcs/execution/builtins_functions/builtin_kill2.o"
+	@echo "... srcs/execution/builtins_functions/builtin_kill2.i"
+	@echo "... srcs/execution/builtins_functions/builtin_kill2.s"
 	@echo "... srcs/execution/builtins_functions/builtin_suspend.o"
 	@echo "... srcs/execution/builtins_functions/builtin_suspend.i"
 	@echo "... srcs/execution/builtins_functions/builtin_suspend.s"
@@ -8373,6 +8430,9 @@ help:
 	@echo "... srcs/jobs_control/my_wait.o"
 	@echo "... srcs/jobs_control/my_wait.i"
 	@echo "... srcs/jobs_control/my_wait.s"
+	@echo "... srcs/jobs_control/print_process.o"
+	@echo "... srcs/jobs_control/print_process.i"
+	@echo "... srcs/jobs_control/print_process.s"
 	@echo "... srcs/jobs_control/set_process.o"
 	@echo "... srcs/jobs_control/set_process.i"
 	@echo "... srcs/jobs_control/set_process.s"

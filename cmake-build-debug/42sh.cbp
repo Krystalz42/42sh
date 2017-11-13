@@ -534,6 +534,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_kill.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_kill2.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_suspend.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -688,6 +691,9 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/my_wait.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/print_process.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/set_process.c">

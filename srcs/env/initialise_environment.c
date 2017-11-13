@@ -86,7 +86,7 @@ int					start_from_less(char **command, char ***env)
 		(*env) = cpy;
 		return (1);
 	}
-	error_builtin(ENV, NO_ARGS_U, NULL);
+	error_msg(ENV, NO_ARGS_U, NULL);
 	return (-1);
 }
 

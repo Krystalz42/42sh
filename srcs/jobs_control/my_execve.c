@@ -22,7 +22,7 @@ void			my_execve(char **command, char **env)
 		log_debug("%s", command[i]);
 	if ((execve(command[0], command, env)) == -1)
 	{
-		error_builtin("42sh: ", "command not found: ", command[0]);
+		error_msg("42sh: ", "command not found: ", command[0]);
 		exit(127);
 	}
 }

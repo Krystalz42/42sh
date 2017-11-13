@@ -31,7 +31,7 @@ t_process			*my_fork(t_jobs *jobs, t_node *node, int info)
 
 	process = new_process(jobs);
 	if ((process->pid = fork()) == -1)
-		error_builtin("fork :", "fork failed", NULL);
+		error_msg("fork :", "fork failed", NULL);
 	process->fildes[0] = -1;
 	process->fildes[1] = -1;
 	process->running = true;

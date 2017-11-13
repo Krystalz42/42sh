@@ -61,7 +61,7 @@ uint8_t			builtin_history(t_node *node, int info)
 		while (node->content->command[index][c])
 		{
 			if (potential_option(node->content->command[index][c]) == 0)
-				return (error_builtin(HISTORY, INVALID, node->content->command[index] + c));
+				return (error_msg(HISTORY, INVALID, node->content->command[index] + c));
 			option += node->content->command[index][c] == 'c' && !(option & 1) ? 1 : 0;
 			option += node->content->command[index][c] == 'd' && !(option & 2) ? 2 : 0;
 			option += node->content->command[index][c] == 'r' && !(option & 4) ? 4 : 0;

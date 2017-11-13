@@ -40,26 +40,6 @@ void			update_jobs(t_process *process)
 	}
 }
 
-void			print_status(t_process *process, int jobs_spec)
-{
-	log_warn("/!\\  [PROCESS %d WILL BE PRINT]] /!\\", jobs_spec);
-	cursor_column(1);
-	while (process)
-	{
-		process->prev != NULL ? CHAR('\t') : ft_printf("[%d]\t", jobs_spec + 1);
-		if (WIFEXITED(process->status))
-			ft_printf("%d %s %s\n", process->pid, status_exit(WEXITSTATUS(process->status)), process->command);
-		else if (WIFSIGNALED(process->status))
-			ft_printf("%d %s %s\n", process->pid, status_signal(WTERMSIG(process->status)), process->command);
-		else if (WIFCONTINUED(process->status))
-			ft_printf("%d %s %s\n", process->pid, status_signal(18), process->command);
-		else if (WIFSTOPPED(process->status))
-			ft_printf("%d %s %s\n", process->pid, status_signal(WSTOPSIG(process->status)), process->command);
-		process = process->next;
-	}
-	ioctl(STDIN_FILENO, TIOCSTI, "\0");
-}
-
 int				update_status(t_process *process)
 {
 	int				ret;

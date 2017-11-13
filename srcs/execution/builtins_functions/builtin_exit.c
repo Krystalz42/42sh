@@ -38,14 +38,14 @@ uint8_t			builtin_exit(t_node *node, int info __attribute__((unused)))
 			var = ft_atoi(node->content->command[1]);
 		else
 		{
-			error_builtin(EXIT, NUM_REQUIRED, node->content->command[1]);
+			error_msg(EXIT, NUM_REQUIRED, node->content->command[1]);
 			var = 255;
 		}
 		b_write_history_in_file(get_str_from_history());
 		exit(var);
 	}
 	else if (length > 2)
-		return (error_builtin(EXIT, TOO_MANY_ARGS, NULL));
+		return (error_msg(EXIT, TOO_MANY_ARGS, NULL));
 	else
 		exit_();
 	return (0);

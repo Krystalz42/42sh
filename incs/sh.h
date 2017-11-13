@@ -124,6 +124,11 @@ uint8_t						b_write_history(void);
 uint8_t						b_clear_history(void);
 uint8_t						b_delete_history_offset(int offset);
 uint8_t						write_history_in_sh(char *pathname);
+uint8_t						kill_process(char *string1, char *string2);
+uint8_t						signal_from_int(uint8_t signal);
+uint8_t						signal_from_str(char *status);
+uint8_t						all_signal(void);
+
 /*
 **				FUNCTION FOR COMPLETION
 */
@@ -297,7 +302,6 @@ t_parsing					*lstnew(char *input);
 **				JOB'S CONTROL FUNCTION
 */
 
-uint8_t						print_jobs(t_jobs *jobs, int opt);
 t_node						*find_executing_node(t_node *node);
 void						first_process(t_jobs *jobs);
 void						reset_process(t_jobs *jobs);
@@ -311,10 +315,17 @@ void						my_wait(t_jobs *jobs);
 int							terminate_process(t_process *process);
 void						modify_runing(t_process *process, bool change);
 void						modify_foreground(t_process *process, bool change);
-void						print_status(t_process *process, int index);
 void						set_fildes(pid_t pgid);
 const char					*status_signal(int signal);
 const char					*status_exit(int signal);
+
+/*
+**				PRINT PROCESS
+*/
+
+void						print_status(t_process *process, int jobs_spec);
+int							print_process(t_process *process,int option, int index);
+uint8_t						print_jobs(t_jobs *jobs, int option);
 
 /*
 **				CREATE BINARY TREE
@@ -390,7 +401,7 @@ void						memdel_outstanding(void);
 **				ERROR FUNCTION
 */
 
-uint8_t						error_builtin(char *from, char *error, char *args);
+uint8_t						error_msg(char *from, char *error, char *args);
 void						*error_env(void);
 void						puterror(char *err);
 int							bip(void);

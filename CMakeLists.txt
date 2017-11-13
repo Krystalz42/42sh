@@ -296,7 +296,7 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c)
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/jobs_control/print_process.c srcs/execution/builtins_functions/builtin_kill2.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)
