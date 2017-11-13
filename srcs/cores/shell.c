@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:11:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/12 20:14:25 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/13 12:04:09 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,9 @@ int		shell(void)
 			continue ;
 		if ((tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR)) == NULL)
 			continue ;
-//		 check_tree_path(tree);
-//		 execute_node(tree, NULL, FORK | FOREGROUND);
-		 cursor_column(1);
+		check_tree_path(tree);
+		execute_node(tree, NULL, FORK | FOREGROUND);
+		cursor_column(1);
 		free_node(&tree);
 	}
 	return (0);
