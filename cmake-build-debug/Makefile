@@ -5469,32 +5469,32 @@ srcs/memdel_struct/memdel_search_history.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_search_history.c.s
 .PHONY : srcs/memdel_struct/memdel_search_history.c.s
 
-srcs/parsing/expanding/split.o: srcs/parsing/expanding/split.c.o
+srcs/parsing/expanding/special.o: srcs/parsing/expanding/special.c.o
 
-.PHONY : srcs/parsing/expanding/split.o
+.PHONY : srcs/parsing/expanding/special.o
 
 # target to build an object file
-srcs/parsing/expanding/split.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split.c.o
-.PHONY : srcs/parsing/expanding/split.c.o
+srcs/parsing/expanding/special.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/special.c.o
+.PHONY : srcs/parsing/expanding/special.c.o
 
-srcs/parsing/expanding/split.i: srcs/parsing/expanding/split.c.i
+srcs/parsing/expanding/special.i: srcs/parsing/expanding/special.c.i
 
-.PHONY : srcs/parsing/expanding/split.i
+.PHONY : srcs/parsing/expanding/special.i
 
 # target to preprocess a source file
-srcs/parsing/expanding/split.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split.c.i
-.PHONY : srcs/parsing/expanding/split.c.i
+srcs/parsing/expanding/special.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/special.c.i
+.PHONY : srcs/parsing/expanding/special.c.i
 
-srcs/parsing/expanding/split.s: srcs/parsing/expanding/split.c.s
+srcs/parsing/expanding/special.s: srcs/parsing/expanding/special.c.s
 
-.PHONY : srcs/parsing/expanding/split.s
+.PHONY : srcs/parsing/expanding/special.s
 
 # target to generate assembly for a file
-srcs/parsing/expanding/split.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split.c.s
-.PHONY : srcs/parsing/expanding/split.c.s
+srcs/parsing/expanding/special.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/special.c.s
+.PHONY : srcs/parsing/expanding/special.c.s
 
 srcs/parsing/expanding/tilde.o: srcs/parsing/expanding/tilde.c.o
 
@@ -5522,60 +5522,6 @@ srcs/parsing/expanding/tilde.s: srcs/parsing/expanding/tilde.c.s
 srcs/parsing/expanding/tilde.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/tilde.c.s
 .PHONY : srcs/parsing/expanding/tilde.c.s
-
-srcs/parsing/expanding/tools.o: srcs/parsing/expanding/tools.c.o
-
-.PHONY : srcs/parsing/expanding/tools.o
-
-# target to build an object file
-srcs/parsing/expanding/tools.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/tools.c.o
-.PHONY : srcs/parsing/expanding/tools.c.o
-
-srcs/parsing/expanding/tools.i: srcs/parsing/expanding/tools.c.i
-
-.PHONY : srcs/parsing/expanding/tools.i
-
-# target to preprocess a source file
-srcs/parsing/expanding/tools.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/tools.c.i
-.PHONY : srcs/parsing/expanding/tools.c.i
-
-srcs/parsing/expanding/tools.s: srcs/parsing/expanding/tools.c.s
-
-.PHONY : srcs/parsing/expanding/tools.s
-
-# target to generate assembly for a file
-srcs/parsing/expanding/tools.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/tools.c.s
-.PHONY : srcs/parsing/expanding/tools.c.s
-
-srcs/parsing/expanding/variable.o: srcs/parsing/expanding/variable.c.o
-
-.PHONY : srcs/parsing/expanding/variable.o
-
-# target to build an object file
-srcs/parsing/expanding/variable.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/variable.c.o
-.PHONY : srcs/parsing/expanding/variable.c.o
-
-srcs/parsing/expanding/variable.i: srcs/parsing/expanding/variable.c.i
-
-.PHONY : srcs/parsing/expanding/variable.i
-
-# target to preprocess a source file
-srcs/parsing/expanding/variable.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/variable.c.i
-.PHONY : srcs/parsing/expanding/variable.c.i
-
-srcs/parsing/expanding/variable.s: srcs/parsing/expanding/variable.c.s
-
-.PHONY : srcs/parsing/expanding/variable.s
-
-# target to generate assembly for a file
-srcs/parsing/expanding/variable.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/variable.c.s
-.PHONY : srcs/parsing/expanding/variable.c.s
 
 srcs/parsing/lexing/lexer.o: srcs/parsing/lexing/lexer.c.o
 
@@ -5631,32 +5577,59 @@ srcs/parsing/lexing/recognition.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing/recognition.c.s
 .PHONY : srcs/parsing/lexing/recognition.c.s
 
-srcs/parsing/lexing/tokenisation.o: srcs/parsing/lexing/tokenisation.c.o
+srcs/parsing/lexing/regular_tokenisation.o: srcs/parsing/lexing/regular_tokenisation.c.o
 
-.PHONY : srcs/parsing/lexing/tokenisation.o
+.PHONY : srcs/parsing/lexing/regular_tokenisation.o
 
 # target to build an object file
-srcs/parsing/lexing/tokenisation.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing/tokenisation.c.o
-.PHONY : srcs/parsing/lexing/tokenisation.c.o
+srcs/parsing/lexing/regular_tokenisation.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing/regular_tokenisation.c.o
+.PHONY : srcs/parsing/lexing/regular_tokenisation.c.o
 
-srcs/parsing/lexing/tokenisation.i: srcs/parsing/lexing/tokenisation.c.i
+srcs/parsing/lexing/regular_tokenisation.i: srcs/parsing/lexing/regular_tokenisation.c.i
 
-.PHONY : srcs/parsing/lexing/tokenisation.i
+.PHONY : srcs/parsing/lexing/regular_tokenisation.i
 
 # target to preprocess a source file
-srcs/parsing/lexing/tokenisation.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing/tokenisation.c.i
-.PHONY : srcs/parsing/lexing/tokenisation.c.i
+srcs/parsing/lexing/regular_tokenisation.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing/regular_tokenisation.c.i
+.PHONY : srcs/parsing/lexing/regular_tokenisation.c.i
 
-srcs/parsing/lexing/tokenisation.s: srcs/parsing/lexing/tokenisation.c.s
+srcs/parsing/lexing/regular_tokenisation.s: srcs/parsing/lexing/regular_tokenisation.c.s
 
-.PHONY : srcs/parsing/lexing/tokenisation.s
+.PHONY : srcs/parsing/lexing/regular_tokenisation.s
 
 # target to generate assembly for a file
-srcs/parsing/lexing/tokenisation.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing/tokenisation.c.s
-.PHONY : srcs/parsing/lexing/tokenisation.c.s
+srcs/parsing/lexing/regular_tokenisation.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing/regular_tokenisation.c.s
+.PHONY : srcs/parsing/lexing/regular_tokenisation.c.s
+
+srcs/parsing/lexing/special_tokenisation.o: srcs/parsing/lexing/special_tokenisation.c.o
+
+.PHONY : srcs/parsing/lexing/special_tokenisation.o
+
+# target to build an object file
+srcs/parsing/lexing/special_tokenisation.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing/special_tokenisation.c.o
+.PHONY : srcs/parsing/lexing/special_tokenisation.c.o
+
+srcs/parsing/lexing/special_tokenisation.i: srcs/parsing/lexing/special_tokenisation.c.i
+
+.PHONY : srcs/parsing/lexing/special_tokenisation.i
+
+# target to preprocess a source file
+srcs/parsing/lexing/special_tokenisation.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing/special_tokenisation.c.i
+.PHONY : srcs/parsing/lexing/special_tokenisation.c.i
+
+srcs/parsing/lexing/special_tokenisation.s: srcs/parsing/lexing/special_tokenisation.c.s
+
+.PHONY : srcs/parsing/lexing/special_tokenisation.s
+
+# target to generate assembly for a file
+srcs/parsing/lexing/special_tokenisation.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/lexing/special_tokenisation.c.s
+.PHONY : srcs/parsing/lexing/special_tokenisation.c.s
 
 srcs/parsing/parsing.o: srcs/parsing/parsing.c.o
 
@@ -5792,6 +5765,33 @@ srcs/parsing/tools/list.s: srcs/parsing/tools/list.c.s
 srcs/parsing/tools/list.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/tools/list.c.s
 .PHONY : srcs/parsing/tools/list.c.s
+
+srcs/parsing/tools/logger.o: srcs/parsing/tools/logger.c.o
+
+.PHONY : srcs/parsing/tools/logger.o
+
+# target to build an object file
+srcs/parsing/tools/logger.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/tools/logger.c.o
+.PHONY : srcs/parsing/tools/logger.c.o
+
+srcs/parsing/tools/logger.i: srcs/parsing/tools/logger.c.i
+
+.PHONY : srcs/parsing/tools/logger.i
+
+# target to preprocess a source file
+srcs/parsing/tools/logger.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/tools/logger.c.i
+.PHONY : srcs/parsing/tools/logger.c.i
+
+srcs/parsing/tools/logger.s: srcs/parsing/tools/logger.c.s
+
+.PHONY : srcs/parsing/tools/logger.s
+
+# target to generate assembly for a file
+srcs/parsing/tools/logger.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/tools/logger.c.s
+.PHONY : srcs/parsing/tools/logger.c.s
 
 srcs/read/completion/check_binary_path.o: srcs/read/completion/check_binary_path.c.o
 
@@ -8340,27 +8340,24 @@ help:
 	@echo "... srcs/memdel_struct/memdel_search_history.o"
 	@echo "... srcs/memdel_struct/memdel_search_history.i"
 	@echo "... srcs/memdel_struct/memdel_search_history.s"
-	@echo "... srcs/parsing/expanding/split.o"
-	@echo "... srcs/parsing/expanding/split.i"
-	@echo "... srcs/parsing/expanding/split.s"
+	@echo "... srcs/parsing/expanding/special.o"
+	@echo "... srcs/parsing/expanding/special.i"
+	@echo "... srcs/parsing/expanding/special.s"
 	@echo "... srcs/parsing/expanding/tilde.o"
 	@echo "... srcs/parsing/expanding/tilde.i"
 	@echo "... srcs/parsing/expanding/tilde.s"
-	@echo "... srcs/parsing/expanding/tools.o"
-	@echo "... srcs/parsing/expanding/tools.i"
-	@echo "... srcs/parsing/expanding/tools.s"
-	@echo "... srcs/parsing/expanding/variable.o"
-	@echo "... srcs/parsing/expanding/variable.i"
-	@echo "... srcs/parsing/expanding/variable.s"
 	@echo "... srcs/parsing/lexing/lexer.o"
 	@echo "... srcs/parsing/lexing/lexer.i"
 	@echo "... srcs/parsing/lexing/lexer.s"
 	@echo "... srcs/parsing/lexing/recognition.o"
 	@echo "... srcs/parsing/lexing/recognition.i"
 	@echo "... srcs/parsing/lexing/recognition.s"
-	@echo "... srcs/parsing/lexing/tokenisation.o"
-	@echo "... srcs/parsing/lexing/tokenisation.i"
-	@echo "... srcs/parsing/lexing/tokenisation.s"
+	@echo "... srcs/parsing/lexing/regular_tokenisation.o"
+	@echo "... srcs/parsing/lexing/regular_tokenisation.i"
+	@echo "... srcs/parsing/lexing/regular_tokenisation.s"
+	@echo "... srcs/parsing/lexing/special_tokenisation.o"
+	@echo "... srcs/parsing/lexing/special_tokenisation.i"
+	@echo "... srcs/parsing/lexing/special_tokenisation.s"
 	@echo "... srcs/parsing/parsing.o"
 	@echo "... srcs/parsing/parsing.i"
 	@echo "... srcs/parsing/parsing.s"
@@ -8376,6 +8373,9 @@ help:
 	@echo "... srcs/parsing/tools/list.o"
 	@echo "... srcs/parsing/tools/list.i"
 	@echo "... srcs/parsing/tools/list.s"
+	@echo "... srcs/parsing/tools/logger.o"
+	@echo "... srcs/parsing/tools/logger.i"
+	@echo "... srcs/parsing/tools/logger.s"
 	@echo "... srcs/read/completion/check_binary_path.o"
 	@echo "... srcs/read/completion/check_binary_path.i"
 	@echo "... srcs/read/completion/check_binary_path.s"

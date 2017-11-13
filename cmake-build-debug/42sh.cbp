@@ -711,16 +711,10 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_search_history.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/split.c">
+		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/special.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/tilde.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/tools.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/variable.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/parsing/lexing/lexer.c">
@@ -729,7 +723,10 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/parsing/lexing/recognition.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/parsing/lexing/tokenisation.c">
+		<Unit filename="/Users/aroulin/42sh/srcs/parsing/lexing/regular_tokenisation.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/parsing/lexing/special_tokenisation.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/parsing/parsing.c">
@@ -745,6 +742,9 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/parsing/tools/list.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/parsing/tools/logger.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/read/completion/check_binary_path.c">

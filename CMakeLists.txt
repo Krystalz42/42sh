@@ -164,8 +164,11 @@ set(SOURCE_FILES
         srcs/execution/builtins_functions/utils.c
         srcs/execution/executing_function/op_ampersand.c
         srcs/execution/executing_function/op_and_if.c
+        srcs/execution/executing_function/op_dgreat.c
         srcs/execution/executing_function/op_dless.c
         srcs/execution/executing_function/op_execution.c
+        srcs/execution/executing_function/op_great.c
+        srcs/execution/executing_function/op_great_and.c
         srcs/execution/executing_function/op_less.c
         srcs/execution/executing_function/op_or_if.c
         srcs/execution/executing_function/op_pipeline.c
@@ -173,6 +176,7 @@ set(SOURCE_FILES
         srcs/execution/tools/check_tree_path.c
         srcs/execution/tools/do_heredoc.c
         srcs/execution/tools/fildes_previous.c
+        srcs/execution/tools/find_executing_node.c
         srcs/execution/tools/get_process.c
         srcs/execution/tools/get_real_env.c
         srcs/execution/tools/looking_for_path.c
@@ -206,16 +210,16 @@ set(SOURCE_FILES
         srcs/memdel_struct/memdel_outstanding.c
         srcs/memdel_struct/memdel_read.c
         srcs/memdel_struct/memdel_search_history.c
-        srcs/parsing/expanding/split.c
+        srcs/parsing/expanding/special.c
         srcs/parsing/expanding/tilde.c
-        srcs/parsing/expanding/tools.c
-        srcs/parsing/expanding/variable.c
         srcs/parsing/lexing/lexer.c
         srcs/parsing/lexing/recognition.c
-        srcs/parsing/lexing/tokenisation.c
+        srcs/parsing/lexing/regular_tokenisation.c
+        srcs/parsing/lexing/special_tokenisation.c
         srcs/parsing/parsing/parsing.c
         srcs/parsing/tools/error.c
         srcs/parsing/tools/list.c
+        srcs/parsing/tools/logger.c
         srcs/parsing/parsing.c
         srcs/parsing/tools.c
         srcs/read/completion/check_binary_path.c
@@ -290,7 +294,7 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/execution/executing_function/op_great.c srcs/execution/executing_function/op_great_and.c srcs/execution/executing_function/op_dgreat.c srcs/execution/tools/find_executing_node.c)
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)
