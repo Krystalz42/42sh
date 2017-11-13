@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:11:28 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/13 19:44:05 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/13 20:02:05 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void			special_logger(t_cmd *cmd);
 void			token_logger(t_cmd *cmd);
 void			list_logger(t_parsing *node);
 void			split_logger(t_parsing *node);
+
 
 /*
 *************** PRIVATE ********************************************************
@@ -61,7 +62,7 @@ t_parsing		*parsing(t_cmd *cmd)
 	special_logger(cmd);
 	token_logger(cmd);
 	list_logger(node);
-	// split_logger(node);
+	split_logger(node);
 
 
 	return (node);

@@ -43,7 +43,7 @@ static t_cmd	*return_line(t_read **read_std)
 	if (*read_std)
 	{
 		(*read_std)->finish = 0;
-		if (get_len_prompt(-42) != -2 && empty_cmd(first_cmd((*read_std)->cmd, 1)) == 0)
+		if (get_len_prompt(-42) != -2 && empty_cmd((*read_std)->cmd) == 0)
 			make_list_hist((*read_std));
 		line = copy_command(first_cmd((*read_std)->cmd, 1));
 		if (get_len_prompt(-42) == -2)
@@ -55,13 +55,14 @@ static t_cmd	*return_line(t_read **read_std)
 
 t_cmd			*finish_read_std(t_read **read_std)
 {
-	t_cmd		*tmp;
+	t_cmd		*temp;
 
-	tmp = first_cmd(gbl_save_read(NULL), 1);
+	temp = first_cmd(gbl_save_read(NULL), 1);
+	(*read_std)->cmd = first_cmd((*read_std)->cmd, 1);
 	reset_history();
 	memdel_outstanding();
-	if ((*read_std)->history)
-		memdel_cmd(&tmp);
+	if (temp != (*read_std)->cmd)
+		memdel_cmd(&temp);
 	if (signal_reception(-1))
 	{
 		insert_one_line();

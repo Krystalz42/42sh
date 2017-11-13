@@ -9,14 +9,14 @@ void		jobs_op_great_and(t_node *node)
 {
 	int			fildes;
 
-	if (ft_strisdigit(node->right->content->command[0]))
+	log_error("%s",node->right->content->command[0]);
+	if (node->right->content->command[0][0] == '-')
+		fildes = open(PATH_ERROR, O_WRONLY);
+	else if (ft_strisdigit(node->right->content->command[0]))
 		fildes = ft_atoi(node->right->content->command[0]);
 	else
-	{
-
 		fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
-		log_error("%d return open of %s", fildes, node->right->content->command[0]);
-	}
+	log_error("%d", fildes);
 	if (ft_isdigit(node->content->command[0][0]))
 	{
 		log_warn("From %d to %d", ft_atoi(node->content->command[0]),fildes );

@@ -90,10 +90,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/aroulin/42sh/incs/builtins.h">
+		<Unit filename="/Users/aroulin/42sh/incs/define.h">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/incs/define.h">
+		<Unit filename="/Users/aroulin/42sh/incs/enum.h">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/incs/sh.h">
