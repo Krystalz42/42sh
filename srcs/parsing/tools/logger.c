@@ -59,3 +59,24 @@ void			list_logger(t_parsing *node)
 	}
 	dprintf(fd, "\n");
 }
+
+void			split_logger(t_parsing *node)
+{
+	size_t 		index;
+	uint8_t		rounds = 0;
+	int			fd = open("/tmp/.split", O_RDWR | O_CREAT | O_TRUNC, 0644);
+	while (node)
+	{
+		if (!rounds)
+		{
+			index = 0;
+			while (node->command[index])
+				dprintf(fd, "\e[34mstr: [%s]\e[0m\n", node->command[index++]);
+		}
+		else
+			dprintf(fd, "\e[31mstr: [%s]\e[0m\n", node->command[0]);
+		rounds = rounds ? 0 : 1;
+		node = node->next;
+	}
+	dprintf(fd, "\n");
+}

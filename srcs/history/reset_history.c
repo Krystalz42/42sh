@@ -14,11 +14,11 @@
 
 void		reset_history(void)
 {
-	t_hist	*tmp;
+	t_hist	*temp;
 
-	if (!(tmp = gbl_save_history(NULL, REC_STRUCT)))
+	if ((temp = gbl_save_history(NULL, REC_STRUCT)) == NULL)
 		return ;
-	while (tmp->next)
-		tmp = tmp->next;
-	gbl_save_history(tmp, SAVE_STRUCT);
+	while (temp->next)
+		temp = temp->next;
+	gbl_save_history(temp, SAVE_STRUCT);
 }

@@ -75,20 +75,42 @@ size_t			get_length(char *str)
 	return (index);
 }
 
+int				is_quote(char c)
+{
+	if (c == '\'')
+		return (SINGLE_QUOTE);
+	if (c == '\"')
+		return (DOUBLE_QUOTE);
+	return (0);
+}
+
 char			*populating(char *new, char *str, size_t length)
 {
 	size_t		index;
-	uint8_t		quote;
+	uint8_t		status;
 
 	index = 0;
-	quote = DEFAULT;
+	status = DEFAULT;
 	while (*str && length--)
 	{
-		chk_quote(*str, &quote);
-		if (*str == '\\' && !(quote & QUOTE))
-			;
+		if (!(status & BACKSLASH) && *str == '\\' && !(status & SINGLE_QUOTE))
+			status |= BACKSLASH;
+		else if (!(status & BACKSLASH) && status & DEFAULT && is_quote(*str))
+		{
+			status |= is_quote(*str);
+			status ^= DEFAULT;
+		}
+		else if (!(status & BACKSLASH) && status & is_quote(*str))
+		{
+			status ^= is_quote(*str);
+			status |= DEFAULT;
+		}
 		else
+		{
+			if (status & BACKSLASH)
+				status ^= BACKSLASH;
 			new[index++] = *str;
+		}
 		str++;
 	}
 	return (str);

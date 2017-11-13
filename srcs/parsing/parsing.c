@@ -15,6 +15,8 @@
 void			special_logger(t_cmd *cmd);
 void			token_logger(t_cmd *cmd);
 void			list_logger(t_parsing *node);
+void			split_logger(t_parsing *node);
+
 
 /*
 *************** PRIVATE ********************************************************
@@ -59,6 +61,7 @@ t_parsing		*parsing(t_cmd *cmd)
 	special_logger(cmd);
 	token_logger(cmd);
 	list_logger(node);
+	split_logger(node);
 
 
 	return (node);

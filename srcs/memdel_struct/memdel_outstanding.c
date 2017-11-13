@@ -21,17 +21,17 @@ void		reset_os(t_outstanding **ptr)
 void		memdel_outstanding(void)
 {
 	t_outstanding	*ptr;
-	t_outstanding	*tmp;
+	t_outstanding	*temp;
 
 	if ((ptr = get_os_pointer(NULL, 0)))
 	{
 		reset_os(&ptr);
 		while (ptr)
 		{
-			tmp = ptr;
+			temp = ptr;
 			memdel_cmd(&(ptr->cmd));
 			ptr = ptr->next;
-			free(tmp);
+			free(temp);
 		}
 	}
 	get_os_pointer(NULL, 1);
