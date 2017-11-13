@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/12 22:08:54 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/13 12:03:01 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -276,6 +276,7 @@ void						order(t_parsing **node);
 
 void						special(t_parsing *node, char *expand, int to_expand);
 void						tilde(t_parsing *node);
+void						split(t_parsing *node);
 
 /*
 **				TOOLS'S LEXING PARSING EXPANDING FUNCTION

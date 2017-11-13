@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/12 22:09:05 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/11/13 12:03:48 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -179,6 +179,7 @@ SRCS = \
 	   jobs_control/set_process.c								\
 	   jobs_control/my_wait.c									\
 	   jobs_control/my_execve.c									\
+	   															\
 	   parsing/parsing.c										\
 	   parsing/tools.c											\
 	   parsing/lexing/special_tokenisation.c					\
@@ -188,9 +189,11 @@ SRCS = \
 	   parsing/parsing/parsing.c								\
 	   parsing/expanding/special.c								\
 	   parsing/expanding/tilde.c								\
+	   parsing/expanding/split.c								\
 	   parsing/tools/list.c										\
 	   parsing/tools/error.c									\
 	   parsing/tools/logger.c									\
+	   															\
 	   binary_tree/binary_tree.c								\
 	   env/add_environment.c									\
 	   env/remove_environment.c									\
