@@ -18,7 +18,7 @@ const t_lexing	g_operaters[] =
 	(t_lexing){"&&", VALUE_AND_IF, PRIO_CMD_AND_OR},
 	(t_lexing){"||", VALUE_OR_IF, PRIO_CMD_AND_OR},
 	(t_lexing){"|", VALUE_PIPELINE, PRIO_PIPE},
-	(t_lexing){"&", VALUE_AMPERSAND, PRIO_SEPARATOR},
+	(t_lexing){"&", VALUE_AMPERSAND, PRIO_AMPERSAND},
 	(t_lexing){"<<", VALUE_DLESS, PRIO_REDIR},
 	(t_lexing){">>", VALUE_DGREAT, PRIO_REDIR},
 	(t_lexing){">&", VALUE_GREAT_AND, PRIO_REDIR},

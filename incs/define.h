@@ -276,7 +276,7 @@ own env temporarily.\n"
 
 # define HISTSIZE				500
 # define HELP					"--help"
-# define MAX_CHILD
+# define MAX_CHILD				6
 # define PATH_HISTORY			"/.42sh_history"
 # define PATH_HASH				"/.42sh_hash"
 # define PATH_ERR				"/dev/null"
