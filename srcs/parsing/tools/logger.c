@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 19:43:31 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/13 20:03:08 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/13 20:06:06 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,17 +62,19 @@ void			list_logger(t_parsing *node)
 
 void			split_logger(t_parsing *node)
 {
+	size_t		index;
 	uint8_t		rounds = 0;
 	int			fd = open("/tmp/.split", O_RDWR | O_CREAT | O_TRUNC, 0644);
 	while (node)
 	{
 		if (!rounds)
 		{
-			while (*node->command)
-				dprintf(fd, "\e[34mstr: [%s]\e[0m\n", *node->command++);
+			index = 0;
+			while (node->command && node->command[index])
+				dprintf(fd, "\e[34mstr: [%s]\e[0m\n", node->command[index++]);
 		}
 		else
-			dprintf(fd, "\e[31mstr: [%s]\e[0m\n", *node->command);
+			dprintf(fd, "\e[31mstr: [%s]\e[0m\n", node->command[0]);
 		dprintf(fd, "\n");
 		rounds = rounds ? 0 : 1;
 		node = node->next;
