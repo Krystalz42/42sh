@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/13 12:03:48 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/11/13 18:02:06 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -190,6 +190,7 @@ SRCS = \
 	   parsing/parsing/parsing.c								\
 	   parsing/expanding/special.c								\
 	   parsing/expanding/tilde.c								\
+	   parsing/expanding/variable.c								\
 	   parsing/expanding/split.c								\
 	   parsing/tools/list.c										\
 	   parsing/tools/error.c									\

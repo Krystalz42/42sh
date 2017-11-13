@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 19:39:01 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/12 19:49:29 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/13 19:16:24 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void			special_tokenisation(t_cmd *cmd)
 			populate_double_quote(&cmd);
 		else
 		{
-			cmd->status = NORMAL;
+			cmd->status = DEFAULT;
 			cmd = cmd->next;
 		}
 	}

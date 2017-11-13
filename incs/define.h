@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/12 20:10:53 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/13 19:15:34 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 **			LEXING
 */
 
-# define NORMAL 1
 # define SINGLE_QUOTE 2
 # define DOUBLE_QUOTE 4
 # define BACKSLASH 8

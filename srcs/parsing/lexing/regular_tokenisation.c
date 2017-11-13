@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 19:50:25 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/12 19:53:14 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/13 19:16:33 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,13 @@ void			regular_tokenisation(t_cmd *cmd)
 	uint8_t		quote;
 	uint8_t		temp;
 
-	quote = NORMAL;
+	quote = DEFAULT;
 	temp = quote;
 
 	while (cmd && cmd->c)
 	{
 		cmd->value = TOKEN;
-		if (cmd->status == NORMAL)
+		if (cmd->status == DEFAULT)
 		{
 			cmd->value = get_value(cmd->c);
 			cmd->c == '>' ? populate(cmd->prev) : 0;
