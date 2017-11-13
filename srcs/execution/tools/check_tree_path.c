@@ -70,6 +70,7 @@ void					check_tree_path(t_node *node)
 		{
 			check_tree_path(node->left);
 			check_tree_path(node->right);
+
 		}
 	}
 }

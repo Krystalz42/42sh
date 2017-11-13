@@ -33,7 +33,7 @@
 # include <sys/ioctl.h>
 # include <logger.h>
 # include <logger_utils.h>
-# include <builtins.h>
+# include <enum.h>
 # include <time.h>
 
 /*
@@ -49,6 +49,7 @@ void                                                pjt(t_jobs *jobs);
 int							shell(void);
 void						insert_one_line(void);
 void						exit_(void);
+uint8_t						var_return(int ret);
 
 /*
 **				FUNCTION READ && PRINT && RETURN A STRUCT
@@ -106,6 +107,7 @@ void						add_hash(char *bin, char *path,
 **				BUILT IN FUNCTION
 */
 
+t_bdata						*b_data(void);
 void						collect_path(char **binary);
 int							looking_for_path(char **binary);
 int							check_if_builtin(t_node *node, int info);
@@ -129,6 +131,24 @@ uint8_t						kill_process(char *string1, char *string2);
 uint8_t						signal_from_int(uint8_t signal);
 uint8_t						signal_from_str(char *status);
 uint8_t						all_signal(void);
+
+/*
+**				BUILT IN FUNCTION
+*/
+
+uint8_t						ft_cd(t_node *node, int info);
+signed int					search_in_tab(char **data, char *var);
+char						**refresh_varenv(char **env);
+char						*ft_path(char *var, unsigned int begin);
+char						*add_envar(char *var, char *value);
+char						**init_pwd(char **env);
+uint8_t						ft_setenv(t_node *node, int info);
+unsigned int				search_char(char *str, char c);
+uint8_t						ft_unsetenv(t_node *node, int info);
+int							ft_error(char *var, char *msg, int ret);
+unsigned int				tablen(char **src);
+uint8_t						ft_echo(t_node *node, int info);
+
 
 /*
 **				FUNCTION FOR COMPLETION

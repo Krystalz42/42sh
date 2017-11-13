@@ -35,6 +35,8 @@
 # define CURSOR					"\033[6n"
 # define OPTION_GREAT			O_CREAT | O_WRONLY | O_TRUNC
 # define OPTION_DGREAT			O_CREAT | O_WRONLY | O_APPEND
+# define PATH_ERROR				"/dev/null"
+
 /*
 **			FLAG EXECUTION
 */
@@ -62,8 +64,6 @@
 ** LESS_AND		<&
 ** GREAT_AND	&>
 */
-
-
 
 /*
 **			INITIALIZATION FLAGS
@@ -279,7 +279,6 @@ own env temporarily.\n"
 # define MAX_CHILD				6
 # define PATH_HISTORY			"/.42sh_history"
 # define PATH_HASH				"/.42sh_hash"
-# define PATH_ERR				"/dev/null"
 
 # define MV_LEFT				"le"
 # define MV_BOT					"do"

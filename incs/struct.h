@@ -27,6 +27,7 @@ typedef struct			s_error
 	int					err_ret;
 }						t_error;
 
+
 /*
 **			STRUCT FOR TOKEN_RECOGNITION
 */
@@ -126,6 +127,14 @@ typedef struct		s_cursor
 	int				co;
 	int				save;
 }					t_cursor;
+
+typedef struct	s_bdata
+{
+	char		*oldpwd;
+	char		*pwd;
+}				t_bdata;
+
+
 
 /*
 **			STRUCT HISTORY
@@ -286,33 +295,6 @@ typedef struct 				s_signal
 
 typedef uint8_t			(t_exec)(t_node *node, t_jobs *jobs, int info);
 
-typedef enum 			e_value
-{
-	VALUE_COMMAND,
-	VALUE_SEMI_COLON,
-	VALUE_AMPERSAND,
-	VALUE_AND_IF,
-	VALUE_OR_IF,
-	VALUE_PIPELINE,
-	VALUE_LESS,
-	VALUE_GREAT,
-	VALUE_DLESS,
-	VALUE_DGREAT,
-	VALUE_LESS_AND,
-	VALUE_GREAT_AND
-}						t_value;
 
-/*
-**			TOKEN RECOGNITION
-*/
-typedef enum 			e_priority
-{
-	PRIO_SEPARATOR,
-	PRIO_AMPERSAND,
-	PRIO_CMD_AND_OR,
-	PRIO_PIPE,
-	PRIO_REDIR,
-	PRIO_COMMAND
-}						t_priority;
 
 #endif
