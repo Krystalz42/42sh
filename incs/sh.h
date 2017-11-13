@@ -47,7 +47,6 @@ void                                                pjt(t_jobs *jobs);
 */
 
 int							shell(void);
-int							cursor_placement(void);
 void						insert_one_line(void);
 void						exit_(void);
 
@@ -216,7 +215,6 @@ int							capitalize_word_undo(t_read **read_std, unsigned long buff);
 
 int							init_research(t_read **read_std);
 int							print_struct_history(t_read **read_std);
-int							reset_cur_hist(t_lfh *hist);
 t_cursor					prompt_history(int p);
 int							new_line_after_bloc(t_read **read_std, int to);
 int							key_print_fct(t_cmd *cmd, char c);
@@ -236,7 +234,6 @@ char						*my_getenv(char *name);
 size_t						compare_environment(char *s1, char *s2);
 void						remove_environment(char *string);
 char						**env_table(char **env, int flags);
-int							usage_environement(char *string);
 int							start_from_null(char **command, char ***env);
 int							start_from_full(char **command, char ***env);
 int							start_from_less(char **command, char ***env);
@@ -363,9 +360,6 @@ uint8_t						op_dgreat(t_node *node, t_jobs *jobs, int info);
 **				EXECUTION TOOLS
 */
 
-void						write_previous(t_jobs *jobs);
-void						close_previous(t_jobs *jobs);
-void						read_previous(t_jobs *jobs);
 int							read_pipe(int *fildes);
 int							close_pipe(int *fildes);
 int							write_pipe(int *fildes);
@@ -402,8 +396,6 @@ void						memdel_outstanding(void);
 */
 
 uint8_t						error_msg(char *from, char *error, char *args);
-void						*error_env(void);
-void						puterror(char *err);
 int							bip(void);
 
 uint8_t						usage_kill(void);

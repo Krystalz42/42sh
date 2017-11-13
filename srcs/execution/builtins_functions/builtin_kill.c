@@ -13,7 +13,7 @@
 #include <sh.h>
 
 
-uint8_t			kill_option_l(char **command)
+static uint8_t			kill_option_l(char **command)
 {
 	if (command[2] && ft_strisdigit(command[2]))
 		return (signal_from_int(ft_atoi(command[2])));

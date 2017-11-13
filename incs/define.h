@@ -46,15 +46,7 @@
 # define CLOSE						16
 # define DONT_EXECUTE				32
 # define FORCE_FORK					64
-/*
-**			TOKEN RECOGNITION
-*/
 
-# define PRIO_SEPARATOR				1
-# define PRIO_CMD_AND_OR			2
-# define PRIO_PIPE					3
-# define PRIO_REDIR					4
-# define PRIO_COMMAND				5
 
 /*
 ** COMAND		...
@@ -284,7 +276,7 @@ own env temporarily.\n"
 
 # define HISTSIZE				500
 # define HELP					"--help"
-# define MAX_CHILD				6
+# define MAX_CHILD
 # define PATH_HISTORY			"/.42sh_history"
 # define PATH_HASH				"/.42sh_hash"
 # define PATH_ERR				"/dev/null"

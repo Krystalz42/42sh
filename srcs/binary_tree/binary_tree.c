@@ -21,7 +21,7 @@ t_node					*create_binary_tree(t_parsing *list, t_parsing *compare, int priority
 
 	keep = NULL;
 	temp = list;
-	if (priority == 6 || list == NULL)
+	if (priority == 7 || list == NULL)
 		return (NULL);
 	while (temp != compare)
 	{
