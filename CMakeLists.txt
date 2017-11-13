@@ -211,6 +211,8 @@ set(SOURCE_FILES
         srcs/memdel_struct/memdel_read.c
         srcs/memdel_struct/memdel_search_history.c
         srcs/parsing/expanding/special.c
+        srcs/parsing/expanding/split.c
+        srcs/parsing/expanding/split_tools.c
         srcs/parsing/expanding/tilde.c
         srcs/parsing/lexing/lexer.c
         srcs/parsing/lexing/recognition.c

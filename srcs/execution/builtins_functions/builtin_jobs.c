@@ -23,7 +23,7 @@
 **		List process IDs in addition to the normal information.
 */
 
-int				print_process(t_process *process, int info, int parent, int index)
+int			print_process(t_process *process, int info, int parent, int index)
 {
 	if (process->pid == process->pgid)
 		ft_printf("[%d]\t", index + 1);
@@ -39,57 +39,55 @@ int				print_process(t_process *process, int info, int parent, int index)
 	return (1);
 }
 
-uint8_t			print_jobs(t_jobs *jobs, int opt)
+uint8_t		print_jobs(t_jobs *jobs, int opt)
 {
-	int					i;
+	int					index;
 	t_process			*process;
 
-	i = 0;
-	while (i < MAX_CHILD)
+	index = 0;
+	while (index < MAX_CHILD)
 	{
-		if (jobs[i].process)
+		if (jobs[index].process)
 		{
-			process = jobs[i].process;
+			process = jobs[index].process;
 			while (process)
 			{
 				if ((opt & 2) && process->running)
-					print_process(process, (opt & 8), (opt & 1), i);
+					print_process(process, (opt & 8), (opt & 1), index);
 				else if ((opt & 4) && process->running == false)
-					print_process(process, (opt & 8), (opt & 1), i);
+					print_process(process, (opt & 8), (opt & 1), index);
 				else if (!(opt & 2) && !(opt & 4))
-					print_process(process, (opt & 8), (opt & 1), i);
+					print_process(process, (opt & 8), (opt & 1), index);
 				process = process->next;
 			}
 		}
-		i++;
+		index++;
 	}
 	return (0);
 }
 
-uint8_t			builtin_jobs(t_node *node, int info)
+uint8_t			builtin_jobs(t_node *node, int info __attribute__((unused)))
 {
-	int					table;
+	int					t;
 	int					opt;
-	int					index;
+	int					i;
 
-	(void)info;
 	opt = 0;
-	table = 1;
-	if (node->content->command[1] && ft_strcmp(node->content->command[1], HELP) == 0)
+	t = 1;
+	if (node->content->command[1] && !ft_strcmp(node->content->command[1], HELP))
 		return (var_return(usage_jobs()));
-	while (node->content->command[table] && node->content->command[table][0] == '-')
+	while (node->content->command[t] && node->content->command[t][0] == '-')
 	{
-		index = 0;
-		while (node->content->command[table][index])
+		i = 0;
+		while (node->content->command[t][i])
 		{
-			opt += (node->content->command[table][index] == 'p' && !(opt & 1)) ? 1 : 0;
-			opt += (node->content->command[table][index] == 'r' && !(opt & 2)) ? 2 : 0;
-			opt += (node->content->command[table][index] == 's' && !(opt & 4)) ? 4 : 0;
-			opt += (node->content->command[table][index] == 'l' && !(opt & 8)) ? 8 : 0;
-			index++;
+			opt += (node->content->command[t][i] == 'p' && !(opt & 1)) ? 1 : 0;
+			opt += (node->content->command[t][i] == 'r' && !(opt & 2)) ? 2 : 0;
+			opt += (node->content->command[t][i] == 's' && !(opt & 4)) ? 4 : 0;
+			opt += (node->content->command[t][i] == 'l' && !(opt & 8)) ? 8 : 0;
+			i++;
 		}
-		table++;
+		t++;
 	}
-	log_trace("Jobs [%d]", opt);
 	return (var_return(print_jobs(jobs_table(), opt)));
 }

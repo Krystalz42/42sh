@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jle-quel/Documents/42sh
+CMAKE_SOURCE_DIR = /Users/aroulin/42sh
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jle-quel/Documents/42sh/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/aroulin/42sh/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jle-quel/Documents/42sh/cmake-build-debug/CMakeFiles /Users/jle-quel/Documents/42sh/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aroulin/42sh/cmake-build-debug/CMakeFiles /Users/aroulin/42sh/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jle-quel/Documents/42sh/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/aroulin/42sh/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -5496,6 +5496,60 @@ srcs/parsing/expanding/special.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/special.c.s
 .PHONY : srcs/parsing/expanding/special.c.s
 
+srcs/parsing/expanding/split.o: srcs/parsing/expanding/split.c.o
+
+.PHONY : srcs/parsing/expanding/split.o
+
+# target to build an object file
+srcs/parsing/expanding/split.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split.c.o
+.PHONY : srcs/parsing/expanding/split.c.o
+
+srcs/parsing/expanding/split.i: srcs/parsing/expanding/split.c.i
+
+.PHONY : srcs/parsing/expanding/split.i
+
+# target to preprocess a source file
+srcs/parsing/expanding/split.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split.c.i
+.PHONY : srcs/parsing/expanding/split.c.i
+
+srcs/parsing/expanding/split.s: srcs/parsing/expanding/split.c.s
+
+.PHONY : srcs/parsing/expanding/split.s
+
+# target to generate assembly for a file
+srcs/parsing/expanding/split.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split.c.s
+.PHONY : srcs/parsing/expanding/split.c.s
+
+srcs/parsing/expanding/split_tools.o: srcs/parsing/expanding/split_tools.c.o
+
+.PHONY : srcs/parsing/expanding/split_tools.o
+
+# target to build an object file
+srcs/parsing/expanding/split_tools.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split_tools.c.o
+.PHONY : srcs/parsing/expanding/split_tools.c.o
+
+srcs/parsing/expanding/split_tools.i: srcs/parsing/expanding/split_tools.c.i
+
+.PHONY : srcs/parsing/expanding/split_tools.i
+
+# target to preprocess a source file
+srcs/parsing/expanding/split_tools.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split_tools.c.i
+.PHONY : srcs/parsing/expanding/split_tools.c.i
+
+srcs/parsing/expanding/split_tools.s: srcs/parsing/expanding/split_tools.c.s
+
+.PHONY : srcs/parsing/expanding/split_tools.s
+
+# target to generate assembly for a file
+srcs/parsing/expanding/split_tools.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split_tools.c.s
+.PHONY : srcs/parsing/expanding/split_tools.c.s
+
 srcs/parsing/expanding/tilde.o: srcs/parsing/expanding/tilde.c.o
 
 .PHONY : srcs/parsing/expanding/tilde.o
@@ -8343,6 +8397,12 @@ help:
 	@echo "... srcs/parsing/expanding/special.o"
 	@echo "... srcs/parsing/expanding/special.i"
 	@echo "... srcs/parsing/expanding/special.s"
+	@echo "... srcs/parsing/expanding/split.o"
+	@echo "... srcs/parsing/expanding/split.i"
+	@echo "... srcs/parsing/expanding/split.s"
+	@echo "... srcs/parsing/expanding/split_tools.o"
+	@echo "... srcs/parsing/expanding/split_tools.i"
+	@echo "... srcs/parsing/expanding/split_tools.s"
 	@echo "... srcs/parsing/expanding/tilde.o"
 	@echo "... srcs/parsing/expanding/tilde.i"
 	@echo "... srcs/parsing/expanding/tilde.s"

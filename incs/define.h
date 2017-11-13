@@ -277,12 +277,12 @@ own env temporarily.\n"
 # define EXPECT					"signal name expected :"
 # define TOO_MANY_ARGS			"too many arguments :"
 # define NUM_REQUIRED			"numeric argument required :"
-# define RUN					"Runing"
+# define RUN					"Running"
 # define STOP					"Stopped"
 
 # define HISTSIZE				500
 # define HELP					"--help"
-# define MAX_CHILD				8096
+# define MAX_CHILD				6
 # define PATH_HISTORY			"/.42sh_history"
 # define PATH_HASH				"/.42sh_hash"
 # define PATH_ERR				"/dev/null"

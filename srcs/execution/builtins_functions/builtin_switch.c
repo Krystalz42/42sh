@@ -18,7 +18,7 @@ uint8_t		error_builtin(char *from, char *error, char *args)
 	ft_putstr_fd(error, STDERR_FILENO);
 	ft_putstr_fd(args, STDERR_FILENO);
 	ft_putchar_fd(10, STDERR_FILENO);
-	return (1);
+	return (var_return(1));
 }
 
 uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
@@ -33,9 +33,9 @@ uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
 		{
 			modify_runing(jobs[index].process, true);
 			kill(-(jobs[index].process->pgid), SIGCONT);
-			update_status(jobs[index].process);
-			print_status(jobs[index].process, index);
 		}
+		update_status(jobs[index].process);
+		print_jobs(jobs + index, 0);
 		wait_process(jobs + index);
 		set_fildes(getpgid(0));
 		init_signal();
@@ -55,7 +55,7 @@ uint8_t		bg_switch_process(t_jobs *jobs, int index, char *error, char *args)
 		modify_foreground(jobs[index].process, false);
 		kill(-jobs[index].process->pgid, SIGCONT);
 		update_status(jobs[index].process);
-		print_status(jobs[index].process, index);
+		print_jobs(jobs + index, 0);
 		pjt(jobs + index);
 		return (0);
 	}
@@ -73,7 +73,7 @@ uint8_t		builtin_foreground(t_node *node, int info)
 	if (node->content->command[1] && node->content->command[1][0] == '%')
 	{
 		id = (ft_atoi(node->content->command[1] + 1) - 1);
-		return (var_return(fg_switch_process(jobs, id, NO_JOB, node->content->command[1] + 1)));
+		return (fg_switch_process(jobs, id, NO_JOB, node->content->command[1] + 1));
 	}
 	else
 	{

@@ -306,7 +306,6 @@ $(DIR_DEPS) :
 # ---------------------------------------------------------------------------- #
 
 all : libs $(NAME)
-	@afplay ~/Desktop/test.mp3
 
 $(NAME)		: $(DIR_OBJS) $(DIR_DEPS) $(O_SRCS) $(LIBS)
 	@$(CC) $(O_SRCS) -o  $(NAME) $(LDFLAGS) $(LDLIBS)

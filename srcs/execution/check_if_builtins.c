@@ -41,7 +41,7 @@ int				check_if_builtin(t_node *node, int info __attribute__((unused)))
 		{
 			if ((info & DONT_EXECUTE))
 				return (1);
-			return (var_return(g_builtin[index].function(node, info)));
+			return (g_builtin[index].function(node, info));
 		}
 		index++;
 	}

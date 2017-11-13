@@ -297,6 +297,7 @@ t_parsing					*lstnew(char *input);
 **				JOB'S CONTROL FUNCTION
 */
 
+uint8_t						print_jobs(t_jobs *jobs, int opt);
 t_node						*find_executing_node(t_node *node);
 void						first_process(t_jobs *jobs);
 void						reset_process(t_jobs *jobs);
