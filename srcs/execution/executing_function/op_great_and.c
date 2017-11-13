@@ -12,7 +12,11 @@ void		jobs_op_great_and(t_node *node)
 	if (ft_strisdigit(node->right->content->command[0]))
 		fildes = ft_atoi(node->right->content->command[0]);
 	else
+	{
+
 		fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
+		log_error("%d return open of %s", fildes, node->right->content->command[0]);
+	}
 	if (ft_isdigit(node->content->command[0][0]))
 	{
 		log_warn("From %d to %d", ft_atoi(node->content->command[0]),fildes );
@@ -20,7 +24,7 @@ void		jobs_op_great_and(t_node *node)
 	}
 	else
 	{
-		log_warn("From %d to", fildes, 1);
+		log_warn("From %d to %d", fildes, 1);
 		dup2(fildes, STDOUT_FILENO);
 	}
 }

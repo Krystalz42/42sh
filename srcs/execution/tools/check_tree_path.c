@@ -15,7 +15,7 @@ static char 			*create_trial_path(char *path, char *binary)
 	return (complete_path);
 }
 
-static void				collect_path(char **binary)
+void					collect_path(char **binary)
 {
 	char			**path;
 	int				index;
@@ -41,7 +41,7 @@ static void				collect_path(char **binary)
 	ft_memdel_tab(&path);
 }
 
-static int				looking_for_path(char **binary)
+int						looking_for_path(char **binary)
 {
 	char			*temp;
 
@@ -64,8 +64,13 @@ void					check_tree_path(t_node *node)
 			if (check_if_builtin(node, DONT_EXECUTE) == -1)
 				if ((looking_for_path(&node->content->command[0])) == 0)
 					collect_path(&node->content->command[0]);
-		check_tree_path(node->left);
-		check_tree_path(node->right);
+		if (node->content->priority == PRIO_REDIR)
+			check_tree_path(node->left);
+		else
+		{
+			check_tree_path(node->left);
+			check_tree_path(node->right);
+		}
 	}
 }
 

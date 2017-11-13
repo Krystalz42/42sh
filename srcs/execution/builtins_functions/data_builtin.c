@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-t_bdata				*b_data()
+t_bdata				*b_data(void)
 {
 	static t_bdata	*data = NULL;
 

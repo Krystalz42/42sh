@@ -106,6 +106,8 @@ void						add_hash(char *bin, char *path,
 **				BUILT IN FUNCTION
 */
 
+void						collect_path(char **binary);
+int							looking_for_path(char **binary);
 int							check_if_builtin(t_node *node, int info);
 uint8_t						builtin_background(t_node *node, int info);
 uint8_t						builtin_foreground(t_node *node, int info);
@@ -299,6 +301,9 @@ t_parsing					*lstnew(char *input);
 **				JOB'S CONTROL FUNCTION
 */
 
+
+void						close_fildes(t_process *process);
+void						print_info_jobs(t_jobs *jobs);
 t_node						*find_executing_node(t_node *node);
 void						first_process(t_jobs *jobs);
 void						reset_process(t_jobs *jobs);

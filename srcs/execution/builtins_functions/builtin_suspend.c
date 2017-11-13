@@ -21,6 +21,7 @@ uint8_t			builtin_suspend(t_node *node, int info)
 	kill(getpgid(0), SIGSTOP);
 	while (tcgetpgrp(STDIN_FILENO) != getpgid(0))
 		;
+	init_signal();
 	set_termios(SET_OUR_TERM);
 	return (0);
 }

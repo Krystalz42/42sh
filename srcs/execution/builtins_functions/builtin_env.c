@@ -17,6 +17,9 @@ uint8_t			fct(t_node *node, int info)
 	if (node->content->command[0])
 	{
 		node->content->env_option = 1;
+		if (check_if_builtin(node, DONT_EXECUTE) == -1)
+			if ((looking_for_path(&node->content->command[0])) == 0)
+				collect_path(&node->content->command[0]);
 		execute_node(node, NULL, info);
 	}
 	else

@@ -5,8 +5,6 @@
 #include <sh.h>
 void			initialize_fct(t_read **read_std, unsigned char flags)
 {
-	while (tcgetpgrp(STDIN_FILENO) != getpgid(0))
-		;
 	(*read_std) = init_struct_for_read();
 	init_prompt();
 	init_signal();

@@ -4,20 +4,6 @@
 
 #include <sh.h>
 
-void		print_info_jobs(t_jobs *jobs)
-{
-	t_process *process;
-
-	process = jobs->process;
-	ft_printf("[%d] ", jobs->index);
-	while (process)
-	{
-		ft_putnbr(process->pid);
-		ft_putchar(32);
-		process = process->next;
-	}
-	ft_putchar(10);
-}
 
 void			set_fildes(pid_t pgid)
 {
@@ -32,8 +18,7 @@ void			wait_process(t_jobs *jobs)
 	temp = jobs->process;
 	while (temp)
 	{
-		log_warn("%d",temp->pid);
-		log_error("Wait [%d]", waitpid(-temp->pgid, &temp->status, WUNTRACED));
+		waitpid(-temp->pgid, &temp->status, WUNTRACED);
 		temp = temp->next;
 	}
 	update_jobs(jobs->process);
@@ -44,15 +29,6 @@ void			wait_process(t_jobs *jobs)
 		print_status(jobs->process, jobs->index);
 		modify_runing(jobs->process, false);
 		modify_foreground(jobs->process, false);
-	}
-}
-
-void		close_fildes(t_process *process)
-{
-	while (process)
-	{
-		close_pipe(process->fildes);
-		process = process->next;
 	}
 }
 

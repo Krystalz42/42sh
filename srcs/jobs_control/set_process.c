@@ -36,3 +36,12 @@ void		first_process(t_jobs *jobs)
 	while (jobs->process->prev)
 		jobs->process = jobs->process->prev;
 }
+
+void		close_fildes(t_process *process)
+{
+	while (process)
+	{
+		close_pipe(process->fildes);
+		process = process->next;
+	}
+}
