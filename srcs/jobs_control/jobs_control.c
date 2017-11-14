@@ -40,65 +40,67 @@ void			update_jobs(t_process *process)
 	}
 }
 
-int				update_status(t_process *process)
+int			place_status(t_process *process, pid_t pid, int status)
 {
-	int				ret;
-
-	ret = 0;
+	while (process->prev)
+		process = process->prev;
 	while (process)
 	{
-		if ((waitpid(process->pid, &process->status, WCONTINUED | WNOHANG | WUNTRACED)) > 0)
-			ret = 1;
-		log_fatal("%d %d",process->pid, process->status);
+		if (process->pid == pid)
+		{
+			log_fatal("Find it !");
+			process->status = status;
+			return (1);
+		}
 		process = process->next;
 	}
-	log_trace("Return update_status %d", ret);
-	return (ret);
+	return (0);
 }
 
-int					terminate_process(t_process *process)
-{
-	while (process)
-	{
-		log_trace("In terminated process for %d [%d.%d]", process->pid, WIFSIGNALED(process->status), WIFEXITED(process->status));
-		if (!WIFSIGNALED(process->status) && !WIFEXITED(process->status))
-			return (0);
-		process = process->next;
-	}
-	log_trace("Return terminated_status %d", 1);
-	return (1);
-}
-
-void				handler_sigchld(int sig)
+t_jobs				*update_status_jobs(pid_t pid, int status)
 {
 	t_jobs			*jobs;
 	int				index;
 
-	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
-	index = MAX_CHILD -1;
 	jobs = jobs_table();
-	while (index >= 0)
+	index = 0;
+	while (index < MAX_CHILD)
 	{
-		if (jobs[index].process && jobs[index].process->foreground == false)
+		if (jobs[index].process)
 		{
-			log_trace("%d UPDATE", jobs[index].process->pid);
-			first_process(jobs);
-			if (update_status(jobs[index].process))
+			if (place_status(jobs[index].process, pid, status))
 			{
-				if (terminate_process(jobs[index].process))
-				{
-					print_status(jobs[index].process, jobs->index);
-					reset_process(jobs + index);
-				}
-				else
-				{
-					modify_runing(jobs[index].process, false);
-					modify_foreground(jobs[index].process, false);
-				}
+				log_success("%d", jobs[index].process->pgid);
+				return (jobs + index);
 			}
-			pjt(jobs + index);
 		}
-		index--;
+		index++;
 	}
+	return (NULL);
 }
-;
+
+void				handler_sigchld(int sig)
+{
+	t_jobs		*jobs;
+	int			status;
+	int			pid;
+
+	(void)sig;
+	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
+	pid = waitpid(-1, &status, WUNTRACED);
+	if ((jobs = update_status_jobs(pid, status)))
+		if (jobs->process->foreground == false)
+		{
+			if (finish_process(jobs->process))
+			{
+				print_status(jobs->process, jobs->index);
+				reset_process(jobs);
+			}
+			else
+			{
+				print_status(jobs->process, jobs->index);
+				modify_runing(jobs->process, false);
+				modify_foreground(jobs->process, false);
+			}
+		}
+}

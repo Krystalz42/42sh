@@ -38,7 +38,7 @@ t_process			*my_fork(t_jobs *jobs, t_node *node, int info)
 	process->command = ft_strdup(node->content->input);
 	setpgid(process->pid, process->prev ? process->prev->pgid : process->pid);
 	process->pgid = getpgid(process->pid);
-	process->status = 0;
+	process->status = -1;
 	process->foreground = (info & FOREGROUND) ? true : false;
 	return (process);
 }
