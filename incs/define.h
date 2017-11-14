@@ -252,9 +252,9 @@ the signal to be sent instead of the default TERM.\n"
 to empty env temporarily.\n"
 # define ENV_I					"-u [name]               : Remove [name] to \
 own env temporarily.\n"
-# define UNSET					"[name=value ...]        : Unset the variable \
+# define UNSET					"[name=]        : Unset the variable \
 in environement.\n"
-# define SETENV					"[name=value ...]        :  Set the variable \
+# define SET					"[name=value]        :  Set the variable \
 in environement.\n"
 
 /*
@@ -269,10 +269,12 @@ in environement.\n"
 # define HISTORY				"history: "
 # define S42H					"42sh :"
 # define UNSETENV				"unsetenv : "
+# define SETENV				"unsetenv : "
 
 # define INVALID				"invalid argument : "
 # define NO_ARGS_U				"option requires an argument -- u"
 # define VAR_NO_SET				"variable not set : "
+# define WRONG_FORMAT			"variable have wrong format : "
 # define OPTION_NO_FOUND		"option not found : "
 # define NO_JOB					"job not found: "
 # define NO_CUR_JOB				"no current job :"
