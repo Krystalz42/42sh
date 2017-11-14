@@ -84,7 +84,7 @@ void				handler_sigchld(int sig)
 			update_status(jobs[index].process);
 			if (terminate_process(jobs[index].process))
 			{
-				print_status(jobs[index].process, index);
+				print_status(jobs[index].process, jobs->index);
 				reset_process(jobs + index);
 			}
 			else

@@ -209,6 +209,7 @@ SRCS = \
 	   memdel_struct/memdel_completion.c						\
 	   memdel_struct/memdel_search_history.c					\
 	   memdel_struct/memdel_read.c								\
+	   memdel_struct/memdel_tree.c								\
 	   error_function/bip.c										\
 	   error_function/usage_builtins.c							\
 

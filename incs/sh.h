@@ -421,6 +421,8 @@ int							memdel_read(t_read **read_std);
 int							memdel_lfh(t_lfh **hist_search);
 int							memdel_cmd(t_cmd **cmd);
 void						memdel_outstanding(void);
+void						memdel_node(t_node **node);
+
 
 /*
 **				ERROR FUNCTION

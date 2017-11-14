@@ -168,7 +168,7 @@ end of the next word.\n"
 # define H_MB					"M-b                     : Move back to the \
 start of this, or the previous, word.\n"
 # define H_CL					"C-l                     : Clear the screen \
-nd redraw the current line.\n"
+and redraw the current line.\n"
 
 # define H_HISTORY				"Commands For Manipulating The History :\n"
 # define H_CP					"C-p                     : Move `up' through\
@@ -197,7 +197,7 @@ the current (or following) word.\n"
 the next word. \n"
 # define H_MDEL					"M-DEL                   : Kill the word behind\
  the cursor. \n"
-# define H_MY					"M-y                     : A FAIRE :Yank the \
+# define H_MY					"M-y                     : Yank the \
 top of the kill ring into the buffer at the current cursor position.\n"
 
 
