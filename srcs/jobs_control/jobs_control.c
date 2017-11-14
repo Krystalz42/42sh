@@ -49,6 +49,7 @@ int				update_status(t_process *process)
 	{
 		if ((waitpid(process->pid, &process->status, WCONTINUED | WNOHANG | WUNTRACED)) > 0)
 			ret = 1;
+		log_fatal("%d %d",process->pid, process->status);
 		process = process->next;
 	}
 	log_trace("Return update_status %d", ret);
@@ -80,20 +81,24 @@ void				handler_sigchld(int sig)
 	{
 		if (jobs[index].process && jobs[index].process->foreground == false)
 		{
+			log_trace("%d UPDATE", jobs[index].process->pid);
 			first_process(jobs);
-			update_status(jobs[index].process);
-			if (terminate_process(jobs[index].process))
+			if (update_status(jobs[index].process))
 			{
-				print_status(jobs[index].process, jobs->index);
-				reset_process(jobs + index);
-			}
-			else
-			{
-				modify_runing(jobs[index].process, false);
-				modify_foreground(jobs[index].process, false);
+				if (terminate_process(jobs[index].process))
+				{
+					print_status(jobs[index].process, jobs->index);
+					reset_process(jobs + index);
+				}
+				else
+				{
+					modify_runing(jobs[index].process, false);
+					modify_foreground(jobs[index].process, false);
+				}
 			}
 			pjt(jobs + index);
 		}
 		index--;
 	}
 }
+;

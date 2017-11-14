@@ -269,7 +269,7 @@ in environement.\n"
 # define HISTORY				"history: "
 # define S42H					"42sh :"
 # define UNSETENV				"unsetenv : "
-# define SETENV				"unsetenv : "
+# define SETENV					"setenv : "
 
 # define INVALID				"invalid argument : "
 # define NO_ARGS_U				"option requires an argument -- u"
