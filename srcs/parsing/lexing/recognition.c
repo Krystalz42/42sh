@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 20:08:58 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/12 20:33:38 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 13:08:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ const t_lexing	g_operaters[] =
 	(t_lexing){"<<", VALUE_DLESS, PRIO_REDIR},
 	(t_lexing){">>", VALUE_DGREAT, PRIO_REDIR},
 	(t_lexing){">&", VALUE_GREAT_AND, PRIO_REDIR},
+	(t_lexing){"&>", VALUE_GREAT, PRIO_REDIR},
 	(t_lexing){"<", VALUE_LESS, PRIO_REDIR},
 	(t_lexing){">", VALUE_GREAT, PRIO_REDIR},
 	(t_lexing){NULL, SYNTAX_ERR, SYNTAX_ERR}
@@ -72,7 +73,7 @@ static void		get_info(char *str, t_parsing *node)
 	if (str)
 	{
 		index = 0;
-		while (index < 10)
+		while (index < 11)
 		{
 			if (!ft_strcmp(str, g_operaters[index].str))
 				break ;

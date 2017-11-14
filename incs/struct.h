@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/12 19:37:18 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 12:34:28 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 #include <stdbool.h>
 
+/*
+**			STRUCT FOR ARGV
+*/
+
+typedef struct			s_argv
+{
+	char				*str;
+}						t_argv;
 
 /*
 **			STRUCT FOR ERROR
