@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
         incs/define.h
+        incs/enum.h
         incs/sh.h
         incs/struct.h
         libs/libft/incs/get_next_line.h
@@ -151,6 +152,7 @@ set(SOURCE_FILES
         srcs/execution/builtins_functions/builtin_history.c
         srcs/execution/builtins_functions/builtin_jobs.c
         srcs/execution/builtins_functions/builtin_kill.c
+        srcs/execution/builtins_functions/builtin_kill2.c
         srcs/execution/builtins_functions/builtin_suspend.c
         srcs/execution/builtins_functions/builtin_switch.c
         srcs/execution/builtins_functions/data_builtin.c
@@ -203,6 +205,7 @@ set(SOURCE_FILES
         srcs/jobs_control/modify_status_jobs.c
         srcs/jobs_control/my_execve.c
         srcs/jobs_control/my_wait.c
+        srcs/jobs_control/print_process.c
         srcs/jobs_control/set_process.c
         srcs/jobs_control/status_signals.c
         srcs/memdel_struct/memdel_completion.c
@@ -211,8 +214,9 @@ set(SOURCE_FILES
         srcs/memdel_struct/memdel_search_history.c
         srcs/parsing/expanding/special.c
         srcs/parsing/expanding/split.c
-        srcs/parsing/expanding/split_tools.c
         srcs/parsing/expanding/tilde.c
+        srcs/parsing/expanding/tools.c
+        srcs/parsing/expanding/variable.c
         srcs/parsing/lexing/lexer.c
         srcs/parsing/lexing/recognition.c
         srcs/parsing/lexing/regular_tokenisation.c
@@ -222,7 +226,6 @@ set(SOURCE_FILES
         srcs/parsing/tools/list.c
         srcs/parsing/tools/logger.c
         srcs/parsing/parsing.c
-        srcs/parsing/tools.c
         srcs/read/completion/check_binary_path.c
         srcs/read/completion/color_completion.c
         srcs/read/completion/complete_binary.c
@@ -295,7 +298,7 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/jobs_control/print_process.c srcs/execution/builtins_functions/builtin_kill2.c incs/enum.h)
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

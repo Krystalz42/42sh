@@ -5577,33 +5577,6 @@ srcs/parsing/expanding/split.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split.c.s
 .PHONY : srcs/parsing/expanding/split.c.s
 
-srcs/parsing/expanding/split_tools.o: srcs/parsing/expanding/split_tools.c.o
-
-.PHONY : srcs/parsing/expanding/split_tools.o
-
-# target to build an object file
-srcs/parsing/expanding/split_tools.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split_tools.c.o
-.PHONY : srcs/parsing/expanding/split_tools.c.o
-
-srcs/parsing/expanding/split_tools.i: srcs/parsing/expanding/split_tools.c.i
-
-.PHONY : srcs/parsing/expanding/split_tools.i
-
-# target to preprocess a source file
-srcs/parsing/expanding/split_tools.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split_tools.c.i
-.PHONY : srcs/parsing/expanding/split_tools.c.i
-
-srcs/parsing/expanding/split_tools.s: srcs/parsing/expanding/split_tools.c.s
-
-.PHONY : srcs/parsing/expanding/split_tools.s
-
-# target to generate assembly for a file
-srcs/parsing/expanding/split_tools.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/split_tools.c.s
-.PHONY : srcs/parsing/expanding/split_tools.c.s
-
 srcs/parsing/expanding/tilde.o: srcs/parsing/expanding/tilde.c.o
 
 .PHONY : srcs/parsing/expanding/tilde.o
@@ -5630,6 +5603,60 @@ srcs/parsing/expanding/tilde.s: srcs/parsing/expanding/tilde.c.s
 srcs/parsing/expanding/tilde.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/tilde.c.s
 .PHONY : srcs/parsing/expanding/tilde.c.s
+
+srcs/parsing/expanding/tools.o: srcs/parsing/expanding/tools.c.o
+
+.PHONY : srcs/parsing/expanding/tools.o
+
+# target to build an object file
+srcs/parsing/expanding/tools.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/tools.c.o
+.PHONY : srcs/parsing/expanding/tools.c.o
+
+srcs/parsing/expanding/tools.i: srcs/parsing/expanding/tools.c.i
+
+.PHONY : srcs/parsing/expanding/tools.i
+
+# target to preprocess a source file
+srcs/parsing/expanding/tools.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/tools.c.i
+.PHONY : srcs/parsing/expanding/tools.c.i
+
+srcs/parsing/expanding/tools.s: srcs/parsing/expanding/tools.c.s
+
+.PHONY : srcs/parsing/expanding/tools.s
+
+# target to generate assembly for a file
+srcs/parsing/expanding/tools.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/tools.c.s
+.PHONY : srcs/parsing/expanding/tools.c.s
+
+srcs/parsing/expanding/variable.o: srcs/parsing/expanding/variable.c.o
+
+.PHONY : srcs/parsing/expanding/variable.o
+
+# target to build an object file
+srcs/parsing/expanding/variable.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/variable.c.o
+.PHONY : srcs/parsing/expanding/variable.c.o
+
+srcs/parsing/expanding/variable.i: srcs/parsing/expanding/variable.c.i
+
+.PHONY : srcs/parsing/expanding/variable.i
+
+# target to preprocess a source file
+srcs/parsing/expanding/variable.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/variable.c.i
+.PHONY : srcs/parsing/expanding/variable.c.i
+
+srcs/parsing/expanding/variable.s: srcs/parsing/expanding/variable.c.s
+
+.PHONY : srcs/parsing/expanding/variable.s
+
+# target to generate assembly for a file
+srcs/parsing/expanding/variable.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/expanding/variable.c.s
+.PHONY : srcs/parsing/expanding/variable.c.s
 
 srcs/parsing/lexing/lexer.o: srcs/parsing/lexing/lexer.c.o
 
@@ -5792,33 +5819,6 @@ srcs/parsing/parsing/parsing.s: srcs/parsing/parsing/parsing.c.s
 srcs/parsing/parsing/parsing.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/parsing/parsing.c.s
 .PHONY : srcs/parsing/parsing/parsing.c.s
-
-srcs/parsing/tools.o: srcs/parsing/tools.c.o
-
-.PHONY : srcs/parsing/tools.o
-
-# target to build an object file
-srcs/parsing/tools.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/tools.c.o
-.PHONY : srcs/parsing/tools.c.o
-
-srcs/parsing/tools.i: srcs/parsing/tools.c.i
-
-.PHONY : srcs/parsing/tools.i
-
-# target to preprocess a source file
-srcs/parsing/tools.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/tools.c.i
-.PHONY : srcs/parsing/tools.c.i
-
-srcs/parsing/tools.s: srcs/parsing/tools.c.s
-
-.PHONY : srcs/parsing/tools.s
-
-# target to generate assembly for a file
-srcs/parsing/tools.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/parsing/tools.c.s
-.PHONY : srcs/parsing/tools.c.s
 
 srcs/parsing/tools/error.o: srcs/parsing/tools/error.c.o
 
@@ -8460,12 +8460,15 @@ help:
 	@echo "... srcs/parsing/expanding/split.o"
 	@echo "... srcs/parsing/expanding/split.i"
 	@echo "... srcs/parsing/expanding/split.s"
-	@echo "... srcs/parsing/expanding/split_tools.o"
-	@echo "... srcs/parsing/expanding/split_tools.i"
-	@echo "... srcs/parsing/expanding/split_tools.s"
 	@echo "... srcs/parsing/expanding/tilde.o"
 	@echo "... srcs/parsing/expanding/tilde.i"
 	@echo "... srcs/parsing/expanding/tilde.s"
+	@echo "... srcs/parsing/expanding/tools.o"
+	@echo "... srcs/parsing/expanding/tools.i"
+	@echo "... srcs/parsing/expanding/tools.s"
+	@echo "... srcs/parsing/expanding/variable.o"
+	@echo "... srcs/parsing/expanding/variable.i"
+	@echo "... srcs/parsing/expanding/variable.s"
 	@echo "... srcs/parsing/lexing/lexer.o"
 	@echo "... srcs/parsing/lexing/lexer.i"
 	@echo "... srcs/parsing/lexing/lexer.s"
@@ -8484,9 +8487,6 @@ help:
 	@echo "... srcs/parsing/parsing/parsing.o"
 	@echo "... srcs/parsing/parsing/parsing.i"
 	@echo "... srcs/parsing/parsing/parsing.s"
-	@echo "... srcs/parsing/tools.o"
-	@echo "... srcs/parsing/tools.i"
-	@echo "... srcs/parsing/tools.s"
 	@echo "... srcs/parsing/tools/error.o"
 	@echo "... srcs/parsing/tools/error.i"
 	@echo "... srcs/parsing/tools/error.s"

@@ -27,13 +27,13 @@ t_cursor					prompt(unsigned char flags)
 {
 	static char		*prompt;
 
-	if (flags & HEREDOC && get_len_prompt(-2))
+	if (flags & HEREDOC && get_len_prompt(KEEP))
 		prompt = "heredoc > ";
-	else if (flags & DQUOTE && get_len_prompt(-1))
+	else if (flags & DQUOTE && get_len_prompt(MORE))
 		prompt = "dquote > ";
-	else if (flags & QUOTE && get_len_prompt(-1))
+	else if (flags & QUOTE && get_len_prompt(MORE))
 		prompt = "quote > ";
-	else if (flags & NEXTCMD && get_len_prompt(-1))
+	else if (flags & NEXTCMD && get_len_prompt(MORE))
 		prompt = "nextcmd > ";
 	else if (flags & DEFAULT)
 		prompt = my_prompt(NULL);

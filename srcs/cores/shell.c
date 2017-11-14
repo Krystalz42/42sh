@@ -22,6 +22,17 @@ void	print_tree(t_node *tree, int stage)
 	}
 }
 
+void			stdel(t_parsing **node)
+{
+	if ((*node)->env_option)
+		ft_memdel_tab(&(*node)->env);
+	ft_memdel_tab(&(*node)->command);
+	ft_strdel(&(*node)->input);
+	ft_strdel(&(*node)->heredoc);
+	ft_memdel((void **)&(*node));
+	(*node) = NULL;
+}
+
 void		free_node(t_node **node)
 {
 	if (*node)
@@ -30,7 +41,7 @@ void		free_node(t_node **node)
 			free_node(&((*node)->left));
 		if ((*node)->right)
 			free_node(&((*node)->right));
-		lstdel(&(*node)->content);
+		stdel(&(*node)->content);
  		ft_memdel((void **)node);
  	}
 }
@@ -44,20 +55,24 @@ int		shell(void)
 	input = NULL;
 	parse_struct = NULL;
 	tree = NULL;
-	while (42)
+	while (0x2A)
 	{
 		memdel_cmd(&input);
+		free_node(&tree);
 		log_success("----------------- Welcome to the new command ! ----------------");
 		if ((input = read_stdin(DEFAULT)) == NULL)
+		{
+			log_error("To cont %d", input ? 1 : 0);
 			continue ;
-		if ((parse_struct = parsing(first_cmd(input, 1))) == NULL)
+		}
+		log_error("%d", input ? 1 : 0);
+		if ((parse_struct = parsing(input)) == NULL)
 			continue ;
 		if ((tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR)) == NULL)
 			continue ;
 		check_tree_path(tree);
 		execute_node(tree, NULL, FORK | FOREGROUND);
 		cursor_column(1);
-		free_node(&tree);
 	}
 	return (0);
 }

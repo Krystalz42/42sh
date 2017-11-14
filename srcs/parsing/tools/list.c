@@ -40,13 +40,16 @@ void			lstadd(t_parsing *node, t_parsing *new)
 		new->prev = node;
 	}
 }
-
 void			lstdel(t_parsing **node)
 {
-	if ((*node)->env_option)
-		ft_memdel_tab(&(*node)->env);
-	ft_memdel_tab(&(*node)->command);
-	ft_strdel(&(*node)->input);
-	ft_memdel((void **)&(*node));
-	(*node) = NULL;
+	t_parsing															*memory;
+
+	while (*node)
+	{
+		memory = *node;
+		*node = (*node)->next;
+		ft_memdel((void **)&memory->input);
+		memory->command = NULL;
+		ft_memdel((void **)&memory);
+	}
 }
