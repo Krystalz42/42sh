@@ -34,7 +34,7 @@ static char 			*my_color(void)
 	static int 		color = 255;
 	static bool		dir = false;
 
-	dir = (color == 233) ? true : dir;
+	dir = (color == 237) ? true : dir;
 	dir = (color == 255) ? false : dir;
 	color = (dir) ? color + 1 : color - 1;
 	return (ft_itoa(color));

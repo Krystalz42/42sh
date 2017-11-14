@@ -27,6 +27,7 @@ void		jobs_op_great_and(t_node *node)
 		log_warn("From %d to %d", fildes, 1);
 		dup2(fildes, STDOUT_FILENO);
 	}
+	close(fildes);
 }
 
 uint8_t					op_great_and(t_node *node, t_jobs *jobs, int info)

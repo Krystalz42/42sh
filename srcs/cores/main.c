@@ -25,3 +25,4 @@ int			main(void)
 	logger_close();
 	return (0);
 }
+

@@ -4,11 +4,18 @@
 
 #include <sh.h>
 
-uint8_t			op_less(t_node *node, t_jobs *jobs, int info)
+static void			jobs_op_less(t_node *node)
 {
 	int		fildes;
-	log_debug("VALUE_LESS %d", info);
 
+	fildes = open(node->right->content->command[0], O_RDONLY);
+	dup2(fildes, STDIN_FILENO);
+	close(fildes);
+}
+
+uint8_t			op_less(t_node *node, t_jobs *jobs, int info)
+{
+	log_debug("VALUE_LESS %d", info);
 	if (info & FORK)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)
@@ -20,20 +27,14 @@ uint8_t			op_less(t_node *node, t_jobs *jobs, int info)
 		}
 		else
 		{
-			if ((fildes = open(node->right->content->command[0], O_RDONLY)) == -1)
-				exit(1);
 			jobs->process->pid = getpid();
-			dup2(fildes, STDIN_FILENO);
-			close(fildes);
+			jobs_op_less(node);
 			execute_node(node->left, jobs, info ^ FORK);
 		}
 	}
 	else
 	{
-		if ((fildes = open(node->right->content->command[0], O_RDONLY)) == -1)
-			exit(1);
-		dup2(fildes, STDIN_FILENO);
-		close(fildes);
+		jobs_op_less(node);
 		execute_node(node->left, jobs, info);
 	}
 	return (var_return(-1));

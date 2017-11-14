@@ -45,13 +45,14 @@ static void				do_execution(t_node *node, t_jobs *jobs, int info)
 		process = my_fork(jobs, node, info);
 		if (process->pid > 0) // father
 		{
+			log_success("On va wait les enfants!");
 			my_wait(jobs);
 		}
 		else if (process->pid == 0) // fils
 		{
 			process->pid = getpid();
 			if (process->prev)
-				write_pipe(process->fildes);
+				write_pipe(process->prev->fildes);
 			jobs_execution(node, info);
 		}
 	}

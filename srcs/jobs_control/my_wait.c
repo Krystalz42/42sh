@@ -4,30 +4,29 @@
 
 #include <sh.h>
 
-
-int			wait_group(t_process *process)
+int			wait_group(t_process *process, int option)
 {
-	int			status;
-	int			pid;
+	int			ret;
 
-	while ((pid = waitpid(-process->pgid, &status, WUNTRACED)) != -1)
-		if (pid != 0)
-		{
-			log_success("%d", pid);
-			update_status_jobs(pid, status);
-		}
-	return (1);
+	ret = 0;
+	while (process)
+	{
+		if ((waitpid(-process->pgid, &process->status, option)) > 0)
+			ret = 1;
+		process = process->next;
+	}
+	return (ret);
 }
 
 void			set_fildes(pid_t pgid)
 {
 	signal(SIGTTIN, SIG_IGN);
 	signal(SIGTTOU, SIG_IGN);
-	log_trace("FG Return tcsetpgrp(0, %d) == [%d]", pgid, tcsetpgrp(STDIN_FILENO, pgid));
+	tcsetpgrp(STDIN_FILENO, pgid);
 }
 void			wait_process(t_jobs *jobs)
 {
-	wait_group(jobs->process);
+	wait_group(jobs->process, WUNTRACED);
 	update_jobs(jobs->process);
 	if (terminate_process(jobs->process))
 		reset_process(jobs);

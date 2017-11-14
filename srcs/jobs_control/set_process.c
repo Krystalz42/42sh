@@ -28,7 +28,7 @@ int					finish_process(t_process *process)
 		nb_process++;
 		process = process->next;
 	}
-//	log_trace("Return finish_status %d", (terminated - nb_process) == 0 ? 1 : 0);
+	log_trace("Return finish_status %d", (terminated - nb_process) == 0 ? 1 : 0);
 	return ((terminated - nb_process) == 0 ? 1 : 0);
 }
 

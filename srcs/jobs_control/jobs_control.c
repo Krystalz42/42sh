@@ -40,67 +40,32 @@ void			update_jobs(t_process *process)
 	}
 }
 
-int			place_status(t_process *process, pid_t pid, int status)
-{
-	while (process->prev)
-		process = process->prev;
-	while (process)
-	{
-		if (process->pid == pid)
-		{
-			log_fatal("Find it !");
-			process->status = status;
-			return (1);
-		}
-		process = process->next;
-	}
-	return (0);
-}
-
-t_jobs				*update_status_jobs(pid_t pid, int status)
-{
-	t_jobs			*jobs;
-	int				index;
-
-	jobs = jobs_table();
-	index = 0;
-	while (index < MAX_CHILD)
-	{
-		if (jobs[index].process)
-		{
-			if (place_status(jobs[index].process, pid, status))
-			{
-				log_success("%d", jobs[index].process->pgid);
-				return (jobs + index);
-			}
-		}
-		index++;
-	}
-	return (NULL);
-}
-
 void				handler_sigchld(int sig)
 {
 	t_jobs		*jobs;
-	int			status;
-	int			pid;
+	int 		index;
 
+	jobs = jobs_table();
 	(void)sig;
 	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
-	pid = waitpid(-1, &status, WUNTRACED);
-	if ((jobs = update_status_jobs(pid, status)))
-		if (jobs->process->foreground == false)
-		{
-			if (finish_process(jobs->process))
+	index = 0;
+	while (index < MAX_CHILD)
+	{
+		if (jobs[index].process && jobs[index].process->foreground == false)
+			if (wait_group(jobs[index].process, WNOHANG))
 			{
-				print_status(jobs->process, jobs->index);
-				reset_process(jobs);
+				if (finish_process(jobs[index].process))
+				{
+					print_status(jobs[index].process, jobs[index].index);
+					reset_process(jobs);
+				}
+				else
+				{
+					print_status(jobs[index].process, jobs[index].index);
+					modify_runing(jobs[index].process, false);
+					modify_foreground(jobs[index].process, false);
+				}
 			}
-			else
-			{
-				print_status(jobs->process, jobs->index);
-				modify_runing(jobs->process, false);
-				modify_foreground(jobs->process, false);
-			}
-		}
+		index++;
+	}
 }

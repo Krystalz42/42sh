@@ -334,7 +334,6 @@ t_parsing					*lstnew(char *input);
 **				JOB'S CONTROL FUNCTION
 */
 
-t_jobs						*update_status_jobs(pid_t pid, int status);
 void						close_fildes(t_process *process);
 void						print_info_jobs(t_jobs *jobs);
 t_node						*find_executing_node(t_node *node);
@@ -342,7 +341,7 @@ void						first_process(t_jobs *jobs);
 void						reset_process(t_jobs *jobs);
 void						wait_process(t_jobs *jobs);
 void						update_jobs(t_process *process);
-int							wait_group(t_process *process);
+int							wait_group(t_process *process, int option);
 int							finish_process(t_process *process);
 t_jobs						*jobs_table(void);
 void						my_execve(char **command, char **env);

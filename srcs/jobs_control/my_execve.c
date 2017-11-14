@@ -17,9 +17,6 @@ void			my_execve(char **command, char **env)
 	reset_signal();
 	log_info("[%s] PID [%d] PPID [%d] PGID [%d]",
 			command[0], getpid(), getppid(), getpgid(0));
-	int i = -1;
-	while (command[++i])
-		log_debug("%s", command[i]);
 	if ((execve(command[0], command, env)) == -1)
 	{
 		error_msg("42sh: ", "command not found: ", command[0]);

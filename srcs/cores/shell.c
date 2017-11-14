@@ -22,8 +22,6 @@ void	print_tree(t_node *tree, int stage)
 	}
 }
 
-
-
 int		shell(void)
 {
 	t_cmd		*input;
@@ -44,7 +42,6 @@ int		shell(void)
 		if ((tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR)) == NULL)
 			continue ;
 		check_tree_path(tree);
-		print_tree(tree, 0);
 		execute_node(tree, NULL, FORK | FOREGROUND);
 		cursor_column(1);
 	}
