@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 12:00:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 17:55:01 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 19:08:47 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,35 @@ static void		ptr_next(t_parsing **node)
 *************** PRIVATE ********************************************************
 */
 
-static char		**get_argv(char **argv)
+static void		get_argv(char **node, char ***stack)
 {
 	char		**dup;
+	char		**memory;
 
-	dup = ft_arraysub(argv, 1, ft_arraylen(argv));
-	return (dup);
+	dup = ft_arraysub(node, 1, ft_arraylen(node));
+	memory = *stack;
+	*stack = ft_arrayjoin(dup, *stack);
+	ft_memdel_tab(&memory);
+	ft_memdel_tab(&dup);
 }
 
-static void		remove_argv(char ***argv)
+static void		remove_argv(char ***node)
 {
 	char		**new;
 
-	new = ft_arraysub(*argv, 0, 1);
-	ft_memdel_tab(argv);
-	*argv = new;
+	new = ft_arraysub(*node, 0, 1);
+	ft_memdel_tab(node);
+	*node = new;
+}
+
+static void		add_argv(char ***node, char ***stack)
+{
+	char		**memory;
+
+	memory = *node;
+	*node = ft_arrayjoin(*node, *stack);
+	ft_memdel_tab(&memory);
+	ft_memdel_tab(stack);
 }
 
 /*
@@ -49,28 +63,20 @@ static void		remove_argv(char ***argv)
 
 void			argv(t_parsing *node)
 {
-	char		**temp;
-	char		**memory;
+	char		**stack;
 
-	temp = NULL;
+	stack = NULL;
 	ptr_next(&node);
 	while (node)
 	{
 		if (chk_get_argv(node->prev) && ft_arraylen(node->command) > 1)
 		{
-			memory = temp;
-			temp = ft_arrayjoin(get_argv(node->command), temp);
-			ft_memdel_tab(&memory);
+			get_argv(node->command, &stack);
 			remove_argv(&node->command);
 		}
 		else if (chk_add_argv(node->prev) || !node->prev)
-		{
-			memory = node->command;
-			node->command = ft_arrayjoin(node->command, temp);
-			ft_memdel_tab(&memory);
-			ft_memdel_tab(&temp);
-		}
+			add_argv(&node->command, &stack);
 		node = node->prev;
 	}
-	temp ? ft_memdel_tab(&temp) : 0;
+	stack ? ft_memdel_tab(&stack) : 0;
 }

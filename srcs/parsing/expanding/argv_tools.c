@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 14:37:30 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 17:53:40 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 18:45:40 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,16 @@ bool		chk_add_argv(t_parsing *node)
 	return (false);
 }
 
+static char		*chk(char *str)
+{
+	size_t		index;
+
+	index = 0;
+	while (str && str[index] && ft_isdigit(str[index]))
+		index++;
+	return (str + index);
+}
+
 bool		chk_get_argv(t_parsing *node)
 {
 	short				index;
@@ -91,7 +101,7 @@ bool		chk_get_argv(t_parsing *node)
 		index = 0;
 		while (operaters[index])
 		{
-			if (!ft_strcmp(node->command[0], operaters[index++]))
+			if (!ft_strcmp(chk(node->command[0]), operaters[index++]))
 				return (true);
 		}
 	}
