@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 12:00:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 16:26:51 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 17:55:01 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,15 +56,12 @@ void			argv(t_parsing *node)
 	ptr_next(&node);
 	while (node)
 	{
-		if (chk_get_argv(node->prev))
+		if (chk_get_argv(node->prev) && ft_arraylen(node->command) > 1)
 		{
-			if (ft_arraylen(node->command) > 1)
-			{
-				memory = temp;
-				temp = ft_arrayjoin(get_argv(node->command), temp);
-				ft_memdel_tab(&memory);
-				remove_argv(&node->command);
-			}
+			memory = temp;
+			temp = ft_arrayjoin(get_argv(node->command), temp);
+			ft_memdel_tab(&memory);
+			remove_argv(&node->command);
 		}
 		else if (chk_add_argv(node->prev) || !node->prev)
 		{
@@ -75,4 +72,5 @@ void			argv(t_parsing *node)
 		}
 		node = node->prev;
 	}
+	temp ? ft_memdel_tab(&temp) : 0;
 }

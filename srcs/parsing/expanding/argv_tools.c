@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 14:37:30 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 16:25:07 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 17:53:40 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char			**ft_arrayjoin(char **a1, char **a2)
 bool		chk_add_argv(t_parsing *node)
 {
 	short				index;
-	static const char	*operaters[] = {";", "&&", "||", "|", "&"};
+	static const char	*operaters[] = {";", "&&", "||", "|", "&", NULL};
 
 	if (node && node->value && node->command && node->command[0])
 	{
@@ -84,7 +84,7 @@ bool		chk_add_argv(t_parsing *node)
 bool		chk_get_argv(t_parsing *node)
 {
 	short				index;
-	static const char	*operaters[] = {">>", ">&", "&>", ">"};
+	static const char	*operaters[] = {">>", ">&", "&>", ">", NULL};
 
 	if (node && node->value && node->command && node->command[0])
 	{
