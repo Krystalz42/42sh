@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 12:00:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 17:05:00 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 17:55:01 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,5 @@ void			argv(t_parsing *node)
 		}
 		node = node->prev;
 	}
+	temp ? ft_memdel_tab(&temp) : 0;
 }
