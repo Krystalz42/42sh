@@ -37,7 +37,7 @@ uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
 		}
 		else
 			print_jobs(jobs + index, 0);
-		update_status(jobs[index].process);
+		wait_group(jobs[index].process, WCONTINUED | WNOHANG);
 		wait_process(jobs + index);
 		set_fildes(getpgid(0));
 		init_signal();
@@ -56,7 +56,7 @@ uint8_t		bg_switch_process(t_jobs *jobs, int index, char *error, char *args)
 		modify_runing(jobs[index].process, true);
 		modify_foreground(jobs[index].process, false);
 		kill(-jobs[index].process->pgid, SIGCONT);
-		update_status(jobs[index].process);
+		wait_group(jobs[index].process, WCONTINUED | WNOHANG);
 		print_jobs(jobs + index, 16);
 		pjt(jobs + index);
 		return (0);

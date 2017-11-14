@@ -15,15 +15,16 @@ static void					play_with_fildes(t_jobs *jobs, int info, pid_t pid)
 			{
 				log_trace("Write %d", pid);
 				write_pipe(process->prev->fildes);
+				close_pipe(process->prev->fildes);
 			}
 			if (READ & info)
 			{
 				log_trace("Read %d", pid);
 				read_pipe(process->fildes);
+				close_pipe(process->fildes);
 			}
 			close_pipe(process->fildes);
 		}
-
 }
 
 static void				jobs_execution(t_node *node, int info)
