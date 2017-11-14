@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 19:39:01 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/13 19:16:24 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:05:07 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 *************** PRIVATE ********************************************************
 */
 
-
-void		populate_backslash(t_cmd **cmd)
+static void		populate_backslash(t_cmd **cmd)
 {
 	uint8_t		index;
 
@@ -29,7 +28,7 @@ void		populate_backslash(t_cmd **cmd)
 	}
 }
 
-void			populate_single_quote(t_cmd **cmd)
+static void		populate_single_quote(t_cmd **cmd)
 {
 	uint8_t		occurence;
 
@@ -42,7 +41,7 @@ void			populate_single_quote(t_cmd **cmd)
 	}
 }
 
-void			populate_double_quote(t_cmd **cmd)
+static void		populate_double_quote(t_cmd **cmd)
 {
 	uint8_t		occurence;
 

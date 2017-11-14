@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 20:56:06 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/12 21:35:03 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:21:11 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void		populate(char *new, char *str, char *variable, size_t length)
 *************** PRIVATE ********************************************************
 */
 
-bool		expansion(char **str, size_t index, char *expand, int to_expand)
+static bool		expansion(char **str, size_t index, char *expand, int to_expand)
 {
 	char	*variable;
 	char	*new;
@@ -76,7 +76,8 @@ void			special(t_parsing *node, char *expand, int to_expand)
 			{
 				if (expansion(&node->input, index, expand, to_expand))
 					special(temp, expand, to_expand);
-				index += 1;
+				else
+					index += 1;
 			}
 		}
 		node = node->next;

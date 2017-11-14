@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:58:20 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/13 18:06:08 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:33:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ static bool		expansion(char **str, size_t index)
 	}
 	return (false);
 }
+
 /*
 *************** PUBLIC *********************************************************
 */
@@ -106,7 +107,8 @@ void			variable(t_parsing *node)
 			{
 				if (node->input[index] == '$' && expansion(&node->input, index))
 					variable(temp);
-				index += 1;
+				else
+					index += 1;
 			}
 		}
 		node = node->next;

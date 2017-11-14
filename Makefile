@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/13 18:02:06 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/11/14 11:36:30 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -182,7 +182,6 @@ SRCS = \
 	   jobs_control/print_process.c								\
 	   jobs_control/my_execve.c									\
 	   parsing/parsing.c										\
-	   parsing/tools.c											\
 	   parsing/lexing/special_tokenisation.c					\
 	   parsing/lexing/regular_tokenisation.c					\
 	   parsing/lexing/lexer.c									\
@@ -192,6 +191,7 @@ SRCS = \
 	   parsing/expanding/tilde.c								\
 	   parsing/expanding/variable.c								\
 	   parsing/expanding/split.c								\
+	   parsing/expanding/tools.c								\
 	   parsing/tools/list.c										\
 	   parsing/tools/error.c									\
 	   parsing/tools/logger.c									\

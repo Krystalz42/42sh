@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/13 18:01:45 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:50:18 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -309,6 +309,11 @@ void						variable(t_parsing *node);
 
 void						ft_err(char *str, int err);
 size_t						skip_to_occurence(char *str, char c);
+int							isquote(char c);
+size_t						get_wordlength(char *str);
+uint8_t						chk_slash(char c, uint8_t *status);
+uint8_t						chk_quote(char c, uint8_t *status);
+char						*do_skip(char *str, char c);
 
 /*
 **				BASIC FUNCTION

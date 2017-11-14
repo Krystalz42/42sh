@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 11:58:33 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/13 20:04:07 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:50:29 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,74 +15,6 @@
 /*
 *************** TOOLS **********************************************************
 */
-
-char			*do_skip(char *str, char c)
-{
-	while (*str && *str == c)
-		str++;
-	return (str);
-}
-
-uint8_t			chk_quote(char c, uint8_t *status)
-{
-	if (c)
-	{
-		if (c == '\'' && !(*status & DQUOTE))
-			*status = *status & QUOTE ? DEFAULT : QUOTE;
-		else if (c == '\"' && !(*status & QUOTE))
-			*status = *status & DQUOTE ? DEFAULT : DQUOTE;
-	}
-	return (*status);
-}
-
-uint8_t			chk_slash(char c, uint8_t *status)
-{
-	static int	index;
-
-	if (c)
-	{
-		if (c == '\\' && *status & DEFAULT)
-		{
-			*status = BACKSLASH;
-			index = 1;
-		}
-		else if (index == 0)
-			*status = DEFAULT;
-		else
-			index--;
-	}
-	return (*status);
-}
-
-size_t			get_length(char *str)
-{
-	size_t		index;
-	uint8_t		quote;
-	uint8_t		slash;
-
-	index = 0;
-	quote = DEFAULT;
-	slash = DEFAULT;
-	while (str[index])
-	{
-		if (chk_slash(str[index], &slash) == DEFAULT)
-		{
-			if (chk_quote(str[index], &quote) == DEFAULT && str[index] == ' ')
-				break ;
-		}
-		index++;
-	}
-	return (index);
-}
-
-int				is_quote(char c)
-{
-	if (c == '\'')
-		return (SINGLE_QUOTE);
-	if (c == '\"')
-		return (DOUBLE_QUOTE);
-	return (0);
-}
 
 char			*populating(char *new, char *str, size_t length)
 {
@@ -95,21 +27,22 @@ char			*populating(char *new, char *str, size_t length)
 	{
 		if (!(status & BACKSLASH) && *str == '\\' && !(status & SINGLE_QUOTE))
 			status |= BACKSLASH;
-		else if (!(status & BACKSLASH) && status & DEFAULT && is_quote(*str))
+		else if (!(status & BACKSLASH) && status & DEFAULT && isquote(*str))
 		{
-			status |= is_quote(*str);
+			status |= isquote(*str);
 			status ^= DEFAULT;
 		}
-		else if (!(status & BACKSLASH) && status & is_quote(*str))
+		else if (!(status & BACKSLASH) && status & isquote(*str))
 		{
-			status ^= is_quote(*str);
+			status ^= isquote(*str);
 			status |= DEFAULT;
 		}
 		else
 		{
 			if (status & BACKSLASH)
 				status ^= BACKSLASH;
-			new[index++] = *str;
+			if (*str != 10)
+				new[index++] = *str;
 		}
 		str++;
 	}
@@ -121,7 +54,7 @@ static char		*get_word(char *str, char **new)
 	size_t		length;
 
 	str = do_skip(str, ' ');
-	length = get_length(str);
+	length = get_wordlength(str);
 	*new = (char *)ft_memalloc(sizeof(char) * (length + 1));
 	str = populating(*new, str, length);
 	return (str);

@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/13 19:15:34 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:47:04 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,11 +153,11 @@
 
 # define H_MOVE					"Commands For Moving :\n"
 # define H_CA					"C-a                     : Move to the start of\
- he current line. \n"
+ the current line. \n"
 # define H_CE					"C-e                     : Move to the end of \
-he line. \n"
+the line. \n"
 # define H_CF					"C-f                     : Move forward a \
-haracter.  \n"
+character.  \n"
 # define H_CB					"C-b                     : Move back a\
  character.  \n"
 # define H_MF					"M-f                     : Move forward to the \

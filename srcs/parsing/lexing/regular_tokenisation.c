@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 19:50:25 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/13 19:16:33 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:06:45 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 *************** PRIVATE ********************************************************
 */
 
-int		get_value(char c)
+static int		get_value(char c)
 {
 	short				index;
 	static const char	*operaters = ";|<>&";
@@ -31,7 +31,7 @@ int		get_value(char c)
 	return (TOKEN);
 }
 
-int		populate(t_cmd *cmd)
+static int		populate(t_cmd *cmd)
 {
 	if (cmd && cmd->c)
 	{
@@ -56,7 +56,6 @@ void			regular_tokenisation(t_cmd *cmd)
 
 	quote = DEFAULT;
 	temp = quote;
-
 	while (cmd && cmd->c)
 	{
 		cmd->value = TOKEN;

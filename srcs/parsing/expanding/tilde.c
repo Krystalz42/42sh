@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 21:33:52 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/12 22:09:29 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:25:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,8 @@ void			tilde(t_parsing *node)
 			{
 				if (chk(node->input, index) && expansion(&node->input, index))
 					tilde(temp);
-				index++;
+				else
+					index++;
 			}
 		}
 		node = node->next;

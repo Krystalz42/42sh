@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 20:34:39 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/12 20:34:40 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 11:17:54 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ static bool		isonly(char *str, char c)
 /*
 *************** PUBLIC *********************************************************
 */
-
 
 void			order(t_parsing **node)
 {
@@ -80,16 +79,19 @@ void			syntax(t_parsing **node)
 
 void			empty(t_parsing **node)
 {
+	size_t		index;
 	t_parsing	*temp;
 
+	index = 0;
 	temp = *node;
 	while (temp)
 	{
 		if (isonly(temp->input, ' '))
 		{
-			err(temp->input, SYNTAX_ERR, node);
+			index ? err(" ", SYNTAX_ERR, node) : lstdel(node);
 			return ;
 		}
+		index++;
 		temp = temp->next;
 	}
 }
