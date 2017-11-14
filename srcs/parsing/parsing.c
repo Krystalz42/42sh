@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:11:28 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 11:43:09 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:31:51 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,11 @@ static void		expanding(t_parsing *node)
 {
 	special(node, "$$", getpid());
 	special(node, "$?", var_return(-1));
+	// escaped(node);
 	tilde(node);
 	variable(node);
 	split(node);
+	argv(node);
 }
 
 /*
@@ -62,6 +64,5 @@ t_parsing		*parsing(t_cmd *cmd)
 	token_logger(cmd);
 	list_logger(node);
 	split_logger(node);
-
 	return (node);
 }

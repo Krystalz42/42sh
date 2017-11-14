@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/14 11:36:30 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/11/14 15:16:46 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -187,6 +187,8 @@ SRCS = \
 	   parsing/lexing/lexer.c									\
 	   parsing/lexing/recognition.c								\
 	   parsing/parsing/parsing.c								\
+	   parsing/expanding/argv.c									\
+	   parsing/expanding/argv_tools.c							\
 	   parsing/expanding/special.c								\
 	   parsing/expanding/tilde.c								\
 	   parsing/expanding/variable.c								\

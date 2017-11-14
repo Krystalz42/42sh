@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:58:31 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/12 21:04:40 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 14:31:56 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void			lstadd(t_parsing *node, t_parsing *new)
 }
 void			lstdel(t_parsing **node)
 {
-	t_parsing															*memory;
+	t_parsing	*memory;
 
 	while (*node)
 	{
