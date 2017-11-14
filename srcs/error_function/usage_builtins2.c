@@ -12,6 +12,6 @@ uint8_t				usage_unsetenv(void)
 
 uint8_t				usage_setenv(void)
 {
-	ft_putstr_fd(SETENV, STDERR_FILENO);
+	ft_putstr_fd(SET, STDERR_FILENO);
 	return (0);
 }
