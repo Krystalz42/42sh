@@ -436,4 +436,7 @@ uint8_t						usage_jobs(void);
 uint8_t						usage_history(void);
 uint8_t						usage_env(void);
 uint8_t						usage_hash(void);
+uint8_t						usage_unsetenv(void);
+uint8_t						usage_setenv(void);
+
 #endif

@@ -25,8 +25,12 @@ void		remove_environment(char *string)
 	i = -1;
 	if (table)
 		while (table[++i])
-			if (!compare_environment(string, table[i]))
+		{
+			if (compare_environment(string, table[i]))
+				free(table[i]);
+			else
 				cpy[++c] = table[i];
+		}
 	cpy[++c] = NULL;
 	ft_memdel((void **)&table);
 	env_table(cpy, ENV_INIT);

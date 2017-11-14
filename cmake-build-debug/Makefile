@@ -3687,6 +3687,33 @@ srcs/error_function/usage_builtins.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/usage_builtins.c.s
 .PHONY : srcs/error_function/usage_builtins.c.s
 
+srcs/error_function/usage_builtins2.o: srcs/error_function/usage_builtins2.c.o
+
+.PHONY : srcs/error_function/usage_builtins2.o
+
+# target to build an object file
+srcs/error_function/usage_builtins2.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/usage_builtins2.c.o
+.PHONY : srcs/error_function/usage_builtins2.c.o
+
+srcs/error_function/usage_builtins2.i: srcs/error_function/usage_builtins2.c.i
+
+.PHONY : srcs/error_function/usage_builtins2.i
+
+# target to preprocess a source file
+srcs/error_function/usage_builtins2.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/usage_builtins2.c.i
+.PHONY : srcs/error_function/usage_builtins2.c.i
+
+srcs/error_function/usage_builtins2.s: srcs/error_function/usage_builtins2.c.s
+
+.PHONY : srcs/error_function/usage_builtins2.s
+
+# target to generate assembly for a file
+srcs/error_function/usage_builtins2.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/error_function/usage_builtins2.c.s
+.PHONY : srcs/error_function/usage_builtins2.c.s
+
 srcs/execution/builtins_functions/builtin_env.o: srcs/execution/builtins_functions/builtin_env.c.o
 
 .PHONY : srcs/execution/builtins_functions/builtin_env.o
@@ -3957,6 +3984,33 @@ srcs/execution/builtins_functions/builtin_switch.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_switch.c.s
 .PHONY : srcs/execution/builtins_functions/builtin_switch.c.s
 
+srcs/execution/builtins_functions/builtin_unsetenv.o: srcs/execution/builtins_functions/builtin_unsetenv.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_unsetenv.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_unsetenv.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_unsetenv.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_unsetenv.c.o
+
+srcs/execution/builtins_functions/builtin_unsetenv.i: srcs/execution/builtins_functions/builtin_unsetenv.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_unsetenv.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_unsetenv.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_unsetenv.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_unsetenv.c.i
+
+srcs/execution/builtins_functions/builtin_unsetenv.s: srcs/execution/builtins_functions/builtin_unsetenv.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_unsetenv.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_unsetenv.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/builtin_unsetenv.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_unsetenv.c.s
+
 srcs/execution/builtins_functions/data_builtin.o: srcs/execution/builtins_functions/data_builtin.c.o
 
 .PHONY : srcs/execution/builtins_functions/data_builtin.o
@@ -4091,33 +4145,6 @@ srcs/execution/builtins_functions/ft_setenv.s: srcs/execution/builtins_functions
 srcs/execution/builtins_functions/ft_setenv.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/ft_setenv.c.s
 .PHONY : srcs/execution/builtins_functions/ft_setenv.c.s
-
-srcs/execution/builtins_functions/ft_unsetenv.o: srcs/execution/builtins_functions/ft_unsetenv.c.o
-
-.PHONY : srcs/execution/builtins_functions/ft_unsetenv.o
-
-# target to build an object file
-srcs/execution/builtins_functions/ft_unsetenv.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/ft_unsetenv.c.o
-.PHONY : srcs/execution/builtins_functions/ft_unsetenv.c.o
-
-srcs/execution/builtins_functions/ft_unsetenv.i: srcs/execution/builtins_functions/ft_unsetenv.c.i
-
-.PHONY : srcs/execution/builtins_functions/ft_unsetenv.i
-
-# target to preprocess a source file
-srcs/execution/builtins_functions/ft_unsetenv.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/ft_unsetenv.c.i
-.PHONY : srcs/execution/builtins_functions/ft_unsetenv.c.i
-
-srcs/execution/builtins_functions/ft_unsetenv.s: srcs/execution/builtins_functions/ft_unsetenv.c.s
-
-.PHONY : srcs/execution/builtins_functions/ft_unsetenv.s
-
-# target to generate assembly for a file
-srcs/execution/builtins_functions/ft_unsetenv.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/builtins_functions/ft_unsetenv.c.s
-.PHONY : srcs/execution/builtins_functions/ft_unsetenv.c.s
 
 srcs/execution/builtins_functions/refresh_varenv.o: srcs/execution/builtins_functions/refresh_varenv.c.o
 
@@ -8277,6 +8304,9 @@ help:
 	@echo "... srcs/error_function/usage_builtins.o"
 	@echo "... srcs/error_function/usage_builtins.i"
 	@echo "... srcs/error_function/usage_builtins.s"
+	@echo "... srcs/error_function/usage_builtins2.o"
+	@echo "... srcs/error_function/usage_builtins2.i"
+	@echo "... srcs/error_function/usage_builtins2.s"
 	@echo "... srcs/execution/builtins_functions/builtin_env.o"
 	@echo "... srcs/execution/builtins_functions/builtin_env.i"
 	@echo "... srcs/execution/builtins_functions/builtin_env.s"
@@ -8307,6 +8337,9 @@ help:
 	@echo "... srcs/execution/builtins_functions/builtin_switch.o"
 	@echo "... srcs/execution/builtins_functions/builtin_switch.i"
 	@echo "... srcs/execution/builtins_functions/builtin_switch.s"
+	@echo "... srcs/execution/builtins_functions/builtin_unsetenv.o"
+	@echo "... srcs/execution/builtins_functions/builtin_unsetenv.i"
+	@echo "... srcs/execution/builtins_functions/builtin_unsetenv.s"
 	@echo "... srcs/execution/builtins_functions/data_builtin.o"
 	@echo "... srcs/execution/builtins_functions/data_builtin.i"
 	@echo "... srcs/execution/builtins_functions/data_builtin.s"
@@ -8322,9 +8355,6 @@ help:
 	@echo "... srcs/execution/builtins_functions/ft_setenv.o"
 	@echo "... srcs/execution/builtins_functions/ft_setenv.i"
 	@echo "... srcs/execution/builtins_functions/ft_setenv.s"
-	@echo "... srcs/execution/builtins_functions/ft_unsetenv.o"
-	@echo "... srcs/execution/builtins_functions/ft_unsetenv.i"
-	@echo "... srcs/execution/builtins_functions/ft_unsetenv.s"
 	@echo "... srcs/execution/builtins_functions/refresh_varenv.o"
 	@echo "... srcs/execution/builtins_functions/refresh_varenv.i"
 	@echo "... srcs/execution/builtins_functions/refresh_varenv.s"

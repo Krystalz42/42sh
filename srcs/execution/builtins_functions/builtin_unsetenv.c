@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_setenv.c                                        :+:      :+:    :+:   */
+/*   ft_unsetenv.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/10/28 17:05:12 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/10/28 17:02:08 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
 
-
-uint8_t					ft_setenv(t_node *node, int inf __attribute__((unused)))
+uint8_t				ft_unsetenv(t_node *node, int info __attribute__((unused)))
 {
 	if (my_getenv(node->content->command[1]))
 	{

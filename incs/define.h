@@ -147,12 +147,17 @@
 # define H_B					"Usage for hash :\n"
 # define H_H					"Usage for history :\n"
 # define H_K					"Usage for kill :\n"
+# define H_S					"Usage for setenv :\n"
+# define H_U					"Usage for unsetenv :\n"
 
 # define H_HJ					"-j                      : usage jobs\n"
 # define H_HE					"-e                      : usage env\n"
 # define H_HB					"-b                      : usage hash\n"
 # define H_HH					"-h                      : usage history\n"
 # define H_HK					"-k                      : usage kill\n"
+# define H_HS					"-s                      : usage setenv\n"
+# define H_HU					"-u                      : usage unsetenv\n"
+
 
 # define H_MOVE					"Commands For Moving :\n"
 # define H_CA					"C-a                     : Move to the start of\
@@ -247,6 +252,10 @@ the signal to be sent instead of the default TERM.\n"
 to empty env temporarily.\n"
 # define ENV_I					"-u [name]               : Remove [name] to \
 own env temporarily.\n"
+# define UNSET					"[name=value ...]        : Unset the variable \
+in environement.\n"
+# define SETENV					"[name=value ...]        :  Set the variable \
+in environement.\n"
 
 /*
 **			VARIOUS DEFINE
@@ -259,9 +268,11 @@ own env temporarily.\n"
 # define ENV					"env: "
 # define HISTORY				"history: "
 # define S42H					"42sh :"
+# define UNSETENV				"unsetenv : "
 
 # define INVALID				"invalid argument : "
 # define NO_ARGS_U				"option requires an argument -- u"
+# define VAR_NO_SET				"variable not set : "
 # define OPTION_NO_FOUND		"option not found : "
 # define NO_JOB					"job not found: "
 # define NO_CUR_JOB				"no current job :"

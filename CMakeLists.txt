@@ -160,7 +160,7 @@ set(SOURCE_FILES
         srcs/execution/builtins_functions/ft_cd.c
         srcs/execution/builtins_functions/ft_echo.c
         srcs/execution/builtins_functions/ft_setenv.c
-        srcs/execution/builtins_functions/ft_unsetenv.c
+        srcs/execution/builtins_functions/builtin_unsetenv.c
         srcs/execution/builtins_functions/refresh_varenv.c
         srcs/execution/builtins_functions/utils.c
         srcs/execution/executing_function/op_ampersand.c
@@ -298,7 +298,7 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/memdel_struct/memdel_tree.c)
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/memdel_struct/memdel_tree.c srcs/error_function/usage_builtins2.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

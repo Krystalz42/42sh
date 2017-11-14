@@ -513,6 +513,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/error_function/usage_builtins.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/error_function/usage_builtins2.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_env.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -543,6 +546,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_switch.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_unsetenv.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/data_builtin.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -556,9 +562,6 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/ft_setenv.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/ft_unsetenv.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/refresh_varenv.c">

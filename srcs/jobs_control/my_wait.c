@@ -4,6 +4,14 @@
 
 #include <sh.h>
 
+void			wait_group(t_process *process, int option)
+{
+	while (process)
+	{
+		waitpid(process->pid, &process->status, option);
+		process = process->next;
+	}
+}
 
 void			set_fildes(pid_t pgid)
 {
@@ -13,14 +21,7 @@ void			set_fildes(pid_t pgid)
 }
 void			wait_process(t_jobs *jobs)
 {
-	t_process		*temp;
-
-	temp = jobs->process;
-	while (temp)
-	{
-		waitpid(-temp->pgid, &temp->status, WUNTRACED);
-		temp = temp->next;
-	}
+	wait_group(jobs->process, WUNTRACED);
 	update_jobs(jobs->process);
 	if (terminate_process(jobs->process))
 		reset_process(jobs);
@@ -34,12 +35,8 @@ void			wait_process(t_jobs *jobs)
 
 void		my_wait(t_jobs *jobs)
 {
-	t_process *process;
-
 	if (jobs)
 	{
-		while (jobs->process->prev)
-			jobs->process = jobs->process->prev;
 		close_fildes(jobs->process);
 		if (jobs->process)
 		{
@@ -53,13 +50,7 @@ void		my_wait(t_jobs *jobs)
 			else
 			{
 				print_info_jobs(jobs);
-				process = jobs->process;
-				while (process)
-				{
-					log_error("Wait [%d]", waitpid(process->pid, &process->status, WNOHANG));
-					process = process->next;
-				}
-				pjt(jobs);
+				wait_group(jobs->process, WNOHANG);
 			}
 		}
 	}

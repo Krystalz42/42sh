@@ -169,7 +169,7 @@ SRCS = \
 	   execution/builtins_functions/ft_cd.c						\
 	   execution/builtins_functions/ft_echo.c					\
 	   execution/builtins_functions/ft_setenv.c					\
-	   execution/builtins_functions/ft_unsetenv.c				\
+	   execution/builtins_functions/builtin_unsetenv.c			\
 	   execution/builtins_functions/refresh_varenv.c			\
 	   execution/builtins_functions/utils.c						\
 	   execution/builtins_functions/error.c						\
@@ -212,6 +212,7 @@ SRCS = \
 	   memdel_struct/memdel_tree.c								\
 	   error_function/bip.c										\
 	   error_function/usage_builtins.c							\
+	   error_function/usage_builtins2.c							\
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #
