@@ -22,7 +22,7 @@ void				handler_sig(int sig)
 void				handler_sigint(int sig)
 {
 	log_warn("Signal Reception [%d]", sig);
-	signal_reception(1);
+	signal_reception(SIGINT);
 	ioctl(0, TIOCSTI, "\2\0");
 }
 

@@ -40,15 +40,17 @@ static t_cmd	*return_line(t_read **read_std)
 {
 	t_cmd		*line;
 
+	line = NULL;
 	if (*read_std)
 	{
 		(*read_std)->finish = 0;
-		if (get_len_prompt(-42) != -2 && empty_cmd((*read_std)->cmd) == 0)
+		if (get_len_prompt(-42) != KEEP && empty_cmd((*read_std)->cmd) == 0)
 			make_list_hist((*read_std));
-		line = copy_command(first_cmd((*read_std)->cmd, 1));
-		if (get_len_prompt(-42) == -2)
+		if (get_len_prompt(-42) == KEEP || empty_cmd((*read_std)->cmd) == 0)
+			line = copy_command((*read_std)->cmd);
+		if (get_len_prompt(-42) == KEEP || empty_cmd((*read_std)->cmd))
 			memdel_read(read_std);
-		return (line);
+		return (first_cmd(line, 1));
 	}
 	return (NULL);
 }

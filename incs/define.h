@@ -68,6 +68,9 @@
 **			INITIALIZATION FLAGS
 */
 
+# define MORE					-1
+# define KEEP					-2
+
 # define RESET_STRUCT			1
 # define SAVE_STRUCT			2
 # define REC_STRUCT				4
