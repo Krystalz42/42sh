@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/14 11:47:04 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 14:56:52 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,7 +168,7 @@ end of the next word.\n"
 # define H_MB					"M-b                     : Move back to the \
 start of this, or the previous, word.\n"
 # define H_CL					"C-l                     : Clear the screen \
-nd redraw the current line.\n"
+and redraw the current line.\n"
 
 # define H_HISTORY				"Commands For Manipulating The History :\n"
 # define H_CP					"C-p                     : Move `up' through\

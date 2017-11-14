@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/14 12:03:40 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 15:35:14 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -308,13 +308,18 @@ void						variable(t_parsing *node);
 **				TOOLS'S LEXING PARSING EXPANDING FUNCTION
 */
 
-void						ft_err(char *str, int err);
-size_t						skip_to_occurence(char *str, char c);
-int							isquote(char c);
-size_t						get_wordlength(char *str);
+bool						chk_add_argv(t_parsing *node);
+bool						chk_get_argv(t_parsing *node);
 uint8_t						chk_slash(char c, uint8_t *status);
 uint8_t						chk_quote(char c, uint8_t *status);
 char						*do_skip(char *str, char c);
+char						**ft_arrayjoin(char **a1, char **a2);
+char						**ft_arraysub(char **argv, size_t start, size_t length);
+int							isquote(char c);
+size_t						skip_to_occurence(char *str, char c);
+size_t						get_wordlength(char *str);
+size_t						ft_arraylen(char **argv);
+void						ft_err(char *str, int err);
 
 /*
 **				BASIC FUNCTION

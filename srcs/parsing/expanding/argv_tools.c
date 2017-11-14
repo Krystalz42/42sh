@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 14:37:30 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 14:37:56 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:25:07 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ char		**ft_arraysub(char **argv, size_t start, size_t length)
 		new = (char **)ft_memalloc(sizeof(char *) * (length + 1));
 		while (length--)
 			new[index++] = ft_strdup(argv[start++]);
+		new[index] = NULL;
 	}
 	return (new);
 }
@@ -61,4 +62,38 @@ char			**ft_arrayjoin(char **a1, char **a2)
 		new[index++] = ft_strdup(a2[i++]);
 	new[index] = NULL;
 	return (new);
+}
+
+bool		chk_add_argv(t_parsing *node)
+{
+	short				index;
+	static const char	*operaters[] = {";", "&&", "||", "|", "&"};
+
+	if (node && node->value && node->command && node->command[0])
+	{
+		index = 0;
+		while (operaters[index])
+		{
+			if (!ft_strcmp(node->command[0], operaters[index++]))
+				return (true);
+		}
+	}
+	return (false);
+}
+
+bool		chk_get_argv(t_parsing *node)
+{
+	short				index;
+	static const char	*operaters[] = {">>", ">&", "&>", ">"};
+
+	if (node && node->value && node->command && node->command[0])
+	{
+		index = 0;
+		while (operaters[index])
+		{
+			if (!ft_strcmp(node->command[0], operaters[index++]))
+				return (true);
+		}
+	}
+	return (false);
 }
