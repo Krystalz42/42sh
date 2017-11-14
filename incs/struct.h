@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/14 12:34:28 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:54:02 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@
 #include <stdbool.h>
 
 /*
-**			STRUCT FOR ARGV
+**			STRUCT FOR ESCAPE
 */
 
-typedef struct			s_argv
+typedef struct			s_esc
 {
-	char				*str;
-}						t_argv;
+	char				*esc;
+	char				*to_esc;
+}						t_esc;
 
 /*
 **			STRUCT FOR ERROR

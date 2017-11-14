@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/14 15:35:14 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/14 16:46:51 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -299,6 +299,7 @@ void						order(t_parsing **node);
 */
 
 void						argv(t_parsing *node);
+void						escape(t_parsing *node);
 void						special(t_parsing *node, char *expand, int to_expand);
 void						tilde(t_parsing *node);
 void						split(t_parsing *node);
