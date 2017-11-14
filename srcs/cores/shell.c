@@ -36,7 +36,7 @@ int		shell(void)
 	{
 		memdel_cmd(&input);
 		memdel_node(&tree);
-		log_success("----------------- Welcome to the new command ! ----------------");
+		log_success(" Welcome to the new command !");
 		if ((input = read_stdin(DEFAULT)) == NULL)
 			continue ;
 		if ((parse_struct = parsing(input)) == NULL)
@@ -44,6 +44,7 @@ int		shell(void)
 		if ((tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR)) == NULL)
 			continue ;
 		check_tree_path(tree);
+		print_tree(tree, 0);
 		execute_node(tree, NULL, FORK | FOREGROUND);
 		cursor_column(1);
 	}

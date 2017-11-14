@@ -24,6 +24,7 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	{
 		log_info("Do right");
 		jobs->process->pid = getpid();
+		read_pipe(fildes);
 		execute_node(node->right, jobs, (info ^ FORK) | READ);
 	}
 	return (1);

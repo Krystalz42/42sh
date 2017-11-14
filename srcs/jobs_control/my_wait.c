@@ -7,8 +7,15 @@
 
 int			wait_group(t_process *process)
 {
-	while (finish_process(process) != 1)
-		;
+	int			status;
+	int			pid;
+
+	while ((pid = waitpid(-process->pgid, &status, WUNTRACED)) != -1)
+		if (pid != 0)
+		{
+			log_success("%d", pid);
+			update_status_jobs(pid, status);
+		}
 	return (1);
 }
 
