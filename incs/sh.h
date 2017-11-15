@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/15 19:59:30 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/15 20:15:38 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,7 +139,7 @@ t_bdata						*b_data(void);
 **				BUILT IN FUNCTION
 */
 
-uint8_t						ft_cd(t_node *node, int info);
+uint8_t						builtin_cd(t_node *node, int info);
 signed int					search_in_tab(char **data, char *var);
 char						**refresh_varenv(char **env);
 char						*ft_path(char *var, unsigned int begin);

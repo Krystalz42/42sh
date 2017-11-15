@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/15 20:02:49 by sbelazou         ###   ########.fr        #
+#    Updated: 2017/11/15 20:13:05 by sbelazou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -168,6 +168,7 @@ SRCS = \
 	   execution/builtins_functions/builtin_help.c				\
 	   execution/builtins_functions/basic_help.c				\
 	   execution/builtins_functions/builtin_cd.c				\
+	   execution/builtins_functions/builtin_echo.c				\
 	   execution/builtins_functions/builtin_setenv.c			\
 	   execution/builtins_functions/builtin_echo.c				\
 	   execution/builtins_functions/builtin_unsetenv.c			\
