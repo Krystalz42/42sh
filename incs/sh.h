@@ -107,7 +107,6 @@ void						add_hash(char *bin, char *path,
 **				BUILT IN FUNCTION
 */
 
-t_bdata						*b_data(void);
 void						collect_path(char **binary);
 int							looking_for_path(char **binary);
 int							check_if_builtin(t_node *node, int info);
@@ -121,6 +120,7 @@ uint8_t						builtin_kill(t_node *node, int info);
 uint8_t						builtin_env(t_node *node, int info);
 uint8_t						builtin_exit(t_node *node, int info);
 uint8_t						builtin_help(t_node *node, int info);
+uint8_t						builtin_echo(t_node *node, int info);
 uint8_t						hash_reset(void);
 uint8_t						hash_print(int fd);
 uint8_t						b_write_history(void);
@@ -131,6 +131,7 @@ uint8_t						kill_process(char *string1, char *string2);
 uint8_t						signal_from_int(uint8_t signal);
 uint8_t						signal_from_str(char *status);
 uint8_t						all_signal(void);
+t_bdata						*b_data(void);
 
 /*
 **				BUILT IN FUNCTION
@@ -144,10 +145,10 @@ char						*add_envar(char *var, char *value);
 char						**init_pwd(char **env);
 uint8_t						ft_setenv(t_node *node, int info);
 unsigned int				search_char(char *str, char c);
-uint8_t						ft_unsetenv(t_node *node, int info);
+uint8_t						builtin_unsetenv(t_node *node, int info);
 int							ft_error(char *var, char *msg, int ret);
 unsigned int				tablen(char **src);
-uint8_t						ft_echo(t_node *node, int info);
+
 
 
 /*

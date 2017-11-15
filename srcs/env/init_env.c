@@ -55,8 +55,9 @@ void			init_env(void)
 	if (environ)
 	{
 		env = (char **)ft_memalloc(sizeof(char *) * (ft_tablen(environ) + 1));
-		i = -1;
-		while (environ[++i])
+		i = 0;
+		while (environ[i])
+		{
 			if (ft_strncmp(environ[i], "SHLVL=", 6) == 0)
 			{
 				shlvl = ft_atoi(environ[i] + 6);
@@ -66,6 +67,8 @@ void			init_env(void)
 			}
 			else
 				env[i] = ft_strdup(environ[i]);
+			i++;
+		}
 		env[i] = NULL;
 	}
 	env_table(env, ENV_INIT);

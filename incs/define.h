@@ -191,8 +191,9 @@ delete-char, then return EOF.\n"
 current (or following) word.\n"
 # define H_ML					"M-l                     : Lowercase the \
 current (or following) word.\n"
-# define H_MC					"M-c                     : A FAIRE :Capitalize \
+# define H_MC					"M-c                     : Capitalize \
 the current (or following) word.\n"
+# define H_C_					"C-_                     : Undou"
 
 # define H_KILL_AND_YANK		"Killing And Yanking :\n"
 # define H_CK					"C-k                     : Kill the text from\
@@ -262,6 +263,7 @@ in environement.\n"
 */
 
 # define FG						"fg: "
+# define JOBS					"jobs: "
 # define EXIT					"exit: "
 # define BG						"bg: "
 # define KILL					"kill: "
@@ -270,7 +272,9 @@ in environement.\n"
 # define S42H					"42sh :"
 # define UNSETENV				"unsetenv : "
 # define SETENV					"setenv : "
+# define BECHO					"echo : "
 
+# define LIMIT					"max_child has been defined : 8096"
 # define INVALID				"invalid argument : "
 # define NO_ARGS_U				"option requires an argument -- u"
 # define VAR_NO_SET				"variable not set : "
@@ -294,6 +298,8 @@ in environement.\n"
 # define MAX_CHILD				6
 # define PATH_HISTORY			"/.42sh_history"
 # define PATH_HASH				"/.42sh_hash"
+
+# define N						1
 
 # define MV_LEFT				"le"
 # define MV_BOT					"do"
