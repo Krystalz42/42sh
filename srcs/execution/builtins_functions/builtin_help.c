@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:19 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/30 15:22:21 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/15 19:43:24 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ static int			print_help(int option)
 		ft_putstr(H_HB);
 		ft_putstr(H_HS);
 		ft_putstr(H_HU);
-		ft_putstr(H_HF);
-		ft_putstr(H_HG);
+		ft_putstr(H_HC);
 	}
 	else
 	{
@@ -39,6 +38,7 @@ static int			print_help(int option)
 		(option & 128) && ft_putstr(H_U) && usage_unsetenv();
 		(option & 256) && ft_putstr(H_G) && usage_background();
 		(option & 512) && ft_putstr(H_F) && usage_foreground();
+		(option & 1024) && ft_putstr(H_C) && usage_cd();
 	}
 	return (1);
 }

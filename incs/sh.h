@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/14 16:46:51 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 19:59:30 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -448,6 +448,7 @@ uint8_t						usage_unsetenv(void);
 uint8_t						usage_setenv(void);
 uint8_t						usage_background(void);
 uint8_t						usage_foreground(void);
+uint8_t						usage_cd(void);
 int							help_move(void);
 int							help_kill_and_yank(void);
 int							help_history(void);

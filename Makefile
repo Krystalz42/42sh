@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/14 16:46:37 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/11/15 20:02:49 by sbelazou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -164,15 +164,20 @@ SRCS = \
 	   execution/builtins_functions/builtin_hash.c				\
 	   execution/builtins_functions/builtin_env.c				\
 	   execution/builtins_functions/builtin_exit.c				\
-	   execution/builtins_functions/data_builtin.c				\
+	   execution/builtins_functions/builtin_data.c				\
 	   execution/builtins_functions/builtin_help.c				\
 	   execution/builtins_functions/basic_help.c				\
+<<<<<<< HEAD
+	   execution/builtins_functions/builtin_cd.c				\
+	   execution/builtins_functions/builtin_echo.c				\
+=======
 	   execution/builtins_functions/ft_cd.c						\
 	   execution/builtins_functions/ft_echo.c					\
+>>>>>>> e924da634446be2cfa59a3fea16d8bbee2efadc1
 	   execution/builtins_functions/builtin_setenv.c			\
 	   execution/builtins_functions/builtin_unsetenv.c			\
-	   execution/builtins_functions/refresh_varenv.c			\
-	   execution/builtins_functions/utils.c						\
+	   execution/builtins_functions/builtin_refresh.c			\
+	   execution/builtins_functions/builtin_tools.c				\
 	   execution/builtins_functions/builtin_kill2.c				\
 	   jobs_control/modify_status_jobs.c						\
 	   jobs_control/status_signals.c							\

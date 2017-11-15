@@ -29,3 +29,9 @@ uint8_t				usage_background(void)
 	ft_putstr_fd(BG_DEFAULT, STDERR_FILENO);
 	return (0);
 }
+
+uint8_t				usage_cd(void)
+{
+	ft_putstr_fd(CD_DEFAULT, STDERR_FILENO);
+	return (0);
+}
