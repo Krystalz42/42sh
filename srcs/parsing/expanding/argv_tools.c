@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 14:37:30 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 19:15:11 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:47:21 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t			ft_arraylen(char **argv)
 	size_t		index;
 
 	index = 0;
-	while (argv[index])
+	while (argv && argv[index])
 		index++;
 	return (index);
 }
