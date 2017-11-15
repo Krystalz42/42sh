@@ -12,8 +12,9 @@
 
 #include <sh.h>
 
-uint8_t				ft_echo(t_node *node, int info)
+uint8_t				builtin_echo(t_node *node, int info)
 {
 	(void)node;
 	(void)info;
+	return (0);
 }
