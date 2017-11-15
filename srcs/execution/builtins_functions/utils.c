@@ -6,7 +6,7 @@
 /*   By: sbelazou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:47:33 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/10/24 15:41:38 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/15 18:57:27 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,24 +43,25 @@ char				**init_pwd(char **env)
 {
 	char			buff[UCHAR_MAX];
 	int				i;
+	char			*var;
 
 	i = 0;
 	if (getcwd(buff, UCHAR_MAX) == NULL)
 		return (env);
-	if (search_in_tab(env, "PWD=") == -1)
+	if (search_in_tab(env_table(NULL, ENV_REC), "PWD=") == -1)
 	{
-		i = tablen(env);
-		env[i++] = add_envar("PWD=", buff);
-		env[i] = NULL;
+		var = add_envar("PWD=", buff);
+		add_environment(var);
+		free(var);
 		b_data()->pwd = ft_strdup(buff);
 	}
 	else
 		b_data()->pwd = ft_strdup(buff);
-	if (search_in_tab(env, "OLDPWD=") == -1)
+	if (search_in_tab(env_table(NULL, ENV_REC), "OLDPWD=") == -1)
 	{
-		i = tablen(env);
-		env[i++] = add_envar("OLDPWD", "=");
-		env[i] = NULL;
+		var = add_envar("OLDPWD", "=");
+		add_environment(var);
+		free(var);
 	}
 	b_data()->oldpwd = NULL;
 	return (env);
@@ -79,3 +80,4 @@ signed int			search_in_tab(char **data, char *var)
 	}
 	return (-1);
 }
+
