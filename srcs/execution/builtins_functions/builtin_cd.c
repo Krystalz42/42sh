@@ -6,7 +6,7 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/11/15 20:33:25 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/15 21:14:23 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ char				*ft_path(char *var, unsigned int begin)
 	return (path);
 }
 
-//Access and stat for check if it's file
 static int			cd_home(char **env)
 {
 	char			*path;
@@ -43,7 +42,6 @@ static int			cd_home(char **env)
 		return (1);
 	if (chdir(path) == -1)
 		return (1);
-	// Need to accurate the error (Permission denied, Not a directory)
 	ft_putendl(path);
 	free(path);
 	return (0);
@@ -54,7 +52,6 @@ static int			cd_path(char *path)
 {
 	if (chdir(path) == -1)
 		return (1);
-	// Need to accurate the error (Permission denied )
 	return (0);
 }
 
@@ -69,7 +66,6 @@ static int			cd_oldpwd(char **env)
 		return (1);
 	if (chdir(path) == -1)
 		return (1);
-	// Need to accurate the error (Permission denied, Not a directory)
 	free(path);
 	return (0);
 }
