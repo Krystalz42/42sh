@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/15 19:58:20 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/15 17:55:11 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,7 +151,6 @@
 # define H_U					"Usage for unsetenv :\n"
 # define H_F					"Usage for foreground :\n"
 # define H_G					"Usage for background :\n"
-# define H_C					"Usage for cd :\n"
 
 # define H_HJ					"-j                      : usage jobs\n"
 # define H_HE					"-e                      : usage env\n"
@@ -162,7 +161,7 @@
 # define H_HU					"-u                      : usage unsetenv\n"
 # define H_HF					"-f                      : usage foreground\n"
 # define H_HG					"-g                      : usage background\n"
-# define H_HC					"-c						 : usage cd\n"
+
 
 # define H_MOVE					"Commands For Moving :\n"
 # define H_CA					"C-a                     : Move to the start of\
@@ -271,10 +270,6 @@ jobs in foreground.\n"
 jobs in background.\n"
 # define BG_DEFAULT				"otherwise               : Put the most large\
  jobs in background.\n"
-
-# define CD_DEFAULT				"[path]					 : Change the current \
-directory.\n"
-
 /*
 **			VARIOUS DEFINE
 */
@@ -290,7 +285,6 @@ directory.\n"
 # define UNSETENV				"unsetenv : "
 # define SETENV					"setenv : "
 # define BECHO					"echo : "
-# define UCD					"cd : "
 
 # define LIMIT					"max_child has been defined : 8096"
 # define INVALID				"invalid argument : "
@@ -310,9 +304,6 @@ directory.\n"
 # define RUN					"Running"
 # define STOP					"Stopped"
 # define CONTINUED				"Continued"
-# define NO_DIRECTORY			"no such file or directory: "
-# define NO_RIGHT				"permission denied: "
-# define IS_NOTDIR				"not a directory: "
 
 # define HISTSIZE				500
 # define HELP					"--help"
