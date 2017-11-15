@@ -166,6 +166,7 @@ SRCS = \
 	   execution/builtins_functions/builtin_exit.c				\
 	   execution/builtins_functions/data_builtin.c				\
 	   execution/builtins_functions/builtin_help.c				\
+	   execution/builtins_functions/basic_help.c				\
 	   execution/builtins_functions/ft_cd.c						\
 	   execution/builtins_functions/ft_echo.c					\
 	   execution/builtins_functions/ft_setenv.c					\

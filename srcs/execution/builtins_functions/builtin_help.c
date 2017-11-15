@@ -12,41 +12,7 @@
 
 #include <sh.h>
 
-static int			help_move(void)
-{
-	ft_putstr(H_MOVE);
-	ft_putstr(H_CA);
-	ft_putstr(H_CE);
-	ft_putstr(H_CF);
-	ft_putstr(H_CB);
-	ft_putstr(H_MF);
-	ft_putstr(H_MB);
-	ft_putstr(H_CL);
-	return (1);
-}
 
-static int			help_history(void)
-{
-	ft_putstr(H_HISTORY);
-	ft_putstr(H_CP);
-	ft_putstr(H_CN);
-	ft_putstr(H_CR);
-	ft_putstr(H_CD);
-	ft_putstr(H_MU);
-	ft_putstr(H_ML);
-	ft_putstr(H_MC);
-	return (1);
-}
-
-static int			help_kill_and_yank(void)
-{
-	ft_putstr(H_KILL_AND_YANK);
-	ft_putstr(H_CK);
-	ft_putstr(H_MD);
-	ft_putstr(H_MDEL);
-	ft_putstr(H_MY);
-	return (1);
-}
 
 static int			print_help(int option)
 {
@@ -69,6 +35,8 @@ static int			print_help(int option)
 		(option & 32) && ft_putstr(H_K) && usage_kill();
 		(option & 64) && ft_putstr(H_S) && usage_setenv();
 		(option & 128) && ft_putstr(H_U) && usage_unsetenv();
+		(option & 256) && ft_putstr(H_G) && usage_background();
+		(option & 512) && ft_putstr(H_F) && usage_foreground();
 	}
 	return (1);
 }
@@ -94,7 +62,8 @@ uint8_t				builtin_help(t_node *node, int info __attribute__((unused)))
 			option += node->content->command[1][index] == 's' && !(option & 64) ? 64 : 0;
 			option += node->content->command[1][index] == 'u' && !(option & 128) ? 128 : 0;
 			option += node->content->command[1][index] == 'g' && !(option & 256) ? 256 : 0;
-			option += node->content->command[1][index] == 'f' && !(option & 256) ? 256 : 0;
+			option += node->content->command[1][index] == 'f' && !(option & 512) ? 512 : 0;
+			option += node->content->command[1][index] == 'c' && !(option & 1024) ? 1024 : 0;
 			index++;
 		}
 	}

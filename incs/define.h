@@ -149,8 +149,8 @@
 # define H_K					"Usage for kill :\n"
 # define H_S					"Usage for setenv :\n"
 # define H_U					"Usage for unsetenv :\n"
-# define H_F
-# define H_G
+# define H_F					"Usage for foreground :\n"
+# define H_G					"Usage for background :\n"
 
 # define H_HJ					"-j                      : usage jobs\n"
 # define H_HE					"-e                      : usage env\n"
@@ -159,6 +159,8 @@
 # define H_HK					"-k                      : usage kill\n"
 # define H_HS					"-s                      : usage setenv\n"
 # define H_HU					"-u                      : usage unsetenv\n"
+# define H_HF					"-f                      : usage foreground\n"
+# define H_HG					"-g                      : usage background\n"
 
 
 # define H_MOVE					"Commands For Moving :\n"
@@ -255,11 +257,19 @@ the signal to be sent instead of the default TERM.\n"
 to empty env temporarily.\n"
 # define ENV_I					"-u [name]               : Remove [name] to \
 own env temporarily.\n"
-# define UNSET					"[name]        : Unset the variable \
+# define UNSET					"[name]                  : Unset the variable \
 in environement.\n"
-# define SET					"[name=value]        :  Set the variable \
+# define SET					"[name=value]            : Set the variable \
 in environement.\n"
 
+# define FG_DEFAULT				"otherwise               : Put the most large\
+ jobs in foreground.\n"
+# define FG_JOBSSPEC			"%[number ..]            : Put the specified\
+jobs in foreground"
+# define BG_JOBSSPEC			"%[number ..]            : Put the specified\
+jobs in background"
+# define BG_DEFAULT				"otherwise               : Put the most large\
+ jobs in background.\n"
 /*
 **			VARIOUS DEFINE
 */

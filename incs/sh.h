@@ -446,5 +446,10 @@ uint8_t						usage_env(void);
 uint8_t						usage_hash(void);
 uint8_t						usage_unsetenv(void);
 uint8_t						usage_setenv(void);
+uint8_t						usage_background(void);
+uint8_t						usage_foreground(void);
+int							help_move(void);
+int							help_kill_and_yank(void);
+int							help_history(void);
 
 #endif

@@ -3714,6 +3714,33 @@ srcs/error_function/usage_builtins2.c.s:
 	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/error_function/usage_builtins2.c.s
 .PHONY : srcs/error_function/usage_builtins2.c.s
 
+srcs/execution/builtins_functions/basic_help.o: srcs/execution/builtins_functions/basic_help.c.o
+
+.PHONY : srcs/execution/builtins_functions/basic_help.o
+
+# target to build an object file
+srcs/execution/builtins_functions/basic_help.c.o:
+	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/basic_help.c.o
+.PHONY : srcs/execution/builtins_functions/basic_help.c.o
+
+srcs/execution/builtins_functions/basic_help.i: srcs/execution/builtins_functions/basic_help.c.i
+
+.PHONY : srcs/execution/builtins_functions/basic_help.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/basic_help.c.i:
+	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/basic_help.c.i
+.PHONY : srcs/execution/builtins_functions/basic_help.c.i
+
+srcs/execution/builtins_functions/basic_help.s: srcs/execution/builtins_functions/basic_help.c.s
+
+.PHONY : srcs/execution/builtins_functions/basic_help.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/basic_help.c.s:
+	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/basic_help.c.s
+.PHONY : srcs/execution/builtins_functions/basic_help.c.s
+
 srcs/execution/builtins_functions/builtin_env.o: srcs/execution/builtins_functions/builtin_env.c.o
 
 .PHONY : srcs/execution/builtins_functions/builtin_env.o
@@ -8361,6 +8388,9 @@ help:
 	@echo "... srcs/error_function/usage_builtins2.o"
 	@echo "... srcs/error_function/usage_builtins2.i"
 	@echo "... srcs/error_function/usage_builtins2.s"
+	@echo "... srcs/execution/builtins_functions/basic_help.o"
+	@echo "... srcs/execution/builtins_functions/basic_help.i"
+	@echo "... srcs/execution/builtins_functions/basic_help.s"
 	@echo "... srcs/execution/builtins_functions/builtin_env.o"
 	@echo "... srcs/execution/builtins_functions/builtin_env.i"
 	@echo "... srcs/execution/builtins_functions/builtin_env.s"
