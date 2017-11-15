@@ -25,6 +25,8 @@ static int			print_help(int option)
 		ft_putstr(H_HB);
 		ft_putstr(H_HS);
 		ft_putstr(H_HU);
+		ft_putstr(H_HF);
+		ft_putstr(H_HG);
 	}
 	else
 	{

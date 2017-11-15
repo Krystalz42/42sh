@@ -265,9 +265,9 @@ in environement.\n"
 # define FG_DEFAULT				"otherwise               : Put the most large\
  jobs in foreground.\n"
 # define FG_JOBSSPEC			"%[number ..]            : Put the specified\
-jobs in foreground"
+jobs in foreground.\n"
 # define BG_JOBSSPEC			"%[number ..]            : Put the specified\
-jobs in background"
+jobs in background.\n"
 # define BG_DEFAULT				"otherwise               : Put the most large\
  jobs in background.\n"
 /*
