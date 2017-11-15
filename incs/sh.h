@@ -447,15 +447,12 @@ uint8_t						usage_env(void);
 uint8_t						usage_hash(void);
 uint8_t						usage_unsetenv(void);
 uint8_t						usage_setenv(void);
-<<<<<<< HEAD
 int 						create_fildes(char *path, int option, int chmod);
-=======
 uint8_t						usage_background(void);
 uint8_t						usage_foreground(void);
 uint8_t						usage_cd(void);
 int							help_move(void);
 int							help_kill_and_yank(void);
 int							help_history(void);
->>>>>>> 1f54177fa332f7f277c2973866ea9f8e86d9c253
 
 #endif
