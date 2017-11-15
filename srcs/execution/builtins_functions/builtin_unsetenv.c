@@ -13,7 +13,7 @@
 #include <sh.h>
 
 
-uint8_t				ft_unsetenv(t_node *node, int info __attribute__((unused)))
+uint8_t				builtin_unsetenv(t_node *node, int info __attribute__((unused)))
 {
 	if (my_getenv(node->content->command[1]))
 	{

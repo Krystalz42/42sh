@@ -4038,33 +4038,6 @@ srcs/execution/builtins_functions/data_builtin.c.s:
 	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/data_builtin.c.s
 .PHONY : srcs/execution/builtins_functions/data_builtin.c.s
 
-srcs/execution/builtins_functions/error.o: srcs/execution/builtins_functions/error.c.o
-
-.PHONY : srcs/execution/builtins_functions/error.o
-
-# target to build an object file
-srcs/execution/builtins_functions/error.c.o:
-	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/error.c.o
-.PHONY : srcs/execution/builtins_functions/error.c.o
-
-srcs/execution/builtins_functions/error.i: srcs/execution/builtins_functions/error.c.i
-
-.PHONY : srcs/execution/builtins_functions/error.i
-
-# target to preprocess a source file
-srcs/execution/builtins_functions/error.c.i:
-	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/error.c.i
-.PHONY : srcs/execution/builtins_functions/error.c.i
-
-srcs/execution/builtins_functions/error.s: srcs/execution/builtins_functions/error.c.s
-
-.PHONY : srcs/execution/builtins_functions/error.s
-
-# target to generate assembly for a file
-srcs/execution/builtins_functions/error.c.s:
-	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/error.c.s
-.PHONY : srcs/execution/builtins_functions/error.c.s
-
 srcs/execution/builtins_functions/ft_cd.o: srcs/execution/builtins_functions/ft_cd.c.o
 
 .PHONY : srcs/execution/builtins_functions/ft_cd.o
@@ -8424,9 +8397,6 @@ help:
 	@echo "... srcs/execution/builtins_functions/data_builtin.o"
 	@echo "... srcs/execution/builtins_functions/data_builtin.i"
 	@echo "... srcs/execution/builtins_functions/data_builtin.s"
-	@echo "... srcs/execution/builtins_functions/error.o"
-	@echo "... srcs/execution/builtins_functions/error.i"
-	@echo "... srcs/execution/builtins_functions/error.s"
 	@echo "... srcs/execution/builtins_functions/ft_cd.o"
 	@echo "... srcs/execution/builtins_functions/ft_cd.i"
 	@echo "... srcs/execution/builtins_functions/ft_cd.s"

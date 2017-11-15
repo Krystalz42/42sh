@@ -20,10 +20,13 @@ void		add_environment(char *string)
 
 	table = env_table(NULL, ENV_REC);
 	cpy = (char **)ft_memalloc(sizeof(char *) * (ft_tablen(table) + 2));
-	i = -1;
+	i = 0;
 	if (table)
-		while (table[++i])
+		while (table[i])
+		{
 			cpy[i] = table[i];
+			i++;
+		}
 	cpy[i] = ft_strdup(string);
 	cpy[i + 1] = NULL;
 	ft_memdel((void **)&table);
