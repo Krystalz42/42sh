@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:27:36 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/15 13:40:20 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 16:37:57 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,20 +65,14 @@ static char		*get_variable(char *str)
 *************** PRIVATE ********************************************************
 */
 
-static bool		expansion(char **str, size_t index)
+static void		expansion(char **str, size_t index, char *variable)
 {
-	char	*variable;
 	char	*new;
 
-	if ((variable = get_variable(*str + index)))
-	{
-		new = (char *)ft_memalloc(sizeof(char) * (ft_strlen(variable) + ft_strlen(*str) + 1));
-		populate(new, *str, variable, index);
-		ft_memdel((void **)str);
-		*str = new;
-		return (true);
-	}
-	return (false);
+	new = (char *)ft_memalloc(sizeof(char) * (ft_strlen(variable) + ft_strlen(*str) + 1));
+	populate(new, *str, variable, index);
+	ft_memdel((void **)str);
+	*str = new;
 }
 
 /*
@@ -89,34 +83,32 @@ void			escape(t_parsing *node)
 {
 	size_t		index;
 	uint8_t		occurence;
+	uint8_t		status;
 	t_parsing	*temp;
+	char		*variable;
 
 	occurence = 0;
+	status = DEFAULT;
 	temp = node;
 	while (node)
 	{
 		index = 0;
 		while (node->input && node->input[index])
 		{
-			if (node->input[index] == '\\')
+			if (status & DOUBLE_QUOTE && (variable = get_variable(node->input + index)))
+			{
+				expansion(&node->input, index, variable);
+				escape(temp);
+			}
+			else if (node->input[index] == '\\')
 				index += 2;
 			else if (node->input[index] == '\'')
 				index += skip_to_occurence(node->input + index, '\'');
-			else if (node->input[index] == '\"')
-			{
-				while (node->input[index] && occurence < 2)
-				{
-					if (expansion(&node->input, index))
-						escape(temp);
-					else
-					{
-						index += 1;
-						occurence += node->input[index] == '\"' ? 1 : 0;
-					}
-				}
-			}
 			else
+			{
+				chk_quote(node->input[index], &status);
 				index += 1;
+			}
 		}
 		node = node->next;
 	}
