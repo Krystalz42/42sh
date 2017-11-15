@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aroulin <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/30 22:26:42 by aroulin           #+#    #+#              #
-#    Updated: 2017/09/05 21:50:05 by aroulin          ###   ########.fr        #
+#    Updated: 2017/11/15 20:24:40 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -255,4 +255,4 @@ $(DIR_DEPS)/%.d	: ;
 
 -include $(patsubst %,$(DIR_DEPS)/%.d,$(basename $(C_SRCS)))
 
-.PHONY	:	all clean fclean re $(DIR_OBJS)/%.o $(DIR_DEPS)/%.d 
+.PHONY	:	all clean fclean re $(DIR_OBJS)/%.o $(DIR_DEPS)/%.d
