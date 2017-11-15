@@ -6,7 +6,7 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/11/15 20:14:56 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/10/28 17:06:04 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ static int			cd_oldpwd(char **env)
 	return (0);
 }
 
-uint8_t				builtin_cd(t_node *node, int info)
+uint8_t				ft_cd(t_node *node, int info)
 {
 	int				ret;
 	char			**env;
