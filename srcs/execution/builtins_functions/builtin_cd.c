@@ -6,7 +6,7 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/11/15 20:14:56 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/15 20:33:25 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,7 @@ uint8_t				builtin_cd(t_node *node, int info)
 		ret = cd_path(node->content->command[1]);
 	if (ret == 0)
 		refresh_varenv(env);
+	else
+		return (cd_check_error(node->content->command[1]));
 	return (var_return(ret));
 }
