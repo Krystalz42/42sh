@@ -56,16 +56,14 @@ void				handler_sigchld(int sig)
 			log_fatal("Check child");
 			if (wait_group(jobs[index].process, WNOHANG))
 			{
-				if (finish_process(jobs[index].process) > 0)
+				if (terminate_process(jobs->process))
 				{
 					print_status(jobs[index].process, jobs[index].index);
 					reset_process(jobs);
 				}
-				else if (finish_process(jobs[index].process) == 0)
+				else if (finish_process(jobs[index].process))
 				{
 					print_status(jobs[index].process, jobs[index].index);
-					modify_runing(jobs[index].process, false);
-					modify_foreground(jobs[index].process, false);
 				}
 			}
 		}
