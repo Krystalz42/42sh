@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/14 14:56:52 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 17:55:11 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -300,6 +300,7 @@ in environement.\n"
 # define PATH_HASH				"/.42sh_hash"
 
 # define N						1
+# define OPTION_N				2
 
 # define MV_LEFT				"le"
 # define MV_BOT					"do"

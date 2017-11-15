@@ -6,67 +6,57 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/11/15 17:28:10 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 18:39:42 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-uint8_t				ft_echo(t_node *node, int info)
+/*
+*************** PRIVATE ********************************************************
+*/
+
+static char		**get_argv(char **argv, uint8_t *option)
 {
-	(void)node;
-	(void)info;
+	size_t		index;
+
+	index = 0;
+	while (argv && argv[index])
+	{
+		if (!ft_strcmp(argv[index], "-n"))
+			*option = OPTION_N;
+		else
+			break ;
+		index++;
+	}
+	return (argv + index);
 }
-//
-// const t_echo	g_echo[] =
-// {
-// 	(t_echo){"-n", OPTION_N},
-// 	(t_echo){"-e", OPTION_E}
-// };
-//
-// /*
-// *************** PRIVATE ********************************************************
-// */
-// //
-// // static uint8_t	get_option(char **argv)
-// // {
-// // 	short		index;
-// // 	uint8_t		status;
-// //
-// // 	status = DEFAULT;
-// // 	while (argv && *argv)
-// // 	{
-// // 		index = 0;
-// // 		while (index < 2)
-// // 		{
-// // 			if (!ft_strcmp(*argv, g_echo[index].str))
-// // 				status |= g_echo[index].status;
-// // 			index++;
-// // 		}
-// // 		argv++;
-// // 	}
-// // 	return (status);
-// }
-//
-// while (ft_putst )
-//
-//
-// /*
-// *************** PUBLIC *********************************************************
-// */
-//
-// uint8_t			ft_echo(t_node *node, int info __attribute__((unused)))
-// {
-// 	uint8_t		options;
-// 	char		**argv;
-//
-// 	argv = node->content->command + 1;
-// 	if (argv)
-// 	{
-// 		options = get_option(node->content->command + 1);
-// 		do_echo(node->content->command + 1);
-// 	}
-// 	options & OPTION_N ? ft_putchar(10) : 0;
-// 	else
-// 	return (0);
-// }
+
+static void		print_argv(char **argv)
+{
+	size_t		index;
+
+	index = 0;
+	while (argv && argv[index])
+	{
+		ft_putstr(argv[index]);
+		argv[index + 1] ? ft_putchar('\040') : 0;
+		index++;
+	}
+}
+
+/*
+*************** PUBLIC *********************************************************
+*/
+
+uint8_t			builtin_echo(t_node *node, int info __attribute__((unused)))
+{
+	uint8_t		option;
+	char		**argv;
+
+	option = DEFAULT;
+	argv = get_argv(node->content->command + 1, &option);
+	print_argv(argv);
+	option & DEFAULT || !argv ? ft_putchar('\012') : 0;
+	return (0);
+}
