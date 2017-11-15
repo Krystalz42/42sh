@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/15 20:25:54 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 20:27:24 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,13 +137,13 @@ t_bdata						*b_data(void);
 **				BUILT IN FUNCTION
 */
 
-uint8_t						ft_cd(t_node *node, int info);
+uint8_t						builtin_cd(t_node *node, int info);
 signed int					search_in_tab(char **data, char *var);
 char						**refresh_varenv(char **env);
 char						*ft_path(char *var, unsigned int begin);
 char						*add_envar(char *var, char *value);
 char						**init_pwd(char **env);
-uint8_t						ft_setenv(t_node *node, int info);
+uint8_t						builtin_setenv(t_node *node, int info);
 unsigned int				search_char(char *str, char c);
 uint8_t						builtin_unsetenv(t_node *node, int info);
 int							ft_error(char *var, char *msg, int ret);
@@ -446,6 +446,15 @@ uint8_t						usage_env(void);
 uint8_t						usage_hash(void);
 uint8_t						usage_unsetenv(void);
 uint8_t						usage_setenv(void);
+<<<<<<< HEAD
 int 						create_fildes(char *path, int option, int chmod);
+=======
+uint8_t						usage_background(void);
+uint8_t						usage_foreground(void);
+uint8_t						usage_cd(void);
+int							help_move(void);
+int							help_kill_and_yank(void);
+int							help_history(void);
+>>>>>>> 1f54177fa332f7f277c2973866ea9f8e86d9c253
 
 #endif

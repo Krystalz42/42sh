@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/15 17:55:11 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 19:58:20 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,8 +149,9 @@
 # define H_K					"Usage for kill :\n"
 # define H_S					"Usage for setenv :\n"
 # define H_U					"Usage for unsetenv :\n"
-# define H_F
-# define H_G
+# define H_F					"Usage for foreground :\n"
+# define H_G					"Usage for background :\n"
+# define H_C					"Usage for cd :\n"
 
 # define H_HJ					"-j                      : usage jobs\n"
 # define H_HE					"-e                      : usage env\n"
@@ -159,7 +160,9 @@
 # define H_HK					"-k                      : usage kill\n"
 # define H_HS					"-s                      : usage setenv\n"
 # define H_HU					"-u                      : usage unsetenv\n"
-
+# define H_HF					"-f                      : usage foreground\n"
+# define H_HG					"-g                      : usage background\n"
+# define H_HC					"-c						 : usage cd\n"
 
 # define H_MOVE					"Commands For Moving :\n"
 # define H_CA					"C-a                     : Move to the start of\
@@ -195,7 +198,8 @@ current (or following) word.\n"
 current (or following) word.\n"
 # define H_MC					"M-c                     : Capitalize \
 the current (or following) word.\n"
-# define H_C_					"C-_                     : Undou"
+# define H_C_					"C-_                     : Undo the last action\
+\n."
 
 # define H_KILL_AND_YANK		"Killing And Yanking :\n"
 # define H_CK					"C-k                     : Kill the text from\
@@ -255,10 +259,22 @@ the signal to be sent instead of the default TERM.\n"
 to empty env temporarily.\n"
 # define ENV_I					"-u [name]               : Remove [name] to \
 own env temporarily.\n"
-# define UNSET					"[name]        : Unset the variable \
+# define UNSET					"[name]                  : Unset the variable \
 in environement.\n"
-# define SET					"[name=value]        :  Set the variable \
+# define SET					"[name=value]            : Set the variable \
 in environement.\n"
+
+# define FG_DEFAULT				"otherwise               : Put the most large\
+ jobs in foreground.\n"
+# define FG_JOBSSPEC			"%[number ..]            : Put the specified\
+jobs in foreground.\n"
+# define BG_JOBSSPEC			"%[number ..]            : Put the specified\
+jobs in background.\n"
+# define BG_DEFAULT				"otherwise               : Put the most large\
+ jobs in background.\n"
+
+# define CD_DEFAULT				"[path]					 : Change the current \
+directory.\n"
 
 /*
 **			VARIOUS DEFINE
@@ -275,6 +291,7 @@ in environement.\n"
 # define UNSETENV				"unsetenv : "
 # define SETENV					"setenv : "
 # define BECHO					"echo : "
+# define UCD					"cd : "
 
 # define LIMIT					"max_child has been defined : 8096"
 # define INVALID				"invalid argument : "
@@ -294,6 +311,9 @@ in environement.\n"
 # define RUN					"Running"
 # define STOP					"Stopped"
 # define CONTINUED				"Continued"
+# define NO_DIRECTORY			"no such file or directory: "
+# define NO_RIGHT				"permission denied: "
+# define IS_NOTDIR				"not a directory: "
 
 # define HISTSIZE				500
 # define HELP					"--help"

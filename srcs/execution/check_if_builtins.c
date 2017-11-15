@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:20:09 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/12 20:13:30 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 20:14:01 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 static const t_builtin	g_builtin[] = {
 	(t_builtin){"env", &builtin_env},
-	(t_builtin){"setenv", &ft_setenv},
+	(t_builtin){"setenv", &builtin_setenv},
 	(t_builtin){"unsetenv", &builtin_unsetenv},
-	(t_builtin){"cd", &ft_cd},
+	(t_builtin){"cd", &builtin_cd},
 	(t_builtin){"echo", &builtin_echo},
 	(t_builtin){"jobs", &builtin_jobs},
 	(t_builtin){"history", &builtin_history},
