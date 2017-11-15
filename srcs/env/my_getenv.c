@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 02:48:59 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/10 15:24:05 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 17:27:24 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,15 @@
 *************** PRIVATE ********************************************************
 */
 
-size_t				compare_environment(char *s1, char *s2)
+size_t				compare_environment(const char *s1, const char *s2)
 {
 	size_t		length;
 
 	length = 0;
-	while (s1 && s2 && *s1 && *s2 && *s1 == *s2)
+	while (s1 && s2 && s1[length] && s2[length] && s1[length] == s2[length])
 	{
-		if (*s2 == '=')
+		if (s2[length + 1] == '=')
 			return (length);
-		s1++;
-		s2++;
 		length++;
 	}
 	return (0);

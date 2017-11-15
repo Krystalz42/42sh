@@ -51,25 +51,20 @@ void			init_env(void)
 	int				shlvl;
 	char			*temp;
 
-	env = NULL;
-	if (environ)
+	env = (char **)ft_memalloc(sizeof(char *) * (ft_tablen(environ) + 1));
+	i = 0;
+	while (environ[i])
 	{
-		env = (char **)ft_memalloc(sizeof(char *) * (ft_tablen(environ) + 1));
-		i = 0;
-		while (environ[i])
+		if (ft_strncmp(environ[i], "SHLVL=", 6) == 0)
 		{
-			if (ft_strncmp(environ[i], "SHLVL=", 6) == 0)
-			{
-				shlvl = ft_atoi(environ[i] + 6);
-				temp = ft_itoa(shlvl + 1);
-				env[i] = ft_strjoin("SHLVL=", temp);
-				ft_memdel((void **)&temp);
-			}
-			else
-				env[i] = ft_strdup(environ[i]);
-			i++;
+			shlvl = ft_atoi(environ[i] + 6);
+			env[i] = ft_strjoin("SHLVL=", (temp = ft_itoa(shlvl + 1)));
+			ft_memdel((void **)&temp);
 		}
-		env[i] = NULL;
+		else
+			env[i] = ft_strdup(environ[i]);
+		i++;
 	}
+	env[i] = NULL;
 	env_table(env, ENV_INIT);
 }
