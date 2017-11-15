@@ -16,11 +16,11 @@ t_process			*new_process(t_jobs *jobs)
 	else
 	{
 		temp = jobs->process;
-		while (jobs->process->next)
-			jobs->process = jobs->process->next;
-		jobs->process->next = (t_process *)ft_memalloc(sizeof(t_process));
-		jobs->process->next->prev = temp;
-		return (jobs->process->next);
+		while (temp->next)
+			temp = temp->next;
+		temp->next = (t_process *)ft_memalloc(sizeof(t_process));
+		temp->next->prev = temp;
+		return (temp->next);
 	}
 }
 

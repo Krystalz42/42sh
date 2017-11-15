@@ -11,7 +11,7 @@ int			wait_group(t_process *process, int option)
 	ret = 0;
 	while (process)
 	{
-		if ((waitpid(-process->pgid, &process->status, option)) > 0)
+		if ((waitpid(process->pid, &process->status, option)) > 0)
 			ret = 1;
 		process = process->next;
 	}
@@ -54,6 +54,7 @@ void		my_wait(t_jobs *jobs)
 			}
 			else
 			{
+				wait_group(jobs->process, WNOHANG);
 				print_info_jobs(jobs);
 			}
 		}

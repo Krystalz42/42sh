@@ -47,25 +47,28 @@ void				handler_sigchld(int sig)
 
 	jobs = jobs_table();
 	(void)sig;
-	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
+//	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
 	index = 0;
 	while (index < MAX_CHILD)
 	{
 		if (jobs[index].process && jobs[index].process->foreground == false)
+		{
+			log_fatal("Check child");
 			if (wait_group(jobs[index].process, WNOHANG))
 			{
-				if (finish_process(jobs[index].process))
+				if (finish_process(jobs[index].process) > 0)
 				{
 					print_status(jobs[index].process, jobs[index].index);
 					reset_process(jobs);
 				}
-				else
+				else if (finish_process(jobs[index].process) == 0)
 				{
 					print_status(jobs[index].process, jobs[index].index);
 					modify_runing(jobs[index].process, false);
 					modify_foreground(jobs[index].process, false);
 				}
 			}
+		}
 		index++;
 	}
 }

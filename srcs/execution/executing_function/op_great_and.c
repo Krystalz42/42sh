@@ -38,7 +38,7 @@ uint8_t					op_great_and(t_node *node, t_jobs *jobs, int info)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)
 			return (var_return(255));
-		jobs->process = my_fork(jobs, node, info);
+		jobs->process = my_fork(jobs, find_executing_node(node), info);
 		if (jobs->process->pid)
 		{
 			my_wait(jobs);

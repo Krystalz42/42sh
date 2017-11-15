@@ -36,12 +36,12 @@ int					terminate_process(t_process *process)
 {
 	while (process)
 	{
-		log_trace("In terminated process for %d [%d.%d]", process->pid, WIFSIGNALED(process->status), WIFEXITED(process->status));
+//		log_trace("In terminated process for %d [%d.%d]", process->pid, WIFSIGNALED(process->status), WIFEXITED(process->status));
 		if (!WIFSIGNALED(process->status) && !WIFEXITED(process->status))
 			return (0);
 		process = process->next;
 	}
-	log_trace("Return terminated_status %d", 1);
+//	log_trace("Return terminated_status %d", 1);
 	return (1);
 }
 
