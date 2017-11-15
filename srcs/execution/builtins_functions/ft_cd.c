@@ -40,9 +40,9 @@ static int			cd_home(char **env)
 
 	if ((i = search_in_tab(env, "HOME=")) == -1 ||
 		(path = ft_path(env[i], 5)) == NULL)
-		return (ft_error("HOME", " is not set.", -1));
+		return (1);
 	if (chdir(path) == -1)
-		return (ft_error(path, ": No such file or directory.", -1));
+		return (1);
 	// Need to accurate the error (Permission denied, Not a directory)
 	ft_putendl(path);
 	free(path);
@@ -53,7 +53,7 @@ static int			cd_home(char **env)
 static int			cd_path(char *path)
 {
 	if (chdir(path) == -1)
-		return (ft_error(path, ": No such file or directory.", -1));
+		return (1);
 	// Need to accurate the error (Permission denied )
 	return (0);
 }
@@ -66,9 +66,9 @@ static int			cd_oldpwd(char **env)
 	i = -1;
 	if ((i = search_in_tab(env, "OLDPWD=")) == -1 ||
 		(path = ft_path(env[i], 7)) == NULL)
-		return (ft_error("OLDPWD", " is not set.", -1));
+		return (1);
 	if (chdir(path) == -1)
-		return (ft_error(path, ": No such file or directory.", -1));
+		return (1);
 	// Need to accurate the error (Permission denied, Not a directory)
 	free(path);
 	return (0);

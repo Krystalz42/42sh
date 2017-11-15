@@ -158,8 +158,7 @@ set(SOURCE_FILES
     srcs/execution/builtins_functions/builtin_switch.c
     srcs/execution/builtins_functions/builtin_unsetenv.c
     srcs/execution/builtins_functions/data_builtin.c
-    srcs/execution/builtins_functions/error.c
-    srcs/execution/builtins_functions/ft_cd.c
+        srcs/execution/builtins_functions/ft_cd.c
     srcs/execution/builtins_functions/ft_echo.c
     srcs/execution/builtins_functions/ft_setenv.c
     srcs/execution/builtins_functions/refresh_varenv.c
