@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/15 20:15:38 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/15 20:27:24 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -447,11 +447,15 @@ uint8_t						usage_env(void);
 uint8_t						usage_hash(void);
 uint8_t						usage_unsetenv(void);
 uint8_t						usage_setenv(void);
+<<<<<<< HEAD
+int 						create_fildes(char *path, int option, int chmod);
+=======
 uint8_t						usage_background(void);
 uint8_t						usage_foreground(void);
 uint8_t						usage_cd(void);
 int							help_move(void);
 int							help_kill_and_yank(void);
 int							help_history(void);
+>>>>>>> 1f54177fa332f7f277c2973866ea9f8e86d9c253
 
 #endif
