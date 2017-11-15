@@ -16,17 +16,15 @@
 *************** PRIVATE ********************************************************
 */
 
-size_t				compare_environment(char *s1, char *s2)
+size_t				compare_environment(const char *s1, const char *s2)
 {
 	size_t		length;
 
 	length = 0;
-	while (s1 && s2 && *s1 && *s2 && *s1 == *s2)
+	while (s1 && s2 && s1[length] && s2[length] && s1[length] == s2[length])
 	{
-		if (*s2 == '=')
+		if (s2[length + 1] == '=')
 			return (length);
-		s1++;
-		s2++;
 		length++;
 	}
 	return (0);

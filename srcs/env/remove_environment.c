@@ -21,17 +21,17 @@ void		remove_environment(char *string)
 
 	table = env_table(NULL, ENV_REC);
 	cpy = (char **)ft_memalloc(sizeof(char *) * (ft_tablen(table)));
-	c = -1;
-	i = -1;
-	if (table)
-		while (table[++i])
-		{
-			if (compare_environment(string, table[i]))
-				free(table[i]);
-			else
-				cpy[++c] = table[i];
-		}
-	cpy[++c] = NULL;
+	c = 0;
+	i = 0;
+	while (table[i])
+	{
+		if (compare_environment(string, table[i]))
+			free(table[i]);
+		else
+			cpy[c] = table[i];
+		c++;
+	}
+	cpy[c] = NULL;
 	ft_memdel((void **)&table);
 	env_table(cpy, ENV_INIT);
 }

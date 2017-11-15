@@ -15,19 +15,13 @@
 int					check_from_local_env(char **env, char *var)
 {
 	int				index;
-	int				c;
 
 	index = 0;
 	if (env)
 		while (env[index])
 		{
-			c = 0;
-			while (env[index][c] && var[c] && env[index][c] == var[c])
-			{
-				if (var[c] == '=')
-					return (1);
-				c++;
-			}
+			if (compare_environment(var, env[index]))
+				return (1);
 			index++;
 		}
 	return (0);
@@ -79,7 +73,7 @@ int					start_from_less(char **command, char ***env)
 		index_cpy = -1;
 		while ((*env)[index])
 		{
-			if (compare_environment((*env)[index], *command) == 0)
+			if (compare_environment(*command, (*env)[index]) == 0)
 				cpy[++index_cpy] = ft_strdup((*env)[index]);
 			index++;
 		}

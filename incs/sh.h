@@ -254,7 +254,7 @@ char						*get_str_from_history(void);
 void						add_environment(char *string);
 void						init_env(void);
 char						*my_getenv(char *name);
-size_t						compare_environment(char *s1, char *s2);
+size_t						compare_environment(const char *s1, const char *s2);
 void						remove_environment(char *string);
 char						**env_table(char **env, int flags);
 int							start_from_null(char **command, char ***env);
