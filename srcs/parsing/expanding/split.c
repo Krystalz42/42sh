@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 11:58:33 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 11:50:29 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 13:42:59 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,34 +19,38 @@
 char			*populating(char *new, char *str, size_t length)
 {
 	size_t		index;
+	size_t		i;
 	uint8_t		status;
 
 	index = 0;
+	i = 0;
 	status = DEFAULT;
-	while (*str && length--)
+	while (str[i] && length--)
 	{
-		if (!(status & BACKSLASH) && *str == '\\' && !(status & SINGLE_QUOTE))
+		if (!(status & BACKSLASH) && str[i] == '\\' && !(status & SINGLE_QUOTE))
 			status |= BACKSLASH;
-		else if (!(status & BACKSLASH) && status & DEFAULT && isquote(*str))
+		else if (!(status & BACKSLASH) && status & DEFAULT && isquote(str[i]))
 		{
-			status |= isquote(*str);
+			status |= isquote(str[i]);
 			status ^= DEFAULT;
 		}
-		else if (!(status & BACKSLASH) && status & isquote(*str))
+		else if (!(status & BACKSLASH) && status & isquote(str[i]))
 		{
-			status ^= isquote(*str);
+			status ^= isquote(str[i]);
 			status |= DEFAULT;
 		}
 		else
 		{
 			if (status & BACKSLASH)
 				status ^= BACKSLASH;
-			if (*str != 10)
-				new[index++] = *str;
+			// if (str[i] == 10 && str[i - 1] && (str[i - 1] == '\\' || str[i - 1] == '\'' || str[i - 1] == '\"'))
+				// ;
+			// else
+				new[index++] = str[i];
 		}
-		str++;
+		i++;
 	}
-	return (str);
+	return (str + i);
 }
 
 static char		*get_word(char *str, char **new)
