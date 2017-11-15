@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-uint8_t					ft_setenv(t_node *node, int inf __attribute__((unused)))
+uint8_t					builtin_setenv(t_node *node, int inf __attribute__((unused)))
 {
 	if (ft_strchr(node->content->command[1], '='))
 	{

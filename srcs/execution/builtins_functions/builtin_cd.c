@@ -74,7 +74,7 @@ static int			cd_oldpwd(char **env)
 	return (0);
 }
 
-uint8_t				ft_cd(t_node *node, int info)
+uint8_t				builtin_cd(t_node *node, int info)
 {
 	int				ret;
 	char			**env;
