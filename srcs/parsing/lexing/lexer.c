@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 19:58:08 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/12 20:06:18 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 16:47:30 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ static void		populate(t_cmd *cmd, size_t length, char *new)
 	index = 0;
 	while (cmd && cmd->c && length--)
 	{
-		new[index++] = cmd->c;
+		if (cmd->c != 10)
+			new[index++] = cmd->c;
 		cmd = cmd->next;
 	}
 }

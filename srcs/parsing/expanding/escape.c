@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:27:36 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/15 16:37:57 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 16:46:16 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,12 +82,10 @@ static void		expansion(char **str, size_t index, char *variable)
 void			escape(t_parsing *node)
 {
 	size_t		index;
-	uint8_t		occurence;
 	uint8_t		status;
 	t_parsing	*temp;
 	char		*variable;
 
-	occurence = 0;
 	status = DEFAULT;
 	temp = node;
 	while (node)

@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 11:58:33 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/15 15:11:23 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/15 16:45:47 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,7 @@ char			*populating(char *new, char *str, size_t length)
 		{
 			if (status & BACKSLASH)
 				status ^= BACKSLASH;
-			if (str[i] == 10 && str[i - 1] && (str[i - 1] == '\\' || str[i - 1] == '\'' || str[i - 1] == '\"'))
-				;
-			else
-				new[index++] = str[i];
+			new[index++] = str[i];
 		}
 		i++;
 	}
