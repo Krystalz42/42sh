@@ -1,0 +1,9 @@
+[0m[ 18:53:27 ] (l. 35) op_great_and.c       -> VALUE GREAT_AND 2[0m
+[31m[ 18:53:27 ] (l. 12) op_great_and.c       -> err[0m
+[31m[ 18:53:27 ] (l. 19) op_great_and.c       -> 5[0m
+[31m[1;33m[ 18:53:27 ] (l. 22) op_great_and.c       -> From 2 to 5[0m
+[0m[ 18:53:27 ] (l. 30) op_dgreat.c          -> VALUE DGREAT 2[0m
+[0m[ 18:53:27 ] (l. 45) op_execution.c       -> VALUE_EXECUTION 2[0m
+[31m[ 18:53:27 ] (l. 63) builtin_env.c        -> 105[0m
+[0m[ 18:53:27 ] (l. 45) op_execution.c       -> VALUE_EXECUTION 2[0m
+[36m[ 18:53:27 ] (l. 19) my_execve.c          -> [/bin/ls] PID [31293] PPID [30905] PGID [31293][0m

@@ -93,6 +93,8 @@ uint8_t				builtin_help(t_node *node, int info __attribute__((unused)))
 			option += node->content->command[1][index] == 'k' && !(option & 32) ? 32 : 0;
 			option += node->content->command[1][index] == 's' && !(option & 64) ? 64 : 0;
 			option += node->content->command[1][index] == 'u' && !(option & 128) ? 128 : 0;
+			option += node->content->command[1][index] == 'g' && !(option & 256) ? 256 : 0;
+			option += node->content->command[1][index] == 'f' && !(option & 256) ? 256 : 0;
 			index++;
 		}
 	}

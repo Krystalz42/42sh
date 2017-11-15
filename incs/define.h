@@ -149,6 +149,8 @@
 # define H_K					"Usage for kill :\n"
 # define H_S					"Usage for setenv :\n"
 # define H_U					"Usage for unsetenv :\n"
+# define H_F
+# define H_G
 
 # define H_HJ					"-j                      : usage jobs\n"
 # define H_HE					"-e                      : usage env\n"
@@ -253,7 +255,7 @@ the signal to be sent instead of the default TERM.\n"
 to empty env temporarily.\n"
 # define ENV_I					"-u [name]               : Remove [name] to \
 own env temporarily.\n"
-# define UNSET					"[name=]        : Unset the variable \
+# define UNSET					"[name]        : Unset the variable \
 in environement.\n"
 # define SET					"[name=value]        :  Set the variable \
 in environement.\n"
