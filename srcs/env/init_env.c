@@ -58,8 +58,7 @@ void			init_env(void)
 		if (ft_strncmp(environ[i], "SHLVL=", 6) == 0)
 		{
 			shlvl = ft_atoi(environ[i] + 6);
-			temp = ft_itoa(shlvl + 1);
-			env[i] = ft_strjoin("SHLVL=", temp);
+			env[i] = ft_strjoin("SHLVL=", (temp = ft_itoa(shlvl + 1)));
 			ft_memdel((void **)&temp);
 		}
 		else
