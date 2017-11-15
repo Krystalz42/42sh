@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_print_.c                                        :+:      :+:    :+:   */
+/*   key_print.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -40,10 +40,9 @@ int			key_print_(t_read **read_std, unsigned long *buff)
 {
 	unsigned char		c;
 
+	(*read_std)->history_search += (*read_std)->history_search ? 1 : 0;
 	if (!(*read_std)->history_search)
-		add_outstanding(NULL, PRINT_KEY, *buff);
-	else
-		(*read_std)->history_search += 1;
+	add_outstanding(NULL, PRINT_KEY, *buff);
 	while (*buff)
 	{
 		c = (unsigned char)(*buff % (UCHAR_MAX + 1));

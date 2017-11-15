@@ -15,14 +15,10 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	process = my_fork(jobs, find_executing_node(node), info);
 	process->fildes[0] = fildes[0];
 	process->fildes[1] = fildes[1];
-	if (process->pid > 0) // PAPA
-	{
-		log_info("Do left");
+	if (process->pid > 0)
 		execute_node(node->left, jobs, info | FORCE_FORK);
-	}
-	else // FILS
+	else
 	{
-		log_info("Do right");
 		process->pid = getpid();
 		read_pipe(fildes);
 		if (process->prev)

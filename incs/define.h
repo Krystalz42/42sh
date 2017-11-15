@@ -13,8 +13,8 @@
 #ifndef DEFINE_H
 # define DEFINE_H
 
-#include <sh.h>
-#include "enum.h"
+# include <sh.h>
+# include "enum.h"
 
 /*
 **			LEXING
@@ -28,7 +28,6 @@
 # define OPERATER 2
 
 # define SYNTAX_ERR 666
-
 
 /*
 **			TOOLS
@@ -45,12 +44,8 @@
 
 # define FORK						1
 # define FOREGROUND					2
-# define WRITE_PREVIOUS				4
-# define READ						8
-# define CLOSE						16
 # define DONT_EXECUTE				32
 # define FORCE_FORK					64
-
 
 /*
 ** COMAND		...
@@ -98,8 +93,6 @@
 # define HEREDOC				16
 # define PRINT					32
 
-
-
 /*
 **			USAGE DEFINE
 */
@@ -124,11 +117,10 @@
 # define H_HU					"-u                      : usage unsetenv\n"
 # define H_HF					"-f                      : usage foreground\n"
 # define H_HG					"-g                      : usage background\n"
-# define H_HC					"-c						 : usage cd\n"
+# define H_HC					"-c                      : usage cd\n"
 
 # define H_MOVE					"Commands For Moving :\n"
-# define H_CA					"C-a                     : Move to the start of\
- the current line. \n"
+# define H_CA					"C-a                     : Move to the start of the current line. \n"
 # define H_CE					"C-e                     : Move to the end of \
 the line. \n"
 # define H_CF					"C-f                     : Move forward a \
@@ -173,9 +165,6 @@ the next word. \n"
  the cursor. \n"
 # define H_MY					"M-y                     : Yank the \
 top of the kill ring into the buffer at the current cursor position.\n"
-
-
-
 
 # define HASH_R					"-r                      : Reset the hash \
 table.\n"

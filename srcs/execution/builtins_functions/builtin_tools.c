@@ -12,22 +12,12 @@
 
 #include <sh.h>
 
-unsigned int		tablen(char **src)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (src[i])
-		i++;
-	return (i);
-}
-
 char				**env_cpy(char **src)
 {
 	unsigned int	i;
 	char			**cpy;
 
-	if (!(cpy = malloc(sizeof(char *) * (tablen(src) + 1))))
+	if (!(cpy = malloc(sizeof(char *) * (ft_tablen(src) + 1))))
 		return (NULL);
 	i = 0;
 	while (src[i])

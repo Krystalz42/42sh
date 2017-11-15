@@ -12,20 +12,15 @@
 
 #include <sh.h>
 
-
-
 static int			print_help(int option)
 {
 	if (option & 1)
 	{
-		ft_putstr(H_HJ);
-		ft_putstr(H_HE);
-		ft_putstr(H_HK);
-		ft_putstr(H_HH);
-		ft_putstr(H_HB);
-		ft_putstr(H_HS);
-		ft_putstr(H_HU);
-		ft_putstr(H_HC);
+		ft_putstr(H_HJ) && ft_putstr(H_HE);
+		ft_putstr(H_HK) && ft_putstr(H_HH);
+		ft_putstr(H_HB) && ft_putstr(H_HS);
+		ft_putstr(H_HU) && ft_putstr(H_HF);
+		ft_putstr(H_HG) && ft_putstr(H_HC);
 	}
 	else
 	{
@@ -43,32 +38,46 @@ static int			print_help(int option)
 	return (1);
 }
 
-uint8_t				builtin_help(t_node *node, int info __attribute__((unused)))
+int					get_option(char **cmd, int option)
 {
-	int			option;
 	int			index;
+	int			table;
 
 	option = 0;
 	index = 0;
-	if (node->content->command[1] && !ft_strcmp(node->content->command[1], HELP))
-		option = 1;
-	else if (node->content->command[1] && node->content->command[1][0] == '-')
+	table = 1;
+	while (cmd[table])
 	{
-		while (node->content->command[1][index])
+		while (cmd[table][index])
 		{
-			option += node->content->command[1][index] == 'j' && !(option & 2) ? 2 : 0;
-			option += node->content->command[1][index] == 'e' && !(option & 4) ? 4 : 0;
-			option += node->content->command[1][index] == 'b' && !(option & 8) ? 8 : 0;
-			option += node->content->command[1][index] == 'h' && !(option & 16) ? 16 : 0;
-			option += node->content->command[1][index] == 'k' && !(option & 32) ? 32 : 0;
-			option += node->content->command[1][index] == 's' && !(option & 64) ? 64 : 0;
-			option += node->content->command[1][index] == 'u' && !(option & 128) ? 128 : 0;
-			option += node->content->command[1][index] == 'g' && !(option & 256) ? 256 : 0;
-			option += node->content->command[1][index] == 'f' && !(option & 512) ? 512 : 0;
-			option += node->content->command[1][index] == 'c' && !(option & 1024) ? 1024 : 0;
+			option += cmd[table][index] == 'j' && !(option & 2) ? 2 : 0;
+			option += cmd[table][index] == 'e' && !(option & 4) ? 4 : 0;
+			option += cmd[table][index] == 'b' && !(option & 8) ? 8 : 0;
+			option += cmd[table][index] == 'h' && !(option & 16) ? 16 : 0;
+			option += cmd[table][index] == 'k' && !(option & 32) ? 32 : 0;
+			option += cmd[table][index] == 's' && !(option & 64) ? 64 : 0;
+			option += cmd[table][index] == 'u' && !(option & 128) ? 128 : 0;
+			option += cmd[table][index] == 'g' && !(option & 256) ? 256 : 0;
+			option += cmd[table][index] == 'f' && !(option & 512) ? 512 : 0;
+			option += cmd[table][index] == 'c' && !(option & 1024) ? 1024 : 0;
 			index++;
 		}
+		table++;
 	}
+	log_error("%d", option);
+	return (option);
+}
+
+uint8_t				builtin_help(t_node *node, int info)
+{
+	int			option;
+
+	option = 0;
+	if (node->content->command[1] &&
+			!ft_strcmp(node->content->command[1], HELP))
+		option = 1;
+	else if (node->content->command[1] && node->content->command[1][0] == '-')
+		option = get_option(node->content->command, info);
 	(option == 0) && help_move();
 	(option == 0) && help_history();
 	(option == 0) && help_kill_and_yank();

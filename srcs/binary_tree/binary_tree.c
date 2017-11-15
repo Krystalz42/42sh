@@ -4,7 +4,7 @@
 
 #include <sh.h>
 
-static t_node			*init_node(t_parsing *list)
+t_node	*init_node(t_parsing *list)
 {
 	t_node		*node;
 	
@@ -13,7 +13,7 @@ static t_node			*init_node(t_parsing *list)
 	return (node);
 }
 
-t_node					*create_binary_tree(t_parsing *list, t_parsing *compare, int priority)
+t_node	*create_binary_tree(t_parsing *list, t_parsing *compare, int priority)
 {
 	t_node			*node;
 	t_parsing		*keep;

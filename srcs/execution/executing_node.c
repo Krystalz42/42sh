@@ -3,7 +3,7 @@
 
 uint8_t			execute_node(t_node *node, t_jobs *jobs, int info)
 {
-	static t_exec		*execute[12] = {
+	static t_exec		*execute[11] = {
 		[VALUE_COMMAND] = &op_execution,
 		[VALUE_SEMI_COLON] = &op_separator,
 		[VALUE_AMPERSAND] = &op_ampersand,

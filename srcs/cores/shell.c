@@ -12,13 +12,14 @@
 
 #include <sh.h>
 
-void	print_tree(t_node *tree, int stage)
+void	print_tree_jevaispartiravantlepushlesefants(t_node *tree, int stage)
 {
 	if (tree)
 	{
-		print_tree(tree->left, stage + 1);
-		log_warn("A l'etage [%d], > [%s] of [%d]", stage, tree->content->input, tree->content->priority);
-		print_tree(tree->right, stage + 1);
+		print_tree_jevaispartiravantlepushlesefants(tree->left, stage + 1);
+		log_warn("A l'etage [%d], > [%s] of [%d]", stage, tree->content->input,
+				tree->content->priority);
+		print_tree_jevaispartiravantlepushlesefants(tree->right, stage + 1);
 	}
 }
 
@@ -39,7 +40,7 @@ int		shell(void)
 			continue ;
 		if ((parse_struct = parsing(input)) == NULL)
 			continue ;
-		if ((tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR)) == NULL)
+		if (!(tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR)))
 			continue ;
 		check_tree_path(tree);
 		execute_node(tree, NULL, FORK | FOREGROUND);

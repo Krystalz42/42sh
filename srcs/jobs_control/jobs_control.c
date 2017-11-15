@@ -45,15 +45,13 @@ void				handler_sigchld(int sig)
 	t_jobs		*jobs;
 	int 		index;
 
+	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
 	jobs = jobs_table();
-	(void)sig;
-//	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
 	index = 0;
+	(void)sig;
 	while (index < MAX_CHILD)
 	{
 		if (jobs[index].process && jobs[index].process->foreground == false)
-		{
-			log_fatal("Check child");
 			if (wait_group(jobs[index].process, WNOHANG))
 			{
 				if (terminate_process(jobs->process))
@@ -66,7 +64,6 @@ void				handler_sigchld(int sig)
 					print_status(jobs[index].process, jobs[index].index);
 				}
 			}
-		}
 		index++;
 	}
 }

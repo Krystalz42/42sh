@@ -40,7 +40,7 @@
 ** A VIRER
 */
 
-void                                                pjt(t_jobs *jobs);
+void						pjt(t_jobs *jobs);
 
 /*
 **				FUNCTION CORES
@@ -107,8 +107,6 @@ void						add_hash(char *bin, char *path,
 **				BUILT IN FUNCTION
 */
 
-void						collect_path(char **binary);
-int							looking_for_path(char **binary);
 int							check_if_builtin(t_node *node, int info);
 uint8_t						builtin_background(t_node *node, int info);
 uint8_t						builtin_foreground(t_node *node, int info);
@@ -123,23 +121,33 @@ uint8_t						builtin_help(t_node *node, int info);
 uint8_t						builtin_echo(t_node *node, int info);
 uint8_t						builtin_cd(t_node *node, int info);
 uint8_t						builtin_setenv(t_node *node, int info);
+
+/*
+**				BUILT IN OPTION
+*/
+
 uint8_t						hash_reset(void);
-uint8_t						hash_print(int fd);
 uint8_t						b_write_history(void);
 uint8_t						b_clear_history(void);
+uint8_t						hash_print(int fd);
 uint8_t						b_delete_history_offset(int offset);
 uint8_t						write_history_in_sh(char *pathname);
 uint8_t						kill_process(char *string1, char *string2);
 uint8_t						signal_from_int(uint8_t signal);
 uint8_t						signal_from_str(char *status);
+uint8_t						b_write_history_in_file(char *path);
 uint8_t						all_signal(void);
-t_bdata						*b_data(void);
+int							start_from_null(char **command, char ***env);
+int							start_from_full(char **command, char ***env);
+int							start_from_less(char **command, char ***env);
 
 /*
-**				BUILT IN FUNCTION
+**				BUILT IN TOOLS
 */
 
-uint8_t						builtin_cd(t_node *node, int info);
+void						collect_path(char **binary);
+int							looking_for_path(char **binary);
+t_bdata						*b_data(void);
 int							cd_check_error(char *path);
 signed int					search_in_tab(char **data, char *var);
 char						**refresh_varenv(char **env);
@@ -148,10 +156,6 @@ char						*add_envar(char *var, char *value);
 char						**init_pwd(char **env);
 unsigned int				search_char(char *str, char c);
 uint8_t						builtin_unsetenv(t_node *node, int info);
-int							ft_error(char *var, char *msg, int ret);
-unsigned int				tablen(char **src);
-
-
 
 /*
 **				FUNCTION FOR COMPLETION
@@ -190,12 +194,11 @@ static inline int			management_wildcard(char *data, char *comp);
 /*
 **				POINTER ON FUNCTION FOR READ
 */
-int							key_capitalize_word(t_read **read_std, unsigned long buff);
+int							key_capitalize_word(t_read **read_std,
+												unsigned long buff);
 int							key_print_(t_read **read_std, unsigned long *buff);
 int							key_tab(t_read **read_std, unsigned long buff);
 int							key_enter_(t_read **read_std, unsigned long buff);
-int							key_interrupt(t_read **read_std,
-											unsigned long buff);
 int							key_clear_(t_read **read_std, unsigned long buff);
 int							key_eof(t_read **read_std, unsigned long buff);
 int							key_upcase_word(t_read **read_std,
@@ -232,7 +235,8 @@ int							key_kill_prev_word(t_read **read_std,
 int							key_del_buff(t_read **read_std, unsigned long buff);
 int							key_yank(t_read **read_std, unsigned long buff);
 int							key_refresh_(t_read **read_std, unsigned long buff);
-int							capitalize_word_undo(t_read **read_std, unsigned long buff);
+int							capitalize_word_undo(t_read **read_std,
+													unsigned long buff);
 
 /*
 **				SEARCH HISTORY FUNCTION
@@ -259,9 +263,6 @@ char						*my_getenv(char *name);
 size_t						compare_environment(const char *s1, const char *s2);
 void						remove_environment(char *string);
 char						**env_table(char **env, int flags);
-int							start_from_null(char **command, char ***env);
-int							start_from_full(char **command, char ***env);
-int							start_from_less(char **command, char ***env);
 char						**get_real_env(t_node *node);
 
 /*
@@ -275,13 +276,10 @@ t_hist						*gbl_save_history(t_hist *hist, int flags);
 void						make_list_hist(t_read *read_std);
 void						previous_history(t_read **read_std);
 void						next_history(t_read **read_std);
-uint8_t						b_write_history_in_file(char *path);
 
 /*
 **				LEXING FUNCTION
 */
-
-
 
 t_parsing					*parsing(t_cmd *cmd);
 void						special_tokenisation(t_cmd *cmd);
@@ -303,7 +301,8 @@ void						order(t_parsing **node);
 
 void						argv(t_parsing *node);
 void						escape(t_parsing *node);
-void						special(t_parsing *node, char *expand, int to_expand);
+void						special(t_parsing *node, char *expand,
+									int to_expand);
 void						tilde(t_parsing *node);
 void						split(t_parsing *node);
 void						variable(t_parsing *node);
@@ -318,7 +317,8 @@ uint8_t						chk_slash(char c, uint8_t *status);
 uint8_t						chk_quote(char c, uint8_t *status);
 char						*do_skip(char *str, char c);
 char						**ft_arrayjoin(char **a1, char **a2);
-char						**ft_arraysub(char **argv, size_t start, size_t length);
+char						**ft_arraysub(char **argv, size_t start,
+										size_t length);
 int							isquote(char c);
 size_t						skip_to_occurence(char *str, char c);
 size_t						get_wordlength(char *str);
@@ -334,9 +334,23 @@ void						lstadd(t_parsing *node, t_parsing *new);
 t_parsing					*lstnew(char *input);
 
 /*
+**				CREATE BINARY TREE
+*/
+
+t_node						*create_binary_tree(t_parsing *list,
+												t_parsing *compare,
+												int priority);
+uint8_t						execute_node(t_node *node, t_jobs *jobs, int info);
+void						check_tree_path(t_node *node);
+void						do_heredoc(t_node *node);
+
+/*
 **				JOB'S CONTROL FUNCTION
 */
 
+t_process					*my_fork(t_jobs *jobs, t_node *node, int info);
+t_jobs						*new_jobs(t_jobs *jobs);
+t_process					*new_process(t_jobs *jobs);
 void						close_fildes(t_process *process);
 void						print_info_jobs(t_jobs *jobs);
 t_node						*find_executing_node(t_node *node);
@@ -358,31 +372,9 @@ const char					*status_signal(int signal);
 const char					*status_exit(int signal);
 
 /*
-**				PRINT PROCESS
-*/
-
-void						print_status(t_process *process, int jobs_spec);
-int							print_process(t_process *process,int option, int index);
-uint8_t						print_jobs(t_jobs *jobs, int option);
-
-/*
-**				CREATE BINARY TREE
-*/
-
-t_node						*create_binary_tree(t_parsing *list,
-											t_parsing *compare, int priority);
-uint8_t						execute_node(t_node *node, t_jobs *jobs, int info);
-void						check_tree_path(t_node *node);
-void						do_heredoc(t_node *node);
-
-/*
 **				EXECUTION FUNCTION
 */
 
-t_jobs						*new_jobs(t_jobs *jobs);
-t_process					*new_process(t_jobs *jobs);
-t_process					*get_process(t_process *process, pid_t pid);
-t_process					*my_fork(t_jobs *jobs, t_node *node, int info);
 uint8_t						op_execution(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_separator(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_pipeline(t_node *node, t_jobs *jobs, int info);
@@ -395,15 +387,25 @@ uint8_t						op_great(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_great_and(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_dgreat(t_node *node, t_jobs *jobs, int info);
 
-
-
 /*
-**				EXECUTION TOOLS
+**				TOOL'S EXECUTION
 */
 
+int							compare_heredoc(t_cmd *cmd, char *string);
+char						**build_table(char **heredoc, char *str);
+char						*convert_to_str(t_cmd *cmd);
 int							read_pipe(int *fildes);
 int							close_pipe(int *fildes);
 int							write_pipe(int *fildes);
+
+/*
+**				PRINT PROCESS
+*/
+
+void						print_status(t_process *process, int jobs_spec);
+int							print_process(t_process *process, int option,
+											int index);
+uint8_t						print_jobs(t_jobs *jobs, int option);
 
 /*
 **				SIGNAL FUNCTION
@@ -433,14 +435,12 @@ int							memdel_cmd(t_cmd **cmd);
 void						memdel_outstanding(void);
 void						memdel_node(t_node **node);
 
-
 /*
 **				ERROR FUNCTION
 */
 
 uint8_t						error_msg(char *from, char *error, char *args);
 int							bip(void);
-
 uint8_t						usage_kill(void);
 uint8_t						usage_jobs(void);
 uint8_t						usage_history(void);
@@ -448,7 +448,7 @@ uint8_t						usage_env(void);
 uint8_t						usage_hash(void);
 uint8_t						usage_unsetenv(void);
 uint8_t						usage_setenv(void);
-int 						create_fildes(char *path, int option, int chmod);
+int							create_fildes(char *path, int option, int chmod);
 uint8_t						usage_background(void);
 uint8_t						usage_foreground(void);
 uint8_t						usage_cd(void);

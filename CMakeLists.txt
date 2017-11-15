@@ -144,8 +144,13 @@ set(SOURCE_FILES
         srcs/env/my_getenv.c
         srcs/env/remove_environment.c
         srcs/error_function/bip.c
+        srcs/error_function/create_fildes.c
         srcs/error_function/usage_builtins.c
         srcs/error_function/usage_builtins2.c
+        srcs/execution/builtins_functions/basic_help.c
+        srcs/execution/builtins_functions/builtin_cd.c
+        srcs/execution/builtins_functions/builtin_data.c
+        srcs/execution/builtins_functions/builtin_echo.c
         srcs/execution/builtins_functions/builtin_env.c
         srcs/execution/builtins_functions/builtin_exit.c
         srcs/execution/builtins_functions/builtin_hash.c
@@ -154,15 +159,12 @@ set(SOURCE_FILES
         srcs/execution/builtins_functions/builtin_jobs.c
         srcs/execution/builtins_functions/builtin_kill.c
         srcs/execution/builtins_functions/builtin_kill2.c
+        srcs/execution/builtins_functions/builtin_refresh.c
+        srcs/execution/builtins_functions/builtin_setenv.c
         srcs/execution/builtins_functions/builtin_suspend.c
         srcs/execution/builtins_functions/builtin_switch.c
+        srcs/execution/builtins_functions/builtin_tools.c
         srcs/execution/builtins_functions/builtin_unsetenv.c
-        srcs/execution/builtins_functions/data_builtin.c
-        srcs/execution/builtins_functions/ft_cd.c
-        srcs/execution/builtins_functions/ft_echo.c
-        srcs/execution/builtins_functions/builtin_setenv.c
-        srcs/execution/builtins_functions/refresh_varenv.c
-        srcs/execution/builtins_functions/utils.c
         srcs/execution/executing_function/op_ampersand.c
         srcs/execution/executing_function/op_and_if.c
         srcs/execution/executing_function/op_dgreat.c
@@ -302,7 +304,7 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/execution/builtins_functions/basic_help.c)
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/execution/tools/tools_heredoc.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)
