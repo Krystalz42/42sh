@@ -33,5 +33,6 @@ int			help_kill_and_yank(void) {
 	ft_putstr(H_MD);
 	ft_putstr(H_MDEL);
 	ft_putstr(H_MY);
+	ft_putstr(H_C_);
 	return (1);
 }
