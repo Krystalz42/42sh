@@ -170,6 +170,7 @@ SRCS = \
 	   execution/builtins_functions/builtin_cd.c				\
 	   execution/builtins_functions/builtin_echo.c				\
 	   execution/builtins_functions/builtin_setenv.c			\
+	   execution/builtins_functions/builtin_echo.c				\
 	   execution/builtins_functions/builtin_unsetenv.c			\
 	   execution/builtins_functions/builtin_refresh.c			\
 	   execution/builtins_functions/builtin_tools.c				\
