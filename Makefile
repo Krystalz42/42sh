@@ -169,7 +169,7 @@ SRCS = \
 	   execution/builtins_functions/basic_help.c				\
 	   execution/builtins_functions/ft_cd.c						\
 	   execution/builtins_functions/ft_echo.c					\
-	   execution/builtins_functions/ft_setenv.c					\
+	   execution/builtins_functions/builtin_setenv.c			\
 	   execution/builtins_functions/builtin_unsetenv.c			\
 	   execution/builtins_functions/refresh_varenv.c			\
 	   execution/builtins_functions/utils.c						\

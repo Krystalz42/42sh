@@ -160,7 +160,7 @@ set(SOURCE_FILES
         srcs/execution/builtins_functions/data_builtin.c
         srcs/execution/builtins_functions/ft_cd.c
         srcs/execution/builtins_functions/ft_echo.c
-        srcs/execution/builtins_functions/ft_setenv.c
+        srcs/execution/builtins_functions/builtin_setenv.c
         srcs/execution/builtins_functions/refresh_varenv.c
         srcs/execution/builtins_functions/utils.c
         srcs/execution/executing_function/op_ampersand.c

@@ -15,7 +15,7 @@
 
 static const t_builtin	g_builtin[] = {
 	(t_builtin){"env", &builtin_env},
-	(t_builtin){"setenv", &ft_setenv},
+	(t_builtin){"setenv", &builtin_setenv},
 	(t_builtin){"unsetenv", &builtin_unsetenv},
 	(t_builtin){"cd", &ft_cd},
 	(t_builtin){"echo", &builtin_echo},
