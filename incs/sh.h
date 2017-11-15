@@ -143,7 +143,7 @@ char						**refresh_varenv(char **env);
 char						*ft_path(char *var, unsigned int begin);
 char						*add_envar(char *var, char *value);
 char						**init_pwd(char **env);
-uint8_t						ft_setenv(t_node *node, int info);
+uint8_t						builtin_setenv(t_node *node, int info);
 unsigned int				search_char(char *str, char c);
 uint8_t						builtin_unsetenv(t_node *node, int info);
 int							ft_error(char *var, char *msg, int ret);

@@ -3957,6 +3957,33 @@ srcs/execution/builtins_functions/builtin_kill2.c.s:
 	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/builtin_kill2.c.s
 .PHONY : srcs/execution/builtins_functions/builtin_kill2.c.s
 
+srcs/execution/builtins_functions/builtin_setenv.o: srcs/execution/builtins_functions/builtin_setenv.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_setenv.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_setenv.c.o:
+	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/builtin_setenv.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_setenv.c.o
+
+srcs/execution/builtins_functions/builtin_setenv.i: srcs/execution/builtins_functions/builtin_setenv.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_setenv.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_setenv.c.i:
+	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/builtin_setenv.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_setenv.c.i
+
+srcs/execution/builtins_functions/builtin_setenv.s: srcs/execution/builtins_functions/builtin_setenv.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_setenv.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_setenv.c.s:
+	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/builtin_setenv.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_setenv.c.s
+
 srcs/execution/builtins_functions/builtin_suspend.o: srcs/execution/builtins_functions/builtin_suspend.c.o
 
 .PHONY : srcs/execution/builtins_functions/builtin_suspend.o
@@ -4118,33 +4145,6 @@ srcs/execution/builtins_functions/ft_echo.s: srcs/execution/builtins_functions/f
 srcs/execution/builtins_functions/ft_echo.c.s:
 	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/ft_echo.c.s
 .PHONY : srcs/execution/builtins_functions/ft_echo.c.s
-
-srcs/execution/builtins_functions/ft_setenv.o: srcs/execution/builtins_functions/ft_setenv.c.o
-
-.PHONY : srcs/execution/builtins_functions/ft_setenv.o
-
-# target to build an object file
-srcs/execution/builtins_functions/ft_setenv.c.o:
-	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/ft_setenv.c.o
-.PHONY : srcs/execution/builtins_functions/ft_setenv.c.o
-
-srcs/execution/builtins_functions/ft_setenv.i: srcs/execution/builtins_functions/ft_setenv.c.i
-
-.PHONY : srcs/execution/builtins_functions/ft_setenv.i
-
-# target to preprocess a source file
-srcs/execution/builtins_functions/ft_setenv.c.i:
-	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/ft_setenv.c.i
-.PHONY : srcs/execution/builtins_functions/ft_setenv.c.i
-
-srcs/execution/builtins_functions/ft_setenv.s: srcs/execution/builtins_functions/ft_setenv.c.s
-
-.PHONY : srcs/execution/builtins_functions/ft_setenv.s
-
-# target to generate assembly for a file
-srcs/execution/builtins_functions/ft_setenv.c.s:
-	$(MAKE) -f CMakeFiles/42sh_save.dir/build.make CMakeFiles/42sh_save.dir/srcs/execution/builtins_functions/ft_setenv.c.s
-.PHONY : srcs/execution/builtins_functions/ft_setenv.c.s
 
 srcs/execution/builtins_functions/refresh_varenv.o: srcs/execution/builtins_functions/refresh_varenv.c.o
 
@@ -8415,6 +8415,9 @@ help:
 	@echo "... srcs/execution/builtins_functions/builtin_kill2.o"
 	@echo "... srcs/execution/builtins_functions/builtin_kill2.i"
 	@echo "... srcs/execution/builtins_functions/builtin_kill2.s"
+	@echo "... srcs/execution/builtins_functions/builtin_setenv.o"
+	@echo "... srcs/execution/builtins_functions/builtin_setenv.i"
+	@echo "... srcs/execution/builtins_functions/builtin_setenv.s"
 	@echo "... srcs/execution/builtins_functions/builtin_suspend.o"
 	@echo "... srcs/execution/builtins_functions/builtin_suspend.i"
 	@echo "... srcs/execution/builtins_functions/builtin_suspend.s"
@@ -8433,9 +8436,6 @@ help:
 	@echo "... srcs/execution/builtins_functions/ft_echo.o"
 	@echo "... srcs/execution/builtins_functions/ft_echo.i"
 	@echo "... srcs/execution/builtins_functions/ft_echo.s"
-	@echo "... srcs/execution/builtins_functions/ft_setenv.o"
-	@echo "... srcs/execution/builtins_functions/ft_setenv.i"
-	@echo "... srcs/execution/builtins_functions/ft_setenv.s"
 	@echo "... srcs/execution/builtins_functions/refresh_varenv.o"
 	@echo "... srcs/execution/builtins_functions/refresh_varenv.i"
 	@echo "... srcs/execution/builtins_functions/refresh_varenv.s"
