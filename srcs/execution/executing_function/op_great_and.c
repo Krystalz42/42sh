@@ -27,6 +27,7 @@ void		jobs_op_great_and(t_node *node)
 		log_warn("From %d to %d", fildes, 1);
 		dup2(fildes, STDOUT_FILENO);
 	}
+	close(fildes);
 }
 
 uint8_t					op_great_and(t_node *node, t_jobs *jobs, int info)
@@ -37,7 +38,7 @@ uint8_t					op_great_and(t_node *node, t_jobs *jobs, int info)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)
 			return (var_return(255));
-		jobs->process = my_fork(jobs, node, info);
+		jobs->process = my_fork(jobs, find_executing_node(node), info);
 		if (jobs->process->pid)
 		{
 			my_wait(jobs);

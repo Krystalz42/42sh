@@ -22,24 +22,26 @@ void		jobs_op_great(t_node *node)
 	{
 		dup2(fildes, STDOUT_FILENO);
 	}
+	close(fildes);
 }
 
 uint8_t					op_great(t_node *node, t_jobs *jobs, int info)
 {
-	log_debug("VALUE GREAT %d", info);
+	t_process			*process;
 
+	log_debug("VALUE GREAT %d", info);
 	if (info & FORK)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)
 			return (var_return(255));
-		jobs->process = my_fork(jobs, find_executing_node(node), info);
-		if (jobs->process->pid)
+		process = my_fork(jobs, find_executing_node(node), info);
+		if (process->pid)
 		{
 			my_wait(jobs);
 		}
 		else
 		{
-			jobs->process->pid = getpid();
+			process->pid = getpid();
 			jobs_op_great(node);
 			execute_node(node->left, jobs, info ^ FORK);
 		}

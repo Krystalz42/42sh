@@ -4,35 +4,16 @@
 
 #include <sh.h>
 
-void			place_status(t_process *process, pid_t pid, int status)
-{
-	while (process->prev)
-		process = process->prev;
-	while (process)
-	{
-		if (process->pid == pid)
-		{
-			log_fatal("dsa");
-			process->status = status;
-		}
-		process = process->next;
-	}
-}
-
 int			wait_group(t_process *process, int option)
 {
-	pid_t		pid;
-	int			status;
 	int			ret;
 
 	ret = 0;
-	while ((pid = waitpid(-process->pgid, &status, option)) != -1)
+	while (process)
 	{
-		sleep(1);
-		log_fatal("%d", pid);
-		place_status(process, pid, status);
-		log_fatal("%d %d %d", process->pid, process->status, status);
-		ret = 1;
+		if ((waitpid(process->pid, &process->status, option)) > 0)
+			ret = 1;
+		process = process->next;
 	}
 	return (ret);
 }
@@ -41,11 +22,11 @@ void			set_fildes(pid_t pgid)
 {
 	signal(SIGTTIN, SIG_IGN);
 	signal(SIGTTOU, SIG_IGN);
-	log_trace("FG Return tcsetpgrp(0, %d) == [%d]", pgid, tcsetpgrp(STDIN_FILENO, pgid));
+	tcsetpgrp(STDIN_FILENO, pgid);
 }
 void			wait_process(t_jobs *jobs)
 {
-	wait_group(jobs->process, WUNTRACED | WCONTINUED);
+	wait_group(jobs->process, WUNTRACED);
 	update_jobs(jobs->process);
 	if (terminate_process(jobs->process))
 		reset_process(jobs);
@@ -67,14 +48,13 @@ void		my_wait(t_jobs *jobs)
 		{
 			if (jobs->process->foreground)
 			{
-				pjt(jobs);
 				set_fildes(jobs->process->pgid);
 				wait_process(jobs);
 				set_fildes(getpgid(0));
-				pjt(jobs);
 			}
 			else
 			{
+				wait_group(jobs->process, WNOHANG);
 				print_info_jobs(jobs);
 			}
 		}

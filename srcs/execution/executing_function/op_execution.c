@@ -4,29 +4,6 @@
 
 #include <sh.h>
 
-static void					play_with_fildes(t_jobs *jobs, int info, pid_t pid)
-{
-	t_process		*process;
-
-	if (jobs)
-		if ((process = get_process(jobs->process, pid)))
-		{
-			if (WRITE_PREVIOUS & info)
-			{
-				log_trace("Write %d", pid);
-				write_pipe(process->prev->fildes);
-				close_pipe(process->prev->fildes);
-			}
-			if (READ & info)
-			{
-				log_trace("Read %d", pid);
-				read_pipe(process->fildes);
-				close_pipe(process->fildes);
-			}
-			close_pipe(process->fildes);
-		}
-}
-
 static void				jobs_execution(t_node *node, int info)
 {
 	if (check_if_builtin(node, info) >= 0)
@@ -37,25 +14,28 @@ static void				jobs_execution(t_node *node, int info)
 
 static void				do_execution(t_node *node, t_jobs *jobs, int info)
 {
+	t_process		*process;
+
 	if (FORK & info)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)
 			return ;
-		jobs->process = my_fork(jobs, node, info);
-		if (jobs->process->pid > 0) // father
+		process = my_fork(jobs, node, info);
+		if (process->pid > 0) // father
 		{
+			log_success("On va wait les enfants!");
 			my_wait(jobs);
 		}
-		else if (jobs->process->pid == 0) // fils
+		else if (process->pid == 0) // fils
 		{
-			jobs->process->pid = getpid();
-			play_with_fildes(jobs, info, getpid());
+			process->pid = getpid();
+			if (process->prev)
+				write_pipe(process->prev->fildes);
 			jobs_execution(node, info);
 		}
 	}
 	else
 	{
-		play_with_fildes(jobs, info, getpid());
 		jobs_execution(node, info);
 	}
 }

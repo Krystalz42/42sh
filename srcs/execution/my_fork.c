@@ -16,11 +16,11 @@ t_process			*new_process(t_jobs *jobs)
 	else
 	{
 		temp = jobs->process;
-		while (jobs->process->next)
-			jobs->process = jobs->process->next;
-		jobs->process->next = (t_process *)ft_memalloc(sizeof(t_process));
-		jobs->process->next->prev = temp;
-		return (jobs->process->next);
+		while (temp->next)
+			temp = temp->next;
+		temp->next = (t_process *)ft_memalloc(sizeof(t_process));
+		temp->next->prev = temp;
+		return (temp->next);
 	}
 }
 
@@ -38,7 +38,7 @@ t_process			*my_fork(t_jobs *jobs, t_node *node, int info)
 	process->command = ft_strdup(node->content->input);
 	setpgid(process->pid, process->prev ? process->prev->pgid : process->pid);
 	process->pgid = getpgid(process->pid);
-	process->status = 0;
+	process->status = -1;
 	process->foreground = (info & FOREGROUND) ? true : false;
 	return (process);
 }

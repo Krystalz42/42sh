@@ -1,24 +1,12 @@
 #include <sh.h>
 
-void					intro_heredoc(t_node *node, t_jobs *jobs)
+void					intro_heredoc(t_node *node)
 {
-	t_process		*process;
 	int				fildes;
 
 	fildes = open(node->content->heredoc, O_RDONLY);
-	if ((process = get_process(jobs->process, getpid())))
-	{
-		if (process->fildes[0] != -1)
-		{
-			dup2(fildes, process->fildes[0]);
-			close(fildes);
-		}
-		else
-		{
-			dup2(fildes, STDIN_FILENO);
-			close(fildes);
-		}
-	}
+	dup2(fildes, STDIN_FILENO);
+	close(fildes);
 	remove(node->content->heredoc);
 }
 
@@ -37,13 +25,13 @@ uint8_t					op_dless(t_node *node, t_jobs *jobs, int info)
 		else
 		{
 			jobs->process->pid = getpid();
-			intro_heredoc(node, jobs);
+			intro_heredoc(node);
 			execute_node(node->left, jobs, info ^ FORK);
 		}
 	}
 	else
 	{
-		intro_heredoc(node, jobs);
+		intro_heredoc(node);
 		execute_node(node->left, jobs, info);
 	}
 	return (1);

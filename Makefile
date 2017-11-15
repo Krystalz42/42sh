@@ -172,7 +172,6 @@ SRCS = \
 	   execution/builtins_functions/builtin_unsetenv.c			\
 	   execution/builtins_functions/refresh_varenv.c			\
 	   execution/builtins_functions/utils.c						\
-	   execution/builtins_functions/error.c						\
 	   execution/builtins_functions/builtin_kill2.c				\
 	   jobs_control/modify_status_jobs.c						\
 	   jobs_control/status_signals.c							\
@@ -279,7 +278,8 @@ DFLAGS		= \
 DEPFLAGS	= \
 			  -MT $@ -MMD -MP -MF $(DIR_DEPS)/$*.Td	\
 
-COMPILE.c	= $(CC) $(DEPFLAGS) $(CFLAGS) $(CPPFLAGS) -c
+COMPILE.c	= \
+			$(CC) $(DEPFLAGS) $(CFLAGS) $(CPPFLAGS) -c \
 
 POSTCOMPILE	= mv -f $(DIR_DEPS)/$*.Td $(DIR_DEPS)/$*.d
 
@@ -372,6 +372,7 @@ $(DIR_OBJS)/%.o	:	$(DIR_SRCS)/%.c $(DIR_DEPS)/%.d
 	@printf "$(GRN)[ Created ]$(RST) $@  \n"
 	@$(COMPILE.c) $(OUTPUT_OPTION) $<
 	@$(POSTCOMPILE)
+
 
 
 $(DIR_DEPS)/%.d	: ;

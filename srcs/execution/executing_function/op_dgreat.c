@@ -22,6 +22,7 @@ void		jobs_op_dgreat(t_node *node)
 	{
 		dup2(fildes, STDOUT_FILENO);
 	}
+	close(fildes);
 }
 
 uint8_t					op_dgreat(t_node *node, t_jobs *jobs, int info)

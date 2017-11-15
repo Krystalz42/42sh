@@ -40,13 +40,15 @@ void				init_signal(void)
 	{
 		signal(i, handler_sig);
 		if (i == SIGCHLD)
-			signal(i, handler_sigchld);
+			signal(i, &handler_sigchld);
 		else if (i == SIGINT)
-			signal(i, handler_sigint);
+			signal(i, &handler_sigint);
 	}
 	signal(3, SIG_DFL);
 	signal(11, SIG_DFL);
 	signal(28, &handler_sigwinsz);
+	signal(SIGCHLD, &handler_sigchld);
+
 }
 
 void				reset_signal(void)

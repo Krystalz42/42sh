@@ -40,65 +40,33 @@ void			update_jobs(t_process *process)
 	}
 }
 
-int				update_status(t_process *process)
-{
-	int				ret;
-
-	ret = 0;
-	while (process)
-	{
-		if ((waitpid(process->pid, &process->status, WCONTINUED | WNOHANG | WUNTRACED)) > 0)
-			ret = 1;
-		log_fatal("%d %d",process->pid, process->status);
-		process = process->next;
-	}
-	log_trace("Return update_status %d", ret);
-	return (ret);
-}
-
-int					terminate_process(t_process *process)
-{
-	while (process)
-	{
-		log_trace("In terminated process for %d [%d.%d]", process->pid, WIFSIGNALED(process->status), WIFEXITED(process->status));
-		if (!WIFSIGNALED(process->status) && !WIFEXITED(process->status))
-			return (0);
-		process = process->next;
-	}
-	log_trace("Return terminated_status %d", 1);
-	return (1);
-}
-
 void				handler_sigchld(int sig)
 {
-	t_jobs			*jobs;
-	int				index;
+	t_jobs		*jobs;
+	int 		index;
 
-	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
-	index = MAX_CHILD -1;
 	jobs = jobs_table();
-	while (index >= 0)
+	(void)sig;
+//	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
+	index = 0;
+	while (index < MAX_CHILD)
 	{
 		if (jobs[index].process && jobs[index].process->foreground == false)
 		{
-			log_trace("%d UPDATE", jobs[index].process->pid);
-			first_process(jobs);
-			if (update_status(jobs[index].process))
+			log_fatal("Check child");
+			if (wait_group(jobs[index].process, WNOHANG))
 			{
-				if (terminate_process(jobs[index].process))
+				if (terminate_process(jobs->process))
 				{
-					print_status(jobs[index].process, jobs->index);
-					reset_process(jobs + index);
+					print_status(jobs[index].process, jobs[index].index);
+					reset_process(jobs);
 				}
-				else
+				else if (finish_process(jobs[index].process))
 				{
-					modify_runing(jobs[index].process, false);
-					modify_foreground(jobs[index].process, false);
+					print_status(jobs[index].process, jobs[index].index);
 				}
 			}
-			pjt(jobs + index);
 		}
-		index--;
+		index++;
 	}
 }
-;

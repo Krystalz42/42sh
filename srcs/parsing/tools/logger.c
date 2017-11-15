@@ -14,7 +14,8 @@
 
 void			special_logger(t_cmd *cmd)
 {
-	int			fd = open("/tmp/.special", O_RDWR | O_CREAT | O_TRUNC, 0644);
+	int			fd = -1;
+//	fd = open("/tmp/.special", O_RDWR | O_CREAT | O_TRUNC, 0644);
 	while (cmd && cmd->c)
 	{
 		if (cmd->status == DEFAULT)
@@ -32,7 +33,8 @@ void			special_logger(t_cmd *cmd)
 
 void			token_logger(t_cmd *cmd)
 {
-	int			fd = open("/tmp/.token", O_RDWR | O_CREAT | O_TRUNC, 0644);
+	int			fd = -1;
+//	fd = open("/tmp/.token", O_RDWR | O_CREAT | O_TRUNC, 0644);
 	while (cmd && cmd->c)
 	{
 		if (cmd->value == TOKEN)
@@ -47,7 +49,8 @@ void			token_logger(t_cmd *cmd)
 void			list_logger(t_parsing *node)
 {
 	uint8_t		rounds = 0;
-	int			fd = open("/tmp/.list", O_RDWR | O_CREAT | O_TRUNC, 0644);
+	int			fd = -1;
+//	fd = open("/tmp/.list", O_RDWR | O_CREAT | O_TRUNC, 0644);
 	while (node)
 	{
 		if (!rounds)
@@ -64,7 +67,8 @@ void			split_logger(t_parsing *node)
 {
 	size_t		index;
 	uint8_t		rounds = 0;
-	int			fd = open("/tmp/.split", O_RDWR | O_CREAT | O_TRUNC, 0644);
+	int			fd = -1;
+//	fd = open("/tmp/.split", O_RDWR | O_CREAT | O_TRUNC, 0644);
 	while (node)
 	{
 		if (!rounds)
