@@ -198,7 +198,8 @@ current (or following) word.\n"
 current (or following) word.\n"
 # define H_MC					"M-c                     : Capitalize \
 the current (or following) word.\n"
-# define H_C_					"C-_                     : Undou"
+# define H_C_					"C-_                     : Undo the last action\
+\n."
 
 # define H_KILL_AND_YANK		"Killing And Yanking :\n"
 # define H_CK					"C-k                     : Kill the text from\
