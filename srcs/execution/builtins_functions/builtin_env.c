@@ -84,7 +84,7 @@ uint8_t			builtin_env(t_node *node, int info)
 		return (var_return(usage_env()));
 	while (node->content->command[++table] && node->content->command[table][0] == '-')
 	{
-		index = -1;
+		index = 0;
 		while (node->content->command[table][++index])
 		{
 			if (potential_option("iu", node->content->command[table][index]) == 0)
