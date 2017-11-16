@@ -62,15 +62,15 @@ void					check_tree_path(t_node *node)
 			do_heredoc(node);
 		if (node->content->value == VALUE_COMMAND)
 			if (check_if_builtin(node, DONT_EXECUTE) == -1)
-				if ((looking_for_path(&node->content->command[0])) == 0)
-					collect_path(&node->content->command[0]);
+				if (ft_strchr(node->content->command[0], '/') == NULL)
+					if ((looking_for_path(&node->content->command[0])) == 0)
+						collect_path(&node->content->command[0]);
 		if (node->content->priority == PRIO_REDIR)
 			check_tree_path(node->left);
 		else
 		{
 			check_tree_path(node->left);
 			check_tree_path(node->right);
-
 		}
 	}
 }
