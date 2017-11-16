@@ -11,7 +11,6 @@ static int		jobs_do_heredoc(t_node *node)
 
 	node->content->heredoc = ft_strjoin("/tmp/", (temp = ft_itoa(time(NULL))));
 	fildes = open(node->content->heredoc, O_WRONLY | O_CREAT, 0644);
-	free((void *)temp);
 	return (fildes);
 }
 
