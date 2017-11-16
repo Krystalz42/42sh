@@ -16,7 +16,8 @@
 void				handler_sig(int sig)
 {
 	log_warn("Signal Reception [%d]", sig);
-
+	set_termios(SET_OLD_TERM);
+	exit(sig + 128);
 }
 
 void				handler_sigint(int sig)
@@ -37,15 +38,10 @@ void				init_signal(void)
 	int i = -1;
 
 	while (++i < 32)
-	{
 		signal(i, handler_sig);
-		if (i == SIGCHLD)
-			signal(i, &handler_sigchld);
-		else if (i == SIGINT)
-			signal(i, &handler_sigint);
-	}
-	signal(3, SIG_DFL);
-	signal(11, SIG_DFL);
+	signal(SIGINT, &handler_sigint);
+	signal(3, SIG_IGN);
+	signal(18, SIG_IGN);
 	signal(28, &handler_sigwinsz);
 	signal(SIGCHLD, &handler_sigchld);
 
