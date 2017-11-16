@@ -6,7 +6,7 @@
 /*   By: sbelazou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 20:24:32 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/11/16 19:02:58 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/16 21:33:14 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,18 @@ static int			check_this_one(char *part, char *path)
 	return (0);
 }
 
+static char			*create_path(char *path, char *binary)
+{
+	char			*complete_path;
+
+	complete_path = (char *)ft_memalloc(sizeof(char) * (ft_strlen(path) + ft_strlen(binary) + 2));
+	ft_strcpy(complete_path, path);
+	ft_strcpy(complete_path + ft_strlen(complete_path), "/");
+	ft_strcpy(complete_path + ft_strlen(complete_path), binary);
+	free(path);
+	return (complete_path);
+}
+
 int					check_directory(char *path)
 {
 	char			**pieces;
@@ -44,7 +56,7 @@ int					check_directory(char *path)
 		if (i == 0)
 			part = ft_strdup(pieces[i]);
 		else
-			part = ft_strjoin(part, pieces[i]);
+			part = create_path(part, pieces[i]);
 		if (check_this_one(part, path) == 1)
 			break ;
 		i++;
