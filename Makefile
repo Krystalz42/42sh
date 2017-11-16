@@ -46,7 +46,6 @@ RM			= rm -rf
 NAME		= 42sh
 
 SRCS = \
-       log_info_bug_dnt_care_of_norminette_bitch.c				\
 	   cores/main.c												\
 	   cores/shell.c											\
 	   cores/insert_one_line.c									\

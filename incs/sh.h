@@ -37,12 +37,6 @@
 # include <time.h>
 
 /*
-** A VIRER
-*/
-
-void						pjt(t_jobs *jobs);
-
-/*
 **				FUNCTION CORES
 */
 

@@ -12,17 +12,6 @@
 
 #include <sh.h>
 
-void	print_tree_jevaispartiravantlepushlesefants(t_node *tree, int stage)
-{
-	if (tree)
-	{
-		print_tree_jevaispartiravantlepushlesefants(tree->left, stage + 1);
-		log_warn("A l'etage [%d], > [%s] of [%d]", stage, tree->content->input,
-				tree->content->priority);
-		print_tree_jevaispartiravantlepushlesefants(tree->right, stage + 1);
-	}
-}
-
 int		shell(void)
 {
 	t_cmd		*input;
