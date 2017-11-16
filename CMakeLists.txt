@@ -347,7 +347,7 @@ set(SOURCE_FILES
         test/src/string/test_string_escape.c
         test/src/tokenizer/tokenizer.c
         test/src/ui/test_ui.c
-        test/src/var/test_var.c)
+        test/src/var/test_var.c srcs/execution/tools/potential_option.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)

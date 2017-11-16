@@ -86,8 +86,12 @@ uint8_t			builtin_env(t_node *node, int info)
 	{
 		index = -1;
 		while (node->content->command[table][++index])
+		{
+			if (potential_option("iu", node->content->command[index][table]) == 0)
+				return (error_msg(HISTORY, BAD_OPTION, node->content->command[index] + table));
 			if (node->content->command[table][index] == 'u' || node->content->command[table][index] == 'i')
 				opt = node->content->command[table][index];
+		}
 	}
 	free_command(&node->content->command, table);
 	return (check_option(node, info, opt));

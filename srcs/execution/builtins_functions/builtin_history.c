@@ -12,20 +12,7 @@
 
 #include <sh.h>
 
-static int		potential_option(int c)
-{
-	static const char		potential[] = "cdrw";
-	int						index;
 
-	index = 0;
-	while (potential[index])
-	{
-		if (potential[index] == c)
-			return (1);
-		index++;
-	}
-	return (0);
-}
 
 uint8_t			looking_for_fct(char **command, int option)
 {
@@ -59,8 +46,8 @@ int				check_option_history(char **command)
 		table = 1;
 		while (command[index][table])
 		{
-			if (potential_option(command[index][table]) == 0)
-				return (error_msg(HISTORY, INVALID, command[index] + table));
+			if (potential_option("cdrw", command[index][table]) == 0)
+				return (error_msg(HISTORY, BAD_OPTION, command[index] + table));
 			option += command[index][table] == 'c' && !(option & 1) ? 1 : 0;
 			option += command[index][table] == 'd' && !(option & 2) ? 2 : 0;
 			option += command[index][table] == 'r' && !(option & 4) ? 4 : 0;

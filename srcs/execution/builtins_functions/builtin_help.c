@@ -44,12 +44,14 @@ int					get_option(char **cmd, int option)
 	int			table;
 
 	option = 0;
-	index = 0;
 	table = 1;
 	while (cmd[table])
 	{
+		index = 1;
 		while (cmd[table][index])
 		{
+			if (potential_option("jebhksugfc", cmd[index][table]) == 0)
+				return (error_msg(HISTORY, BAD_OPTION, cmd[index] + table) - 2);
 			option += cmd[table][index] == 'j' && !(option & 2) ? 2 : 0;
 			option += cmd[table][index] == 'e' && !(option & 4) ? 4 : 0;
 			option += cmd[table][index] == 'b' && !(option & 8) ? 8 : 0;
@@ -77,7 +79,8 @@ uint8_t				builtin_help(t_node *node, int info)
 			!ft_strcmp(node->content->command[1], HELP))
 		option = 1;
 	else if (node->content->command[1] && node->content->command[1][0] == '-')
-		option = get_option(node->content->command, info);
+		if ((option = get_option(node->content->command, info)) == -1)
+			return (var_return(1));
 	(option == 0) && help_move();
 	(option == 0) && help_history();
 	(option == 0) && help_kill_and_yank();

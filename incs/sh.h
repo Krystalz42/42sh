@@ -156,6 +156,8 @@ char						*add_envar(char *var, char *value);
 char						**init_pwd(char **env);
 unsigned int				search_char(char *str, char c);
 uint8_t						builtin_unsetenv(t_node *node, int info);
+int							potential_option(char *potential, int c);
+
 
 /*
 **				FUNCTION FOR COMPLETION

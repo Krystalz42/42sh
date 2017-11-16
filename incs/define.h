@@ -252,7 +252,7 @@ directory.\n"
 # define NO_ARGS_U				"option requires an argument -- u"
 # define VAR_NO_SET				"variable not set : "
 # define WRONG_FORMAT			"variable have wrong format : "
-# define OPTION_NO_FOUND		"option not found : "
+# define BAD_OPTION				"option not found : "
 # define NO_JOB					"job not found: "
 # define NO_CUR_JOB				"no current job :"
 # define UNKNOWN				"unknown signal: "
@@ -275,7 +275,6 @@ directory.\n"
 # define PATH_HISTORY			"/.42sh_history"
 # define PATH_HASH				"/.42sh_hash"
 
-# define N						1
 # define OPTION_N				2
 
 # define MV_LEFT				"le"

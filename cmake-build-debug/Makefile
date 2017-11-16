@@ -4875,6 +4875,33 @@ srcs/execution/tools/new_jobs.c.s:
 	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/execution/tools/new_jobs.c.s
 .PHONY : srcs/execution/tools/new_jobs.c.s
 
+srcs/execution/tools/potential_option.o: srcs/execution/tools/potential_option.c.o
+
+.PHONY : srcs/execution/tools/potential_option.o
+
+# target to build an object file
+srcs/execution/tools/potential_option.c.o:
+	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/execution/tools/potential_option.c.o
+.PHONY : srcs/execution/tools/potential_option.c.o
+
+srcs/execution/tools/potential_option.i: srcs/execution/tools/potential_option.c.i
+
+.PHONY : srcs/execution/tools/potential_option.i
+
+# target to preprocess a source file
+srcs/execution/tools/potential_option.c.i:
+	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/execution/tools/potential_option.c.i
+.PHONY : srcs/execution/tools/potential_option.c.i
+
+srcs/execution/tools/potential_option.s: srcs/execution/tools/potential_option.c.s
+
+.PHONY : srcs/execution/tools/potential_option.s
+
+# target to generate assembly for a file
+srcs/execution/tools/potential_option.c.s:
+	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/execution/tools/potential_option.c.s
+.PHONY : srcs/execution/tools/potential_option.c.s
+
 srcs/execution/tools/tools_heredoc.o: srcs/execution/tools/tools_heredoc.c.o
 
 .PHONY : srcs/execution/tools/tools_heredoc.o
@@ -9678,6 +9705,9 @@ help:
 	@echo "... srcs/execution/tools/new_jobs.o"
 	@echo "... srcs/execution/tools/new_jobs.i"
 	@echo "... srcs/execution/tools/new_jobs.s"
+	@echo "... srcs/execution/tools/potential_option.o"
+	@echo "... srcs/execution/tools/potential_option.i"
+	@echo "... srcs/execution/tools/potential_option.s"
 	@echo "... srcs/execution/tools/tools_heredoc.o"
 	@echo "... srcs/execution/tools/tools_heredoc.i"
 	@echo "... srcs/execution/tools/tools_heredoc.s"
