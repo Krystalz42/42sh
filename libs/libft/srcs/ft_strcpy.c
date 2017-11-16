@@ -10,10 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+
 char	*ft_strcpy(char *dest, const char *src)
 {
 	char *dst;
 
+	if (src == NULL)
+		return (dest);
 	dst = dest;
 	while (*src)
 		*dst++ = *src++;
