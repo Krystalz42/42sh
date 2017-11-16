@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(42sh_save01)
+project(42sh_final)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -177,6 +177,7 @@ set(SOURCE_FILES
         srcs/execution/executing_function/op_or_if.c
         srcs/execution/executing_function/op_pipeline.c
         srcs/execution/executing_function/op_separator.c
+        srcs/execution/tools/check_path.c
         srcs/execution/tools/check_tree_path.c
         srcs/execution/tools/do_heredoc.c
         srcs/execution/tools/fildes_previous.c
@@ -186,6 +187,7 @@ set(SOURCE_FILES
         srcs/execution/tools/looking_for_path.c
         srcs/execution/tools/manage_pipe.c
         srcs/execution/tools/new_jobs.c
+        srcs/execution/tools/potential_option.c
         srcs/execution/tools/tools_heredoc.c
         srcs/execution/check_if_builtins.c
         srcs/execution/executing_node.c
@@ -346,11 +348,11 @@ set(SOURCE_FILES
         test/src/string/test_string_escape.c
         test/src/tokenizer/tokenizer.c
         test/src/ui/test_ui.c
-        test/src/var/test_var.c srcs/execution/tools/potential_option.c srcs/execution/tools/check_path.c)
+        test/src/var/test_var.c)
 
 include_directories(incs)
-include_directories(libs/libft/incs)
+include_directories(libs/libft/srcs)
 include_directories(libs/logger/incs)
 include_directories(libs/printf/incs)
 
-add_executable(42sh_save01 ${SOURCE_FILES})
+add_executable(42sh_final ${SOURCE_FILES})
