@@ -10,23 +10,23 @@ static int			check_this_one(char *part, char *path)
 	struct stat		sts;
 
 	lstat(part, &sts);
-	if (access(part, F_OK) == -1)
-		return (error_msg(S42H, NO_DIRECTORY, path));
 	if (S_ISDIR(sts.st_mode) || S_ISLNK(sts.st_mode))
 		return (error_msg(S42H, IS_DIR, path));
+	if (access(part, F_OK) == 0)
+		return (error_msg(S42H, NO_DIRECTORY, path));
 	if (access(part, X_OK) == -1)
 		return (error_msg(S42H, NO_RIGHT, path));
 	return (0);
 }
 
-int					check_path(char *path)
+void					check_path(char *path)
 {
 	char			**table;
 	int				index;
 	char			*temp;
 
-	if ((table = ft_strsplit(path, '/')))
-		return (check_this_one(path, path) ? -1 : 1);
+	if ((table = ft_strsplit(path, '/')) == NULL)
+		exit(check_this_one(path, path) ? 0 : 1);
 	index = 0;
 	temp = NULL;
 	while (table[index])
@@ -40,10 +40,10 @@ int					check_path(char *path)
 		{
 			ft_strdel(&temp);
 			ft_memdel_tab(&table);
-			return (-1);
+			exit(var_return(1));
 		}
 		index++;
 	}
 	ft_memdel_tab(&table);
-	exit(1);
+	exit(var_return(1));
 }

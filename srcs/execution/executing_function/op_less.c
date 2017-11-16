@@ -8,7 +8,8 @@ static void			jobs_op_less(t_node *node)
 {
 	int		fildes;
 
-	fildes = open(node->right->content->command[0], O_RDONLY);
+	if ((fildes = open(node->right->content->command[0], O_RDONLY)) == -1)
+		check_path(node->right->content->command[0]);
 	dup2(fildes, STDIN_FILENO);
 	close(fildes);
 }

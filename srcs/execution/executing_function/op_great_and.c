@@ -26,10 +26,8 @@ void		jobs_op_great_and(t_node *node)
 		fildes = ft_atoi(node->right->content->command[0]);
 	else
 	{
-		if (check_path(node->right->content->command[0]) != -1)
-			fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
-		else
-			exit(var_return(1));
+		if ((fildes = open(node->right->content->command[0], OPTION_GREAT, 0644)) == -1)
+			check_path(node->right->content->command[0]);
 	}
 	log_error("%d", fildes);
 	fildes = check_fd(fildes);

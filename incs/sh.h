@@ -139,7 +139,7 @@ int							start_from_less(char **command, char ***env);
 **				BUILT IN TOOLS
 */
 
-int							check_path(char *path);
+void						check_path(char *path);
 int							check_directory(char *path);
 void						collect_path(char **binary);
 int							looking_for_path(char **binary);
