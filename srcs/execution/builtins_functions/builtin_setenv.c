@@ -12,18 +12,30 @@
 
 #include <sh.h>
 
+static int		special_getenv(char *string)
+{
+	char		*name;
+	int			index;
+	int			ret;
+
+	index = 0;
+	while (string[index] && string[index] != '=')
+		index++;
+	name = (char *)ft_memalloc(sizeof(char) * (index + 1));
+	ft_strncpy(name, string, index);
+	ret = (my_getenv(name)) ? 1 : 0;
+	remove_environment(name);
+	ft_strdel(&name);
+	return (ret);
+}
+
 uint8_t			builtin_setenv(t_node *node, int info __attribute__((unused)))
 {
 	if (ft_strchr(node->content->command[1], '='))
 	{
 		if (node->content->command[1][0] != '=')
 		{
-			if (my_getenv(node->content->command[1]))
-			{
-				remove_environment(node->content->command[1]);
-				add_environment(node->content->command[1]);
-			}
-			else
+			if (special_getenv(node->content->command[1]))
 				add_environment(node->content->command[1]);
 			return (var_return(0));
 		}
