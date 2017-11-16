@@ -37,7 +37,6 @@
 # include <time.h>
 # include <sys/stat.h>
 
-
 /*
 **				FUNCTION CORES
 */
