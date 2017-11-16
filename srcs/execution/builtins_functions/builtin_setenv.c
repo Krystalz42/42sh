@@ -35,8 +35,8 @@ uint8_t			builtin_setenv(t_node *node, int info __attribute__((unused)))
 	{
 		if (node->content->command[1][0] != '=')
 		{
-			if (special_getenv(node->content->command[1]))
-				add_environment(node->content->command[1]);
+			special_getenv(node->content->command[1]);
+			add_environment(node->content->command[1]);
 			return (var_return(0));
 		}
 		else
