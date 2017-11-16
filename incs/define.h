@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/15 19:58:20 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/16 15:37:27 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,7 +172,7 @@ table.\n"
 list.\n"
 # define HISTORY_L				"-c                      : Clear the history \
 list.\n"
-# define HISTORY_D				"-d offset               : Delete the history\
+# define HISTORY_D				"-d offset               : Delete the history \
 entry at \
 position offset.\n"
 # define HISTORY_R				"-r [pathname]           : Read the history \
