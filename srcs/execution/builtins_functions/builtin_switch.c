@@ -25,7 +25,8 @@ uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
 {
 	if (index != -1 && jobs[index].process)
 	{
-		log_warn("Will Foreground [%d]", jobs[index].process->pgid);
+		log_warn("Will Foreground [%d] [%d]", jobs[index].process->pgid, index);
+
 		reset_signal();
 		modify_foreground(jobs[index].process, true);
 		set_fildes(jobs[index].process->pgid);
@@ -48,6 +49,7 @@ uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
 
 uint8_t		bg_switch_process(t_jobs *jobs, int index, char *error, char *args)
 {
+	log_warn("Will Background [%d] [%d]", jobs[index].process->pgid, index);
 	if (index != -1 && jobs[index].process)
 	{
 		first_process(jobs + index);
@@ -73,10 +75,10 @@ uint8_t		builtin_foreground(t_node *node, int info)
 		id = (ft_atoi(node->content->command[1] + 1) - 1);
 		return (fg_switch_process(jobs, id, NO_JOB, node->content->command[1] + 1));
 	}
-	else if (node->content->command[1] == NULL && (id = MAX_CHILD - 1))
+	else if (node->content->command[1] == NULL && (id = MAX_CHILD))
 	{
-		while (id >= 0)
-			if (jobs[id].process && jobs[id--].process->foreground == false)
+		while (--id >= 0)
+			if (jobs[id].process && jobs[id].process->foreground == false)
 				break ;
 		return (fg_switch_process(jobs, id, NO_CUR_JOB, NULL));
 	}
@@ -96,10 +98,10 @@ uint8_t		builtin_background(t_node *node, int info)
 		id = (ft_atoi(node->content->command[1] + 1) - 1);
 		return (var_return(bg_switch_process(jobs, id, NO_JOB, node->content->command[1] + 1)));
 	}
-	else if (node->content->command[1] == NULL && (id = MAX_CHILD - 1))
+	else if (node->content->command[1] == NULL && (id = MAX_CHILD))
 	{
-		while (id >= 0)
-			if (jobs[id].process && jobs[id--].process->running == false)
+		while (--id >= 0)
+			if (jobs[id].process && jobs[id].process->running == false)
 				break ;
 		return (var_return(bg_switch_process(jobs, id, NO_CUR_JOB, NULL)));
 	}

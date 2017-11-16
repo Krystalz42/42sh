@@ -41,7 +41,7 @@ int					terminate_process(t_process *process)
 			return (0);
 		process = process->next;
 	}
-//	log_trace("Return terminated_status %d", 1);
+	log_trace("Return terminated_status %d", 1);
 	return (1);
 }
 
