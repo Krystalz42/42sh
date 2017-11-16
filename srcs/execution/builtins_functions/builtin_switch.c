@@ -26,7 +26,6 @@ uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
 	if (index >= 0 && jobs[index].process)
 	{
 		log_warn("Will Foreground [%d] [%d]", jobs[index].process->pgid, index);
-
 		reset_signal();
 		modify_foreground(jobs[index].process, true);
 		set_fildes(jobs[index].process->pgid);
@@ -49,9 +48,9 @@ uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
 
 uint8_t		bg_switch_process(t_jobs *jobs, int index, char *error, char *args)
 {
-	log_warn("Will Background [%d] [%d]", jobs[index].process->pgid, index);
 	if (index >= 0 && jobs[index].process)
 	{
+		log_warn("Will Background [%d] [%d]", jobs[index].process->pgid, index);
 		first_process(jobs + index);
 		modify_runing(jobs[index].process, true);
 		modify_foreground(jobs[index].process, false);
