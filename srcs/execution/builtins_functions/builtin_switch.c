@@ -23,7 +23,7 @@ uint8_t		error_msg(char *from, char *error, char *args)
 
 uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
 {
-	if (index != -1 && jobs[index].process)
+	if (index >= 0 && jobs[index].process)
 	{
 		log_warn("Will Foreground [%d] [%d]", jobs[index].process->pgid, index);
 
@@ -50,7 +50,7 @@ uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
 uint8_t		bg_switch_process(t_jobs *jobs, int index, char *error, char *args)
 {
 	log_warn("Will Background [%d] [%d]", jobs[index].process->pgid, index);
-	if (index != -1 && jobs[index].process)
+	if (index >= 0 && jobs[index].process)
 	{
 		first_process(jobs + index);
 		modify_runing(jobs[index].process, true);
@@ -73,6 +73,7 @@ uint8_t		builtin_foreground(t_node *node, int info)
 	if (node->content->command[1] && node->content->command[1][0] == '%')
 	{
 		id = (ft_atoi(node->content->command[1] + 1) - 1);
+		log_error("%d", id);
 		return (fg_switch_process(jobs, id, NO_JOB, node->content->command[1] + 1));
 	}
 	else if (node->content->command[1] == NULL && (id = MAX_CHILD))
