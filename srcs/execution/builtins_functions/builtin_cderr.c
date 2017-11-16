@@ -13,16 +13,21 @@
 #include <sh.h>
 #include <sys/stat.h>
 
-static int			check_this_one(char *part, char *path, char *from)
+static int			check_this_one(char *part, char *path)
 {
+	struct stat		sts;
+
 	if (access(part, F_OK) == -1)
-		return (error_msg(from, NO_DIRECTORY, path));
+		return (error_msg(UCD, NO_DIRECTORY, path));
+	lstat(part, &sts);
+	if (!S_ISDIR(sts.st_mode) && !S_ISLNK(sts.st_mode))
+		return (error_msg(UCD, IS_NOTDIR, path));
 	if (access(part, X_OK) == -1)
-		return (error_msg(from, NO_RIGHT, path));
+		return (error_msg(UCD, NO_RIGHT, path));
 	return (0);
 }
 
-int					check_directory(char *path, char *from)
+int					check_directory(char *path)
 {
 	char			**pieces;
 	char			*part;
@@ -40,7 +45,7 @@ int					check_directory(char *path, char *from)
 			part = ft_strdup(pieces[i]);
 		else
 			part = ft_strjoin(part, pieces[i]);
-		if (check_this_one(part, path, from) == 1)
+		if (check_this_one(part, path) == 1)
 			break ;
 		i++;
 	}
