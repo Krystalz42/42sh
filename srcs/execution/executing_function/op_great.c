@@ -8,7 +8,7 @@ void		jobs_op_great(t_node *node)
 {
 	int			fildes;
 
-	if (check_path(node->right->content->command[0]) > 0)
+	if (check_path(node->right->content->command[0]) != -1)
 	{
 		fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
 		if (node->content->command[0][0] == '&')
@@ -26,6 +26,8 @@ void		jobs_op_great(t_node *node)
 		}
 		close(fildes);
 	}
+	else
+		exit(var_return(1));
 }
 
 uint8_t					op_great(t_node *node, t_jobs *jobs, int info)

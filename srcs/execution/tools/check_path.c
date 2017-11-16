@@ -6,6 +6,7 @@
 
 static int			check_this_one(char *part, char *path)
 {
+
 	if (access(part, X_OK) == -1)
 		return (error_msg(S42H, NO_RIGHT, path));
 	return (0);
@@ -18,6 +19,8 @@ int					check_path(char *path)
 	unsigned int	i;
 
 	i = 0;
+	if (access(path, F_OK) == -1)
+		return (0);
 	if ((pieces = ft_split(path, "/")) == NULL)
 	{
 		error_msg(UCD, NO_ARG, NULL);
