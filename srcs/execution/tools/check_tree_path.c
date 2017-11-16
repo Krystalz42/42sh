@@ -26,6 +26,7 @@ void					collect_path(char **binary)
 	index = 0;
 	while (path[index])
 	{
+		log_debug("%s", path[index]);
 		temp = create_trial_path(path[index], *binary);
 		if (access(temp, X_OK) == 0)
 		{

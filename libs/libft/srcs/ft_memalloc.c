@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <libft.h>
 
 void	*ft_memalloc(size_t len)
 {
@@ -18,7 +18,10 @@ void	*ft_memalloc(size_t len)
 
 	mem = malloc(len);
 	if (mem == NULL)
-		return (NULL);
+	{
+		ft_putstr("Out of memory\n");
+		exit(1);
+	}
 	while (len-- != 0)
 		*(mem + len) = 0;
 	return ((void *)mem);

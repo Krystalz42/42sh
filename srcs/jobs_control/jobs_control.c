@@ -53,8 +53,9 @@ void				handler_sigchld(int sig)
 		if (jobs[index].process && jobs[index].process->foreground == false)
 			if (wait_group(jobs[index].process, WNOHANG))
 			{
-				if (terminate_process(jobs->process))
+				if (terminate_process(jobs[index].process))
 				{
+					update_jobs(jobs[index].process);
 					print_status(jobs[index].process, jobs[index].index);
 					reset_process(jobs);
 				}

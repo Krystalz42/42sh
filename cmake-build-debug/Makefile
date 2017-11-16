@@ -5550,33 +5550,6 @@ srcs/jobs_control/status_signals.c.s:
 	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/jobs_control/status_signals.c.s
 .PHONY : srcs/jobs_control/status_signals.c.s
 
-srcs/log_info_bug_dnt_care_of_norminette_bitch.o: srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o
-
-.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.o
-
-# target to build an object file
-srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o:
-	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o
-.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.c.o
-
-srcs/log_info_bug_dnt_care_of_norminette_bitch.i: srcs/log_info_bug_dnt_care_of_norminette_bitch.c.i
-
-.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.i
-
-# target to preprocess a source file
-srcs/log_info_bug_dnt_care_of_norminette_bitch.c.i:
-	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.i
-.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.c.i
-
-srcs/log_info_bug_dnt_care_of_norminette_bitch.s: srcs/log_info_bug_dnt_care_of_norminette_bitch.c.s
-
-.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.s
-
-# target to generate assembly for a file
-srcs/log_info_bug_dnt_care_of_norminette_bitch.c.s:
-	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/log_info_bug_dnt_care_of_norminette_bitch.c.s
-.PHONY : srcs/log_info_bug_dnt_care_of_norminette_bitch.c.s
-
 srcs/memdel_struct/memdel_completion.o: srcs/memdel_struct/memdel_completion.c.o
 
 .PHONY : srcs/memdel_struct/memdel_completion.o
@@ -9807,9 +9780,6 @@ help:
 	@echo "... srcs/jobs_control/status_signals.o"
 	@echo "... srcs/jobs_control/status_signals.i"
 	@echo "... srcs/jobs_control/status_signals.s"
-	@echo "... srcs/log_info_bug_dnt_care_of_norminette_bitch.o"
-	@echo "... srcs/log_info_bug_dnt_care_of_norminette_bitch.i"
-	@echo "... srcs/log_info_bug_dnt_care_of_norminette_bitch.s"
 	@echo "... srcs/memdel_struct/memdel_completion.o"
 	@echo "... srcs/memdel_struct/memdel_completion.i"
 	@echo "... srcs/memdel_struct/memdel_completion.s"
