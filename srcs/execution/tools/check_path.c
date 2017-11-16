@@ -26,7 +26,7 @@ int					check_path(char *path)
 	char			*temp;
 
 	if ((table = ft_strsplit(path, '/')))
-			return (check_this_one(path, path) ? -1 : 1);
+		return (check_this_one(path, path) ? -1 : 1);
 	index = 0;
 	temp = NULL;
 	while (table[index])
@@ -45,5 +45,5 @@ int					check_path(char *path)
 		index++;
 	}
 	ft_memdel_tab(&table);
-	return (1);
+	exit(1);
 }

@@ -1,0 +1,11 @@
+42sh
+CMakeLists.txt
+Makefile
+author
+cmake-build-debug
+fi
+incs
+libs
+log
+srcs
+test
