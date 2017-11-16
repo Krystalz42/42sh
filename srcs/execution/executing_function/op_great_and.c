@@ -4,29 +4,33 @@
 
 #include <sh.h>
 
+static int	check_fd(int fildes)
+{
+	if (fildes == init_fd())
+		fildes = STDOUT_FILENO;
+	if (fcntl(F_GETFD, fildes) == -1)
+	{
+		error_msg(S42H, BAD_FD, NULL);
+		exit(1);
+	}
+	return (fildes);
+}
 
 void		jobs_op_great_and(t_node *node)
 {
 	int			fildes;
 
-	log_error("%s",node->right->content->command[0]);
 	if (node->right->content->command[0][0] == '-')
 		fildes = open(PATH_ERROR, O_WRONLY);
 	else if (ft_strisdigit(node->right->content->command[0]))
 		fildes = ft_atoi(node->right->content->command[0]);
 	else
 		fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
-	log_error("%d", fildes);
+	fildes = check_fd(fildes);
 	if (ft_isdigit(node->content->command[0][0]))
-	{
-		log_warn("From %d to %d", ft_atoi(node->content->command[0]),fildes );
 		dup2(fildes, ft_atoi(node->content->command[0]));
-	}
 	else
-	{
-		log_warn("From %d to %d", fildes, 1);
 		dup2(fildes, STDOUT_FILENO);
-	}
 	close(fildes);
 }
 
