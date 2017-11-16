@@ -268,7 +268,7 @@ directory.\n"
 
 # define HISTSIZE				500
 # define HELP					"--help"
-# define MAX_CHILD				6
+# define MAX_CHILD				1024
 # define PATH_HISTORY			"/.42sh_history"
 # define PATH_HASH				"/.42sh_hash"
 
