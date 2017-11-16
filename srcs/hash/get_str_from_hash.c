@@ -16,7 +16,7 @@ char		*get_str_from_hash(void)
 {
 	char	*home;
 
-	if (!(home = my_getenv("HOME=")))
+	if (!(home = my_getenv("HOME")))
 		return (NULL);
 	return (ft_strjoin(home, PATH_HASH));
 }

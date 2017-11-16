@@ -21,7 +21,7 @@ void					collect_path(char **binary)
 	int				index;
 	char			*temp;
 
-	if (!ft_strlen(*binary) || !(path = ft_strsplit(my_getenv("PATH="), ':')))
+	if (!ft_strlen(*binary) || !(path = ft_strsplit(my_getenv("PATH"), ':')))
 		return ;
 	index = 0;
 	while (path[index])

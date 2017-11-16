@@ -53,7 +53,7 @@ static bool		expansion(char **str, size_t index)
 	char		*home;
 	char		*new;
 
-	home = my_getenv("HOME=");
+	home = my_getenv("HOME");
 	if (home && ft_strlen(home))
 	{
 		new = (char *)ft_memalloc(sizeof(char) * (ft_strlen(*str) + ft_strlen(home) + 1));

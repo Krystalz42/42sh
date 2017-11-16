@@ -28,9 +28,9 @@ int		init_term(void)
 	int						ret;
 
 	ret = 0;
-	if (!my_getenv("TERM="))
+	if (!my_getenv("TERM"))
 		add_environment("TERM=vt100");
-	if ((tgetent(NULL, my_getenv("TERM="))) == ERR)
+	if ((tgetent(NULL, my_getenv("TERM"))) == ERR)
 		ret += 1;
 	if (!(tcgetattr(STDIN_FILENO, &old_term)))
 		keep_term_struct(SAVE_OLD, &old_term);

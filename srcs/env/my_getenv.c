@@ -24,7 +24,12 @@ size_t				compare_environment(const char *s1, const char *s2)
 	while (s1 && s2 && s1[length] && s2[length] && s1[length] == s2[length])
 	{
 		if (s2[length + 1] == '=')
-			return (length);
+		{
+			if (s1[length + 1] == '\0')
+				return (1);
+			else
+				return (0);
+		}
 		length++;
 	}
 	return (0);

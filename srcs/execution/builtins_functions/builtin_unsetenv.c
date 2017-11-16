@@ -15,6 +15,7 @@
 
 uint8_t				builtin_unsetenv(t_node *node, int info __attribute__((unused)))
 {
+	log_error("%s",my_getenv(node->content->command[1]));
 	if (my_getenv(node->content->command[1]))
 	{
 		remove_environment(node->content->command[1]);
