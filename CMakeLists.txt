@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(42sh_save)
+project(42sh_save01)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -149,6 +149,7 @@ set(SOURCE_FILES
         srcs/error_function/usage_builtins2.c
         srcs/execution/builtins_functions/basic_help.c
         srcs/execution/builtins_functions/builtin_cd.c
+        srcs/execution/builtins_functions/builtin_cderr.c
         srcs/execution/builtins_functions/builtin_data.c
         srcs/execution/builtins_functions/builtin_echo.c
         srcs/execution/builtins_functions/builtin_env.c
@@ -185,6 +186,7 @@ set(SOURCE_FILES
         srcs/execution/tools/looking_for_path.c
         srcs/execution/tools/manage_pipe.c
         srcs/execution/tools/new_jobs.c
+        srcs/execution/tools/tools_heredoc.c
         srcs/execution/check_if_builtins.c
         srcs/execution/executing_node.c
         srcs/execution/my_fork.c
@@ -304,11 +306,52 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c
-        srcs/log_info_bug_dnt_care_of_norminette_bitch.c srcs/execution/tools/tools_heredoc.c)
+        srcs/log_info_bug_dnt_care_of_norminette_bitch.c
+        test/by_hand/fdOpen.c
+        test/inc/header.h
+        test/src/autocompletion/test_complete_binary.c
+        test/src/autocompletion/test_complete_builtin.c
+        test/src/builtins/test_builtin_history.c
+        test/src/builtins/test_builtins.c
+        test/src/expansion/quote_removal.c
+        test/src/history/test_history.c
+        test/src/lexer/test_lexer_reserved_words.c
+        test/src/lexer/test_lexer_rules1.c
+        test/src/lexer/test_lexer_rules2_3.c
+        test/src/lexer/test_lexer_rules4.c
+        test/src/lexer/test_lexer_rules7.c
+        test/src/lexer/test_lexer_rules8.c
+        test/src/lexer/test_lexer_rules9.c
+        test/src/lexer/test_lexer_utils.c
+        test/src/lexer/test_line_continuation.c
+        test/src/lexer/tokenizer.c
+        test/src/misc/is_valid_name.c
+        test/src/misc/test_path_scanning.c
+        test/src/parser/test_parser_and_or.c
+        test/src/parser/test_parser_ast_compress.c
+        test/src/parser/test_parser_cmd_prefix.c
+        test/src/parser/test_parser_cmd_suffix.c
+        test/src/parser/test_parser_command.c
+        test/src/parser/test_parser_io_file.c
+        test/src/parser/test_parser_io_here.c
+        test/src/parser/test_parser_io_redirect.c
+        test/src/parser/test_parser_linebreak.c
+        test/src/parser/test_parser_newline_list.c
+        test/src/parser/test_parser_pipe_sequence.c
+        test/src/parser/test_parser_program.c
+        test/src/parser/test_parser_redirect_list.c
+        test/src/parser/test_parser_separator.c
+        test/src/parser/test_parser_separator_op.c
+        test/src/parser/test_parser_simple_command.c
+        test/src/parser/test_parser_utils.c
+        test/src/string/test_string_escape.c
+        test/src/tokenizer/tokenizer.c
+        test/src/ui/test_ui.c
+        test/src/var/test_var.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)
 include_directories(libs/logger/incs)
 include_directories(libs/printf/incs)
 
-add_executable(42sh_save ${SOURCE_FILES})
+add_executable(42sh_save01 ${SOURCE_FILES})

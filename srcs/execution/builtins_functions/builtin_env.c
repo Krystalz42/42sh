@@ -26,6 +26,7 @@ uint8_t			fct(t_node *node, int info)
 	{
 		node->content->env_option = 1;
 		ft_putstrtab(node->content->env, 10);
+		var_return(0);
 	}
 	return (1);
 }
