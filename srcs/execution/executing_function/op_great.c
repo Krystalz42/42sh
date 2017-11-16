@@ -26,6 +26,8 @@ void		jobs_op_great(t_node *node)
 		}
 		close(fildes);
 	}
+	else
+		exit(1);
 
 }
 

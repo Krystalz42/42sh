@@ -8,21 +8,21 @@ void		jobs_op_dgreat(t_node *node)
 {
 	int			fildes;
 
-	fildes = open(node->right->content->command[0], OPTION_DGREAT, 0644);
-	if (node->content->command[0][0] == '&')
+	if (check_path(node->right->content->command[0]) != -1)
 	{
-		dup2(fildes, STDOUT_FILENO);
-		dup2(fildes, STDERR_FILENO);
-	}
-	else if (ft_isdigit(node->content->command[0][0]))
-	{
-		dup2(fildes, ft_atoi(node->content->command[0]));
+		fildes = open(node->right->content->command[0], OPTION_DGREAT, 0644);
+		if (ft_isdigit(node->content->command[0][0]))
+		{
+			dup2(fildes, ft_atoi(node->content->command[0]));
+		}
+		else
+		{
+			dup2(fildes, STDOUT_FILENO);
+		}
+		close(fildes);
 	}
 	else
-	{
-		dup2(fildes, STDOUT_FILENO);
-	}
-	close(fildes);
+		exit(1);
 }
 
 uint8_t					op_dgreat(t_node *node, t_jobs *jobs, int info)
