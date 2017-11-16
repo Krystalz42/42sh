@@ -44,14 +44,12 @@ int					get_option(char **cmd, int option)
 	int			table;
 
 	option = 0;
-	table = 1;
-	while (cmd[table])
-	{
-		index = 1;
-		while (cmd[table][index])
+	table = 0;
+	while (cmd[++table] && !(index = 0))
+		while (cmd[table][++index])
 		{
 			if (potential_option("jebhksugfc", cmd[index][table]) == 0)
-				return (error_msg(HISTORY, BAD_OPTION, cmd[index] + table) - 2);
+				return (error_msg(HISTORY, BAD_OPTION, cmd[table] + index) - 2);
 			option += cmd[table][index] == 'j' && !(option & 2) ? 2 : 0;
 			option += cmd[table][index] == 'e' && !(option & 4) ? 4 : 0;
 			option += cmd[table][index] == 'b' && !(option & 8) ? 8 : 0;
@@ -64,9 +62,6 @@ int					get_option(char **cmd, int option)
 			option += cmd[table][index] == 'c' && !(option & 1024) ? 1024 : 0;
 			index++;
 		}
-		table++;
-	}
-	log_error("%d", option);
 	return (option);
 }
 

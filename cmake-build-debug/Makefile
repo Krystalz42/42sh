@@ -4632,6 +4632,33 @@ srcs/execution/my_fork.c.s:
 	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/execution/my_fork.c.s
 .PHONY : srcs/execution/my_fork.c.s
 
+srcs/execution/tools/check_path.o: srcs/execution/tools/check_path.c.o
+
+.PHONY : srcs/execution/tools/check_path.o
+
+# target to build an object file
+srcs/execution/tools/check_path.c.o:
+	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/execution/tools/check_path.c.o
+.PHONY : srcs/execution/tools/check_path.c.o
+
+srcs/execution/tools/check_path.i: srcs/execution/tools/check_path.c.i
+
+.PHONY : srcs/execution/tools/check_path.i
+
+# target to preprocess a source file
+srcs/execution/tools/check_path.c.i:
+	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/execution/tools/check_path.c.i
+.PHONY : srcs/execution/tools/check_path.c.i
+
+srcs/execution/tools/check_path.s: srcs/execution/tools/check_path.c.s
+
+.PHONY : srcs/execution/tools/check_path.s
+
+# target to generate assembly for a file
+srcs/execution/tools/check_path.c.s:
+	$(MAKE) -f CMakeFiles/42sh_save01.dir/build.make CMakeFiles/42sh_save01.dir/srcs/execution/tools/check_path.c.s
+.PHONY : srcs/execution/tools/check_path.c.s
+
 srcs/execution/tools/check_tree_path.o: srcs/execution/tools/check_tree_path.c.o
 
 .PHONY : srcs/execution/tools/check_tree_path.o
@@ -9678,6 +9705,9 @@ help:
 	@echo "... srcs/execution/my_fork.o"
 	@echo "... srcs/execution/my_fork.i"
 	@echo "... srcs/execution/my_fork.s"
+	@echo "... srcs/execution/tools/check_path.o"
+	@echo "... srcs/execution/tools/check_path.i"
+	@echo "... srcs/execution/tools/check_path.s"
 	@echo "... srcs/execution/tools/check_tree_path.o"
 	@echo "... srcs/execution/tools/check_tree_path.i"
 	@echo "... srcs/execution/tools/check_tree_path.s"

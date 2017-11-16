@@ -268,8 +268,9 @@ directory.\n"
 # define NO_DIRECTORY			"no such file or directory: "
 # define NO_RIGHT				"permission denied: "
 # define IS_NOTDIR				"not a directory: "
+# define NO_ARG					"not argument"
 
-# define HISTSIZE				500
+# define HISTSIZE				8096
 # define HELP					"--help"
 # define MAX_CHILD				1024
 # define PATH_HISTORY			"/.42sh_history"

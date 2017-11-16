@@ -82,10 +82,14 @@ t_cmd					*read_stdin(unsigned char flags)
 	int							index;
 	static unsigned long		buf;
 
+	log_error("salut %d", buf);
 	initialize_fct(&read_std, flags);
+	log_error("%d", buf);
 	inline_print_(&read_std, &buf);
+	log_error("%d", buf);
 	while (!read_std->finish && read(STDIN_FILENO, &buf, sizeof(unsigned long)))
 	{
+		log_error("%d", buf);
 		index = -1;
 		while (g_tab_are_key[++index].key != 89448948)
 			if (g_tab_are_key[index].key == buf)

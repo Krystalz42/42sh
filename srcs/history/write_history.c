@@ -26,13 +26,11 @@ uint8_t			b_write_history_in_file(char *path)
 {
 	t_hist	*hist;
 	int		fd;
-	int		i;
 
 	if (path)
 	{
 		fd = open(path, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 		hist = set_history_to_last();
-		i = -1;
 		while (hist)
 		{
 			hist->hist->cmd = first_cmd(hist->hist->cmd, 1);

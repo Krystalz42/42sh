@@ -145,10 +145,10 @@ int							start_from_less(char **command, char ***env);
 **				BUILT IN TOOLS
 */
 
+int							check_directory(char *path, char *from);
 void						collect_path(char **binary);
 int							looking_for_path(char **binary);
 t_bdata						*b_data(void);
-int							cd_check_error(char *path);
 signed int					search_in_tab(char **data, char *var);
 char						**refresh_varenv(char **env);
 char						*ft_path(char *var, unsigned int begin);

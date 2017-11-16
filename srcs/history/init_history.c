@@ -18,7 +18,7 @@ int					convert_to_hist(char *buff)
 	static int			cmd_len;
 	int					i;
 
-	if (((i = -1) && !buff) || cmd_len == 500)
+	if (((i = -1) && !buff) || cmd_len > MAX_INPUT)
 		return (0);
 	if (!read_std)
 	{
@@ -52,9 +52,11 @@ uint8_t				write_history_in_sh(char *pathname)
 		buff = NULL;
 		while (command < HISTSIZE && my_gnl(fd, &buff))
 		{
+			log_error("Salut je passe ici ! %d", command);
 			command += convert_to_hist(buff);
 			ft_memdel((void **)&buff);
 		}
+		log_error("Salut je passe ici !!!");
 		close(fd);
 	}
 	free(pathname);
