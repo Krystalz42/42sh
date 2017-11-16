@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:58:20 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/15 14:29:22 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/16 18:13:28 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ static void		populate(char *new, char *str, char *variable, size_t length)
 
 static bool		expansion(char **str, size_t index)
 {
-	char		*temp;
 	char		*memory;
 	char		*variable;
 	char		*new;
@@ -71,13 +70,11 @@ static bool		expansion(char **str, size_t index)
 	memory = get_variable(*str + index);
 	if (memory)
 	{
-		temp = ft_strjoin(memory, "=");
-		ft_memdel((void **)&memory);
-		variable = my_getenv(temp);
-		ft_memdel((void **)&temp);
+		variable = my_getenv(memory);
 		new = (char *)ft_memalloc(sizeof(char) * (ft_strlen(*str) + ft_strlen(variable) + 1));
 		populate(new, *str, variable, index);
 		ft_memdel((void **)str);
+		ft_memdel((void **)&memory);
 		*str = new;
 		return (true);
 	}
