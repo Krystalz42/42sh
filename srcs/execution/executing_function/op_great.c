@@ -8,7 +8,7 @@ void		jobs_op_great(t_node *node)
 {
 	int			fildes;
 
-	if (check_directory(node->right->content->command[0], S42H) > 0)
+	if (check_path(node->right->content->command[0]) > 0)
 	{
 		fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
 		if (node->content->command[0][0] == '&')

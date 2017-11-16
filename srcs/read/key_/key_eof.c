@@ -19,7 +19,10 @@ int			key_eof(t_read **read_std, unsigned long buff)
 		if (get_len_prompt(-42) == -2)
 			signal_reception(1);
 		else
+		{
+			set_termios(SET_OLD_TERM);
 			exit_();
+		}
 	}
 	else if ((*read_std)->cmd->c)
 	{
