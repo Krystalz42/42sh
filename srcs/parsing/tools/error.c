@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:07:01 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/09 19:52:37 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/16 18:54:22 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static const t_error	g_err[] =
 
 void			print_error(char *str, char *err)
 {
-	ft_putstr("21sh: ");
+	ft_putstr("42sh: ");
 	ft_putstr(err);
 	ft_putstr(str);
 	ft_putendl("\'");
