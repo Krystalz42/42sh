@@ -18,6 +18,7 @@ static int 				my_getbranch(void)
 	int			status;
 	int			fildes[2];
 
+	signal(SIGINT, SIG_IGN);
 	if ((father = fork()) == -1)
 		return (-1);
 	else if (father > 0)
@@ -31,7 +32,6 @@ static int 				my_getbranch(void)
 	}
 	else
 	{
-		set_termios(SET_OUR_TERM);
 		fildes[1] = open("/dev/null", O_WRONLY);
 		dup2(fildes[1], STDERR_FILENO);
 		fildes[0] = open("/tmp/.gitbranch", O_CREAT | O_WRONLY, 0644);

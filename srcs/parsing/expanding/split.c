@@ -30,9 +30,9 @@ char			*populating(char *new, char *str, size_t length)
 		if (!(status & BACKSLASH) && str[i] == '\\' && !(status & SINGLE_QUOTE))
 			status |= BACKSLASH;
 		else if (!(status & BACKSLASH) && status & DEFAULT && isquote(str[i]))
-			status = status | isquote(str[i]) ^ DEFAULT;
+			status = (status | isquote(str[i])) ^ DEFAULT;
 		else if (!(status & BACKSLASH) && status & isquote(str[i]))
-			status = status ^ isquote(str[i]) | DEFAULT;
+			status = (status ^ isquote(str[i])) | DEFAULT;
 		else
 		{
 			status & BACKSLASH ? (status ^= BACKSLASH) : 0;
