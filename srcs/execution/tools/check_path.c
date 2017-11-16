@@ -3,10 +3,17 @@
 //
 
 #include <sh.h>
+#include <sys/stat.h>
 
 static int			check_this_one(char *part, char *path)
 {
+	struct stat		sts;
 
+	if (access(part, F_OK) == -1)
+		return (error_msg(S42H, NO_DIRECTORY, path));
+	lstat(part, &sts);
+	if (S_ISDIR(sts.st_mode) || S_ISLNK(sts.st_mode))
+		return (error_msg(S42H, IS_DIR, path));
 	if (access(part, X_OK) == -1)
 		return (error_msg(S42H, NO_RIGHT, path));
 	return (0);
@@ -24,7 +31,7 @@ int					check_path(char *path)
 	if ((pieces = ft_split(path, "/")) == NULL)
 	{
 		error_msg(UCD, NO_ARG, NULL);
-		return (0);
+		return (-1);
 	}
 	while (pieces[i])
 	{
@@ -33,7 +40,11 @@ int					check_path(char *path)
 		else
 			part = ft_strjoin(part, pieces[i]);
 		if (check_this_one(part, path) == 1)
-			break ;
+		{
+			free(part);
+			ft_memdel_tab(&pieces);
+			return (-1);
+		}
 		i++;
 	}
 	free(part);

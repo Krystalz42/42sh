@@ -52,11 +52,9 @@ uint8_t				write_history_in_sh(char *pathname)
 		buff = NULL;
 		while (command < HISTSIZE && my_gnl(fd, &buff))
 		{
-			log_error("Salut je passe ici ! %d", command);
 			command += convert_to_hist(buff);
 			ft_memdel((void **)&buff);
 		}
-		log_error("Salut je passe ici !!!");
 		close(fd);
 	}
 	free(pathname);

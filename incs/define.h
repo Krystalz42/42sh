@@ -268,6 +268,7 @@ directory.\n"
 # define NO_DIRECTORY			"no such file or directory: "
 # define NO_RIGHT				"permission denied: "
 # define IS_NOTDIR				"not a directory: "
+# define IS_DIR					"is a directory: "
 # define NO_ARG					"not argument"
 
 # define HISTSIZE				8096

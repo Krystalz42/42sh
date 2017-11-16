@@ -25,7 +25,13 @@ void		jobs_op_great_and(t_node *node)
 	else if (ft_strisdigit(node->right->content->command[0]))
 		fildes = ft_atoi(node->right->content->command[0]);
 	else
-		fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
+	{
+		if (check_path(node->right->content->command[0]) != -1)
+			fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
+		else
+			exit(var_return(1));
+	}
+	log_error("%d", fildes);
 	fildes = check_fd(fildes);
 	if (ft_isdigit(node->content->command[0][0]))
 		dup2(fildes, ft_atoi(node->content->command[0]));

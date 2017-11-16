@@ -26,8 +26,7 @@ void		jobs_op_great(t_node *node)
 		}
 		close(fildes);
 	}
-	else
-		exit(var_return(1));
+
 }
 
 uint8_t					op_great(t_node *node, t_jobs *jobs, int info)

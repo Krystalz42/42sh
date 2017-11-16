@@ -114,7 +114,7 @@ void				init_prompt(void)
 	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? " ✗ " : " √ ");
 	ft_strcpy(prompt + ft_strlen(prompt), "\x1B[0m");
 	my_prompt(prompt);
-	get_len_prompt((int)(ft_strlen(path) + 3));
+	get_len_prompt((int)(ft_strlen(path) + ft_strlen(branch) + 3));
 	free((void *)path);
 	free((void *)color);
 	free((void *)branch);
