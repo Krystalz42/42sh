@@ -245,6 +245,7 @@ directory.\n"
 # define BECHO					"echo : "
 # define UCD					"cd : "
 
+# define LIMIT					"limit process at 1024"
 # define BAD_FD					" Bad file descriptor"
 # define NEED_VALUE				"variable need a name : "
 # define INVALID				"invalid argument : "
