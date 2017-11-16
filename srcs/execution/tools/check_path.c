@@ -9,9 +9,9 @@ static int			check_this_one(char *part, char *path)
 {
 	struct stat		sts;
 
+	lstat(part, &sts);
 	if (access(part, F_OK) == -1)
 		return (error_msg(S42H, NO_DIRECTORY, path));
-	lstat(part, &sts);
 	if (S_ISDIR(sts.st_mode) || S_ISLNK(sts.st_mode))
 		return (error_msg(S42H, IS_DIR, path));
 	if (access(part, X_OK) == -1)
@@ -21,31 +21,29 @@ static int			check_this_one(char *part, char *path)
 
 int					check_path(char *path)
 {
-	char			**pieces;
-	char			*part;
-	unsigned int	i;
+	char			**table;
+	int				index;
+	char			*temp;
 
-	i = 0;
-	if (access(path, F_OK) == -1)
-		return (0);
-	if ((pieces = ft_split(path, "/")) == NULL)
-		return (error_msg(UCD, NO_ARG, NULL) - 2);
-	while (pieces[i])
+	if ((table = ft_strsplit(path, '/')))
+			return (check_this_one(path, path) ? -1 : 1);
+	index = 0;
+	temp = NULL;
+	while (table[index])
 	{
-		if (i == 0)
-			part = ft_strdup(pieces[i]);
+		ft_strdel(&temp);
+		if (index == 0)
+			temp = create_trial_path(table[index], table[index + 1]);
 		else
-			part = ft_strjoin(part, pieces[i]);
-		log_error("%s", part);
-		if (check_this_one(part, path) == 1)
+			temp = create_trial_path(temp, table[index]);
+		if (check_this_one(temp, path) == 1)
 		{
-			free(part);
-			ft_memdel_tab(&pieces);
+			ft_strdel(&temp);
+			ft_memdel_tab(&table);
 			return (-1);
 		}
-		i++;
+		index++;
 	}
-	free(part);
-	ft_memdel_tab(&pieces);
+	ft_memdel_tab(&table);
 	return (1);
 }

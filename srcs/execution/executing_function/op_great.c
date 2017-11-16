@@ -11,6 +11,7 @@ void		jobs_op_great(t_node *node)
 	if (check_path(node->right->content->command[0]) != -1)
 	{
 		fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
+		log_error("Files descripton in OP_GREAT %d", fildes);
 		if (node->content->command[0][0] == '&')
 		{
 			dup2(fildes, STDOUT_FILENO);
