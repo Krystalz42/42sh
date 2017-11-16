@@ -51,11 +51,11 @@ static int				check_option(char **command)
 		return (var_return(usage_jobs()) - 1);
 	while (command[table] && command[table][0] == '-')
 	{
-		index = 0;
+		index = 1;
 		while (command[table][index])
 		{
 			if (potential_option("prsl", command[index][table]) == 0)
-				return (error_msg(HISTORY, BAD_OPTION, command[index] + table));
+				return (error_msg(JOBS, BAD_OPTION, command[table] + index));
 			option += (command[table][index] == 'p' && !(option & 1)) ? 1 : 0;
 			option += (command[table][index] == 'r' && !(option & 2)) ? 2 : 0;
 			option += (command[table][index] == 's' && !(option & 4)) ? 4 : 0;
