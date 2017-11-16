@@ -394,6 +394,7 @@ char						*convert_to_str(t_cmd *cmd);
 int							read_pipe(int *fildes);
 int							close_pipe(int *fildes);
 int							write_pipe(int *fildes);
+char						*create_trial_path(char *path, char *binary);
 
 /*
 **				PRINT PROCESS

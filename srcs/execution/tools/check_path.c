@@ -29,16 +29,14 @@ int					check_path(char *path)
 	if (access(path, F_OK) == -1)
 		return (0);
 	if ((pieces = ft_split(path, "/")) == NULL)
-	{
-		error_msg(UCD, NO_ARG, NULL);
-		return (-1);
-	}
+		return (error_msg(UCD, NO_ARG, NULL) - 2);
 	while (pieces[i])
 	{
 		if (i == 0)
 			part = ft_strdup(pieces[i]);
 		else
 			part = ft_strjoin(part, pieces[i]);
+		log_error("%s", part);
 		if (check_this_one(part, path) == 1)
 		{
 			free(part);

@@ -4,7 +4,7 @@
 
 #include <sh.h>
 
-static char 			*create_trial_path(char *path, char *binary)
+char 			*create_trial_path(char *path, char *binary)
 {
 	char		*complete_path;
 
