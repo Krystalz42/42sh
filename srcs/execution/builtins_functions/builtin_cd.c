@@ -87,6 +87,6 @@ uint8_t				builtin_cd(t_node *node, int info)
 	if (ret == 0)
 		refresh_varenv(env);
 	else
-		return (check_directory(node->content->command[1], UCD));
+		return (check_directory(node->content->command[1]));
 	return (var_return(ret));
 }
