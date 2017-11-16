@@ -75,17 +75,15 @@ uint8_t		builtin_foreground(t_node *node, int info)
 		id = (ft_atoi(node->content->command[1] + 1) - 1);
 		return (fg_switch_process(jobs, id, NO_JOB, node->content->command[1] + 1));
 	}
-	else
+	else if (node->content->command[1] == NULL && (id = MAX_CHILD - 1))
 	{
-		id = MAX_CHILD - 1;
 		while (id >= 0)
-		{
-			if (jobs[id].process && jobs[id].process->foreground == false)
+			if (jobs[id].process && jobs[id--].process->foreground == false)
 				break ;
-			id--;
-		}
 		return (fg_switch_process(jobs, id, NO_CUR_JOB, NULL));
 	}
+	else
+		return (error_msg(FG, INVALID, node->content->command[1]));
 }
 
 uint8_t		builtin_background(t_node *node, int info)
@@ -100,15 +98,13 @@ uint8_t		builtin_background(t_node *node, int info)
 		id = (ft_atoi(node->content->command[1] + 1) - 1);
 		return (var_return(bg_switch_process(jobs, id, NO_JOB, node->content->command[1] + 1)));
 	}
-	else
+	else if (node->content->command[1] == NULL && (id = MAX_CHILD - 1))
 	{
-		id = MAX_CHILD - 1;
 		while (id >= 0)
-		{
-			if (jobs[id].process && jobs[id].process->running == false)
+			if (jobs[id].process && jobs[id--].process->running == false)
 				break ;
-			id--;
-		}
 		return (var_return(bg_switch_process(jobs, id, NO_CUR_JOB, NULL)));
 	}
+	else
+		return (error_msg(BG, INVALID, node->content->command[1]));
 }
