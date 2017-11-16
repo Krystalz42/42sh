@@ -24,22 +24,18 @@ uint8_t			builtin_setenv(t_node *node, int info __attribute__((unused)))
 				add_environment(node->content->command[1]);
 			}
 			else
-			{
 				add_environment(node->content->command[1]);
-			}
 			return (var_return(0));
 		}
 		else
 		{
 			error_msg(SETENV, NEED_VALUE, node->content->command[1]);
-			usage_setenv();
-			return (var_return(1));
+			return (var_return(usage_setenv() + 1));
 		}
 	}
 	else
 	{
 		error_msg(SETENV, WRONG_FORMAT, node->content->command[1]);
-		usage_setenv();
-		return (var_return(1));
+		return (var_return(usage_setenv() + 1));
 	}
 }
