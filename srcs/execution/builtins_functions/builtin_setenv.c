@@ -24,7 +24,8 @@ static int		special_getenv(char *string)
 	name = (char *)ft_memalloc(sizeof(char) * (index + 1));
 	ft_strncpy(name, string, index);
 	ret = (my_getenv(name)) ? 1 : 0;
-	remove_environment(name);
+	if (my_getenv(name))
+		remove_environment(name);
 	ft_strdel(&name);
 	return (ret);
 }
