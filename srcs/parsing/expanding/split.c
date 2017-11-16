@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 11:58:33 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/15 16:45:47 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:39:57 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,12 @@ char			*populating(char *new, char *str, size_t length)
 		if (!(status & BACKSLASH) && str[i] == '\\' && !(status & SINGLE_QUOTE))
 			status |= BACKSLASH;
 		else if (!(status & BACKSLASH) && status & DEFAULT && isquote(str[i]))
-		{
-			status |= isquote(str[i]);
-			status ^= DEFAULT;
-		}
+			status = status | isquote(str[i]) ^ DEFAULT;
 		else if (!(status & BACKSLASH) && status & isquote(str[i]))
-		{
-			status ^= isquote(str[i]);
-			status |= DEFAULT;
-		}
+			status = status ^ isquote(str[i]) | DEFAULT;
 		else
 		{
-			if (status & BACKSLASH)
-				status ^= BACKSLASH;
+			status & BACKSLASH ? (status ^= BACKSLASH) : 0;
 			new[index++] = str[i];
 		}
 		i++;

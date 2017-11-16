@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   jobs_control.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 19:09:46 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/11 19:09:48 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/16 16:20:05 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ t_jobs				*jobs_table(void)
 	return (jobs);
 }
 
-void			update_jobs(t_process *process)
+void				update_jobs(t_process *process)
 {
 	log_trace("/!\\  [PROCESS LL BE UPDATE] /!\\");
-
 	while (process)
 	{
 		if (process->pid == process->pgid)
@@ -43,7 +42,7 @@ void			update_jobs(t_process *process)
 void				handler_sigchld(int sig)
 {
 	t_jobs		*jobs;
-	int 		index;
+	int			index;
 
 	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
 	jobs = jobs_table();

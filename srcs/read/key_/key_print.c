@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_print.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/12 21:50:30 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 17:39:48 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/16 16:15:46 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,7 @@ int			key_print_(t_read **read_std, unsigned long *buff)
 	unsigned char		c;
 
 	(*read_std)->history_search += (*read_std)->history_search ? 1 : 0;
-	if (!(*read_std)->history_search)
-	add_outstanding(NULL, PRINT_KEY, *buff);
+	!(*read_std)->history_search ? add_outstanding(NULL, PRINT_KEY, *buff) : 0;
 	while (*buff)
 	{
 		c = (unsigned char)(*buff % (UCHAR_MAX + 1));

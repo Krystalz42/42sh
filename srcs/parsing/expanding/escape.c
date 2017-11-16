@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:27:36 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/15 16:46:16 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:40:32 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,17 @@ static char		*get_variable(char *str)
 *************** PRIVATE ********************************************************
 */
 
-static void		expansion(char **str, size_t index, char *variable)
+static void		expansion(char **str, size_t index, char *variable,
+				t_parsing *temp)
 {
 	char	*new;
 
-	new = (char *)ft_memalloc(sizeof(char) * (ft_strlen(variable) + ft_strlen(*str) + 1));
+	new = (char *)ft_memalloc(sizeof(char) *
+	(ft_strlen(variable) + ft_strlen(*str) + 1));
 	populate(new, *str, variable, index);
 	ft_memdel((void **)str);
 	*str = new;
+	escape(temp);
 }
 
 /*
@@ -93,20 +96,14 @@ void			escape(t_parsing *node)
 		index = 0;
 		while (node->input && node->input[index])
 		{
-			if (status & DOUBLE_QUOTE && (variable = get_variable(node->input + index)))
-			{
-				expansion(&node->input, index, variable);
-				escape(temp);
-			}
+			if (status & DQ && (variable = get_variable(node->input + index)))
+				expansion(&node->input, index, variable, temp);
 			else if (node->input[index] == '\\')
 				index += 2;
 			else if (node->input[index] == '\'')
 				index += skip_to_occurence(node->input + index, '\'');
-			else
-			{
-				chk_quote(node->input[index], &status);
+			else if (chk_quote(node->input[index], &status))
 				index += 1;
-			}
 		}
 		node = node->next;
 	}

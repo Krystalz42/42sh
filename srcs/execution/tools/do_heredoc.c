@@ -1,6 +1,14 @@
-//
-// Created by Alexandre ROULIN on 11/4/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   do_heredoc.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/16 16:12:05 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/16 16:17:06 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
@@ -9,8 +17,10 @@ static int		jobs_do_heredoc(t_node *node)
 	int					fildes;
 	char				*temp;
 
-	node->content->heredoc = ft_strjoin("/tmp/", (temp = ft_itoa(time(NULL))));
+	temp = ft_itoa(time(NULL));
+	node->content->heredoc = ft_strjoin("/tmp/", temp);
 	fildes = open(node->content->heredoc, O_WRONLY | O_CREAT, 0644);
+	ft_memdel((void **)&temp);
 	return (fildes);
 }
 
@@ -28,7 +38,7 @@ void			do_heredoc(t_node *node)
 		if (signal_reception(-1) == SIGINT)
 			break ;
 		else if (compare_heredoc(cmd, node->right->content->command[0]) == 0
-				 || signal_reception(-1) == 1)
+		|| signal_reception(-1) == 1)
 		{
 			ft_putstrtab_fd(heredoc, 10, fildes);
 			memdel_cmd(&cmd);
