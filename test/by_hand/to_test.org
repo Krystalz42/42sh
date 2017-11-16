@@ -1,0 +1,88 @@
+* Tests Shell
+
+** Terminal
+*** Bad TERM variable
+#+BEGIN_SRC
+TERM= ./42sh
+TERM=merde ./42sh
+TERM=dumb ./42sh
+#+END_SRC
+*** Changer le caractere d'INTR du terminal
+=stty intr ^H=
+
+** Input
+#+BEGIN_SRC
+./42sh < file.cmd
+./42sh <&-
+./42sh </dev/null
+./42sh >&- 2>&-
+#+END_SRC
+
+** UI
+   - Checker les chars =C-u=, =DEL=, =C-w= dans l'UI
+*** EOF
+#+BEGIN_SRC
+42sh> C-d
+42sh> 'RET C-d
+42sh> \RET C-d
+42sh> 'a RET \ RET C-d
+#+END_SRC
+
+** Lexer/Parser
+   - =echo 'abc\<RET>def'
+   - EOF sur le heredoc
+   - INTR sur le heredoc
+   - =cmd >out<in=
+   
+** Execution
+*** fds ouvert par le shell
+Faire un =lseek= de plusieurs Go sur le fd laissé ouvert
+
+*** Erreur command not found
+   - =/a | cat /dev/random | base64 > /dev/null=
+
+*** And Or
+   - =true || false && ls= Affiche =ls=
+
+*** Pipe
+   - =cd /tmp && cd / | ls= Fait un =ls= de /tmp
+   - =cat | merde | ls=
+   - =cat /dev/random|base64|head -c8=
+**** Sens de construction des pipes
+=echo a > file | echo b > file; cat file= devrait afficher ~b~
+**** SIGKILL et pipe infinie
+Permet de verifier la bonne utilisation des process groups
+Les process d'un pipe doivent être dans un process group à part. Un SIGKILL ne pouvant être catch, il tuera le pipe mais pas le shell.
+
+*** Subshell
+   - =(cd / ; ls)= Fait un =ls= de la racine
+   - =env | (cat -e | cat -e); echo abc=
+   - =(cat -e) | (cat -n)=
+   - =(cat -e; (cat -n; cat -v); ( ( cat -t ) ) )=
+   - =(cat -n; cat -e)=
+   - =(ls ; (cat | cat -e)) | (cat -n)=
+   - =(ls ;cat -e) | cat -e  | (ls) | cat -e=
+   - =(pwd; cat ) | (pwd; cat -e)=
+   - =ls | (cat -e | cat -n)=
+   - =ls | (cat -e | cat -n) | (rev| ( ( cat -e ) ) )=
+
+*** fd clos au lancement avec des pipes en commandes
+    =./42sh -c 'env | cat -e | wc | cat -e | cat -e | cat -e | cat -e | cat -e | cat -e' <&- >&-=
+
+** Redirections
+*** Duplication
+#+BEGIN_SRC
+./42sh >&-
+42sh> echo abc >&2
+abc
+42sh> echo def
+#+END_SRC
+*** Aggreagtion
+   - =42sh> cat -e 3<Makefile <&3= Affiche le Makefile
+*** Heredoc
+   - Creer un heredoc avec une erreur de parsing apres le ~heredoc~. Est-ce que le heredoc s'affiche ?
+   - Créer un heredoc, remonter l'historique, est-ce que le heredoc multi-ligne est présent ? Si oui, s'exécute t'il sans réafficher le prompt du heredoc ?
+
+** Signal
+   - Envoyer un SIGHUP au 42sh. Est-ce que les enfants sont kill aussi ?
+   - =python -c 'print "ls | " * 100000 + "ls"' | ./42sh=
