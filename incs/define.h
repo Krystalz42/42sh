@@ -245,7 +245,7 @@ directory.\n"
 # define BECHO					"echo : "
 # define UCD					"cd : "
 
-# define LIMIT					"max_child has been defined : 8096"
+# define NEED_VALUE				"variable need a name : "
 # define INVALID				"invalid argument : "
 # define NO_ARGS_U				"option requires an argument -- u"
 # define VAR_NO_SET				"variable not set : "
