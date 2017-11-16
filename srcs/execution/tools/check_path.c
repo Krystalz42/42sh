@@ -3,7 +3,6 @@
 //
 
 #include <sh.h>
-#include <sys/stat.h>
 
 static int			check_this_one(char *part, char *path)
 {

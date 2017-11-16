@@ -35,6 +35,8 @@
 # include <logger_utils.h>
 # include <enum.h>
 # include <time.h>
+# include <sys/stat.h>
+
 
 /*
 **				FUNCTION CORES

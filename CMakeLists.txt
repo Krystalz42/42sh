@@ -351,7 +351,7 @@ set(SOURCE_FILES
         test/src/var/test_var.c)
 
 include_directories(incs)
-include_directories(libs/libft/srcs)
+include_directories(libs/libft/incs)
 include_directories(libs/logger/incs)
 include_directories(libs/printf/incs)
 
