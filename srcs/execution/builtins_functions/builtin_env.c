@@ -85,12 +85,13 @@ uint8_t			builtin_env(t_node *node, int info)
 	while (node->content->command[++table] && node->content->command[table][0] == '-')
 	{
 		index = 0;
-		while (node->content->command[table][++index])
+		while (node->content->command[table][index])
 		{
-			if (potential_option("iu", node->content->command[table][index]) == 0)
-				return (error_msg(HISTORY, BAD_OPTION, node->content->command[table] + index));
+			if (potential_option("-iu", node->content->command[table][index]) == 0)
+				return (error_msg(ENV, BAD_OPTION, node->content->command[table] + index));
 			if (node->content->command[table][index] == 'u' || node->content->command[table][index] == 'i')
 				opt = node->content->command[table][index];
+			index++;
 		}
 	}
 	free_command(&node->content->command, table);

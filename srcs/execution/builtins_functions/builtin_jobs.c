@@ -51,10 +51,10 @@ static int				check_option(char **command)
 		return (var_return(usage_jobs()) - 1);
 	while (command[table] && command[table][0] == '-')
 	{
-		index = 1;
+		index = 0;
 		while (command[table][index])
 		{
-			if (potential_option("prsl", command[index][table]) == 0)
+			if (potential_option("p-rsl", command[table][index]) == 0)
 				return (error_msg(JOBS, BAD_OPTION, command[table] + index));
 			option += (command[table][index] == 'p' && !(option & 1)) ? 1 : 0;
 			option += (command[table][index] == 'r' && !(option & 2)) ? 2 : 0;
@@ -64,6 +64,7 @@ static int				check_option(char **command)
 		}
 		table++;
 	}
+	log_debug("%d", option);
 	return (option);
 }
 
@@ -93,7 +94,7 @@ uint8_t			builtin_jobs(t_node *node, int info __attribute__((unused)))
 	t_jobs				*jobs;
 
 	jobs = jobs_table();
-	if ((option = check_option(node->content->command)) > 0)
+	if ((option = check_option(node->content->command)) == -1)
 		return (var_return(-1));
 	if ((jobs_spec = check_jobs_spec(node->content->command)) < 0)
 		return (error_msg(JOBS, INVALID, node->content->command[ABS(jobs_spec)]));

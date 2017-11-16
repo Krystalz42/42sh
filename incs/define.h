@@ -244,6 +244,7 @@ directory.\n"
 # define SETENV					"setenv : "
 # define BECHO					"echo : "
 # define UCD					"cd : "
+# define UHELP					"help : "
 
 # define LIMIT					"limit process at 1024"
 # define BAD_FD					" Bad file descriptor"

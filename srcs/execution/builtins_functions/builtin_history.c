@@ -43,10 +43,10 @@ int				check_option_history(char **command)
 	{
 		if (!ft_strcmp("--help", command[1]))
 			return (var_return(usage_history()));
-		table = 1;
+		table = 0;
 		while (command[index][table])
 		{
-			if (potential_option("cdrw", command[index][table]) == 0)
+			if (potential_option("-cdrw", command[index][table]) == 0)
 				return (error_msg(HISTORY, BAD_OPTION, command[index] + table));
 			option += command[index][table] == 'c' && !(option & 1) ? 1 : 0;
 			option += command[index][table] == 'd' && !(option & 2) ? 2 : 0;
