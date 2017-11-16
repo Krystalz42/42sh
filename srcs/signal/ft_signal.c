@@ -17,7 +17,9 @@ void				handler_sig(int sig)
 {
 	log_warn("Signal Reception [%d]", sig);
 	set_termios(SET_OLD_TERM);
-	exit(sig + 128);
+	reset_signal();
+	b_write_history_in_file(get_str_from_history());
+	kill(0, sig);
 }
 
 void				handler_sigint(int sig)
@@ -40,9 +42,9 @@ void				init_signal(void)
 	while (++i < 32)
 		signal(i, handler_sig);
 	signal(SIGINT, &handler_sigint);
-	signal(3, SIG_IGN);
-	signal(18, SIG_IGN);
-	signal(28, &handler_sigwinsz);
+	signal(SIGQUIT, SIG_IGN);
+	signal(SIGTSTP, SIG_IGN);
+	signal(SIGWINCH, &handler_sigwinsz);
 	signal(SIGCHLD, &handler_sigchld);
 
 }
