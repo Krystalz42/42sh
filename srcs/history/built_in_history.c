@@ -70,7 +70,6 @@ uint8_t			b_clear_history(void)
 		hist = hist->prev;
 		ft_memdel((void **)&to_kill);
 	}
-	log_trace("Apelle du NULL");
 	gbl_save_history(NULL, RESET_STRUCT);
 	return (0);
 }

@@ -44,31 +44,37 @@ uint8_t			looking_for_fct(char **command, int option)
 		return (b_write_history());
 }
 
-uint8_t			builtin_history(t_node *node, int info)
+int				check_option_history(char **command)
 {
-	int			option;
-	int			index;
-	int			c;
+	int		option;
+	int		table;
+	int		index;
 
-	(void)info;
 	option = 0;
 	index = 1;
-	while (node->content->command[index] && node->content->command[index][0] == '-')
+	while (command[index] && command[index][0] == '-')
 	{
-		if (!ft_strcmp("--help", node->content->command[1]))
+		if (!ft_strcmp("--help", command[1]))
 			return (var_return(usage_history()));
-		c = 1;
-		while (node->content->command[index][c])
+		table = 1;
+		while (command[index][table])
 		{
-			if (potential_option(node->content->command[index][c]) == 0)
-				return (error_msg(HISTORY, INVALID, node->content->command[index] + c));
-			option += node->content->command[index][c] == 'c' && !(option & 1) ? 1 : 0;
-			option += node->content->command[index][c] == 'd' && !(option & 2) ? 2 : 0;
-			option += node->content->command[index][c] == 'r' && !(option & 4) ? 4 : 0;
-			option += node->content->command[index][c] == 'w' && !(option & 8) ? 8 : 0;
-			c++;
+			if (potential_option(command[index][table]) == 0)
+				return (error_msg(HISTORY, INVALID, command[index] + table));
+			option += command[index][table] == 'c' && !(option & 1) ? 1 : 0;
+			option += command[index][table] == 'd' && !(option & 2) ? 2 : 0;
+			option += command[index][table] == 'r' && !(option & 4) ? 4 : 0;
+			option += command[index][table] == 'w' && !(option & 8) ? 8 : 0;
+			table++;
 		}
 		index++;
 	}
-	return (looking_for_fct(node->content->command + index, option));
+	return (var_return(looking_for_fct(command + index, option)));
+}
+
+uint8_t			builtin_history(t_node *node, int info)
+{
+
+	(void)info;
+	return (check_option_history(node->content->command));
 }
