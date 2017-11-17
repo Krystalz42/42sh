@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:47:53 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 11:50:22 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 16:48:17 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,27 +67,6 @@ uint8_t			chk_slash(char c, uint8_t *status)
 			index--;
 	}
 	return (*status);
-}
-
-size_t			get_wordlength(char *str)
-{
-	size_t		index;
-	uint8_t		quote;
-	uint8_t		slash;
-
-	index = 0;
-	quote = DEFAULT;
-	slash = DEFAULT;
-	while (str[index])
-	{
-		if (chk_slash(str[index], &slash) == DEFAULT)
-		{
-			if (chk_quote(str[index], &quote) == DEFAULT && str[index] == ' ')
-				break ;
-		}
-		index++;
-	}
-	return (index);
 }
 
 int				isquote(char c)

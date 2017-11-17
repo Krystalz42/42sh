@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   my_execve.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 01:04:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/06 01:05:01 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:41:59 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void			my_execve(char **command, char **env)
 {
 	reset_signal();
 	log_info("[%s] PID [%d] PPID [%d] PGID [%d]",
-			command[0], getpid(), getppid(), getpgid(0));
+	command[0], getpid(), getppid(), getpgid(0));
 	if ((execve(command[0], command, env)) == -1)
 	{
 		error_msg("42sh: ", "command not found: ", command[0]);

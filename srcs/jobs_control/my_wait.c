@@ -1,10 +1,18 @@
-//
-// Created by Alexandre ROULIN on 10/6/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   my_wait.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 16:40:09 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 16:41:23 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-int			wait_group(t_process *process, int option)
+int				wait_group(t_process *process, int option)
 {
 	int			ret;
 
@@ -24,6 +32,7 @@ void			set_fildes(pid_t pgid)
 	signal(SIGTTOU, SIG_IGN);
 	tcsetpgrp(STDIN_FILENO, pgid);
 }
+
 void			wait_process(t_jobs *jobs)
 {
 	wait_group(jobs->process, WUNTRACED);
@@ -38,7 +47,7 @@ void			wait_process(t_jobs *jobs)
 	}
 }
 
-void		my_wait(t_jobs *jobs)
+void			my_wait(t_jobs *jobs)
 {
 	if (jobs)
 	{

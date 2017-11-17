@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   basic_help.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 16:30:27 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 16:30:45 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
@@ -27,7 +38,8 @@ int			help_history(void)
 	return (1);
 }
 
-int			help_kill_and_yank(void) {
+int			help_kill_and_yank(void)
+{
 	ft_putstr(H_KILL_AND_YANK);
 	ft_putstr(H_CK);
 	ft_putstr(H_MD);

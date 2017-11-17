@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   builtin_hash.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/30 15:22:14 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:31:48 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ uint8_t			builtin_hash(t_node *node, int info)
 	if (node->content->command[1])
 		if (ft_strcmp(node->content->command[1], HELP) == 0)
 			return (usage_hash());
-	while (node->content->command[++index] && (node->content->command[index][0]) == '-' && (c = -1))
+	while (node->content->command[++index] &&
+						(node->content->command[index][0]) == '-' && (c = -1))
 		while (node->content->command[index][++c])
 			if (node->content->command[index][c] == 'r')
 				option = 1;

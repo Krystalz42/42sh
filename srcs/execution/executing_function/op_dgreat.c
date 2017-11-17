@@ -1,15 +1,23 @@
-//
-// Created by Alexandre ROULIN on 11/12/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   op_dgreat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 16:11:44 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 16:17:43 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-void		jobs_op_dgreat(t_node *node)
+void			jobs_op_dgreat(t_node *node)
 {
 	int			fildes;
 
 	if ((fildes = open(node->right->content->command[0],
-					   OPTION_DGREAT, 0644)) != -1)
+													OPTION_DGREAT, 0644)) != -1)
 	{
 		if (ft_isdigit(node->content->command[0][0]))
 			dup2(fildes, ft_atoi(node->content->command[0]));
@@ -21,10 +29,9 @@ void		jobs_op_dgreat(t_node *node)
 		check_path(node->right->content->command[0]);
 }
 
-uint8_t					op_dgreat(t_node *node, t_jobs *jobs, int info)
+uint8_t			op_dgreat(t_node *node, t_jobs *jobs, int info)
 {
 	log_debug("VALUE DGREAT %d", info);
-
 	if (info & FORK)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)

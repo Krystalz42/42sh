@@ -6,18 +6,18 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:19:54 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 15:20:38 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 16:18:23 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-void		jobs_op_great(t_node *node)
+void			jobs_op_great(t_node *node)
 {
 	int			fildes;
 
 	fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
-	fildes == - 1 ? check_path(node->right->content->command[0]) : 0;
+	fildes == -1 ? check_path(node->right->content->command[0]) : 0;
 	log_error("Files descripton in OP_GREAT %d", fildes);
 	if (node->content->command[0][0] == '&')
 	{
@@ -35,9 +35,9 @@ void		jobs_op_great(t_node *node)
 	close(fildes);
 }
 
-uint8_t					op_great(t_node *node, t_jobs *jobs, int info)
+uint8_t			op_great(t_node *node, t_jobs *jobs, int info)
 {
-	t_process			*process;
+	t_process	*process;
 
 	log_debug("VALUE GREAT %d", info);
 	if (info & FORK)

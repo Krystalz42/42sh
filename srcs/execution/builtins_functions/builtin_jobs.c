@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   builtin_jobs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/30 15:22:36 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:34:50 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,8 @@ static int				check_jobs_spec(char **command)
 	table = 1;
 	while (command[table] && command[table][0] == '-')
 		table++;
-	if (command[table] && command[table][0] == '%' && ft_strisdigit(command[table] + 1))
+	if (command[table] && command[table][0] == '%' &&
+											ft_strisdigit(command[table] + 1))
 		jobs_spec = ft_atoi(command[table] + 1);
 	else if (command[table])
 		return (-table);
@@ -86,18 +87,19 @@ static int				check_jobs_spec(char **command)
 	return (jobs_spec);
 }
 
-
-uint8_t			builtin_jobs(t_node *node, int info __attribute__((unused)))
+uint8_t					builtin_jobs(t_node *node, int info)
 {
 	int					option;
 	int					jobs_spec;
 	t_jobs				*jobs;
 
+	(void)info;
 	jobs = jobs_table();
 	if ((option = check_option(node->content->command)) == -1)
 		return (var_return(-1));
 	if ((jobs_spec = check_jobs_spec(node->content->command)) < 0)
-		return (error_msg(JOBS, INVALID, node->content->command[ABS(jobs_spec)]));
+		return (error_msg(JOBS, INVALID,
+									node->content->command[ABS(jobs_spec)]));
 	if (jobs_spec > 0 && jobs_spec < MAX_CHILD)
 		return (var_return(print_jobs(jobs + (jobs_spec - 1), option)));
 	return (var_return(jobs_iter(jobs_table(), option)));

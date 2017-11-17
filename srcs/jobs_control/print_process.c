@@ -1,10 +1,18 @@
-//
-// Created by Alexandre ROULIN on 11/13/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_process.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 16:36:56 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 16:38:59 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-int			print_process(t_process *process,int option, int index)
+int				print_process(t_process *process, int option, int index)
 {
 	if (process->pid == process->pgid)
 		ft_printf("[%d]\t", index);
@@ -14,7 +22,7 @@ int			print_process(t_process *process,int option, int index)
 		ft_putchar('\t');
 	if (option & 8)
 		ft_printf("\t%d %d %s %s\n", process->pid, process->pgid,
-				  process->running ? RUN : STOP, process->command);
+		process->running ? RUN : STOP, process->command);
 	else if (option & 16)
 		ft_printf("\t%s %s\n", CONTINUED, process->command);
 	else
@@ -22,7 +30,7 @@ int			print_process(t_process *process,int option, int index)
 	return (1);
 }
 
-uint8_t		print_jobs(t_jobs *jobs, int option)
+uint8_t			print_jobs(t_jobs *jobs, int option)
 {
 	t_process			*process;
 
@@ -48,19 +56,23 @@ void			print_status(t_process *process, int jobs_spec)
 	{
 		process->prev != NULL ? CHAR('\t') : ft_printf("[%d]\t", jobs_spec);
 		if (WIFEXITED(process->status))
-			ft_printf("%d %s %s\n", process->pid, status_exit(WEXITSTATUS(process->status)), process->command);
+			ft_printf("%d %s %s\n", process->pid,
+			status_exit(WEXITSTATUS(process->status)), process->command);
 		else if (WIFSIGNALED(process->status))
-			ft_printf("%d %s %s\n", process->pid, status_signal(WTERMSIG(process->status)), process->command);
+			ft_printf("%d %s %s\n", process->pid,
+			status_signal(WTERMSIG(process->status)), process->command);
 		else if (WIFCONTINUED(process->status))
-			ft_printf("%d %s %s\n", process->pid, status_signal(18), process->command);
+			ft_printf("%d %s %s\n", process->pid,
+			status_signal(18), process->command);
 		else if (WIFSTOPPED(process->status))
-			ft_printf("%d %s %s\n", process->pid, status_signal(WSTOPSIG(process->status)), process->command);
+			ft_printf("%d %s %s\n", process->pid,
+			status_signal(WSTOPSIG(process->status)), process->command);
 		process = process->next;
 	}
 	ioctl(STDIN_FILENO, TIOCSTI, "\0");
 }
 
-void		print_info_jobs(t_jobs *jobs)
+void			print_info_jobs(t_jobs *jobs)
 {
 	t_process *process;
 

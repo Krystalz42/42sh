@@ -6,13 +6,13 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/11/17 01:52:34 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 16:27:33 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int		special_getenv(char *string)
+int				special_getenv(char *string)
 {
 	char		*name;
 	int			index;
@@ -30,8 +30,9 @@ int		special_getenv(char *string)
 	return (ret);
 }
 
-uint8_t			builtin_setenv(t_node *node, int info __attribute__((unused)))
+uint8_t			builtin_setenv(t_node *node, int info)
 {
+	(void)info;
 	if (ft_strchr(node->content->command[1], '='))
 	{
 		if (node->content->command[1][0] != '=')

@@ -1,10 +1,18 @@
-//
-// Created by Alexandre ROULIN on 11/12/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   op_great_and.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 16:10:18 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 16:11:28 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-static int	check_fd(int fildes)
+static int		check_fd(int fildes)
 {
 	if (fildes == init_fd())
 		fildes = STDOUT_FILENO;
@@ -16,7 +24,7 @@ static int	check_fd(int fildes)
 	return (fildes);
 }
 
-void		jobs_op_great_and(t_node *node)
+void			jobs_op_great_and(t_node *node)
 {
 	int			fildes;
 
@@ -26,8 +34,8 @@ void		jobs_op_great_and(t_node *node)
 		fildes = ft_atoi(node->right->content->command[0]);
 	else
 	{
-		if ((fildes = open(node->right->content->command[0], OPTION_GREAT, 0644)) == -1)
-			check_path(node->right->content->command[0]);
+		fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
+		fildes == -1 ? check_path(node->right->content->command[0]) : 0;
 	}
 	log_error("%d", fildes);
 	fildes = check_fd(fildes);
@@ -38,10 +46,9 @@ void		jobs_op_great_and(t_node *node)
 	close(fildes);
 }
 
-uint8_t					op_great_and(t_node *node, t_jobs *jobs, int info)
+uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
 {
 	log_debug("VALUE GREAT_AND %d", info);
-
 	if (info & FORK)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)

@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   builtin_history.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:26 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/30 15:22:28 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:32:32 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
-
-
 
 uint8_t			looking_for_fct(char **command, int option)
 {
@@ -61,7 +59,6 @@ int				check_option_history(char **command)
 
 uint8_t			builtin_history(t_node *node, int info)
 {
-
 	(void)info;
 	return (check_option_history(node->content->command));
 }

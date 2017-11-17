@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   builtin_switch.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:55 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/30 15:22:57 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:15:43 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ uint8_t		error_msg(char *from, char *error, char *args)
 	return (var_return(1));
 }
 
-uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error,char *args)
+uint8_t		fg_switch_process(t_jobs *jobs, int index, char *error, char *args)
 {
 	if (index >= 0 && jobs[index].process)
 	{
@@ -73,7 +73,8 @@ uint8_t		builtin_foreground(t_node *node, int info)
 	{
 		id = (ft_atoi(node->content->command[1] + 1) - 1);
 		log_error("%d", id);
-		return (fg_switch_process(jobs, id, NO_JOB, node->content->command[1] + 1));
+		return (fg_switch_process(jobs, id, NO_JOB,
+												node->content->command[1] + 1));
 	}
 	else if (node->content->command[1] == NULL && (id = MAX_CHILD))
 	{
@@ -96,7 +97,8 @@ uint8_t		builtin_background(t_node *node, int info)
 	if (node->content->command[1] && node->content->command[1][0] == '%')
 	{
 		id = (ft_atoi(node->content->command[1] + 1) - 1);
-		return (var_return(bg_switch_process(jobs, id, NO_JOB, node->content->command[1] + 1)));
+		return (var_return(bg_switch_process(jobs, id, NO_JOB,
+											node->content->command[1] + 1)));
 	}
 	else if (node->content->command[1] == NULL && (id = MAX_CHILD))
 	{

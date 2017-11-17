@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_echo.c                                          :+:      :+:    :+:   */
+/*   builtin_echo.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/11/15 18:40:21 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 16:51:30 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,12 @@ static void		print_argv(char **argv)
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			builtin_echo(t_node *node, int info __attribute__((unused)))
+uint8_t			builtin_echo(t_node *node, int info)
 {
 	uint8_t		option;
 	char		**argv;
 
+	(void)info;
 	option = DEFAULT;
 	argv = get_argv(node->content->command + 1, &option);
 	print_argv(argv);

@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   builtin_exit.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:05 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/11 11:17:31 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 16:31:33 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
-
-
 
 /*
 *************** PRIVATE ********************************************************
@@ -27,11 +25,12 @@ static size_t	get_len(char **argv, size_t length)
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			builtin_exit(t_node *node, int info __attribute__((unused)))
+uint8_t			builtin_exit(t_node *node, int info)
 {
 	size_t		length;
 	int			var;
 
+	(void)info;
 	if ((length = get_len(node->content->command, 0)) == 2)
 	{
 		if (ft_strisdigit(node->content->command[1]))

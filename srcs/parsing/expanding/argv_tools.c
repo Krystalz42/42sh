@@ -6,13 +6,17 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 14:37:30 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/15 13:47:21 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 16:49:25 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sh.h"
 
-char		**ft_arraysub(char **argv, size_t start, size_t length)
+/*
+*************** PUBLIC *********************************************************
+*/
+
+char			**ft_arraysub(char **argv, size_t start, size_t length)
 {
 	size_t		index;
 	char		**new;
@@ -27,16 +31,6 @@ char		**ft_arraysub(char **argv, size_t start, size_t length)
 		new[index] = NULL;
 	}
 	return (new);
-}
-
-size_t			ft_arraylen(char **argv)
-{
-	size_t		index;
-
-	index = 0;
-	while (argv && argv[index])
-		index++;
-	return (index);
 }
 
 char			**ft_arrayjoin(char **a1, char **a2)
@@ -54,7 +48,8 @@ char			**ft_arrayjoin(char **a1, char **a2)
 		return (NULL);
 	index = 0;
 	i = 0;
-	new = (char**)ft_memalloc(sizeof(char*) * (ft_arraylen(a1) + ft_arraylen(a2) + 1));
+	new = (char**)ft_memalloc(sizeof(char*) *
+	(ft_arraylen(a1) + ft_arraylen(a2) + 1));
 	while (a1[i])
 		new[index++] = ft_strdup(a1[i++]);
 	i = 0;
@@ -64,7 +59,7 @@ char			**ft_arrayjoin(char **a1, char **a2)
 	return (new);
 }
 
-bool		chk_add_argv(t_parsing *node)
+bool			chk_add_argv(t_parsing *node)
 {
 	short				index;
 	static const char	*operaters[] = {";", "&&", "||", "|", "&", NULL};
@@ -91,7 +86,7 @@ static char		*chk(char *str)
 	return (str + index);
 }
 
-bool		chk_get_argv(t_parsing *node)
+bool			chk_get_argv(t_parsing *node)
 {
 	short				index;
 	static const char	*operaters[] = {">>", ">&", "&>", ">", NULL};

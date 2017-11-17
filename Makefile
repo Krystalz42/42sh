@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/17 15:07:58 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/11/17 16:47:53 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -196,10 +196,10 @@ SRCS = \
 	   parsing/expanding/variable.c								\
 	   parsing/expanding/escape.c								\
 	   parsing/expanding/split.c								\
+	   parsing/expanding/split_tools.c							\
 	   parsing/expanding/tools.c								\
 	   parsing/tools/list.c										\
 	   parsing/tools/error.c									\
-	   parsing/tools/logger.c									\
 	   binary_tree/binary_tree.c								\
 	   env/add_environment.c									\
 	   env/remove_environment.c									\

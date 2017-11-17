@@ -1,12 +1,20 @@
-//
-// Created by Alexandre ROULIN on 11/2/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   op_less.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 16:16:43 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 16:17:09 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-static void			jobs_op_less(t_node *node)
+static void		jobs_op_less(t_node *node)
 {
-	int		fildes;
+	int			fildes;
 
 	if ((fildes = open(node->right->content->command[0], O_RDONLY)) == -1)
 		check_path(node->right->content->command[0]);

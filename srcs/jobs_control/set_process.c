@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   set_process.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 18:56:57 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/11 18:56:58 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:40:50 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,14 @@ int					finish_process(t_process *process)
 	{
 		if (process->status == -1)
 			;
-		else if (WIFSIGNALED(process->status) || WIFEXITED(process->status) || WIFSTOPPED(process->status))
+		else if (WIFSIGNALED(process->status) ||
+					WIFEXITED(process->status) || WIFSTOPPED(process->status))
 			terminated++;
 		nb_process++;
 		process = process->next;
 	}
-	log_trace("Return finish_status %d", (terminated - nb_process) == 0 ? 1 : 0);
+	log_trace("Return finish_status %d",
+										(terminated - nb_process) == 0 ? 1 : 0);
 	return ((terminated - nb_process) == 0 ? 1 : 0);
 }
 
@@ -45,7 +47,7 @@ int					terminate_process(t_process *process)
 	return (1);
 }
 
-void		reset_process(t_jobs *jobs)
+void				reset_process(t_jobs *jobs)
 {
 	t_process		*to_kill;
 
@@ -64,13 +66,13 @@ void		reset_process(t_jobs *jobs)
 	jobs->process = NULL;
 }
 
-void		first_process(t_jobs *jobs)
+void				first_process(t_jobs *jobs)
 {
 	while (jobs->process->prev)
 		jobs->process = jobs->process->prev;
 }
 
-void		close_fildes(t_process *process)
+void				close_fildes(t_process *process)
 {
 	while (process)
 	{

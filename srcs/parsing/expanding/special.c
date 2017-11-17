@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 20:56:06 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 11:21:11 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 16:46:44 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ static bool		expansion(char **str, size_t index, char *expand, int to_expand)
 	if (!ft_strncmp(*str + index, expand, 2))
 	{
 		variable = ft_itoa(to_expand);
-		new = (char *)ft_memalloc(sizeof(char) * (ft_strlen(variable) + ft_strlen(*str) + 1));
+		new = (char *)ft_memalloc(sizeof(char) *
+		(ft_strlen(variable) + ft_strlen(*str) + 1));
 		populate(new, *str, variable, index);
 		ft_memdel((void **)&variable);
 		ft_memdel((void **)str);

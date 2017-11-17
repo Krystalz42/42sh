@@ -6,12 +6,11 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:20:09 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/15 20:14:01 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/17 16:19:13 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
-
 
 static const t_builtin	g_builtin[] = {
 	(t_builtin){"env", &builtin_env},
@@ -31,10 +30,11 @@ static const t_builtin	g_builtin[] = {
 	(t_builtin){NULL, NULL}
 };
 
-int				check_if_builtin(t_node *node, int info __attribute__((unused)))
+int				check_if_builtin(t_node *node, int info)
 {
 	int		index;
 
+	(void)info;
 	index = 0;
 	while (index < 14)
 	{
