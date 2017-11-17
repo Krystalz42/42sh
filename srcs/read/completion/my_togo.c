@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 10:33:09 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 10:33:37 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 17:33:44 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int			my_tobackto(int li, int co)
 			tputs(tgetstr(MV_LEFT, 0), STDIN_FILENO, &my_put);
 			co--;
 		}
-
 	return (1);
 }
 

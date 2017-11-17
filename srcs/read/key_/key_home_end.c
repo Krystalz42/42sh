@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/11 06:30:22 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 17:26:09 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:52:13 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int			key_home_(t_read **read_std, unsigned long buff)
 	(*read_std)->print = 2;
 	return (1);
 }
+
 int			key_end_(t_read **read_std, unsigned long buff)
 {
 	if ((*read_std)->history_search)

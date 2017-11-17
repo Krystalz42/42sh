@@ -6,15 +6,15 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 18:27:33 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/06 18:27:35 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:37:46 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-t_cmd				*last_cmd(t_cmd *cmd)
+t_cmd	*last_cmd(t_cmd *cmd)
 {
 	while (cmd->next)
 		cmd = cmd->next;
-    return (cmd);
+	return (cmd);
 }

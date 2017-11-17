@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/12 17:36:48 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 21:06:32 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 17:17:47 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void		delete_here(t_read **read_std, unsigned long buff)
 
 int			key_delete_here(t_read **read_std, unsigned long buff)
 {
-
 	if ((*read_std)->completion)
 	{
 		memdel_completion(&((*read_std)->tab_));

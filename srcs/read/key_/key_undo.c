@@ -6,13 +6,13 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 21:12:14 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 21:12:15 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:45:57 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-t_cmp		g_to_do[] = {
+t_cmp			g_to_do[] = {
 		(t_cmp){PRINT_KEY, key_del_buff},
 		(t_cmp){DELETE_KEY, key_reprint},
 		(t_cmp){HOME_KEY, key_end_},
@@ -32,7 +32,7 @@ t_cmp		g_to_do[] = {
 		(t_cmp){META_B, key_shift_right},
 		(t_cmp){META_F, key_shift_left},
 		(t_cmp){ARROW_LEFT, key_arrow_right},
-		(t_cmp){ARROW_RIGHT, key_arrow_left}, 
+		(t_cmp){ARROW_RIGHT, key_arrow_left},
 		(t_cmp){SHIFT_UP_KEY, key_shift_down},
 		(t_cmp){SHIFT_DOWN_KEY, key_shift_up},
 		(t_cmp){SHIFT_RIGHT_KEY, key_shift_left},

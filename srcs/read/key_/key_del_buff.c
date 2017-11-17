@@ -6,13 +6,13 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 19:50:10 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/25 19:50:11 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 17:28:49 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int              key_del_buff(t_read **read_std, unsigned long buff)
+int		key_del_buff(t_read **read_std, unsigned long buff)
 {
 	t_outstanding *tmp;
 

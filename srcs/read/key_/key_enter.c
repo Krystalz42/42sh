@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   key_enter_.c                                        :+:      :+:    :+:   */
+/*   key_enter.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: gbourson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/12 17:41:21 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 20:40:30 by aroulin          ###   ########.fr       */
+/*   Created: 2017/11/17 17:16:59 by gbourson          #+#    #+#             */
+/*   Updated: 2017/11/17 17:22:10 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void		insert_completion(t_read **read_std, t_file *tmp)
 
 	i = -1;
 	(*read_std)->completion = 0;
-	if (!ft_strcmp((*read_std)->tab_->from, tmp->name) && (DT_DIR & tmp->type))
+	if (!ft_strcmp((*read_std)->tab_->from, tmp->name)\
+		&& (DT_DIR & tmp->type))
 		key_print_fct((*read_std)->cmd, '/');
 	else
 	{

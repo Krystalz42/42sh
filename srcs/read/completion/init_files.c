@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 05:25:06 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/22 22:51:53 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 17:30:37 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void		init_files(t_file **file, char *name, unsigned char type, int index)
 		tmp->next->prev = tmp;
 	}
 	else
+	{
 		if (!((*file) = init_file_(name, type, index)))
 			return ;
+	}
 }

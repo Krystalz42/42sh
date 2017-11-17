@@ -6,17 +6,17 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 20:12:54 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/14 20:12:55 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:42:02 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int         get_len_prompt(int len)
+int		get_len_prompt(int len)
 {
-    static int save;
+	static int save;
 
-    if (len != -42)
-        save = len;
-    return (save);
+	if (len != -42)
+		save = len;
+	return (save);
 }

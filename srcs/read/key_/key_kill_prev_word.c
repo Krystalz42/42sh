@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 19:25:40 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/25 19:25:41 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 17:15:39 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int					key_kill_prev_word(t_read **read_std, unsigned long buff)
 		(*read_std)->print = 2;
 		memdel_completion(&((*read_std)->tab_));
 	}
-	else if  ((*read_std)->history_search)
+	else if ((*read_std)->history_search)
 	{
 		(*read_std)->print = 2;
 		memdel_lfh(&((*read_std)->hist_search));

@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/11 06:34:02 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/20 19:54:53 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:40:38 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int		key_shift_left(t_read **read_std, unsigned long buff)
 	while ((*read_std)->cmd->prev)
 	{
 		if ((*read_std)->cmd->prev->c == 32)
-			break;
+			break ;
 		(*read_std)->cmd = (*read_std)->cmd->prev;
 	}
 	add_outstanding(NULL, buff, 0);
@@ -107,7 +107,7 @@ int		key_shift_right(t_read **read_std, unsigned long buff)
 	while ((*read_std)->cmd->c)
 	{
 		if ((*read_std)->cmd->c == 32)
-			break;
+			break ;
 		(*read_std)->cmd = (*read_std)->cmd->next;
 	}
 	while ((*read_std)->cmd->c && (*read_std)->cmd->c == 32)
@@ -115,4 +115,3 @@ int		key_shift_right(t_read **read_std, unsigned long buff)
 	add_outstanding(NULL, buff, 0);
 	return (1);
 }
-

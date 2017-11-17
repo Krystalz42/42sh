@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 06:58:08 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 20:03:55 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 17:28:03 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,18 @@ int			init_page(t_read **read_std, t_file **tmp)
 {
 	(*read_std)->tab_->page = ((*read_std)->tab_->index) /
 		((*read_std)->tab_->elem_page);
-	while ((*tmp)->next && (*tmp)->index != (*read_std)->tab_->page * (*read_std)->tab_->elem_page)
+	while ((*tmp)->next && (*tmp)->index != (*read_std)->tab_->page \
+			* (*read_std)->tab_->elem_page)
 		(*tmp) = (*tmp)->next;
 	return ((*read_std)->tab_->elem_page * ((*read_std)->tab_->page + 1));
 }
 
-
 int			print_element(t_file *file, int color)
 {
 	if (!color)
-	log_trace("Ligne [%d] && Column [%d]",file->ms.y, file->ms.x);
+		log_trace("Ligne [%d] && Column [%d]", file->ms.y, file->ms.x);
 	if (file)
 	{
-
 		(!color) ? P_INV_FD(2) : NULL;
 		color_completion(file->type, color);
 		my_togo(file->ms.y, file->ms.x);
@@ -40,8 +39,6 @@ int			print_element(t_file *file, int color)
 	}
 	return (1);
 }
-
-
 
 void		print_tab(t_read **read_std)
 {

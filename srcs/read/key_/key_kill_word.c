@@ -6,16 +6,16 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/25 19:05:29 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/25 19:05:30 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:48:10 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-static void kill_word(t_read **read_std, unsigned long buff)
+static void	kill_word(t_read **read_std, unsigned long buff)
 {
-	t_cmd   *kill;
-	t_cmd   *tmp;
+	t_cmd	*kill;
+	t_cmd	*tmp;
 
 	kill = (*read_std)->cmd;
 	tmp = (*read_std)->cmd;
@@ -33,14 +33,14 @@ static void kill_word(t_read **read_std, unsigned long buff)
 	add_outstanding(kill, buff, 0);
 }
 
-int     key_kill_word(t_read **read_std, unsigned long buff)
+int			key_kill_word(t_read **read_std, unsigned long buff)
 {
 	if ((*read_std)->completion)
 	{
 		(*read_std)->print = 2;
 		memdel_completion(&((*read_std)->tab_));
 	}
-	else if  ((*read_std)->history_search)
+	else if ((*read_std)->history_search)
 	{
 		(*read_std)->print = 2;
 		memdel_lfh(&((*read_std)->hist_search));

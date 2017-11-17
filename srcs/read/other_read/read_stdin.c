@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 14:40:38 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/24 17:33:41 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:15:05 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,8 @@ static inline void		inline_print_(t_read **read_std, unsigned long *buff)
 		chk_and_print(read_std);
 }
 
-static inline void		inline_other(t_read **read_std, unsigned long *buff, int(*fct)(t_read **, unsigned long))
+static inline void		inline_other(t_read **read_std, unsigned long *buff,\
+	int (*fct)(t_read **, unsigned long))
 {
 	fct(read_std, *buff);
 	chk_and_print(read_std);

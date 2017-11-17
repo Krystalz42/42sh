@@ -1,17 +1,26 @@
-//
-// Created by Alexandre ROULIN on 10/28/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   key_capitalize_word.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gbourson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 17:31:11 by gbourson          #+#    #+#             */
+/*   Updated: 2017/11/17 17:32:19 by gbourson         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-int			capitalize_word_undo(t_read **read_std, unsigned long buff)
+int				capitalize_word_undo(t_read **read_std, unsigned long buff)
 {
 	(void)buff;
 	while ((*read_std)->cmd->prev && (*read_std)->cmd->c == 32)
 		(*read_std)->cmd = (*read_std)->cmd->prev;
 	if ((*read_std)->cmd->prev)
 		(*read_std)->cmd = (*read_std)->cmd->prev;
-	while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32 && ft_isalpha((*read_std)->cmd->c))
+	while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32 \
+		&& ft_isalpha((*read_std)->cmd->c))
 		(*read_std)->cmd = (*read_std)->cmd->prev;
 	if (ft_isalpha((*read_std)->cmd->c))
 		(*read_std)->cmd->c += 32;

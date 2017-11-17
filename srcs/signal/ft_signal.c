@@ -6,12 +6,11 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/27 19:16:56 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/23 20:05:18 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:12:55 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
-
 
 void				handler_sig(int sig)
 {
@@ -37,8 +36,9 @@ void				handler_sigwinsz(int sig)
 
 void				init_signal(void)
 {
-	int i = -1;
+	int	i;
 
+	i = -1;
 	while (++i < 32)
 		signal(i, handler_sig);
 	signal(SIGINT, &handler_sigint);
@@ -46,13 +46,13 @@ void				init_signal(void)
 	signal(SIGTSTP, SIG_IGN);
 	signal(SIGWINCH, &handler_sigwinsz);
 	signal(SIGCHLD, &handler_sigchld);
-
 }
 
 void				reset_signal(void)
 {
-	int i = -1;
+	int i;
 
+	i = -1;
 	while (++i < 32)
 		signal(i, SIG_DFL);
 }

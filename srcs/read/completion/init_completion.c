@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 03:59:11 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/19 14:05:31 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 17:36:29 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int			empty_cmd(t_cmd *cmd)
 
 void		init_completion(t_read **read_std)
 {
-	log_trace("%d",check_word((*read_std)->cmd));
+	log_trace("%d", check_word((*read_std)->cmd));
 	if (check_word((*read_std)->cmd))
 	{
 		(*read_std)->completion = 2;

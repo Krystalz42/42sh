@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 21:05:29 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 21:02:47 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:45:19 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static inline int	stop_rec(char cmd, char c)
 	return (0);
 }
 
-static char				rec_brackets(t_cmd *cmd, char c)
+static char			rec_brackets(t_cmd *cmd, char c)
 {
 	if (cmd == NULL)
 		return (!c ? (char)'\\' : c);

@@ -6,13 +6,13 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 17:45:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/09/14 17:45:52 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:29:48 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-static int 				my_getbranch(void)
+static int			my_getbranch(void)
 {
 	pid_t		father;
 	int			status;
@@ -42,7 +42,7 @@ static int 				my_getbranch(void)
 	return (0);
 }
 
-static char				*read_branch(void)
+static char			*read_branch(void)
 {
 	char			*branch;
 	char			*real_branch;
@@ -57,7 +57,7 @@ static char				*read_branch(void)
 	if (branch)
 	{
 		real_branch = (char *)ft_memalloc(sizeof(char) * (ft_strlen(branch) + 5));
-		ft_strcpy(real_branch + ft_strlen(real_branch)," [");
+		ft_strcpy(real_branch + ft_strlen(real_branch), " [");
 		ft_strcpy(real_branch + ft_strlen(real_branch), branch + 2);
 		ft_strcpy(real_branch + ft_strlen(real_branch), "] ");
 		free((void *)branch);
@@ -65,7 +65,7 @@ static char				*read_branch(void)
 	return (real_branch);
 }
 
-static char				*my_getcwd(void)
+static char			*my_getcwd(void)
 {
 	char			str[PATH_MAX];
 	size_t			len;
@@ -82,9 +82,9 @@ static char				*my_getcwd(void)
 	return (NULL);
 }
 
-static char 			*my_color(void)
+static char			*my_color(void)
 {
-	static int 		color = 255;
+	static int		color = 255;
 	static bool		dir = false;
 
 	dir = (color == 237) ? true : dir;
@@ -104,7 +104,8 @@ void				init_prompt(void)
 	path = my_getcwd();
 	color = my_color();
 	ft_memdel((void **)&prompt);
-	prompt = (char *)ft_memalloc(sizeof(char) * (27 + ft_strlen(path) + ft_strlen(branch)));
+	prompt = (char *)ft_memalloc(sizeof(char) * \
+		(27 + ft_strlen(path) + ft_strlen(branch)));
 	ft_memcpy(prompt + ft_strlen(prompt), "\e[38;5;", 10);
 	ft_strcpy(prompt + ft_strlen(prompt), color);
 	ft_strcpy(prompt + ft_strlen(prompt), "m");

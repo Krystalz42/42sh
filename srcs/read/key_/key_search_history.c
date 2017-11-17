@@ -6,15 +6,15 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/31 18:33:19 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/31 18:33:21 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 16:50:49 by gbourson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int				key_search_history(t_read **read_std, unsigned long buff)
+int		key_search_history(t_read **read_std, unsigned long buff)
 {
-	(void) buff;
+	(void)buff;
 	if ((*read_std)->completion)
 	{
 		memdel_completion(&((*read_std)->tab_));
