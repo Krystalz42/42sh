@@ -6,7 +6,7 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/11/17 14:51:12 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 14:55:47 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ uint8_t			builtin_cd(t_node *node, int info)
 	(void)info;
 	oldpwd = getcwd(NULL, 4096);
 	err = change_direction(node->content->command[1]);
-	if (!err)
+	if (err)
 	{
 		pwd = getcwd(NULL, 4096);
 		modify_variable("OLDPWD", &oldpwd);
