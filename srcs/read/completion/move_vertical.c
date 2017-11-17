@@ -35,12 +35,15 @@ void					move_vertical(t_read **read_std, int pos)
 {
 	t_file	*tmp;
 
-	tmp = (*read_std)->tab_->file;
-	while (tmp->index != (*read_std)->tab_->index)
-		tmp = tmp->next;
-	update_index(read_std, (*read_std)->tab_->nbr * pos);
-	if (((*read_std)->tab_->index / (*read_std)->tab_->elem_page) != (*read_std)->tab_->page)
-		change_page(read_std);
-	else
-		change_element(read_std, tmp);
+	if ((*read_std)->tab_ && (*read_std)->tab_->file)
+	{
+		tmp = (*read_std)->tab_->file;
+		while (tmp->index != (*read_std)->tab_->index)
+			tmp = tmp->next;
+		update_index(read_std, (*read_std)->tab_->nbr * pos);
+		if (((*read_std)->tab_->index / (*read_std)->tab_->elem_page) != (*read_std)->tab_->page)
+			change_page(read_std);
+		else
+			change_element(read_std, tmp);
+	}
 }
