@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 00:18:58 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 14:50:26 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@
 
 # define SYNTAX_ERR 666
 # define ENV_ERR 667
+# define FILE_404 668
+# define EXE_403 669
+# define NOT_DIR 670
 
 /*
 **			TOOLS

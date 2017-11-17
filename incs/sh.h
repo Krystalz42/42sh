@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 01:52:57 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 14:38:52 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -322,7 +322,7 @@ int							isquote(char c);
 size_t						skip_to_occurence(char *str, char c);
 size_t						get_wordlength(char *str);
 size_t						ft_arraylen(char **argv);
-void						ft_err(char *str, int err);
+uint8_t						ft_err(char *str, int err);
 
 /*
 **				BASIC FUNCTION
