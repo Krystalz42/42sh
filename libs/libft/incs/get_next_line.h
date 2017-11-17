@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/01 00:00:21 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/02 18:07:21 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 17:22:31 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ typedef struct			s_list
 	struct s_list		*next;
 	struct s_list		*prev;
 }						t_list;
-
 
 int						get_next_line(int fd, char **line);
 int						my_gnl(int fd, char **line);
