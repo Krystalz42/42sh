@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/16 16:23:34 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 00:18:58 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@
 # define OPERATER 2
 
 # define SYNTAX_ERR 666
+# define ENV_ERR 667
 
 /*
 **			TOOLS

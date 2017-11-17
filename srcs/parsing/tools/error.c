@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:07:01 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/16 18:54:22 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 02:02:13 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static const t_error	g_err[] =
 {
 	(t_error){SYNTAX_ERR, "syntax error near unexpected token `", -1},
+	(t_error){ENV_ERR, "Environment variable is not defined `", -1}
 };
 
 /*
@@ -34,7 +35,7 @@ void			ft_err(char *str, int err)
 	short		index;
 
 	index = 0;
-	while (index < 1)
+	while (index < 2)
 	{
 		if (err == g_err[index].err_type)
 		{

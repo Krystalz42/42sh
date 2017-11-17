@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/15 20:44:59 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/17 01:52:57 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,8 +140,9 @@ int							start_from_less(char **command, char ***env);
 **				BUILT IN TOOLS
 */
 
+int							special_getenv(char *string);
 void						check_path(char *path);
-int							check_directory(char *path);
+char						*check_directory(char **path, char *temp);
 void						collect_path(char **binary);
 int							looking_for_path(char **binary);
 t_bdata						*b_data(void);
