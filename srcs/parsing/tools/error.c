@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 18:07:01 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 14:50:23 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 14:58:40 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ uint8_t			ft_err(char *str, int err)
 		{
 			print_error(str, g_err[index].str);
 			var_return(g_err[index].err_ret);
+			break ;
 		}
 		index++;
 	}
