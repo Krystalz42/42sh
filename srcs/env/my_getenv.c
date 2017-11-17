@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 02:48:59 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/15 17:27:24 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 15:06:19 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 *************** PRIVATE ********************************************************
 */
 
-size_t				compare_environment(const char *s1, const char *s2)
+size_t			compare_environment(const char *s1, const char *s2)
 {
 	size_t		length;
 

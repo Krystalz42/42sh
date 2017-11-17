@@ -1,6 +1,14 @@
-//
-// Created by Alexandre ROULIN on 10/31/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   op_execution.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 15:20:55 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 15:21:07 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
@@ -21,12 +29,12 @@ static void				do_execution(t_node *node, t_jobs *jobs, int info)
 		if ((jobs = new_jobs(jobs)) == NULL)
 			return ;
 		process = my_fork(jobs, node, info);
-		if (process->pid > 0) // father
+		if (process->pid > 0)
 		{
 			log_success("On va wait les enfants!");
 			my_wait(jobs);
 		}
-		else if (process->pid == 0) // fils
+		else if (process->pid == 0)
 		{
 			process->pid = getpid();
 			if (process->prev)
@@ -50,4 +58,3 @@ uint8_t					op_execution(t_node *node, t_jobs *jobs, int info)
 		do_execution(node, jobs, info);
 	return (var_return(-1));
 }
-

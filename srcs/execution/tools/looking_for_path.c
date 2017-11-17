@@ -1,26 +1,34 @@
-//
-// Created by Alexandre ROULIN on 11/4/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   looking_for_path.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 15:10:14 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 15:13:17 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-static char 			*create_trial_path(char *path, char *binary)
+static char		*create_trial_path(char *path, char *binary)
 {
 	char		*complete_path;
 
 	complete_path = (char *)ft_memalloc(sizeof(char)
-										* (ft_strlen(path) + ft_strlen(binary) + 2));
+	* (ft_strlen(path) + ft_strlen(binary) + 2));
 	ft_strcpy(complete_path, path);
 	ft_strcpy(complete_path + ft_strlen(complete_path), "/");
 	ft_strcpy(complete_path + ft_strlen(complete_path), binary);
 	return (complete_path);
 }
 
-static void				collect_path(char **binary)
+static void		collect_path(char **binary)
 {
-	char			**path;
-	int				index;
-	char			*temp;
+	char		**path;
+	int			index;
+	char		*temp;
 
 	if ((path = ft_strsplit(my_getenv("PATH"), ':')) == NULL)
 		return ;
@@ -42,9 +50,9 @@ static void				collect_path(char **binary)
 	ft_memdel_tab(&path);
 }
 
-int					looking_for_path(char **binary)
+int				looking_for_path(char **binary)
 {
-	char			*temp;
+	char		*temp;
 
 	if ((temp = search_path(*binary)))
 	{

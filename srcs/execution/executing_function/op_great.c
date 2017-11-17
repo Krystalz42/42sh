@@ -1,6 +1,14 @@
-//
-// Created by Alexandre ROULIN on 11/11/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   op_great.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 15:19:54 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 15:20:38 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
@@ -8,8 +16,8 @@ void		jobs_op_great(t_node *node)
 {
 	int			fildes;
 
-	if ((fildes = open(node->right->content->command[0], OPTION_GREAT, 0644)) == -1)
-		check_path(node->right->content->command[0]);
+	fildes = open(node->right->content->command[0], OPTION_GREAT, 0644);
+	fildes == - 1 ? check_path(node->right->content->command[0]) : 0;
 	log_error("Files descripton in OP_GREAT %d", fildes);
 	if (node->content->command[0][0] == '&')
 	{

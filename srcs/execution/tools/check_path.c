@@ -1,6 +1,14 @@
-//
-// Created by Alexandre ROULIN on 11/16/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_path.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 15:16:01 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 15:19:28 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
@@ -18,7 +26,7 @@ static int			check_this_one(char *part, char *path)
 	return (0);
 }
 
-void					check_path(char *path)
+void				check_path(char *path)
 {
 	char			**table;
 	int				index;

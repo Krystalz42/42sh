@@ -1,12 +1,20 @@
-//
-// Created by Alexandre ROULIN on 10/31/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   my_fork.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 15:19:04 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 15:22:22 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-t_process			*new_process(t_jobs *jobs)
+t_process		*new_process(t_jobs *jobs)
 {
-	t_process			*temp;
+	t_process	*temp;
 
 	if (jobs->process == NULL)
 	{
@@ -24,10 +32,9 @@ t_process			*new_process(t_jobs *jobs)
 	}
 }
 
-
-t_process			*my_fork(t_jobs *jobs, t_node *node, int info)
+t_process		*my_fork(t_jobs *jobs, t_node *node, int info)
 {
-	t_process		*process;
+	t_process	*process;
 
 	process = new_process(jobs);
 	if ((process->pid = fork()) == -1)

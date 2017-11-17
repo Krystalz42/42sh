@@ -1,15 +1,23 @@
-//
-// Created by Alexandre ROULIN on 10/30/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   binary_tree.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 15:04:51 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 15:05:13 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
 t_node	*init_node(t_parsing *list)
 {
 	t_node		*node;
-	
+
 	node = (t_node *)ft_memalloc(sizeof(t_node));
-	node->content= list;
+	node->content = list;
 	return (node);
 }
 

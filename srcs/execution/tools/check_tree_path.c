@@ -1,25 +1,34 @@
-//
-// Created by Alexandre ROULIN on 11/2/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_tree_path.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/17 15:11:11 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/17 15:14:40 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-char 			*create_trial_path(char *path, char *binary)
+char			*create_trial_path(char *path, char *binary)
 {
 	char		*complete_path;
 
-	complete_path = (char *)ft_memalloc(sizeof(char) * (ft_strlen(path) + ft_strlen(binary) + 2));
+	complete_path = (char *)ft_memalloc(sizeof(char) *
+	(ft_strlen(path) + ft_strlen(binary) + 2));
 	ft_strcpy(complete_path, path);
 	ft_strcpy(complete_path + ft_strlen(complete_path), "/");
 	ft_strcpy(complete_path + ft_strlen(complete_path), binary);
 	return (complete_path);
 }
 
-void					collect_path(char **binary)
+void			collect_path(char **binary)
 {
-	char			**path;
-	int				index;
-	char			*temp;
+	char		**path;
+	int			index;
+	char		*temp;
 
 	if (!ft_strlen(*binary) || !(path = ft_strsplit(my_getenv("PATH"), ':')))
 		return ;
@@ -42,9 +51,9 @@ void					collect_path(char **binary)
 	ft_memdel_tab(&path);
 }
 
-int						looking_for_path(char **binary)
+int				looking_for_path(char **binary)
 {
-	char			*temp;
+	char		*temp;
 
 	if ((temp = search_path(*binary)))
 	{
@@ -55,7 +64,7 @@ int						looking_for_path(char **binary)
 	return (0);
 }
 
-void					check_tree_path(t_node *node)
+void			check_tree_path(t_node *node)
 {
 	if (node)
 	{
@@ -75,4 +84,3 @@ void					check_tree_path(t_node *node)
 		}
 	}
 }
-

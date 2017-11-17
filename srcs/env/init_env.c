@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_env.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 23:16:36 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/10 00:05:00 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/17 15:06:54 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ void			init_env(void)
 		if (ft_strncmp(environ[i], "SHLVL=", 6) == 0)
 		{
 			shlvl = ft_atoi(environ[i] + 6);
-			env[i] = ft_strjoin("SHLVL=", (temp = ft_itoa(shlvl + 1)));
+			temp = ft_itoa(shlvl + 1);
+			env[i] = ft_strjoin("SHLVL=", temp);
 			ft_memdel((void **)&temp);
 		}
 		else
