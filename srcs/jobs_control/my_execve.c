@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 01:04:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/18 13:59:44 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/18 14:03:20 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,23 @@ static void		error(char *str)
 {
 	struct stat	buf;
 
-	lstat(str, &buf);
-	if (S_ISDIR(buf.st_mode))
+	if (lstat(str, &buf) != -1)
 	{
-		error_msg("42sh: ", "Is a directory: ", str);
-		exit(126);
-	}
-	else if (!access(str, F_OK) && access(str, X_OK) == -1)
-	{
-		error_msg("42sh: ", "Permission denied: ", str);
-		exit(126);
-	}
-	else
-	{
-		error_msg("42sh: ", "command not found: ", str); 
-		exit(127);
+		if (S_ISDIR(buf.st_mode))
+		{
+			error_msg("42sh: ", "Is a directory: ", str);
+			exit(126);
+		}
+		else if (!access(str, F_OK) && access(str, X_OK) == -1)
+		{
+			error_msg("42sh: ", "Permission denied: ", str);
+			exit(126);
+		}
+		else
+		{
+			error_msg("42sh: ", "command not found: ", str); 
+			exit(127);
+		}
 	}
 }
 
