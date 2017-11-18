@@ -282,6 +282,8 @@ typedef struct				s_jobs
 {
 	int						index;
 	t_process				*process;
+	struct s_jobs			*next;
+	struct s_jobs			*prev;
 }							t_jobs;
 
 /*

@@ -119,23 +119,21 @@ static void		jobs_op_great_and(t_node *node)
 
 uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
 {
+	t_process			*process;
+
 	if (info & FORK)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)
 			return (var_return(255));
-		jobs->process = my_fork(jobs, find_executing_node(node), info);
-		if (jobs->process->pid)
-		{
+		process = my_fork(jobs, find_executing_node(node), info);
+		if (process->pid)
 			my_wait(jobs);
-		}
 		else
 		{
-				jobs->process->pid = getpid();
-				jobs_op_great_and(node);
-				jobs->process->fildes[0] = 0;
-				jobs->process->fildes[1] = STDOUT_FILENO;
-				execute_node(node->left, jobs, (info ^ FORK));
-			}
+			process->pid = getpid();
+			jobs_op_great_and(node);
+			execute_node(node->left, jobs, (info ^ FORK));
+		}
 	}
 	else
 	{

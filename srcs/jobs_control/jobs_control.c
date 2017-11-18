@@ -14,7 +14,7 @@
 
 t_jobs				*jobs_table(void)
 {
-	static t_jobs		jobs[MAX_CHILD];
+	static t_jobs		*jobs;
 
 	return (jobs);
 }
