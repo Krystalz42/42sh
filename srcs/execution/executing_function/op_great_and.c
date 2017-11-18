@@ -83,7 +83,7 @@ static int		get_fildes(char *str)
 	int			fildes;
 
 	if (!ft_strcmp(str, "-"))
-		fildes = open("/dev/null", O_WRONLY);
+		fildes = open(PATH_ERROR, O_WRONLY);
 	else if (ft_strisdigit(str))
 		fildes = ft_atoi(str);
 	else
@@ -100,9 +100,10 @@ static void		jobs_op_great_and(t_node *node)
 	int			std;
 	int			fildes;
 
-	std = ft_atoi(node->content->command[0]);
+	std = STDOUT_FILENO;
+	if (ft_isdigit(node->content->command[0][0]))
+		std = ft_atoi(node->content->command[0]);
 	fildes = get_fildes(node->right->content->command[0]);
-
 	if (fildes == -1)
 		check_path(node->right->content->command[0]);
 	else
@@ -110,11 +111,6 @@ static void		jobs_op_great_and(t_node *node)
 		fildes = check_fd(fildes);
 		dup2(fildes, std ? std : STDOUT_FILENO);
 	}
-	fildes = check_fd(fildes);
-	if (ft_isdigit(node->content->command[0][0]))
-		dup2(fildes, ft_atoi(node->content->command[0]));
-	else
-		dup2(fildes, STDOUT_FILENO);
 }
 
 /*

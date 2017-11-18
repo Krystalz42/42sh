@@ -12,8 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/sh.h" afterPath="$PROJECT_DIR$/incs/sh.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_help.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_help.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -51,8 +49,8 @@
           <file leaf-file-name="op_great_and.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="766">
-                  <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+                <state relative-caret-position="950">
+                  <caret line="111" column="15" lean-forward="false" selection-start-line="111" selection-start-column="15" selection-end-line="111" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
@@ -164,10 +162,12 @@
       <find>kill(</find>
       <find>9</find>
       <find>H_MOVE</find>
+      <find>str</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>S42H</replace>
+      <replace>files</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -270,12 +270,12 @@
       <workItem from="1511018762915" duration="94000" />
       <workItem from="1511018880409" duration="32000" />
       <workItem from="1511018930963" duration="4117000" />
-      <workItem from="1511048115370" duration="251000" />
+      <workItem from="1511048115370" duration="393000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10628000" />
+    <option name="totallyTimeSpent" value="10770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1278" height="1440" extended-state="0" />
@@ -392,6 +392,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -571,6 +572,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -677,8 +679,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="950">
+          <caret line="111" column="15" lean-forward="false" selection-start-line="111" selection-start-column="15" selection-end-line="111" selection-end-column="15" />
           <folding />
         </state>
       </provider>
