@@ -1,6 +1,14 @@
-//
-// Created by Alexandre ROULIN on 11/13/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   enum.h                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/18 12:02:53 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/18 12:05:19 by jle-quel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef ENUM_H
 # define ENUM_H
@@ -9,14 +17,14 @@
 **			INITIALIZATION READ
 */
 
-typedef enum 			e_readline
+typedef enum			e_readline
 {
 	REFRESH = 0,
 	CTRL_A = 1,
 	CTRL_B = 2,
 	CTRL_D = 4,
 	CTRL_E = 5,
-	CTRL_F= 6,
+	CTRL_F = 6,
 	TAB_KEY = 9,
 	CTRL_P = 16,
 	CTRL_K = 11,
@@ -47,7 +55,7 @@ typedef enum 			e_readline
 	SHIFT_LEFT_KEY = 74982532143899,
 }						t_readline;
 
-typedef enum 			e_value
+typedef enum			e_value
 {
 	VALUE_COMMAND,
 	VALUE_SEMI_COLON,
@@ -66,7 +74,7 @@ typedef enum 			e_value
 **			TOKEN RECOGNITION
 */
 
-typedef enum 			e_priority
+typedef enum			e_priority
 {
 	PRIO_SEPARATOR,
 	PRIO_AMPERSAND,

@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 14:50:26 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/18 12:06:23 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 # define SINGLE_QUOTE 2
 # define DOUBLE_QUOTE 4
-# define DQ 4 // Merci a la norme
+# define DQ 4
 # define BACKSLASH 8
 
 # define TOKEN 1

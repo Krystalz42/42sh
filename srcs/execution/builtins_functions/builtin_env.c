@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:21:59 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 16:30:09 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/18 12:00:42 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,9 @@ uint8_t			builtin_env(t_node *node, int info)
 			if (potential_option("-iu",
 			node->content->command[table][index]) == 0)
 				return (error_msg(ENV, BAD_OPTION,
-										node->content->command[table] + index));
-			if (node->content->command[table][index] == 'u' ||
-									node->content->command[table][index] == 'i')
+							node->content->command[table] + index));
+				if (node->content->command[table][index] == 'u' ||
+					node->content->command[table][index] == 'i')
 				opt = node->content->command[table][index];
 			index++;
 		}

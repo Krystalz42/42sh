@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:40:09 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 16:41:23 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/17 21:15:44 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,9 @@
 
 int				wait_group(t_process *process, int option)
 {
-	int			ret;
-
-	ret = 0;
-	while (process)
-	{
-		if ((waitpid(process->pid, &process->status, option)) > 0)
-			ret = 1;
-		process = process->next;
-	}
-	return (ret);
+	log_fatal("%d", process->pgid);
+	waitpid(-process->pgid, &process->status, option);
+	return (1);
 }
 
 void			set_fildes(pid_t pgid)

@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 15:08:06 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/18 11:48:59 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,7 +154,6 @@ char						**init_pwd(char **env);
 unsigned int				search_char(char *str, char c);
 uint8_t						builtin_unsetenv(t_node *node, int info);
 int							potential_option(char *potential, int c);
-
 
 /*
 **				FUNCTION FOR COMPLETION
