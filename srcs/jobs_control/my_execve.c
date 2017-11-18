@@ -32,10 +32,6 @@ static void		error(char *str)
 			error_msg(S42H, "Permission denied: ", str);
 			exit(var_return(126));
 		}
-		else
-		{
-
-		}
 	}
 	else
 	{
