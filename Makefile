@@ -137,6 +137,7 @@ SRCS = \
 	   execution/executing_node.c								\
 	   execution/my_fork.c										\
 	   execution/tools/get_real_env.c							\
+	   execution/tools/looking_for_path.c						\
 	   execution/tools/manage_pipe.c							\
 	   execution/tools/new_jobs.c								\
 	   execution/tools/check_tree_path.c						\

@@ -348,13 +348,13 @@ void						do_heredoc(t_node *node);
 
 t_process					*my_fork(t_jobs *jobs, t_node *node, int info);
 t_jobs						*new_jobs(t_jobs *jobs);
+void						wait_process(t_jobs *jobs, int option);
 t_process					*new_process(t_jobs *jobs);
 void						close_fildes(t_process *process);
 void						print_info_jobs(t_jobs *jobs);
 t_node						*find_executing_node(t_node *node);
 void						first_process(t_jobs *jobs);
 void						reset_process(t_jobs *jobs);
-void						wait_process(t_jobs *jobs);
 void						update_jobs(t_process *process);
 int							wait_group(t_process *process, int option);
 int							finish_process(t_process *process);

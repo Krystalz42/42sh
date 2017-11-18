@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-static char		*create_trial_path(char *path, char *binary)
+char		*create_trial_path(char *path, char *binary)
 {
 	char		*complete_path;
 
@@ -24,7 +24,7 @@ static char		*create_trial_path(char *path, char *binary)
 	return (complete_path);
 }
 
-static void		collect_path(char **binary)
+void		collect_path(char **binary)
 {
 	char		**path;
 	int			index;

@@ -2715,6 +2715,303 @@ libs/libft/srcs/my_gnl.c.s:
 	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/libft/srcs/my_gnl.c.s
 .PHONY : libs/libft/srcs/my_gnl.c.s
 
+libs/logger/srcs/display/logger_debug.o: libs/logger/srcs/display/logger_debug.c.o
+
+.PHONY : libs/logger/srcs/display/logger_debug.o
+
+# target to build an object file
+libs/logger/srcs/display/logger_debug.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_debug.c.o
+.PHONY : libs/logger/srcs/display/logger_debug.c.o
+
+libs/logger/srcs/display/logger_debug.i: libs/logger/srcs/display/logger_debug.c.i
+
+.PHONY : libs/logger/srcs/display/logger_debug.i
+
+# target to preprocess a source file
+libs/logger/srcs/display/logger_debug.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_debug.c.i
+.PHONY : libs/logger/srcs/display/logger_debug.c.i
+
+libs/logger/srcs/display/logger_debug.s: libs/logger/srcs/display/logger_debug.c.s
+
+.PHONY : libs/logger/srcs/display/logger_debug.s
+
+# target to generate assembly for a file
+libs/logger/srcs/display/logger_debug.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_debug.c.s
+.PHONY : libs/logger/srcs/display/logger_debug.c.s
+
+libs/logger/srcs/display/logger_error.o: libs/logger/srcs/display/logger_error.c.o
+
+.PHONY : libs/logger/srcs/display/logger_error.o
+
+# target to build an object file
+libs/logger/srcs/display/logger_error.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_error.c.o
+.PHONY : libs/logger/srcs/display/logger_error.c.o
+
+libs/logger/srcs/display/logger_error.i: libs/logger/srcs/display/logger_error.c.i
+
+.PHONY : libs/logger/srcs/display/logger_error.i
+
+# target to preprocess a source file
+libs/logger/srcs/display/logger_error.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_error.c.i
+.PHONY : libs/logger/srcs/display/logger_error.c.i
+
+libs/logger/srcs/display/logger_error.s: libs/logger/srcs/display/logger_error.c.s
+
+.PHONY : libs/logger/srcs/display/logger_error.s
+
+# target to generate assembly for a file
+libs/logger/srcs/display/logger_error.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_error.c.s
+.PHONY : libs/logger/srcs/display/logger_error.c.s
+
+libs/logger/srcs/display/logger_fatal.o: libs/logger/srcs/display/logger_fatal.c.o
+
+.PHONY : libs/logger/srcs/display/logger_fatal.o
+
+# target to build an object file
+libs/logger/srcs/display/logger_fatal.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_fatal.c.o
+.PHONY : libs/logger/srcs/display/logger_fatal.c.o
+
+libs/logger/srcs/display/logger_fatal.i: libs/logger/srcs/display/logger_fatal.c.i
+
+.PHONY : libs/logger/srcs/display/logger_fatal.i
+
+# target to preprocess a source file
+libs/logger/srcs/display/logger_fatal.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_fatal.c.i
+.PHONY : libs/logger/srcs/display/logger_fatal.c.i
+
+libs/logger/srcs/display/logger_fatal.s: libs/logger/srcs/display/logger_fatal.c.s
+
+.PHONY : libs/logger/srcs/display/logger_fatal.s
+
+# target to generate assembly for a file
+libs/logger/srcs/display/logger_fatal.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_fatal.c.s
+.PHONY : libs/logger/srcs/display/logger_fatal.c.s
+
+libs/logger/srcs/display/logger_info.o: libs/logger/srcs/display/logger_info.c.o
+
+.PHONY : libs/logger/srcs/display/logger_info.o
+
+# target to build an object file
+libs/logger/srcs/display/logger_info.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_info.c.o
+.PHONY : libs/logger/srcs/display/logger_info.c.o
+
+libs/logger/srcs/display/logger_info.i: libs/logger/srcs/display/logger_info.c.i
+
+.PHONY : libs/logger/srcs/display/logger_info.i
+
+# target to preprocess a source file
+libs/logger/srcs/display/logger_info.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_info.c.i
+.PHONY : libs/logger/srcs/display/logger_info.c.i
+
+libs/logger/srcs/display/logger_info.s: libs/logger/srcs/display/logger_info.c.s
+
+.PHONY : libs/logger/srcs/display/logger_info.s
+
+# target to generate assembly for a file
+libs/logger/srcs/display/logger_info.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_info.c.s
+.PHONY : libs/logger/srcs/display/logger_info.c.s
+
+libs/logger/srcs/display/logger_success.o: libs/logger/srcs/display/logger_success.c.o
+
+.PHONY : libs/logger/srcs/display/logger_success.o
+
+# target to build an object file
+libs/logger/srcs/display/logger_success.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_success.c.o
+.PHONY : libs/logger/srcs/display/logger_success.c.o
+
+libs/logger/srcs/display/logger_success.i: libs/logger/srcs/display/logger_success.c.i
+
+.PHONY : libs/logger/srcs/display/logger_success.i
+
+# target to preprocess a source file
+libs/logger/srcs/display/logger_success.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_success.c.i
+.PHONY : libs/logger/srcs/display/logger_success.c.i
+
+libs/logger/srcs/display/logger_success.s: libs/logger/srcs/display/logger_success.c.s
+
+.PHONY : libs/logger/srcs/display/logger_success.s
+
+# target to generate assembly for a file
+libs/logger/srcs/display/logger_success.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_success.c.s
+.PHONY : libs/logger/srcs/display/logger_success.c.s
+
+libs/logger/srcs/display/logger_trace.o: libs/logger/srcs/display/logger_trace.c.o
+
+.PHONY : libs/logger/srcs/display/logger_trace.o
+
+# target to build an object file
+libs/logger/srcs/display/logger_trace.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_trace.c.o
+.PHONY : libs/logger/srcs/display/logger_trace.c.o
+
+libs/logger/srcs/display/logger_trace.i: libs/logger/srcs/display/logger_trace.c.i
+
+.PHONY : libs/logger/srcs/display/logger_trace.i
+
+# target to preprocess a source file
+libs/logger/srcs/display/logger_trace.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_trace.c.i
+.PHONY : libs/logger/srcs/display/logger_trace.c.i
+
+libs/logger/srcs/display/logger_trace.s: libs/logger/srcs/display/logger_trace.c.s
+
+.PHONY : libs/logger/srcs/display/logger_trace.s
+
+# target to generate assembly for a file
+libs/logger/srcs/display/logger_trace.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_trace.c.s
+.PHONY : libs/logger/srcs/display/logger_trace.c.s
+
+libs/logger/srcs/display/logger_warn.o: libs/logger/srcs/display/logger_warn.c.o
+
+.PHONY : libs/logger/srcs/display/logger_warn.o
+
+# target to build an object file
+libs/logger/srcs/display/logger_warn.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_warn.c.o
+.PHONY : libs/logger/srcs/display/logger_warn.c.o
+
+libs/logger/srcs/display/logger_warn.i: libs/logger/srcs/display/logger_warn.c.i
+
+.PHONY : libs/logger/srcs/display/logger_warn.i
+
+# target to preprocess a source file
+libs/logger/srcs/display/logger_warn.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_warn.c.i
+.PHONY : libs/logger/srcs/display/logger_warn.c.i
+
+libs/logger/srcs/display/logger_warn.s: libs/logger/srcs/display/logger_warn.c.s
+
+.PHONY : libs/logger/srcs/display/logger_warn.s
+
+# target to generate assembly for a file
+libs/logger/srcs/display/logger_warn.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_warn.c.s
+.PHONY : libs/logger/srcs/display/logger_warn.c.s
+
+libs/logger/srcs/logger/logger_close.o: libs/logger/srcs/logger/logger_close.c.o
+
+.PHONY : libs/logger/srcs/logger/logger_close.o
+
+# target to build an object file
+libs/logger/srcs/logger/logger_close.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_close.c.o
+.PHONY : libs/logger/srcs/logger/logger_close.c.o
+
+libs/logger/srcs/logger/logger_close.i: libs/logger/srcs/logger/logger_close.c.i
+
+.PHONY : libs/logger/srcs/logger/logger_close.i
+
+# target to preprocess a source file
+libs/logger/srcs/logger/logger_close.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_close.c.i
+.PHONY : libs/logger/srcs/logger/logger_close.c.i
+
+libs/logger/srcs/logger/logger_close.s: libs/logger/srcs/logger/logger_close.c.s
+
+.PHONY : libs/logger/srcs/logger/logger_close.s
+
+# target to generate assembly for a file
+libs/logger/srcs/logger/logger_close.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_close.c.s
+.PHONY : libs/logger/srcs/logger/logger_close.c.s
+
+libs/logger/srcs/logger/logger_init.o: libs/logger/srcs/logger/logger_init.c.o
+
+.PHONY : libs/logger/srcs/logger/logger_init.o
+
+# target to build an object file
+libs/logger/srcs/logger/logger_init.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_init.c.o
+.PHONY : libs/logger/srcs/logger/logger_init.c.o
+
+libs/logger/srcs/logger/logger_init.i: libs/logger/srcs/logger/logger_init.c.i
+
+.PHONY : libs/logger/srcs/logger/logger_init.i
+
+# target to preprocess a source file
+libs/logger/srcs/logger/logger_init.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_init.c.i
+.PHONY : libs/logger/srcs/logger/logger_init.c.i
+
+libs/logger/srcs/logger/logger_init.s: libs/logger/srcs/logger/logger_init.c.s
+
+.PHONY : libs/logger/srcs/logger/logger_init.s
+
+# target to generate assembly for a file
+libs/logger/srcs/logger/logger_init.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_init.c.s
+.PHONY : libs/logger/srcs/logger/logger_init.c.s
+
+libs/logger/srcs/utils/logger_get_time.o: libs/logger/srcs/utils/logger_get_time.c.o
+
+.PHONY : libs/logger/srcs/utils/logger_get_time.o
+
+# target to build an object file
+libs/logger/srcs/utils/logger_get_time.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_get_time.c.o
+.PHONY : libs/logger/srcs/utils/logger_get_time.c.o
+
+libs/logger/srcs/utils/logger_get_time.i: libs/logger/srcs/utils/logger_get_time.c.i
+
+.PHONY : libs/logger/srcs/utils/logger_get_time.i
+
+# target to preprocess a source file
+libs/logger/srcs/utils/logger_get_time.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_get_time.c.i
+.PHONY : libs/logger/srcs/utils/logger_get_time.c.i
+
+libs/logger/srcs/utils/logger_get_time.s: libs/logger/srcs/utils/logger_get_time.c.s
+
+.PHONY : libs/logger/srcs/utils/logger_get_time.s
+
+# target to generate assembly for a file
+libs/logger/srcs/utils/logger_get_time.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_get_time.c.s
+.PHONY : libs/logger/srcs/utils/logger_get_time.c.s
+
+libs/logger/srcs/utils/logger_init_open_file.o: libs/logger/srcs/utils/logger_init_open_file.c.o
+
+.PHONY : libs/logger/srcs/utils/logger_init_open_file.o
+
+# target to build an object file
+libs/logger/srcs/utils/logger_init_open_file.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_init_open_file.c.o
+.PHONY : libs/logger/srcs/utils/logger_init_open_file.c.o
+
+libs/logger/srcs/utils/logger_init_open_file.i: libs/logger/srcs/utils/logger_init_open_file.c.i
+
+.PHONY : libs/logger/srcs/utils/logger_init_open_file.i
+
+# target to preprocess a source file
+libs/logger/srcs/utils/logger_init_open_file.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_init_open_file.c.i
+.PHONY : libs/logger/srcs/utils/logger_init_open_file.c.i
+
+libs/logger/srcs/utils/logger_init_open_file.s: libs/logger/srcs/utils/logger_init_open_file.c.s
+
+.PHONY : libs/logger/srcs/utils/logger_init_open_file.s
+
+# target to generate assembly for a file
+libs/logger/srcs/utils/logger_init_open_file.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_init_open_file.c.s
+.PHONY : libs/logger/srcs/utils/logger_init_open_file.c.s
+
 libs/printf/srcs/clean_struct.o: libs/printf/srcs/clean_struct.c.o
 
 .PHONY : libs/printf/srcs/clean_struct.o
@@ -8034,1086 +8331,6 @@ srcs/term/set_term.c.s:
 	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/term/set_term.c.s
 .PHONY : srcs/term/set_term.c.s
 
-test/by_hand/fdOpen.o: test/by_hand/fdOpen.c.o
-
-.PHONY : test/by_hand/fdOpen.o
-
-# target to build an object file
-test/by_hand/fdOpen.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/by_hand/fdOpen.c.o
-.PHONY : test/by_hand/fdOpen.c.o
-
-test/by_hand/fdOpen.i: test/by_hand/fdOpen.c.i
-
-.PHONY : test/by_hand/fdOpen.i
-
-# target to preprocess a source file
-test/by_hand/fdOpen.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/by_hand/fdOpen.c.i
-.PHONY : test/by_hand/fdOpen.c.i
-
-test/by_hand/fdOpen.s: test/by_hand/fdOpen.c.s
-
-.PHONY : test/by_hand/fdOpen.s
-
-# target to generate assembly for a file
-test/by_hand/fdOpen.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/by_hand/fdOpen.c.s
-.PHONY : test/by_hand/fdOpen.c.s
-
-test/src/autocompletion/test_complete_binary.o: test/src/autocompletion/test_complete_binary.c.o
-
-.PHONY : test/src/autocompletion/test_complete_binary.o
-
-# target to build an object file
-test/src/autocompletion/test_complete_binary.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/autocompletion/test_complete_binary.c.o
-.PHONY : test/src/autocompletion/test_complete_binary.c.o
-
-test/src/autocompletion/test_complete_binary.i: test/src/autocompletion/test_complete_binary.c.i
-
-.PHONY : test/src/autocompletion/test_complete_binary.i
-
-# target to preprocess a source file
-test/src/autocompletion/test_complete_binary.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/autocompletion/test_complete_binary.c.i
-.PHONY : test/src/autocompletion/test_complete_binary.c.i
-
-test/src/autocompletion/test_complete_binary.s: test/src/autocompletion/test_complete_binary.c.s
-
-.PHONY : test/src/autocompletion/test_complete_binary.s
-
-# target to generate assembly for a file
-test/src/autocompletion/test_complete_binary.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/autocompletion/test_complete_binary.c.s
-.PHONY : test/src/autocompletion/test_complete_binary.c.s
-
-test/src/autocompletion/test_complete_builtin.o: test/src/autocompletion/test_complete_builtin.c.o
-
-.PHONY : test/src/autocompletion/test_complete_builtin.o
-
-# target to build an object file
-test/src/autocompletion/test_complete_builtin.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/autocompletion/test_complete_builtin.c.o
-.PHONY : test/src/autocompletion/test_complete_builtin.c.o
-
-test/src/autocompletion/test_complete_builtin.i: test/src/autocompletion/test_complete_builtin.c.i
-
-.PHONY : test/src/autocompletion/test_complete_builtin.i
-
-# target to preprocess a source file
-test/src/autocompletion/test_complete_builtin.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/autocompletion/test_complete_builtin.c.i
-.PHONY : test/src/autocompletion/test_complete_builtin.c.i
-
-test/src/autocompletion/test_complete_builtin.s: test/src/autocompletion/test_complete_builtin.c.s
-
-.PHONY : test/src/autocompletion/test_complete_builtin.s
-
-# target to generate assembly for a file
-test/src/autocompletion/test_complete_builtin.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/autocompletion/test_complete_builtin.c.s
-.PHONY : test/src/autocompletion/test_complete_builtin.c.s
-
-test/src/builtins/test_builtin_history.o: test/src/builtins/test_builtin_history.c.o
-
-.PHONY : test/src/builtins/test_builtin_history.o
-
-# target to build an object file
-test/src/builtins/test_builtin_history.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/builtins/test_builtin_history.c.o
-.PHONY : test/src/builtins/test_builtin_history.c.o
-
-test/src/builtins/test_builtin_history.i: test/src/builtins/test_builtin_history.c.i
-
-.PHONY : test/src/builtins/test_builtin_history.i
-
-# target to preprocess a source file
-test/src/builtins/test_builtin_history.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/builtins/test_builtin_history.c.i
-.PHONY : test/src/builtins/test_builtin_history.c.i
-
-test/src/builtins/test_builtin_history.s: test/src/builtins/test_builtin_history.c.s
-
-.PHONY : test/src/builtins/test_builtin_history.s
-
-# target to generate assembly for a file
-test/src/builtins/test_builtin_history.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/builtins/test_builtin_history.c.s
-.PHONY : test/src/builtins/test_builtin_history.c.s
-
-test/src/builtins/test_builtins.o: test/src/builtins/test_builtins.c.o
-
-.PHONY : test/src/builtins/test_builtins.o
-
-# target to build an object file
-test/src/builtins/test_builtins.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/builtins/test_builtins.c.o
-.PHONY : test/src/builtins/test_builtins.c.o
-
-test/src/builtins/test_builtins.i: test/src/builtins/test_builtins.c.i
-
-.PHONY : test/src/builtins/test_builtins.i
-
-# target to preprocess a source file
-test/src/builtins/test_builtins.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/builtins/test_builtins.c.i
-.PHONY : test/src/builtins/test_builtins.c.i
-
-test/src/builtins/test_builtins.s: test/src/builtins/test_builtins.c.s
-
-.PHONY : test/src/builtins/test_builtins.s
-
-# target to generate assembly for a file
-test/src/builtins/test_builtins.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/builtins/test_builtins.c.s
-.PHONY : test/src/builtins/test_builtins.c.s
-
-test/src/expansion/quote_removal.o: test/src/expansion/quote_removal.c.o
-
-.PHONY : test/src/expansion/quote_removal.o
-
-# target to build an object file
-test/src/expansion/quote_removal.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/expansion/quote_removal.c.o
-.PHONY : test/src/expansion/quote_removal.c.o
-
-test/src/expansion/quote_removal.i: test/src/expansion/quote_removal.c.i
-
-.PHONY : test/src/expansion/quote_removal.i
-
-# target to preprocess a source file
-test/src/expansion/quote_removal.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/expansion/quote_removal.c.i
-.PHONY : test/src/expansion/quote_removal.c.i
-
-test/src/expansion/quote_removal.s: test/src/expansion/quote_removal.c.s
-
-.PHONY : test/src/expansion/quote_removal.s
-
-# target to generate assembly for a file
-test/src/expansion/quote_removal.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/expansion/quote_removal.c.s
-.PHONY : test/src/expansion/quote_removal.c.s
-
-test/src/history/test_history.o: test/src/history/test_history.c.o
-
-.PHONY : test/src/history/test_history.o
-
-# target to build an object file
-test/src/history/test_history.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/history/test_history.c.o
-.PHONY : test/src/history/test_history.c.o
-
-test/src/history/test_history.i: test/src/history/test_history.c.i
-
-.PHONY : test/src/history/test_history.i
-
-# target to preprocess a source file
-test/src/history/test_history.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/history/test_history.c.i
-.PHONY : test/src/history/test_history.c.i
-
-test/src/history/test_history.s: test/src/history/test_history.c.s
-
-.PHONY : test/src/history/test_history.s
-
-# target to generate assembly for a file
-test/src/history/test_history.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/history/test_history.c.s
-.PHONY : test/src/history/test_history.c.s
-
-test/src/lexer/test_lexer_reserved_words.o: test/src/lexer/test_lexer_reserved_words.c.o
-
-.PHONY : test/src/lexer/test_lexer_reserved_words.o
-
-# target to build an object file
-test/src/lexer/test_lexer_reserved_words.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_reserved_words.c.o
-.PHONY : test/src/lexer/test_lexer_reserved_words.c.o
-
-test/src/lexer/test_lexer_reserved_words.i: test/src/lexer/test_lexer_reserved_words.c.i
-
-.PHONY : test/src/lexer/test_lexer_reserved_words.i
-
-# target to preprocess a source file
-test/src/lexer/test_lexer_reserved_words.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_reserved_words.c.i
-.PHONY : test/src/lexer/test_lexer_reserved_words.c.i
-
-test/src/lexer/test_lexer_reserved_words.s: test/src/lexer/test_lexer_reserved_words.c.s
-
-.PHONY : test/src/lexer/test_lexer_reserved_words.s
-
-# target to generate assembly for a file
-test/src/lexer/test_lexer_reserved_words.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_reserved_words.c.s
-.PHONY : test/src/lexer/test_lexer_reserved_words.c.s
-
-test/src/lexer/test_lexer_rules1.o: test/src/lexer/test_lexer_rules1.c.o
-
-.PHONY : test/src/lexer/test_lexer_rules1.o
-
-# target to build an object file
-test/src/lexer/test_lexer_rules1.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules1.c.o
-.PHONY : test/src/lexer/test_lexer_rules1.c.o
-
-test/src/lexer/test_lexer_rules1.i: test/src/lexer/test_lexer_rules1.c.i
-
-.PHONY : test/src/lexer/test_lexer_rules1.i
-
-# target to preprocess a source file
-test/src/lexer/test_lexer_rules1.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules1.c.i
-.PHONY : test/src/lexer/test_lexer_rules1.c.i
-
-test/src/lexer/test_lexer_rules1.s: test/src/lexer/test_lexer_rules1.c.s
-
-.PHONY : test/src/lexer/test_lexer_rules1.s
-
-# target to generate assembly for a file
-test/src/lexer/test_lexer_rules1.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules1.c.s
-.PHONY : test/src/lexer/test_lexer_rules1.c.s
-
-test/src/lexer/test_lexer_rules2_3.o: test/src/lexer/test_lexer_rules2_3.c.o
-
-.PHONY : test/src/lexer/test_lexer_rules2_3.o
-
-# target to build an object file
-test/src/lexer/test_lexer_rules2_3.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules2_3.c.o
-.PHONY : test/src/lexer/test_lexer_rules2_3.c.o
-
-test/src/lexer/test_lexer_rules2_3.i: test/src/lexer/test_lexer_rules2_3.c.i
-
-.PHONY : test/src/lexer/test_lexer_rules2_3.i
-
-# target to preprocess a source file
-test/src/lexer/test_lexer_rules2_3.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules2_3.c.i
-.PHONY : test/src/lexer/test_lexer_rules2_3.c.i
-
-test/src/lexer/test_lexer_rules2_3.s: test/src/lexer/test_lexer_rules2_3.c.s
-
-.PHONY : test/src/lexer/test_lexer_rules2_3.s
-
-# target to generate assembly for a file
-test/src/lexer/test_lexer_rules2_3.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules2_3.c.s
-.PHONY : test/src/lexer/test_lexer_rules2_3.c.s
-
-test/src/lexer/test_lexer_rules4.o: test/src/lexer/test_lexer_rules4.c.o
-
-.PHONY : test/src/lexer/test_lexer_rules4.o
-
-# target to build an object file
-test/src/lexer/test_lexer_rules4.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules4.c.o
-.PHONY : test/src/lexer/test_lexer_rules4.c.o
-
-test/src/lexer/test_lexer_rules4.i: test/src/lexer/test_lexer_rules4.c.i
-
-.PHONY : test/src/lexer/test_lexer_rules4.i
-
-# target to preprocess a source file
-test/src/lexer/test_lexer_rules4.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules4.c.i
-.PHONY : test/src/lexer/test_lexer_rules4.c.i
-
-test/src/lexer/test_lexer_rules4.s: test/src/lexer/test_lexer_rules4.c.s
-
-.PHONY : test/src/lexer/test_lexer_rules4.s
-
-# target to generate assembly for a file
-test/src/lexer/test_lexer_rules4.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules4.c.s
-.PHONY : test/src/lexer/test_lexer_rules4.c.s
-
-test/src/lexer/test_lexer_rules7.o: test/src/lexer/test_lexer_rules7.c.o
-
-.PHONY : test/src/lexer/test_lexer_rules7.o
-
-# target to build an object file
-test/src/lexer/test_lexer_rules7.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules7.c.o
-.PHONY : test/src/lexer/test_lexer_rules7.c.o
-
-test/src/lexer/test_lexer_rules7.i: test/src/lexer/test_lexer_rules7.c.i
-
-.PHONY : test/src/lexer/test_lexer_rules7.i
-
-# target to preprocess a source file
-test/src/lexer/test_lexer_rules7.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules7.c.i
-.PHONY : test/src/lexer/test_lexer_rules7.c.i
-
-test/src/lexer/test_lexer_rules7.s: test/src/lexer/test_lexer_rules7.c.s
-
-.PHONY : test/src/lexer/test_lexer_rules7.s
-
-# target to generate assembly for a file
-test/src/lexer/test_lexer_rules7.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules7.c.s
-.PHONY : test/src/lexer/test_lexer_rules7.c.s
-
-test/src/lexer/test_lexer_rules8.o: test/src/lexer/test_lexer_rules8.c.o
-
-.PHONY : test/src/lexer/test_lexer_rules8.o
-
-# target to build an object file
-test/src/lexer/test_lexer_rules8.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules8.c.o
-.PHONY : test/src/lexer/test_lexer_rules8.c.o
-
-test/src/lexer/test_lexer_rules8.i: test/src/lexer/test_lexer_rules8.c.i
-
-.PHONY : test/src/lexer/test_lexer_rules8.i
-
-# target to preprocess a source file
-test/src/lexer/test_lexer_rules8.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules8.c.i
-.PHONY : test/src/lexer/test_lexer_rules8.c.i
-
-test/src/lexer/test_lexer_rules8.s: test/src/lexer/test_lexer_rules8.c.s
-
-.PHONY : test/src/lexer/test_lexer_rules8.s
-
-# target to generate assembly for a file
-test/src/lexer/test_lexer_rules8.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules8.c.s
-.PHONY : test/src/lexer/test_lexer_rules8.c.s
-
-test/src/lexer/test_lexer_rules9.o: test/src/lexer/test_lexer_rules9.c.o
-
-.PHONY : test/src/lexer/test_lexer_rules9.o
-
-# target to build an object file
-test/src/lexer/test_lexer_rules9.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules9.c.o
-.PHONY : test/src/lexer/test_lexer_rules9.c.o
-
-test/src/lexer/test_lexer_rules9.i: test/src/lexer/test_lexer_rules9.c.i
-
-.PHONY : test/src/lexer/test_lexer_rules9.i
-
-# target to preprocess a source file
-test/src/lexer/test_lexer_rules9.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules9.c.i
-.PHONY : test/src/lexer/test_lexer_rules9.c.i
-
-test/src/lexer/test_lexer_rules9.s: test/src/lexer/test_lexer_rules9.c.s
-
-.PHONY : test/src/lexer/test_lexer_rules9.s
-
-# target to generate assembly for a file
-test/src/lexer/test_lexer_rules9.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_rules9.c.s
-.PHONY : test/src/lexer/test_lexer_rules9.c.s
-
-test/src/lexer/test_lexer_utils.o: test/src/lexer/test_lexer_utils.c.o
-
-.PHONY : test/src/lexer/test_lexer_utils.o
-
-# target to build an object file
-test/src/lexer/test_lexer_utils.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_utils.c.o
-.PHONY : test/src/lexer/test_lexer_utils.c.o
-
-test/src/lexer/test_lexer_utils.i: test/src/lexer/test_lexer_utils.c.i
-
-.PHONY : test/src/lexer/test_lexer_utils.i
-
-# target to preprocess a source file
-test/src/lexer/test_lexer_utils.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_utils.c.i
-.PHONY : test/src/lexer/test_lexer_utils.c.i
-
-test/src/lexer/test_lexer_utils.s: test/src/lexer/test_lexer_utils.c.s
-
-.PHONY : test/src/lexer/test_lexer_utils.s
-
-# target to generate assembly for a file
-test/src/lexer/test_lexer_utils.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_lexer_utils.c.s
-.PHONY : test/src/lexer/test_lexer_utils.c.s
-
-test/src/lexer/test_line_continuation.o: test/src/lexer/test_line_continuation.c.o
-
-.PHONY : test/src/lexer/test_line_continuation.o
-
-# target to build an object file
-test/src/lexer/test_line_continuation.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_line_continuation.c.o
-.PHONY : test/src/lexer/test_line_continuation.c.o
-
-test/src/lexer/test_line_continuation.i: test/src/lexer/test_line_continuation.c.i
-
-.PHONY : test/src/lexer/test_line_continuation.i
-
-# target to preprocess a source file
-test/src/lexer/test_line_continuation.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_line_continuation.c.i
-.PHONY : test/src/lexer/test_line_continuation.c.i
-
-test/src/lexer/test_line_continuation.s: test/src/lexer/test_line_continuation.c.s
-
-.PHONY : test/src/lexer/test_line_continuation.s
-
-# target to generate assembly for a file
-test/src/lexer/test_line_continuation.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/test_line_continuation.c.s
-.PHONY : test/src/lexer/test_line_continuation.c.s
-
-test/src/lexer/tokenizer.o: test/src/lexer/tokenizer.c.o
-
-.PHONY : test/src/lexer/tokenizer.o
-
-# target to build an object file
-test/src/lexer/tokenizer.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/tokenizer.c.o
-.PHONY : test/src/lexer/tokenizer.c.o
-
-test/src/lexer/tokenizer.i: test/src/lexer/tokenizer.c.i
-
-.PHONY : test/src/lexer/tokenizer.i
-
-# target to preprocess a source file
-test/src/lexer/tokenizer.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/tokenizer.c.i
-.PHONY : test/src/lexer/tokenizer.c.i
-
-test/src/lexer/tokenizer.s: test/src/lexer/tokenizer.c.s
-
-.PHONY : test/src/lexer/tokenizer.s
-
-# target to generate assembly for a file
-test/src/lexer/tokenizer.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/lexer/tokenizer.c.s
-.PHONY : test/src/lexer/tokenizer.c.s
-
-test/src/misc/is_valid_name.o: test/src/misc/is_valid_name.c.o
-
-.PHONY : test/src/misc/is_valid_name.o
-
-# target to build an object file
-test/src/misc/is_valid_name.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/misc/is_valid_name.c.o
-.PHONY : test/src/misc/is_valid_name.c.o
-
-test/src/misc/is_valid_name.i: test/src/misc/is_valid_name.c.i
-
-.PHONY : test/src/misc/is_valid_name.i
-
-# target to preprocess a source file
-test/src/misc/is_valid_name.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/misc/is_valid_name.c.i
-.PHONY : test/src/misc/is_valid_name.c.i
-
-test/src/misc/is_valid_name.s: test/src/misc/is_valid_name.c.s
-
-.PHONY : test/src/misc/is_valid_name.s
-
-# target to generate assembly for a file
-test/src/misc/is_valid_name.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/misc/is_valid_name.c.s
-.PHONY : test/src/misc/is_valid_name.c.s
-
-test/src/misc/test_path_scanning.o: test/src/misc/test_path_scanning.c.o
-
-.PHONY : test/src/misc/test_path_scanning.o
-
-# target to build an object file
-test/src/misc/test_path_scanning.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/misc/test_path_scanning.c.o
-.PHONY : test/src/misc/test_path_scanning.c.o
-
-test/src/misc/test_path_scanning.i: test/src/misc/test_path_scanning.c.i
-
-.PHONY : test/src/misc/test_path_scanning.i
-
-# target to preprocess a source file
-test/src/misc/test_path_scanning.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/misc/test_path_scanning.c.i
-.PHONY : test/src/misc/test_path_scanning.c.i
-
-test/src/misc/test_path_scanning.s: test/src/misc/test_path_scanning.c.s
-
-.PHONY : test/src/misc/test_path_scanning.s
-
-# target to generate assembly for a file
-test/src/misc/test_path_scanning.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/misc/test_path_scanning.c.s
-.PHONY : test/src/misc/test_path_scanning.c.s
-
-test/src/parser/test_parser_and_or.o: test/src/parser/test_parser_and_or.c.o
-
-.PHONY : test/src/parser/test_parser_and_or.o
-
-# target to build an object file
-test/src/parser/test_parser_and_or.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_and_or.c.o
-.PHONY : test/src/parser/test_parser_and_or.c.o
-
-test/src/parser/test_parser_and_or.i: test/src/parser/test_parser_and_or.c.i
-
-.PHONY : test/src/parser/test_parser_and_or.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_and_or.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_and_or.c.i
-.PHONY : test/src/parser/test_parser_and_or.c.i
-
-test/src/parser/test_parser_and_or.s: test/src/parser/test_parser_and_or.c.s
-
-.PHONY : test/src/parser/test_parser_and_or.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_and_or.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_and_or.c.s
-.PHONY : test/src/parser/test_parser_and_or.c.s
-
-test/src/parser/test_parser_ast_compress.o: test/src/parser/test_parser_ast_compress.c.o
-
-.PHONY : test/src/parser/test_parser_ast_compress.o
-
-# target to build an object file
-test/src/parser/test_parser_ast_compress.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_ast_compress.c.o
-.PHONY : test/src/parser/test_parser_ast_compress.c.o
-
-test/src/parser/test_parser_ast_compress.i: test/src/parser/test_parser_ast_compress.c.i
-
-.PHONY : test/src/parser/test_parser_ast_compress.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_ast_compress.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_ast_compress.c.i
-.PHONY : test/src/parser/test_parser_ast_compress.c.i
-
-test/src/parser/test_parser_ast_compress.s: test/src/parser/test_parser_ast_compress.c.s
-
-.PHONY : test/src/parser/test_parser_ast_compress.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_ast_compress.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_ast_compress.c.s
-.PHONY : test/src/parser/test_parser_ast_compress.c.s
-
-test/src/parser/test_parser_cmd_prefix.o: test/src/parser/test_parser_cmd_prefix.c.o
-
-.PHONY : test/src/parser/test_parser_cmd_prefix.o
-
-# target to build an object file
-test/src/parser/test_parser_cmd_prefix.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_cmd_prefix.c.o
-.PHONY : test/src/parser/test_parser_cmd_prefix.c.o
-
-test/src/parser/test_parser_cmd_prefix.i: test/src/parser/test_parser_cmd_prefix.c.i
-
-.PHONY : test/src/parser/test_parser_cmd_prefix.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_cmd_prefix.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_cmd_prefix.c.i
-.PHONY : test/src/parser/test_parser_cmd_prefix.c.i
-
-test/src/parser/test_parser_cmd_prefix.s: test/src/parser/test_parser_cmd_prefix.c.s
-
-.PHONY : test/src/parser/test_parser_cmd_prefix.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_cmd_prefix.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_cmd_prefix.c.s
-.PHONY : test/src/parser/test_parser_cmd_prefix.c.s
-
-test/src/parser/test_parser_cmd_suffix.o: test/src/parser/test_parser_cmd_suffix.c.o
-
-.PHONY : test/src/parser/test_parser_cmd_suffix.o
-
-# target to build an object file
-test/src/parser/test_parser_cmd_suffix.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_cmd_suffix.c.o
-.PHONY : test/src/parser/test_parser_cmd_suffix.c.o
-
-test/src/parser/test_parser_cmd_suffix.i: test/src/parser/test_parser_cmd_suffix.c.i
-
-.PHONY : test/src/parser/test_parser_cmd_suffix.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_cmd_suffix.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_cmd_suffix.c.i
-.PHONY : test/src/parser/test_parser_cmd_suffix.c.i
-
-test/src/parser/test_parser_cmd_suffix.s: test/src/parser/test_parser_cmd_suffix.c.s
-
-.PHONY : test/src/parser/test_parser_cmd_suffix.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_cmd_suffix.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_cmd_suffix.c.s
-.PHONY : test/src/parser/test_parser_cmd_suffix.c.s
-
-test/src/parser/test_parser_command.o: test/src/parser/test_parser_command.c.o
-
-.PHONY : test/src/parser/test_parser_command.o
-
-# target to build an object file
-test/src/parser/test_parser_command.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_command.c.o
-.PHONY : test/src/parser/test_parser_command.c.o
-
-test/src/parser/test_parser_command.i: test/src/parser/test_parser_command.c.i
-
-.PHONY : test/src/parser/test_parser_command.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_command.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_command.c.i
-.PHONY : test/src/parser/test_parser_command.c.i
-
-test/src/parser/test_parser_command.s: test/src/parser/test_parser_command.c.s
-
-.PHONY : test/src/parser/test_parser_command.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_command.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_command.c.s
-.PHONY : test/src/parser/test_parser_command.c.s
-
-test/src/parser/test_parser_io_file.o: test/src/parser/test_parser_io_file.c.o
-
-.PHONY : test/src/parser/test_parser_io_file.o
-
-# target to build an object file
-test/src/parser/test_parser_io_file.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_io_file.c.o
-.PHONY : test/src/parser/test_parser_io_file.c.o
-
-test/src/parser/test_parser_io_file.i: test/src/parser/test_parser_io_file.c.i
-
-.PHONY : test/src/parser/test_parser_io_file.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_io_file.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_io_file.c.i
-.PHONY : test/src/parser/test_parser_io_file.c.i
-
-test/src/parser/test_parser_io_file.s: test/src/parser/test_parser_io_file.c.s
-
-.PHONY : test/src/parser/test_parser_io_file.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_io_file.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_io_file.c.s
-.PHONY : test/src/parser/test_parser_io_file.c.s
-
-test/src/parser/test_parser_io_here.o: test/src/parser/test_parser_io_here.c.o
-
-.PHONY : test/src/parser/test_parser_io_here.o
-
-# target to build an object file
-test/src/parser/test_parser_io_here.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_io_here.c.o
-.PHONY : test/src/parser/test_parser_io_here.c.o
-
-test/src/parser/test_parser_io_here.i: test/src/parser/test_parser_io_here.c.i
-
-.PHONY : test/src/parser/test_parser_io_here.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_io_here.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_io_here.c.i
-.PHONY : test/src/parser/test_parser_io_here.c.i
-
-test/src/parser/test_parser_io_here.s: test/src/parser/test_parser_io_here.c.s
-
-.PHONY : test/src/parser/test_parser_io_here.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_io_here.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_io_here.c.s
-.PHONY : test/src/parser/test_parser_io_here.c.s
-
-test/src/parser/test_parser_io_redirect.o: test/src/parser/test_parser_io_redirect.c.o
-
-.PHONY : test/src/parser/test_parser_io_redirect.o
-
-# target to build an object file
-test/src/parser/test_parser_io_redirect.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_io_redirect.c.o
-.PHONY : test/src/parser/test_parser_io_redirect.c.o
-
-test/src/parser/test_parser_io_redirect.i: test/src/parser/test_parser_io_redirect.c.i
-
-.PHONY : test/src/parser/test_parser_io_redirect.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_io_redirect.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_io_redirect.c.i
-.PHONY : test/src/parser/test_parser_io_redirect.c.i
-
-test/src/parser/test_parser_io_redirect.s: test/src/parser/test_parser_io_redirect.c.s
-
-.PHONY : test/src/parser/test_parser_io_redirect.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_io_redirect.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_io_redirect.c.s
-.PHONY : test/src/parser/test_parser_io_redirect.c.s
-
-test/src/parser/test_parser_linebreak.o: test/src/parser/test_parser_linebreak.c.o
-
-.PHONY : test/src/parser/test_parser_linebreak.o
-
-# target to build an object file
-test/src/parser/test_parser_linebreak.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_linebreak.c.o
-.PHONY : test/src/parser/test_parser_linebreak.c.o
-
-test/src/parser/test_parser_linebreak.i: test/src/parser/test_parser_linebreak.c.i
-
-.PHONY : test/src/parser/test_parser_linebreak.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_linebreak.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_linebreak.c.i
-.PHONY : test/src/parser/test_parser_linebreak.c.i
-
-test/src/parser/test_parser_linebreak.s: test/src/parser/test_parser_linebreak.c.s
-
-.PHONY : test/src/parser/test_parser_linebreak.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_linebreak.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_linebreak.c.s
-.PHONY : test/src/parser/test_parser_linebreak.c.s
-
-test/src/parser/test_parser_newline_list.o: test/src/parser/test_parser_newline_list.c.o
-
-.PHONY : test/src/parser/test_parser_newline_list.o
-
-# target to build an object file
-test/src/parser/test_parser_newline_list.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_newline_list.c.o
-.PHONY : test/src/parser/test_parser_newline_list.c.o
-
-test/src/parser/test_parser_newline_list.i: test/src/parser/test_parser_newline_list.c.i
-
-.PHONY : test/src/parser/test_parser_newline_list.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_newline_list.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_newline_list.c.i
-.PHONY : test/src/parser/test_parser_newline_list.c.i
-
-test/src/parser/test_parser_newline_list.s: test/src/parser/test_parser_newline_list.c.s
-
-.PHONY : test/src/parser/test_parser_newline_list.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_newline_list.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_newline_list.c.s
-.PHONY : test/src/parser/test_parser_newline_list.c.s
-
-test/src/parser/test_parser_pipe_sequence.o: test/src/parser/test_parser_pipe_sequence.c.o
-
-.PHONY : test/src/parser/test_parser_pipe_sequence.o
-
-# target to build an object file
-test/src/parser/test_parser_pipe_sequence.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_pipe_sequence.c.o
-.PHONY : test/src/parser/test_parser_pipe_sequence.c.o
-
-test/src/parser/test_parser_pipe_sequence.i: test/src/parser/test_parser_pipe_sequence.c.i
-
-.PHONY : test/src/parser/test_parser_pipe_sequence.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_pipe_sequence.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_pipe_sequence.c.i
-.PHONY : test/src/parser/test_parser_pipe_sequence.c.i
-
-test/src/parser/test_parser_pipe_sequence.s: test/src/parser/test_parser_pipe_sequence.c.s
-
-.PHONY : test/src/parser/test_parser_pipe_sequence.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_pipe_sequence.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_pipe_sequence.c.s
-.PHONY : test/src/parser/test_parser_pipe_sequence.c.s
-
-test/src/parser/test_parser_program.o: test/src/parser/test_parser_program.c.o
-
-.PHONY : test/src/parser/test_parser_program.o
-
-# target to build an object file
-test/src/parser/test_parser_program.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_program.c.o
-.PHONY : test/src/parser/test_parser_program.c.o
-
-test/src/parser/test_parser_program.i: test/src/parser/test_parser_program.c.i
-
-.PHONY : test/src/parser/test_parser_program.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_program.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_program.c.i
-.PHONY : test/src/parser/test_parser_program.c.i
-
-test/src/parser/test_parser_program.s: test/src/parser/test_parser_program.c.s
-
-.PHONY : test/src/parser/test_parser_program.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_program.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_program.c.s
-.PHONY : test/src/parser/test_parser_program.c.s
-
-test/src/parser/test_parser_redirect_list.o: test/src/parser/test_parser_redirect_list.c.o
-
-.PHONY : test/src/parser/test_parser_redirect_list.o
-
-# target to build an object file
-test/src/parser/test_parser_redirect_list.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_redirect_list.c.o
-.PHONY : test/src/parser/test_parser_redirect_list.c.o
-
-test/src/parser/test_parser_redirect_list.i: test/src/parser/test_parser_redirect_list.c.i
-
-.PHONY : test/src/parser/test_parser_redirect_list.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_redirect_list.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_redirect_list.c.i
-.PHONY : test/src/parser/test_parser_redirect_list.c.i
-
-test/src/parser/test_parser_redirect_list.s: test/src/parser/test_parser_redirect_list.c.s
-
-.PHONY : test/src/parser/test_parser_redirect_list.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_redirect_list.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_redirect_list.c.s
-.PHONY : test/src/parser/test_parser_redirect_list.c.s
-
-test/src/parser/test_parser_separator.o: test/src/parser/test_parser_separator.c.o
-
-.PHONY : test/src/parser/test_parser_separator.o
-
-# target to build an object file
-test/src/parser/test_parser_separator.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_separator.c.o
-.PHONY : test/src/parser/test_parser_separator.c.o
-
-test/src/parser/test_parser_separator.i: test/src/parser/test_parser_separator.c.i
-
-.PHONY : test/src/parser/test_parser_separator.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_separator.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_separator.c.i
-.PHONY : test/src/parser/test_parser_separator.c.i
-
-test/src/parser/test_parser_separator.s: test/src/parser/test_parser_separator.c.s
-
-.PHONY : test/src/parser/test_parser_separator.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_separator.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_separator.c.s
-.PHONY : test/src/parser/test_parser_separator.c.s
-
-test/src/parser/test_parser_separator_op.o: test/src/parser/test_parser_separator_op.c.o
-
-.PHONY : test/src/parser/test_parser_separator_op.o
-
-# target to build an object file
-test/src/parser/test_parser_separator_op.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_separator_op.c.o
-.PHONY : test/src/parser/test_parser_separator_op.c.o
-
-test/src/parser/test_parser_separator_op.i: test/src/parser/test_parser_separator_op.c.i
-
-.PHONY : test/src/parser/test_parser_separator_op.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_separator_op.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_separator_op.c.i
-.PHONY : test/src/parser/test_parser_separator_op.c.i
-
-test/src/parser/test_parser_separator_op.s: test/src/parser/test_parser_separator_op.c.s
-
-.PHONY : test/src/parser/test_parser_separator_op.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_separator_op.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_separator_op.c.s
-.PHONY : test/src/parser/test_parser_separator_op.c.s
-
-test/src/parser/test_parser_simple_command.o: test/src/parser/test_parser_simple_command.c.o
-
-.PHONY : test/src/parser/test_parser_simple_command.o
-
-# target to build an object file
-test/src/parser/test_parser_simple_command.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_simple_command.c.o
-.PHONY : test/src/parser/test_parser_simple_command.c.o
-
-test/src/parser/test_parser_simple_command.i: test/src/parser/test_parser_simple_command.c.i
-
-.PHONY : test/src/parser/test_parser_simple_command.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_simple_command.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_simple_command.c.i
-.PHONY : test/src/parser/test_parser_simple_command.c.i
-
-test/src/parser/test_parser_simple_command.s: test/src/parser/test_parser_simple_command.c.s
-
-.PHONY : test/src/parser/test_parser_simple_command.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_simple_command.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_simple_command.c.s
-.PHONY : test/src/parser/test_parser_simple_command.c.s
-
-test/src/parser/test_parser_utils.o: test/src/parser/test_parser_utils.c.o
-
-.PHONY : test/src/parser/test_parser_utils.o
-
-# target to build an object file
-test/src/parser/test_parser_utils.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_utils.c.o
-.PHONY : test/src/parser/test_parser_utils.c.o
-
-test/src/parser/test_parser_utils.i: test/src/parser/test_parser_utils.c.i
-
-.PHONY : test/src/parser/test_parser_utils.i
-
-# target to preprocess a source file
-test/src/parser/test_parser_utils.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_utils.c.i
-.PHONY : test/src/parser/test_parser_utils.c.i
-
-test/src/parser/test_parser_utils.s: test/src/parser/test_parser_utils.c.s
-
-.PHONY : test/src/parser/test_parser_utils.s
-
-# target to generate assembly for a file
-test/src/parser/test_parser_utils.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/parser/test_parser_utils.c.s
-.PHONY : test/src/parser/test_parser_utils.c.s
-
-test/src/string/test_string_escape.o: test/src/string/test_string_escape.c.o
-
-.PHONY : test/src/string/test_string_escape.o
-
-# target to build an object file
-test/src/string/test_string_escape.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/string/test_string_escape.c.o
-.PHONY : test/src/string/test_string_escape.c.o
-
-test/src/string/test_string_escape.i: test/src/string/test_string_escape.c.i
-
-.PHONY : test/src/string/test_string_escape.i
-
-# target to preprocess a source file
-test/src/string/test_string_escape.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/string/test_string_escape.c.i
-.PHONY : test/src/string/test_string_escape.c.i
-
-test/src/string/test_string_escape.s: test/src/string/test_string_escape.c.s
-
-.PHONY : test/src/string/test_string_escape.s
-
-# target to generate assembly for a file
-test/src/string/test_string_escape.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/string/test_string_escape.c.s
-.PHONY : test/src/string/test_string_escape.c.s
-
-test/src/tokenizer/tokenizer.o: test/src/tokenizer/tokenizer.c.o
-
-.PHONY : test/src/tokenizer/tokenizer.o
-
-# target to build an object file
-test/src/tokenizer/tokenizer.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/tokenizer/tokenizer.c.o
-.PHONY : test/src/tokenizer/tokenizer.c.o
-
-test/src/tokenizer/tokenizer.i: test/src/tokenizer/tokenizer.c.i
-
-.PHONY : test/src/tokenizer/tokenizer.i
-
-# target to preprocess a source file
-test/src/tokenizer/tokenizer.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/tokenizer/tokenizer.c.i
-.PHONY : test/src/tokenizer/tokenizer.c.i
-
-test/src/tokenizer/tokenizer.s: test/src/tokenizer/tokenizer.c.s
-
-.PHONY : test/src/tokenizer/tokenizer.s
-
-# target to generate assembly for a file
-test/src/tokenizer/tokenizer.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/tokenizer/tokenizer.c.s
-.PHONY : test/src/tokenizer/tokenizer.c.s
-
-test/src/ui/test_ui.o: test/src/ui/test_ui.c.o
-
-.PHONY : test/src/ui/test_ui.o
-
-# target to build an object file
-test/src/ui/test_ui.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/ui/test_ui.c.o
-.PHONY : test/src/ui/test_ui.c.o
-
-test/src/ui/test_ui.i: test/src/ui/test_ui.c.i
-
-.PHONY : test/src/ui/test_ui.i
-
-# target to preprocess a source file
-test/src/ui/test_ui.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/ui/test_ui.c.i
-.PHONY : test/src/ui/test_ui.c.i
-
-test/src/ui/test_ui.s: test/src/ui/test_ui.c.s
-
-.PHONY : test/src/ui/test_ui.s
-
-# target to generate assembly for a file
-test/src/ui/test_ui.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/ui/test_ui.c.s
-.PHONY : test/src/ui/test_ui.c.s
-
-test/src/var/test_var.o: test/src/var/test_var.c.o
-
-.PHONY : test/src/var/test_var.o
-
-# target to build an object file
-test/src/var/test_var.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/var/test_var.c.o
-.PHONY : test/src/var/test_var.c.o
-
-test/src/var/test_var.i: test/src/var/test_var.c.i
-
-.PHONY : test/src/var/test_var.i
-
-# target to preprocess a source file
-test/src/var/test_var.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/var/test_var.c.i
-.PHONY : test/src/var/test_var.c.i
-
-test/src/var/test_var.s: test/src/var/test_var.c.s
-
-.PHONY : test/src/var/test_var.s
-
-# target to generate assembly for a file
-test/src/var/test_var.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/test/src/var/test_var.c.s
-.PHONY : test/src/var/test_var.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -9411,6 +8628,39 @@ help:
 	@echo "... libs/libft/srcs/my_gnl.o"
 	@echo "... libs/libft/srcs/my_gnl.i"
 	@echo "... libs/libft/srcs/my_gnl.s"
+	@echo "... libs/logger/srcs/display/logger_debug.o"
+	@echo "... libs/logger/srcs/display/logger_debug.i"
+	@echo "... libs/logger/srcs/display/logger_debug.s"
+	@echo "... libs/logger/srcs/display/logger_error.o"
+	@echo "... libs/logger/srcs/display/logger_error.i"
+	@echo "... libs/logger/srcs/display/logger_error.s"
+	@echo "... libs/logger/srcs/display/logger_fatal.o"
+	@echo "... libs/logger/srcs/display/logger_fatal.i"
+	@echo "... libs/logger/srcs/display/logger_fatal.s"
+	@echo "... libs/logger/srcs/display/logger_info.o"
+	@echo "... libs/logger/srcs/display/logger_info.i"
+	@echo "... libs/logger/srcs/display/logger_info.s"
+	@echo "... libs/logger/srcs/display/logger_success.o"
+	@echo "... libs/logger/srcs/display/logger_success.i"
+	@echo "... libs/logger/srcs/display/logger_success.s"
+	@echo "... libs/logger/srcs/display/logger_trace.o"
+	@echo "... libs/logger/srcs/display/logger_trace.i"
+	@echo "... libs/logger/srcs/display/logger_trace.s"
+	@echo "... libs/logger/srcs/display/logger_warn.o"
+	@echo "... libs/logger/srcs/display/logger_warn.i"
+	@echo "... libs/logger/srcs/display/logger_warn.s"
+	@echo "... libs/logger/srcs/logger/logger_close.o"
+	@echo "... libs/logger/srcs/logger/logger_close.i"
+	@echo "... libs/logger/srcs/logger/logger_close.s"
+	@echo "... libs/logger/srcs/logger/logger_init.o"
+	@echo "... libs/logger/srcs/logger/logger_init.i"
+	@echo "... libs/logger/srcs/logger/logger_init.s"
+	@echo "... libs/logger/srcs/utils/logger_get_time.o"
+	@echo "... libs/logger/srcs/utils/logger_get_time.i"
+	@echo "... libs/logger/srcs/utils/logger_get_time.s"
+	@echo "... libs/logger/srcs/utils/logger_init_open_file.o"
+	@echo "... libs/logger/srcs/utils/logger_init_open_file.i"
+	@echo "... libs/logger/srcs/utils/logger_init_open_file.s"
 	@echo "... libs/printf/srcs/clean_struct.o"
 	@echo "... libs/printf/srcs/clean_struct.i"
 	@echo "... libs/printf/srcs/clean_struct.s"
@@ -10002,126 +9252,6 @@ help:
 	@echo "... srcs/term/set_term.o"
 	@echo "... srcs/term/set_term.i"
 	@echo "... srcs/term/set_term.s"
-	@echo "... test/by_hand/fdOpen.o"
-	@echo "... test/by_hand/fdOpen.i"
-	@echo "... test/by_hand/fdOpen.s"
-	@echo "... test/src/autocompletion/test_complete_binary.o"
-	@echo "... test/src/autocompletion/test_complete_binary.i"
-	@echo "... test/src/autocompletion/test_complete_binary.s"
-	@echo "... test/src/autocompletion/test_complete_builtin.o"
-	@echo "... test/src/autocompletion/test_complete_builtin.i"
-	@echo "... test/src/autocompletion/test_complete_builtin.s"
-	@echo "... test/src/builtins/test_builtin_history.o"
-	@echo "... test/src/builtins/test_builtin_history.i"
-	@echo "... test/src/builtins/test_builtin_history.s"
-	@echo "... test/src/builtins/test_builtins.o"
-	@echo "... test/src/builtins/test_builtins.i"
-	@echo "... test/src/builtins/test_builtins.s"
-	@echo "... test/src/expansion/quote_removal.o"
-	@echo "... test/src/expansion/quote_removal.i"
-	@echo "... test/src/expansion/quote_removal.s"
-	@echo "... test/src/history/test_history.o"
-	@echo "... test/src/history/test_history.i"
-	@echo "... test/src/history/test_history.s"
-	@echo "... test/src/lexer/test_lexer_reserved_words.o"
-	@echo "... test/src/lexer/test_lexer_reserved_words.i"
-	@echo "... test/src/lexer/test_lexer_reserved_words.s"
-	@echo "... test/src/lexer/test_lexer_rules1.o"
-	@echo "... test/src/lexer/test_lexer_rules1.i"
-	@echo "... test/src/lexer/test_lexer_rules1.s"
-	@echo "... test/src/lexer/test_lexer_rules2_3.o"
-	@echo "... test/src/lexer/test_lexer_rules2_3.i"
-	@echo "... test/src/lexer/test_lexer_rules2_3.s"
-	@echo "... test/src/lexer/test_lexer_rules4.o"
-	@echo "... test/src/lexer/test_lexer_rules4.i"
-	@echo "... test/src/lexer/test_lexer_rules4.s"
-	@echo "... test/src/lexer/test_lexer_rules7.o"
-	@echo "... test/src/lexer/test_lexer_rules7.i"
-	@echo "... test/src/lexer/test_lexer_rules7.s"
-	@echo "... test/src/lexer/test_lexer_rules8.o"
-	@echo "... test/src/lexer/test_lexer_rules8.i"
-	@echo "... test/src/lexer/test_lexer_rules8.s"
-	@echo "... test/src/lexer/test_lexer_rules9.o"
-	@echo "... test/src/lexer/test_lexer_rules9.i"
-	@echo "... test/src/lexer/test_lexer_rules9.s"
-	@echo "... test/src/lexer/test_lexer_utils.o"
-	@echo "... test/src/lexer/test_lexer_utils.i"
-	@echo "... test/src/lexer/test_lexer_utils.s"
-	@echo "... test/src/lexer/test_line_continuation.o"
-	@echo "... test/src/lexer/test_line_continuation.i"
-	@echo "... test/src/lexer/test_line_continuation.s"
-	@echo "... test/src/lexer/tokenizer.o"
-	@echo "... test/src/lexer/tokenizer.i"
-	@echo "... test/src/lexer/tokenizer.s"
-	@echo "... test/src/misc/is_valid_name.o"
-	@echo "... test/src/misc/is_valid_name.i"
-	@echo "... test/src/misc/is_valid_name.s"
-	@echo "... test/src/misc/test_path_scanning.o"
-	@echo "... test/src/misc/test_path_scanning.i"
-	@echo "... test/src/misc/test_path_scanning.s"
-	@echo "... test/src/parser/test_parser_and_or.o"
-	@echo "... test/src/parser/test_parser_and_or.i"
-	@echo "... test/src/parser/test_parser_and_or.s"
-	@echo "... test/src/parser/test_parser_ast_compress.o"
-	@echo "... test/src/parser/test_parser_ast_compress.i"
-	@echo "... test/src/parser/test_parser_ast_compress.s"
-	@echo "... test/src/parser/test_parser_cmd_prefix.o"
-	@echo "... test/src/parser/test_parser_cmd_prefix.i"
-	@echo "... test/src/parser/test_parser_cmd_prefix.s"
-	@echo "... test/src/parser/test_parser_cmd_suffix.o"
-	@echo "... test/src/parser/test_parser_cmd_suffix.i"
-	@echo "... test/src/parser/test_parser_cmd_suffix.s"
-	@echo "... test/src/parser/test_parser_command.o"
-	@echo "... test/src/parser/test_parser_command.i"
-	@echo "... test/src/parser/test_parser_command.s"
-	@echo "... test/src/parser/test_parser_io_file.o"
-	@echo "... test/src/parser/test_parser_io_file.i"
-	@echo "... test/src/parser/test_parser_io_file.s"
-	@echo "... test/src/parser/test_parser_io_here.o"
-	@echo "... test/src/parser/test_parser_io_here.i"
-	@echo "... test/src/parser/test_parser_io_here.s"
-	@echo "... test/src/parser/test_parser_io_redirect.o"
-	@echo "... test/src/parser/test_parser_io_redirect.i"
-	@echo "... test/src/parser/test_parser_io_redirect.s"
-	@echo "... test/src/parser/test_parser_linebreak.o"
-	@echo "... test/src/parser/test_parser_linebreak.i"
-	@echo "... test/src/parser/test_parser_linebreak.s"
-	@echo "... test/src/parser/test_parser_newline_list.o"
-	@echo "... test/src/parser/test_parser_newline_list.i"
-	@echo "... test/src/parser/test_parser_newline_list.s"
-	@echo "... test/src/parser/test_parser_pipe_sequence.o"
-	@echo "... test/src/parser/test_parser_pipe_sequence.i"
-	@echo "... test/src/parser/test_parser_pipe_sequence.s"
-	@echo "... test/src/parser/test_parser_program.o"
-	@echo "... test/src/parser/test_parser_program.i"
-	@echo "... test/src/parser/test_parser_program.s"
-	@echo "... test/src/parser/test_parser_redirect_list.o"
-	@echo "... test/src/parser/test_parser_redirect_list.i"
-	@echo "... test/src/parser/test_parser_redirect_list.s"
-	@echo "... test/src/parser/test_parser_separator.o"
-	@echo "... test/src/parser/test_parser_separator.i"
-	@echo "... test/src/parser/test_parser_separator.s"
-	@echo "... test/src/parser/test_parser_separator_op.o"
-	@echo "... test/src/parser/test_parser_separator_op.i"
-	@echo "... test/src/parser/test_parser_separator_op.s"
-	@echo "... test/src/parser/test_parser_simple_command.o"
-	@echo "... test/src/parser/test_parser_simple_command.i"
-	@echo "... test/src/parser/test_parser_simple_command.s"
-	@echo "... test/src/parser/test_parser_utils.o"
-	@echo "... test/src/parser/test_parser_utils.i"
-	@echo "... test/src/parser/test_parser_utils.s"
-	@echo "... test/src/string/test_string_escape.o"
-	@echo "... test/src/string/test_string_escape.i"
-	@echo "... test/src/string/test_string_escape.s"
-	@echo "... test/src/tokenizer/tokenizer.o"
-	@echo "... test/src/tokenizer/tokenizer.i"
-	@echo "... test/src/tokenizer/tokenizer.s"
-	@echo "... test/src/ui/test_ui.o"
-	@echo "... test/src/ui/test_ui.i"
-	@echo "... test/src/ui/test_ui.s"
-	@echo "... test/src/var/test_var.o"
-	@echo "... test/src/var/test_var.i"
-	@echo "... test/src/var/test_var.s"
 .PHONY : help
 
 

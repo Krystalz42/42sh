@@ -15,6 +15,7 @@
 int			main(void)
 {
 	logger_init(7, "log");
+	log_success("PID [%d] PGID [%d] PPID [%d]", getpid(), getpgid(0), getppid());
 	init_env();
 	init_term();
 	write_history_in_sh(get_str_from_history());

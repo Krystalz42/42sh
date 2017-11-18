@@ -14,6 +14,8 @@
 
 int			refresh_command(t_read **read_std, unsigned long buff)
 {
+	(void)buff;
 	tputs(tgetstr(CLEAR, 0), STDIN_FILENO, &my_put);
 	(*read_std)->print = 2;
+	return (1);
 }

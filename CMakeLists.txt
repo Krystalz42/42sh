@@ -108,6 +108,17 @@ set(SOURCE_FILES
         libs/libft/srcs/my_gnl.c
         libs/logger/incs/logger.h
         libs/logger/incs/logger_utils.h
+        libs/logger/srcs/display/logger_debug.c
+        libs/logger/srcs/display/logger_error.c
+        libs/logger/srcs/display/logger_fatal.c
+        libs/logger/srcs/display/logger_info.c
+        libs/logger/srcs/display/logger_success.c
+        libs/logger/srcs/display/logger_trace.c
+        libs/logger/srcs/display/logger_warn.c
+        libs/logger/srcs/logger/logger_close.c
+        libs/logger/srcs/logger/logger_init.c
+        libs/logger/srcs/utils/logger_get_time.c
+        libs/logger/srcs/utils/logger_init_open_file.c
         libs/printf/incs/ft_printf.h
         libs/printf/srcs/clean_struct.c
         libs/printf/srcs/clear_flag.c
@@ -305,52 +316,13 @@ set(SOURCE_FILES
         srcs/term/init_fd.c
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
-        srcs/term/set_term.c
-        test/by_hand/fdOpen.c
-        test/inc/header.h
-        test/src/autocompletion/test_complete_binary.c
-        test/src/autocompletion/test_complete_builtin.c
-        test/src/builtins/test_builtin_history.c
-        test/src/builtins/test_builtins.c
-        test/src/expansion/quote_removal.c
-        test/src/history/test_history.c
-        test/src/lexer/test_lexer_reserved_words.c
-        test/src/lexer/test_lexer_rules1.c
-        test/src/lexer/test_lexer_rules2_3.c
-        test/src/lexer/test_lexer_rules4.c
-        test/src/lexer/test_lexer_rules7.c
-        test/src/lexer/test_lexer_rules8.c
-        test/src/lexer/test_lexer_rules9.c
-        test/src/lexer/test_lexer_utils.c
-        test/src/lexer/test_line_continuation.c
-        test/src/lexer/tokenizer.c
-        test/src/misc/is_valid_name.c
-        test/src/misc/test_path_scanning.c
-        test/src/parser/test_parser_and_or.c
-        test/src/parser/test_parser_ast_compress.c
-        test/src/parser/test_parser_cmd_prefix.c
-        test/src/parser/test_parser_cmd_suffix.c
-        test/src/parser/test_parser_command.c
-        test/src/parser/test_parser_io_file.c
-        test/src/parser/test_parser_io_here.c
-        test/src/parser/test_parser_io_redirect.c
-        test/src/parser/test_parser_linebreak.c
-        test/src/parser/test_parser_newline_list.c
-        test/src/parser/test_parser_pipe_sequence.c
-        test/src/parser/test_parser_program.c
-        test/src/parser/test_parser_redirect_list.c
-        test/src/parser/test_parser_separator.c
-        test/src/parser/test_parser_separator_op.c
-        test/src/parser/test_parser_simple_command.c
-        test/src/parser/test_parser_utils.c
-        test/src/string/test_string_escape.c
-        test/src/tokenizer/tokenizer.c
-        test/src/ui/test_ui.c
-        test/src/var/test_var.c)
+        srcs/term/set_term.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)
 include_directories(libs/logger/incs)
 include_directories(libs/printf/incs)
+
+link_libraries(-lncurses)
 
 add_executable(42sh_final ${SOURCE_FILES})
