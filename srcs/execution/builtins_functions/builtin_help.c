@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:19 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/18 17:14:56 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/18 18:08:05 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ int					get_option(char **cmd, int option)
 	int			index;
 	int			table;
 
-	option = 0;
 	table = 0;
 	while (cmd[++table] && !(index = 0))
 	{
@@ -72,12 +71,13 @@ uint8_t				builtin_help(t_node *node, int info)
 {
 	int			option;
 
+	(void)info;
 	option = 0;
 	if (node->content->command[1] &&
 			!ft_strcmp(node->content->command[1], HELP))
 		option = 1;
 	else if (node->content->command[1] && node->content->command[1][0] == '-')
-		if ((option = get_option(node->content->command, info)) == -1)
+		if ((option = get_option(node->content->command, 0)) == -1)
 			return (var_return(1));
 	(option == 0) && help_move();
 	(option == 0) && help_history();
