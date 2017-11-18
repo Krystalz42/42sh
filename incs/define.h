@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/18 12:06:23 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/18 17:56:53 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,114 +123,6 @@
 # define H_HF					"-f                      : usage foreground\n"
 # define H_HG					"-g                      : usage background\n"
 # define H_HC					"-c                      : usage cd\n"
-
-# define H_MOVE					"Commands For Moving :\n"
-# define H_CA					"C-a                     : Move to the start of the current line. \n"
-# define H_CE					"C-e                     : Move to the end of \
-the line. \n"
-# define H_CF					"C-f                     : Move forward a \
-character.  \n"
-# define H_CB					"C-b                     : Move back a\
- character.  \n"
-# define H_MF					"M-f                     : Move forward to the \
-end of the next word.\n"
-# define H_MB					"M-b                     : Move back to the \
-start of this, or the previous, word.\n"
-# define H_CL					"C-l                     : Clear the screen \
-and redraw the current line.\n"
-
-# define H_HISTORY				"Commands For Manipulating The History :\n"
-# define H_CP					"C-p                     : Move `up' through\
- the history list. \n"
-# define H_CN					"C-n                     : Move `down' through \
-the history list. \n"
-# define H_CR					"C-r                     : Search backward \
-starting \
-at the current line and moving `up' through the history as necessary.\n"
-# define H_CD					"C-d                     : Delete the character\
- under the cursor. If the cursor is at the beginning of the line, there are no \
-characters in the line, and the last character typed was not bound to \
-delete-char, then return EOF.\n"
-# define H_MU					"M-u                     : Uppercase the \
-current (or following) word.\n"
-# define H_ML					"M-l                     : Lowercase the \
-current (or following) word.\n"
-# define H_MC					"M-c                     : Capitalize \
-the current (or following) word.\n"
-# define H_C_					"C-_                     : Undo the last action\
-\n."
-
-# define H_KILL_AND_YANK		"Killing And Yanking :\n"
-# define H_CK					"C-k                     : Kill the text from\
- the current cursor position to the end of the line.\n"
-# define H_MD					"M-d                     : Kill from the cursor\
- to the end of the current word, or if between words, to the end of \
-the next word. \n"
-# define H_MDEL					"M-DEL                   : Kill the word behind\
- the cursor. \n"
-# define H_MY					"M-y                     : Yank the \
-top of the kill ring into the buffer at the current cursor position.\n"
-
-# define HASH_R					"-r                      : Reset the hash \
-table.\n"
-# define HASH_DEFAULT			"otherwise               : Print the hash \
-list.\n"
-# define HISTORY_L				"-c                      : Clear the history \
-list.\n"
-# define HISTORY_D				"-d offset               : Delete the history \
-entry at \
-position offset.\n"
-# define HISTORY_R				"-r [pathname]           : Read the history \
-file\
- and append its contents to the history list.\n"
-# define HISTORY_W				"-w [pathname]           : Write out the \
-current\
- history list to the history file.\n"
-# define HISTORY_DEFAULT		"otherwise               : Print history list\n"
-
-# define JOBS_P					"-p                      : List only the \
-process\
-ID of the job’s process group leader.\n"
-# define JOBS_R					"-r                      : Display only \
-running \
-jobs.\n"
-# define JOBS_S					"-s                      : Display only stopped\
-jobs.\n"
-# define JOBS_L					"-l                      : List process IDs in \
-addition to the normal information.\n"
-# define JOBS_DEFAULT			"otherwise               : Display all jobs.\n"
-
-# define KILL_L					"-l                      : If no operand is \
-given, list the signal names; otherwise, write the signal name corresponding to\
- exit_status.\n"
-# define KILL_NAME				"-[signal_name]   pid .. : A symbolic signal \
-name specifying the signal \
-to be sent instead of the default TERM.\n"
-# define KILL_NUMBER			"-[signal_number] pid .. : A non-negative \
-decimal integer, specifying \
-the signal to be sent instead of the default TERM.\n"
-# define ENV_DEFAULT			"[name=value ...]        : Add [name=value] to\
- own env temporarily.\n"
-# define ENV_U					"-i [name=value ...]     : Add [name=value] \
-to empty env temporarily.\n"
-# define ENV_I					"-u [name]               : Remove [name] to \
-own env temporarily.\n"
-# define UNSET					"[name]                  : Unset the variable \
-in environement.\n"
-# define SET					"[name=value]            : Set the variable \
-in environement.\n"
-
-# define FG_DEFAULT				"otherwise               : Put the most large\
- jobs in foreground.\n"
-# define FG_JOBSSPEC			"%[number ..]            : Put the specified\
-jobs in foreground.\n"
-# define BG_JOBSSPEC			"%[number ..]            : Put the specified\
-jobs in background.\n"
-# define BG_DEFAULT				"otherwise               : Put the most large\
- jobs in background.\n"
-
-# define CD_DEFAULT				"[path]					 : Change the current \
-directory.\n"
 
 /*
 **			VARIOUS DEFINE
