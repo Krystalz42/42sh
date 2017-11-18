@@ -31,5 +31,5 @@ uint8_t			execute_node(t_node *node, t_jobs *jobs, int info)
 {
 	if (node)
 		g_execute[node->content->value](node, jobs, info);
-	return (0);
+	return (var_return(-1));
 }

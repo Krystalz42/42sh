@@ -48,6 +48,7 @@ static void		place_new_undo(t_outstanding *undo)
 	if (undo->prev)
 	{
 		undo = undo->prev;
+		undo->next = NULL;
 		ft_memdel((void **)&to_kill);
 		get_os_pointer(undo, 0);
 	}
@@ -67,10 +68,10 @@ int				key_undo_(t_read **read_std, unsigned long buff)
 	(void)buff;
 	if ((undo = get_os_pointer(NULL, 0)))
 	{
+		log_trace("Find undo");
 		while (g_to_do[++i].key)
 			if (g_to_do[i].key == undo->movement)
 			{
-				log_trace("Undo do %d", i);
 				if (undo->movement == META_U || undo->movement == META_L)
 					key_shift_left(read_std, 0);
 				g_to_do[i].function(read_std, 0);

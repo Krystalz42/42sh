@@ -14,9 +14,18 @@
 
 int				wait_group(t_process *process, int option)
 {
-	log_fatal("%d", process->pgid);
-	waitpid(-process->pgid, &process->status, option);
-	return (1);
+	int		ret;
+
+	ret = 0;
+	while (process)
+	{
+		if ((waitpid(process->pid, &process->status, option)) > 0)
+			ret = 1;
+		process = process->next;
+	}
+//	log_fatal("%d", process->pgid);
+//	waitpid(-process->pgid, &process->status, option);
+	return (ret);
 }
 
 void			set_fildes(pid_t pgid)

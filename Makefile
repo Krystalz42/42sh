@@ -321,7 +321,6 @@ $(NAME)		: $(DIR_OBJS) $(DIR_DEPS) $(O_SRCS) $(LIBS)
 	@printf "$(GRN)[ Created Executable ]$(RST) %s\n" $(NAME)
 
 fs			:
-	@ASAN_OPTIONS=detect_leaks=1
 	@$(CC) $(LDFLAGS) $(DFLAGS) $(LDLIBS) $(O_SRCS) -o $(NAME)
 	@printf "$(GRN)[ /!\ MEMORY CHECK /!\ ]$(RST) %s\n" $(NAME)
 

@@ -144,12 +144,10 @@ set(SOURCE_FILES
         srcs/env/my_getenv.c
         srcs/env/remove_environment.c
         srcs/error_function/bip.c
-        srcs/error_function/create_fildes.c
         srcs/error_function/usage_builtins.c
         srcs/error_function/usage_builtins2.c
         srcs/execution/builtins_functions/basic_help.c
         srcs/execution/builtins_functions/builtin_cd.c
-        srcs/execution/builtins_functions/builtin_cderr.c
         srcs/execution/builtins_functions/builtin_data.c
         srcs/execution/builtins_functions/builtin_echo.c
         srcs/execution/builtins_functions/builtin_env.c
@@ -224,6 +222,7 @@ set(SOURCE_FILES
         srcs/parsing/expanding/escape.c
         srcs/parsing/expanding/special.c
         srcs/parsing/expanding/split.c
+        srcs/parsing/expanding/split_tools.c
         srcs/parsing/expanding/tilde.c
         srcs/parsing/expanding/tools.c
         srcs/parsing/expanding/variable.c
@@ -234,7 +233,6 @@ set(SOURCE_FILES
         srcs/parsing/parsing/parsing.c
         srcs/parsing/tools/error.c
         srcs/parsing/tools/list.c
-        srcs/parsing/tools/logger.c
         srcs/parsing/parsing.c
         srcs/read/completion/check_binary_path.c
         srcs/read/completion/color_completion.c

@@ -3660,33 +3660,6 @@ srcs/error_function/bip.c.s:
 	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/error_function/bip.c.s
 .PHONY : srcs/error_function/bip.c.s
 
-srcs/error_function/create_fildes.o: srcs/error_function/create_fildes.c.o
-
-.PHONY : srcs/error_function/create_fildes.o
-
-# target to build an object file
-srcs/error_function/create_fildes.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/error_function/create_fildes.c.o
-.PHONY : srcs/error_function/create_fildes.c.o
-
-srcs/error_function/create_fildes.i: srcs/error_function/create_fildes.c.i
-
-.PHONY : srcs/error_function/create_fildes.i
-
-# target to preprocess a source file
-srcs/error_function/create_fildes.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/error_function/create_fildes.c.i
-.PHONY : srcs/error_function/create_fildes.c.i
-
-srcs/error_function/create_fildes.s: srcs/error_function/create_fildes.c.s
-
-.PHONY : srcs/error_function/create_fildes.s
-
-# target to generate assembly for a file
-srcs/error_function/create_fildes.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/error_function/create_fildes.c.s
-.PHONY : srcs/error_function/create_fildes.c.s
-
 srcs/error_function/usage_builtins.o: srcs/error_function/usage_builtins.c.o
 
 .PHONY : srcs/error_function/usage_builtins.o
@@ -3794,33 +3767,6 @@ srcs/execution/builtins_functions/builtin_cd.s: srcs/execution/builtins_function
 srcs/execution/builtins_functions/builtin_cd.c.s:
 	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/builtins_functions/builtin_cd.c.s
 .PHONY : srcs/execution/builtins_functions/builtin_cd.c.s
-
-srcs/execution/builtins_functions/builtin_cderr.o: srcs/execution/builtins_functions/builtin_cderr.c.o
-
-.PHONY : srcs/execution/builtins_functions/builtin_cderr.o
-
-# target to build an object file
-srcs/execution/builtins_functions/builtin_cderr.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/builtins_functions/builtin_cderr.c.o
-.PHONY : srcs/execution/builtins_functions/builtin_cderr.c.o
-
-srcs/execution/builtins_functions/builtin_cderr.i: srcs/execution/builtins_functions/builtin_cderr.c.i
-
-.PHONY : srcs/execution/builtins_functions/builtin_cderr.i
-
-# target to preprocess a source file
-srcs/execution/builtins_functions/builtin_cderr.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/builtins_functions/builtin_cderr.c.i
-.PHONY : srcs/execution/builtins_functions/builtin_cderr.c.i
-
-srcs/execution/builtins_functions/builtin_cderr.s: srcs/execution/builtins_functions/builtin_cderr.c.s
-
-.PHONY : srcs/execution/builtins_functions/builtin_cderr.s
-
-# target to generate assembly for a file
-srcs/execution/builtins_functions/builtin_cderr.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/builtins_functions/builtin_cderr.c.s
-.PHONY : srcs/execution/builtins_functions/builtin_cderr.c.s
 
 srcs/execution/builtins_functions/builtin_data.o: srcs/execution/builtins_functions/builtin_data.c.o
 
@@ -5820,6 +5766,33 @@ srcs/parsing/expanding/split.c.s:
 	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/parsing/expanding/split.c.s
 .PHONY : srcs/parsing/expanding/split.c.s
 
+srcs/parsing/expanding/split_tools.o: srcs/parsing/expanding/split_tools.c.o
+
+.PHONY : srcs/parsing/expanding/split_tools.o
+
+# target to build an object file
+srcs/parsing/expanding/split_tools.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/parsing/expanding/split_tools.c.o
+.PHONY : srcs/parsing/expanding/split_tools.c.o
+
+srcs/parsing/expanding/split_tools.i: srcs/parsing/expanding/split_tools.c.i
+
+.PHONY : srcs/parsing/expanding/split_tools.i
+
+# target to preprocess a source file
+srcs/parsing/expanding/split_tools.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/parsing/expanding/split_tools.c.i
+.PHONY : srcs/parsing/expanding/split_tools.c.i
+
+srcs/parsing/expanding/split_tools.s: srcs/parsing/expanding/split_tools.c.s
+
+.PHONY : srcs/parsing/expanding/split_tools.s
+
+# target to generate assembly for a file
+srcs/parsing/expanding/split_tools.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/parsing/expanding/split_tools.c.s
+.PHONY : srcs/parsing/expanding/split_tools.c.s
+
 srcs/parsing/expanding/tilde.o: srcs/parsing/expanding/tilde.c.o
 
 .PHONY : srcs/parsing/expanding/tilde.o
@@ -6116,33 +6089,6 @@ srcs/parsing/tools/list.s: srcs/parsing/tools/list.c.s
 srcs/parsing/tools/list.c.s:
 	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/parsing/tools/list.c.s
 .PHONY : srcs/parsing/tools/list.c.s
-
-srcs/parsing/tools/logger.o: srcs/parsing/tools/logger.c.o
-
-.PHONY : srcs/parsing/tools/logger.o
-
-# target to build an object file
-srcs/parsing/tools/logger.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/parsing/tools/logger.c.o
-.PHONY : srcs/parsing/tools/logger.c.o
-
-srcs/parsing/tools/logger.i: srcs/parsing/tools/logger.c.i
-
-.PHONY : srcs/parsing/tools/logger.i
-
-# target to preprocess a source file
-srcs/parsing/tools/logger.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/parsing/tools/logger.c.i
-.PHONY : srcs/parsing/tools/logger.c.i
-
-srcs/parsing/tools/logger.s: srcs/parsing/tools/logger.c.s
-
-.PHONY : srcs/parsing/tools/logger.s
-
-# target to generate assembly for a file
-srcs/parsing/tools/logger.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/parsing/tools/logger.c.s
-.PHONY : srcs/parsing/tools/logger.c.s
 
 srcs/read/completion/check_binary_path.o: srcs/read/completion/check_binary_path.c.o
 
@@ -9570,9 +9516,6 @@ help:
 	@echo "... srcs/error_function/bip.o"
 	@echo "... srcs/error_function/bip.i"
 	@echo "... srcs/error_function/bip.s"
-	@echo "... srcs/error_function/create_fildes.o"
-	@echo "... srcs/error_function/create_fildes.i"
-	@echo "... srcs/error_function/create_fildes.s"
 	@echo "... srcs/error_function/usage_builtins.o"
 	@echo "... srcs/error_function/usage_builtins.i"
 	@echo "... srcs/error_function/usage_builtins.s"
@@ -9585,9 +9528,6 @@ help:
 	@echo "... srcs/execution/builtins_functions/builtin_cd.o"
 	@echo "... srcs/execution/builtins_functions/builtin_cd.i"
 	@echo "... srcs/execution/builtins_functions/builtin_cd.s"
-	@echo "... srcs/execution/builtins_functions/builtin_cderr.o"
-	@echo "... srcs/execution/builtins_functions/builtin_cderr.i"
-	@echo "... srcs/execution/builtins_functions/builtin_cderr.s"
 	@echo "... srcs/execution/builtins_functions/builtin_data.o"
 	@echo "... srcs/execution/builtins_functions/builtin_data.i"
 	@echo "... srcs/execution/builtins_functions/builtin_data.s"
@@ -9810,6 +9750,9 @@ help:
 	@echo "... srcs/parsing/expanding/split.o"
 	@echo "... srcs/parsing/expanding/split.i"
 	@echo "... srcs/parsing/expanding/split.s"
+	@echo "... srcs/parsing/expanding/split_tools.o"
+	@echo "... srcs/parsing/expanding/split_tools.i"
+	@echo "... srcs/parsing/expanding/split_tools.s"
 	@echo "... srcs/parsing/expanding/tilde.o"
 	@echo "... srcs/parsing/expanding/tilde.i"
 	@echo "... srcs/parsing/expanding/tilde.s"
@@ -9843,9 +9786,6 @@ help:
 	@echo "... srcs/parsing/tools/list.o"
 	@echo "... srcs/parsing/tools/list.i"
 	@echo "... srcs/parsing/tools/list.s"
-	@echo "... srcs/parsing/tools/logger.o"
-	@echo "... srcs/parsing/tools/logger.i"
-	@echo "... srcs/parsing/tools/logger.s"
 	@echo "... srcs/read/completion/check_binary_path.o"
 	@echo "... srcs/read/completion/check_binary_path.i"
 	@echo "... srcs/read/completion/check_binary_path.s"
