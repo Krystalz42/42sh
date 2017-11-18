@@ -24,19 +24,24 @@ static void		error(char *str)
 	{
 		if (S_ISDIR(buf.st_mode))
 		{
-			error_msg("42sh: ", "Is a directory: ", str);
-			exit(126);
+			error_msg(S42H, "Is a directory: ", str);
+			exit(var_return(126));
 		}
 		else if (!access(str, F_OK) && access(str, X_OK) == -1)
 		{
-			error_msg("42sh: ", "Permission denied: ", str);
-			exit(126);
+			error_msg(S42H, "Permission denied: ", str);
+			exit(var_return(126));
 		}
 		else
 		{
-			error_msg("42sh: ", "command not found: ", str); 
-			exit(127);
+
 		}
+	}
+	else
+	{
+		error_msg(S42H, "command not found: ", str);
+		kill(getpgid(0) * 1, 9);
+		exit(var_return(127));
 	}
 }
 

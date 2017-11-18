@@ -17,16 +17,24 @@ int				wait_group(t_process *process, int option)
 	int		ret;
 
 	ret = 0;
-	while (process)
+	log_debug("KikOo on va wait");
+	if (process)
 	{
-		if ((waitpid(process->pid, &process->status, option)) > 0)
-			ret = 1;
-		process = process->next;
+		while (process)
+		{
+			log_trace("Waiting [%d] [%d]", process->pid, process->pgid);
+			if ((waitpid(process->pid, &process->status, option)) > 0)
+				ret = 1;
+			process = process->next;
+		}
 	}
+	else
+		while ((waitpid(-1, 0, option)) != -1)
+			;
+
 //	log_fatal("%d", process->pgid);
 //	waitpid(-process->pgid, &process->status, option);
 	return (ret);
-	return (1);
 }
 
 void			set_fildes(pid_t pgid)
