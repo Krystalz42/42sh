@@ -14,6 +14,6 @@
 
 uint8_t			op_ampersand(t_node *node, t_jobs *jobs, int info)
 {
-	return (execute_node(node->left, jobs, (info ^ FOREGROUND) | FORCE_FORK) +
+	return (execute_node(node->left, jobs, (info ^ FOREGROUND)) +
 			execute_node(node->right, jobs, info));
 }

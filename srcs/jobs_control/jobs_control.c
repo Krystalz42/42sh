@@ -39,29 +39,43 @@ void				update_jobs(t_process *process)
 	}
 }
 
+int					wait_chld(t_process *process)
+{
+	pid_t			pid;
+	int				status;
+
+	if ((pid = waitpid(-process->pgid, &status, WNOHANG | WUNTRACED)) > 0)
+	{
+		place_status(process, pid, status);
+		wait_group(process, WUNTRACED | WNOHANG);
+		return (1);
+	}
+	return (0);
+}
+
 void				handler_sigchld(int sig)
 {
-//	t_jobs		*jobs;
-//
+	t_jobs		*jobs;
+
 	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
-//	jobs = *jobs_table();
-//	(void)sig;
-//	while (jobs)
-//	{
-//		if (jobs->process && jobs->process->foreground == false)
-//			if (wait_group(jobs->process, WNOHANG))
-//			{
-//				if (terminate_process(jobs->process))
-//				{
-//					update_jobs(jobs->process);
-//					print_status(jobs->process, jobs->index);
-//					reset_process(jobs);
-//				}
-//				else if (finish_process(jobs->process))
-//				{
-//					print_status(jobs->process, jobs->index);
-//				}
-//			}
-//		jobs = jobs->next;
-//	}
+	jobs = *jobs_table();
+	(void)sig;
+	while (jobs)
+	{
+		if (jobs->process && jobs->process->foreground == false)
+			if (wait_chld(jobs->process))
+			{
+				if (terminate_process(jobs->process))
+				{
+					update_jobs(jobs->process);
+					print_status(jobs->process, jobs->index);
+					reset_process(jobs);
+				}
+				else if (finish_process(jobs->process))
+				{
+					print_status(jobs->process, jobs->index);
+				}
+			}
+		jobs = jobs->next;
+	}
 }
