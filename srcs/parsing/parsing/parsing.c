@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 20:34:39 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/14 11:17:54 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 03:53:28 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static void		err(char *str, int err, t_parsing **node)
 {
 	ft_err(str, err);
 	lstdel(node);
+	var_return(1);
 }
 
 static bool		isonly(char *str, char c)
