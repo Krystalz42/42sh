@@ -50,7 +50,6 @@ uint8_t		bg_switch_process(t_jobs *jobs, int index, char *error, char *args)
 	if (index >= 0 && jobs[index].process)
 	{
 		log_warn("Will Background [%d] [%d]", jobs[index].process->pgid, index);
-		first_process(jobs + index);
 		modify_runing(jobs[index].process, true);
 		modify_foreground(jobs[index].process, false);
 		kill(-jobs[index].process->pgid, SIGCONT);

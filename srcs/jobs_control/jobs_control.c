@@ -35,10 +35,12 @@ void				update_jobs(int status)
 
 void				handler_sigchld(int sig)
 {
+	t_jobs		*jobs;
 	int			pid;
 	int			status;
 
 	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
-	pid = waitpid(-1, &status, WUNTRACED);
-	place_status(pid, status);
+	while ((pid = waitpid(-1, &status, 0)) != -1)
+		if ((jobs = get_jobs(place_status(pid, status)->pgid)) != NULL)
+			wait_group(jobs->process, WNOHANG | WUNTRACED);
 }

@@ -274,6 +274,7 @@ typedef struct				s_process
 	int						running;
 	char					*command;
 	int						fildes[2];
+	int						finished;
 	struct s_process		*next;
 	struct s_process		*prev;
 }							t_process;
