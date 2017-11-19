@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:20:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 15:21:07 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 10:12:22 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ uint8_t					exec_or_builtin(t_node *node, int info)
 {
 	if (check_if_builtin(node, info) == -1)
 		my_execve(node->content->command, get_real_env(node));
+	else
+		exit(var_return(-1));
 	return (var_return(-1));
 }
 
@@ -55,7 +57,9 @@ uint8_t					op_execution(t_node *node, t_jobs *jobs, int info)
 {
 	if (info & FORCE_FORK)
 		jobs_execution(node, jobs, info);
-	else if (check_if_builtin(node, info) == -1)
+	else if (check_if_builtin(node, info) != -1)
+		exit(var_return(-1));
+	else
 		jobs_execution(node, jobs, info);
 	return (var_return(-1));
 }
