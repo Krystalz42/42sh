@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-static void		place_status(t_process *process, pid_t pid, int status)
+void		place_status(t_process *process, pid_t pid, int status)
 {
 	while (process->prev)
 		process = process->prev;
@@ -31,6 +31,7 @@ int				wait_group(t_process *process, int option)
 
 	while (process)
 	{
+		log_fatal("Adress of {process} in Wait [%p]", process);
 		if ((pid = waitpid(-process->pgid, &status, option)) > 0)
 			place_status(process, pid, status);
 		process = process->next;
@@ -56,16 +57,17 @@ void			wait_process(t_jobs *jobs, int option)
 		(ret > 0) ? print_status(jobs->process, jobs->index) : 0;
 		reset_process(jobs);
 	}
-	else if (!(WNOHANG & option))
+	else
 	{
 		print_status(jobs->process, jobs->index);
-		modify_runing(jobs->process, false);
+		modify_runing(jobs006->process, false);
 		modify_foreground(jobs->process, false);
 	}
 }
 
 void			my_wait(t_jobs *jobs)
 {
+	log_fatal("Adress of {jobs} in Wait [%p]", jobs);
 	close_fildes(jobs->process);
 	if (jobs->process->foreground)
 	{

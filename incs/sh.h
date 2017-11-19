@@ -389,7 +389,7 @@ uint8_t						op_dgreat(t_node *node, t_jobs *jobs, int info);
 /*
 **				TOOL'S EXECUTION
 */
-
+void						place_status(t_process *process, pid_t pid, int status);
 int							compare_heredoc(t_cmd *cmd, char *string);
 char						**build_table(char **heredoc, char *str);
 char						*convert_to_str(t_cmd *cmd);
