@@ -29,7 +29,6 @@ void				update_status(t_process *process)
 	{
 		if (WIFEXITED(process->status) || WIFSIGNALED(process->status))
 		{
-			log_success("%d %d", WIFEXITED(process->status) , WIFSIGNALED(process->status));
 			process->finished = 1;
 		}
 		process = process->next;

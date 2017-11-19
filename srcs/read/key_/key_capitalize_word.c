@@ -31,7 +31,6 @@ int				capitalize_word_undo(t_read **read_std, unsigned long buff)
 
 int				capitalize_word(t_read *read_std)
 {
-	log_debug("das");
 	while (read_std->cmd->c == 32)
 		read_std->cmd = read_std->cmd->next;
 	if (ft_isalpha(read_std->cmd->c) && ft_islower(read_std->cmd->c))
@@ -46,7 +45,6 @@ int				capitalize_word(t_read *read_std)
 
 int				key_capitalize_word(t_read **read_std, unsigned long buff)
 {
-	log_debug("das");
 	if ((*read_std)->history_search)
 		(*read_std)->print = 2;
 	else

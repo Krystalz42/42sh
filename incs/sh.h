@@ -31,8 +31,6 @@
 # include <dirent.h>
 # include <signal.h>
 # include <sys/ioctl.h>
-# include <logger.h>
-# include <logger_utils.h>
 # include <enum.h>
 # include <time.h>
 # include <sys/stat.h>

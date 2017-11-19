@@ -25,7 +25,6 @@ int		shell(void)
 		memdel_cmd(&input);
 		memdel_node(&tree);
 		handler_sigchld(SIGCHLD);
-		log_success(" -------- Welcome to the new command ! ---------");
 		if ((input = read_stdin(DEFAULT)) == NULL)
 			continue ;
 		if ((parse_struct = parsing(input)) == NULL)

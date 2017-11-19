@@ -62,7 +62,6 @@ uint8_t			check_option(t_node *node, int info, int opt)
 	node->content->env = node->content->env_option ?
 								node->content->env : env_table(NULL, ENV_REC);
 	env = node->content->env_option ? node->content->env : NULL;
-	log_fatal("%d", opt);
 	if (opt == 'i' &&
 	(ret = start_from_null(node->content->command, &node->content->env)) >= 0)
 		free_command(&(node->content->command), ret) && fct(node, info);

@@ -97,7 +97,6 @@ int					start_from_null(char **command, char ***env)
 	index_cpy = 0;
 	while (command[index] && ft_chrchar(command[index], '='))
 	{
-		log_trace("%d", check_from_local_env((*env), command[index]));
 		if (check_from_local_env((*env), command[index]) == 0)
 		{
 			(*env)[index_cpy] = ft_strdup(command[index]);

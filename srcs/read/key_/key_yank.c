@@ -18,7 +18,6 @@ int			key_yank(t_read **read_std, unsigned long buff)
 
 	(void)buff;
 	buffer = keep_buffer(NULL, 0);
-	log_error("buffer [%d]", buffer ? 1 : 0);
 	while (buffer)
 	{
 		key_print_fct((*read_std)->cmd, buffer->c);

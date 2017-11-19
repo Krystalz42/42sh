@@ -14,7 +14,6 @@
 
 uint8_t				builtin_unsetenv(t_node *node, int info)
 {
-	log_error("%s", my_getenv(node->content->command[1]));
 	(void)info;
 	if (my_getenv(node->content->command[1]))
 	{

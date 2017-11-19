@@ -36,7 +36,6 @@ void			memdel_jobs(t_jobs *jobs)
 	if (*addr_jobs == jobs)
 	{
 		reset_process(addr_jobs);
-		log_debug("On est premier ! %d", *jobs_table() ? 1 : 0);
 	}
 	else
 		while (temp)

@@ -24,8 +24,6 @@ int			init_page(t_read **read_std, t_file **tmp)
 
 int			print_element(t_file *file, int color)
 {
-	if (!color)
-		log_trace("Ligne [%d] && Column [%d]", file->ms.y, file->ms.x);
 	if (file)
 	{
 		(!color) ? P_INV_FD(2) : NULL;

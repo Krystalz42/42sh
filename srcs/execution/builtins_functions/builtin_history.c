@@ -14,7 +14,6 @@
 
 uint8_t			looking_for_fct(char **command, int option)
 {
-	log_trace("%s, %d", *command, option);
 	if (option & 1)
 		return (b_clear_history());
 	else if (option & 2)

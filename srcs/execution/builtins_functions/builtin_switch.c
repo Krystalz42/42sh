@@ -70,9 +70,7 @@ uint8_t		builtin_foreground(t_node *node, int info)
 	(void)info;
 	if ((jobs_spec = check_jobs_spec(node->content->command, FG)) == -1)
 		return (1);
-	log_success("%d", jobs_spec);
 	jobs = get_jobs_by_setting(jobs_spec, false, -1);
-	log_success("%d", jobs ? 1 : 0);
 
 	return (0);
 }

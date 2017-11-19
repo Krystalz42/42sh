@@ -247,24 +247,20 @@ RST   =		\x1B[0m
 LIBS		= \
 			  $(DIR_LIBS)/libft/libft.a				\
 			  $(DIR_LIBS)/printf/libprintf.a		\
-			  $(DIR_LIBS)/logger/liblogger.a                    \
 
 LDFLAGS		= \
 			  -L $(DIR_LIBS)/libft					\
 			  -L $(DIR_LIBS)/printf					\
-			  -L $(DIR_LIBS)/logger/    					\
 
 LDLIBS		= \
 			  -lft									\
 			  -lprintf								\
 			  -lncurses								\
-			  -llogger                              \
 
 CPPFLAGS	= \
 			  -I$(DIR_INCS)							\
 			  -I$(DIR_LIBS)/libft/$(DIR_INCS)		\
 			  -I$(DIR_LIBS)/printf/$(DIR_INCS)		\
-			  -I$(DIR_LIBS)/logger/$(DIR_INCS)     \
 
 CFLAGS		= \
 			  -g									\

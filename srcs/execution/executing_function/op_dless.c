@@ -35,7 +35,6 @@ uint8_t			op_dless(t_node *node, t_jobs *jobs, int info)
 {
 	t_process   *process;
 
-	log_debug("VALUE_DLESS %d", info);
 	if (info & FORK)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)

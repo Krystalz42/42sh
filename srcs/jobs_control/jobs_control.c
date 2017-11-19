@@ -44,16 +44,15 @@ void				check_child_in_background(void)
 	int			pid;
 	int			status;
 
-	while ((pid = waitpid(-1, &status, 0)) != -1)
+	while ((pid = waitpid(WAIT_ANY, &status, WNOHANG)) > 0)
+	{
 		if ((jobs = get_jobs(place_status(pid, status)->pgid)) != NULL)
 		{
 			wait_group(jobs->process, WNOHANG);
 			update_status(jobs->process);
+			update_jobs(jobs->process);
 			if (finished_process(jobs->process))
-			{
-				update_jobs(jobs->process);
 				memdel_jobs(jobs);
-			}
 			else
 			{
 				modify_foreground(jobs->process, false);
@@ -61,12 +60,13 @@ void				check_child_in_background(void)
 				print_status(jobs->process, jobs->index);
 			}
 		}
+	}
 }
 
 
 
 void				handler_sigchld(int sig)
 {
-	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
+	(void)sig;
 	check_child_in_background();
 }

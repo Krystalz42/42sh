@@ -68,7 +68,6 @@ int				key_undo_(t_read **read_std, unsigned long buff)
 	(void)buff;
 	if ((undo = get_os_pointer(NULL, 0)))
 	{
-		log_trace("Find undo");
 		while (g_to_do[++i].key)
 			if (g_to_do[i].key == undo->movement)
 			{

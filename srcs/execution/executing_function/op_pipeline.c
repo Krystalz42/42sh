@@ -21,7 +21,6 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	int			fildes[2];
 	t_process	*process;
 
-	log_debug("PIPELINE,	info: [%d]", info);
 	jobs = new_jobs(jobs);
 	pipe(fildes);
 	if ((process = my_fork(jobs, find_executing_node(node), info)) == NULL)

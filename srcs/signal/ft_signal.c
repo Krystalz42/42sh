@@ -14,7 +14,6 @@
 
 void				handler_sig(int sig)
 {
-	log_warn("Signal Reception [%d]", sig);
 	set_termios(SET_OLD_TERM);
 	reset_signal();
 	b_write_history_in_file(get_str_from_history());
@@ -23,14 +22,14 @@ void				handler_sig(int sig)
 
 void				handler_sigint(int sig)
 {
-	log_warn("Signal Reception [%d]", sig);
+	(void)sig;
 	signal_reception(SIGINT);
 	ioctl(0, TIOCSTI, "\2\0");
 }
 
 void				handler_sigwinsz(int sig)
 {
-	log_warn("Signal Reception [%d]", sig);
+	(void)sig;
 	ioctl(0, TIOCSTI, "\0");
 }
 

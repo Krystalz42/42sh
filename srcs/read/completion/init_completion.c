@@ -27,7 +27,6 @@ int			empty_cmd(t_cmd *cmd)
 
 void		init_completion(t_read **read_std)
 {
-	log_trace("%d", check_word((*read_std)->cmd));
 	if (check_word((*read_std)->cmd))
 	{
 		(*read_std)->completion = 2;

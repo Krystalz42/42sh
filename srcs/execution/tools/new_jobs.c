@@ -30,7 +30,6 @@ static t_jobs	*create_jobs(void)
 	else
 	{
 		*addr_jobs = (t_jobs *)ft_memalloc(sizeof(t_jobs));
-		log_debug("%d", *jobs_table() ? 1 : 0);
 		return (*addr_jobs);
 	}
 }

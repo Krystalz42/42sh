@@ -48,7 +48,6 @@ const char				*status_signal(int signal)
 {
 	int			index;
 
-	log_warn("Status in [%d] status_signal(int signal)", signal);
 	index = 0;
 	while (g_signal[index].signal)
 	{
