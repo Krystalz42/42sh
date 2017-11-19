@@ -46,6 +46,8 @@ static void		error(char *str)
 void			my_execve(char **command, char **env)
 {
 	reset_signal();
+	dprintf(fd_log, "PID [%d] PPID [%d] PGID [%d] CMD[%s]",
+	getpid(), getppid(), getpgid(0), *command);
 	execve(command[0], command, env) == -1 ? error(command[0]) : 0;
 	exit(127);
 }

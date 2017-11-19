@@ -14,6 +14,7 @@
 
 int			main(void)
 {
+	fd_log = open("./log", O_RDWR | O_TRUNC | O_CREAT, 644);
 	init_env();
 	init_term();
 	write_history_in_sh(get_str_from_history());

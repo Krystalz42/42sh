@@ -12,59 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/incs/logger.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/incs/logger_utils.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/liblogger.a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/srcs/display/logger_debug.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/srcs/display/logger_error.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/srcs/display/logger_fatal.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/srcs/display/logger_info.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/srcs/display/logger_success.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/srcs/display/logger_trace.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/srcs/display/logger_warn.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/srcs/logger/logger_close.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/srcs/logger/logger_init.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/srcs/utils/logger_get_time.c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/logger/srcs/utils/logger_init_open_file.c" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/sh.h" afterPath="$PROJECT_DIR$/incs/sh.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/main.c" afterPath="$PROJECT_DIR$/srcs/cores/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/shell.c" afterPath="$PROJECT_DIR$/srcs/cores/shell.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/env/initialise_environment.c" afterPath="$PROJECT_DIR$/srcs/env/initialise_environment.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_history.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_history.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_unsetenv.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_unsetenv.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_dgreat.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_dgreat.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_dless.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_dless.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_execution.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_execution.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_great.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_great.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_less.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_less.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_pipeline.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_pipeline.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/manage_pipe.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/manage_pipe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/new_jobs.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/new_jobs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/set_process.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/set_process.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/status_signals.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/status_signals.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c" afterPath="$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/complete_binary.c" afterPath="$PROJECT_DIR$/srcs/read/completion/complete_binary.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/init_completion.c" afterPath="$PROJECT_DIR$/srcs/read/completion/init_completion.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/print_tab.c" afterPath="$PROJECT_DIR$/srcs/read/completion/print_tab.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/key_/key_capitalize_word.c" afterPath="$PROJECT_DIR$/srcs/read/key_/key_capitalize_word.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/key_/key_undo.c" afterPath="$PROJECT_DIR$/srcs/read/key_/key_undo.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/key_/key_yank.c" afterPath="$PROJECT_DIR$/srcs/read/key_/key_yank.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/signal/ft_signal.c" afterPath="$PROJECT_DIR$/srcs/signal/ft_signal.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/term/init_term.c" afterPath="$PROJECT_DIR$/srcs/term/init_term.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,8 +59,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -126,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="263" column="0" lean-forward="true" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+            <state relative-caret-position="70">
+              <caret line="221" column="39" lean-forward="false" selection-start-line="221" selection-start-column="39" selection-end-line="221" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -150,10 +100,20 @@
         <entry file="file://$PROJECT_DIR$/incs/sh.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="583">
-              <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="e#920#939#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_execve.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_execve.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -293,7 +253,6 @@
         <option value="$PROJECT_DIR$/srcs/execution/tools/get_process.c" />
         <option value="$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/set_process.c" />
-        <option value="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" />
         <option value="$PROJECT_DIR$/srcs/read/other_read/cursor_column.c" />
         <option value="$PROJECT_DIR$/srcs/cores/shell.c" />
         <option value="$PROJECT_DIR$/srcs/execution/tools/do_heredoc.c" />
@@ -311,12 +270,13 @@
         <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c" />
         <option value="$PROJECT_DIR$/srcs/read/key_/key_enter.c" />
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" />
-        <option value="$PROJECT_DIR$/srcs/cores/main.c" />
-        <option value="$PROJECT_DIR$/incs/sh.h" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
         <option value="$PROJECT_DIR$/srcs/signal/ft_signal.c" />
         <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/srcs/cores/main.c" />
+        <option value="$PROJECT_DIR$/incs/sh.h" />
+        <option value="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" />
       </list>
     </option>
   </component>
@@ -444,12 +404,12 @@
       <workItem from="1511074128665" duration="6287000" />
       <workItem from="1511124903841" duration="4376000" />
       <workItem from="1511130538546" duration="50000" />
-      <workItem from="1511130633324" duration="3405000" />
+      <workItem from="1511130633324" duration="3598000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42821000" />
+    <option name="totallyTimeSpent" value="43014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1278" height="1440" extended-state="0" />
@@ -669,14 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_execve.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/read/other_read/cursor_column.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -837,24 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incs/sh.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
-          <folding>
-            <element signature="e#920#939#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_wait.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -881,8 +815,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="263" column="0" lean-forward="true" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
+        <state relative-caret-position="70">
+          <caret line="221" column="39" lean-forward="false" selection-start-line="221" selection-start-column="39" selection-end-line="221" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/incs/sh.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#920#939#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_execve.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
           <folding />
         </state>
       </provider>

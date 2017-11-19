@@ -35,6 +35,8 @@
 # include <time.h>
 # include <sys/stat.h>
 
+int			fd_log;
+
 /*
 **				FUNCTION CORES
 */
