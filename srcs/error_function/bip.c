@@ -17,3 +17,12 @@ int			bip(void)
 	CHAR_FD(7, 2);
 	return (1);
 }
+
+uint8_t		error_msg(char *from, char *error, char *args)
+{
+	ft_putstr_fd(from, STDERR_FILENO);
+	ft_putstr_fd(error, STDERR_FILENO);
+	ft_putstr_fd(args, STDERR_FILENO);
+	ft_putchar_fd(10, STDERR_FILENO);
+	return (var_return(1));
+}

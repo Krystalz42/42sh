@@ -56,7 +56,7 @@ uint8_t				op_execution(t_node *node, t_jobs *jobs, int info)
 	if (info & FORCE_FORK)
 		jobs_execution(node, jobs, info);
 	else if (check_if_builtin(node, info) != -1)
-		exit(var_return(-1));
+		;
 	else
 		jobs_execution(node, jobs, info);
 	return (var_return(-1));

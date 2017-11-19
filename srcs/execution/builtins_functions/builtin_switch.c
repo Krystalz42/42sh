@@ -12,27 +12,38 @@
 
 #include <sh.h>
 
-uint8_t		error_msg(char *from, char *error, char *args)
+int			check_jobs_spec(char **command, char *from)
 {
-	ft_putstr_fd(from, STDERR_FILENO);
-	ft_putstr_fd(error, STDERR_FILENO);
-	ft_putstr_fd(args, STDERR_FILENO);
-	ft_putchar_fd(10, STDERR_FILENO);
-	return (var_return(1));
+	int			table;
+	int			jobs_spec;
+
+	table = 1;
+	if (command[table] && command[table][0] == '%')
+	{
+		if ((jobs_spec = ft_atoi(command[table] + 1)) < 1)
+			return (error_msg(from, NO_CUR_JOB, command[table]));
+	}
+	else if (command[table])
+		return (error_msg(from, NO_CUR_JOB, command[table]));
+	else
+		jobs_spec = 0;
+	return (jobs_spec);
 }
-
-
 
 uint8_t		builtin_foreground(t_node *node, int info)
 {
+	int			jobs_spec;
+
+	jobs_spec = check_jobs_spec(node->content->command, FG);
+	log_success("%d", jobs_spec);
 	(void)node;
 	(void)info;
-		return (error_msg(FG, INVALID, node->content->command[1]));
+	return (error_msg(BG, INVALID, node->content->command[1]));
 }
 
 uint8_t		builtin_background(t_node *node, int info)
 {
 	(void)info;
 	(void)node;
-	return (error_msg(FG, INVALID, node->content->command[1]));
+	return (error_msg(BG, INVALID, node->content->command[1]));
 }
