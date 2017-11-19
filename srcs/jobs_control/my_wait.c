@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:40:09 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/18 12:54:05 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 01:31:45 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int				wait_group(t_process *process, int option)
 			process = process->next;
 		}
 	}
-			;
 	return (ret);
 }
 

@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:11:44 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 16:17:43 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 01:24:23 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 uint8_t			op_dgreat(t_node *node, t_jobs *jobs, int info)
 {
-
-	return (1);
+	log_debug("VALUE DGREAT %d", info);
 }

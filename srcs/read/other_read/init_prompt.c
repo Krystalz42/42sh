@@ -6,12 +6,11 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 17:45:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 16:29:48 by gbourson         ###   ########.fr       */
+/*   Updated: 2017/11/19 01:11:28 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
-
 
 static char			*my_getcwd(void)
 {
@@ -60,7 +59,7 @@ void				init_prompt(void)
 	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? " ✗ " : " √ ");
 	ft_strcpy(prompt + ft_strlen(prompt), "\x1B[0m");
 	my_prompt(prompt);
-	get_len_prompt((int)(ft_strlen(path)  + 3));
+	get_len_prompt((int)(ft_strlen(path) + 3));
 	free((void *)path);
 	free((void *)color);
 }

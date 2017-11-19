@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:10:18 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/18 22:06:56 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 01:20:00 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,4 @@
 
 uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
 {
-
 }

@@ -12,24 +12,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/author" afterPath="$PROJECT_DIR$/author" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/sh.h" afterPath="$PROJECT_DIR$/incs/sh.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/shell.c" afterPath="$PROJECT_DIR$/srcs/cores/shell.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.swp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/main.c" afterPath="$PROJECT_DIR$/srcs/cores/main.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/var_return.c" afterPath="$PROJECT_DIR$/srcs/cores/var_return.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_dgreat.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_dgreat.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_dless.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_dless.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_execution.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_execution.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_great.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_great.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_less.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_less.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_pipeline.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_pipeline.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_node.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_node.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/new_jobs.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/new_jobs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/looking_for_path.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/looking_for_path.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/manage_pipe.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/manage_pipe.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/set_process.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/set_process.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/init_prompt.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/init_prompt.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,7 +44,7 @@
             <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_execve.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
-                  <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+                  <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -56,9 +53,14 @@
           <file leaf-file-name="my_wait.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_wait.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1095">
-                  <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-                  <folding />
+                <state relative-caret-position="1080">
+                  <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+                  <folding>
+                    <marker date="1511053522000" expanded="true" signature="1131:1148" ph="{...}" />
+                    <marker date="1511053522000" expanded="true" signature="1180:1269" ph="{...}" />
+                    <marker date="1511053522000" expanded="true" signature="1317:1702" ph="{...}" />
+                    <marker date="1511053522000" expanded="true" signature="1733:2002" ph="{...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -77,8 +79,12 @@
             <entry file="file://$PROJECT_DIR$/srcs/jobs_control/set_process.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="991">
-                  <caret line="71" column="29" lean-forward="false" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
-                  <folding />
+                  <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+                  <folding>
+                    <marker date="1511053522000" expanded="true" signature="1544:1835" ph="{...}" />
+                    <marker date="1511053522000" expanded="true" signature="1873:2285" ph="{...}" />
+                    <marker date="1511053522000" expanded="true" signature="2323:2416" ph="{...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -142,43 +148,17 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="585">
                   <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-                  <folding />
+                  <folding>
+                    <marker date="1511053522000" expanded="true" signature="1544:1835" ph="{...}" />
+                    <marker date="1511053522000" expanded="true" signature="1873:2285" ph="{...}" />
+                    <marker date="1511053522000" expanded="true" signature="2323:2416" ph="{...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="op_pipeline.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="op_pipeline.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_pipeline.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="op_great_and.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="op_great.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="op_dgreat.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_dgreat.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="285">
                   <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
@@ -187,8 +167,8 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="op_less.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_less.c">
+          <file leaf-file-name="op_great_and.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="210">
                   <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
@@ -197,11 +177,41 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="op_dless.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_dless.c">
+          <file leaf-file-name="op_great.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="210">
                   <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="op_dgreat.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_dgreat.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="op_less.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_less.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="op_dless.c" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_dless.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -314,12 +324,12 @@
         <option value="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" />
         <option value="$PROJECT_DIR$/author" />
         <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_pipeline.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_execution.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_great.c" />
         <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_dgreat.c" />
         <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_less.c" />
         <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_dless.c" />
-        <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c" />
-        <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_great.c" />
-        <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_execution.c" />
       </list>
     </option>
   </component>
@@ -425,12 +435,12 @@
       <workItem from="1511018762915" duration="94000" />
       <workItem from="1511018880409" duration="32000" />
       <workItem from="1511018930963" duration="4117000" />
-      <workItem from="1511048115370" duration="3244000" />
+      <workItem from="1511048115370" duration="3311000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13621000" />
+    <option name="totallyTimeSpent" value="13688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1618" height="1440" extended-state="0" />
@@ -519,7 +529,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" column="73" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
-          <folding />
+          <folding>
+            <marker date="1511053522000" expanded="true" signature="1544:1835" ph="{...}" />
+            <marker date="1511053522000" expanded="true" signature="1873:2285" ph="{...}" />
+            <marker date="1511053522000" expanded="true" signature="2323:2416" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -746,9 +760,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/jobs_control/set_process.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="991">
-          <caret line="71" column="29" lean-forward="false" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="585">
+          <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+          <folding>
+            <marker date="1511053522000" expanded="true" signature="1544:1835" ph="{...}" />
+            <marker date="1511053522000" expanded="true" signature="1873:2285" ph="{...}" />
+            <marker date="1511053522000" expanded="true" signature="2323:2416" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -770,9 +788,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_wait.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1080">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <marker date="1511053522000" expanded="true" signature="1131:1148" ph="{...}" />
+            <marker date="1511053522000" expanded="true" signature="1180:1269" ph="{...}" />
+            <marker date="1511053522000" expanded="true" signature="1317:1702" ph="{...}" />
+            <marker date="1511053522000" expanded="true" signature="1733:2002" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -792,39 +815,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_dgreat.c">
+    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_execve.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_less.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_dless.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great.c">
+    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_execution.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -832,23 +831,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_execve.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_pipeline.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_execution.c">
+    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_dgreat.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_less.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_dless.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
