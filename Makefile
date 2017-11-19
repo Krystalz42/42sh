@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/19 02:32:11 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/11/19 08:04:07 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -136,6 +136,7 @@ SRCS = \
 	   execution/check_if_builtins.c							\
 	   execution/executing_node.c								\
 	   execution/my_fork.c										\
+	   execution/tools/redirection_tools.c						\
 	   execution/tools/get_real_env.c							\
 	   execution/tools/looking_for_path.c						\
 	   execution/tools/manage_pipe.c							\

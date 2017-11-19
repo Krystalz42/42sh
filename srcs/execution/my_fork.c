@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:19:04 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 04:26:58 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 07:52:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,9 @@ t_process		*my_fork(t_jobs *jobs, t_node *node, int info)
 		return (NULL);
 	if ((process->pid = fork()) == -1)
 	{
-		error_msg("fork :", "fork failed", NULL);
-//		return (NULL);
+		error_msg("Fork: ", "resource temporarily unavailable", NULL);
+		return (NULL);
 	}
-	log_success("On va attendre les foutu enfants! %d", process->pid);
 	process->fildes[0] = -1;
 	process->fildes[1] = -1;
 	process->running = true;

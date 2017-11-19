@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   op_or_if.c                                         :+:      :+:    :+:   */
+/*   redirection_tools.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/17 16:17:58 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 12:04:33 by sbelazou         ###   ########.fr       */
+/*   Created: 2017/11/19 08:01:56 by jle-quel          #+#    #+#             */
+/*   Updated: 2017/11/19 08:02:22 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
 /*
+*************** PRIVATE ********************************************************
+*/
+
+/*
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			op_or_if(t_node *node, t_jobs *jobs, int info)
+int				check_fd(int fildes)
 {
-	return (execute_node(node->left, jobs, info)
-			&& execute_node(node->right, jobs, info));
+	if (fildes == init_fd())
+		fildes = STDOUT_FILENO;
+	return (fildes);
 }

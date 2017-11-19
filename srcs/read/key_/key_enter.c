@@ -6,7 +6,7 @@
 /*   By: gbourson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 17:16:59 by gbourson          #+#    #+#             */
-/*   Updated: 2017/11/17 17:22:10 by gbourson         ###   ########.fr       */
+/*   Updated: 2017/11/19 11:54:12 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int			key_enter_(t_read **read_std, unsigned long buff)
 		print_struct(*read_std);
 		insert_one_line();
 //		if (!(check_cmd(read_std)))
-			(*read_std)->finish = 1;
+		(*read_std)->finish = 1;
 //		else
 //		{
 //			(*read_std)->print = 2;
