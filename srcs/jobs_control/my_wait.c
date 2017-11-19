@@ -64,9 +64,10 @@ void			my_wait(t_jobs *jobs)
 		{
 			if (jobs->process->foreground)
 			{
-				set_fildes(jobs->process->pgid);
-				wait_process(jobs, WUNTRACED);
-				set_fildes(getpgid(0));
+				waitpid(-jobs->process->pgid, 0, WUNTRACED);
+//				set_fildes(jobs->process->pgid);
+//				wait_process(jobs, WUNTRACED);
+//				set_fildes(getpgid(0));
 			}
 			else
 			{

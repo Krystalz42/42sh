@@ -49,8 +49,9 @@
 
 # define FORK						1
 # define FOREGROUND					2
-# define DONT_EXECUTE				32
-# define FORCE_FORK					64
+# define WRITE_PREVIOUS				4
+# define DONT_EXECUTE				8
+# define FORCE_FORK					16
 
 /*
 ** COMAND		...

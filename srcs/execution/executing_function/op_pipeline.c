@@ -14,6 +14,19 @@
 
 uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 {
+	t_process			*process;
 
+	(void)node; (void)jobs; (void)info;
+	log_debug("VALUE_PIPELINE %d", info);
+	jobs = new_jobs(jobs);
+	process = my_fork(jobs, find_executing_node(node), info);
+	if (process->pid)
+	{
+
+	}
+	else
+	{
+		process->pid = getpid();
+	}
 	return (1);
 }

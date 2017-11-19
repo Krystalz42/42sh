@@ -15,4 +15,7 @@
 uint8_t			op_less(t_node *node, t_jobs *jobs, int info)
 {
 	log_debug("VALUE_LESS %d", info);
+	(void)node; (void)jobs; (void)info;
+	return (var_return(-1));
+
 }

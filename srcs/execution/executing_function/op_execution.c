@@ -15,4 +15,17 @@
 uint8_t					op_execution(t_node *node, t_jobs *jobs, int info)
 {
 	log_debug("VALUE_EXECUTION %d", info);
+
+	(void)node;
+	(void)jobs;
+	(void)info;
+	if (info & FORK)
+	{
+
+	}
+	else
+	{
+		
+	}
+	return (var_return(-1));
 }

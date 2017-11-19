@@ -12,6 +12,11 @@
 
 #include <sh.h>
 
+
 uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
 {
+
+	(void)node; (void)jobs; (void)info;
+	return (var_return(-1));
+
 }

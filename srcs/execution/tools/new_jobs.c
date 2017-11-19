@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-t_jobs				*create_jobs(void)
+static t_jobs				*create_jobs(void)
 {
 	t_jobs *temp_jobs;
 
@@ -34,7 +34,6 @@ t_jobs				*create_jobs(void)
 
 t_jobs				*new_jobs(t_jobs *jobs)
 {
-
 	if (jobs == NULL)
 	{
 		jobs = create_jobs();

@@ -36,11 +36,6 @@ static void		error(char *str)
 	else
 	{
 		error_msg(S42H, "command not found: ", str);
-<<<<<<< HEAD
-=======
-		log_info("%d == kill(%d, SIGCHLD)",
-										kill(getppid(), SIGCHLD), getppid());
->>>>>>> 394591e96681bd70c1df4b1b2d7854ecddae1dc3
 		exit(var_return(127));
 	}
 }
