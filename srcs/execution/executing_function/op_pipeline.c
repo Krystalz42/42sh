@@ -33,6 +33,7 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	process->fildes[1] = fildes[1];
 	if (process->pid)
 	{
+		log_debug("Daddy pipe do left");
 		execute_node(node->left, jobs, (info | WRITE_PREVIOUS) | FORCE_FORK);
 	}
 	else

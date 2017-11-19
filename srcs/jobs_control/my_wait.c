@@ -12,10 +12,29 @@
 
 #include <sh.h>
 
+static void		place_status(t_process *process, pid_t pid, int status)
+{
+	while (process->prev)
+		process = process->prev;
+	while (process)
+	{
+		if (process->pid == pid)
+			process->status = status;
+		process = process->next;
+	}
+}
+
 int				wait_group(t_process *process, int option)
 {
-	if ((waitpid(-process->pgid, &process->status, option)) > 0)
-		return (1);
+	pid_t		pid;
+	int			status;
+
+	while (process)
+	{
+		if ((pid = waitpid(-process->pgid, &status, option)) > 0)
+			place_status(process, pid, status);
+		process = process->next;
+	}
 	return (0);
 }
 

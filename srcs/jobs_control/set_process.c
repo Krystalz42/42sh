@@ -43,25 +43,45 @@ int					terminate_process(t_process *process)
 		return (0);
 }
 
+void				memdel_jobs(t_jobs **jobs)
+{
+	t_process	*process;
+
+	while ((*jobs)->process)
+	{
+		process = (*jobs)->process;
+		(*jobs)->process = (*jobs)->process->next;
+		ft_memdel((void **)&process->command);
+		ft_memdel((void **)&process);
+	}
+	ft_memdel((void **)jobs);
+}
+
 void				reset_process(t_jobs *jobs)
 {
-	t_process		*to_kill;
+	t_jobs		**addr_jobs;
+	t_jobs		*temp;
 
-	log_success("Reset _ process 2.0");
-	if (jobs && jobs->process)
+	addr_jobs = jobs_table();
+	temp = *addr_jobs;
+	if (*addr_jobs == jobs)
 	{
-		while (jobs->process && jobs->process->prev)
-			jobs->process = jobs->process->prev;
-		while (jobs->process)
-		{
-			to_kill = jobs->process;
-			jobs->process = jobs->process->next;
-			ft_memdel((void **)&to_kill->command);
-			ft_memdel((void **)&to_kill);
-		}
-		jobs->process = NULL;
-		ft_memdel((void **)&jobs);
+		memdel_jobs(addr_jobs);
+		log_debug("On est premier ! %d", *jobs_table() ? 1 : 0);
 	}
+	else
+		while (temp)
+		{
+			if (temp == jobs)
+			{
+				if (temp->prev)
+						temp->prev->next = temp->next;
+				if (temp->next)
+					temp->next->prev = temp->prev;
+				memdel_jobs(&temp);
+			}
+			temp = temp->next;
+		}
 }
 
 void				first_process(t_jobs *jobs)
