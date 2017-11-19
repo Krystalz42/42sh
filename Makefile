@@ -147,7 +147,6 @@ SRCS = \
 	   execution/tools/find_executing_node.c					\
 	   execution/tools/check_path.c								\
 	   execution/tools/tools_heredoc.c							\
-	   execution/tools/get_process.c							\
 	   execution/tools/potential_option.c						\
 	   execution/executing_function/op_execution.c				\
 	   execution/executing_function/op_great_and.c				\

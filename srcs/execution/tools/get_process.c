@@ -24,7 +24,7 @@ t_process		*get_process(pid_t pid)
 	jobs = *jobs_table();
 	while (jobs)
 	{
-		process = jobs->process
+		process = jobs->process;
 		while (process)
 		{
 			if (pid == process->pid)

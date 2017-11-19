@@ -12,20 +12,47 @@
 
 #include <sh.h>
 
-uint8_t					op_execution(t_node *node, t_jobs *jobs, int info)
+uint8_t					exec_or_builtin(t_node *node, int info)
 {
+	if (check_if_builtin(node, info) == -1)
+		my_execve(node->content->command, get_real_env(node));
+	return (var_return(-1));
+}
+
+uint8_t					jobs_execution(t_node *node, t_jobs *jobs, int info)
+{
+	t_process		*process;
 	log_debug("VALUE_EXECUTION %d", info);
 
-	(void)node;
-	(void)jobs;
-	(void)info;
 	if (info & FORK)
 	{
-
+		jobs = new_jobs(jobs);
+		process = my_fork(jobs, node, info);
+		if (process->pid > 0)
+		{
+			my_wait(jobs);
+		}
+		else if (process->pid == 0)
+		{
+			process->pid = getpid();
+			exec_or_builtin(node,  info);
+		}
 	}
 	else
 	{
-		
+		process = get_process(getpid());
+		if (info & WRITE_PREVIOUS && process && process->prev)
+			write_pipe(process->prev->fildes);
+		exec_or_builtin(node, info);
 	}
+	return (var_return(-1));
+}
+
+uint8_t					op_execution(t_node *node, t_jobs *jobs, int info)
+{
+	if (info & FORCE_FORK)
+		jobs_execution(node, jobs, info);
+	else if (check_if_builtin(node, info) == -1)
+		jobs_execution(node, jobs, info);
 	return (var_return(-1));
 }
