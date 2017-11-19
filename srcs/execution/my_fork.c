@@ -36,8 +36,6 @@ t_process		*my_fork(t_jobs *jobs, t_node *node, int info)
 {
 	t_process	*process;
 
-	if ((jobs = new_jobs(jobs)) == NULL)
-		return (NULL);
 	if ((process = new_process(jobs)) == NULL)
 		return (NULL);
 	if ((process->pid = fork()) == -1)
