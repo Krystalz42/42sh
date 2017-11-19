@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:19:04 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 15:22:22 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 04:26:58 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ t_process		*my_fork(t_jobs *jobs, t_node *node, int info)
 
 	process = new_process(jobs);
 	if ((process->pid = fork()) == -1)
+	{
 		error_msg("fork :", "fork failed", NULL);
+		perror(""); // To remove
+	}
 	process->fildes[0] = -1;
 	process->fildes[1] = -1;
 	process->running = true;
