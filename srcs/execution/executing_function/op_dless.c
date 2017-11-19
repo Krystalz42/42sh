@@ -6,13 +6,13 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:14:51 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 16:14:53 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 01:15:53 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-void					intro_heredoc(t_node *node)
+void				intro_heredoc(t_node *node)
 {
 	int				fildes;
 
@@ -22,21 +22,21 @@ void					intro_heredoc(t_node *node)
 	remove(node->content->heredoc);
 }
 
-uint8_t					op_dless(t_node *node, t_jobs *jobs, int info)
+uint8_t				op_dless(t_node *node, t_jobs *jobs, int info)
 {
+	t_process	*process;
+
 	log_debug("VALUE_DLESS %d", info);
 	if (info & FORK)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)
 			return (var_return(255));
-		jobs->process = my_fork(jobs, find_executing_node(node), info);
-		if (jobs->process->pid > 0)
-		{
+		process = my_fork(jobs, find_executing_node(node), info);
+		if (process->pid > 0)
 			my_wait(jobs);
-		}
 		else
 		{
-			jobs->process->pid = getpid();
+			process->pid = getpid();
 			intro_heredoc(node);
 			execute_node(node->left, jobs, info ^ FORK);
 		}

@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 18:56:57 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 16:40:50 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 01:28:59 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ int					terminate_process(t_process *process)
 	ret = 0;
 	while (process)
 	{
-		log_trace("In terminated process for %d [%d.%d]", process->pid, WIFSIGNALED(process->status), WIFEXITED(process->status));
+		log_trace("In terminated process for %d [%d.%d]", process->pid,
+					WIFSIGNALED(process->status), WIFEXITED(process->status));
 		if (WIFSIGNALED(process->status))
 			ret = 1;
 		else if (WIFEXITED(process->status))

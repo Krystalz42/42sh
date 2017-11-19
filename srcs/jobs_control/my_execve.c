@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 01:04:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/18 14:03:20 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 01:34:48 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ static void		error(char *str)
 	else
 	{
 		error_msg(S42H, "command not found: ", str);
-		log_info("%d == kill(%d, SIGCHLD)", kill(getppid(), SIGCHLD), getppid());
+		log_info("%d == kill(%d, SIGCHLD)",
+										kill(getppid(), SIGCHLD), getppid());
 		exit(var_return(127));
 	}
 }

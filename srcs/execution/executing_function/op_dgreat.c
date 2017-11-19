@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:11:44 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 16:17:43 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 01:24:23 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,19 @@ void			jobs_op_dgreat(t_node *node)
 
 uint8_t			op_dgreat(t_node *node, t_jobs *jobs, int info)
 {
+	t_process	*process;
+
 	log_debug("VALUE DGREAT %d", info);
 	if (info & FORK)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)
 			return (var_return(255));
-		jobs->process = my_fork(jobs, find_executing_node(node), info);
-		if (jobs->process->pid)
-		{
+		process = my_fork(jobs, find_executing_node(node), info);
+		if (process->pid)
 			my_wait(jobs);
-		}
 		else
 		{
-			jobs->process->pid = getpid();
+			process->pid = getpid();
 			jobs_op_dgreat(node);
 			execute_node(node->left, jobs, info ^ FORK);
 		}

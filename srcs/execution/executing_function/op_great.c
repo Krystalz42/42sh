@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:19:54 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 16:18:23 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 01:17:23 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,9 @@ void			jobs_op_great(t_node *node)
 		dup2(fildes, STDERR_FILENO);
 	}
 	else if (ft_isdigit(node->content->command[0][0]))
-	{
 		dup2(fildes, ft_atoi(node->content->command[0]));
-	}
 	else
-	{
 		dup2(fildes, STDOUT_FILENO);
-	}
 	close(fildes);
 }
 
@@ -46,9 +42,7 @@ uint8_t			op_great(t_node *node, t_jobs *jobs, int info)
 			return (var_return(255));
 		process = my_fork(jobs, find_executing_node(node), info);
 		if (process->pid)
-		{
 			my_wait(jobs);
-		}
 		else
 		{
 			process->pid = getpid();

@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 15:05:41 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 01:41:08 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 int			main(void)
 {
 	logger_init(7, "log");
-	log_success("PID [%d] PGID [%d] PPID [%d]", getpid(), getpgid(0), getppid());
+	log_success("PID [%d] PGID [%d] PPID [%d]",
+			getpid(), getpgid(0), getppid());
 	init_env();
 	init_term();
 	write_history_in_sh(get_str_from_history());

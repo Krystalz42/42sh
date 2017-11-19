@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:10:14 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 15:13:17 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 01:38:10 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void		collect_path(char **binary)
 	ft_memdel_tab(&path);
 }
 
-int				looking_for_path(char **binary)
+int			looking_for_path(char **binary)
 {
 	char		*temp;
 
