@@ -358,7 +358,7 @@ void						reset_process(t_jobs *jobs);
 void						update_jobs(t_process *process);
 int							wait_group(t_process *process, int option);
 int							finish_process(t_process *process);
-t_jobs						*jobs_table(void);
+t_jobs				**jobs_table(void);
 void						my_execve(char **command, char **env);
 void						handler_sigchld(int sig);
 void						my_wait(t_jobs *jobs);

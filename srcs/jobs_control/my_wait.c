@@ -60,7 +60,6 @@ void			my_wait(t_jobs *jobs)
 {
 	if (jobs)
 	{
-		first_process(jobs);
 		close_fildes(jobs->process);
 		if (jobs->process)
 		{
@@ -72,7 +71,6 @@ void			my_wait(t_jobs *jobs)
 			}
 			else
 			{
-				wait_group(jobs->process, WNOHANG);
 				print_info_jobs(jobs);
 			}
 		}

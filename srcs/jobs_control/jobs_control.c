@@ -12,11 +12,11 @@
 
 #include <sh.h>
 
-t_jobs				*jobs_table(void)
+t_jobs				**jobs_table(void)
 {
 	static t_jobs		*jobs;
 
-	return (jobs);
+	return (&jobs);
 }
 
 void				update_jobs(t_process *process)
@@ -42,28 +42,26 @@ void				update_jobs(t_process *process)
 void				handler_sigchld(int sig)
 {
 	t_jobs		*jobs;
-	int			index;
 
 	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
-	jobs = jobs_table();
-	index = 0;
+	jobs = *jobs_table();
 	(void)sig;
-	while (index < MAX_CHILD)
+	while (jobs)
 	{
-		if (jobs[index].process && jobs[index].process->foreground == false)
-			if (wait_group(jobs[index].process, WNOHANG))
+		if (jobs->process && jobs->process->foreground == false)
+			if (wait_group(jobs->process, WNOHANG))
 			{
-				if (terminate_process(jobs[index].process))
+				if (terminate_process(jobs->process))
 				{
-					update_jobs(jobs[index].process);
-					print_status(jobs[index].process, jobs[index].index);
+					update_jobs(jobs->process);
+					print_status(jobs->process, jobs->index);
 					reset_process(jobs);
 				}
-				else if (finish_process(jobs[index].process))
+				else if (finish_process(jobs->process))
 				{
-					print_status(jobs[index].process, jobs[index].index);
+					print_status(jobs->process, jobs->index);
 				}
 			}
-		index++;
+		jobs = jobs->next;
 	}
 }

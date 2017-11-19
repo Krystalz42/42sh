@@ -69,8 +69,9 @@ void				reset_process(t_jobs *jobs)
 			ft_memdel((void **)&to_kill->command);
 			ft_memdel((void **)&to_kill);
 		}
+		jobs->process = NULL;
+		ft_memdel((void **)&jobs);
 	}
-	jobs->process = NULL;
 }
 
 void				first_process(t_jobs *jobs)
@@ -82,7 +83,7 @@ void				first_process(t_jobs *jobs)
 
 void				close_fildes(t_process *process)
 {
-	while (process)
+	while (process->next)
 	{
 		close_pipe(process->fildes);
 		process = process->next;

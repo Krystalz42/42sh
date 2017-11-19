@@ -12,29 +12,33 @@
 
 #include <sh.h>
 
+t_jobs				*create_jobs(void)
+{
+	t_jobs *temp_jobs;
+
+	temp_jobs = *jobs_table();
+	if (temp_jobs)
+	{
+		while (temp_jobs->next)
+			temp_jobs = temp_jobs->next;
+		temp_jobs->next = (t_jobs *)ft_memalloc(sizeof(t_jobs));
+		temp_jobs->next->prev = temp_jobs;
+		return (temp_jobs->next);
+	}
+	else
+	{
+		temp_jobs = (t_jobs *)ft_memalloc(sizeof(t_jobs));
+		return (temp_jobs);
+	}
+}
+
 t_jobs				*new_jobs(t_jobs *jobs)
 {
-	int			index;
 
 	if (jobs == NULL)
 	{
-		index = MAX_CHILD - 1;
-		jobs = jobs_table();
-		while (index >= 0 && jobs[index].process == NULL)
-			index--;
-		if (index == MAX_CHILD - 1)
-		{
-			var_return(255);
-			error_msg(S42H, "too much process: ", NULL);
-			return (NULL);
-		}
-		else
-		{
-			jobs += index + 1;
-			jobs->index = index + 2;
-			log_debug("jobs [%d] created", index + 1);
-			return (jobs);
-		}
+		jobs = create_jobs();
+		jobs->index = (jobs->prev) ? jobs->prev->index + 1 : 1;
 	}
 	return (jobs);
 }

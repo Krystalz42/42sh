@@ -34,7 +34,6 @@ int		shell(void)
 		check_tree_path(tree);
 		execute_node(tree, NULL, FORK | FOREGROUND);
 		cursor_column(1);
-		handler_sigchld(0);
 	}
 	return (0);
 }

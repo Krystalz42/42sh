@@ -94,7 +94,7 @@ uint8_t					builtin_jobs(t_node *node, int info)
 	t_jobs				*jobs;
 
 	(void)info;
-	jobs = jobs_table();
+	jobs = *jobs_table();
 	if ((option = check_option(node->content->command)) == -1)
 		return (var_return(-1));
 	if ((jobs_spec = check_jobs_spec(node->content->command)) < 0)
@@ -102,5 +102,5 @@ uint8_t					builtin_jobs(t_node *node, int info)
 									node->content->command[ABS(jobs_spec)]));
 		if (jobs_spec > 0 && jobs_spec < MAX_CHILD)
 		return (var_return(print_jobs(jobs + (jobs_spec - 1), option)));
-	return (var_return(jobs_iter(jobs_table(), option)));
+	return (var_return(jobs_iter(*jobs_table(), option)));
 }

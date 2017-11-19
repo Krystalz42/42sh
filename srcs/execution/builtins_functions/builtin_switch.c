@@ -69,7 +69,7 @@ uint8_t		builtin_foreground(t_node *node, int info)
 	t_jobs		*jobs;
 
 	(void)info;
-	jobs = jobs_table();
+	jobs = *jobs_table();
 	if (node->content->command[1] && node->content->command[1][0] == '%')
 	{
 		id = (ft_atoi(node->content->command[1] + 1) - 1);
@@ -94,7 +94,7 @@ uint8_t		builtin_background(t_node *node, int info)
 	t_jobs		*jobs;
 
 	(void)info;
-	jobs = jobs_table();
+	jobs = *jobs_table();
 	if (node->content->command[1] && node->content->command[1][0] == '%')
 	{
 		id = (ft_atoi(node->content->command[1] + 1) - 1);
