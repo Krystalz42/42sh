@@ -33,13 +33,13 @@ static void		parser(t_parsing **node)
 
 static void		expanding(t_parsing *node)
 {
-//	special(node, "$$", getpid());
-//	special(node, "$?", var_return(-1));
-//	tilde(node);
-//	variable(node);
-//	escape(node);
+	special(node, "$$", getpid());
+	special(node, "$?", var_return(-1));
+	tilde(node);
+	variable(node);
+	escape(node);
 	split(node);
-//	argv(node);
+	argv(node);
 }
 
 /*

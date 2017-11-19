@@ -16,9 +16,7 @@ void			initialize_fct(t_read **read_std, unsigned char flags)
 {
 	(*read_std) = init_struct_for_read();
 	(*read_std)->print = 2;
-	signal(SIGINT, SIG_IGN);
 	init_prompt();
-	init_signal();
 	set_termios(SET_OUR_TERM);
 	(*read_std)->cur = prompt(flags | PRINT);
 	signal_reception(0);

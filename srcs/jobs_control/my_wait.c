@@ -69,7 +69,10 @@ void			wait_process(t_jobs *jobs, int option)
 void			my_wait(t_jobs *jobs)
 {
 	log_fatal("Adress of {jobs} in Wait [%p]", jobs);
-//	close_fildes(jobs->process);
+	if (jobs->process->foreground == true)
+		while ((wait(0)) != -1)
+			;
+	close_fildes(jobs->process);
 //	if (jobs->process->foreground)
 //	{
 //		set_fildes(jobs->process->pgid);

@@ -36,11 +36,14 @@ t_process		*my_fork(t_jobs *jobs, t_node *node, int info)
 {
 	t_process	*process;
 
-	process = new_process(jobs);
+	if ((jobs = new_jobs(jobs)) == NULL)
+		return (NULL);
+	if ((process = new_process(jobs)) == NULL)
+		return (NULL);
 	if ((process->pid = fork()) == -1)
 	{
 		error_msg("fork :", "fork failed", NULL);
-		perror(""); // To remove
+		return (NULL);
 	}
 	process->fildes[0] = -1;
 	process->fildes[1] = -1;

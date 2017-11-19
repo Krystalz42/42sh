@@ -70,8 +70,8 @@ static inline void		inline_print_(t_read **read_std, unsigned long *buff)
 		chk_and_print(read_std);
 }
 
-static inline void		inline_other(t_read **read_std, unsigned long *buff,\
-	int (*fct)(t_read **, unsigned long))
+static inline void		inline_other(t_read **read_std, \
+		const unsigned long *buff, int (*fct)(t_read **, unsigned long))
 {
 	fct(read_std, *buff);
 	chk_and_print(read_std);

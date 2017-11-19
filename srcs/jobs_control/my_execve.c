@@ -36,7 +36,6 @@ str++;
 //	else
 //	{
 //		error_msg(S42H, "command not found: ", str);
-		exit(127);
 //	}
 }
 
@@ -50,4 +49,5 @@ void			my_execve(char **command, char **env)
 	log_info("[%s] PID [%d] PPID [%d] PGID [%d]",
 	command[0], getpid(), getppid(), getpgid(0));
 	execve(command[0], command, env) == -1 ? error(command[0]) : 0;
+	exit(127);
 }

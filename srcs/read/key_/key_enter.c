@@ -47,6 +47,7 @@ void		complete_command(t_read **read_std)
 
 int			key_enter_(t_read **read_std, unsigned long buff)
 {
+	buff++;
 	if ((*read_std)->completion)
 		complete_command(read_std);
 	else
@@ -55,15 +56,15 @@ int			key_enter_(t_read **read_std, unsigned long buff)
 		(*read_std)->print = 2;
 		print_struct(*read_std);
 		insert_one_line();
-		if (!(check_cmd(read_std)))
+//		if (!(check_cmd(read_std)))
 			(*read_std)->finish = 1;
-		else
-		{
-			(*read_std)->print = 2;
-			(*read_std)->cur.line = 1;
-			key_print_fct((*read_std)->cmd, buff);
-			(*read_std)->history = 0;
-		}
+//		else
+//		{
+//			(*read_std)->print = 2;
+//			(*read_std)->cur.line = 1;
+//			key_print_fct((*read_std)->cmd, buff);
+//			(*read_std)->history = 0;
+//		}
 	}
 	return (1);
 }

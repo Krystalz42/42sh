@@ -26,8 +26,8 @@ uint8_t					jobs_execution(t_node *node, t_jobs *jobs, int info)
 	log_debug("VALUE_EXECUTION %d", info);
 	if (info & FORK)
 	{
-		jobs = new_jobs(jobs);
-		process = my_fork(jobs, node, info);
+		if ((process = my_fork(jobs, node, info)) == NULL)
+			return (var_return(255));
 		if (process->pid > 0)
 		{
 			my_wait(jobs);
