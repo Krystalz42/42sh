@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:10:18 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 23:42:56 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 23:57:34 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,12 @@ static int		get_fildes(char *str)
 		fildes = open(PATH_ERROR, O_WRONLY);
 	else if (ft_strisdigit(str))
 	{
-		fildes = ft_atoi(str);	
+		if ((fildes = ft_atoi(str)) > 2)
+		{
+			ft_printf("42sh: %d: Bad file descriptor\n", fildes);
+			var_return(1);
+			exit(var_return(-1));
+		}
 	}
 	else
 		fildes = open(str, OPTION_GREAT, 0644);
@@ -81,12 +86,5 @@ uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
 		jobs_op_great_and(node);
 		execute_node(node->left, jobs, info);
 	}
-=======
-uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
-{
-	(void)node;
-	(void)jobs;
-	(void)info;
->>>>>>> 39e1b6b85a93fd8269ba378144fd5c0f268264e8
 	return (var_return(-1));
 }
