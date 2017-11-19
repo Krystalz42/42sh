@@ -29,7 +29,9 @@ int				wait_group(t_process *process, int option)
 	while (process)
 	{
 		if ((pid = waitpid(-process->pgid, &status, option)) > 0)
-			place_status(pid, status);
+		{
+			log_debug("%d %d", pid,place_status(pid, status) ? 1 : 0);
+		}
 		process = process->next;
 	}
 	return (0);
@@ -46,6 +48,7 @@ void			set_fildes(pid_t pgid)
 
 void				check_child_in_foreground(t_jobs *jobs)
 {
+	log_debug("In wait FG %d %d", jobs ? 1 : 0, (jobs && jobs->process) ? 1 : 0);
 	if (jobs->process && jobs->process->foreground)
 	{
 		set_fildes(jobs->process->pgid);
@@ -63,6 +66,7 @@ void				check_child_in_foreground(t_jobs *jobs)
 			modify_runing(jobs->process, false);
 			print_status(jobs->process, jobs->index);
 		}
+		log_debug("Yo");
 	}
 }
 

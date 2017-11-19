@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-int			check_jobs_spec(char **command, char *from)
+static int			check_jobs_spec(char **command, char *from)
 {
 	int			table;
 	int			jobs_spec;
@@ -21,7 +21,7 @@ int			check_jobs_spec(char **command, char *from)
 	if (command[table] && command[table][0] == '%')
 	{
 		if ((jobs_spec = ft_atoi(command[table] + 1)) < 1)
-			return (error_msg(from, NO_CUR_JOB, command[table]));
+			return (error_msg(from, NO_CUR_JOB, command[table]) - 2);
 	}
 	else if (command[table])
 		return (error_msg(from, NO_CUR_JOB, command[table]));
@@ -30,15 +30,51 @@ int			check_jobs_spec(char **command, char *from)
 	return (jobs_spec);
 }
 
+t_jobs		*get_jobs_by_setting(int index, int foreground, int runing)
+{
+	t_jobs		*jobs;
+
+	jobs = *jobs_table();
+	if (index)
+	{
+		while (jobs && jobs->index != index)
+			jobs = jobs->next;
+		if (jobs && jobs->index == index)
+			return (jobs);
+	}
+	else
+	{
+		while (jobs)
+		{
+			if (foreground != -1 && jobs->process->foreground != foreground)
+			{
+				jobs = jobs->next;
+				continue ;
+			}
+			if (foreground != -1 && jobs->process->running != runing)
+			{
+				jobs = jobs->next;
+				continue ;
+			}
+			return (jobs);
+		}
+	}
+	return (NULL);
+}
+
 uint8_t		builtin_foreground(t_node *node, int info)
 {
 	int			jobs_spec;
+	t_jobs		*jobs;
 
-	jobs_spec = check_jobs_spec(node->content->command, FG);
-	log_success("%d", jobs_spec);
-	(void)node;
 	(void)info;
-	return (error_msg(BG, INVALID, node->content->command[1]));
+	if ((jobs_spec = check_jobs_spec(node->content->command, FG)) == -1)
+		return (1);
+	log_success("%d", jobs_spec);
+	jobs = get_jobs_by_setting(jobs_spec, false, -1);
+	log_success("%d", jobs ? 1 : 0);
+
+	return (0);
 }
 
 uint8_t		builtin_background(t_node *node, int info)

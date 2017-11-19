@@ -47,7 +47,7 @@ void				check_child_in_background(void)
 	while ((pid = waitpid(-1, &status, 0)) != -1)
 		if ((jobs = get_jobs(place_status(pid, status)->pgid)) != NULL)
 		{
-			wait_group(jobs->process, WNOHANG | WUNTRACED);
+			wait_group(jobs->process, WNOHANG);
 			update_status(jobs->process);
 			if (finished_process(jobs->process))
 			{
