@@ -6,15 +6,11 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 16:11:51 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 07:46:45 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 10:28:33 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
-
-/*
-*************** PRIVATE ********************************************************
-*/
 
 /*
 *************** PUBLIC *********************************************************
@@ -24,7 +20,6 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 {
 	int			fildes[2];		
 	t_process	*process;
-
 
 	log_debug("PIPELINE,	info: [%d]", info);
 	jobs = new_jobs(jobs);
