@@ -347,12 +347,14 @@ void						do_heredoc(t_node *node);
 **				JOB'S CONTROL FUNCTION
 */
 
+t_process					*place_status(pid_t pid, int status);
+t_jobs						*get_jobs(pid_t pgid);
+void						print_info_jobs(t_process *process, int index);
 t_process					*my_fork(t_jobs *jobs, t_node *node, int info);
 t_jobs						*new_jobs(t_jobs *jobs);
 void						wait_process(t_jobs *jobs, int option);
 t_process					*new_process(t_jobs *jobs);
 void						close_fildes(t_process *process);
-void						print_info_jobs(t_jobs *jobs);
 t_node						*find_executing_node(t_node *node);
 void						first_process(t_jobs *jobs);
 void						reset_process(t_jobs *jobs);
@@ -368,7 +370,6 @@ void						modify_foreground(t_process *process, bool change);
 void						set_fildes(pid_t pgid);
 const char					*status_signal(int signal);
 void						update_jobs(int status);
-void						place_status(pid_t pid, int status);
 const char					*status_exit(int signal);
 
 /*

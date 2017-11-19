@@ -71,12 +71,9 @@ void			print_status(t_process *process, int jobs_spec)
 	ioctl(STDIN_FILENO, TIOCSTI, "\0");
 }
 
-void			print_info_jobs(t_jobs *jobs)
+void			print_info_jobs(t_process *process, int index)
 {
-	t_process *process;
-
-	process = jobs->process;
-	ft_printf("[%d] ", jobs->index);
+	ft_printf("[%d] ", index);
 	while (process)
 	{
 		ft_putnbr(process->pid);

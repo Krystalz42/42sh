@@ -35,3 +35,17 @@ t_process		*get_process(pid_t pid)
 	}
 	return (NULL);
 }
+
+t_jobs		*get_jobs(pid_t pgid)
+{
+	t_jobs		*jobs;
+
+	jobs = *jobs_table();
+	while (jobs)
+	{
+		if (jobs->process->pgid == pgid)
+			return (jobs);
+		jobs = jobs->next;
+	}
+	return (NULL);
+}

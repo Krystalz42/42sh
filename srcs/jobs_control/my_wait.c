@@ -12,12 +12,13 @@
 
 #include <sh.h>
 
-void		place_status(pid_t pid, int status)
+t_process		*place_status(pid_t pid, int status)
 {
 	t_process		*process;
 
 	if ((process = get_process(pid)) != NULL)
 		process->status = status;
+	return (process);
 }
 
 int				wait_group(t_process *process, int option)
@@ -52,5 +53,8 @@ void			my_wait(t_jobs *jobs)
 		set_fildes(getpgid(0));
 	}
 	else
+	{
+		print_info_jobs(jobs->process, jobs->index);
+	}
 
 }
