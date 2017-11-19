@@ -12,16 +12,12 @@
 
 #include <sh.h>
 
-void		place_status(t_process *process, pid_t pid, int status)
+void		place_status(pid_t pid, int status)
 {
-	while (process->prev)
-		process = process->prev;
-	while (process)
-	{
-		if (process->pid == pid)
-			process->status = status;
-		process = process->next;
-	}
+	t_process		*process;
+
+	if ((process = get_process(pid)) != NULL)
+		process->status = status;
 }
 
 int				wait_group(t_process *process, int option)
@@ -29,12 +25,10 @@ int				wait_group(t_process *process, int option)
 	pid_t		pid;
 	int			status;
 
-	log_fatal("Adress of {process} in Wait [%p]", process);
 	while (process)
 	{
-		log_fatal("Adress of {process} in Wait [%p]", process);
 		if ((pid = waitpid(-process->pgid, &status, option)) > 0)
-			place_status(process, pid, status);
+			place_status(pid, status);
 		process = process->next;
 	}
 	return (0);
@@ -47,40 +41,16 @@ void			set_fildes(pid_t pgid)
 	tcsetpgrp(STDIN_FILENO, pgid);
 }
 
-void			wait_process(t_jobs *jobs, int option)
-{
-	int			ret;
-
-	wait_group(jobs->process, option);
-	update_jobs(jobs->process);
-	if ((ret = terminate_process(jobs->process)) != 0)
-	{
-		(ret > 0) ? print_status(jobs->process, jobs->index) : 0;
-		reset_process(jobs);
-	}
-	else
-	{
-		print_status(jobs->process, jobs->index);
-		modify_runing(jobs->process, false);
-		modify_foreground(jobs->process, false);
-	}
-}
-
 void			my_wait(t_jobs *jobs)
 {
 	log_fatal("Adress of {jobs} in Wait [%p]", jobs);
-	if (jobs->process->foreground == true)
-		while ((wait(0)) != -1)
-			;
 	close_fildes(jobs->process);
-//	if (jobs->process->foreground)
-//	{
-//		set_fildes(jobs->process->pgid);
-//		wait_process(jobs, WUNTRACED);
-//		set_fildes(getpgid(0));
-//	}
-//	else
-//	{
-//		print_info_jobs(jobs);
-//	}
+	if (jobs->process->foreground)
+	{
+		set_fildes(jobs->process->pgid);
+		wait_group(jobs->process, WUNTRACED);
+		set_fildes(getpgid(0));
+	}
+	else
+
 }

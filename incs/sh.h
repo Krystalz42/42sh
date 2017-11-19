@@ -356,7 +356,6 @@ void						print_info_jobs(t_jobs *jobs);
 t_node						*find_executing_node(t_node *node);
 void						first_process(t_jobs *jobs);
 void						reset_process(t_jobs *jobs);
-void						update_jobs(t_process *process);
 int							wait_group(t_process *process, int option);
 int							finish_process(t_process *process);
 t_jobs				**jobs_table(void);
@@ -368,6 +367,8 @@ void						modify_runing(t_process *process, bool change);
 void						modify_foreground(t_process *process, bool change);
 void						set_fildes(pid_t pgid);
 const char					*status_signal(int signal);
+void						update_jobs(int status);
+void						place_status(pid_t pid, int status);
 const char					*status_exit(int signal);
 
 /*
@@ -389,7 +390,7 @@ uint8_t						op_dgreat(t_node *node, t_jobs *jobs, int info);
 /*
 **				TOOL'S EXECUTION
 */
-void						place_status(t_process *process, pid_t pid, int status);
+
 int							compare_heredoc(t_cmd *cmd, char *string);
 char						**build_table(char **heredoc, char *str);
 char						*convert_to_str(t_cmd *cmd);

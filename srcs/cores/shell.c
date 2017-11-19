@@ -31,7 +31,7 @@ int		shell(void)
 			continue ;
 		if (!(tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR)))
 			continue ;
-//		check_tree_path(tree);
+		check_tree_path(tree);
 		execute_node(tree, NULL, FORK | FOREGROUND);
 		cursor_column(1);
 	}
