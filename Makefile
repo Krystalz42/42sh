@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/17 16:47:53 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/11/19 02:32:11 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -147,6 +147,7 @@ SRCS = \
 	   execution/tools/find_executing_node.c					\
 	   execution/tools/check_path.c								\
 	   execution/tools/tools_heredoc.c							\
+	   execution/tools/get_process.c							\
 	   execution/tools/potential_option.c						\
 	   execution/executing_function/op_execution.c				\
 	   execution/executing_function/op_great_and.c				\

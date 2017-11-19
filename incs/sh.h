@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/18 18:11:23 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/19 02:31:07 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,6 +135,7 @@ uint8_t						all_signal(void);
 int							start_from_null(char **command, char ***env);
 int							start_from_full(char **command, char ***env);
 int							start_from_less(char **command, char ***env);
+t_process					*get_process(pid_t pid);
 
 /*
 **				BUILT IN TOOLS
