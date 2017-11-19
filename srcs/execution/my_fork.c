@@ -41,8 +41,9 @@ t_process		*my_fork(t_jobs *jobs, t_node *node, int info)
 	if ((process->pid = fork()) == -1)
 	{
 		error_msg("fork :", "fork failed", NULL);
-		return (NULL);
+//		return (NULL);
 	}
+	log_success("On va attendre les foutu enfants! %d", process->pid);
 	process->fildes[0] = -1;
 	process->fildes[1] = -1;
 	process->running = true;

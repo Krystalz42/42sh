@@ -146,6 +146,7 @@
 # define LIMIT					"limit process at 1024"
 # define BAD_FD					" Bad file descriptor"
 # define NEED_VALUE				"variable need a name : "
+# define JOBS_NOT_FOUND			"job not found: "
 # define INVALID				"invalid argument : "
 # define NO_ARGS_U				"option requires an argument -- u"
 # define VAR_NO_SET				"variable not set : "

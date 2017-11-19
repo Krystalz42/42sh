@@ -45,18 +45,19 @@ void			set_fildes(pid_t pgid)
 
 }
 
-void			my_wait(t_jobs *jobs)
+void				check_child_in_foreground(t_jobs *jobs)
 {
-	log_fatal("Adress of {jobs} in Wait [%p]", jobs);
-	close_fildes(jobs->process);
-	if (jobs->process->foreground)
+	if (jobs->process && jobs->process->foreground)
 	{
 		set_fildes(jobs->process->pgid);
 		wait_group(jobs->process, WUNTRACED);
 		set_fildes(getpgid(0));
 		update_status(jobs->process);
+		update_jobs(jobs->process);
 		if (finished_process(jobs->process))
+		{
 			memdel_jobs(jobs);
+		}
 		else
 		{
 			modify_foreground(jobs->process, false);
@@ -64,9 +65,21 @@ void			my_wait(t_jobs *jobs)
 			print_status(jobs->process, jobs->index);
 		}
 	}
+}
+
+void			my_wait(t_jobs *jobs)
+{
+	close_fildes(jobs->process);
+	if (jobs->process->foreground == 0)
+	{
+		signal(SIGCHLD, &handler_sigchld);
+		print_info_jobs(jobs->process, jobs->index);
+	}
 	else
 	{
-		print_info_jobs(jobs->process, jobs->index);
+		signal(SIGCHLD, SIG_DFL);
+		check_child_in_foreground(jobs);
+		signal(SIGCHLD, &handler_sigchld);
 	}
 
 }

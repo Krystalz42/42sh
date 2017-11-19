@@ -27,20 +27,23 @@ static int		jobs_do_heredoc(t_node *node)
 void			do_heredoc(t_node *node)
 {
 	t_cmd				*cmd;
-	char				**heredoc;
 	int					fildes;
+	char				**heredoc;
 
-	fildes = jobs_do_heredoc(node);
 	heredoc = NULL;
 	while (0x2A)
 	{
 		cmd = first_cmd(read_stdin(HEREDOC), 1);
 		if (signal_reception(-1) == SIGINT)
+		{
 			break ;
+		}
 		else if (compare_heredoc(cmd, node->right->content->command[0]) == 0
 		|| signal_reception(-1) == 1)
 		{
+			fildes = jobs_do_heredoc(node);
 			ft_putstrtab_fd(heredoc, 10, fildes);
+			close(fildes);
 			memdel_cmd(&cmd);
 			break ;
 		}

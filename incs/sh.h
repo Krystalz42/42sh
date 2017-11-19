@@ -15,7 +15,7 @@
 
 # include <errno.h>
 # include <libft.h>
-# include <ft_printf.h>
+# include <libftprintf.h>
 # include <unistd.h>
 # include <define.h>
 # include <struct.h>
@@ -347,6 +347,7 @@ void						do_heredoc(t_node *node);
 **				JOB'S CONTROL FUNCTION
 */
 
+void						update_jobs(t_process *process);
 void						update_status(t_process *process);
 int							finished_process(t_process *process);
 t_process					*place_status(pid_t pid, int status);
@@ -354,23 +355,18 @@ t_jobs						*get_jobs(pid_t pgid);
 void						print_info_jobs(t_process *process, int index);
 t_process					*my_fork(t_jobs *jobs, t_node *node, int info);
 t_jobs						*new_jobs(t_jobs *jobs);
-void						wait_process(t_jobs *jobs, int option);
 t_process					*new_process(t_jobs *jobs);
 void						close_fildes(t_process *process);
 t_node						*find_executing_node(t_node *node);
-void						first_process(t_jobs *jobs);
 int							wait_group(t_process *process, int option);
-int							finish_process(t_process *process);
 t_jobs						**jobs_table(void);
 void						my_execve(char **command, char **env);
 void						handler_sigchld(int sig);
 void						my_wait(t_jobs *jobs);
-int							terminate_process(t_process *process);
 void						modify_runing(t_process *process, bool change);
 void						modify_foreground(t_process *process, bool change);
 void						set_fildes(pid_t pgid);
 const char					*status_signal(int signal);
-void						update_jobs(int status);
 const char					*status_exit(int signal);
 
 /*
@@ -405,10 +401,10 @@ char						*create_trial_path(char *path, char *binary);
 **				PRINT PROCESS
 */
 
+uint8_t						print_jobs_info(t_jobs *jobs, int option);
 void						print_status(t_process *process, int jobs_spec);
 int							print_process(t_process *process, int option,
 											int index);
-uint8_t						print_jobs(t_jobs *jobs, int option);
 
 /*
 **				SIGNAL FUNCTION

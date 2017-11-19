@@ -30,7 +30,7 @@ int				print_process(t_process *process, int option, int index)
 	return (1);
 }
 
-uint8_t			print_jobs(t_jobs *jobs, int option)
+uint8_t			print_jobs_info(t_jobs *jobs, int option)
 {
 	t_process			*process;
 
@@ -50,22 +50,15 @@ uint8_t			print_jobs(t_jobs *jobs, int option)
 
 void			print_status(t_process *process, int jobs_spec)
 {
+	(void)jobs_spec;
 	cursor_column(1);
 	while (process)
 	{
-		process->prev != NULL ? CHAR('\t') : ft_printf("[%d]\t", jobs_spec);
-		if (WIFEXITED(process->status))
-			ft_printf("%d %s %s\n", process->pid,
-			status_exit(WEXITSTATUS(process->status)), process->command);
-		else if (WIFSIGNALED(process->status))
-			ft_printf("%d %s %s\n", process->pid,
-			status_signal(WTERMSIG(process->status)), process->command);
-		else if (WIFCONTINUED(process->status))
-			ft_printf("%d %s %s\n", process->pid,
-			status_signal(18), process->command);
-		else if (WIFSTOPPED(process->status))
-			ft_printf("%d %s %s\n", process->pid,
-			status_signal(WSTOPSIG(process->status)), process->command);
+		if (process->status != -1)
+		{
+
+
+		}
 		process = process->next;
 	}
 	ioctl(STDIN_FILENO, TIOCSTI, "\0");
