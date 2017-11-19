@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 16:11:51 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 03:38:50 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 04:17:02 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,7 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	process->fildes[0] = fildes[0];
 	process->fildes[1] = fildes[1];
 	if (process->pid)
-	{
-		log_debug("Daddy pipe do left");
 		execute_node(node->left, jobs, (info | WRITE_PREVIOUS) | FORCE_FORK);
-	}
 	else
 	{
 		process->pid = getpid();
