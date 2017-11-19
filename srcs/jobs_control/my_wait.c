@@ -60,7 +60,7 @@ void			wait_process(t_jobs *jobs, int option)
 	else
 	{
 		print_status(jobs->process, jobs->index);
-		modify_runing(jobs006->process, false);
+		modify_runing(jobs->process, false);
 		modify_foreground(jobs->process, false);
 	}
 }
