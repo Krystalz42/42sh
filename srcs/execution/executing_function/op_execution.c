@@ -22,8 +22,8 @@ uint8_t					exec_or_builtin(t_node *node, int info)
 uint8_t					jobs_execution(t_node *node, t_jobs *jobs, int info)
 {
 	t_process		*process;
-	log_debug("VALUE_EXECUTION %d", info);
 
+	log_debug("VALUE_EXECUTION %d", info);
 	if (info & FORK)
 	{
 		jobs = new_jobs(jobs);
@@ -35,13 +35,15 @@ uint8_t					jobs_execution(t_node *node, t_jobs *jobs, int info)
 		else if (process->pid == 0)
 		{
 			process->pid = getpid();
+			if (info & WRITE_PREVIOUS)
+				write_pipe(process->prev->fildes);
 			exec_or_builtin(node,  info);
 		}
 	}
 	else
 	{
 		process = get_process(getpid());
-		if (info & WRITE_PREVIOUS && process && process->prev)
+		if (info & WRITE_PREVIOUS)
 			write_pipe(process->prev->fildes);
 		exec_or_builtin(node, info);
 	}

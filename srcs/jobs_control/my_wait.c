@@ -14,19 +14,9 @@
 
 int				wait_group(t_process *process, int option)
 {
-	int		ret;
-
-	ret = 0;
-	if (process)
-	{
-		while (process)
-		{
-			if ((waitpid(process->pid, &process->status, option)) > 0)
-				ret = 1;
-			process = process->next;
-		}
-	}
-	return (ret);
+	if ((waitpid(-process->pgid, &process->status, option)) > 0)
+		return (1);
+	return (0);
 }
 
 void			set_fildes(pid_t pgid)
@@ -57,22 +47,15 @@ void			wait_process(t_jobs *jobs, int option)
 
 void			my_wait(t_jobs *jobs)
 {
-	if (jobs)
+	close_fildes(jobs->process);
+	if (jobs->process->foreground)
 	{
-		close_fildes(jobs->process);
-		if (jobs->process)
-		{
-			if (jobs->process->foreground)
-			{
-				waitpid(-jobs->process->pgid, 0, WUNTRACED);
-//				set_fildes(jobs->process->pgid);
-//				wait_process(jobs, WUNTRACED);
-//				set_fildes(getpgid(0));
-			}
-			else
-			{
-				print_info_jobs(jobs);
-			}
-		}
+		set_fildes(jobs->process->pgid);
+		wait_process(jobs, WUNTRACED);
+		set_fildes(getpgid(0));
+	}
+	else
+	{
+		print_info_jobs(jobs);
 	}
 }

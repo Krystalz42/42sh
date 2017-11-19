@@ -35,23 +35,12 @@ int					finish_process(t_process *process)
 
 int					terminate_process(t_process *process)
 {
-	int			ret;
-
-	ret = 0;
-	while (process)
-	{
-		log_trace("In terminated process for %d [%d.%d]", process->pid,
-					WIFSIGNALED(process->status), WIFEXITED(process->status));
-		if (WIFSIGNALED(process->status))
-			ret = 1;
-		else if (WIFEXITED(process->status))
-			ret = (ret > 0) ? ret : -1;
-		else
-			return (0);
-		process = process->next;
-	}
-	log_trace("Return terminated_status %d", 1);
-	return (ret);
+	if (WIFSIGNALED(process->status))
+		return (1);
+	else if (WIFEXITED(process->status))
+		return (-1);
+	else
+		return (0);
 }
 
 void				reset_process(t_jobs *jobs)
