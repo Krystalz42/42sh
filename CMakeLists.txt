@@ -189,7 +189,6 @@ set(SOURCE_FILES
         srcs/execution/tools/check_path.c
         srcs/execution/tools/check_tree_path.c
         srcs/execution/tools/do_heredoc.c
-        srcs/execution/tools/fildes_previous.c
         srcs/execution/tools/find_executing_node.c
         srcs/execution/tools/get_process.c
         srcs/execution/tools/get_real_env.c
@@ -224,6 +223,7 @@ set(SOURCE_FILES
         srcs/jobs_control/set_process.c
         srcs/jobs_control/status_signals.c
         srcs/memdel_struct/memdel_completion.c
+        srcs/memdel_struct/memdel_jobs.c
         srcs/memdel_struct/memdel_outstanding.c
         srcs/memdel_struct/memdel_read.c
         srcs/memdel_struct/memdel_search_history.c
@@ -322,7 +322,5 @@ include_directories(incs)
 include_directories(libs/libft/incs)
 include_directories(libs/logger/incs)
 include_directories(libs/printf/incs)
-
-link_libraries(-lncurses)
 
 add_executable(42sh_final ${SOURCE_FILES})

@@ -210,6 +210,7 @@ SRCS = \
 	   term/init_term.c											\
 	   term/set_term.c											\
 	   term/keep_term_struct.c									\
+	   memdel_struct/memdel_jobs.c      						\
 	   memdel_struct/memdel_outstanding.c						\
 	   memdel_struct/memdel_completion.c						\
 	   memdel_struct/memdel_search_history.c					\

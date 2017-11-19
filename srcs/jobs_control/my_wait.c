@@ -40,6 +40,9 @@ void			set_fildes(pid_t pgid)
 	signal(SIGTTIN, SIG_IGN);
 	signal(SIGTTOU, SIG_IGN);
 	tcsetpgrp(STDIN_FILENO, pgid);
+	signal(SIGTTIN, SIG_DFL);
+	signal(SIGTTOU, SIG_DFL);
+
 }
 
 void			my_wait(t_jobs *jobs)
@@ -51,6 +54,15 @@ void			my_wait(t_jobs *jobs)
 		set_fildes(jobs->process->pgid);
 		wait_group(jobs->process, WUNTRACED);
 		set_fildes(getpgid(0));
+		update_status(jobs->process);
+		if (finished_process(jobs->process))
+			memdel_jobs(jobs);
+		else
+		{
+			modify_foreground(jobs->process, false);
+			modify_runing(jobs->process, false);
+			print_status(jobs->process, jobs->index);
+		}
 	}
 	else
 	{

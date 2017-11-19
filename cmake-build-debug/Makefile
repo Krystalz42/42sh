@@ -4956,33 +4956,6 @@ srcs/execution/tools/do_heredoc.c.s:
 	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/tools/do_heredoc.c.s
 .PHONY : srcs/execution/tools/do_heredoc.c.s
 
-srcs/execution/tools/fildes_previous.o: srcs/execution/tools/fildes_previous.c.o
-
-.PHONY : srcs/execution/tools/fildes_previous.o
-
-# target to build an object file
-srcs/execution/tools/fildes_previous.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/tools/fildes_previous.c.o
-.PHONY : srcs/execution/tools/fildes_previous.c.o
-
-srcs/execution/tools/fildes_previous.i: srcs/execution/tools/fildes_previous.c.i
-
-.PHONY : srcs/execution/tools/fildes_previous.i
-
-# target to preprocess a source file
-srcs/execution/tools/fildes_previous.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/tools/fildes_previous.c.i
-.PHONY : srcs/execution/tools/fildes_previous.c.i
-
-srcs/execution/tools/fildes_previous.s: srcs/execution/tools/fildes_previous.c.s
-
-.PHONY : srcs/execution/tools/fildes_previous.s
-
-# target to generate assembly for a file
-srcs/execution/tools/fildes_previous.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/tools/fildes_previous.c.s
-.PHONY : srcs/execution/tools/fildes_previous.c.s
-
 srcs/execution/tools/find_executing_node.o: srcs/execution/tools/find_executing_node.c.o
 
 .PHONY : srcs/execution/tools/find_executing_node.o
@@ -5819,6 +5792,33 @@ srcs/memdel_struct/memdel_completion.s: srcs/memdel_struct/memdel_completion.c.s
 srcs/memdel_struct/memdel_completion.c.s:
 	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/memdel_struct/memdel_completion.c.s
 .PHONY : srcs/memdel_struct/memdel_completion.c.s
+
+srcs/memdel_struct/memdel_jobs.o: srcs/memdel_struct/memdel_jobs.c.o
+
+.PHONY : srcs/memdel_struct/memdel_jobs.o
+
+# target to build an object file
+srcs/memdel_struct/memdel_jobs.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/memdel_struct/memdel_jobs.c.o
+.PHONY : srcs/memdel_struct/memdel_jobs.c.o
+
+srcs/memdel_struct/memdel_jobs.i: srcs/memdel_struct/memdel_jobs.c.i
+
+.PHONY : srcs/memdel_struct/memdel_jobs.i
+
+# target to preprocess a source file
+srcs/memdel_struct/memdel_jobs.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/memdel_struct/memdel_jobs.c.i
+.PHONY : srcs/memdel_struct/memdel_jobs.c.i
+
+srcs/memdel_struct/memdel_jobs.s: srcs/memdel_struct/memdel_jobs.c.s
+
+.PHONY : srcs/memdel_struct/memdel_jobs.s
+
+# target to generate assembly for a file
+srcs/memdel_struct/memdel_jobs.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/memdel_struct/memdel_jobs.c.s
+.PHONY : srcs/memdel_struct/memdel_jobs.c.s
 
 srcs/memdel_struct/memdel_outstanding.o: srcs/memdel_struct/memdel_outstanding.c.o
 
@@ -8877,9 +8877,6 @@ help:
 	@echo "... srcs/execution/tools/do_heredoc.o"
 	@echo "... srcs/execution/tools/do_heredoc.i"
 	@echo "... srcs/execution/tools/do_heredoc.s"
-	@echo "... srcs/execution/tools/fildes_previous.o"
-	@echo "... srcs/execution/tools/fildes_previous.i"
-	@echo "... srcs/execution/tools/fildes_previous.s"
 	@echo "... srcs/execution/tools/find_executing_node.o"
 	@echo "... srcs/execution/tools/find_executing_node.i"
 	@echo "... srcs/execution/tools/find_executing_node.s"
@@ -8973,6 +8970,9 @@ help:
 	@echo "... srcs/memdel_struct/memdel_completion.o"
 	@echo "... srcs/memdel_struct/memdel_completion.i"
 	@echo "... srcs/memdel_struct/memdel_completion.s"
+	@echo "... srcs/memdel_struct/memdel_jobs.o"
+	@echo "... srcs/memdel_struct/memdel_jobs.i"
+	@echo "... srcs/memdel_struct/memdel_jobs.s"
 	@echo "... srcs/memdel_struct/memdel_outstanding.o"
 	@echo "... srcs/memdel_struct/memdel_outstanding.i"
 	@echo "... srcs/memdel_struct/memdel_outstanding.s"

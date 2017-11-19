@@ -347,6 +347,8 @@ void						do_heredoc(t_node *node);
 **				JOB'S CONTROL FUNCTION
 */
 
+void						update_status(t_process *process);
+int							finished_process(t_process *process);
 t_process					*place_status(pid_t pid, int status);
 t_jobs						*get_jobs(pid_t pgid);
 void						print_info_jobs(t_process *process, int index);
@@ -357,10 +359,9 @@ t_process					*new_process(t_jobs *jobs);
 void						close_fildes(t_process *process);
 t_node						*find_executing_node(t_node *node);
 void						first_process(t_jobs *jobs);
-void						reset_process(t_jobs *jobs);
 int							wait_group(t_process *process, int option);
 int							finish_process(t_process *process);
-t_jobs				**jobs_table(void);
+t_jobs						**jobs_table(void);
 void						my_execve(char **command, char **env);
 void						handler_sigchld(int sig);
 void						my_wait(t_jobs *jobs);
@@ -436,6 +437,7 @@ int							memdel_lfh(t_lfh **hist_search);
 int							memdel_cmd(t_cmd **cmd);
 void						memdel_outstanding(void);
 void						memdel_node(t_node **node);
+void						memdel_jobs(t_jobs *jobs);
 
 /*
 **				ERROR FUNCTION
