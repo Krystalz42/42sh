@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:20:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 23:44:54 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 23:46:24 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,9 @@ uint8_t				op_execution(t_node *node, t_jobs *jobs, int info)
 {
 	if (info & FORCE_FORK || !(info & FORK))
 		jobs_execution(node, jobs, info);
-	else if (check_if_builtin(node, info) == -1)
+	else if (check_if_builtin(node, info) != -1)
+		;
+	else
 		jobs_execution(node, jobs, info);
 	return (var_return(-1));
 }
