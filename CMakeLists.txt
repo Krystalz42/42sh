@@ -21,8 +21,11 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_debug.c
         libs/libft/srcs/ft_double_delete.c
         libs/libft/srcs/ft_filetostr.c
+        libs/libft/srcs/ft_findchr.c
         libs/libft/srcs/ft_firstchar.c
         libs/libft/srcs/ft_ftoa.c
+        libs/libft/srcs/ft_imaxtoa.c
+        libs/libft/srcs/ft_insrt_to_str.c
         libs/libft/srcs/ft_isalnum.c
         libs/libft/srcs/ft_isalpha.c
         libs/libft/srcs/ft_isascii.c
@@ -58,6 +61,7 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_putstrtab.c
         libs/libft/srcs/ft_putstrtab_fd.c
         libs/libft/srcs/ft_realloc.c
+        libs/libft/srcs/ft_recalloc.c
         libs/libft/srcs/ft_recursive_power.c
         libs/libft/srcs/ft_split.c
         libs/libft/srcs/ft_stoa.c
@@ -87,6 +91,7 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_strncat.c
         libs/libft/srcs/ft_strncmp.c
         libs/libft/srcs/ft_strncpy.c
+        libs/libft/srcs/ft_strndup.c
         libs/libft/srcs/ft_strnequ.c
         libs/libft/srcs/ft_strnew.c
         libs/libft/srcs/ft_strnstr.c
@@ -99,6 +104,7 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_tablen.c
         libs/libft/srcs/ft_tolower.c
         libs/libft/srcs/ft_toupper.c
+        libs/libft/srcs/ft_uimaxtoa_base.c
         libs/libft/srcs/ft_uitoa.c
         libs/libft/srcs/ft_ulltoa.c
         libs/libft/srcs/ft_ultoa.c
@@ -119,30 +125,97 @@ set(SOURCE_FILES
         libs/logger/srcs/logger/logger_init.c
         libs/logger/srcs/utils/logger_get_time.c
         libs/logger/srcs/utils/logger_init_open_file.c
-        libs/printf/incs/ft_printf.h
-        libs/printf/srcs/clean_struct.c
-        libs/printf/srcs/clear_flag.c
-        libs/printf/srcs/converted.c
-        libs/printf/srcs/cut_str.c
-        libs/printf/srcs/detect_arg.c
-        libs/printf/srcs/detect_pre.c
-        libs/printf/srcs/fill.c
-        libs/printf/srcs/fill_char.c
-        libs/printf/srcs/fill_hash.c
-        libs/printf/srcs/fill_last.c
-        libs/printf/srcs/fill_pointer.c
-        libs/printf/srcs/fill_sign.c
-        libs/printf/srcs/fill_str.c
-        libs/printf/srcs/fill_tank.c
+        libs/printf/incs/libft.h
+        libs/printf/incs/libftprintf.h
+        libs/printf/srcs/libft/ft_atoi.c
+        libs/printf/srcs/libft/ft_bzero.c
+        libs/printf/srcs/libft/ft_countwords.c
+        libs/printf/srcs/libft/ft_findchr.c
+        libs/printf/srcs/libft/ft_free_map.c
+        libs/printf/srcs/libft/ft_free_rows.c
+        libs/printf/srcs/libft/ft_imaxtoa.c
+        libs/printf/srcs/libft/ft_insrt_to_str.c
+        libs/printf/srcs/libft/ft_is_sort.c
+        libs/printf/srcs/libft/ft_isalnum.c
+        libs/printf/srcs/libft/ft_isalpha.c
+        libs/printf/srcs/libft/ft_isascii.c
+        libs/printf/srcs/libft/ft_isdigit.c
+        libs/printf/srcs/libft/ft_isinf.c
+        libs/printf/srcs/libft/ft_isnan.c
+        libs/printf/srcs/libft/ft_isprint.c
+        libs/printf/srcs/libft/ft_itoa.c
+        libs/printf/srcs/libft/ft_itoa_base.c
+        libs/printf/srcs/libft/ft_lstadd.c
+        libs/printf/srcs/libft/ft_lstdel.c
+        libs/printf/srcs/libft/ft_lstdelnode.c
+        libs/printf/srcs/libft/ft_lstdelone.c
+        libs/printf/srcs/libft/ft_lstiter.c
+        libs/printf/srcs/libft/ft_lstmap.c
+        libs/printf/srcs/libft/ft_lstnew.c
+        libs/printf/srcs/libft/ft_memalloc.c
+        libs/printf/srcs/libft/ft_memccpy.c
+        libs/printf/srcs/libft/ft_memchr.c
+        libs/printf/srcs/libft/ft_memcmp.c
+        libs/printf/srcs/libft/ft_memcpy.c
+        libs/printf/srcs/libft/ft_memdel.c
+        libs/printf/srcs/libft/ft_memmove.c
+        libs/printf/srcs/libft/ft_memset.c
+        libs/printf/srcs/libft/ft_printlst.c
+        libs/printf/srcs/libft/ft_putchar.c
+        libs/printf/srcs/libft/ft_putchar_fd.c
+        libs/printf/srcs/libft/ft_putendl.c
+        libs/printf/srcs/libft/ft_putendl_fd.c
+        libs/printf/srcs/libft/ft_putnbr.c
+        libs/printf/srcs/libft/ft_putnbr_fd.c
+        libs/printf/srcs/libft/ft_putstr.c
+        libs/printf/srcs/libft/ft_putstr_fd.c
+        libs/printf/srcs/libft/ft_range.c
+        libs/printf/srcs/libft/ft_realloc.c
+        libs/printf/srcs/libft/ft_recalloc.c
+        libs/printf/srcs/libft/ft_strcat.c
+        libs/printf/srcs/libft/ft_strchr.c
+        libs/printf/srcs/libft/ft_strclr.c
+        libs/printf/srcs/libft/ft_strcmp.c
+        libs/printf/srcs/libft/ft_strcpy.c
+        libs/printf/srcs/libft/ft_strdel.c
+        libs/printf/srcs/libft/ft_strdup.c
+        libs/printf/srcs/libft/ft_strequ.c
+        libs/printf/srcs/libft/ft_striter.c
+        libs/printf/srcs/libft/ft_striteri.c
+        libs/printf/srcs/libft/ft_strjoin.c
+        libs/printf/srcs/libft/ft_strlcat.c
+        libs/printf/srcs/libft/ft_strlen.c
+        libs/printf/srcs/libft/ft_strmap.c
+        libs/printf/srcs/libft/ft_strmapi.c
+        libs/printf/srcs/libft/ft_strncat.c
+        libs/printf/srcs/libft/ft_strncmp.c
+        libs/printf/srcs/libft/ft_strncpy.c
+        libs/printf/srcs/libft/ft_strndup.c
+        libs/printf/srcs/libft/ft_strnequ.c
+        libs/printf/srcs/libft/ft_strnew.c
+        libs/printf/srcs/libft/ft_strnstr.c
+        libs/printf/srcs/libft/ft_strrchr.c
+        libs/printf/srcs/libft/ft_strrev.c
+        libs/printf/srcs/libft/ft_strsplit.c
+        libs/printf/srcs/libft/ft_strstr.c
+        libs/printf/srcs/libft/ft_strsub.c
+        libs/printf/srcs/libft/ft_strtrim.c
+        libs/printf/srcs/libft/ft_swap.c
+        libs/printf/srcs/libft/ft_tolower.c
+        libs/printf/srcs/libft/ft_toupper.c
+        libs/printf/srcs/libft/ft_uimaxtoa_base.c
+        libs/printf/srcs/ft_chr_conv.c
+        libs/printf/srcs/ft_float_conv.c
+        libs/printf/srcs/ft_fmt_parse.c
+        libs/printf/srcs/ft_handle_spec.c
+        libs/printf/srcs/ft_num_conv.c
+        libs/printf/srcs/ft_pfbonus.c
+        libs/printf/srcs/ft_pfhandle.c
         libs/printf/srcs/ft_printf.c
-        libs/printf/srcs/if_color.c
-        libs/printf/srcs/part_base.c
-        libs/printf/srcs/part_dec.c
-        libs/printf/srcs/part_extra.c
-        libs/printf/srcs/part_nu.c
-        libs/printf/srcs/part_str.c
-        libs/printf/srcs/part_unisgned.c
-        libs/printf/srcs/printf_part.c
+        libs/printf/srcs/ft_str_conv.c
+        libs/printf/srcs/ft_vector.c
+        libs/printf/srcs/ft_wstr_conv.c
+        libs/printf/srcs/ft_xou_conv.c
         srcs/binary_tree/binary_tree.c
         srcs/cores/exit.c
         srcs/cores/insert_one_line.c

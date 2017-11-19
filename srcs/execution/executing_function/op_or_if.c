@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:17:58 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 04:16:36 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 12:04:33 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 */
 
 uint8_t			op_or_if(t_node *node, t_jobs *jobs, int info)
-{	
+{
 	return (execute_node(node->left, jobs, info)
 			&& execute_node(node->right, jobs, info));
 }

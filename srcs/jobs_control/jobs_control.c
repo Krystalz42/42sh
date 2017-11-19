@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 19:09:46 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/16 16:20:05 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 11:57:30 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,28 +19,54 @@ t_jobs				**jobs_table(void)
 	return (&jobs);
 }
 
-void				update_jobs(int status)
+void				update_jobs(t_process *process)
 {
-	log_trace("/!\\  [PROCESS LL BE UPDATE] /!\\");
-	if (WIFEXITED(status))
-		var_return(WEXITSTATUS(status));
-	else if (WIFSIGNALED(status))
-		var_return(WTERMSIG(status) + 128);
-	else if (WIFSTOPPED(status))
-		var_return(WSTOPSIG(status) + 128);
-	else if (WIFCONTINUED(status))
-		;
+	while (process)
+	{
+		if (process->pgid == process->pid && process->status != -1)
+		{
+			if (WIFEXITED(process->status))
+				var_return(WEXITSTATUS(process->status));
+			else if (WIFSIGNALED(process->status))
+				var_return(WTERMSIG(process->status) + 128);
+			else if (WIFSTOPPED(process->status))
+				var_return(WSTOPSIG(process->status) + 128);
+			else if (WIFCONTINUED(process->status))
+				;
+		}
+		process = process->next;
+	}
 }
 
-
-void				handler_sigchld(int sig)
+void				check_child_in_background(void)
 {
 	t_jobs		*jobs;
 	int			pid;
 	int			status;
 
-	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
 	while ((pid = waitpid(-1, &status, 0)) != -1)
 		if ((jobs = get_jobs(place_status(pid, status)->pgid)) != NULL)
+		{
 			wait_group(jobs->process, WNOHANG | WUNTRACED);
+			update_status(jobs->process);
+			if (finished_process(jobs->process))
+			{
+				update_jobs(jobs->process);
+				memdel_jobs(jobs);
+			}
+			else
+			{
+				modify_foreground(jobs->process, false);
+				modify_runing(jobs->process, false);
+				print_status(jobs->process, jobs->index);
+			}
+		}
+}
+
+
+
+void				handler_sigchld(int sig)
+{
+	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
+	check_child_in_background();
 }

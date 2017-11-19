@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:40:09 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 01:31:45 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 11:56:25 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,21 +42,21 @@ void			set_fildes(pid_t pgid)
 	tcsetpgrp(STDIN_FILENO, pgid);
 	signal(SIGTTIN, SIG_DFL);
 	signal(SIGTTOU, SIG_DFL);
-
 }
 
-void			my_wait(t_jobs *jobs)
+void				check_child_in_foreground(t_jobs *jobs)
 {
-	log_fatal("Adress of {jobs} in Wait [%p]", jobs);
-	close_fildes(jobs->process);
-	if (jobs->process->foreground)
+	if (jobs->process && jobs->process->foreground)
 	{
 		set_fildes(jobs->process->pgid);
 		wait_group(jobs->process, WUNTRACED);
 		set_fildes(getpgid(0));
 		update_status(jobs->process);
+		update_jobs(jobs->process);
 		if (finished_process(jobs->process))
+		{
 			memdel_jobs(jobs);
+		}
 		else
 		{
 			modify_foreground(jobs->process, false);
@@ -64,9 +64,20 @@ void			my_wait(t_jobs *jobs)
 			print_status(jobs->process, jobs->index);
 		}
 	}
-	else
+}
+
+void			my_wait(t_jobs *jobs)
+{
+	close_fildes(jobs->process);
+	if (jobs->process->foreground == 0)
 	{
+		signal(SIGCHLD, &handler_sigchld);
 		print_info_jobs(jobs->process, jobs->index);
 	}
-
+	else
+	{
+		signal(SIGCHLD, SIG_DFL);
+		check_child_in_foreground(jobs);
+		signal(SIGCHLD, &handler_sigchld);
+	}
 }

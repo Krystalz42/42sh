@@ -6,16 +6,16 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:12:19 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 15:12:21 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 11:58:10 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-static t_jobs				*create_jobs(void)
+static t_jobs	*create_jobs(void)
 {
-	t_jobs *temp_jobs;
-	t_jobs **addr_jobs;
+	t_jobs		*temp_jobs;
+	t_jobs		**addr_jobs;
 
 	addr_jobs = jobs_table();
 	temp_jobs = *addr_jobs;
@@ -35,7 +35,7 @@ static t_jobs				*create_jobs(void)
 	}
 }
 
-t_jobs				*new_jobs(t_jobs *jobs)
+t_jobs			*new_jobs(t_jobs *jobs)
 {
 	if (jobs == NULL)
 	{

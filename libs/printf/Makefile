@@ -1,3 +1,4 @@
+
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
@@ -47,29 +48,18 @@ RL			= ranlib
 NAME		= libprintf.a
 
 SRCS = \
-	   clean_struct.c		\
-	   clear_flag.c			\
-	   converted.c			\
-	   cut_str.c			\
-	   detect_arg.c			\
-	   detect_pre.c			\
-	   fill.c				\
-	   fill_char.c			\
-	   fill_hash.c			\
-	   fill_last.c			\
-	   fill_pointer.c		\
-	   fill_sign.c			\
-	   fill_str.c			\
-	   fill_tank.c			\
-	   ft_printf.c			\
-	   if_color.c			\
-	   part_base.c			\
-	   part_dec.c			\
-	   part_extra.c			\
-	   part_nu.c			\
-	   part_str.c			\
-	   part_unisgned.c		\
-	   printf_part.c		\
+		ft_printf.c \
+		ft_vector.c \
+		ft_handle_spec.c \
+		ft_fmt_parse.c \
+		ft_num_conv.c \
+		ft_pfhandle.c \
+		ft_chr_conv.c \
+		ft_str_conv.c \
+		ft_wstr_conv.c \
+		ft_xou_conv.c \
+		ft_float_conv.c \
+		ft_pfbonus.c
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #
@@ -158,7 +148,7 @@ $(DIR_DEPS)/%.d	: ;
 
 -include $(patsubst %,$(DIR_DEPS)/%.d,$(basename $(C_SRCS)))
 
-.PHONY	:	all clean fclean re $(DIR_OBJS)/%.o $(DIR_DEPS)/%.d 
+.PHONY	:	all clean fclean re $(DIR_OBJS)/%.o $(DIR_DEPS)/%.d
 
 
 

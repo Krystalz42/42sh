@@ -124,7 +124,7 @@ SRCS = \
 	   ft_strncpy.c				\
 	   ft_strnequ.c				\
 	   ft_strnew.c				\
-	   my_gnl.c                 \
+	   my_gnl.c					\
 	   ft_strnstr.c				\
 	   ft_strrchr.c				\
 	   ft_strrev.c				\
@@ -143,6 +143,12 @@ SRCS = \
 	   get_next_line.c			\
 	   ft_strisdigit.c			\
 	   ft_strisalpha.c			\
+	   ft_recalloc.c			\
+	   ft_uimaxtoa_base.c		\
+	   ft_imaxtoa.c				\
+	   ft_insrt_to_str.c		\
+	   ft_findchr.c				\
+	   ft_strndup.c				\
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #

@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   memdel_jobs.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbelazou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/19 11:55:12 by sbelazou          #+#    #+#             */
+/*   Updated: 2017/11/19 11:55:36 by sbelazou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <sh.h>
 
-
-static void				reset_process(t_jobs **jobs)
+static void		reset_process(t_jobs **jobs)
 {
 	t_process	*process;
 
@@ -15,7 +26,7 @@ static void				reset_process(t_jobs **jobs)
 	ft_memdel((void **)jobs);
 }
 
-void				memdel_jobs(t_jobs *jobs)
+void			memdel_jobs(t_jobs *jobs)
 {
 	t_jobs		**addr_jobs;
 	t_jobs		*temp;

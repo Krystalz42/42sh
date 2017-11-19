@@ -25,82 +25,101 @@
 **		Force Continued
 */
 
-static uint8_t			jobs_iter(t_jobs *jobs, int option)
+/*
+**	check option
+**
+**	-1 error [No jobs at current index]
+**
+**	0 Print all jobs [No index have been specified]
+**
+**	> 0 Print jobs currently specified
+**
+*/
+static int 				check_jobs(char **command)
 {
-	int					index;
+	int			num;
+	int			table;
+	t_jobs		*jobs;
 
-	index = 0;
-	while (index < MAX_CHILD)
+	jobs = *jobs_table();
+	table = 0;
+	while (command[table] && command[table][0] == '-')
+		table++;
+	if ((command[table] && command[table][0] == '%'))
 	{
-		if (jobs[index].process)
-			print_jobs(jobs + index, option);
-		index++;
+		if ((num = ft_atoi(command[table] + 1)) < 1)
+			return (error_msg(JOBS, JOBS_NOT_FOUND, command[table]) - 2);
 	}
-	return (0);
+	else if (command[table])
+		return (error_msg(JOBS, JOBS_NOT_FOUND, command[table]) - 2);
+	else
+		num = 0;
+	while (num != 0 && jobs && jobs->index != num)
+		jobs = jobs->next;
+	num = (num == 0 || (jobs && jobs->index == num)) ? num : -1;
+	(num == -1) && error_msg(JOBS, JOBS_NOT_FOUND, command[table]);
+	return (num);
 }
 
 static int				check_option(char **command)
 {
-	int			index;
+	int			ind;
 	int			option;
 	int			table;
 
 	option = 0;
-	table = 1;
+	table = 0;
 	if (command[table] && ft_strcmp(command[table], HELP) == 0)
 		return (var_return(usage_jobs()) - 1);
 	while (command[table] && command[table][0] == '-')
 	{
-		index = 0;
-		while (command[table][index])
+		ind = 0;
+		while (command[table][ind])
 		{
-			if (potential_option("p-rsl", command[table][index]) == 0)
-				return (error_msg(JOBS, BAD_OPTION, command[table] + index));
-			option += (command[table][index] == 'p' && !(option & 1)) ? 1 : 0;
-			option += (command[table][index] == 'r' && !(option & 2)) ? 2 : 0;
-			option += (command[table][index] == 's' && !(option & 4)) ? 4 : 0;
-			option += (command[table][index] == 'l' && !(option & 8)) ? 8 : 0;
-			index++;
+			if (potential_option("p-rsl", command[table][ind]) == 0)
+				return (error_msg(JOBS, BAD_OPTION, command[table] + ind) - 2);
+			option += (command[table][ind] == 'p' && !(option & 1)) ? 1 : 0;
+			option += (command[table][ind] == 'r' && !(option & 2)) ? 2 : 0;
+			option += (command[table][ind] == 's' && !(option & 4)) ? 4 : 0;
+			option += (command[table][ind] == 'l' && !(option & 8)) ? 8 : 0;
+			ind++;
 		}
 		table++;
 	}
-	log_debug("%d", option);
 	return (option);
 }
 
-static int				check_jobs_spec(char **command)
+static int					print_jobs(int jobs_spec, int option)
 {
-	int			table;
-	int			jobs_spec;
+	t_jobs		*jobs;
 
-	jobs_spec = 0;
-	table = 1;
-	while (command[table] && command[table][0] == '-')
-		table++;
-	if (command[table] && command[table][0] == '%' &&
-											ft_strisdigit(command[table] + 1))
-		jobs_spec = ft_atoi(command[table] + 1);
-	else if (command[table])
-		return (-table);
-	if (jobs_spec < 0 || jobs_spec > MAX_CHILD)
-		return (var_return(error_msg(JOBS, LIMIT, NULL)));
-	return (jobs_spec);
+	jobs = *jobs_table();
+	if (jobs_spec == 0)
+	{
+		while (jobs)
+		{
+			print_jobs_info(jobs, option);
+			jobs = jobs->next;
+		}
+	}
+	else
+	{
+		while (jobs->index != jobs_spec)
+			jobs = jobs->next;
+		print_jobs_info(jobs, option);
+	}
+	return (0);
 }
 
 uint8_t					builtin_jobs(t_node *node, int info)
 {
-	int					option;
-	int					jobs_spec;
-	t_jobs				*jobs;
+	int			option;
+	int			jobs_spec;
 
 	(void)info;
-	jobs = *jobs_table();
-	if ((option = check_option(node->content->command)) == -1)
-		return (var_return(-1));
-	if ((jobs_spec = check_jobs_spec(node->content->command)) < 0)
-		return (error_msg(JOBS, INVALID,
-									node->content->command[ABS(jobs_spec)]));
-		if (jobs_spec > 0 && jobs_spec < MAX_CHILD)
-		return (var_return(print_jobs(jobs + (jobs_spec - 1), option)));
-	return (var_return(jobs_iter(*jobs_table(), option)));
+	if ((option = check_option(node->content->command + 1)) == -1)
+		return (1);
+	if ((jobs_spec = check_jobs(node->content->command + 1)) == -1)
+		return (1);
+	return (print_jobs(jobs_spec, option));
 }

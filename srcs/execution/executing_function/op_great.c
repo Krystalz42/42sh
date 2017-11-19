@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:19:54 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 23:29:52 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 23:44:41 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,4 @@ uint8_t			op_great(t_node *node, t_jobs *jobs, int info)
 		execute_node(node->left, jobs, info);
 	}
 	return (var_return(-1));
-
 }
