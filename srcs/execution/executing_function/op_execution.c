@@ -6,13 +6,13 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:20:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 10:12:22 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 11:59:24 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-uint8_t					exec_or_builtin(t_node *node, int info)
+uint8_t				exec_or_builtin(t_node *node, int info)
 {
 	if (check_if_builtin(node, info) == -1)
 		my_execve(node->content->command, get_real_env(node));
@@ -21,7 +21,7 @@ uint8_t					exec_or_builtin(t_node *node, int info)
 	return (var_return(-1));
 }
 
-uint8_t					jobs_execution(t_node *node, t_jobs *jobs, int info)
+uint8_t				jobs_execution(t_node *node, t_jobs *jobs, int info)
 {
 	t_process		*process;
 
@@ -32,15 +32,13 @@ uint8_t					jobs_execution(t_node *node, t_jobs *jobs, int info)
 		if ((process = my_fork(jobs, node, info)) == NULL)
 			return (var_return(255));
 		if (process->pid > 0)
-		{
 			my_wait(jobs);
-		}
 		else if (process->pid == 0)
 		{
 			process->pid = getpid();
 			if (info & WRITE_PREVIOUS && process && process->prev)
 				write_pipe(process->prev->fildes);
-			exec_or_builtin(node,  info);
+			exec_or_builtin(node, info);
 		}
 	}
 	else
@@ -53,7 +51,7 @@ uint8_t					jobs_execution(t_node *node, t_jobs *jobs, int info)
 	return (var_return(-1));
 }
 
-uint8_t					op_execution(t_node *node, t_jobs *jobs, int info)
+uint8_t				op_execution(t_node *node, t_jobs *jobs, int info)
 {
 	if (info & FORCE_FORK)
 		jobs_execution(node, jobs, info);

@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 19:09:46 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/16 16:20:05 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 11:57:30 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void				update_jobs(int status)
 	else if (WIFCONTINUED(status))
 		;
 }
-
 
 void				handler_sigchld(int sig)
 {

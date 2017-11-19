@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:40:09 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 01:31:45 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 11:56:25 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void			set_fildes(pid_t pgid)
 	tcsetpgrp(STDIN_FILENO, pgid);
 	signal(SIGTTIN, SIG_DFL);
 	signal(SIGTTOU, SIG_DFL);
-
 }
 
 void			my_wait(t_jobs *jobs)
@@ -68,5 +67,4 @@ void			my_wait(t_jobs *jobs)
 	{
 		print_info_jobs(jobs->process, jobs->index);
 	}
-
 }

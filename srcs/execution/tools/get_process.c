@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 02:24:11 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 02:32:33 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 12:08:30 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_process		*get_process(pid_t pid)
 	return (NULL);
 }
 
-t_jobs		*get_jobs(pid_t pgid)
+t_jobs			*get_jobs(pid_t pgid)
 {
 	t_jobs		*jobs;
 

@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:19:54 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 09:20:17 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 12:04:11 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ static void		jobs_op_great(t_node *node)
 	std = STDOUT_FILENO;
 	if (ft_isdigit(node->content->command[0][0]))
 		std = ft_atoi(node->content->command[0]);
-	if ((fildes = open(node->right->content->command[0], OPTION_GREAT, 0644)) == -1)
+	if ((fildes = open(node->right->content->command[0],
+				OPTION_GREAT, 0644)) == -1)
 		check_path(node->right->content->command[0]);
 	else
 	{
@@ -33,7 +34,6 @@ static void		jobs_op_great(t_node *node)
 		close(fildes);
 	}
 }
-
 
 /*
 *************** PUBLIC *********************************************************
@@ -64,5 +64,4 @@ uint8_t			op_great(t_node *node, t_jobs *jobs, int info)
 		execute_node(node->left, jobs, info);
 	}
 	return (var_return(-1));
-
 }
