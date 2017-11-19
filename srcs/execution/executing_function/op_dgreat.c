@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:11:44 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 10:54:08 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/19 22:36:02 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void		jobs_op_dgreat(t_node *node)
 	else
 	{
 		fildes = check_fd(fildes);
-		dup2(fildes, STDOUT_FILENO);
+		dup2(fildes, std);
 		close(fildes);
 	}
 }
