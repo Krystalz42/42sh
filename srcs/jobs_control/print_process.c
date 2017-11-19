@@ -50,7 +50,6 @@ uint8_t			print_jobs(t_jobs *jobs, int option)
 
 void			print_status(t_process *process, int jobs_spec)
 {
-	log_warn("/!\\  [PROCESS %d WILL BE PRINT]] /!\\", jobs_spec);
 	cursor_column(1);
 	while (process)
 	{

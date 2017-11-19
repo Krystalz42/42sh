@@ -33,7 +33,7 @@ int		shell(void)
 			continue ;
 		check_tree_path(tree);
 		execute_node(tree, NULL, FORK | FOREGROUND);
-		cursor_column(1);
+//		cursor_column(1);
 	}
 	return (0);
 }

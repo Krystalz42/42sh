@@ -18,13 +18,13 @@ int			cursor_column(int new_line)
 	int		index;
 	int		col;
 
-	ft_bzero(buff, 9);
+	ft_bzero(buff, 14);
 	set_termios(SET_OUR_TERM);
-	write(STDERR_FILENO, CURSOR, sizeof(CURSOR));
-	read(STDERR_FILENO, buff, 14);
-	index = -1;
-	while (++index < 9 && buff[index] != ';')
-		;
+	write(init_fd(), CURSOR, sizeof(CURSOR));
+	read(init_fd(), buff, 14);
+	index = 0;
+	while (index < 14 && buff[index] != ';')
+		index++;
 	col = ft_atoi(buff + index + 1);
 	log_info("%d", col);
 	if (col > 2 && new_line)

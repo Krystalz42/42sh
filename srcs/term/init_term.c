@@ -31,15 +31,13 @@ int		init_term(void)
 	if (!my_getenv("TERM"))
 		add_environment("TERM=vt100");
 	if ((tgetent(NULL, my_getenv("TERM"))) == ERR)
-		ret += 1;
-	if (!(tcgetattr(STDIN_FILENO, &old_term)))
+		ret = 1;
+	if (tcgetpgrp(0) != getpgid(0))
+		log_success("C D LUNIX");
+	if (!(tcgetattr(init_fd(), &old_term)))
 		keep_term_struct(SAVE_OLD, &old_term);
-	else
-		ret += 2;
-	if (!(tcgetattr(0, &our_term)) && init_our_term(&our_term))
+	if (!(tcgetattr(init_fd(), &our_term)) && init_our_term(&our_term))
 		keep_term_struct(SAVE_OUR, &our_term);
-	else
-		ret += 4;
 	if (ret)
 	{
 		error_msg("termios : ", "can't be initialize\n", NULL);

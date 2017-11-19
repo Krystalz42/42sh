@@ -29,6 +29,7 @@ int				wait_group(t_process *process, int option)
 	pid_t		pid;
 	int			status;
 
+	log_fatal("Adress of {process} in Wait [%p]", process);
 	while (process)
 	{
 		log_fatal("Adress of {process} in Wait [%p]", process);
@@ -68,15 +69,15 @@ void			wait_process(t_jobs *jobs, int option)
 void			my_wait(t_jobs *jobs)
 {
 	log_fatal("Adress of {jobs} in Wait [%p]", jobs);
-	close_fildes(jobs->process);
-	if (jobs->process->foreground)
-	{
-		set_fildes(jobs->process->pgid);
-		wait_process(jobs, WUNTRACED);
-		set_fildes(getpgid(0));
-	}
-	else
-	{
-		print_info_jobs(jobs);
-	}
+//	close_fildes(jobs->process);
+//	if (jobs->process->foreground)
+//	{
+//		set_fildes(jobs->process->pgid);
+//		wait_process(jobs, WUNTRACED);
+//		set_fildes(getpgid(0));
+//	}
+//	else
+//	{
+//		print_info_jobs(jobs);
+//	}
 }

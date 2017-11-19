@@ -38,12 +38,8 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	{
 		process->pid = getpid();
 		read_pipe(fildes);
-		log_info("FIRST SON		info: [%d]", info);
 		if (info & WRITE_PREVIOUS)
-		{
-			log_info("SON INSIDE IF		info: [%d]", info);
 			write_pipe(process->prev->fildes);
-		}
 		execute_node(node->right, jobs, info ^ FORK);
 	}
 	return (1);

@@ -55,27 +55,29 @@ int					wait_chld(t_process *process)
 
 void				handler_sigchld(int sig)
 {
-	t_jobs		*jobs;
+//	t_jobs		*jobs;
 
 	log_trace("/!\\  [SIGCHLD RECEPTION %d] /!\\", sig);
-	jobs = *jobs_table();
-	(void)sig;
-	while (jobs)
-	{
-		if (jobs->process && jobs->process->foreground == false)
-			if (wait_chld(jobs->process))
-			{
-				if (terminate_process(jobs->process))
-				{
-					update_jobs(jobs->process);
-					print_status(jobs->process, jobs->index);
-					reset_process(jobs);
-				}
-				else if (finish_process(jobs->process))
-				{
-					print_status(jobs->process, jobs->index);
-				}
-			}
-		jobs = jobs->next;
-	}
+	while (wait(0) != -1)
+		;
+//	jobs = *jobs_table();
+//	(void)sig;
+//	while (jobs)
+//	{
+//		if (jobs->process && jobs->process->foreground == false)
+//			if (wait_chld(jobs->process))
+//			{
+//				if (terminate_process(jobs->process))
+//				{
+//					update_jobs(jobs->process);
+//					print_status(jobs->process, jobs->index);
+//					reset_process(jobs);
+//				}
+//				else if (finish_process(jobs->process))
+//				{
+//					print_status(jobs->process, jobs->index);
+//				}
+//			}
+//		jobs = jobs->next;
+//	}
 }
