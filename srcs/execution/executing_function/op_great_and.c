@@ -81,12 +81,5 @@ uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
 		jobs_op_great_and(node);
 		execute_node(node->left, jobs, info);
 	}
-=======
-uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
-{
-	(void)node;
-	(void)jobs;
-	(void)info;
->>>>>>> 39e1b6b85a93fd8269ba378144fd5c0f268264e8
 	return (var_return(-1));
 }
