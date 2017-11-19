@@ -35,7 +35,7 @@ uint8_t					jobs_execution(t_node *node, t_jobs *jobs, int info)
 		else if (process->pid == 0)
 		{
 			process->pid = getpid();
-			if (info & WRITE_PREVIOUS)
+			if (info & WRITE_PREVIOUS && process && process->prev)
 				write_pipe(process->prev->fildes);
 			exec_or_builtin(node,  info);
 		}
@@ -43,7 +43,7 @@ uint8_t					jobs_execution(t_node *node, t_jobs *jobs, int info)
 	else
 	{
 		process = get_process(getpid());
-		if (info & WRITE_PREVIOUS)
+		if (info & WRITE_PREVIOUS && process && process->prev)
 			write_pipe(process->prev->fildes);
 		exec_or_builtin(node, info);
 	}
