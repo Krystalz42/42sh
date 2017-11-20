@@ -37,8 +37,6 @@ int				wait_group(t_process *process, int option)
 
 void			set_fildes(pid_t pgid)
 {
-	signal(SIGTTIN, SIG_IGN);
-	signal(SIGTTOU, SIG_IGN);
 	tcsetpgrp(STDIN_FILENO, pgid);
 }
 
@@ -52,10 +50,7 @@ void				check_child_in_foreground(t_jobs *jobs)
 		update_status(jobs->process);
 		update_jobs(jobs->process);
 		if (finished_process(jobs->process))
-		{
-			dprintf(fd_log, "Reset process [%d]\n", jobs->index);
 			memdel_jobs(jobs);
-		}
 		else
 		{
 			modify_foreground(jobs->process, false);
@@ -70,10 +65,7 @@ void			my_wait(t_jobs *jobs)
 	close_fildes(jobs->process);
 	add_next_use(jobs);
 	if (jobs->process->foreground == 0)
-	{
-		signal(SIGCHLD, &handler_sigchld);
 		print_info_jobs(jobs->process, jobs->index);
-	}
 	else
 	{
 		signal(SIGCHLD, SIG_DFL);

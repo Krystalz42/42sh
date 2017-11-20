@@ -14,7 +14,8 @@
 
 int			main(void)
 {
-	fd_log = open("./log", O_RDWR | O_TRUNC | O_CREAT, 0644);
+//	fd_log = open("./log", O_RDWR | O_TRUNC | O_CREAT, 0644);
+	fd_log = -1;
 	dprintf(fd_log, "√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√\n");
 	dprintf(fd_log, "√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√√\n");
 	dprintf(fd_log, "√√√√√√√√√√√√√√√√√√ Welcome to 42sh bruuuh √√√√√√√√√√√√√√√√√√\n");

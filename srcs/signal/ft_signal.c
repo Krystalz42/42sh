@@ -40,9 +40,9 @@ void				init_signal(void)
 	i = -1;
 	while (++i < 32)
 		signal(i, handler_sig);
+	signal(SIGINT, &handler_sigint);
 	signal(SIGTTIN, SIG_IGN);
 	signal(SIGTTOU, SIG_IGN);
-	signal(SIGINT, &handler_sigint);
 	signal(SIGQUIT, SIG_IGN);
 	signal(SIGTSTP, SIG_IGN);
 	signal(SIGWINCH, &handler_sigwinsz);

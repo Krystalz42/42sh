@@ -56,20 +56,14 @@ void			memdel_jobs(t_jobs *jobs)
 	if (*addr_jobs == jobs)
 	{
 		special_memdel(addr_jobs);
-		dprintf(fd_log, "%s in [%d] > IN MEMDEL_JOBS [addr_jobs == jobs] %d\n", __FILE__, __LINE__, *jobs_table() ? 1 : 0);
+		dprintf(fd_log, " IN MEMDEL_JOBS [addr_jobs == jobs] %d\n", *jobs_table() ? 1 : 0);
 	}
 	else
-		while (temp)
-		{
-			if (temp == jobs)
-			{
-				if (temp->prev)
-					temp->prev->next = temp->next;
-				if (temp->next)
-					temp->next->prev = temp->prev;
-				reset_process(&temp);
-				return ;
-			}
-			temp = temp->next;
-		}
+	{
+		if (jobs->next)
+			jobs->next->prev = jobs->prev;
+		if (jobs->prev)
+			jobs->prev->next = jobs->next;
+		reset_process(&jobs);
+	}
 }
