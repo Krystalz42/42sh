@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:20:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 02:03:08 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 22:43:47 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,13 @@ uint8_t				jobs_execution(t_node *node, t_jobs *jobs, int info)
 {
 	t_process		*process;
 
-	ft_dprintf(fd_log, "VALUE OP_EXECUTION [%d]\n", info);
 	if (info & FORK)
 	{
 		jobs = new_jobs(jobs);
 		if ((process = my_fork(jobs, node, info)) == NULL)
 			return (var_return(255));
 		if (process->pid > 0)
-		{
 			my_wait(jobs);
-		}
 		else if (process->pid == 0)
 		{
 			process->pid = getpid();

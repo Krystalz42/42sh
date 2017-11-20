@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 18:42:58 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 22:38:26 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@
 **	0 Print all jobs [No index have been specified]
 **
 **	> 0 Print jobs currently specified
-**
 */
 
 static int		check_jobs(char **command)

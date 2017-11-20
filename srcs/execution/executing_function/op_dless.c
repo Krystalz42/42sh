@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:14:51 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 19:53:07 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 22:41:32 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@ static void		intro_heredoc(t_node *node)
 	dup2(fildes, STDIN_FILENO);
 	close(fildes);
 	remove(node->content->heredoc);
+}
+
+static int		norminette(int info, int fildes)
+{
+	write_pipe(fildes);
+	info ^= WRITE_PREVIOUS;
+	return (info);
 }
 
 /*
@@ -46,10 +53,7 @@ uint8_t			op_dless(t_node *node, t_jobs *jobs, int info)
 			process->pid = getpid();
 			intro_heredoc(node);
 			if (process->prev)
-			{
-				write_pipe(process->prev->fildes);
-				info ^= WRITE_PREVIOUS;
-			}
+				info = norminette(info, process->prev->fildes);
 			execute_node(node->left, jobs, (info ^ FORK));
 		}
 	}
