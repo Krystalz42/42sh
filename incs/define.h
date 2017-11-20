@@ -20,6 +20,7 @@
 **			LEXING
 */
 
+# define CHILD(x) (x >= 0 && x < MAX_CHILD) ? true : false
 
 # define __FILENAME__	(strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
 
