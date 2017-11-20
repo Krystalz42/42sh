@@ -64,13 +64,10 @@ void			my_wait(t_jobs *jobs)
 	add_next_use(jobs);
 	if (jobs && jobs->process && jobs->process->foreground == 0)
 	{
-		signal(SIGCHLD, &handler_sigchld);
 		print_info_jobs(jobs->process, jobs->index);
-		handler_sigchld(0);
 	}
 	else
 	{
 		check_child_in_foreground(jobs);
-		signal(SIGCHLD, &handler_sigchld);
 	}
 }
