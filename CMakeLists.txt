@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(42sh_final)
+project(42sh)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -114,83 +114,6 @@ set(SOURCE_FILES
         libs/libft/srcs/my_gnl.c
         libs/printf/incs/libft.h
         libs/printf/incs/libftprintf.h
-        libs/printf/srcs/libft/ft_atoi.c
-        libs/printf/srcs/libft/ft_bzero.c
-        libs/printf/srcs/libft/ft_countwords.c
-        libs/printf/srcs/libft/ft_findchr.c
-        libs/printf/srcs/libft/ft_free_map.c
-        libs/printf/srcs/libft/ft_free_rows.c
-        libs/printf/srcs/libft/ft_imaxtoa.c
-        libs/printf/srcs/libft/ft_insrt_to_str.c
-        libs/printf/srcs/libft/ft_is_sort.c
-        libs/printf/srcs/libft/ft_isalnum.c
-        libs/printf/srcs/libft/ft_isalpha.c
-        libs/printf/srcs/libft/ft_isascii.c
-        libs/printf/srcs/libft/ft_isdigit.c
-        libs/printf/srcs/libft/ft_isinf.c
-        libs/printf/srcs/libft/ft_isnan.c
-        libs/printf/srcs/libft/ft_isprint.c
-        libs/printf/srcs/libft/ft_itoa.c
-        libs/printf/srcs/libft/ft_itoa_base.c
-        libs/printf/srcs/libft/ft_lstadd.c
-        libs/printf/srcs/libft/ft_lstdel.c
-        libs/printf/srcs/libft/ft_lstdelnode.c
-        libs/printf/srcs/libft/ft_lstdelone.c
-        libs/printf/srcs/libft/ft_lstiter.c
-        libs/printf/srcs/libft/ft_lstmap.c
-        libs/printf/srcs/libft/ft_lstnew.c
-        libs/printf/srcs/libft/ft_memalloc.c
-        libs/printf/srcs/libft/ft_memccpy.c
-        libs/printf/srcs/libft/ft_memchr.c
-        libs/printf/srcs/libft/ft_memcmp.c
-        libs/printf/srcs/libft/ft_memcpy.c
-        libs/printf/srcs/libft/ft_memdel.c
-        libs/printf/srcs/libft/ft_memmove.c
-        libs/printf/srcs/libft/ft_memset.c
-        libs/printf/srcs/libft/ft_printlst.c
-        libs/printf/srcs/libft/ft_putchar.c
-        libs/printf/srcs/libft/ft_putchar_fd.c
-        libs/printf/srcs/libft/ft_putendl.c
-        libs/printf/srcs/libft/ft_putendl_fd.c
-        libs/printf/srcs/libft/ft_putnbr.c
-        libs/printf/srcs/libft/ft_putnbr_fd.c
-        libs/printf/srcs/libft/ft_putstr.c
-        libs/printf/srcs/libft/ft_putstr_fd.c
-        libs/printf/srcs/libft/ft_range.c
-        libs/printf/srcs/libft/ft_realloc.c
-        libs/printf/srcs/libft/ft_recalloc.c
-        libs/printf/srcs/libft/ft_strcat.c
-        libs/printf/srcs/libft/ft_strchr.c
-        libs/printf/srcs/libft/ft_strclr.c
-        libs/printf/srcs/libft/ft_strcmp.c
-        libs/printf/srcs/libft/ft_strcpy.c
-        libs/printf/srcs/libft/ft_strdel.c
-        libs/printf/srcs/libft/ft_strdup.c
-        libs/printf/srcs/libft/ft_strequ.c
-        libs/printf/srcs/libft/ft_striter.c
-        libs/printf/srcs/libft/ft_striteri.c
-        libs/printf/srcs/libft/ft_strjoin.c
-        libs/printf/srcs/libft/ft_strlcat.c
-        libs/printf/srcs/libft/ft_strlen.c
-        libs/printf/srcs/libft/ft_strmap.c
-        libs/printf/srcs/libft/ft_strmapi.c
-        libs/printf/srcs/libft/ft_strncat.c
-        libs/printf/srcs/libft/ft_strncmp.c
-        libs/printf/srcs/libft/ft_strncpy.c
-        libs/printf/srcs/libft/ft_strndup.c
-        libs/printf/srcs/libft/ft_strnequ.c
-        libs/printf/srcs/libft/ft_strnew.c
-        libs/printf/srcs/libft/ft_strnstr.c
-        libs/printf/srcs/libft/ft_strrchr.c
-        libs/printf/srcs/libft/ft_strrev.c
-        libs/printf/srcs/libft/ft_strsplit.c
-        libs/printf/srcs/libft/ft_strstr.c
-        libs/printf/srcs/libft/ft_strsub.c
-        libs/printf/srcs/libft/ft_strtrim.c
-        libs/printf/srcs/libft/ft_swap.c
-        libs/printf/srcs/libft/ft_tolower.c
-        libs/printf/srcs/libft/ft_toupper.c
-        libs/printf/srcs/libft/ft_uimaxtoa_base.c
         libs/printf/srcs/ft_chr_conv.c
         libs/printf/srcs/ft_float_conv.c
         libs/printf/srcs/ft_fmt_parse.c
@@ -233,6 +156,7 @@ set(SOURCE_FILES
         srcs/execution/builtins_functions/builtin_setenv.c
         srcs/execution/builtins_functions/builtin_suspend.c
         srcs/execution/builtins_functions/builtin_switch.c
+        srcs/execution/builtins_functions/builtin_switch2.c
         srcs/execution/builtins_functions/builtin_tools.c
         srcs/execution/builtins_functions/builtin_unsetenv.c
         srcs/execution/executing_function/op_ampersand.c
@@ -254,8 +178,10 @@ set(SOURCE_FILES
         srcs/execution/tools/get_real_env.c
         srcs/execution/tools/looking_for_path.c
         srcs/execution/tools/manage_pipe.c
+        srcs/execution/tools/manage_use.c
         srcs/execution/tools/new_jobs.c
         srcs/execution/tools/potential_option.c
+        srcs/execution/tools/redirection_tools.c
         srcs/execution/tools/tools_heredoc.c
         srcs/execution/check_if_builtins.c
         srcs/execution/executing_node.c
@@ -376,10 +302,10 @@ set(SOURCE_FILES
         srcs/term/init_fd.c
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
-        srcs/term/set_term.c srcs/execution/tools/manage_use.c srcs/execution/builtins_functions/builtin_switch2.c)
+        srcs/term/set_term.c srcs/jobs_control/get_real_jobs.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)
 include_directories(libs/printf/incs)
 
-add_executable(42sh_final ${SOURCE_FILES})
+add_executable(42sh ${SOURCE_FILES})

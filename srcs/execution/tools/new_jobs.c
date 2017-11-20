@@ -30,7 +30,19 @@ static t_jobs	*create_jobs(void)
 
 t_jobs			*new_jobs(t_jobs *jobs)
 {
+	t_jobs		*use;
+
 	if (jobs == NULL)
+	{
+		use = get_real_jobs();
 		jobs = create_jobs();
+		if (use)
+		{
+			while (use->next_use)
+				use = use->next_use;
+			use->next_use = jobs;
+			jobs->prev_use = use;
+		}
+	}
 	return (jobs);
 }

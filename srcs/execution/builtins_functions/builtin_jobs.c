@@ -93,26 +93,29 @@ static int		check_option(char **command)
 
 static int		print_jobs(int jobs_spec, int option)
 {
-	size_t		index;
 	t_jobs		*jobs;
 
-	index = 0;
-	ft_dprintf(fd_log, "Jobs_spec %d option %d\n", jobs_spec, option);
-	//jobs = *jobs_table();
-	jobs = NULL;
+	if ((jobs = get_real_jobs()) == NULL)
+	{
+		STR("dasdas85d\n");
+		return (-1);
+	}
 	if (jobs_spec == 0)
 	{
-		while (jobs && jobs->process && index < MAX_CHILD)
+		while (jobs)
 		{
 			print_jobs_info(jobs, jobs->process, option);
-			jobs = jobs->next;
+			jobs = jobs->next_use;
 		}
 	}
 	else
 	{
-		while (jobs->index != jobs_spec)
-			jobs = jobs->next;
-		print_jobs_info(jobs, jobs->process, option);
+		while (jobs)
+		{
+			if (jobs->index == jobs_spec)
+				return (print_jobs_info(jobs, jobs->process, option));
+			jobs = jobs->next_use;
+		}
 	}
 	return (0);
 }
@@ -124,8 +127,18 @@ uint8_t			builtin_jobs(t_node *node, int info)
 
 	(void)info;
 	if ((option = check_option(node->content->command + 1)) == -1)
+	{
+		STR("da1sdasd\n");
+
 		return (var_return(-1));
+	}
 	if ((jobs_spec = check_jobs(node->content->command + 1)) == -1)
+	{
+		STR("dasdasd2\n");
 		return (1);
-	return (print_jobs(jobs_spec, option));
+	}
+
+	STR("dasdasd3\n");
+
+	return ((uint8_t)print_jobs(jobs_spec, option));
 }

@@ -46,11 +46,10 @@
 				<Compiler>
 					<Add directory="/Users/aroulin/42sh/incs"/>
 					<Add directory="/Users/aroulin/42sh/libs/libft/incs"/>
-					<Add directory="/Users/aroulin/42sh/libs/logger/incs"/>
 					<Add directory="/Users/aroulin/42sh/libs/printf/incs"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
@@ -72,11 +71,10 @@
 				<Compiler>
 					<Add directory="/Users/aroulin/42sh/incs"/>
 					<Add directory="/Users/aroulin/42sh/libs/libft/incs"/>
-					<Add directory="/Users/aroulin/42sh/libs/logger/incs"/>
 					<Add directory="/Users/aroulin/42sh/libs/printf/incs"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
@@ -141,10 +139,19 @@
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_filetostr.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_findchr.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_firstchar.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_ftoa.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_imaxtoa.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_insrt_to_str.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_isalnum.c">
@@ -252,6 +259,9 @@
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_realloc.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_recalloc.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_recursive_power.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -339,6 +349,9 @@
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_strncpy.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_strndup.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_strnequ.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -375,6 +388,9 @@
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_toupper.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_uimaxtoa_base.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/ft_uitoa.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -396,82 +412,46 @@
 		<Unit filename="/Users/aroulin/42sh/libs/libft/srcs/my_gnl.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/logger/incs/logger.h">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/incs/libft.h">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/logger/incs/logger_utils.h">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/incs/libftprintf.h">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/incs/ft_printf.h">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_chr_conv.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/clean_struct.c">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_float_conv.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/clear_flag.c">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_fmt_parse.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/converted.c">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_handle_spec.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/cut_str.c">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_num_conv.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/detect_arg.c">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_pfbonus.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/detect_pre.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/fill.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/fill_char.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/fill_hash.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/fill_last.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/fill_pointer.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/fill_sign.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/fill_str.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/fill_tank.c">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_pfhandle.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_printf.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/if_color.c">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_str_conv.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/part_base.c">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_vector.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/part_dec.c">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_wstr_conv.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/part_extra.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/part_nu.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/part_str.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/part_unisgned.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/printf_part.c">
+		<Unit filename="/Users/aroulin/42sh/libs/printf/srcs/ft_xou_conv.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/binary_tree/binary_tree.c">
@@ -516,6 +496,18 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/error_function/usage_builtins2.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/basic_help.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_cd.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_data.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_echo.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_env.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -540,34 +532,25 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_kill2.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_refresh.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_setenv.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_suspend.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_switch.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_switch2.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_tools.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/builtin_unsetenv.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/data_builtin.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/error.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/ft_cd.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/ft_echo.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/ft_setenv.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/refresh_varenv.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/execution/builtins_functions/utils.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/check_if_builtins.c">
@@ -612,13 +595,13 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/my_fork.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/check_path.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/check_tree_path.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/do_heredoc.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/fildes_previous.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/find_executing_node.c">
@@ -636,7 +619,19 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/manage_pipe.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/manage_use.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/new_jobs.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/potential_option.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/redirection_tools.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/execution/tools/tools_heredoc.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/hash/built_in_hash.c">
@@ -684,6 +679,9 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/history/write_history.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/get_real_jobs.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/jobs_control.c">
 			<Option target="42sh"/>
 		</Unit>
@@ -705,10 +703,10 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/jobs_control/status_signals.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/log_info_bug_dnt_care_of_norminette_bitch.c">
+		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_completion.c">
 			<Option target="42sh"/>
 		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_completion.c">
+		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_jobs.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_outstanding.c">
@@ -723,10 +721,22 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_tree.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/argv.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/argv_tools.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/escape.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/special.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/split.c">
+			<Option target="42sh"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/split_tools.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/tilde.c">
@@ -760,9 +770,6 @@
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/parsing/tools/list.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/parsing/tools/logger.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/read/completion/check_binary_path.c">
