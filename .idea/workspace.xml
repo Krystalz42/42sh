@@ -12,8 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/define.h" afterPath="$PROJECT_DIR$/incs/define.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_help.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_help.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/cursor_column.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/cursor_column.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,18 +32,18 @@
               <file leaf-file-name="read_stdin.c" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="631">
-                      <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+                    <state relative-caret-position="766">
+                      <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="cursor_column.c" pinned="false" current-in-tab="false">
+              <file leaf-file-name="cursor_column.c" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/srcs/read/other_read/cursor_column.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="570">
-                      <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+                    <state relative-caret-position="330">
+                      <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
@@ -89,11 +89,11 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="builtin_help.c" pinned="false" current-in-tab="true">
+              <file leaf-file-name="builtin_help.c" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_help.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="763">
-                      <caret line="51" column="47" lean-forward="false" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+                    <state relative-caret-position="793">
+                      <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
                       <folding />
                     </state>
                   </provider>
@@ -347,7 +347,6 @@
         <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_great.c" />
         <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_pipeline.c" />
         <option value="$PROJECT_DIR$/srcs/signal/ft_signal.c" />
-        <option value="$PROJECT_DIR$/srcs/read/other_read/cursor_column.c" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/srcs/cores/main.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/print_process.c" />
@@ -371,10 +370,11 @@
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_unsetenv.c" />
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_setenv.c" />
         <option value="$PROJECT_DIR$/srcs/read/key_/key_capitalize_word.c" />
-        <option value="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
         <option value="$PROJECT_DIR$/libs/libft/srcs/ft_iscrlf.c" />
         <option value="$PROJECT_DIR$/incs/define.h" />
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_help.c" />
+        <option value="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
+        <option value="$PROJECT_DIR$/srcs/read/other_read/cursor_column.c" />
       </list>
     </option>
   </component>
@@ -482,12 +482,12 @@
       <workItem from="1511130538546" duration="50000" />
       <workItem from="1511130633324" duration="13921000" />
       <workItem from="1511151930582" duration="8640000" />
-      <workItem from="1511164226361" duration="4774000" />
+      <workItem from="1511164226361" duration="5015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66751000" />
+    <option name="totallyTimeSpent" value="66992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="921" y="0" width="1639" height="1440" extended-state="0" />
@@ -862,14 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_iscrlf.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -910,14 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/cursor_column.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/incs/define.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -928,8 +912,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_help.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="51" column="47" lean-forward="false" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+        <state relative-caret-position="793">
+          <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/cursor_column.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
