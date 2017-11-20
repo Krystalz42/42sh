@@ -21,6 +21,7 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	int			fildes[2];
 	t_process	*process;
 
+	dprintf(fd_log, "VALUE OP_PIPELINE [%d]\n", info);
 	jobs = new_jobs(jobs);
 	pipe(fildes);
 	dprintf(fd_log, "Pipe [%d] [%d]\n", fildes[0], fildes[1]);

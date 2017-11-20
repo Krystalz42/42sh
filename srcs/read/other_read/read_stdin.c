@@ -71,7 +71,7 @@ static inline void		inline_print_(t_read **read_std, unsigned long *buff)
 }
 
 static inline void		inline_other(t_read **read_std, \
-		const unsigned long *buff, int (*fct)(t_read **, unsigned long))
+		unsigned long *buff, int (*fct)(t_read **, unsigned long))
 {
 	fct(read_std, *buff);
 	chk_and_print(read_std);
@@ -96,7 +96,6 @@ t_cmd					*read_stdin(unsigned char flags)
 		if ((read_std)->finish || signal_reception(-1))
 			break ;
 		buf = 0;
-		dprintf(fd_log, "CHAR [%d] HISTORY = [%d]\n", read_std->cmd->c, read_std->history);
 	}
 	return (finitialize_fct(&read_std));
 }

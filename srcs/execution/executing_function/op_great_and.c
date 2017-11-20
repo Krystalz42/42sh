@@ -65,6 +65,7 @@ uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
 {
 	t_process	*process;
 
+	dprintf(fd_log, "VALUE OP_GREAT_AND [%d]\n", info);
 	if (info & FORK)
 	{
 		if ((jobs = new_jobs(jobs)) == NULL)

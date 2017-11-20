@@ -25,6 +25,7 @@ uint8_t				jobs_execution(t_node *node, t_jobs *jobs, int info)
 {
 	t_process		*process;
 
+	dprintf(fd_log, "VALUE OP_EXECUTION [%d]\n", info);
 	if (info & FORK)
 	{
 		jobs = new_jobs(jobs);

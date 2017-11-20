@@ -37,6 +37,7 @@ uint8_t			op_less(t_node *node, t_jobs *jobs, int info)
 {
 	t_process	*process;
 
+	dprintf(fd_log, "VALUE OP_LESS [%d]\n", info);
 	if (info & FORK)
 	{
 		jobs = new_jobs(jobs);

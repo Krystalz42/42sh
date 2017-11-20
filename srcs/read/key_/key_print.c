@@ -38,13 +38,13 @@ int			key_print_fct(t_cmd *cmd, char c)
 
 int			key_print_(t_read **read_std, unsigned long *buff)
 {
-	unsigned char		c;
+	int		c;
 
 	(*read_std)->history_search += (*read_std)->history_search ? 1 : 0;
 	!(*read_std)->history_search ? add_outstanding(NULL, PRINT_KEY, *buff) : 0;
 	while (*buff)
 	{
-		c = (unsigned char)(*buff % (UCHAR_MAX + 1));
+		c = (*buff % (UCHAR_MAX + 1));
 		*buff /= (UCHAR_MAX + 1);
 		if (ft_iscrlf(c))
 			return (key_enter_(read_std, c));

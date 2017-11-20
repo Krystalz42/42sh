@@ -47,7 +47,6 @@ void		complete_command(t_read **read_std)
 
 int			key_enter_(t_read **read_std, unsigned long buff)
 {
-	buff++;
 	if ((*read_std)->completion)
 		complete_command(read_std);
 	else
