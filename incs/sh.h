@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 19:27:18 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 22:47:31 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@
 # include <enum.h>
 # include <time.h>
 # include <sys/stat.h>
-
-int			fd_log;
 
 /*
 **				FUNCTION CORES
