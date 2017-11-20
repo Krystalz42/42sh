@@ -51,7 +51,7 @@ t_jobs					*get_jobs_by_setting(int index, char *from)
 {
 	t_jobs		*jobs;
 
-	if ((jobs = jobs_table(REC_STRUCT)) == NULL)
+	if ((jobs = jobs_table(NULL, REC_STRUCT)) == NULL)
 	{
 		error_msg(from, NO_CUR_JOB, NULL);
 		return (NULL);

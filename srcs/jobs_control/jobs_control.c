@@ -12,13 +12,17 @@
 
 #include <sh.h>
 
-t_jobs				*jobs_table(unsigned int flags)
+t_jobs				*jobs_table(t_jobs *jobs, unsigned int flags)
 {
-	static t_jobs		*jobs;
+	static t_jobs		*save;
 
 	if (flags & RESET_STRUCT)
-		jobs = NULL;
-	return (jobs);
+		save = NULL;
+	else if (flags & SAVE_STRUCT)
+		save = jobs;
+	else if (REC_STRUCT)
+		return (save);
+	return (NULL);
 }
 
 void				update_jobs(t_process *process)
@@ -68,8 +72,6 @@ void				check_child_in_background(void)
 		}
 	}
 }
-
-
 
 void				handler_sigchld(int sig)
 {

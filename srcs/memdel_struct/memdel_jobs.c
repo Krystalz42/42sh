@@ -38,13 +38,14 @@ void			memdel_jobs(t_jobs *jobs)
 {
 	t_jobs		*addr_jobs;
 
-	addr_jobs = jobs_table(REC_STRUCT);
+	addr_jobs = jobs_table(NULL, REC_STRUCT);
 	connect_use(jobs);
 	ft_dprintf(fd_log, "addr_index [%d] jobs index [%d]\n",addr_jobs->index, jobs->index);
-	if (addr_jobs && addr_jobs->index == jobs->index)
+	if (addr_jobs && addr_jobs == jobs)
 	{
-		jobs_table(REC_STRUCT);
-		ft_dprintf(fd_log, " IN MEMDEL_JOBS [addr_jobs == jobs] %d\n", jobs_table(REC_STRUCT) ? 1 : 0);
+		reset_process(&jobs);
+		ft_dprintf(fd_log, " IN MEMDEL_JOBS [addr_jobs == jobs] %d\n", jobs_table(NULL, REC_STRUCT) ? 1 : 0);
+		jobs_table(NULL, RESET_STRUCT);
 	}
 	else
 	{

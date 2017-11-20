@@ -21,7 +21,7 @@ t_process		*get_process(pid_t pid)
 	t_jobs		*jobs;
 	t_process	*process;
 
-	jobs = jobs_table(REC_STRUCT);
+	jobs = jobs_table(NULL, REC_STRUCT);
 	while (jobs)
 	{
 		process = jobs->process;
@@ -40,7 +40,7 @@ t_jobs			*get_jobs(pid_t pgid)
 {
 	t_jobs		*jobs;
 
-	jobs = jobs_table(REC_STRUCT);
+	jobs = jobs_table(NULL, REC_STRUCT);
 	while (jobs)
 	{
 		if (jobs->process->pgid == pgid)

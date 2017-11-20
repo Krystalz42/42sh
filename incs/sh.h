@@ -350,8 +350,8 @@ void						do_heredoc(t_node *node);
 **				JOB'S CONTROL FUNCTION
 */
 
-t_jobs						*jobs_table(unsigned int flags);
 t_jobs						*add_next_use(t_jobs *new);
+t_jobs						*jobs_table(t_jobs *jobs, unsigned int flags);
 void						update_jobs(t_process *process);
 void						update_status(t_process *process);
 int							finished_process(t_process *process);

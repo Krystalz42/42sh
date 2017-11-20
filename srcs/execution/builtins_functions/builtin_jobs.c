@@ -43,7 +43,7 @@ static int 				check_jobs(char **command)
 	int			table;
 	t_jobs		*jobs;
 
-	jobs = jobs_table(REC_STRUCT);
+	jobs = jobs_table(NULL, REC_STRUCT);
 	table = 0;
 	while (command[table] && command[table][0] == '-')
 		table++;
@@ -96,7 +96,7 @@ static int					print_jobs(int jobs_spec, int option)
 	t_jobs		*jobs;
 
 	ft_dprintf(fd_log, "Jobs_spec %d option %d\n", jobs_spec, option);
-	jobs = jobs_table(REC_STRUCT);
+	jobs = jobs_table(NULL, REC_STRUCT);
 	if (jobs_spec == 0)
 	{
 		while (jobs)

@@ -22,7 +22,6 @@ int		shell(void)
 	tree = NULL;
 	while (0x2A)
 	{
-		ft_dprintf(fd_log, "\n->	NEW_COMMAND	<-\n");
 		memdel_cmd(&input);
 		memdel_node(&tree);
 		handler_sigchld(SIGCHLD);
