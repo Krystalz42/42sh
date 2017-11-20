@@ -6,13 +6,13 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:55 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 16:15:43 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 15:55:08 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-static int			put_in_foreground(t_jobs *jobs)
+static int		put_in_foreground(t_jobs *jobs)
 {
 	set_fildes(jobs->process->pgid);
 	modify_runing(jobs->process, true);
@@ -38,7 +38,7 @@ static int			put_in_foreground(t_jobs *jobs)
 	return (0);
 }
 
-static int			put_in_background(t_jobs *jobs)
+static int		put_in_background(t_jobs *jobs)
 {
 	modify_runing(jobs->process, true);
 	modify_foreground(jobs->process, false);
