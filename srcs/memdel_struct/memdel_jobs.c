@@ -36,7 +36,6 @@ static void		connect_use(t_jobs *jobs)
 
 void			memdel_jobs(t_jobs *jobs)
 {
-	t_jobs **addr_jobs;
 	t_jobs *temp_jobs;
 
 	addr_jobs = jobs_table();

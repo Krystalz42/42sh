@@ -350,7 +350,6 @@ void						do_heredoc(t_node *node);
 **				JOB'S CONTROL FUNCTION
 */
 
-t_jobs						**jobs_table(void);
 t_jobs						*add_next_use(t_jobs *new);
 void						update_jobs(t_process *process);
 void						update_status(t_process *process);
@@ -401,6 +400,8 @@ int							close_pipe(int *fildes);
 int							write_pipe(int *fildes);
 char						*create_trial_path(char *path, char *binary);
 int							check_fd(int fildes);
+t_jobs						*jobs_table(void);
+
 
 /*
 **				PRINT PROCESS

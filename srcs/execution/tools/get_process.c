@@ -21,8 +21,8 @@ t_process		*get_process(pid_t pid)
 	t_jobs		*jobs;
 	t_process	*process;
 
-	jobs = *jobs_table();
-	while (jobs)
+	jobs = jobs_table();
+	while (index < MAX_CHILD)
 	{
 		process = jobs->process;
 		while (process)

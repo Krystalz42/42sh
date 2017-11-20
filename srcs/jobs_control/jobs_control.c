@@ -12,11 +12,11 @@
 
 #include <sh.h>
 
-t_jobs				**jobs_table(void)
+t_jobs				*jobs_table(void)
 {
-	static t_jobs		*jobs;
+	static t_jobs		jobs[MAX_CHILD];
 
-	return (&jobs);
+	return (jobs);
 }
 
 void				update_jobs(t_process *process)
