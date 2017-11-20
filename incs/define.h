@@ -42,10 +42,18 @@
 # define OPTION_GREAT			O_CREAT | O_WRONLY | O_TRUNC
 # define OPTION_DGREAT			O_CREAT | O_WRONLY | O_APPEND
 # define PATH_ERROR				"/dev/null"
-
+# define FIRST					2
+# define SECOND					1
+# define OTHER					0
 /*
 **			FLAG EXECUTION
 */
+
+# define OPT_P						1
+# define OPT_R						2
+# define OPT_S						4
+# define OPT_L						8
+# define OPT_C						16
 
 # define FORK						1
 # define FOREGROUND					2
@@ -145,6 +153,7 @@
 
 # define LIMIT					"limit process at 1024"
 # define BAD_FD					" Bad file descriptor"
+# define JOBS_IN_BG				"job already in background"
 # define NEED_VALUE				"variable need a name : "
 # define JOBS_NOT_FOUND			"job not found: "
 # define INVALID				"invalid argument : "

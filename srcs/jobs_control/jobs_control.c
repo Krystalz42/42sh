@@ -52,12 +52,14 @@ void				check_child_in_background(void)
 			update_status(jobs->process);
 			update_jobs(jobs->process);
 			if (finished_process(jobs->process))
+			{
+				print_status(jobs, jobs->process);
 				memdel_jobs(jobs);
+			}
 			else
 			{
 				modify_foreground(jobs->process, false);
 				modify_runing(jobs->process, false);
-				print_status(jobs->process, jobs->index);
 			}
 		}
 	}

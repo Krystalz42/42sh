@@ -17,13 +17,15 @@
 **		List only the process ID of the job’s process group leader.
 **	-r 2
 **		Display only running jobs.
-**	s 4
+**	-s 4
 **		Display only STOP jobs.
 **	-l 8
 **		List process IDs in addition to the normal information.
 **	16
 **		Force Continued
 */
+
+
 
 /*
 **	check option
@@ -64,10 +66,10 @@ static int 				check_jobs(char **command)
 static int				check_option(char **command)
 {
 	int			ind;
-	int			option;
+	int			opt;
 	int			table;
 
-	option = 0;
+	opt = 0;
 	table = 0;
 	if (command[table] && ft_strcmp(command[table], HELP) == 0)
 		return (var_return(usage_jobs()) - 1);
@@ -78,27 +80,28 @@ static int				check_option(char **command)
 		{
 			if (potential_option("p-rsl", command[table][ind]) == 0)
 				return (error_msg(JOBS, BAD_OPTION, command[table] + ind) - 2);
-			option += (command[table][ind] == 'p' && !(option & 1)) ? 1 : 0;
-			option += (command[table][ind] == 'r' && !(option & 2)) ? 2 : 0;
-			option += (command[table][ind] == 's' && !(option & 4)) ? 4 : 0;
-			option += (command[table][ind] == 'l' && !(option & 8)) ? 8 : 0;
+			opt += (command[table][ind] == 'p' && !(opt & OPT_P)) ? OPT_P : 0;
+			opt += (command[table][ind] == 'r' && !(opt & OPT_R)) ? OPT_R : 0;
+			opt += (command[table][ind] == 's' && !(opt & OPT_S)) ? OPT_S : 0;
+			opt += (command[table][ind] == 'l' && !(opt & OPT_L)) ? OPT_L : 0;
 			ind++;
 		}
 		table++;
 	}
-	return (option);
+	return (opt);
 }
 
 static int					print_jobs(int jobs_spec, int option)
 {
 	t_jobs		*jobs;
 
+	dprintf(fd_log, "Jobs_spec %d option %d\n", jobs_spec, option);
 	jobs = *jobs_table();
 	if (jobs_spec == 0)
 	{
 		while (jobs)
 		{
-			print_jobs_info(jobs, option);
+			print_jobs_info(jobs, jobs->process, option);
 			jobs = jobs->next;
 		}
 	}
@@ -106,7 +109,7 @@ static int					print_jobs(int jobs_spec, int option)
 	{
 		while (jobs->index != jobs_spec)
 			jobs = jobs->next;
-		print_jobs_info(jobs, option);
+		print_jobs_info(jobs, jobs->process, option);
 	}
 	return (0);
 }

@@ -12,57 +12,43 @@
 
 #include <sh.h>
 
-static int			check_jobs_spec(char **command, char *from)
+static int			put_in_foreground(t_jobs *jobs)
 {
-	int			table;
-	int			jobs_spec;
-
-	table = 1;
-	if (command[table] && command[table][0] == '%')
+	set_fildes(jobs->process->pgid);
+	modify_runing(jobs->process, true);
+	modify_foreground(jobs->process, true);
+	reset_signal();
+	print_jobs_info(jobs, jobs->process, OPT_C);
+	kill(-jobs->process->pgid, SIGCONT);
+	init_signal();
+	wait_group(jobs->process, WUNTRACED);
+	set_fildes(getpgid(0));
+	update_status(jobs->process);
+	update_jobs(jobs->process);
+	if (finished_process(jobs->process))
 	{
-		if ((jobs_spec = ft_atoi(command[table] + 1)) < 1)
-			return (error_msg(from, NO_CUR_JOB, command[table]) - 2);
-	}
-	else if (command[table])
-		return (error_msg(from, NO_CUR_JOB, command[table]));
-	else
-		jobs_spec = 0;
-	return (jobs_spec);
-}
-
-t_jobs		*get_jobs_by_setting(int index, int foreground, int runing)
-{
-	t_jobs		*jobs;
-
-	jobs = *jobs_table();
-	if (index)
-	{
-		while (jobs && jobs->index != index)
-			jobs = jobs->next;
-		if (jobs && jobs->index == index)
-			return (jobs);
+		memdel_jobs(jobs);
 	}
 	else
 	{
-		while (jobs)
-		{
-			if (foreground != -1 && jobs->process->foreground != foreground)
-			{
-				jobs = jobs->next;
-				continue ;
-			}
-			if (foreground != -1 && jobs->process->running != runing)
-			{
-				jobs = jobs->next;
-				continue ;
-			}
-			return (jobs);
-		}
+		modify_foreground(jobs->process, false);
+		modify_runing(jobs->process, false);
+		print_status(jobs, jobs->process);
 	}
-	return (NULL);
+	return (0);
 }
 
-uint8_t		builtin_foreground(t_node *node, int info)
+static int			put_in_background(t_jobs *jobs)
+{
+	modify_runing(jobs->process, true);
+	modify_foreground(jobs->process, false);
+	print_jobs_info(jobs, jobs->process, OPT_C);
+	kill(-jobs->process->pgid, SIGCONT);
+	wait_group(jobs->process, WCONTINUED);
+	return (0);
+}
+
+uint8_t			builtin_foreground(t_node *node, int info)
 {
 	int			jobs_spec;
 	t_jobs		*jobs;
@@ -70,14 +56,20 @@ uint8_t		builtin_foreground(t_node *node, int info)
 	(void)info;
 	if ((jobs_spec = check_jobs_spec(node->content->command, FG)) == -1)
 		return (1);
-	jobs = get_jobs_by_setting(jobs_spec, false, -1);
-
-	return (0);
+	if ((jobs = get_jobs_by_setting(jobs_spec, FG)))
+		return (put_in_foreground(jobs));
+	return (error_msg(BG, INVALID, node->content->command[1]));
 }
 
-uint8_t		builtin_background(t_node *node, int info)
+uint8_t			builtin_background(t_node *node, int info)
 {
+	int			jobs_spec;
+	t_jobs		*jobs;
+
 	(void)info;
-	(void)node;
+	if ((jobs_spec = check_jobs_spec(node->content->command, BG)) == -1)
+		return (1);
+	if ((jobs = get_jobs_by_setting(jobs_spec, BG)))
+		return (put_in_background(jobs));
 	return (error_msg(BG, INVALID, node->content->command[1]));
 }

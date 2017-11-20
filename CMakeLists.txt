@@ -112,19 +112,6 @@ set(SOURCE_FILES
         libs/libft/srcs/ft_ustrncmp.c
         libs/libft/srcs/get_next_line.c
         libs/libft/srcs/my_gnl.c
-        libs/logger/incs/logger.h
-        libs/logger/incs/logger_utils.h
-        libs/logger/srcs/display/logger_debug.c
-        libs/logger/srcs/display/logger_error.c
-        libs/logger/srcs/display/logger_fatal.c
-        libs/logger/srcs/display/logger_info.c
-        libs/logger/srcs/display/logger_success.c
-        libs/logger/srcs/display/logger_trace.c
-        libs/logger/srcs/display/logger_warn.c
-        libs/logger/srcs/logger/logger_close.c
-        libs/logger/srcs/logger/logger_init.c
-        libs/logger/srcs/utils/logger_get_time.c
-        libs/logger/srcs/utils/logger_init_open_file.c
         libs/printf/incs/libft.h
         libs/printf/incs/libftprintf.h
         libs/printf/srcs/libft/ft_atoi.c
@@ -389,11 +376,10 @@ set(SOURCE_FILES
         srcs/term/init_fd.c
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
-        srcs/term/set_term.c)
+        srcs/term/set_term.c srcs/execution/tools/manage_use.c srcs/execution/builtins_functions/builtin_switch2.c)
 
 include_directories(incs)
 include_directories(libs/libft/incs)
-include_directories(libs/logger/incs)
 include_directories(libs/printf/incs)
 
 add_executable(42sh_final ${SOURCE_FILES})

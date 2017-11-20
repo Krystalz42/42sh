@@ -2877,303 +2877,6 @@ libs/libft/srcs/my_gnl.c.s:
 	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/libft/srcs/my_gnl.c.s
 .PHONY : libs/libft/srcs/my_gnl.c.s
 
-libs/logger/srcs/display/logger_debug.o: libs/logger/srcs/display/logger_debug.c.o
-
-.PHONY : libs/logger/srcs/display/logger_debug.o
-
-# target to build an object file
-libs/logger/srcs/display/logger_debug.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_debug.c.o
-.PHONY : libs/logger/srcs/display/logger_debug.c.o
-
-libs/logger/srcs/display/logger_debug.i: libs/logger/srcs/display/logger_debug.c.i
-
-.PHONY : libs/logger/srcs/display/logger_debug.i
-
-# target to preprocess a source file
-libs/logger/srcs/display/logger_debug.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_debug.c.i
-.PHONY : libs/logger/srcs/display/logger_debug.c.i
-
-libs/logger/srcs/display/logger_debug.s: libs/logger/srcs/display/logger_debug.c.s
-
-.PHONY : libs/logger/srcs/display/logger_debug.s
-
-# target to generate assembly for a file
-libs/logger/srcs/display/logger_debug.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_debug.c.s
-.PHONY : libs/logger/srcs/display/logger_debug.c.s
-
-libs/logger/srcs/display/logger_error.o: libs/logger/srcs/display/logger_error.c.o
-
-.PHONY : libs/logger/srcs/display/logger_error.o
-
-# target to build an object file
-libs/logger/srcs/display/logger_error.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_error.c.o
-.PHONY : libs/logger/srcs/display/logger_error.c.o
-
-libs/logger/srcs/display/logger_error.i: libs/logger/srcs/display/logger_error.c.i
-
-.PHONY : libs/logger/srcs/display/logger_error.i
-
-# target to preprocess a source file
-libs/logger/srcs/display/logger_error.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_error.c.i
-.PHONY : libs/logger/srcs/display/logger_error.c.i
-
-libs/logger/srcs/display/logger_error.s: libs/logger/srcs/display/logger_error.c.s
-
-.PHONY : libs/logger/srcs/display/logger_error.s
-
-# target to generate assembly for a file
-libs/logger/srcs/display/logger_error.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_error.c.s
-.PHONY : libs/logger/srcs/display/logger_error.c.s
-
-libs/logger/srcs/display/logger_fatal.o: libs/logger/srcs/display/logger_fatal.c.o
-
-.PHONY : libs/logger/srcs/display/logger_fatal.o
-
-# target to build an object file
-libs/logger/srcs/display/logger_fatal.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_fatal.c.o
-.PHONY : libs/logger/srcs/display/logger_fatal.c.o
-
-libs/logger/srcs/display/logger_fatal.i: libs/logger/srcs/display/logger_fatal.c.i
-
-.PHONY : libs/logger/srcs/display/logger_fatal.i
-
-# target to preprocess a source file
-libs/logger/srcs/display/logger_fatal.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_fatal.c.i
-.PHONY : libs/logger/srcs/display/logger_fatal.c.i
-
-libs/logger/srcs/display/logger_fatal.s: libs/logger/srcs/display/logger_fatal.c.s
-
-.PHONY : libs/logger/srcs/display/logger_fatal.s
-
-# target to generate assembly for a file
-libs/logger/srcs/display/logger_fatal.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_fatal.c.s
-.PHONY : libs/logger/srcs/display/logger_fatal.c.s
-
-libs/logger/srcs/display/logger_info.o: libs/logger/srcs/display/logger_info.c.o
-
-.PHONY : libs/logger/srcs/display/logger_info.o
-
-# target to build an object file
-libs/logger/srcs/display/logger_info.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_info.c.o
-.PHONY : libs/logger/srcs/display/logger_info.c.o
-
-libs/logger/srcs/display/logger_info.i: libs/logger/srcs/display/logger_info.c.i
-
-.PHONY : libs/logger/srcs/display/logger_info.i
-
-# target to preprocess a source file
-libs/logger/srcs/display/logger_info.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_info.c.i
-.PHONY : libs/logger/srcs/display/logger_info.c.i
-
-libs/logger/srcs/display/logger_info.s: libs/logger/srcs/display/logger_info.c.s
-
-.PHONY : libs/logger/srcs/display/logger_info.s
-
-# target to generate assembly for a file
-libs/logger/srcs/display/logger_info.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_info.c.s
-.PHONY : libs/logger/srcs/display/logger_info.c.s
-
-libs/logger/srcs/display/logger_success.o: libs/logger/srcs/display/logger_success.c.o
-
-.PHONY : libs/logger/srcs/display/logger_success.o
-
-# target to build an object file
-libs/logger/srcs/display/logger_success.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_success.c.o
-.PHONY : libs/logger/srcs/display/logger_success.c.o
-
-libs/logger/srcs/display/logger_success.i: libs/logger/srcs/display/logger_success.c.i
-
-.PHONY : libs/logger/srcs/display/logger_success.i
-
-# target to preprocess a source file
-libs/logger/srcs/display/logger_success.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_success.c.i
-.PHONY : libs/logger/srcs/display/logger_success.c.i
-
-libs/logger/srcs/display/logger_success.s: libs/logger/srcs/display/logger_success.c.s
-
-.PHONY : libs/logger/srcs/display/logger_success.s
-
-# target to generate assembly for a file
-libs/logger/srcs/display/logger_success.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_success.c.s
-.PHONY : libs/logger/srcs/display/logger_success.c.s
-
-libs/logger/srcs/display/logger_trace.o: libs/logger/srcs/display/logger_trace.c.o
-
-.PHONY : libs/logger/srcs/display/logger_trace.o
-
-# target to build an object file
-libs/logger/srcs/display/logger_trace.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_trace.c.o
-.PHONY : libs/logger/srcs/display/logger_trace.c.o
-
-libs/logger/srcs/display/logger_trace.i: libs/logger/srcs/display/logger_trace.c.i
-
-.PHONY : libs/logger/srcs/display/logger_trace.i
-
-# target to preprocess a source file
-libs/logger/srcs/display/logger_trace.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_trace.c.i
-.PHONY : libs/logger/srcs/display/logger_trace.c.i
-
-libs/logger/srcs/display/logger_trace.s: libs/logger/srcs/display/logger_trace.c.s
-
-.PHONY : libs/logger/srcs/display/logger_trace.s
-
-# target to generate assembly for a file
-libs/logger/srcs/display/logger_trace.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_trace.c.s
-.PHONY : libs/logger/srcs/display/logger_trace.c.s
-
-libs/logger/srcs/display/logger_warn.o: libs/logger/srcs/display/logger_warn.c.o
-
-.PHONY : libs/logger/srcs/display/logger_warn.o
-
-# target to build an object file
-libs/logger/srcs/display/logger_warn.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_warn.c.o
-.PHONY : libs/logger/srcs/display/logger_warn.c.o
-
-libs/logger/srcs/display/logger_warn.i: libs/logger/srcs/display/logger_warn.c.i
-
-.PHONY : libs/logger/srcs/display/logger_warn.i
-
-# target to preprocess a source file
-libs/logger/srcs/display/logger_warn.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_warn.c.i
-.PHONY : libs/logger/srcs/display/logger_warn.c.i
-
-libs/logger/srcs/display/logger_warn.s: libs/logger/srcs/display/logger_warn.c.s
-
-.PHONY : libs/logger/srcs/display/logger_warn.s
-
-# target to generate assembly for a file
-libs/logger/srcs/display/logger_warn.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/display/logger_warn.c.s
-.PHONY : libs/logger/srcs/display/logger_warn.c.s
-
-libs/logger/srcs/logger/logger_close.o: libs/logger/srcs/logger/logger_close.c.o
-
-.PHONY : libs/logger/srcs/logger/logger_close.o
-
-# target to build an object file
-libs/logger/srcs/logger/logger_close.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_close.c.o
-.PHONY : libs/logger/srcs/logger/logger_close.c.o
-
-libs/logger/srcs/logger/logger_close.i: libs/logger/srcs/logger/logger_close.c.i
-
-.PHONY : libs/logger/srcs/logger/logger_close.i
-
-# target to preprocess a source file
-libs/logger/srcs/logger/logger_close.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_close.c.i
-.PHONY : libs/logger/srcs/logger/logger_close.c.i
-
-libs/logger/srcs/logger/logger_close.s: libs/logger/srcs/logger/logger_close.c.s
-
-.PHONY : libs/logger/srcs/logger/logger_close.s
-
-# target to generate assembly for a file
-libs/logger/srcs/logger/logger_close.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_close.c.s
-.PHONY : libs/logger/srcs/logger/logger_close.c.s
-
-libs/logger/srcs/logger/logger_init.o: libs/logger/srcs/logger/logger_init.c.o
-
-.PHONY : libs/logger/srcs/logger/logger_init.o
-
-# target to build an object file
-libs/logger/srcs/logger/logger_init.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_init.c.o
-.PHONY : libs/logger/srcs/logger/logger_init.c.o
-
-libs/logger/srcs/logger/logger_init.i: libs/logger/srcs/logger/logger_init.c.i
-
-.PHONY : libs/logger/srcs/logger/logger_init.i
-
-# target to preprocess a source file
-libs/logger/srcs/logger/logger_init.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_init.c.i
-.PHONY : libs/logger/srcs/logger/logger_init.c.i
-
-libs/logger/srcs/logger/logger_init.s: libs/logger/srcs/logger/logger_init.c.s
-
-.PHONY : libs/logger/srcs/logger/logger_init.s
-
-# target to generate assembly for a file
-libs/logger/srcs/logger/logger_init.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/logger/logger_init.c.s
-.PHONY : libs/logger/srcs/logger/logger_init.c.s
-
-libs/logger/srcs/utils/logger_get_time.o: libs/logger/srcs/utils/logger_get_time.c.o
-
-.PHONY : libs/logger/srcs/utils/logger_get_time.o
-
-# target to build an object file
-libs/logger/srcs/utils/logger_get_time.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_get_time.c.o
-.PHONY : libs/logger/srcs/utils/logger_get_time.c.o
-
-libs/logger/srcs/utils/logger_get_time.i: libs/logger/srcs/utils/logger_get_time.c.i
-
-.PHONY : libs/logger/srcs/utils/logger_get_time.i
-
-# target to preprocess a source file
-libs/logger/srcs/utils/logger_get_time.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_get_time.c.i
-.PHONY : libs/logger/srcs/utils/logger_get_time.c.i
-
-libs/logger/srcs/utils/logger_get_time.s: libs/logger/srcs/utils/logger_get_time.c.s
-
-.PHONY : libs/logger/srcs/utils/logger_get_time.s
-
-# target to generate assembly for a file
-libs/logger/srcs/utils/logger_get_time.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_get_time.c.s
-.PHONY : libs/logger/srcs/utils/logger_get_time.c.s
-
-libs/logger/srcs/utils/logger_init_open_file.o: libs/logger/srcs/utils/logger_init_open_file.c.o
-
-.PHONY : libs/logger/srcs/utils/logger_init_open_file.o
-
-# target to build an object file
-libs/logger/srcs/utils/logger_init_open_file.c.o:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_init_open_file.c.o
-.PHONY : libs/logger/srcs/utils/logger_init_open_file.c.o
-
-libs/logger/srcs/utils/logger_init_open_file.i: libs/logger/srcs/utils/logger_init_open_file.c.i
-
-.PHONY : libs/logger/srcs/utils/logger_init_open_file.i
-
-# target to preprocess a source file
-libs/logger/srcs/utils/logger_init_open_file.c.i:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_init_open_file.c.i
-.PHONY : libs/logger/srcs/utils/logger_init_open_file.c.i
-
-libs/logger/srcs/utils/logger_init_open_file.s: libs/logger/srcs/utils/logger_init_open_file.c.s
-
-.PHONY : libs/logger/srcs/utils/logger_init_open_file.s
-
-# target to generate assembly for a file
-libs/logger/srcs/utils/logger_init_open_file.c.s:
-	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/libs/logger/srcs/utils/logger_init_open_file.c.s
-.PHONY : libs/logger/srcs/utils/logger_init_open_file.c.s
-
 libs/printf/srcs/ft_chr_conv.o: libs/printf/srcs/ft_chr_conv.c.o
 
 .PHONY : libs/printf/srcs/ft_chr_conv.o
@@ -6387,6 +6090,33 @@ srcs/execution/builtins_functions/builtin_switch.c.s:
 	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/builtins_functions/builtin_switch.c.s
 .PHONY : srcs/execution/builtins_functions/builtin_switch.c.s
 
+srcs/execution/builtins_functions/builtin_switch2.o: srcs/execution/builtins_functions/builtin_switch2.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_switch2.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_switch2.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/builtins_functions/builtin_switch2.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_switch2.c.o
+
+srcs/execution/builtins_functions/builtin_switch2.i: srcs/execution/builtins_functions/builtin_switch2.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_switch2.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_switch2.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/builtins_functions/builtin_switch2.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_switch2.c.i
+
+srcs/execution/builtins_functions/builtin_switch2.s: srcs/execution/builtins_functions/builtin_switch2.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_switch2.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_switch2.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/builtins_functions/builtin_switch2.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_switch2.c.s
+
 srcs/execution/builtins_functions/builtin_tools.o: srcs/execution/builtins_functions/builtin_tools.c.o
 
 .PHONY : srcs/execution/builtins_functions/builtin_tools.o
@@ -7034,6 +6764,33 @@ srcs/execution/tools/manage_pipe.s: srcs/execution/tools/manage_pipe.c.s
 srcs/execution/tools/manage_pipe.c.s:
 	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/tools/manage_pipe.c.s
 .PHONY : srcs/execution/tools/manage_pipe.c.s
+
+srcs/execution/tools/manage_use.o: srcs/execution/tools/manage_use.c.o
+
+.PHONY : srcs/execution/tools/manage_use.o
+
+# target to build an object file
+srcs/execution/tools/manage_use.c.o:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/tools/manage_use.c.o
+.PHONY : srcs/execution/tools/manage_use.c.o
+
+srcs/execution/tools/manage_use.i: srcs/execution/tools/manage_use.c.i
+
+.PHONY : srcs/execution/tools/manage_use.i
+
+# target to preprocess a source file
+srcs/execution/tools/manage_use.c.i:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/tools/manage_use.c.i
+.PHONY : srcs/execution/tools/manage_use.c.i
+
+srcs/execution/tools/manage_use.s: srcs/execution/tools/manage_use.c.s
+
+.PHONY : srcs/execution/tools/manage_use.s
+
+# target to generate assembly for a file
+srcs/execution/tools/manage_use.c.s:
+	$(MAKE) -f CMakeFiles/42sh_final.dir/build.make CMakeFiles/42sh_final.dir/srcs/execution/tools/manage_use.c.s
+.PHONY : srcs/execution/tools/manage_use.c.s
 
 srcs/execution/tools/new_jobs.o: srcs/execution/tools/new_jobs.c.o
 
@@ -10590,39 +10347,6 @@ help:
 	@echo "... libs/libft/srcs/my_gnl.o"
 	@echo "... libs/libft/srcs/my_gnl.i"
 	@echo "... libs/libft/srcs/my_gnl.s"
-	@echo "... libs/logger/srcs/display/logger_debug.o"
-	@echo "... libs/logger/srcs/display/logger_debug.i"
-	@echo "... libs/logger/srcs/display/logger_debug.s"
-	@echo "... libs/logger/srcs/display/logger_error.o"
-	@echo "... libs/logger/srcs/display/logger_error.i"
-	@echo "... libs/logger/srcs/display/logger_error.s"
-	@echo "... libs/logger/srcs/display/logger_fatal.o"
-	@echo "... libs/logger/srcs/display/logger_fatal.i"
-	@echo "... libs/logger/srcs/display/logger_fatal.s"
-	@echo "... libs/logger/srcs/display/logger_info.o"
-	@echo "... libs/logger/srcs/display/logger_info.i"
-	@echo "... libs/logger/srcs/display/logger_info.s"
-	@echo "... libs/logger/srcs/display/logger_success.o"
-	@echo "... libs/logger/srcs/display/logger_success.i"
-	@echo "... libs/logger/srcs/display/logger_success.s"
-	@echo "... libs/logger/srcs/display/logger_trace.o"
-	@echo "... libs/logger/srcs/display/logger_trace.i"
-	@echo "... libs/logger/srcs/display/logger_trace.s"
-	@echo "... libs/logger/srcs/display/logger_warn.o"
-	@echo "... libs/logger/srcs/display/logger_warn.i"
-	@echo "... libs/logger/srcs/display/logger_warn.s"
-	@echo "... libs/logger/srcs/logger/logger_close.o"
-	@echo "... libs/logger/srcs/logger/logger_close.i"
-	@echo "... libs/logger/srcs/logger/logger_close.s"
-	@echo "... libs/logger/srcs/logger/logger_init.o"
-	@echo "... libs/logger/srcs/logger/logger_init.i"
-	@echo "... libs/logger/srcs/logger/logger_init.s"
-	@echo "... libs/logger/srcs/utils/logger_get_time.o"
-	@echo "... libs/logger/srcs/utils/logger_get_time.i"
-	@echo "... libs/logger/srcs/utils/logger_get_time.s"
-	@echo "... libs/logger/srcs/utils/logger_init_open_file.o"
-	@echo "... libs/logger/srcs/utils/logger_init_open_file.i"
-	@echo "... libs/logger/srcs/utils/logger_init_open_file.s"
 	@echo "... libs/printf/srcs/ft_chr_conv.o"
 	@echo "... libs/printf/srcs/ft_chr_conv.i"
 	@echo "... libs/printf/srcs/ft_chr_conv.s"
@@ -10980,6 +10704,9 @@ help:
 	@echo "... srcs/execution/builtins_functions/builtin_switch.o"
 	@echo "... srcs/execution/builtins_functions/builtin_switch.i"
 	@echo "... srcs/execution/builtins_functions/builtin_switch.s"
+	@echo "... srcs/execution/builtins_functions/builtin_switch2.o"
+	@echo "... srcs/execution/builtins_functions/builtin_switch2.i"
+	@echo "... srcs/execution/builtins_functions/builtin_switch2.s"
 	@echo "... srcs/execution/builtins_functions/builtin_tools.o"
 	@echo "... srcs/execution/builtins_functions/builtin_tools.i"
 	@echo "... srcs/execution/builtins_functions/builtin_tools.s"
@@ -11052,6 +10779,9 @@ help:
 	@echo "... srcs/execution/tools/manage_pipe.o"
 	@echo "... srcs/execution/tools/manage_pipe.i"
 	@echo "... srcs/execution/tools/manage_pipe.s"
+	@echo "... srcs/execution/tools/manage_use.o"
+	@echo "... srcs/execution/tools/manage_use.i"
+	@echo "... srcs/execution/tools/manage_use.s"
 	@echo "... srcs/execution/tools/new_jobs.o"
 	@echo "... srcs/execution/tools/new_jobs.i"
 	@echo "... srcs/execution/tools/new_jobs.s"

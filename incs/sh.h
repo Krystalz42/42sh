@@ -141,6 +141,9 @@ t_process					*get_process(pid_t pid);
 **				BUILT IN TOOLS
 */
 
+t_jobs						*get_jobs_by_setting(int index, char *from);
+t_jobs						*get_jobs_by_setting(int index, char *from);
+int							check_jobs_spec(char **command, char *from);
 int							special_getenv(char *string);
 void						check_path(char *path);
 char						*check_directory(char **path, char *temp);
@@ -347,6 +350,9 @@ void						do_heredoc(t_node *node);
 **				JOB'S CONTROL FUNCTION
 */
 
+
+
+t_jobs						*add_next_use(t_jobs *new);
 void						update_jobs(t_process *process);
 void						update_status(t_process *process);
 int							finished_process(t_process *process);
@@ -402,10 +408,11 @@ int							check_fd(int fildes);
 **				PRINT PROCESS
 */
 
-uint8_t						print_jobs_info(t_jobs *jobs, int option);
-void						print_status(t_process *process, int jobs_spec);
-int							print_process(t_process *process, int option,
-											int index);
+uint8_t						print_jobs_info(t_jobs *jobs,
+										t_process *process, int option);
+void						print_status(t_jobs *jobs, t_process *process);
+int							print_process(t_jobs *jobs,
+											t_process *process, int option);
 
 /*
 **				SIGNAL FUNCTION

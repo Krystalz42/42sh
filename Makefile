@@ -148,6 +148,7 @@ SRCS = \
 	   execution/tools/check_path.c								\
 	   execution/tools/tools_heredoc.c							\
 	   execution/tools/potential_option.c						\
+	   execution/tools/manage_use.c								\
 	   execution/executing_function/op_execution.c				\
 	   execution/executing_function/op_great_and.c				\
 	   execution/executing_function/op_great.c					\
@@ -163,6 +164,7 @@ SRCS = \
 	   execution/builtins_functions/builtin_suspend.c			\
 	   execution/builtins_functions/builtin_kill.c				\
 	   execution/builtins_functions/builtin_switch.c			\
+	   execution/builtins_functions/builtin_switch2.c			\
 	   execution/builtins_functions/builtin_history.c			\
 	   execution/builtins_functions/builtin_hash.c				\
 	   execution/builtins_functions/builtin_env.c				\

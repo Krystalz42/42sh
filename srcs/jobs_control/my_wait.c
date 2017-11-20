@@ -40,8 +40,6 @@ void			set_fildes(pid_t pgid)
 	signal(SIGTTIN, SIG_IGN);
 	signal(SIGTTOU, SIG_IGN);
 	tcsetpgrp(STDIN_FILENO, pgid);
-	signal(SIGTTIN, SIG_DFL);
-	signal(SIGTTOU, SIG_DFL);
 }
 
 void				check_child_in_foreground(t_jobs *jobs)
@@ -55,13 +53,14 @@ void				check_child_in_foreground(t_jobs *jobs)
 		update_jobs(jobs->process);
 		if (finished_process(jobs->process))
 		{
+			dprintf(fd_log, "Reset process [%d]\n", jobs->index);
 			memdel_jobs(jobs);
 		}
 		else
 		{
 			modify_foreground(jobs->process, false);
 			modify_runing(jobs->process, false);
-			print_status(jobs->process, jobs->index);
+			print_status(jobs, jobs->process);
 		}
 	}
 }
@@ -69,6 +68,7 @@ void				check_child_in_foreground(t_jobs *jobs)
 void			my_wait(t_jobs *jobs)
 {
 	close_fildes(jobs->process);
+	add_next_use(jobs);
 	if (jobs->process->foreground == 0)
 	{
 		signal(SIGCHLD, &handler_sigchld);
