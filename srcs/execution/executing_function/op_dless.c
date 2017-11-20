@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:14:51 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 15:55:32 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/20 19:53:07 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,21 @@ uint8_t			op_dless(t_node *node, t_jobs *jobs, int info)
 	ft_dprintf(fd_log, "VALUE OP_DLESS [%d]\n", info);
 	if (info & FORK)
 	{
-		if ((jobs = new_jobs(jobs)) == NULL)
+		jobs = new_jobs(jobs);
+		if ((process = my_fork(jobs, find_executing_node(node), info)) == NULL)
 			return (var_return(255));
-		process = my_fork(jobs, find_executing_node(node), info);
 		if (process->pid > 0)
 			my_wait(jobs);
 		else
 		{
 			process->pid = getpid();
 			intro_heredoc(node);
-			execute_node(node->left, jobs, info ^ FORK);
+			if (process->prev)
+			{
+				write_pipe(process->prev->fildes);
+				info ^= WRITE_PREVIOUS;
+			}
+			execute_node(node->left, jobs, (info ^ FORK));
 		}
 	}
 	else

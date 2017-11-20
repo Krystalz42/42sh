@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:16:43 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 15:55:54 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/20 19:50:31 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,11 @@ uint8_t			op_less(t_node *node, t_jobs *jobs, int info)
 		{
 			process->pid = getpid();
 			jobs_op_less(node);
+			if (process->prev)
+			{
+				write_pipe(process->prev->fildes);
+				info ^= WRITE_PREVIOUS;
+			}
 			execute_node(node->left, jobs, (info ^ FORK));
 		}
 	}

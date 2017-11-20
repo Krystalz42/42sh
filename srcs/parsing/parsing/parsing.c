@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 20:34:39 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 03:53:28 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 20:00:16 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,10 @@ void			empty(t_parsing **node)
 	{
 		if (isonly(temp->input, ' '))
 		{
-			index ? err(" ", SYNTAX_ERR, node) : lstdel(node);
+			if (index || ft_strlen(temp->input))
+				err(" ", SYNTAX_ERR, node);
+			else
+				lstdel(node);
 			return ;
 		}
 		index++;

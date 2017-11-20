@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/19 08:03:44 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 19:27:18 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -401,7 +401,6 @@ int							write_pipe(int *fildes);
 char						*create_trial_path(char *path, char *binary);
 int							check_fd(int fildes);
 t_jobs						*jobs_table(void);
-
 
 /*
 **				PRINT PROCESS
