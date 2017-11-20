@@ -18,34 +18,12 @@
 
 t_process		*get_process(pid_t pid)
 {
-	t_jobs		*jobs;
-	t_process	*process;
-
-	jobs = jobs_table();
-	while (index < MAX_CHILD)
-	{
-		process = jobs->process;
-		while (process)
-		{
-			if (pid == process->pid)
-				return (process);
-			process = process->next;
-		}
-		jobs = jobs->next;
-	}
+pid++;
 	return (NULL);
 }
 
 t_jobs			*get_jobs(pid_t pgid)
 {
-	t_jobs		*jobs;
-
-	jobs = *jobs_table();
-	while (jobs)
-	{
-		if (jobs->process->pgid == pgid)
-			return (jobs);
-		jobs = jobs->next;
-	}
+	pgid++;
 	return (NULL);
 }

@@ -30,51 +30,31 @@ int				check_jobs_spec(char **command, char *from)
 	return (jobs_spec);
 }
 
-static t_jobs	*get_last_jobs(t_jobs *jobs, const char *from)
-{
-	if (from == BG)
-	{
-		while (jobs)
-		{
-			if (jobs->process->running == false)
-				return (jobs);
-			jobs = jobs->prev_use;
-		}
-	}
-	else if (from == FG)
-	{
-		while (jobs)
-		{
-			if (jobs->process->foreground == false)
-				return (jobs);
-			jobs = jobs->prev_use;
-		}
-	}
-	(from == BG) ? error_msg(BG, JOBS_IN_BG, NULL) : 0;
-	return (NULL);
-}
-
 t_jobs			*get_jobs_by_setting(int index, char *from)
 {
 	t_jobs		*jobs;
 
-	if ((jobs = *jobs_table()) == NULL)
-	{
-		error_msg(from, NO_CUR_JOB, NULL);
-		return (NULL);
-	}
+	jobs = jobs_table();
 	if (index)
+		if (CHILD(index) && jobs[index].process == NULL)
+		{
+			error_msg(from, NO_CUR_JOB, NULL);
+			return (NULL);
+		}
+	if (index == 0)
 	{
-		while (jobs && jobs->index != index)
-			jobs = jobs->next;
-		if (jobs && jobs->index == index)
-			return (jobs);
-	}
-	else
-	{
-		while (jobs->next_use)
-			jobs = jobs->next_use;
-		return (get_last_jobs(jobs, from));
+		index = MAX_CHILD - 1;
+		while (CHILD(index))
+		{
+			if (jobs[index].process)
+			{
+				if (from == BG && jobs[index].process->running == false)
+					return (jobs + index);
+				if (from == FG && jobs[index].process->foreground == false)
+					return (jobs + index);
+			}
+			index--;
+		}
 	}
 	return (NULL);
 }

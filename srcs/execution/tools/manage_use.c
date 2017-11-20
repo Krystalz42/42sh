@@ -15,14 +15,16 @@
 t_jobs			*add_next_use(t_jobs *new)
 {
 	t_jobs		*jobs;
+	int			index;
 
-	jobs = *jobs_table();
-	while (jobs && jobs->next_use)
-		jobs = jobs->next_use;
-	if (jobs && jobs != new)
+	jobs = jobs_table();
+	index = 0;
+	while (CHILD(index))
 	{
-		new->prev_use = jobs;
-		jobs->next_use = new;
+		if (jobs->process && jobs->next_use == NULL)
+			break ;
+		index++;
 	}
+	jobs += index;
 	return (new);
 }
