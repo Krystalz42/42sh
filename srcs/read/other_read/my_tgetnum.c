@@ -16,14 +16,16 @@ int			tgetco(void)
 {
 	struct winsize ms;
 
+	tgetent(NULL, my_getenv("TERM"));
 	ioctl(0, TIOCGWINSZ, &ms);
-	return (ms.ws_col == 0 ? 1 : ms.ws_col);
+	return (ms.ws_col);
 }
 
 int			tgetli(void)
 {
 	struct winsize ms;
 
+	tgetent(NULL, my_getenv("TERM"));
 	ioctl(0, TIOCGWINSZ, &ms);
-	return (ms.ws_row == 0 ? 1 : ms.ws_row);
+	return (ms.ws_row);
 }

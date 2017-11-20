@@ -36,6 +36,7 @@ static void		error(char *str)
 	else
 	{
 		error_msg(S42H, "command not found: ", str);
+		exit(var_return(126));
 	}
 }
 

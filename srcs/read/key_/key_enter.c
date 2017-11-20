@@ -57,7 +57,7 @@ int			key_enter_(t_read **read_std, unsigned long buff)
 		print_struct(*read_std);
 		insert_one_line();
 		if (!(check_cmd(read_std)))
-		(*read_std)->finish = 1;
+			(*read_std)->finish = 1;
 		else
 		{
 			(*read_std)->print = 2;

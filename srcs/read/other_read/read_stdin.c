@@ -96,6 +96,7 @@ t_cmd					*read_stdin(unsigned char flags)
 		if ((read_std)->finish || signal_reception(-1))
 			break ;
 		buf = 0;
+		dprintf(fd_log, "CHAR [%d] HISTORY = [%d]\n", read_std->cmd->c, read_std->history);
 	}
 	return (finitialize_fct(&read_std));
 }

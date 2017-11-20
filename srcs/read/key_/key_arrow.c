@@ -22,7 +22,7 @@ int			key_arrow_left(t_read **read_std, unsigned long buff)
 	else if ((*read_std)->completion)
 		move_completion_left(read_std);
 	else if ((*read_std)->cmd->prev && ((*read_std)->history ||
-		(!(*read_std)->history && (*read_std)->cmd->prev->c != 10)))
+		((*read_std)->cmd->prev->c != 10)))
 	{
 		add_outstanding(NULL, buff, 0);
 		(*read_std)->cmd = (*read_std)->cmd->prev;
@@ -66,7 +66,7 @@ int			key_arrow_up(t_read **read_std, unsigned long buff)
 		move_vertical(read_std, -1);
 		(*read_std)->completion++;
 	}
-	else if (get_len_prompt(-42) != -1)
+	else if (get_len_prompt(-42) > 0)
 	{
 		(*read_std)->print = 2;
 		previous_history(read_std);
@@ -87,7 +87,7 @@ int			key_arrow_down(t_read **read_std, unsigned long buff)
 		move_vertical(read_std, 1);
 		(*read_std)->completion++;
 	}
-	else if (get_len_prompt(-42) != -1)
+	else if (get_len_prompt(-42) > 0)
 	{
 		(*read_std)->print = 2;
 		next_history(read_std);
