@@ -16,13 +16,6 @@ t_process		*place_status(pid_t pid, int status)
 {
 	t_process		*process;
 
-<<<<<<< HEAD
-=======
-	if (get_process(pid))
-		dprintf(fd_log, "dsabyebye\n");
-	else
-		dprintf(fd_log, "ddasdassabyebye\n");
->>>>>>> f9ee96f0eb8770a2a33af361861097248b951f75
 	if ((process = get_process(pid)) != NULL)
 		process->status = status;
 	return (process);
@@ -70,10 +63,13 @@ void			my_wait(t_jobs *jobs)
 	close_fildes(jobs->process);
 	add_next_use(jobs);
 	if (jobs->process->foreground == 0)
+	{
+		signal(SIGCHLD, &handler_sigchld);
 		print_info_jobs(jobs->process, jobs->index);
+		handler_sigchld(0);
+	}
 	else
 	{
-		signal(SIGCHLD, SIG_DFL);
 		check_child_in_foreground(jobs);
 		signal(SIGCHLD, &handler_sigchld);
 	}
