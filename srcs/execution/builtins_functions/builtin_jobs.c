@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 15:44:29 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/20 16:07:03 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@
 **		Force Continued
 */
 
-
-
 /*
 **	check option
 **
@@ -37,6 +35,7 @@
 **	> 0 Print jobs currently specified
 **
 */
+
 static int 		check_jobs(char **command)
 {
 	int			num;
