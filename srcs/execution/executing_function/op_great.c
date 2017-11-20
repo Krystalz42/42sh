@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:19:54 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 19:42:40 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 23:38:20 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ uint8_t			op_great(t_node *node, t_jobs *jobs, int info)
 {
 	t_process	*process;
 
-	ft_dprintf(fd_log, "VALUE OP_GREAT [%d]\n", info);
 	if (info & FORK)
 	{
 		jobs = new_jobs(jobs);

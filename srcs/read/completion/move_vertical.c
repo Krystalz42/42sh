@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/20 14:15:25 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 16:02:56 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 23:35:27 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void					move_vertical(t_read **read_std, int pos)
 		while (tmp && tmp->index != (*read_std)->tab_->index)
 			tmp = tmp->next;
 		update_index(read_std, (*read_std)->tab_->nbr * pos);
-		dprintf(fd_log, "To %d\n", (*read_std)->tab_->index);
 		if (((*read_std)->tab_->index / (*read_std)->tab_->elem_page)\
 			!= (*read_std)->tab_->page)
 			change_page(read_std);

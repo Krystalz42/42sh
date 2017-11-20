@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:55 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 18:41:37 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 23:39:18 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ uint8_t			builtin_background(t_node *node, int info)
 	(void)info;
 	if ((jobs_spec = check_jobs_spec(node->content->command, BG)) == -1)
 		return (1);
-	dprintf(fd_log, "Yo1\n");
 	if ((jobs = get_jobs_by_setting(jobs_spec, BG)))
 		return (uint8_t)(put_in_background(jobs));
 	return (1);
