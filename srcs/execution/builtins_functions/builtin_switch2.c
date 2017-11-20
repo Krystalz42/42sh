@@ -34,28 +34,25 @@ t_jobs			*get_jobs_by_setting(int index, char *from)
 {
 	t_jobs		*jobs;
 
-	//jobs = jobs_table();
-	jobs = NULL;
+	if ((jobs = get_real_jobs()) == NULL)
+		error_msg(from, NO_CUR_JOB, NULL);
 	if (index)
-		if (CHILD(index) && jobs[index].process == NULL)
-		{
-			error_msg(from, NO_CUR_JOB, NULL);
-			return (NULL);
-		}
-	if (index == 0)
 	{
-		index = MAX_CHILD - 1;
-		while (CHILD(index))
+		while (jobs)
 		{
-			if (jobs[index].process)
-			{
-				if (from == BG && jobs[index].process->running == false)
-					return (jobs + index);
-				if (from == FG && jobs[index].process->foreground == false)
-					return (jobs + index);
-			}
-			index--;
+			if (jobs->index == index)
+				return (jobs);
+			jobs = jobs->prev_use;
 		}
 	}
+	else
+		while (jobs)
+		{
+			if (from == BG && jobs->process->running == false)
+				return (jobs);
+			if (from == FG && jobs->process->foreground == false)
+				return (jobs);
+			jobs = jobs->prev_use;
+		}
 	return (NULL);
 }

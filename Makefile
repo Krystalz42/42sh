@@ -186,6 +186,7 @@ SRCS = \
 	   jobs_control/my_wait.c									\
 	   jobs_control/print_process.c								\
 	   jobs_control/my_execve.c									\
+	   jobs_control/get_real_jobs.c								\
 	   parsing/parsing.c										\
 	   parsing/lexing/special_tokenisation.c					\
 	   parsing/lexing/regular_tokenisation.c					\

@@ -56,7 +56,7 @@ uint8_t			builtin_foreground(t_node *node, int info)
 	if ((jobs_spec = check_jobs_spec(node->content->command, FG)) == -1)
 		return (1);
 	if ((jobs = get_jobs_by_setting(jobs_spec, FG)))
-		return (put_in_foreground(jobs));
+		return (uint8_t)(put_in_foreground(jobs));
 	return (1);
 }
 
@@ -69,6 +69,6 @@ uint8_t			builtin_background(t_node *node, int info)
 	if ((jobs_spec = check_jobs_spec(node->content->command, BG)) == -1)
 		return (1);
 	if ((jobs = get_jobs_by_setting(jobs_spec, BG)))
-		return (put_in_background(jobs));
+		return (uint8_t)(put_in_background(jobs));
 	return (1);
 }
