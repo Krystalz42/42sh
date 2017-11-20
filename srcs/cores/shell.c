@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:11:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/15 20:26:38 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/20 02:01:31 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int		shell(void)
 	tree = NULL;
 	while (0x2A)
 	{
+		ft_dprintf(fd_log, "\n->	NEW_COMMAND	<-\n");
 		memdel_cmd(&input);
 		memdel_node(&tree);
 		handler_sigchld(SIGCHLD);

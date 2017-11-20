@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 16:11:51 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 23:42:43 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 02:02:50 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 
 	jobs = new_jobs(jobs);
 	pipe(fildes);
+	dprintf(fd_log, "Pipe [%d] [%d]\n", fildes[0], fildes[1]);
 	if ((process = my_fork(jobs, find_executing_node(node), info)) == NULL)
 		return (var_return(255));
 	process->fildes[0] = fildes[0];

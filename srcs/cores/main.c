@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/19 01:41:08 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 01:30:04 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int			main(void)
 {
-	fd_log = open("./log", O_RDWR | O_TRUNC | O_CREAT, 644);
+	fd_log = open("./log", O_RDWR | O_TRUNC | O_CREAT, 0644);
 	init_env();
 	init_term();
 	write_history_in_sh(get_str_from_history());

@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:10:18 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 23:57:34 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 03:06:43 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ static int		get_fildes(char *str)
 		if ((fildes = ft_atoi(str)) > 2)
 		{
 			ft_printf("42sh: %d: Bad file descriptor\n", fildes);
-			var_return(1);
-			exit(var_return(-1));
+			exit(var_return(1));
 		}
 	}
 	else
@@ -54,7 +53,7 @@ static void		jobs_op_great_and(t_node *node)
 	else
 	{
 		fildes = check_fd(fildes);
-		dup2(fildes, std ? std : STDOUT_FILENO);
+		dup2(fildes, std);
 	}
 }
 
@@ -76,14 +75,15 @@ uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
 		else
 		{
 			process->pid = getpid();
+			write_pipe(process->prev->fildes);
 			jobs_op_great_and(node);
-			execute_node(node->left, jobs, (info ^ FORK));
+			execute_node(node->left, jobs, (info ^ FORK) ^ WRITE_PREVIOUS);
 		}
 	}
 	else
 	{
 		jobs_op_great_and(node);
-		execute_node(node->left, jobs, info);
+		execute_node(node->left, jobs, info ^ WRITE_PREVIOUS);
 	}
 	return (var_return(-1));
 }

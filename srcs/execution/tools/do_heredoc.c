@@ -6,13 +6,13 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 16:12:05 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 15:15:56 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 01:19:34 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-static int		jobs_do_heredoc(t_node *node)
+static void		jobs_do_heredoc(t_node *node, char **heredoc)
 {
 	int					fildes;
 	char				*temp;
@@ -21,13 +21,13 @@ static int		jobs_do_heredoc(t_node *node)
 	node->content->heredoc = ft_strjoin("/tmp/", temp);
 	fildes = open(node->content->heredoc, O_WRONLY | O_CREAT, 0644);
 	ft_memdel((void **)&temp);
-	return (fildes);
+	ft_putstrtab_fd(heredoc, 10, fildes);
+	close(fildes);
 }
 
 void			do_heredoc(t_node *node)
 {
 	t_cmd				*cmd;
-	int					fildes;
 	char				**heredoc;
 
 	heredoc = NULL;
@@ -35,15 +35,10 @@ void			do_heredoc(t_node *node)
 	{
 		cmd = first_cmd(read_stdin(HEREDOC), 1);
 		if (signal_reception(-1) == SIGINT)
-		{
 			break ;
-		}
-		else if (compare_heredoc(cmd, node->right->content->command[0]) == 0
-		|| signal_reception(-1) == 1)
+		else if (compare_heredoc(cmd, node->right->content->command[0]) == 0 || signal_reception(-1) == 1)
 		{
-			fildes = jobs_do_heredoc(node);
-			ft_putstrtab_fd(heredoc, 10, fildes);
-			close(fildes);
+			jobs_do_heredoc(node, heredoc);
 			memdel_cmd(&cmd);
 			break ;
 		}
