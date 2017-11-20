@@ -55,11 +55,9 @@ void				check_child_in_background(void)
 		if ((process = place_status(pid, status)))
 			if ((jobs = get_jobs(process->pgid)) != NULL)
 			{
-				dprintf(fd_log, "jobs %d\n", jobs ? 1 : 0);
 				wait_group(jobs->process, WNOHANG);
 				update_status(jobs->process);
 				update_jobs(jobs->process);
-				ft_dprintf(fd_log, "finished process [%d]\n",finished_process(jobs->process));
 				if (finished_process(jobs->process))
 				{
 					print_status(jobs, jobs->process);

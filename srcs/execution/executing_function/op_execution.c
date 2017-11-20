@@ -32,7 +32,9 @@ uint8_t				jobs_execution(t_node *node, t_jobs *jobs, int info)
 		if ((process = my_fork(jobs, node, info)) == NULL)
 			return (var_return(255));
 		if (process->pid > 0)
+		{
 			my_wait(jobs);
+		}
 		else if (process->pid == 0)
 		{
 			process->pid = getpid();
