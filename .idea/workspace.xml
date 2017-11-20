@@ -12,17 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/sh.h" afterPath="$PROJECT_DIR$/incs/sh.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/shell.c" afterPath="$PROJECT_DIR$/srcs/cores/shell.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch2.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch2.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/get_process.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/get_process.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/manage_use.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/manage_use.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/new_jobs.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/new_jobs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c" afterPath="$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/check_tree_path.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/check_tree_path.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,16 +26,6 @@
     <splitter split-orientation="vertical" split-proportion="0.7640288">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="jobs_control.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="358">
-                  <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="builtin_jobs.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c">
               <provider selected="true" editor-type-id="text-editor">
@@ -70,17 +50,37 @@
             <entry file="file://$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="600">
-                  <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+                  <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="new_jobs.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="new_jobs.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/execution/tools/new_jobs.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+                <state relative-caret-position="630">
+                  <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="binary_tree.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/binary_tree/binary_tree.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="check_tree_path.c" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/tools/check_tree_path.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
@@ -111,16 +111,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="372">
                   <caret line="29" column="52" lean-forward="false" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="sh.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/incs/sh.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="517">
-                  <caret line="352" column="0" lean-forward="false" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -295,7 +285,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/srcs/execution/tools/check_tree_path.c" />
         <option value="$PROJECT_DIR$/srcs/execution/executing_node.c" />
         <option value="$PROJECT_DIR$/author" />
         <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_or_if.c" />
@@ -346,6 +335,7 @@
         <option value="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" />
         <option value="$PROJECT_DIR$/srcs/execution/tools/get_process.c" />
         <option value="$PROJECT_DIR$/srcs/execution/tools/new_jobs.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/tools/check_tree_path.c" />
       </list>
     </option>
   </component>
@@ -440,12 +430,12 @@
       <workItem from="1511124903841" duration="4376000" />
       <workItem from="1511130538546" duration="50000" />
       <workItem from="1511130633324" duration="13921000" />
-      <workItem from="1511151930582" duration="5582000" />
+      <workItem from="1511151930582" duration="6035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58919000" />
+    <option name="totallyTimeSpent" value="59372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1278" height="1440" extended-state="0" />
@@ -485,14 +475,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///System/Library/Frameworks/AudioVideoBridging.framework/Headers/AVB17221ACMPInterface.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/execution/tools/fildes_previous.c" />
     <entry file="file:///System/Library/Frameworks/Kernel.framework/Headers/IOKit/avc/IOFireWireAVCTargetSpace.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -844,7 +826,7 @@
     <entry file="file://$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
-          <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+          <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -875,8 +857,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/tools/new_jobs.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        <state relative-caret-position="630">
+          <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/binary_tree/binary_tree.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/tools/check_tree_path.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
           <folding />
         </state>
       </provider>

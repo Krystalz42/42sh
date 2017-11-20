@@ -14,6 +14,8 @@
 
 void			check_tree_path(t_node *node)
 {
+	if (signal_reception(-1) == SIGINT)
+		return ;
 	if (node)
 	{
 		if (node->content->value == VALUE_DLESS)
@@ -23,6 +25,7 @@ void			check_tree_path(t_node *node)
 				if (ft_strchr(node->content->command[0], '/') == NULL)
 					if ((looking_for_path(&node->content->command[0])) == 0)
 						collect_path(&node->content->command[0]);
+
 		if (node->content->priority == PRIO_REDIR)
 			check_tree_path(node->left);
 		else
