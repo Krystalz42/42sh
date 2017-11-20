@@ -30,44 +30,29 @@ int				check_jobs_spec(char **command, char *from)
 	return (jobs_spec);
 }
 
-t_jobs			*iter_jobs(t_jobs *jobs, const char *from)
-{
-	if (from == BG)
-	{
-		while (jobs->next_use)
-			jobs = jobs->next_use;
-		while (jobs)
-		{
-			if (jobs->process && jobs->process->running == false)
-				return (jobs);
-		}
-	}
-	if (from == FG)
-	{
-		while (jobs->next_use)
-			jobs = jobs->next_use;
-		return (jobs);
-	}
-	return (NULL);
-}
-
 t_jobs			*get_jobs_by_setting(int index, char *from)
 {
 	t_jobs		*jobs;
 
 	if ((jobs = get_real_jobs()) == NULL)
 		error_msg(from, NO_CUR_JOB, NULL);
-	jobs = jobs_table();
-		if (CHILD(index) && jobs[index - 1].process == NULL)
-		{
-			return (NULL);
-		}
-	if (index == 0)
+	if (index)
 	{
-		index = MAX_CHILD - 1;
-		while (CHILD(index) && jobs[index].process == NULL)
-			index--;
-		return (iter_jobs(jobs + (CHILD(index) ? index : 0), from));
+		while (jobs)
+		{
+			if (jobs->index == index)
+				return (jobs);
+			jobs = jobs->prev_use;
+		}
 	}
+	else
+		while (jobs)
+		{
+			if (from == BG && jobs->process->running == false)
+				return (jobs);
+			if (from == FG && jobs->process->foreground == false)
+				return (jobs);
+			jobs = jobs->prev_use;
+		}
 	return (NULL);
 }

@@ -42,8 +42,8 @@ static int 		check_jobs(char **command)
 	int			table;
 	t_jobs		*jobs;
 
-	//jobs = *jobs_table();
-	jobs = NULL;
+	if ((jobs = get_real_jobs()) == NULL)
+		return (error_msg(JOBS, JOBS_NOT_FOUND, NULL) - 2);
 	table = 0;
 	while (command[table] && command[table][0] == '-')
 		table++;
@@ -57,7 +57,7 @@ static int 		check_jobs(char **command)
 	else
 		num = 0;
 	while (num != 0 && jobs && jobs->index != num)
-		jobs = jobs->next;
+		jobs = jobs->prev_use;
 	num = (num == 0 || (jobs && jobs->index == num)) ? num : -1;
 	(num == -1) && error_msg(JOBS, JOBS_NOT_FOUND, command[table]);
 	return (num);
@@ -96,10 +96,9 @@ static int		print_jobs(int jobs_spec, int option)
 	t_jobs		*jobs;
 
 	if ((jobs = get_real_jobs()) == NULL)
-	{
-		STR("dasdas85d\n");
 		return (-1);
-	}
+	while (jobs->prev_use)
+		jobs = jobs->prev_use;
 	if (jobs_spec == 0)
 	{
 		while (jobs)
@@ -127,18 +126,8 @@ uint8_t			builtin_jobs(t_node *node, int info)
 
 	(void)info;
 	if ((option = check_option(node->content->command + 1)) == -1)
-	{
-		STR("da1sdasd\n");
-
 		return (var_return(-1));
-	}
 	if ((jobs_spec = check_jobs(node->content->command + 1)) == -1)
-	{
-		STR("dasdasd2\n");
 		return (1);
-	}
-
-	STR("dasdasd3\n");
-
 	return ((uint8_t)print_jobs(jobs_spec, option));
 }

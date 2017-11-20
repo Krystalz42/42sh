@@ -14,7 +14,12 @@ t_jobs		*get_real_jobs(void)
 	while (CHILD(index))
 	{
 		if (jobs[index].process)
-			return (jobs + index);
+		{
+			jobs += index;
+			while (jobs->next_use)
+				jobs = jobs->next_use;
+			return (jobs);
+		}
 		index++;
 	}
 	return (NULL);
