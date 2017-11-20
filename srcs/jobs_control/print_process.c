@@ -6,15 +6,24 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:36:56 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 15:53:29 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 22:58:44 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
+static void		norminette(t_jobs *jobs, t_process *process)
+{
+	if (process->prev == NULL)
+		ft_printf("[%d]%c\t", jobs->index,
+		(jobs->next_use == NULL && process->pid == process->pgid) ? '+' : '\0');
+	else
+		ft_putstr("\t");
+}
+
 int				print_process(t_jobs *jobs, t_process *process, int option)
 {
-	(process->prev == NULL) ? ft_printf("[%d]%c\t", jobs->index, (jobs->next_use == NULL && process->pid == process->pgid) ? '+' : '\0') : ft_putstr("\t");
+	norminette(jobs, process);
 	if (option & OPT_C)
 	{
 		return (ft_printf("%d %s %s\n", process->pid, \
@@ -57,7 +66,8 @@ uint8_t			print_jobs_info(t_jobs *jobs, t_process *process, int option)
 void			print_status(t_jobs *jobs, t_process *process)
 {
 	cursor_column(1);
-	ft_printf("[%d]%c", jobs->index, (jobs->next_use == NULL && process->pid == process->pgid) ? '+' : '\0');
+	ft_printf("[%d]%c", jobs->index,
+	(jobs->next_use == NULL && process->pid == process->pgid) ? '+' : '\0');
 	while (process)
 	{
 		if (process->status != -1)
@@ -65,19 +75,16 @@ void			print_status(t_jobs *jobs, t_process *process)
 			ft_putchar('\t');
 			if (WIFEXITED(process->status))
 				ft_printf("%d %s %s\n", process->pid,
-					status_exit(WEXITSTATUS(process->status)),
-						process->command);
+				status_exit(WEXITSTATUS(process->status)), process->command);
 			else if (WIFSIGNALED(process->status))
 				ft_printf("%d %s %s\n", process->pid,
-						status_signal(WTERMSIG(process->status)),
-							process->command);
+				status_signal(WTERMSIG(process->status)), process->command);
 			else if (WIFCONTINUED(process->status))
 				ft_printf("%d %s %s\n", process->pid,
-						status_signal(18), process->command);
+				status_signal(18), process->command);
 			else if (WIFSTOPPED(process->status))
 				ft_printf("%d %s %s\n", process->pid,
-						status_signal(WSTOPSIG(process->status)),
-							process->command);
+				status_signal(WSTOPSIG(process->status)), process->command);
 		}
 		process = process->next;
 	}
