@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:40:09 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 11:56:25 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/20 15:56:46 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 t_process		*place_status(pid_t pid, int status)
 {
+	t_process		*process;
+
 	if (get_process(pid))
 		dprintf(fd_log, "dsabyebye\n");
 	else
 		dprintf(fd_log, "ddasdassabyebye\n");
-
-
-	t_process		*process;
-
 	if ((process = get_process(pid)) != NULL)
 		process->status = status;
 	return (process);
@@ -46,7 +44,7 @@ void			set_fildes(pid_t pgid)
 	tcsetpgrp(STDIN_FILENO, pgid);
 }
 
-void				check_child_in_foreground(t_jobs *jobs)
+void			check_child_in_foreground(t_jobs *jobs)
 {
 	if (jobs->process && jobs->process->foreground)
 	{
@@ -55,8 +53,8 @@ void				check_child_in_foreground(t_jobs *jobs)
 		set_fildes(getpgid(0));
 		update_status(jobs->process);
 		update_jobs(jobs->process);
-		dprintf(fd_log, "byebye %d %d\n", finished_process(jobs->process), jobs->process->status);
-
+		dprintf(fd_log, "byebye %d %d\n", finished_process(jobs->process), \
+			jobs->process->status);
 		if (finished_process(jobs->process))
 		{
 			dprintf(fd_log, "byebye\n");

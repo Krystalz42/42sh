@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 01:04:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 06:09:41 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 15:57:34 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ static void		error(char *str)
 void			my_execve(char **command, char **env)
 {
 	reset_signal();
-	ft_dprintf(fd_log, "IN EXECVE >>>> PID [%d] PPID [%d] PGID [%d] CMD [%s] <<<< \n",
+	ft_dprintf(fd_log, \
+		"IN EXECVE >>>> PID [%d] PPID [%d] PGID [%d] CMD [%s] <<<< \n",
 	getpid(), getppid(), getpgid(0), *command);
 	execve(command[0], command, env);
 	error(command[0]);
