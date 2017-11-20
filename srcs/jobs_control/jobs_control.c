@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 19:09:46 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 18:44:53 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 22:53:39 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ t_jobs				*jobs_table(void)
 
 	return (jobs);
 }
-
 
 void				update_jobs(t_process *process)
 {
@@ -47,15 +46,9 @@ void				check_child_in_background(void)
 	t_process	*process;
 
 	while ((pid = waitpid(WAIT_ANY, &status, WNOHANG)) > 0)
-	{
-		dprintf(fd_log, "[%s] > Return pid %d\n", __FILENAME__ ,  pid);
 		if ((process = place_status(pid, status)))
-		{
-
-			dprintf(fd_log, "[%s] > Return process %d\n", __FILENAME__ ,  process ? 1 : 0);
 			if ((jobs = get_jobs(process->pgid)) != NULL)
 			{
-				dprintf(fd_log, "[%s] > Return jobs %d\n", __FILENAME__,  jobs ? 1 : 0);
 				wait_group(jobs->process, WNOHANG | WUNTRACED);
 				update_status(jobs->process);
 				update_jobs(jobs->process);
@@ -70,11 +63,6 @@ void				check_child_in_background(void)
 					modify_runing(jobs->process, false);
 				}
 			}
-
-		}
-		dprintf(fd_log, "[%s] > Return process %d\n", __FILENAME__, process ? 1 : 0);
-	}
-	dprintf(fd_log, "[%s] > Return pid %d\n",  __FILENAME__, pid);
 }
 
 void				handler_sigchld(int sig)
