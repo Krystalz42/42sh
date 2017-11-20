@@ -38,8 +38,8 @@ int		shell(void)
 			continue ;
 		signal(SIGCHLD, SIG_DFL);
 		execute_node(tree, NULL, FORK | FOREGROUND);
-		signal(SIGCHLD, &handler_sigchld);
 		handler_sigchld(0);
+		signal(SIGCHLD, &handler_sigchld);
 		cursor_column(1);
 	}
 	return (0);

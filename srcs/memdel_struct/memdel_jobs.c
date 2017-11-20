@@ -34,7 +34,8 @@ static void		connect_use(t_jobs *jobs)
 		jobs->prev_use->next_use = jobs->next_use;
 }
 
-void			memdel_jobs(t_jobs *jobs) {
+void			memdel_jobs(t_jobs *jobs)
+{
 	t_jobs **addr_jobs;
 	t_jobs *temp_jobs;
 
@@ -44,15 +45,16 @@ void			memdel_jobs(t_jobs *jobs) {
 	if (*addr_jobs == jobs)
 	{
 		dprintf(fd_log, "[%s] Memdel from addr\n", __FILENAME__);
+		dprintf(fd_log, "[%s] memdel [%d]\n", __FILENAME__, temp_jobs == jobs);
 		*addr_jobs = (*addr_jobs)->next;
 		if ((*addr_jobs) && (*addr_jobs)->prev)
 			(*addr_jobs)->prev = NULL;
 	}
 	else
 	{
-		while (temp_jobs && temp_jobs->index != jobs->index)
+		while (jobs && temp_jobs && temp_jobs != jobs)
 		{
-			dprintf(fd_log, "[%s] memdel [%d.%d]\n", __FILENAME__, temp_jobs->index, jobs->index);
+			dprintf(fd_log, "[%s] memdel [%d]\n", __FILENAME__, temp_jobs == jobs);
 			temp_jobs = temp_jobs->next;
 		}
 		if (temp_jobs == jobs)
