@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/18 17:56:53 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/20 15:32:24 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@
 # define OPT_J						4096
 # define OPT_R						8192
 # define OPT_A						16384
-
 
 # define FORK						1
 # define FOREGROUND					2
