@@ -20,7 +20,9 @@ static void		reset_process(t_jobs *jobs)
 	{
 		to_kill = jobs->process;
 		jobs->process = jobs->process->next;
+		ft_memdel((void **)&to_kill->command);
 		ft_memdel((void **)&to_kill);
+
 	}
 	ft_memset((void *)jobs, 0 , sizeof(t_jobs));
 }
