@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:10:18 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 03:06:43 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 06:12:39 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int		get_fildes(char *str)
 	{
 		if ((fildes = ft_atoi(str)) > 2)
 		{
-			ft_printf("42sh: %d: Bad file descriptor\n", fildes);
+			ft_dprintf(2, "42sh: %d: Bad file descriptor\n", fildes);
 			exit(var_return(1));
 		}
 	}
@@ -76,7 +76,8 @@ uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
 		else
 		{
 			process->pid = getpid();
-			write_pipe(process->prev->fildes);
+			if (process->prev)
+				write_pipe(process->prev->fildes);
 			jobs_op_great_and(node);
 			execute_node(node->left, jobs, (info ^ FORK) ^ WRITE_PREVIOUS);
 		}
@@ -84,7 +85,7 @@ uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
 	else
 	{
 		jobs_op_great_and(node);
-		execute_node(node->left, jobs, info ^ WRITE_PREVIOUS);
+		execute_node(node->left, jobs, info);
 	}
 	return (var_return(-1));
 }
