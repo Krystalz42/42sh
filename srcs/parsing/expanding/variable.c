@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:58:20 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 15:32:26 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/21 00:14:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ static char		*get_variable(char *str)
 	while (str && str[index])
 	{
 		if (str[index] == '\"' || str[index] == '\'' || str[index] == ' '
-			|| str[index] == '/' || str[index] == '\\')
+			|| str[index] == '/' || str[index] == '\\' || str[index] == '$'
+			|| ft_isdigit(str[index]))
 			break ;
 		index++;
 	}
@@ -43,7 +44,8 @@ static void		populate(char *new, char *str, char *variable, size_t length)
 	while (str && *str && *str == '$')
 		str++;
 	while (str && *str && *str != '\"' && *str != '\'' &&
-			*str != ' ' && *str != '/' && *str != '\\')
+			*str != ' ' && *str != '/' && *str != '\\' && *str != '$' &&
+			ft_isdigit(*str) == 0)
 		str++;
 	while (str && *str)
 		new[index++] = *str++;
