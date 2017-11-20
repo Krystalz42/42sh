@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 16:11:51 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 19:45:12 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 21:45:28 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	{
 		process->pid = getpid();
 		read_pipe(fildes);
-		if (info & WRITE_PREVIOUS)
+		if (process->prev && info & WRITE_PREVIOUS)
 			write_pipe(process->prev->fildes);
 		execute_node(node->right, jobs, info ^ FORK);
 	}
