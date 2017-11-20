@@ -42,6 +42,7 @@ void					move_vertical(t_read **read_std, int pos)
 		while (tmp && tmp->index != (*read_std)->tab_->index)
 			tmp = tmp->next;
 		update_index(read_std, (*read_std)->tab_->nbr * pos);
+		dprintf(fd_log, "To %d\n", (*read_std)->tab_->index);
 		if (((*read_std)->tab_->index / (*read_std)->tab_->elem_page)\
 			!= (*read_std)->tab_->page)
 			change_page(read_std);

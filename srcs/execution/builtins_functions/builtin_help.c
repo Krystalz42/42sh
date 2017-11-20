@@ -78,7 +78,7 @@ uint8_t				builtin_help(t_node *node, int info)
 		option = 1;
 	else if (node->content->command[1] && node->content->command[1][0] == '-')
 		if ((option = get_option(node->content->command, 0)) == -1)
-			return (var_return(1));
+			return (1);
 	(option == 0) && help_move();
 	(option == 0) && help_history();
 	(option == 0) && help_kill_and_yank();

@@ -84,7 +84,7 @@ uint8_t			builtin_env(t_node *node, int info)
 	table = 0;
 	opt = 0;
 	if (ft_strcmp(node->content->command[1], HELP) == 0)
-		return (var_return(usage_env()));
+		return (usage_env());
 	while (node->content->command[++table] &&
 			node->content->command[table][0] == '-' && !(index = 0))
 	{

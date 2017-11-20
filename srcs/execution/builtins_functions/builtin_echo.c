@@ -59,5 +59,5 @@ uint8_t			builtin_echo(t_node *node, int info)
 	argv = get_argv(node->content->command + 1, &option);
 	print_argv(argv);
 	option & DEFAULT || !argv ? ft_putchar('\012') : 0;
-	return (var_return(0));
+	return (0);
 }

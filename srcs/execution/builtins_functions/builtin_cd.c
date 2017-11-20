@@ -93,5 +93,5 @@ uint8_t			builtin_cd(t_node *node, int info)
 		modify_variable("PWD", &pwd);
 	}
 	ft_memdel((void **)&oldpwd);
-	return (var_return(err));
+	return (err != 0 ? 1 : 0);
 }

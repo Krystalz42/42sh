@@ -121,7 +121,7 @@ uint8_t					builtin_jobs(t_node *node, int info)
 
 	(void)info;
 	if ((option = check_option(node->content->command + 1)) == -1)
-		return (1);
+		return (var_return(-1));
 	if ((jobs_spec = check_jobs(node->content->command + 1)) == -1)
 		return (1);
 	return (print_jobs(jobs_spec, option));
