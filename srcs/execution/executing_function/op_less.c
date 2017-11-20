@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:16:43 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 22:42:57 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 23:32:01 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void			jobs_op_less(t_node *node)
 	}
 }
 
-static int		norminette(int info, int fildes)
+static int		norminette(int info, int *fildes)
 {
 	write_pipe(fildes);
 	info ^= WRITE_PREVIOUS;

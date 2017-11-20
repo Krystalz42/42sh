@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 22:38:26 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 23:32:36 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,6 @@ static int		print_jobs(int jobs_spec, int option)
 	int			index;
 
 	jobs = jobs_table();
-	dprintf(fd_log, "%d\n", jobs_spec);
 	if (jobs_spec == 0 && !(index = 0))
 	{
 		while (CHILD(index))

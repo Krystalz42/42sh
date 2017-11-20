@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:14:51 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 22:41:32 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 23:31:30 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void		intro_heredoc(t_node *node)
 	remove(node->content->heredoc);
 }
 
-static int		norminette(int info, int fildes)
+static int		norminette(int info, int *fildes)
 {
 	write_pipe(fildes);
 	info ^= WRITE_PREVIOUS;

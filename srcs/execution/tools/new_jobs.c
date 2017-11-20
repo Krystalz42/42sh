@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:12:19 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 22:46:33 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 23:30:34 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static t_jobs	*create_jobs(void)
 		index--;
 	if (index == MAX_CHILD - 1 && jobs[index].process)
 		return (NULL);
-	dprintf(fd_log, "New Jobs Created [%d]\n", index + 1);
 	jobs[index + 1].index = index + 2;
 	return (jobs + (index + 1));
 }

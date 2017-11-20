@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 19:09:46 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 22:53:39 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/11/20 23:33:07 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,5 @@ void				check_child_in_background(void)
 void				handler_sigchld(int sig)
 {
 	(void)sig;
-	dprintf(fd_log, "SIGCHLD Reception[%d]\n", sig);
 	check_child_in_background();
 }

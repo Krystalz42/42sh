@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:40:09 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 22:42:14 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/20 23:33:51 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ t_process		*place_status(pid_t pid, int status)
 
 int				wait_group(t_process *process, int option)
 {
+	(void)option;
 	while (process)
-	{
 		process = process->next;
-	}
 	return (0);
 }
 
