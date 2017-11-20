@@ -18,12 +18,36 @@
 
 t_process		*get_process(pid_t pid)
 {
-	pid++;
+	t_jobs		*jobs;
+	t_process	*process;
+
+	if ((jobs = get_real_jobs()) == NULL)
+		return (NULL);
+	while (jobs)
+	{
+		process = jobs->process;
+		while (process)
+		{
+			if (process->pid == pid)
+				return (process);
+			process = process->next;
+		}
+		jobs = jobs->prev_use;
+	}
 	return (NULL);
 }
 
 t_jobs			*get_jobs(pid_t pgid)
 {
-	pgid++;
+	t_jobs		*jobs;
+
+	if ((jobs = get_real_jobs()) == NULL)
+		return (NULL);
+	while (jobs)
+	{
+		if (jobs->process->pgid == pgid)
+			return (jobs);
+		jobs = jobs->prev_use;
+	}
 	return (NULL);
 }
