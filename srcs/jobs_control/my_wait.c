@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:40:09 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 15:56:46 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 22:42:14 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int				wait_group(t_process *process, int option)
 {
 	while (process)
 	{
-		dprintf(fd_log, "Return wait [%d]\n", waitpid(process->pid, &process->status, option));
 		process = process->next;
 	}
 	return (0);
@@ -52,9 +51,6 @@ void			check_child_in_foreground(t_jobs *jobs)
 		else
 		{
 			modify_foreground(jobs->process, false);
-
-
-
 			modify_runing(jobs->process, false);
 			print_status(jobs, jobs->process);
 		}

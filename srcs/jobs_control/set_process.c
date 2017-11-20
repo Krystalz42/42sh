@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 18:56:57 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 12:50:28 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 22:43:26 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void				update_status(t_process *process)
 {
 	while (process)
 	{
-		dprintf(fd_log, "PID [%d] [%d.%d]\n",process->pid,WIFEXITED(process->status), WIFSIGNALED(process->status));
 		if (WIFEXITED(process->status) || WIFSIGNALED(process->status))
 		{
 			process->finished = 1;
