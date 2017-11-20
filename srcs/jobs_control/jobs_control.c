@@ -19,6 +19,7 @@ t_jobs				*jobs_table(void)
 	return (jobs);
 }
 
+
 void				update_jobs(t_process *process)
 {
 	while (process)
@@ -50,6 +51,7 @@ void				check_child_in_background(void)
 		dprintf(fd_log, "[%s] > Return pid %d\n", __FILENAME__ ,  pid);
 		if ((process = place_status(pid, status)))
 		{
+
 			dprintf(fd_log, "[%s] > Return process %d\n", __FILENAME__ ,  process ? 1 : 0);
 			if ((jobs = get_jobs(process->pgid)) != NULL)
 			{

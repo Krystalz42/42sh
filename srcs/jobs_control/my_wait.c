@@ -64,7 +64,6 @@ void			check_child_in_foreground(t_jobs *jobs)
 void			my_wait(t_jobs *jobs)
 {
 	close_fildes(jobs->process);
-	add_next_use(jobs);
 	if (jobs->process && jobs->process->foreground == 0)
 	{
 		print_info_jobs(jobs->process, jobs->index);
