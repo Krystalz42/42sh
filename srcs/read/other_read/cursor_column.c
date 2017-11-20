@@ -6,7 +6,7 @@
 /*   By: gbourson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:44:20 by gbourson          #+#    #+#             */
-/*   Updated: 2017/11/17 16:44:36 by gbourson         ###   ########.fr       */
+/*   Updated: 2017/11/20 22:48:24 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int			cursor_column(int new_line)
 	while (index < 14 && buff[index] != ';')
 		index++;
 	col = ft_atoi(buff + index + 1);
-	dprintf(fd_log, "%s %d\n",buff, col);
 	if (col > 2 && new_line)
 		ft_putstr_fd("\x1B[7m%\x1B[0m\n", init_fd());
 	return (col);
