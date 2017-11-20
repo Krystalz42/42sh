@@ -12,13 +12,12 @@
 
 #include <sh.h>
 
-t_jobs				*jobs_table(t_jobs *jobs, unsigned int flags)
+t_jobs				*jobs_table(unsigned int flags)
 {
 	static t_jobs		*jobs;
 
 	if (flags & RESET_STRUCT)
 		jobs = NULL;
-	else if (flags & SAVE_STRUCT)
 	return (jobs);
 }
 
@@ -49,7 +48,8 @@ void				check_child_in_background(void)
 
 	while ((pid = waitpid(WAIT_ANY, &status, WNOHANG)) > 0)
 	{
-		if ((jobs = get_jobs(place_status(pid, status)->pgid)) != NULL)
+		place_status(pid, status);
+		if ((jobs = get_jobs(getpgid(pid))) != NULL)
 		{
 			wait_group(jobs->process, WNOHANG);
 			update_status(jobs->process);

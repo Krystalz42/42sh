@@ -43,7 +43,7 @@ void			memdel_jobs(t_jobs *jobs)
 	ft_dprintf(fd_log, "addr_index [%d] jobs index [%d]\n",addr_jobs->index, jobs->index);
 	if (addr_jobs && addr_jobs->index == jobs->index)
 	{
-		jobs_table(REC_STRUCT)
+		jobs_table(REC_STRUCT);
 		ft_dprintf(fd_log, " IN MEMDEL_JOBS [addr_jobs == jobs] %d\n", jobs_table(REC_STRUCT) ? 1 : 0);
 	}
 	else

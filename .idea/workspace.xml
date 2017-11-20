@@ -13,23 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/sh.h" afterPath="$PROJECT_DIR$/incs/sh.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/main.c" afterPath="$PROJECT_DIR$/srcs/cores/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch2.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch2.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_dgreat.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_dgreat.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_dless.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_dless.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_execution.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_execution.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_great.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_great.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_less.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_less.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/executing_function/op_pipeline.c" afterPath="$PROJECT_DIR$/srcs/execution/executing_function/op_pipeline.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/get_process.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/get_process.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/manage_pipe.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/manage_pipe.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/manage_use.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/manage_use.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/tools/new_jobs.c" afterPath="$PROJECT_DIR$/srcs/execution/tools/new_jobs.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c" afterPath="$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -44,11 +28,11 @@
     <splitter split-orientation="vertical" split-proportion="0.6893281">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="jobs_control.c" pinned="false" current-in-tab="false">
+          <file leaf-file-name="jobs_control.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+                <state relative-caret-position="765">
+                  <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -67,8 +51,8 @@
           <file leaf-file-name="memdel_jobs.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+                <state relative-caret-position="675">
+                  <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -124,11 +108,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+                <state relative-caret-position="480">
+                  <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -148,7 +132,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="define.h" pinned="false" current-in-tab="true">
+          <file leaf-file-name="define.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/incs/define.h">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="205">
@@ -168,11 +152,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="print_process.c" pinned="false" current-in-tab="false">
+          <file leaf-file-name="print_process.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/srcs/jobs_control/print_process.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="810">
-                  <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+                <state relative-caret-position="138">
+                  <caret line="51" column="19" lean-forward="true" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
@@ -184,7 +168,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print_stat</find>
       <find>init_fd</find>
       <find>to</find>
       <find>init_signal();</find>
@@ -205,7 +188,6 @@
       <find>_</find>
       <find>print_jobs</find>
       <find>jobs_spec</find>
-      <find>printf</find>
       <find>log_</find>
       <find>print_jobs_info</find>
       <find>option</find>
@@ -214,6 +196,8 @@
       <find>10</find>
       <find>init_sig</find>
       <find>dprintf</find>
+      <find>printf</find>
+      <find>ft_printf</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -310,7 +294,6 @@
         <option value="$PROJECT_DIR$/srcs/error_function/bip.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/incs/struct.h" />
-        <option value="$PROJECT_DIR$/srcs/jobs_control/print_process.c" />
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" />
         <option value="$PROJECT_DIR$/srcs/cores/shell.c" />
         <option value="$PROJECT_DIR$/srcs/read/other_read/my_tgetnum.c" />
@@ -341,9 +324,10 @@
         <option value="$PROJECT_DIR$/srcs/execution/tools/manage_use.c" />
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" />
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch2.c" />
+        <option value="$PROJECT_DIR$/srcs/cores/main.c" />
+        <option value="$PROJECT_DIR$/srcs/jobs_control/print_process.c" />
         <option value="$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
-        <option value="$PROJECT_DIR$/srcs/cores/main.c" />
       </list>
     </option>
   </component>
@@ -438,12 +422,12 @@
       <workItem from="1511124903841" duration="4376000" />
       <workItem from="1511130538546" duration="50000" />
       <workItem from="1511130633324" duration="13921000" />
-      <workItem from="1511151930582" duration="3115000" />
+      <workItem from="1511151930582" duration="4055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56452000" />
+    <option name="totallyTimeSpent" value="57392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1278" height="1440" extended-state="0" />
@@ -639,14 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/print_process.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/read/other_read/print_struct.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
@@ -791,14 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/incs/define.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/incs/sh.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
@@ -847,14 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch2.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="767">
@@ -863,18 +823,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
+    <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="480">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cores/main.c">
+    <entry file="file://$PROJECT_DIR$/incs/define.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state relative-caret-position="205">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/print_process.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="51" column="19" lean-forward="true" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="31" lean-forward="false" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
