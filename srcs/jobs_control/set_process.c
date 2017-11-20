@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/11 18:56:57 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/19 11:56:40 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/20 12:50:28 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void				update_status(t_process *process)
 
 void				close_fildes(t_process *process)
 {
-	while (process->next)
+	while (process && process->next)
 	{
 		close_pipe(process->fildes);
 		process = process->next;
