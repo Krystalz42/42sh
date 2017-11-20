@@ -6,7 +6,7 @@
 /*   By: sbelazou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 11:55:12 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/11/19 11:55:36 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/20 18:38:27 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void		connect_use(t_jobs *jobs)
 
 void			memdel_jobs(t_jobs *jobs)
 {
-	t_jobs *temp_jobs;
+	t_jobs		*temp_jobs;
 
 	addr_jobs = jobs_table();
 	connect_use(jobs);

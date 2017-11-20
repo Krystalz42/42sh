@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:12:19 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 11:58:10 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/20 18:25:38 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ static t_jobs	*create_jobs(void)
 	t_jobs		**addr_jobs;
 	t_jobs		*temp_jobs;
 
-	addr_jobs = jobs_table();
+	addr_jobs = NULL;
+	*addr_jobs = jobs_table();
 	temp_jobs = *addr_jobs;
 	if (*addr_jobs)
 	{

@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:11:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 02:01:31 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 18:23:57 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ t_jobs **new_jobs2(t_jobs **jobs)
 	t_jobs **addr_jobs;
 	t_jobs *temp_jobs;
 
+	addr_jobs = NULL;
 	if (jobs == NULL)
 	{
-		addr_jobs = jobs_table();
+		*addr_jobs = jobs_table();
 		if (*addr_jobs)
 		{
 			temp_jobs = *addr_jobs;
