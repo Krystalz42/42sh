@@ -13,11 +13,17 @@ t_jobs		*get_real_jobs(void)
 	jobs = jobs_table();
 	while (CHILD(index))
 	{
+		dprintf(fd_log, "sdYo2\n");
 		if (jobs[index].process)
 		{
+			dprintf(fd_log, "sdsYo2\n");
 			jobs += index;
 			while (jobs->next_use)
+			{
+				dprintf(fd_log, "adYo2\n");
 				jobs = jobs->next_use;
+
+			}
 			return (jobs);
 		}
 		index++;

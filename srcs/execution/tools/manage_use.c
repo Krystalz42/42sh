@@ -22,26 +22,11 @@ t_jobs			*add_to_first(t_jobs *new)
 		new->next_use->prev_use = new->prev_use;
 	if ((jobs = get_real_jobs()) == NULL)
 		return (new);
-	new->next_use = NULL;
-	jobs->next_use = new;
-	new->prev_use = jobs;
-	return (new);
-}
-
-t_jobs			*add_next_use(t_jobs *new)
-{
-	t_jobs		*jobs;
-	int			index;
-
-	if ((jobs = get_real_jobs()) == NULL)
-		;
-	index = 0;
-	while (CHILD(index))
+	if (new != jobs)
 	{
-		if (jobs->process && jobs->next_use == NULL)
-			break ;
-		index++;
+		new->next_use = NULL;
+		jobs->next_use = new;
+		new->prev_use = jobs;
 	}
-	jobs += index;
 	return (new);
 }

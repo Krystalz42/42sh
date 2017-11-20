@@ -36,7 +36,9 @@ int		shell(void)
 		check_tree_path(tree);
 		if (signal_reception(-1) == SIGINT)
 			continue ;
+		signal(SIGCHLD, SIG_DFL);
 		execute_node(tree, NULL, FORK | FOREGROUND);
+		signal(SIGCHLD, &handler_sigchld);
 		cursor_column(1);
 	}
 }

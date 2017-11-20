@@ -27,19 +27,20 @@ static void		reset_process(t_jobs *jobs)
 	ft_memset((void *)jobs, 0 , sizeof(t_jobs));
 }
 
-//static void		connect_use(t_jobs *jobs)
-//{
-//	if (jobs->next_use)
-//		jobs->next_use->prev_use = jobs->prev_use;
-//	if (jobs->prev_use)
-//		jobs->prev_use->next_use = jobs->next_use;
-//}
+static void		connect_use(t_jobs *jobs)
+{
+	if (jobs->next_use)
+		jobs->next_use->prev_use = jobs->prev_use;
+	if (jobs->prev_use)
+		jobs->prev_use->next_use = jobs->next_use;
+}
 
 void			memdel_jobs(t_jobs *jobs)
 {
 	t_jobs			*table;
 	int				index;
 
+	connect_use(jobs);
 	table = jobs_table();
 	index = -1;
 	while (++index < MAX_CHILD - 1 && jobs != table)
