@@ -1,6 +1,14 @@
-//
-// Created by Alexandre ROULIN on 11/20/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_real_jobs.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbelazou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/20 22:44:04 by sbelazou          #+#    #+#             */
+/*   Updated: 2017/11/20 22:44:17 by sbelazou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
@@ -13,16 +21,12 @@ t_jobs		*get_real_jobs(void)
 	jobs = jobs_table();
 	while (CHILD(index))
 	{
-		dprintf(fd_log, "sdYo2\n");
 		if (jobs[index].process)
 		{
-			dprintf(fd_log, "sdsYo2\n");
 			jobs += index;
 			while (jobs->next_use)
 			{
-				dprintf(fd_log, "adYo2\n");
 				jobs = jobs->next_use;
-
 			}
 			return (jobs);
 		}
