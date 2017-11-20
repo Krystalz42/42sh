@@ -87,6 +87,7 @@ t_cmd					*read_stdin(unsigned char flags)
 	inline_print_(&read_std, &buf);
 	while (!read_std->finish && read(STDIN_FILENO, &buf, sizeof(unsigned long)))
 	{
+		dprintf(fd_log, "%lu\n", buf);
 		index = -1;
 		while (g_tab_are_key[++index].key != 89448948)
 			if (g_tab_are_key[index].key == buf)

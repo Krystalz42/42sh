@@ -12,7 +12,7 @@
 
 int				ft_iscrlf(char c)
 {
-	if (c == 10 || c == 13 || c == 11)
+	if (c == 10 || c == 13)
 		return (1);
 	return (0);
 }

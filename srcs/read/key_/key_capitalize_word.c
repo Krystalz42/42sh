@@ -22,7 +22,7 @@ int				capitalize_word_undo(t_read **read_std, unsigned long buff)
 	while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32 \
 		&& ft_isalpha((*read_std)->cmd->c))
 		(*read_std)->cmd = (*read_std)->cmd->prev;
-	if (ft_isalpha((*read_std)->cmd->c))
+	if (ft_isalpha((*read_std)->cmd->c) && ft_islower((*read_std)->cmd->c))
 		(*read_std)->cmd->c += 32;
 	if ((*read_std)->cmd->prev)
 		(*read_std)->cmd = (*read_std)->cmd->prev;
