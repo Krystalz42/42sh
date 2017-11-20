@@ -28,12 +28,12 @@ int				print_process(t_jobs *jobs, t_process *pro, int option)
 	{
 		return (ft_printf("%d %s %s\n", pro->pid, CONT, pro->command));
 	}
-	else if (option & OPT_L && option & OPT_P)
+	else if ((option & OPT_L) && (option & OPT_P))
 	{
 		if (pro->pid != pro->pgid)
 			return (1);
 		return (ft_printf("%d %s %s\n", pro->pid, pro->running
-												  ? RUN : STOP, pro->command));
+												? RUN : STOP, pro->command));
 	}
 	else if (option & OPT_P)
 	{
@@ -44,7 +44,7 @@ int				print_process(t_jobs *jobs, t_process *pro, int option)
 	else if (option & OPT_L)
 	{
 		return (ft_printf("%d %s %s\n", pro->pid,
-				  pro->running ? RUN : STOP, pro->command));
+				pro->running ? RUN : STOP, pro->command));
 	}
 	else
 		return (ft_printf("%s %s\n", pro->running ? RUN : STOP, pro->command));
