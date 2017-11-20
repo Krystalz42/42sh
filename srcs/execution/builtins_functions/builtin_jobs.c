@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 18:37:17 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 18:42:58 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,14 @@
 **
 */
 
-/*static int 		check_jobs(char **command)
+static int 		check_jobs(char **command)
 {
 	int			num;
 	int			table;
 	t_jobs		*jobs;
 
-	jobs = *jobs_table();
+	//jobs = *jobs_table();
+	jobs = NULL;
 	table = 0;
 	while (command[table] && command[table][0] == '-')
 		table++;
@@ -97,7 +98,8 @@ static int		print_jobs(int jobs_spec, int option)
 
 	index = 0;
 	ft_dprintf(fd_log, "Jobs_spec %d option %d\n", jobs_spec, option);
-	jobs = *jobs_table();
+	//jobs = *jobs_table();
+	jobs = NULL;
 	if (jobs_spec == 0)
 	{
 		while (jobs && jobs->process && index < MAX_CHILD)
@@ -126,4 +128,4 @@ uint8_t			builtin_jobs(t_node *node, int info)
 	if ((jobs_spec = check_jobs(node->content->command + 1)) == -1)
 		return (1);
 	return (print_jobs(jobs_spec, option));
-}*/
+}
