@@ -23,9 +23,11 @@ t_process		*place_status(pid_t pid, int status)
 
 int				wait_group(t_process *process, int option)
 {
-	(void)option;
 	while (process)
+	{
+		waitpid(process->pid, &process->status, option);
 		process = process->next;
+	}
 	return (0);
 }
 
