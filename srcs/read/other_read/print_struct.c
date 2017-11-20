@@ -20,8 +20,8 @@ int					print_list(int to_select, t_cmd *cmd, t_cmd *stop,\
 	co = tgetco();
 	while ((!to_select && cmd->c) || (to_select && cmd != stop))
 	{
-		(cmd->c != 10) ? CHAR_FD(cmd->c, init_fd()) : 0;
-		if (cmd->c == 10 || cur->co >= co - 1)
+		ft_iscrlf(cmd->c) == 0 ? CHAR_FD(cmd->c, init_fd()) : 0;
+		if (ft_iscrlf(cmd->c) || cur->co >= co - 1)
 		{
 			if (to_select)
 				tputs(tgetstr(MV_BOT, 0), STDIN_FILENO, &my_put);

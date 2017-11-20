@@ -22,7 +22,7 @@ int			key_arrow_left(t_read **read_std, unsigned long buff)
 	else if ((*read_std)->completion)
 		move_completion_left(read_std);
 	else if ((*read_std)->cmd->prev && ((*read_std)->history ||
-		((*read_std)->cmd->prev->c != 10)))
+		(ft_iscrlf((*read_std)->cmd->prev->c) == 0)))
 	{
 		add_outstanding(NULL, buff, 0);
 		(*read_std)->cmd = (*read_std)->cmd->prev;

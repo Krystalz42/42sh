@@ -20,7 +20,7 @@ t_cmd			*first_cmd(t_cmd *cmd, int history)
 			cmd = cmd->next;
 		while (cmd->prev)
 		{
-			if (!history && cmd->prev->c == 10)
+			if (!history && ft_iscrlf(cmd->prev->c))
 				return (cmd);
 			cmd = cmd->prev;
 		}
