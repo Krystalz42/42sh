@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:10:14 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/19 01:38:10 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 08:07:41 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void		collect_path(char **binary)
 	int			index;
 	char		*temp;
 
+	if (!ft_strlen(*binary))
+		return ;
 	if ((path = ft_strsplit(my_getenv("PATH"), ':')) == NULL)
 		return ;
 	index = 0;
