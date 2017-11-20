@@ -24,9 +24,6 @@ int		shell(void)
 	{
 		memdel_cmd(&input);
 		memdel_node(&tree);
-		dprintf(fd_log, "----------------------------------------------------\n");
-		dprintf(fd_log, "--------------- New command from [%s]---------------\n", __FILENAME__);
-		dprintf(fd_log, "----------------------------------------------------\n");
 		if ((input = read_stdin(DEFAULT)) == NULL)
 			continue ;
 		if ((parse_struct = parsing(input)) == NULL)

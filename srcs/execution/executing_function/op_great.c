@@ -21,7 +21,8 @@ static void		jobs_op_great(t_node *node)
 	int			std;
 	int			fildes;
 
-	if ((fildes = open(node->right->content->command[0], OPTION_GREAT, 0644)) == -1)
+	if ((fildes = open(node->right->content->command[0],
+				OPTION_GREAT, 0644)) == -1)
 		check_path(node->right->content->command[0]);
 	else
 	{

@@ -46,8 +46,7 @@ int					get_option(char **cmd, int option)
 
 	table = 0;
 	while (cmd[++table] && !(index = 0))
-	{
-		while (cmd[table][index])
+		while (cmd[table][++index])
 		{
 			if (potential_option("-jebhksugfcra", cmd[table][index]) == 0)
 				return (error_msg(UHELP, BAD_OPTION, cmd[table] + index) - 2);
@@ -62,10 +61,7 @@ int					get_option(char **cmd, int option)
 			option |= cmd[table][index] == 'f' ? OPT_F : 0;
 			option |= cmd[table][index] == 'c' ? OPT_C : 0;
 			option |= cmd[table][index] == 'r' ? OPT_R : 0;
-			index++;
 		}
-		index++;
-	}
 	return (option);
 }
 

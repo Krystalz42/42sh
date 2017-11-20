@@ -23,9 +23,7 @@
 **		List process IDs in addition to the normal information.
 **	16
 **		Force Continued
-*/
-
-/*
+**
 **	check option
 **
 **	-1 error [No jobs at current index]
@@ -36,7 +34,7 @@
 **
 */
 
-static int 		check_jobs(char **command)
+static int		check_jobs(char **command)
 {
 	int			num;
 	int			table;
