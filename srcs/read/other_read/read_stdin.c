@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-static const t_cmp		g_tab_are_key[] = {
+static const t_cmp		g_tab_are_key[34] = {
 		(t_cmp){DELETE_KEY, &key_del},
 		(t_cmp){TAB_KEY, &key_tab},
 		(t_cmp){CLEAR_KEY, &key_clear_},
@@ -47,7 +47,6 @@ static const t_cmp		g_tab_are_key[] = {
 		(t_cmp){SHIFT_LEFT_KEY, &key_shift_left},
 		(t_cmp){SHIFT_LEFT_KEY, &key_shift_left},
 		(t_cmp){REFRESH, &key_refresh_},
-		(t_cmp){89448948, NULL}
 };
 
 static inline int		chk_and_print(t_read **read_std)
@@ -88,7 +87,7 @@ t_cmd					*read_stdin(unsigned char flags)
 	while (!read_std->finish && read(STDIN_FILENO, &buf, sizeof(unsigned long)))
 	{
 		index = -1;
-		while (g_tab_are_key[++index].key != 89448948)
+		while (++index < 34)
 			if (g_tab_are_key[index].key == buf)
 				inline_other(&read_std, &buf, g_tab_are_key[index].function);
 		if (ft_isread(buf % (UCHAR_MAX + 1)))

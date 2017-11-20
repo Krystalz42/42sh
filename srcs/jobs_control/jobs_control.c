@@ -49,28 +49,28 @@ void				check_child_in_background(void)
 	t_jobs		*jobs;
 	int			pid;
 	int			status;
+	t_process	*process;
 
 	while ((pid = waitpid(WAIT_ANY, &status, WNOHANG)) > 0)
-	{
-		place_status(pid, status);
-		if ((jobs = get_jobs(getpgid(pid))) != NULL)
-		{
-			wait_group(jobs->process, WNOHANG);
-			update_status(jobs->process);
-			update_jobs(jobs->process);
-			ft_dprintf(fd_log, "finished process [%d]\n",finished_process(jobs->process));
-			if (finished_process(jobs->process))
+		if ((process = place_status(pid, status)))
+			if ((jobs = get_jobs(process->pgid)) != NULL)
 			{
-				print_status(jobs, jobs->process);
-				memdel_jobs(jobs);
+				dprintf(fd_log, "jobs %d\n", jobs ? 1 : 0);
+				wait_group(jobs->process, WNOHANG);
+				update_status(jobs->process);
+				update_jobs(jobs->process);
+				ft_dprintf(fd_log, "finished process [%d]\n",finished_process(jobs->process));
+				if (finished_process(jobs->process))
+				{
+					print_status(jobs, jobs->process);
+					memdel_jobs(jobs);
+				}
+				else
+				{
+					modify_foreground(jobs->process, false);
+					modify_runing(jobs->process, false);
+				}
 			}
-			else
-			{
-				modify_foreground(jobs->process, false);
-				modify_runing(jobs->process, false);
-			}
-		}
-	}
 }
 
 void				handler_sigchld(int sig)

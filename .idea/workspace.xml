@@ -12,7 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/cursor_column.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/cursor_column.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/print_process.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/print_process.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -24,26 +25,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.7640288">
+    <splitter split-orientation="vertical" split-proportion="0.5352518">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.5225335">
+        <splitter split-orientation="horizontal" split-proportion="0.53028065">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="read_stdin.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
+              <file leaf-file-name="jobs_control.c" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="766">
-                      <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+                    <state relative-caret-position="391">
+                      <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="cursor_column.c" pinned="false" current-in-tab="true">
+              <file leaf-file-name="read_stdin.c" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="463">
+                      <caret line="89" column="27" lean-forward="false" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="cursor_column.c" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/srcs/read/other_read/cursor_column.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="330">
-                      <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                    <state relative-caret-position="525">
+                      <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
@@ -54,6 +65,16 @@
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="690">
                       <caret line="46" column="31" lean-forward="true" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="my_wait.c" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_wait.c">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="372">
+                      <caret line="29" column="52" lean-forward="false" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
                       <folding />
                     </state>
                   </provider>
@@ -109,35 +130,25 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="key_upcase_word.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_upcase_word.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="345">
-                      <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="key_downcase_word.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_downcase_word.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="0">
-                      <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
             </leaf>
           </split-first>
           <split-second>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file leaf-file-name="define.h" pinned="false" current-in-tab="true">
+              <file leaf-file-name="define.h" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/incs/define.h">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="306">
-                      <caret line="142" column="35" lean-forward="false" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
+                    <state relative-caret-position="3">
+                      <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="enum.h" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/incs/enum.h">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="274">
+                      <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
@@ -179,7 +190,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="shell.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="shell.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/cores/shell.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="210">
@@ -199,11 +210,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="print_process.c" pinned="false" current-in-tab="false">
+          <file leaf-file-name="print_process.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/srcs/jobs_control/print_process.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="825">
-                  <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+                <state relative-caret-position="636">
+                  <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -324,7 +335,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/srcs/execution/check_if_builtins.c" />
         <option value="$PROJECT_DIR$/libs/printf/Makefile" />
         <option value="$PROJECT_DIR$/libs/libft/Makefile" />
         <option value="$PROJECT_DIR$/srcs/execution/my_fork.c" />
@@ -349,10 +359,8 @@
         <option value="$PROJECT_DIR$/srcs/signal/ft_signal.c" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/srcs/cores/main.c" />
-        <option value="$PROJECT_DIR$/srcs/jobs_control/print_process.c" />
         <option value="$PROJECT_DIR$/srcs/cores/shell.c" />
         <option value="$PROJECT_DIR$/incs/sh.h" />
-        <option value="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
         <option value="$PROJECT_DIR$/srcs/execution/tools/manage_use.c" />
         <option value="$PROJECT_DIR$/srcs/memdel_struct/memdel_jobs.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" />
@@ -373,8 +381,11 @@
         <option value="$PROJECT_DIR$/libs/libft/srcs/ft_iscrlf.c" />
         <option value="$PROJECT_DIR$/incs/define.h" />
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_help.c" />
-        <option value="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
         <option value="$PROJECT_DIR$/srcs/read/other_read/cursor_column.c" />
+        <option value="$PROJECT_DIR$/srcs/jobs_control/jobs_control.c" />
+        <option value="$PROJECT_DIR$/srcs/jobs_control/print_process.c" />
+        <option value="$PROJECT_DIR$/incs/enum.h" />
+        <option value="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
       </list>
     </option>
   </component>
@@ -482,12 +493,12 @@
       <workItem from="1511130538546" duration="50000" />
       <workItem from="1511130633324" duration="13921000" />
       <workItem from="1511151930582" duration="8640000" />
-      <workItem from="1511164226361" duration="5015000" />
+      <workItem from="1511164226361" duration="5454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66992000" />
+    <option name="totallyTimeSpent" value="67431000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="921" y="0" width="1639" height="1440" extended-state="0" />
@@ -527,14 +538,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_less.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great_and.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="671">
@@ -605,14 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/print_process.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="29" lean-forward="false" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/incs/sh.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
@@ -648,14 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_wait.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="29" column="52" lean-forward="false" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -774,14 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="790">
@@ -886,26 +865,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/cores/shell.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/cores/exit.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incs/define.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="142" column="35" lean-forward="false" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -918,18 +881,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
+    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/cursor_column.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="525">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/cursor_column.c">
+    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_wait.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="372">
+          <caret line="29" column="52" lean-forward="false" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/cores/shell.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/print_process.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/jobs_control/jobs_control.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/incs/define.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/incs/enum.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="89" column="27" lean-forward="false" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
           <folding />
         </state>
       </provider>

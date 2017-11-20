@@ -46,8 +46,6 @@ uint8_t			print_jobs_info(t_jobs *jobs, t_process *process, int option)
 void			print_status(t_jobs *jobs, t_process *process)
 {
 	cursor_column(1);
-	(void)jobs;
-	(void)process;
 	ft_printf("[%d]%c", jobs->index, (jobs->next_use == NULL && process->pid == process->pgid) ? '+' : '\0');
 	while (process)
 	{
