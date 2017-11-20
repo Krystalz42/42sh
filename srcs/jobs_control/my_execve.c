@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 01:04:58 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/19 01:34:48 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 06:09:41 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,10 @@ static void		error(char *str)
 	if (lstat(str, &buf) != -1)
 	{
 		if (S_ISDIR(buf.st_mode))
-		{
 			error_msg(S42H, "Is a directory: ", str);
-			exit(var_return(126));
-		}
 		else if (!access(str, F_OK) && access(str, X_OK) == -1)
-		{
 			error_msg(S42H, "Permission denied: ", str);
-			exit(var_return(126));
-		}
+		exit(var_return(126));
 	}
 	else
 	{
