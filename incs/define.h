@@ -48,7 +48,6 @@
 */
 
 # define OPT_P						1
-# define OPT_R						2
 # define OPT_S						4
 # define OPT_L						8
 # define OPT_C						16
@@ -60,7 +59,8 @@
 # define OPT_B						1024
 # define OPT_E						2048
 # define OPT_J						4096
-# define OPT_M						8192
+# define OPT_R						8192
+# define OPT_A						16384
 
 
 # define FORK						1
@@ -132,15 +132,15 @@
 
 # define H_HJ					"-j                      : usage jobs\n"
 # define H_HE					"-e                      : usage env\n"
-# define H_HB					"-b                      : usage hash\n"
+# define H_HB					"-a                      : usage hash\n"
 # define H_HH					"-h                      : usage history\n"
 # define H_HK					"-k                      : usage kill\n"
 # define H_HS					"-s                      : usage setenv\n"
 # define H_HU					"-u                      : usage unsetenv\n"
 # define H_HF					"-f                      : usage foreground\n"
-# define H_HG					"-g                      : usage background\n"
+# define H_HG					"-b                      : usage background\n"
 # define H_HC					"-c                      : usage cd\n"
-# define H_HM					"-m                      : usage readline\n"
+# define H_HM					"-r                      : usage readline\n"
 
 /*
 **			VARIOUS DEFINE

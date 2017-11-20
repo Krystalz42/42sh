@@ -25,15 +25,15 @@ static int 			usage_help(void)
 
 static int			print_help(int option)
 {
-	(option & OPT_M) && help_move() && help_history() && help_kill_and_yank();
+	(option & OPT_R) && help_move() && help_history() && help_kill_and_yank();
 	(option & OPT_J) && ft_putstr(H_J) && usage_jobs();
 	(option & OPT_E) && ft_putstr(H_E) && usage_env();
-	(option & OPT_B) && ft_putstr(H_B) && usage_hash();
+	(option & OPT_A) && ft_putstr(H_B) && usage_hash();
 	(option & OPT_H) && ft_putstr(H_H) && usage_history();
 	(option & OPT_K) && ft_putstr(H_K) && usage_kill();
 	(option & OPT_S) && ft_putstr(H_S) && usage_setenv();
 	(option & OPT_U) && ft_putstr(H_U) && usage_unsetenv();
-	(option & OPT_G) && ft_putstr(H_G) && usage_background();
+	(option & OPT_B) && ft_putstr(H_G) && usage_background();
 	(option & OPT_F) && ft_putstr(H_F) && usage_foreground();
 	(option & OPT_C) && ft_putstr(H_C) && usage_cd();
 	return (0);
@@ -49,7 +49,7 @@ int					get_option(char **cmd, int option)
 	{
 		while (cmd[table][index])
 		{
-			if (potential_option("-jebhksugfcm", cmd[table][index]) == 0)
+			if (potential_option("-jebhksugfcra", cmd[table][index]) == 0)
 				return (error_msg(UHELP, BAD_OPTION, cmd[table] + index) - 2);
 			option |= cmd[table][index] == 'j' ? OPT_J : 0;
 			option |= cmd[table][index] == 'e' ? OPT_E : 0;
@@ -58,10 +58,10 @@ int					get_option(char **cmd, int option)
 			option |= cmd[table][index] == 'k' ? OPT_K : 0;
 			option |= cmd[table][index] == 's' ? OPT_S : 0;
 			option |= cmd[table][index] == 'u' ? OPT_U : 0;
-			option |= cmd[table][index] == 'g' ? OPT_G : 0;
+			option |= cmd[table][index] == 'a' ? OPT_A : 0;
 			option |= cmd[table][index] == 'f' ? OPT_F : 0;
 			option |= cmd[table][index] == 'c' ? OPT_C : 0;
-			option |= cmd[table][index] == 'm' ? OPT_M : 0;
+			option |= cmd[table][index] == 'r' ? OPT_R : 0;
 			index++;
 		}
 		index++;
