@@ -6,13 +6,13 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:19 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/18 18:08:05 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/20 15:42:20 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-static int 			usage_help(void)
+static int			usage_help(void)
 {
 	ft_putstr(H_HJ) && ft_putstr(H_HE);
 	ft_putstr(H_HK) && ft_putstr(H_HH);

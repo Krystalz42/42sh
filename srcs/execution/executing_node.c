@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:09:00 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 02:00:45 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 15:41:08 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_exec			*g_execute[11] =
 {
-	[VALUE_COMMAND] = &op_execution, 
+	[VALUE_COMMAND] = &op_execution,
 	[VALUE_SEMI_COLON] = &op_separator,
 	[VALUE_AMPERSAND] = &op_ampersand,
 	[VALUE_AND_IF] = &op_and_if,

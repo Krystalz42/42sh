@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/18 12:01:23 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 15:44:29 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@
 **	> 0 Print jobs currently specified
 **
 */
-static int 				check_jobs(char **command)
+static int 		check_jobs(char **command)
 {
 	int			num;
 	int			table;
@@ -63,7 +63,7 @@ static int 				check_jobs(char **command)
 	return (num);
 }
 
-static int				check_option(char **command)
+static int		check_option(char **command)
 {
 	int			ind;
 	int			opt;
@@ -91,7 +91,7 @@ static int				check_option(char **command)
 	return (opt);
 }
 
-static int					print_jobs(int jobs_spec, int option)
+static int		print_jobs(int jobs_spec, int option)
 {
 	t_jobs		*jobs;
 
@@ -114,7 +114,7 @@ static int					print_jobs(int jobs_spec, int option)
 	return (0);
 }
 
-uint8_t					builtin_jobs(t_node *node, int info)
+uint8_t			builtin_jobs(t_node *node, int info)
 {
 	int			option;
 	int			jobs_spec;
