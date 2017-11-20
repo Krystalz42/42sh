@@ -23,8 +23,9 @@ static t_jobs	*create_jobs(void)
 		index--;
 	if (index == MAX_CHILD -1 && jobs[index].process)
 		return (NULL);
-	jobs[index].index = index + 2;
-	return (jobs + index);
+	dprintf(fd_log, "New Jobs Created [%d]\n", index + 1);
+	jobs[index + 1].index = index + 2;
+	return (jobs + (index + 1));
 }
 
 t_jobs			*new_jobs(t_jobs *jobs)
