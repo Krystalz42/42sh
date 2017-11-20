@@ -12,8 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/shell.c" afterPath="$PROJECT_DIR$/srcs/cores/shell.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/my_wait.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -90,21 +88,21 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="init_fd.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/term/init_fd.c">
+              <file leaf-file-name="my_wait.c" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_wait.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="330">
-                      <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                    <state relative-caret-position="490">
+                      <caret line="64" column="33" lean-forward="false" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="my_wait.c" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_wait.c">
+              <file leaf-file-name="write_history.c" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/srcs/history/write_history.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="565">
-                      <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+                    <state relative-caret-position="0">
+                      <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                       <folding />
                     </state>
                   </provider>
@@ -572,12 +570,12 @@
       <workItem from="1511130538546" duration="50000" />
       <workItem from="1511130633324" duration="13921000" />
       <workItem from="1511151930582" duration="8640000" />
-      <workItem from="1511164226361" duration="13446000" />
+      <workItem from="1511164226361" duration="13524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75423000" />
+    <option name="totallyTimeSpent" value="75501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1621" height="1440" extended-state="0" />
@@ -617,14 +615,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_great.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="52" column="36" lean-forward="false" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/executing_function/op_pipeline.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1028,10 +1018,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/history/write_history.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/jobs_control/my_wait.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="490">
+          <caret line="64" column="33" lean-forward="false" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
           <folding />
         </state>
       </provider>

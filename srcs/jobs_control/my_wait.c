@@ -62,7 +62,7 @@ void			my_wait(t_jobs *jobs)
 {
 	close_fildes(jobs->process);
 	add_next_use(jobs);
-	if (jobs->process->foreground == 0)
+	if (jobs && jobs->process && jobs->process->foreground == 0)
 	{
 		signal(SIGCHLD, &handler_sigchld);
 		print_info_jobs(jobs->process, jobs->index);
