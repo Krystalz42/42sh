@@ -11,9 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/cursor_column.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/cursor_column.c" />
-    </list>
+    <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -165,8 +163,8 @@
               <file leaf-file-name="cursor_column.c" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/srcs/read/other_read/cursor_column.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="480">
-                      <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+                    <state relative-caret-position="420">
+                      <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
                       <folding />
                     </state>
                   </provider>
@@ -191,8 +189,8 @@
           <file leaf-file-name="define.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/incs/define.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="24" column="61" lean-forward="false" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+                <state relative-caret-position="271">
+                  <caret line="24" column="86" lean-forward="true" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
                   <folding />
                 </state>
               </provider>
@@ -349,7 +347,6 @@
         <option value="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/set_process.c" />
         <option value="$PROJECT_DIR$/srcs/execution/tools/manage_pipe.c" />
-        <option value="$PROJECT_DIR$/incs/define.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/srcs/execution/tools/new_jobs.c" />
@@ -366,6 +363,7 @@
         <option value="$PROJECT_DIR$/incs/sh.h" />
         <option value="$PROJECT_DIR$/srcs/execution/tools/manage_use.c" />
         <option value="$PROJECT_DIR$/srcs/read/other_read/cursor_column.c" />
+        <option value="$PROJECT_DIR$/incs/define.h" />
       </list>
     </option>
   </component>
@@ -469,12 +467,12 @@
       <workItem from="1511164226361" duration="16726000" />
       <workItem from="1511197635465" duration="2205000" />
       <workItem from="1511202499663" duration="2946000" />
-      <workItem from="1511209588443" duration="2341000" />
+      <workItem from="1511209588443" duration="2623000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86195000" />
+    <option name="totallyTimeSpent" value="86477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1691" height="1440" extended-state="0" />
@@ -895,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="74" column="50" lean-forward="false" selection-start-line="74" selection-start-column="50" selection-end-line="74" selection-end-column="50" />
+        <state relative-caret-position="630">
+          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -917,14 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/incs/define.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="61" lean-forward="false" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/execution/tools/manage_use.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -935,8 +925,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/read/other_read/cursor_column.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/incs/define.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="24" column="86" lean-forward="true" selection-start-line="24" selection-start-column="86" selection-end-line="24" selection-end-column="86" />
           <folding />
         </state>
       </provider>
