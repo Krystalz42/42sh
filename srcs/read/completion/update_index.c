@@ -21,4 +21,5 @@ void		update_index(t_read **read_std, int i)
 	else if ((*read_std)->tab_->index < 0)
 		(*read_std)->tab_->index = (*read_std)->tab_->element +
 			((*read_std)->tab_->index);
+	(*read_std)->tab_->index = ABS((*read_std)->tab_->index);
 }
