@@ -12,13 +12,24 @@
 
 #include <sh.h>
 
-int		init_our_term(struct termios *term)
+static int		init_our_term(struct termios *term)
 {
 	(*term).c_lflag &= ~(ICANON);
 	(*term).c_lflag &= ~(ECHO);
 	(*term).c_cc[VMIN] = 1;
 	(*term).c_cc[VTIME] = 0;
 	return (1);
+}
+
+void	mine_terminal(void)
+{
+	reset_signal();
+	if (tcgetpgrp(STDIN_FILENO) != getpgid(0))
+	{
+		kill(getpgid(0), SIGSTOP);
+		mine_terminal();
+	}
+g	init_signal();
 }
 
 int		init_term(void)
@@ -28,6 +39,7 @@ int		init_term(void)
 	int						ret;
 
 	ret = 0;
+	mine_terminal();
 	if (!my_getenv("TERM"))
 		add_environment("TERM=vt100");
 	if ((tgetent(NULL, my_getenv("TERM"))) == ERR)
