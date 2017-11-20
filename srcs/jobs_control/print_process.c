@@ -12,40 +12,42 @@
 
 #include <sh.h>
 
-static void		norminette(t_jobs *jobs, t_process *process)
+static void		print_jobs_spec(t_jobs *jobs, t_process *process, int option)
 {
 	if (process->prev == NULL)
 		ft_printf("[%d]%c\t", jobs->index,
 		(jobs->next_use == NULL && process->pid == process->pgid) ? '+' : '\0');
-	else
+	else if (!(option & OPT_P))
 		ft_putstr("\t");
 }
 
-int				print_process(t_jobs *jobs, t_process *process, int option)
+int				print_process(t_jobs *jobs, t_process *pro, int option)
 {
-	norminette(jobs, process);
-	if (option & OPT_C)
+	print_jobs_spec(jobs, pro, option);
+	if ((option & OPT_C))
 	{
-		return (ft_printf("%d %s %s\n", process->pid, \
-			CONTINUED, process->command));
+		return (ft_printf("%d %s %s\n", pro->pid, CONT, pro->command));
 	}
-	if (option & OPT_L && option & OPT_P && process->pid == process->pgid)
+	else if (option & OPT_L && option & OPT_P)
 	{
-		return (ft_printf("%d %s %s\n", process->pid, \
-					process->running ? RUN : STOP, process->command));
+		if (pro->pid != pro->pgid)
+			return (1);
+		return (ft_printf("%d %s %s\n", pro->pid, pro->running
+												  ? RUN : STOP, pro->command));
 	}
-	if (option & OPT_P && process->pid == process->pgid)
+	else if (option & OPT_P)
 	{
-		return (ft_printf("%s %s\n", process->running \
-					? RUN : STOP, process->command));
+		if (pro->pid != pro->pgid)
+			return (1);
+		return (ft_printf("%s %s\n", pro->running ? RUN : STOP, pro->command));
 	}
-	if (option & OPT_L)
+	else if (option & OPT_L)
 	{
-		return (ft_printf("%d %s %s\n", process->pid, \
-					process->running ? RUN : STOP, process->command));
+		return (ft_printf("%d %s %s\n", pro->pid,
+				  pro->running ? RUN : STOP, pro->command));
 	}
-	return (ft_printf("%s %s\n", process->running \
-				? RUN : STOP, process->command));
+	else
+		return (ft_printf("%s %s\n", pro->running ? RUN : STOP, pro->command));
 }
 
 uint8_t			print_jobs_info(t_jobs *jobs, t_process *process, int option)

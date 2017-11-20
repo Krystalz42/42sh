@@ -181,7 +181,7 @@
 # define NUM_REQUIRED			"numeric argument required :"
 # define RUN					"Running"
 # define STOP					"Stopped"
-# define CONTINUED				"Continued"
+# define CONT				"Continued"
 # define NO_DIRECTORY			"no such file or directory: "
 # define NO_RIGHT				"permission denied: "
 # define IS_NOTDIR				"not a directory: "
