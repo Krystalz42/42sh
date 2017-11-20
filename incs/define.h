@@ -42,9 +42,7 @@
 # define OPTION_GREAT			O_CREAT | O_WRONLY | O_TRUNC
 # define OPTION_DGREAT			O_CREAT | O_WRONLY | O_APPEND
 # define PATH_ERROR				"/dev/null"
-# define FIRST					2
-# define SECOND					1
-# define OTHER					0
+
 /*
 **			FLAG EXECUTION
 */
@@ -54,6 +52,16 @@
 # define OPT_S						4
 # define OPT_L						8
 # define OPT_C						16
+# define OPT_F						32
+# define OPT_G						64
+# define OPT_U						128
+# define OPT_K						256
+# define OPT_H						512
+# define OPT_B						1024
+# define OPT_E						2048
+# define OPT_J						4096
+# define OPT_M						8192
+
 
 # define FORK						1
 # define FOREGROUND					2
@@ -132,6 +140,7 @@
 # define H_HF					"-f                      : usage foreground\n"
 # define H_HG					"-g                      : usage background\n"
 # define H_HC					"-c                      : usage cd\n"
+# define H_HM					"-m                      : usage readline\n"
 
 /*
 **			VARIOUS DEFINE
