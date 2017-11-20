@@ -27,7 +27,6 @@ static int			put_in_foreground(t_jobs *jobs)
 	update_jobs(jobs->process);
 	if (finished_process(jobs->process))
 	{
-		memdel_jobs(jobs);
 	}
 	else
 	{

@@ -14,7 +14,7 @@
 
 int				read_pipe(int *fildes)
 {
-	ft_dprintf(fd_log, "Read [0:%d] [1:%d] of [%d]\n", fildes[0], fildes[1], getpid());
+//	ft_dprintf(fd_log, "Read [0:%d] [1:%d] of [%d]\n", fildes[0], fildes[1], getpid());
 	close(fildes[1]);
 	dup2(fildes[0], STDIN_FILENO);
 	close(fildes[0]);
@@ -23,7 +23,7 @@ int				read_pipe(int *fildes)
 
 int				write_pipe(int *fildes)
 {
-	ft_dprintf(fd_log, "Write [0:%d] [1:%d] of [%d]\n", fildes[0], fildes[1], getpid());
+//	ft_dprintf(fd_log, "Write [0:%d] [1:%d] of [%d]\n", fildes[0], fildes[1], getpid());
 	close(fildes[0]);
 	dup2(fildes[1], STDOUT_FILENO);
 	close(fildes[1]);
@@ -32,7 +32,7 @@ int				write_pipe(int *fildes)
 
 int				close_pipe(int *fildes)
 {
-	ft_dprintf(fd_log, "Close [0:%d] [1:%d] of [%d]\n", fildes[0], fildes[1], getpid());
+//	ft_dprintf(fd_log, "Close [0:%d] [1:%d] of [%d]\n", fildes[0], fildes[1], getpid());
 	close(fildes[0]);
 	close(fildes[1]);
 	return (1);

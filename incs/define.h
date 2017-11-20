@@ -20,6 +20,9 @@
 **			LEXING
 */
 
+
+# define __FILENAME__	(strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
+
 # define SINGLE_QUOTE 2
 # define DOUBLE_QUOTE 4
 # define DQ 4

@@ -14,12 +14,6 @@
 
 t_process		*place_status(pid_t pid, int status)
 {
-	if (get_process(pid))
-		dprintf(fd_log, "dsabyebye\n");
-	else
-		dprintf(fd_log, "ddasdassabyebye\n");
-
-
 	t_process		*process;
 
 	if ((process = get_process(pid)) != NULL)
@@ -29,13 +23,9 @@ t_process		*place_status(pid_t pid, int status)
 
 int				wait_group(t_process *process, int option)
 {
-	pid_t		pid;
-	int			status;
-
 	while (process)
 	{
-		if ((pid = waitpid(-process->pgid, &status, option)) > 0)
-			place_status(pid, status);
+		dprintf(fd_log, "Return wait [%d]\n", waitpid(process->pid, &process->status, option));
 		process = process->next;
 	}
 	return (0);
@@ -55,11 +45,8 @@ void				check_child_in_foreground(t_jobs *jobs)
 		set_fildes(getpgid(0));
 		update_status(jobs->process);
 		update_jobs(jobs->process);
-		dprintf(fd_log, "byebye %d %d\n", finished_process(jobs->process), jobs->process->status);
-
 		if (finished_process(jobs->process))
 		{
-			dprintf(fd_log, "byebye\n");
 			memdel_jobs(jobs);
 		}
 		else

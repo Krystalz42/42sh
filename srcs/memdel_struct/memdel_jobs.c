@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-/*static void		reset_process(t_jobs **jobs)
+static void		reset_process(t_jobs **jobs)
 {
 	t_process	*process;
 
@@ -32,28 +32,36 @@ static void		connect_use(t_jobs *jobs)
 		jobs->next_use->prev_use = jobs->prev_use;
 	if (jobs->prev_use)
 		jobs->prev_use->next_use = jobs->next_use;
-}*/
+}
 
-void			memdel_jobs(t_jobs *jobs)
-{
-	(void)jobs;
-//	t_jobs		*addr_jobs;
-//
-//	addr_jobs = jobs_table(NULL, REC_STRUCT);
-//	connect_use(jobs);
-//	dprintf(fd_log, "addr_index [%p] [%p]\n", addr_jobs, jobs);
-//	if (addr_jobs && addr_jobs == jobs)
-//	{
-//		reset_process(&jobs);
-//		ft_dprintf(fd_log, " IN MEMDEL_JOBS [addr_jobs == jobs] %d\n", jobs_table(NULL, REC_STRUCT) ? 1 : 0);
-//		jobs_table(NULL, RESET_STRUCT);
-//	}
-//	else
-//	{
-//		if (jobs->next)
-//			jobs->next->prev = jobs->prev;
-//		if (jobs->prev)
-//			jobs->prev->next = jobs->next;
-//		reset_process(&jobs);
-//	}
+void			memdel_jobs(t_jobs *jobs) {
+	t_jobs **addr_jobs;
+	t_jobs *temp_jobs;
+
+	addr_jobs = jobs_table();
+	connect_use(jobs);
+	temp_jobs = *addr_jobs;
+	if (*addr_jobs == jobs)
+	{
+		dprintf(fd_log, "[%s] Memdel from addr\n", __FILENAME__);
+		*addr_jobs = (*addr_jobs)->next;
+		if ((*addr_jobs) && (*addr_jobs)->prev)
+			(*addr_jobs)->prev = NULL;
+	}
+	else
+	{
+		while (temp_jobs && temp_jobs->index != jobs->index)
+		{
+			dprintf(fd_log, "[%s] memdel [%d.%d]\n", __FILENAME__, temp_jobs->index, jobs->index);
+			temp_jobs = temp_jobs->next;
+		}
+		if (temp_jobs == jobs)
+		{
+			if (temp_jobs->next)
+				temp_jobs->next->prev = temp_jobs->prev;
+			if (temp_jobs->prev)
+				temp_jobs->prev->next = temp_jobs->next;
+		}
+	}
+	reset_process(&jobs);
 }

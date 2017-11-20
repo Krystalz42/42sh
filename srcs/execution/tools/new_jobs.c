@@ -14,10 +14,12 @@
 
 static t_jobs	*create_jobs(void)
 {
+	t_jobs		**addr_jobs;
 	t_jobs		*temp_jobs;
 
-	temp_jobs = jobs_table(NULL, REC_STRUCT);
-	if (temp_jobs)
+	addr_jobs = jobs_table();
+	temp_jobs = *addr_jobs;
+	if (*addr_jobs)
 	{
 		while (temp_jobs->next)
 			temp_jobs = temp_jobs->next;
@@ -27,9 +29,9 @@ static t_jobs	*create_jobs(void)
 	}
 	else
 	{
-		temp_jobs = (t_jobs *)ft_memalloc(sizeof(t_jobs));
-		jobs_table(temp_jobs, SAVE_STRUCT);
-		return (temp_jobs);
+		dprintf(fd_log, "Create from addr\n");
+		*addr_jobs = (t_jobs *)ft_memalloc(sizeof(t_jobs));
+		return (*addr_jobs);
 	}
 }
 

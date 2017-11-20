@@ -27,6 +27,7 @@ void				update_status(t_process *process)
 {
 	while (process)
 	{
+		dprintf(fd_log, "PID [%d] [%d.%d]\n",process->pid,WIFEXITED(process->status), WIFSIGNALED(process->status));
 		if (WIFEXITED(process->status) || WIFSIGNALED(process->status))
 		{
 			process->finished = 1;
