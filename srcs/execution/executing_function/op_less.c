@@ -16,7 +16,7 @@
 *************** PRIVATE ********************************************************
 */
 
-void     jobs_op_less(t_node *node)
+void		jobs_op_less(t_node *node)
 {
 	int			fildes;
 	

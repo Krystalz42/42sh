@@ -58,7 +58,7 @@ uint8_t			builtin_foreground(t_node *node, int info)
 		return (1);
 	if ((jobs = get_jobs_by_setting(jobs_spec, FG)))
 		return (put_in_foreground(jobs));
-	return (error_msg(BG, INVALID, node->content->command[1]));
+	return (1);
 }
 
 uint8_t			builtin_background(t_node *node, int info)
@@ -71,5 +71,5 @@ uint8_t			builtin_background(t_node *node, int info)
 		return (1);
 	if ((jobs = get_jobs_by_setting(jobs_spec, BG)))
 		return (put_in_background(jobs));
-	return (error_msg(BG, INVALID, node->content->command[1]));
+	return (1);
 }

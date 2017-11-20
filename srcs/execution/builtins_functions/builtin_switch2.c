@@ -16,7 +16,7 @@ int						check_jobs_spec(char **command, char *from)
 			return (error_msg(from, NO_CUR_JOB, command[table]) - 2);
 	}
 	else if (command[table])
-		return (error_msg(from, NO_CUR_JOB, command[table]));
+		return (error_msg(from, NO_CUR_JOB, command[table]) - 2);
 	else
 		jobs_spec = 0;
 	return (jobs_spec);
@@ -43,7 +43,7 @@ static t_jobs			*get_last_jobs(t_jobs *jobs, const char *from)
 			jobs = jobs->prev_use;
 		}
 	}
-	(from == BG) ? error_msg(BG, JOBS_IN_BG, NULL) : 0 ;
+	(from == BG) ? error_msg(BG, JOBS_IN_BG, NULL) : 0;
 	return (NULL);
 }
 
