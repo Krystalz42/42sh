@@ -30,5 +30,4 @@ int			cursor_column(int new_line)
 	if (col > 2 && new_line)
 		ft_putstr_fd("\x1B[7m%\x1B[0m\n", init_fd());
 	return (col);
-	return (new_line);
 }
