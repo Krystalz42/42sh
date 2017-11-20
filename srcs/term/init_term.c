@@ -29,7 +29,7 @@ void	mine_terminal(void)
 		kill(getpgid(0), SIGSTOP);
 		mine_terminal();
 	}
-g	init_signal();
+	init_signal();
 }
 
 int		init_term(void)

@@ -14,16 +14,23 @@
 
 uint8_t				builtin_unsetenv(t_node *node, int info)
 {
+	int				table;
+
+	table = 1;
 	(void)info;
-	if (my_getenv(node->content->command[1]))
+	while (node->content->command[table])
 	{
-		remove_environment(node->content->command[1]);
-		return (var_return(0));
+		if (my_getenv(node->content->command[table]))
+		{
+			remove_environment(node->content->command[table]);
+			var_return(0);
+		}
+		else
+		{
+			error_msg(UNSETENV, VAR_NO_SET, node->content->command[table]);
+			var_return(1);
+		}
+		table++;
 	}
-	else
-	{
-		error_msg(UNSETENV, VAR_NO_SET, node->content->command[1]);
-		usage_unsetenv();
-		return (1);
-	}
+	return (var_return(var_return(-1) ? usage_unsetenv() + 1 : 0));
 }

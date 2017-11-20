@@ -12,6 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_setenv.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_setenv.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_unsetenv.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_unsetenv.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/term/init_term.c" afterPath="$PROJECT_DIR$/srcs/term/init_term.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -43,16 +45,6 @@
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="790">
                       <caret line="124" column="67" lean-forward="true" selection-start-line="124" selection-start-column="67" selection-end-line="124" selection-end-column="67" />
-                      <folding />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="key_arrow.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_arrow.c">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="1080">
-                      <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
                       <folding />
                     </state>
                   </provider>
@@ -108,21 +100,31 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="init_term.c" pinned="false" current-in-tab="true">
+              <file leaf-file-name="init_term.c" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/srcs/term/init_term.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="465">
-                      <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+                    <state relative-caret-position="450">
+                      <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
                       <folding />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="create_comp.c" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/srcs/read/completion/create_comp.c">
+              <file leaf-file-name="builtin_setenv.c" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_setenv.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="510">
-                      <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+                    <state relative-caret-position="360">
+                      <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="builtin_unsetenv.c" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_unsetenv.c">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="480">
+                      <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
                       <folding />
                     </state>
                   </provider>
@@ -323,8 +325,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/srcs/execution/executing_function/op_ampersand.c" />
-        <option value="$PROJECT_DIR$/srcs/parsing/parsing.c" />
         <option value="$PROJECT_DIR$/srcs/jobs_control/set_process.c" />
         <option value="$PROJECT_DIR$/srcs/execution/tools/do_heredoc.c" />
         <option value="$PROJECT_DIR$/srcs/execution/check_if_builtins.c" />
@@ -374,6 +374,8 @@
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_suspend.c" />
         <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" />
         <option value="$PROJECT_DIR$/srcs/term/init_term.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_setenv.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_unsetenv.c" />
       </list>
     </option>
   </component>
@@ -383,10 +385,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="2560" />
-    <option name="height" value="1337" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1278" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -470,15 +471,15 @@
       <workItem from="1511130538546" duration="50000" />
       <workItem from="1511130633324" duration="13921000" />
       <workItem from="1511151930582" duration="8640000" />
-      <workItem from="1511164226361" duration="494000" />
+      <workItem from="1511164226361" duration="1181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62471000" />
+    <option name="totallyTimeSpent" value="63158000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1337" extended-state="0" />
+    <frame x="0" y="0" width="1310" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21830986" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -515,21 +516,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/srcs/execution/tools/manage_pipe.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/my_tgetnum.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/libft/srcs/ft_iscrlf.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -913,8 +899,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/term/init_term.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        <state relative-caret-position="450">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_setenv.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_unsetenv.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
           <folding />
         </state>
       </provider>
