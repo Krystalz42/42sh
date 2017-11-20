@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/20 14:15:25 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 17:33:06 by gbourson         ###   ########.fr       */
+/*   Updated: 2017/11/20 15:38:02 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ static inline void		change_element(t_read **read_std, t_file *tmp)
 void					move_vertical(t_read **read_std, int pos)
 {
 	t_file	*tmp;
-
 
 	if ((*read_std)->tab_ && (*read_std)->tab_->file)
 	{
