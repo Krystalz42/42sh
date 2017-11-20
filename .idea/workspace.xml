@@ -12,14 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9712abc9-b35a-4b09-91cb-f55ca3ec85a0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_cd.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_cd.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_echo.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_echo.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_help.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_help.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_jobs.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_suspend.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_suspend.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/move_vertical.c" afterPath="$PROJECT_DIR$/srcs/read/completion/move_vertical.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/parsing/expanding/variable.c" afterPath="$PROJECT_DIR$/srcs/parsing/expanding/variable.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/parsing/lexing/lexer.c" afterPath="$PROJECT_DIR$/srcs/parsing/lexing/lexer.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/parsing/parsing.c" afterPath="$PROJECT_DIR$/srcs/parsing/parsing.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -477,12 +472,12 @@
       <workItem from="1511130538546" duration="50000" />
       <workItem from="1511130633324" duration="13921000" />
       <workItem from="1511151930582" duration="8640000" />
-      <workItem from="1511164226361" duration="238000" />
+      <workItem from="1511164226361" duration="300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62215000" />
+    <option name="totallyTimeSpent" value="62277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1337" extended-state="0" />
