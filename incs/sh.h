@@ -350,8 +350,7 @@ void						do_heredoc(t_node *node);
 **				JOB'S CONTROL FUNCTION
 */
 
-
-
+t_jobs						*jobs_table(unsigned int flags);
 t_jobs						*add_next_use(t_jobs *new);
 void						update_jobs(t_process *process);
 void						update_status(t_process *process);
@@ -365,7 +364,6 @@ t_process					*new_process(t_jobs *jobs);
 void						close_fildes(t_process *process);
 t_node						*find_executing_node(t_node *node);
 int							wait_group(t_process *process, int option);
-t_jobs						**jobs_table(void);
 void						my_execve(char **command, char **env);
 void						handler_sigchld(int sig);
 void						my_wait(t_jobs *jobs);

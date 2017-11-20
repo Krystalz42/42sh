@@ -26,17 +26,6 @@ static void		reset_process(t_jobs **jobs)
 	ft_memdel((void **)jobs);
 }
 
-static void		special_memdel(t_jobs **addr_jobs)
-{
-	t_jobs	*jobs;
-
-	jobs = *addr_jobs;
-	*addr_jobs = (*addr_jobs)->next;
-	reset_process(&jobs);
-	if (*addr_jobs)
-		(*addr_jobs)->prev = NULL;
-}
-
 static void		connect_use(t_jobs *jobs)
 {
 	if (jobs->next_use)
@@ -47,16 +36,15 @@ static void		connect_use(t_jobs *jobs)
 
 void			memdel_jobs(t_jobs *jobs)
 {
-	t_jobs		**addr_jobs;
-	t_jobs		*temp;
+	t_jobs		*addr_jobs;
 
-	addr_jobs = jobs_table();
+	addr_jobs = jobs_table(REC_STRUCT);
 	connect_use(jobs);
-	temp = *addr_jobs;
-	if (*addr_jobs == jobs)
+	ft_dprintf(fd_log, "addr_index [%d] jobs index [%d]\n",addr_jobs->index, jobs->index);
+	if (addr_jobs && addr_jobs->index == jobs->index)
 	{
-		special_memdel(addr_jobs);
-		dprintf(fd_log, " IN MEMDEL_JOBS [addr_jobs == jobs] %d\n", *jobs_table() ? 1 : 0);
+		jobs_table(REC_STRUCT)
+		ft_dprintf(fd_log, " IN MEMDEL_JOBS [addr_jobs == jobs] %d\n", jobs_table(REC_STRUCT) ? 1 : 0);
 	}
 	else
 	{

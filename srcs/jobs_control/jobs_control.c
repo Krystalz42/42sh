@@ -12,11 +12,14 @@
 
 #include <sh.h>
 
-t_jobs				**jobs_table(void)
+t_jobs				*jobs_table(t_jobs *jobs, unsigned int flags)
 {
 	static t_jobs		*jobs;
 
-	return (&jobs);
+	if (flags & RESET_STRUCT)
+		jobs = NULL;
+	else if (flags & SAVE_STRUCT)
+	return (jobs);
 }
 
 void				update_jobs(t_process *process)
@@ -51,6 +54,7 @@ void				check_child_in_background(void)
 			wait_group(jobs->process, WNOHANG);
 			update_status(jobs->process);
 			update_jobs(jobs->process);
+			ft_dprintf(fd_log, "finished process [%d]\n",finished_process(jobs->process));
 			if (finished_process(jobs->process))
 			{
 				print_status(jobs, jobs->process);

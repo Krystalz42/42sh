@@ -21,10 +21,10 @@ uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
 	int			fildes[2];
 	t_process	*process;
 
-	dprintf(fd_log, "VALUE OP_PIPELINE [%d]\n", info);
+	ft_dprintf(fd_log, "VALUE OP_PIPELINE [%d]\n", info);
 	jobs = new_jobs(jobs);
 	pipe(fildes);
-	dprintf(fd_log, "Pipe [%d] [%d]\n", fildes[0], fildes[1]);
+	ft_dprintf(fd_log, "Pipe [%d] [%d]\n", fildes[0], fildes[1]);
 	if ((process = my_fork(jobs, find_executing_node(node), info)) == NULL)
 		return (var_return(255));
 	process->fildes[0] = fildes[0];

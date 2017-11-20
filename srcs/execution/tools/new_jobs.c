@@ -15,10 +15,8 @@
 static t_jobs	*create_jobs(void)
 {
 	t_jobs		*temp_jobs;
-	t_jobs		**addr_jobs;
 
-	addr_jobs = jobs_table();
-	temp_jobs = *addr_jobs;
+	temp_jobs = jobs_table(REC_STRUCT);
 	if (temp_jobs)
 	{
 		while (temp_jobs->next)
@@ -29,8 +27,8 @@ static t_jobs	*create_jobs(void)
 	}
 	else
 	{
-		*addr_jobs = (t_jobs *)ft_memalloc(sizeof(t_jobs));
-		return (*addr_jobs);
+		temp_jobs = (t_jobs *)ft_memalloc(sizeof(t_jobs));
+		return (temp_jobs);
 	}
 }
 

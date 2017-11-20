@@ -8,7 +8,7 @@ t_jobs			*add_next_use(t_jobs *new)
 {
 	t_jobs		*jobs;
 
-	jobs = *jobs_table();
+	jobs = jobs_table(REC_STRUCT);
 	while (jobs && jobs->next_use)
 		jobs = jobs->next_use;
 	if (jobs && jobs != new)
