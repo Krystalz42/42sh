@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 16:12:05 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 01:19:34 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 16:05:47 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ void			do_heredoc(t_node *node)
 		cmd = first_cmd(read_stdin(HEREDOC), 1);
 		if (signal_reception(-1) == SIGINT)
 			break ;
-		else if (compare_heredoc(cmd, node->right->content->command[0]) == 0 || signal_reception(-1) == 1)
+		else if (compare_heredoc(cmd, node->right->content->command[0]) == 0 \
+			|| signal_reception(-1) == 1)
 		{
 			jobs_do_heredoc(node, heredoc);
 			memdel_cmd(&cmd);

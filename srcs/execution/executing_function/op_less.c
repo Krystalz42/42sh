@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:16:43 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 00:03:08 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/20 15:55:54 by sbelazou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 *************** PRIVATE ********************************************************
 */
 
-void		jobs_op_less(t_node *node)
+void			jobs_op_less(t_node *node)
 {
 	int			fildes;
-	
+
 	if ((fildes = open(node->right->content->command[0], O_RDONLY)) == -1)
 		check_path(node->right->content->command[0]);
 	else

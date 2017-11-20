@@ -1,10 +1,18 @@
-//
-// Created by Alexandre ROULIN on 11/20/17.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   builtin_switch2.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sbelazou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/20 15:52:59 by sbelazou          #+#    #+#             */
+/*   Updated: 2017/11/20 15:53:52 by sbelazou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <sh.h>
 
-int						check_jobs_spec(char **command, char *from)
+int				check_jobs_spec(char **command, char *from)
 {
 	int			table;
 	int			jobs_spec;
@@ -22,8 +30,7 @@ int						check_jobs_spec(char **command, char *from)
 	return (jobs_spec);
 }
 
-
-static t_jobs			*get_last_jobs(t_jobs *jobs, const char *from)
+static t_jobs	*get_last_jobs(t_jobs *jobs, const char *from)
 {
 	if (from == BG)
 	{
@@ -47,7 +54,7 @@ static t_jobs			*get_last_jobs(t_jobs *jobs, const char *from)
 	return (NULL);
 }
 
-t_jobs					*get_jobs_by_setting(int index, char *from)
+t_jobs			*get_jobs_by_setting(int index, char *from)
 {
 	t_jobs		*jobs;
 

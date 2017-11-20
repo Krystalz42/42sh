@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/10 00:26:38 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 16:08:50 by gbourson         ###   ########.fr       */
+/*   Updated: 2017/11/20 15:30:10 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int		init_our_term(struct termios *term)
 	return (1);
 }
 
-void	mine_terminal(void)
+void			mine_terminal(void)
 {
 	reset_signal();
 	if (tcgetpgrp(STDIN_FILENO) != getpgid(0))
@@ -32,7 +32,7 @@ void	mine_terminal(void)
 	init_signal();
 }
 
-int		init_term(void)
+int				init_term(void)
 {
 	static struct termios	old_term;
 	static struct termios	our_term;
