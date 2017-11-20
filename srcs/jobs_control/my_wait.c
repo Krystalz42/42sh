@@ -52,6 +52,9 @@ void			check_child_in_foreground(t_jobs *jobs)
 		else
 		{
 			modify_foreground(jobs->process, false);
+
+
+
 			modify_runing(jobs->process, false);
 			print_status(jobs, jobs->process);
 		}

@@ -14,6 +14,7 @@
 
 static int		put_in_foreground(t_jobs *jobs)
 {
+	add_to_first(jobs);
 	set_fildes(jobs->process->pgid);
 	modify_runing(jobs->process, true);
 	modify_foreground(jobs->process, true);
@@ -39,6 +40,7 @@ static int		put_in_foreground(t_jobs *jobs)
 
 static int		put_in_background(t_jobs *jobs)
 {
+	add_to_first(jobs);
 	modify_runing(jobs->process, true);
 	modify_foreground(jobs->process, false);
 	print_jobs_info(jobs, jobs->process, OPT_C);

@@ -94,26 +94,27 @@ static int		check_option(char **command)
 static int		print_jobs(int jobs_spec, int option)
 {
 	t_jobs		*jobs;
+	int			index;
 
-	if ((jobs = get_real_jobs()) == NULL)
-		return (-1);
-	while (jobs->prev_use)
-		jobs = jobs->prev_use;
-	if (jobs_spec == 0)
+	jobs = jobs_table();
+	dprintf(fd_log, "%d\n", jobs_spec);
+	if (jobs_spec == 0 && !(index = 0))
 	{
-		while (jobs)
+		while (CHILD(index))
 		{
-			print_jobs_info(jobs, jobs->process, option);
-			jobs = jobs->next_use;
+			if (jobs[index].process)
+				print_jobs_info(jobs + index, jobs[index].process, option);
+			index++;
 		}
 	}
 	else
 	{
+		jobs = get_real_jobs();
 		while (jobs)
 		{
 			if (jobs->index == jobs_spec)
 				return (print_jobs_info(jobs, jobs->process, option));
-			jobs = jobs->next_use;
+			jobs = jobs->prev_use;
 		}
 	}
 	return (0);

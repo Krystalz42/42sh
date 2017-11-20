@@ -372,6 +372,7 @@ void						set_fildes(pid_t pgid);
 const char					*status_signal(int signal);
 const char					*status_exit(int signal);
 t_jobs						*get_real_jobs(void);
+t_jobs						*add_to_first(t_jobs *new);
 
 /*
 **				EXECUTION FUNCTION

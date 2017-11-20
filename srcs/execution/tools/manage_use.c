@@ -12,12 +12,29 @@
 
 #include <sh.h>
 
+t_jobs			*add_to_first(t_jobs *new)
+{
+	t_jobs		*jobs;
+
+	if (new->prev_use)
+		new->prev_use->next_use = new->next_use;
+	if (new->next_use)
+		new->next_use->prev_use = new->prev_use;
+	if ((jobs = get_real_jobs()) == NULL)
+		return (new);
+	new->next_use = NULL;
+	jobs->next_use = new;
+	new->prev_use = jobs;
+	return (new);
+}
+
 t_jobs			*add_next_use(t_jobs *new)
 {
 	t_jobs		*jobs;
 	int			index;
 
-	jobs = jobs_table();
+	if ((jobs = get_real_jobs()) == NULL)
+		;
 	index = 0;
 	while (CHILD(index))
 	{
