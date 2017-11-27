@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:10:14 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 08:07:41 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/27 17:48:13 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,5 @@ int			looking_for_path(char **binary)
 		(*binary) = temp;
 		return (1);
 	}
-	else
-		collect_path(binary);
 	return (0);
 }
