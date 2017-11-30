@@ -42,7 +42,7 @@ int			place_cursor(t_read **read_std, int t)
 
 void		complete_path(t_read **read_std, t_path f)
 {
-	if (!((*read_std)->tab_ = (t_tab *)ft_memalloc(sizeof(t_tab))))
+	if (((*read_std)->tab_ = (t_tab *)ft_memalloc(sizeof(t_tab))) == NULL)
 		return ;
 	(*read_std)->tab_->from = ft_strdup(f.to_comp);
 	create_comp(read_std, f);

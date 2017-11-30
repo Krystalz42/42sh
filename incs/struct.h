@@ -166,6 +166,7 @@ typedef struct				s_hash
 {
 	char					*binary;
 	char					*path;
+	char					*alias;
 	size_t					times;
 	struct s_hash			*next;
 }							t_hash;
