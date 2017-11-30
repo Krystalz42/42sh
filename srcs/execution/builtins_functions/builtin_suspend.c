@@ -16,6 +16,11 @@ uint8_t			builtin_suspend(t_node *node, int info)
 {
 	(void)node;
 	(void)info;
+	if (node->content->command[1])
+	{
+		error_msg("suspend: ", TOO_MANY_ARGS, node->content->command[1]);
+		return (var_return(1));
+	}
 	reset_signal();
 	set_termios(SET_OLD_TERM);
 	kill(getpgid(0), SIGSTOP);
