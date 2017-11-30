@@ -23,35 +23,43 @@ static int		init_our_term(struct termios *term)
 
 void			mine_terminal(void)
 {
-	reset_signal();
 	if (tcgetpgrp(STDIN_FILENO) != getpgid(0))
 	{
-		kill(getpgid(0), SIGSTOP);
+		kill(getpgid(0), SIGTTIN);
 		mine_terminal();
 	}
-	init_signal();
+}
+
+void		we_are_shell(int ret)
+{
+	if (ret)
+	{
+		error_msg("termios : ", "can't be initialize\n", NULL);
+		exit(255);
+	}
+	if (tcgetpgrp(STDOUT_FILENO) != getpgid(0))
+		kill(getpgid(0), SIGTTOU);
 }
 
 int				init_term(void)
 {
 	static struct termios	old_term;
 	static struct termios	our_term;
-	int						ret;
+	static int				ret;
 
-	ret = 0;
-	mine_terminal();
 	if (!my_getenv("TERM"))
 		add_environment("TERM=vt100");
 	if ((tgetent(NULL, my_getenv("TERM"))) == ERR)
 		ret = 1;
 	if (!(tcgetattr(init_fd(), &old_term)))
 		keep_term_struct(SAVE_OLD, &old_term);
+	else
+		ret = 1;
 	if (!(tcgetattr(init_fd(), &our_term)) && init_our_term(&our_term))
 		keep_term_struct(SAVE_OUR, &our_term);
-	if (ret)
-	{
-		error_msg("termios : ", "can't be initialize\n", NULL);
-		exit(255);
-	}
+	else
+		ret = 1;
+	mine_terminal();
+	we_are_shell(ret);
 	return (0);
 }

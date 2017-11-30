@@ -20,7 +20,7 @@ uint8_t		hash_reset(void)
 	t_hash			*tmp;
 	t_hash			*to_kill;
 
-	index = -1;
+	index = 0;
 	table = index_of_hash();
 	table_hash = hash_board();
 	while (table[++index])
@@ -33,9 +33,11 @@ uint8_t		hash_reset(void)
 			ft_memdel((void **)&(tmp->path));
 			tmp = tmp->next;
 			ft_memdel((void **)&to_kill);
+			table_hash[table[index]] = NULL;
 			table[index] = 0;
 		}
 		table_hash[table[index]] = NULL;
+		index++;
 	}
 	return (0);
 }
