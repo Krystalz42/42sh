@@ -19,6 +19,12 @@
 **			STRUCT FOR ESCAPE
 */
 
+typedef struct				s_esce
+{
+	char					*esce;
+	char					*to_esce;
+}							*t_esce;
+
 typedef struct				s_esc
 {
 	char					*esc;

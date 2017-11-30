@@ -160,6 +160,7 @@
 # define UCD					"cd : "
 # define UHELP					"help : "
 
+# define JOBS_ALREADY_BG		"job already in background"
 # define LIMIT					"limit process at 1024"
 # define BAD_FD					" Bad file descriptor"
 # define JOBS_IN_BG				"job already in background"

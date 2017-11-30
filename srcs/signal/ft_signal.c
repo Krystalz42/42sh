@@ -24,6 +24,7 @@ void				handler_sigint(int sig)
 {
 	(void)sig;
 	signal_reception(SIGINT);
+	var_return(1);
 	ioctl(0, TIOCSTI, "\2\0");
 }
 

@@ -35,7 +35,10 @@ t_jobs			*get_jobs_by_setting(int index, char *from)
 	t_jobs		*jobs;
 
 	if ((jobs = get_real_jobs()) == NULL)
+	{
 		error_msg(from, NO_CUR_JOB, NULL);
+		return (NULL);
+	}
 	if (index)
 	{
 		while (jobs)
@@ -54,5 +57,6 @@ t_jobs			*get_jobs_by_setting(int index, char *from)
 				return (jobs);
 			jobs = jobs->prev_use;
 		}
+	error_msg(BG, JOBS_ALREADY_BG, NULL);
 	return (NULL);
 }

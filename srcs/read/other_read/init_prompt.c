@@ -56,7 +56,7 @@ void				init_prompt(void)
 	ft_strcpy(prompt + ft_strlen(prompt), "m");
 	ft_strcpy(prompt + ft_strlen(prompt), path);
 	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? RED : GRN);
-	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? " ✗ " : " √ ");
+	ft_strcpy(prompt + ft_strlen(prompt), " ❯ ");
 	ft_strcpy(prompt + ft_strlen(prompt), "\x1B[0m");
 	my_prompt(prompt);
 	get_len_prompt((int)(ft_strlen(path) + 3));

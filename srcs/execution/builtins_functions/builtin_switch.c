@@ -40,12 +40,16 @@ static int		put_in_foreground(t_jobs *jobs)
 
 static int		put_in_background(t_jobs *jobs)
 {
-	add_to_first(jobs);
-	modify_runing(jobs->process, true);
-	modify_foreground(jobs->process, false);
-	print_jobs_info(jobs, jobs->process, OPT_C);
-	kill(-jobs->process->pgid, SIGCONT);
-	wait_group(jobs->process, WCONTINUED);
+	ft_putendl("salut");
+	if (jobs->process->running == false)
+	{
+		add_to_first(jobs);
+		modify_runing(jobs->process, true);
+		modify_foreground(jobs->process, false);
+		print_jobs_info(jobs, jobs->process, OPT_C);
+		kill(-jobs->process->pgid, SIGCONT);
+		wait_group(jobs->process, WCONTINUED);
+	}
 	return (0);
 }
 

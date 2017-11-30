@@ -12,6 +12,17 @@
 
 #include <sh.h>
 
+int				suspend_jobs()
+{
+	char			*shlvl;
+
+	if ((shlvl = my_getenv("SHLVL")))
+		if (ft_atoi(shlvl) > 0)
+			return (1);
+	error_msg(S42H, "Can't suspend parent shell.", NULL);
+	return (0);
+}
+
 uint8_t			builtin_suspend(t_node *node, int info)
 {
 	(void)node;
@@ -21,6 +32,8 @@ uint8_t			builtin_suspend(t_node *node, int info)
 		error_msg("suspend: ", TOO_MANY_ARGS, node->content->command[1]);
 		return (var_return(1));
 	}
+	if (suspend_jobs() == 0)
+		return (0);
 	reset_signal();
 	set_termios(SET_OLD_TERM);
 	kill(getpgid(0), SIGSTOP);
