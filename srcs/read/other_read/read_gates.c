@@ -27,5 +27,6 @@ void			initialize_fct(t_read **read_std, unsigned char flags)
 t_cmd			*finitialize_fct(t_read **read_std)
 {
 	set_termios(SET_OLD_TERM);
+	keep_buffer(NULL, 1);
 	return (finish_read_std(read_std));
 }
