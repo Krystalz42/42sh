@@ -6,13 +6,24 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:10:14 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/27 17:48:13 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/11/30 15:01:21 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-char		*create_trial_path(char *path, char *binary)
+static bool		isonly(char *str, char c)
+{
+	while (str && *str)
+	{
+		if (*str != c)
+			return (false);
+		str++;
+	}
+	return (true);
+}
+
+char			*create_trial_path(char *path, char *binary)
 {
 	char		*complete_path;
 
@@ -24,13 +35,13 @@ char		*create_trial_path(char *path, char *binary)
 	return (complete_path);
 }
 
-void		collect_path(char **binary)
+void			collect_path(char **binary)
 {
 	char		**path;
 	int			index;
 	char		*temp;
 
-	if (!ft_strlen(*binary))
+	if (!ft_strlen(*binary) || isonly(*binary, '.'))
 		return ;
 	if ((path = ft_strsplit(my_getenv("PATH"), ':')) == NULL)
 		return ;
@@ -52,7 +63,7 @@ void		collect_path(char **binary)
 	ft_memdel_tab(&path);
 }
 
-int			looking_for_path(char **binary)
+int				looking_for_path(char **binary)
 {
 	char		*temp;
 
