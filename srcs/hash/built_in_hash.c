@@ -23,7 +23,7 @@ uint8_t		hash_reset(void)
 	index = 0;
 	table = index_of_hash();
 	table_hash = hash_board();
-	while (table[++index])
+	while (table[index])
 	{
 		tmp = table_hash[table[index]];
 		while (tmp)
@@ -36,7 +36,6 @@ uint8_t		hash_reset(void)
 			table_hash[table[index]] = NULL;
 			table[index] = 0;
 		}
-		table_hash[table[index]] = NULL;
 		index++;
 	}
 	return (0);

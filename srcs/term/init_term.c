@@ -21,12 +21,22 @@ static int		init_our_term(struct termios *term)
 	return (1);
 }
 
-void			mine_terminal(void)
+static void			mine_terminal(int ret)
 {
+	if (isatty(STDIN_FILENO) == 0)
+	{
+		error_msg(S42H, "STDIN_FILENO is not a tty.", NULL);
+		exit(255);
+	}
+	if (isatty(STDOUT_FILENO) == 0)
+	{
+		error_msg(S42H, "STDOUT_FILENO is not a tty.", NULL);
+		exit(255);
+	}
 	if (tcgetpgrp(STDIN_FILENO) != getpgid(0))
 	{
 		kill(getpgid(0), SIGTTIN);
-		mine_terminal();
+		mine_terminal(ret);
 	}
 }
 
@@ -59,7 +69,6 @@ int				init_term(void)
 		keep_term_struct(SAVE_OUR, &our_term);
 	else
 		ret = 1;
-	mine_terminal();
-	we_are_shell(ret);
+	mine_terminal(ret);
 	return (0);
 }

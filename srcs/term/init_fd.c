@@ -18,8 +18,8 @@ int		init_fd(void)
 
 	if (!fd && (fd = open(ttyname(STDIN_FILENO), O_WRONLY)) == -1)
 	{
-		write(STDERR_FILENO, "Failed to open a tty\n",
-			sizeof("Failed to open a tty\n"));
+		error_msg(S42H, "Failed to open a tty", NULL);
+		exit(255);
 	}
 	return (fd);
 }
