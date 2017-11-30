@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-static int		init_our_term(struct termios *term)
+static int			init_our_term(struct termios *term)
 {
 	(*term).c_lflag &= ~(ICANON);
 	(*term).c_lflag &= ~(ECHO);
@@ -40,18 +40,7 @@ static void			mine_terminal(int ret)
 	}
 }
 
-void		we_are_shell(int ret)
-{
-	if (ret)
-	{
-		error_msg("termios : ", "can't be initialize\n", NULL);
-		exit(255);
-	}
-	if (tcgetpgrp(STDOUT_FILENO) != getpgid(0))
-		kill(getpgid(0), SIGTTOU);
-}
-
-int				init_term(void)
+int					init_term(void)
 {
 	static struct termios	old_term;
 	static struct termios	our_term;
