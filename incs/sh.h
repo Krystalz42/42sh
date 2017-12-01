@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/20 22:47:31 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/12/01 13:17:03 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -278,6 +278,16 @@ void						previous_history(t_read **read_std);
 void						next_history(t_read **read_std);
 
 /*
+**				ALIAS
+*/
+
+void						init_rc(void);
+void						add_alias(char **argv);
+void						arraydel(char ***address);
+char						*alias_exist(char *str);
+t_alias						**get_alias(void);
+
+/*
 **				LEXING FUNCTION
 */
 
@@ -299,6 +309,7 @@ void						order(t_parsing **node);
 **				EXPANDING FUNCTION
 */
 
+void						alias(t_parsing *node);
 void						argv(t_parsing *node);
 void						escape(t_parsing *node);
 void						special(t_parsing *node, char *expand,
