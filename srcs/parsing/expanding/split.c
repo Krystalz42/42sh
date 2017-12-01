@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 11:58:33 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/16 16:39:57 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 19:25:09 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,36 +86,38 @@ size_t			get_numbers(char *str)
 	return (numbers);
 }
 
-static void		do_split(char *str, t_parsing *node)
+/*
+*************** PUBLIC *********************************************************
+*/
+
+char			**do_split(char *str)
 {
 	size_t		index;
 	size_t		numbers;
+	char		**ret;
 
 	index = 0;
 	if ((numbers = get_numbers(str)))
 	{
-		node->command = (char **)ft_memalloc(sizeof(char *) * (numbers + 1));
+		ret = (char **)ft_memalloc(sizeof(char *) * (numbers + 1));
 		while (index < numbers)
-			str = get_word(str, &node->command[index++]);
+			str = get_word(str, &ret[index++]);
 	}
 	else
 	{
-		node->command = (char **)ft_memalloc(sizeof(char *) * (2));
-		node->command[0] = (char *)ft_memalloc(sizeof(char));
-		node->command[1] = NULL;
+		ret = (char **)ft_memalloc(sizeof(char *) * (2));
+		ret[0] = (char *)ft_memalloc(sizeof(char));
+		ret[1] = NULL;
 	}
+	return (ret);
 }
-
-/*
-*************** PUBLIC *********************************************************
-*/
 
 void			split(t_parsing *node)
 {
 	while (node)
 	{
 		if (node->input)
-			do_split(node->input, node);
+			node->command = do_split(node->input);
 		node = node->next;
 	}
 }

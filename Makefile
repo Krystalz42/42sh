@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/12/01 17:30:33 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/12/01 19:13:06 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ SRCS = \
 	   cores/exit.c												\
 	   alias/init_rc.c											\
 	   alias/alias.c											\
+	   alias/tools.c											\
 	   read/other_read/read_stdin.c								\
 	   read/other_read/cursor_column.c							\
 	   read/other_read/my_tgetnum.c								\

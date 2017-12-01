@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 16:57:04 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 18:48:41 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 19:26:59 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,22 @@ uint8_t			remove_alias(void)
 	return (0);
 }
 
-uint8_t			create_alias(char **command)
+uint8_t			interactive_alias(char **command)
 {
-	(void)command;
-	exit(1);
+	char		**temp;
+
+	if (arraylen(command) > 1)
+		return (error_msg(S42H, "too many arguments.", NULL));
+	if (ft_strchr(command[0], '=') && (temp = ft_strsplit(command[0], '=')))
+	{
+		if (arraylen(temp) == 2)
+			ft_putendl("OUI");
+		else
+		{
+			arraydel(&temp);
+			return (error_msg(S42H, "Usage: alias [variable=value].", NULL));
+		}
+		arraydel(&temp);
+	}
 	return (0);
 }
