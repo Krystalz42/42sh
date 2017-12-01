@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/01 18:47:30 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 19:12:04 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,7 +140,7 @@ int							start_from_less(char **command, char ***env);
 t_process					*get_process(pid_t pid);
 uint8_t						print_alias(void);
 uint8_t						remove_alias(void);
-uint8_t						create_alias(char **command);
+uint8_t						interactive_alias(char **command);
 
 /*
 **				BUILT IN TOOLS
@@ -294,6 +294,8 @@ void						add_alias(char **argv);
 void						arraydel(char ***address);
 char						*alias_exist(char *str);
 t_alias						**get_alias(void);
+size_t						arraylen(char **argv);
+void						arraydel(char ***address);
 
 /*
 **				LEXING FUNCTION
@@ -324,6 +326,7 @@ void						special(t_parsing *node, char *expand,
 									int to_expand);
 void						tilde(t_parsing *node);
 void						split(t_parsing *node);
+char						**do_split(char *str);
 void						variable(t_parsing *node);
 
 /*

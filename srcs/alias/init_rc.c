@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:08:10 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 18:49:08 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 19:27:58 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,6 @@
 /*
 *************** PRIVATE ********************************************************
 */
-
-static size_t	arraylen(char **argv)
-{
-	size_t		index;
-
-	index = 0;
-	while (argv && argv[index])
-		index++;
-	return (index);
-}
 
 static void		get_info(const int fd)
 {
@@ -36,10 +26,7 @@ static void		get_info(const int fd)
 		if (ft_strchr(str, '=') && (array = ft_strsplit(str, '=')))
 		{
 			if (arraylen(array) == 2)
-			{
-				ft_putendl(array[0]);
 				alias_exist(array[0]) == NULL ? add_alias(array) : 0;
-			}
 			arraydel(&array);
 		}
 		ft_memdel((void **)&str);
@@ -50,19 +37,6 @@ static void		get_info(const int fd)
 /*
 *************** PUBLIC *********************************************************
 */
-
-void			arraydel(char ***address)
-{
-	size_t		index;
-
-	index = 0;
-	while ((*address)[index])
-	{
-		ft_memdel((void **)&(*address)[index]);
-		index++;
-	}
-	ft_memdel((void **)address);
-}
 
 void			init_rc(void)
 {
