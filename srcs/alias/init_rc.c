@@ -31,13 +31,13 @@ static void		get_info(const int fd)
 	char		*str;
 	char		**array;
 
-	while (get_next_line(fd, &str) > 0)
+	while (my_gnl(fd, &str) > 0)
 	{
 		if (ft_strchr(str, '=') && (array = ft_strsplit(str, '=')))
 		{
+			ft_putendl(array[0]);
 			if (arraylen(array) == 2)
 			{
-				ft_putendl(array[0]);
 				alias_exist(array[0]) == NULL ? add_alias(array) : 0;
 			}
 			arraydel(&array);

@@ -11,7 +11,372 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3c7936b-9716-45eb-ac40-76d08a4c8dcf" name="Default" comment="" />
+    <list default="true" id="e3c7936b-9716-45eb-ac40-76d08a4c8dcf" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/alias/alias.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/binary_tree/binary_tree.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/env/add_environment.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/env/init_env.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/env/initialise_environment.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/env/my_getenv.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/env/remove_environment.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/error_function/bip.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/error_function/usage_builtins.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/error_function/usage_builtins2.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/error_function/usage_builtins3.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/basic_help.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_alias.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_cd.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_data.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_echo.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_env.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_exit.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_hash.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_help.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_jobs.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_kill.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_kill2.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_refresh.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_setenv.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_suspend.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_switch.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_switch2.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_tools.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/builtins_functions/builtin_unsetenv.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/check_if_builtins.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_function/op_ampersand.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_function/op_and_if.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_function/op_dgreat.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_function/op_dless.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_function/op_execution.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_function/op_great.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_function/op_great_and.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_function/op_less.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_function/op_or_if.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_function/op_pipeline.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_function/op_separator.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/executing_node.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/my_fork.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/alias_tools.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/check_path.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/check_tree_path.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/do_heredoc.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/find_executing_node.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/get_process.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/get_real_env.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/looking_for_path.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/manage_pipe.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/manage_use.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/new_jobs.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/potential_option.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/redirection_tools.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/execution/tools/tools_heredoc.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/hash/built_in_hash.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/hash/get_str_from_hash.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/hash/hash_board.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/hash/hash_value.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/hash/table_hash.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/history/built_in_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/history/copy_cmd.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/history/gbl_save_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/history/get_str_from_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/history/init_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/history/make_list_hist.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/history/next_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/history/previous_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/history/reset_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/history/write_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/jobs_control/get_real_jobs.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/jobs_control/jobs_control.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/jobs_control/modify_status_jobs.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/jobs_control/my_execve.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/jobs_control/my_wait.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/jobs_control/print_process.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/jobs_control/set_process.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/jobs_control/status_signals.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/memdel_struct/memdel_completion.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/memdel_struct/memdel_jobs.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/memdel_struct/memdel_outstanding.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/memdel_struct/memdel_read.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/memdel_struct/memdel_search_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/memdel_struct/memdel_tree.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/expanding/alias.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/expanding/argv.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/expanding/argv_tools.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/expanding/escape.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/expanding/special.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/expanding/split.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/expanding/split_tools.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/expanding/tilde.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/expanding/tools.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/expanding/variable.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/lexing/lexer.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/lexing/recognition.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/lexing/regular_tokenisation.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/lexing/special_tokenisation.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/parsing.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/parsing/parsing.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/tools/error.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/parsing/tools/list.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/check_binary_path.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/color_completion.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/complete_binary.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/complete_path.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/completion.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/continue_completion.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/create_comp.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/init_completion.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/init_files.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/init_tab.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/move_horizontal.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/move_vertical.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/my_togo.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/print_tab.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/completion/update_index.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_arrow.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_capitalize_word.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_clear.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_del_buff.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_delete.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_delete_here.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_downcase_word.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_enter.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_eof.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_home_end.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_interrupt.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_kill_k.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_kill_prev_word.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_kill_word.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_print.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_refresh.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_reprint.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_search_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_shift.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_tabulation.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_undo.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_upcase_word.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/key_/key_yank.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/check_cmd.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/cursor_column.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/finish_read_std.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/first_cmd.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/gbl_save_read.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/get_len_prompt.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/init_prompt.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/init_struct_for_read.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/keep_buffer.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/last_cmd.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/my_prompt.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/my_put.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/my_tgetnum.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/print_struct.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/prompt.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/read_gates.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/read_stdin.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/restore_cursor.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/other_read/signal_reception.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/outstanding/add_outstanding.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/outstanding/get_os_pointer.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/search_history/compare_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/search_history/compare_list.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/search_history/first_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/search_history/init_research.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/search_history/last_result.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/search_history/manage_cursor_prompt.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/read/search_history/print_struct_history.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/signal/ft_signal.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/term/init_fd.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/term/init_term.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/term/keep_term_struct.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.deps/term/set_term.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/alias/alias.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/binary_tree/binary_tree.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/env/add_environment.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/env/init_env.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/env/initialise_environment.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/env/my_getenv.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/env/remove_environment.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/error_function/bip.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/error_function/usage_builtins.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/error_function/usage_builtins2.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/error_function/usage_builtins3.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/basic_help.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_alias.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_cd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_data.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_echo.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_env.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_exit.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_hash.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_help.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_jobs.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_kill.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_kill2.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_refresh.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_setenv.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_suspend.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_switch.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_switch2.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_tools.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_unsetenv.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/check_if_builtins.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_ampersand.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_and_if.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_dgreat.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_dless.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_execution.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_great.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_great_and.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_less.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_or_if.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_pipeline.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_separator.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/executing_node.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/my_fork.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/alias_tools.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/check_path.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/check_tree_path.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/do_heredoc.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/find_executing_node.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/get_process.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/get_real_env.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/looking_for_path.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/manage_pipe.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/manage_use.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/new_jobs.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/potential_option.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/redirection_tools.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/execution/tools/tools_heredoc.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/hash/built_in_hash.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/hash/get_str_from_hash.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/hash/hash_board.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/hash/hash_value.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/hash/table_hash.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/history/built_in_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/history/copy_cmd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/history/gbl_save_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/history/get_str_from_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/history/init_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/history/make_list_hist.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/history/next_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/history/previous_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/history/reset_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/history/write_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/jobs_control/get_real_jobs.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/jobs_control/jobs_control.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/jobs_control/modify_status_jobs.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/jobs_control/my_execve.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/jobs_control/my_wait.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/jobs_control/print_process.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/jobs_control/set_process.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/jobs_control/status_signals.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_completion.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_jobs.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_outstanding.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_read.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_search_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_tree.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/alias.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/argv.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/argv_tools.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/escape.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/special.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/split.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/split_tools.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/tilde.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/tools.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/variable.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/lexing/lexer.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/lexing/recognition.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/lexing/regular_tokenisation.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/lexing/special_tokenisation.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/parsing.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/parsing/parsing.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/tools/error.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/parsing/tools/list.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/check_binary_path.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/color_completion.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/complete_binary.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/complete_path.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/completion.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/continue_completion.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/create_comp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/init_completion.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/init_files.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/init_tab.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/move_horizontal.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/move_vertical.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/my_togo.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/print_tab.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/completion/update_index.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_arrow.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_capitalize_word.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_clear.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_del_buff.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_delete.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_delete_here.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_downcase_word.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_enter.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_eof.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_home_end.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_interrupt.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_kill_k.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_kill_prev_word.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_kill_word.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_print.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_refresh.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_reprint.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_search_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_shift.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_tabulation.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_undo.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_upcase_word.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/key_/key_yank.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/check_cmd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/cursor_column.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/finish_read_std.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/first_cmd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/gbl_save_read.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/get_len_prompt.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/init_prompt.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/init_struct_for_read.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/keep_buffer.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/last_cmd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/my_prompt.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/my_put.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/my_tgetnum.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/print_struct.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/prompt.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/read_gates.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/read_stdin.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/restore_cursor.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/other_read/signal_reception.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/outstanding/add_outstanding.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/outstanding/get_os_pointer.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/search_history/compare_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/search_history/compare_list.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/search_history/first_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/search_history/init_research.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/search_history/last_result.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/search_history/manage_cursor_prompt.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/read/search_history/print_struct_history.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/signal/ft_signal.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/term/init_fd.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/term/init_term.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/term/keep_term_struct.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.objs/term/set_term.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/42sh" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/alias/init_rc.o" afterPath="$PROJECT_DIR$/.objs/alias/init_rc.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/cores/exit.o" afterPath="$PROJECT_DIR$/.objs/cores/exit.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/cores/insert_one_line.o" afterPath="$PROJECT_DIR$/.objs/cores/insert_one_line.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/cores/main.o" afterPath="$PROJECT_DIR$/.objs/cores/main.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/cores/shell.o" afterPath="$PROJECT_DIR$/.objs/cores/shell.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/cores/var_return.o" afterPath="$PROJECT_DIR$/.objs/cores/var_return.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/libft.a" afterPath="$PROJECT_DIR$/libs/libft/libft.a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/alias/init_rc.c" afterPath="$PROJECT_DIR$/srcs/alias/init_rc.c" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +386,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.5599739">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="read_stdin.c" pinned="false" current-in-tab="false">
@@ -48,7 +413,7 @@
             <entry file="file://$PROJECT_DIR$/srcs/read/other_read/print_struct.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="570">
-                  <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+                  <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
                   <folding />
                 </state>
               </provider>
@@ -58,7 +423,7 @@
             <entry file="file://$PROJECT_DIR$/srcs/read/completion/completion.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="720">
-                  <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+                  <caret line="52" column="14" lean-forward="false" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -67,28 +432,38 @@
           <file leaf-file-name="alias.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/alias/alias.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                <state relative-caret-position="780">
+                  <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="init_prompt.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="alias.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/parsing/expanding/alias.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="init_rc.c" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/srcs/alias/init_rc.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="525">
+                  <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="init_prompt.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/read/other_read/init_prompt.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="870">
-                  <caret line="58" column="43" lean-forward="true" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="define.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/incs/define.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="810">
-                  <caret line="89" column="2" lean-forward="false" selection-start-line="89" selection-start-column="2" selection-end-line="89" selection-end-column="2" />
+                <state relative-caret-position="915">
+                  <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -109,16 +484,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="750">
                   <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="builtin_setenv.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_setenv.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -297,6 +662,7 @@
         <option value="$PROJECT_DIR$/srcs/execution/tools/alias_tools.c" />
         <option value="$PROJECT_DIR$/srcs/read/completion/completion.c" />
         <option value="$PROJECT_DIR$/srcs/read/other_read/init_prompt.c" />
+        <option value="$PROJECT_DIR$/srcs/alias/init_rc.c" />
       </list>
     </option>
   </component>
@@ -392,12 +758,12 @@
       <workItem from="1512065254570" duration="85000" />
       <workItem from="1512065366607" duration="4694000" />
       <workItem from="1512075047590" duration="6492000" />
-      <workItem from="1512135565965" duration="5096000" />
+      <workItem from="1512135565965" duration="5566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16367000" />
+    <option name="totallyTimeSpent" value="16837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1026" y="0" width="1534" height="1440" extended-state="0" />
@@ -434,14 +800,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/incs/struct.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1815">
@@ -478,6 +836,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1065">
           <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <marker date="1512069994000" expanded="true" signature="909:1430" ph="/.../" />
+            <marker date="1512069994000" expanded="true" signature="1655:2145" ph="//..." />
+            <marker date="1512069994000" expanded="true" signature="2147:2391" ph="/.../" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -515,6 +878,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -522,6 +886,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -567,6 +932,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="55" lean-forward="false" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -574,6 +940,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1213">
           <caret line="94" column="47" lean-forward="false" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
+          <folding>
+            <marker date="1512069994000" expanded="true" signature="909:1430" ph="/.../" />
+            <marker date="1512069994000" expanded="true" signature="1655:2145" ph="//..." />
+            <marker date="1512069994000" expanded="true" signature="2147:2391" ph="/.../" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -694,14 +1065,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/alias/init_rc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="33" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/hash/hash_value.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -793,7 +1156,7 @@
     <entry file="file://$PROJECT_DIR$/srcs/read/other_read/print_struct.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
-          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -801,23 +1164,39 @@
     <entry file="file://$PROJECT_DIR$/srcs/read/completion/completion.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
-          <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/alias/alias.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <caret line="52" column="14" lean-forward="false" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/read/other_read/init_prompt.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="43" lean-forward="true" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
+        <state relative-caret-position="915">
+          <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/alias/alias.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/parsing/expanding/alias.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/alias/init_rc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
