@@ -64,6 +64,7 @@
 # define OPT_J						4096
 # define OPT_R						8192
 # define OPT_A						16384
+
 # define FORK						1
 # define FOREGROUND					2
 # define WRITE_PREVIOUS				4

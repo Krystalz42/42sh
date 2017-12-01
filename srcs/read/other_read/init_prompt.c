@@ -45,21 +45,26 @@ void				init_prompt(void)
 	static char		*prompt;
 	char			*path;
 	char			*color;
+	char						smiley[] = {32, 240,159,166,138,32,0};
+	char						smiley2[] = {32, 240,159,145,187,32,0};
 
 	path = my_getcwd();
 	color = my_color();
 	ft_memdel((void **)&prompt);
 	prompt = (char *)ft_memalloc(sizeof(char) * \
-		(27 + ft_strlen(path)));
+		(60 + ft_strlen(path) + ft_strlen(var_return(-1) ? " [Go back to graphical branch]" : " [Printf is like putstr]")));
 	ft_memcpy(prompt + ft_strlen(prompt), "\e[38;5;", 10);
 	ft_strcpy(prompt + ft_strlen(prompt), color);
 	ft_strcpy(prompt + ft_strlen(prompt), "m");
 	ft_strcpy(prompt + ft_strlen(prompt), path);
+	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? smiley2 : smiley);
 	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? RED : GRN);
-	ft_strcpy(prompt + ft_strlen(prompt), " ❯ ");
+	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? " [Go back to graphical branch]" : " [Printf is like putstr]" );
 	ft_strcpy(prompt + ft_strlen(prompt), "\x1B[0m");
+	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? smiley2 : smiley);
+	ft_strcpy(prompt + ft_strlen(prompt), " ❯ ");
 	my_prompt(prompt);
-	get_len_prompt((int)(ft_strlen(path) + 3));
+	get_len_prompt((int) ((int)(ft_strlen(path)) + 9 + ft_strlen(var_return(-1) ? " [Go back to graphical branch]" : " [Printf is like putstr]")));
 	free((void *)path);
 	free((void *)color);
 }
