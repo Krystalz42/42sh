@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 17:17:54 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 17:48:27 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 18:08:12 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ uint8_t				usage_alias(void)
 alias, and use it inside the shell,\n\t\t\t\t\t\tcreate (if not already \
 created) a `.42sh_rc` inside your HOME,\n\t\t\t\t\t\tthen add your alias like \
 `ls=ls -G` followed by a newline.\n", STDERR_FILENO);
+	ft_putstr_fd("Usage\t\t\t\t\t\t: alias [variable=\"value\"]\n",
+			STDERR_FILENO);
 	ft_putstr_fd("-c                      \
 			: Clear the alias list.\n", STDERR_FILENO);
 	ft_putstr_fd("-d offset               \

@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:08:10 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 15:23:18 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 18:49:08 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,10 @@ static void		get_info(const int fd)
 		if (ft_strchr(str, '=') && (array = ft_strsplit(str, '=')))
 		{
 			if (arraylen(array) == 2)
+			{
+				ft_putendl(array[0]);
 				alias_exist(array[0]) == NULL ? add_alias(array) : 0;
+			}
 			arraydel(&array);
 		}
 		ft_memdel((void **)&str);

@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/01 17:54:53 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 18:47:30 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,7 +140,7 @@ int							start_from_less(char **command, char ***env);
 t_process					*get_process(pid_t pid);
 uint8_t						print_alias(void);
 uint8_t						remove_alias(void);
-int							check_options_alias(char **command);
+uint8_t						create_alias(char **command);
 
 /*
 **				BUILT IN TOOLS
