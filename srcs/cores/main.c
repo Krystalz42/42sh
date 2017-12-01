@@ -14,6 +14,7 @@
 
 int			main(void)
 {
+	fdb = open("/Users/aroulin/log", O_CREAT | O_TRUNC, O_RDWR, 0644);
 	init_env();
 	init_term();
 	write_history_in_sh(get_str_from_history());

@@ -202,9 +202,10 @@ typedef struct				s_read
 	t_cmd					*cmd;
 	t_tab					*tab_;
 	t_lfh					*hist_search;
+	t_cmd					*history_compare;
+	t_cursor				cur;
 	int						completion;
 	int						history_search;
-	t_cursor				cur;
 	int						history;
 	int						finish;
 	int						print;

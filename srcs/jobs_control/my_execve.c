@@ -22,7 +22,7 @@ static void		error(char *str)
 
 	if (lstat(str, &buf) != -1)
 	{
-		if (S_ISDIR(buf.st_mode))
+		if (S_ISDIR(buf.st_mode) || S_ISLNK(buf.st_mode))
 			error_msg(S42H, "is a directory: ", str);
 		else if (!access(str, F_OK) && access(str, X_OK) == -1)
 			error_msg(S42H, "permission denied: ", str);

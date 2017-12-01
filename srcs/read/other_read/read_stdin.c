@@ -92,6 +92,8 @@ t_cmd					*read_stdin(unsigned char flags)
 				inline_other(&read_std, &buf, g_tab_are_key[index].function);
 		if (ft_isread(buf % (UCHAR_MAX + 1)))
 			inline_print_(&read_std, &buf);
+		if (buf != ARROW_DOWN && buf != ARROW_UP && buf != CTRL_P && buf != CTRL_N)
+			memdel_cmd(&read_std->history_compare);
 		if ((read_std)->finish || signal_reception(-1))
 			break ;
 		buf = 0;
