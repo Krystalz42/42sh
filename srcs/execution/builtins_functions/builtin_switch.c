@@ -40,7 +40,6 @@ static int		put_in_foreground(t_jobs *jobs)
 
 static int		put_in_background(t_jobs *jobs)
 {
-	ft_putendl("salut");
 	if (jobs->process->running == false)
 	{
 		add_to_first(jobs);
