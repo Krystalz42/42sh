@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/01 13:17:03 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 15:26:40 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -474,5 +474,7 @@ uint8_t						usage_cd(void);
 int							help_move(void);
 int							help_kill_and_yank(void);
 int							help_history(void);
+int							config_alias(void);
+int							help_alias(void);
 
 #endif

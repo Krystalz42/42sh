@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 12:52:30 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 14:55:23 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 15:45:10 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 *************** PRIVATE ********************************************************
 */
 
-static void		populate(char *new, char *str, char *home, size_t length, char *original)
+static void		populate(char *new, char *str, char *home,
+				size_t length, char *original)
 {
 	size_t		index;
 	char		*temp;
@@ -39,12 +40,13 @@ static bool		expansion(char **str, size_t index)
 	char		*new;
 
 	temp = ft_strsplit(*str + index, ' ');
-	if ((alias = alias_exist(temp[0])))
+	if (temp && temp[0] && (alias = alias_exist(temp[0])))
 	{
 		new = (char *)ft_memalloc(sizeof(char) *
 		(ft_strlen(*str) + ft_strlen(alias) + 1));
 		populate(new, *str, alias, index, temp[0]);
 		ft_memdel((void **)str);
+		arraydel(&temp);
 		*str = new;
 		return (true);
 	}

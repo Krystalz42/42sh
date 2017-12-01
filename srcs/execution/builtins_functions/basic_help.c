@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:30:27 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/18 17:37:11 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/12/01 15:36:00 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,13 @@ between words, to the end of the next word. \n");
 : Yank the top of the kill ring into the buffer at the current \
 cursor position.\n");
 	ft_putstr("C-_                     : Undo the last action\n.");
+	return (1);
+}
+
+int			config_alias(void)
+{
+	ft_putendl("To create your own configuration of alias, and use it inside \
+				the 42sh, you need to create (if not already created) \
+				a `.42sh_rc` inside your HOME");
 	return (1);
 }
