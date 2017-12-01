@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 15:57:47 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 16:22:25 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 17:55:30 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,12 @@
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			builtin_alias(t_node *node, int info)
+uint8_t			builtin_alias(t_node *node, int info __attribute__((unused)))
 {
-	(void)node; (void)info;
-	print_alias();
-	return (0);
+	return (check_options_alias(node->content->command));
 }
 
-void		print_alias(void)
+uint8_t			print_alias(void)
 {
 	size_t		index;
 	t_alias		**ptr;
@@ -46,9 +44,10 @@ void		print_alias(void)
 		}
 		index++;
 	}
+	return (0);
 }
 
-void		remove_alias(void)
+uint8_t			remove_alias(void)
 {
 	size_t		index;
 	t_alias		**ptr;
@@ -71,4 +70,5 @@ void		remove_alias(void)
 		ptr[index] = NULL;
 		index++;
 	}
+	return (0);
 }

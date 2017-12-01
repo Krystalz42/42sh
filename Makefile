@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/12/01 15:58:23 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/12/01 17:30:33 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -151,6 +151,7 @@ SRCS = \
 	   execution/tools/tools_heredoc.c							\
 	   execution/tools/potential_option.c						\
 	   execution/tools/manage_use.c								\
+	   execution/tools/alias_tools.c							\
 	   execution/executing_function/op_execution.c				\
 	   execution/executing_function/op_great_and.c				\
 	   execution/executing_function/op_great.c					\
@@ -227,6 +228,7 @@ SRCS = \
 	   error_function/bip.c										\
 	   error_function/usage_builtins.c							\
 	   error_function/usage_builtins2.c							\
+	   error_function/usage_builtins3.c							\
 
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #
