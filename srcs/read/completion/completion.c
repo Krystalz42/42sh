@@ -32,6 +32,9 @@ char		*list_to_str(t_read **read_std, t_cmd *cmd)
 		return (NULL);
 	if (len == 1 && cmd->c == '.' && key_print_fct((*read_std)->cmd, '/'))
 		return (NULL);
+	if (len == 2 && cmd->c == '.' && cmd->next->c == '.'
+		&& key_print_fct((*read_std)->cmd, '/'))
+		return (NULL);
 	if (!(str = (char *)ft_memalloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	i = -1;
@@ -57,7 +60,7 @@ char		*get_last_word(char *path)
 		while (path[++i])
 			if (path[i] == '/')
 				s = i;
-		if (i - s - 1 > 0)
+		if (s != -1 && i - s - 1 > 0)
 		{
 			tmp = ft_strdup(path + s + 1);
 			ft_bzero(path + s + 1, i - s);

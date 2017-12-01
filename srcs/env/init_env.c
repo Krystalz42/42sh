@@ -60,7 +60,6 @@ void			add_local_var(void)
 		level = ft_atoi(shlvl) + 1;
 		shlvl = ft_itoa(level);
 		temp = ft_strjoin("SHLVL=", shlvl);
-		ft_putendl(temp);
 		special_getenv(temp);
 		add_environment(temp);
 		ft_strdel(&temp);
