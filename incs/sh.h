@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/01 16:23:14 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 17:54:53 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,8 +138,9 @@ int							start_from_null(char **command, char ***env);
 int							start_from_full(char **command, char ***env);
 int							start_from_less(char **command, char ***env);
 t_process					*get_process(pid_t pid);
-void						print_alias(void);
-void						remove_alias(void);
+uint8_t						print_alias(void);
+uint8_t						remove_alias(void);
+int							check_options_alias(char **command);
 
 /*
 **				BUILT IN TOOLS
@@ -465,6 +466,7 @@ void						memdel_jobs(t_jobs *jobs);
 uint8_t						error_msg(char *from, char *error, char *args);
 int							bip(void);
 uint8_t						usage_kill(void);
+uint8_t						usage_alias(void);
 uint8_t						usage_jobs(void);
 uint8_t						usage_history(void);
 uint8_t						usage_env(void);
