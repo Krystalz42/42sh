@@ -11,12 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3c7936b-9716-45eb-ac40-76d08a4c8dcf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/init_prompt.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/init_prompt.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/42sh" afterPath="$PROJECT_DIR$/42sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/init_prompt.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/init_prompt.c" />
-    </list>
+    <list default="true" id="e3c7936b-9716-45eb-ac40-76d08a4c8dcf" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,8 +77,8 @@
           <file leaf-file-name="init_prompt.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/srcs/read/other_read/init_prompt.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="780">
-                  <caret line="52" column="69" lean-forward="false" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
+                <state relative-caret-position="870">
+                  <caret line="58" column="43" lean-forward="true" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
                   <folding />
                 </state>
               </provider>
@@ -397,12 +392,12 @@
       <workItem from="1512065254570" duration="85000" />
       <workItem from="1512065366607" duration="4694000" />
       <workItem from="1512075047590" duration="6492000" />
-      <workItem from="1512135565965" duration="5044000" />
+      <workItem from="1512135565965" duration="5096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16315000" />
+    <option name="totallyTimeSpent" value="16367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1026" y="0" width="1534" height="1440" extended-state="0" />
@@ -821,8 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/read/other_read/init_prompt.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="69" lean-forward="false" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
+        <state relative-caret-position="870">
+          <caret line="58" column="43" lean-forward="true" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
           <folding />
         </state>
       </provider>

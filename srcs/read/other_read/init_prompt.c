@@ -50,16 +50,16 @@ void				init_prompt(void)
 	color = my_color();
 	ft_memdel((void **)&prompt);
 	prompt = (char *)ft_memalloc(sizeof(char) * \
-		(24 + ft_strlen(path) + ft_strlen(" [Be Strong Smortier] ❯ ")));
+		(27 + ft_strlen(path)));
 	ft_memcpy(prompt + ft_strlen(prompt), "\e[38;5;", 10);
 	ft_strcpy(prompt + ft_strlen(prompt), color);
 	ft_strcpy(prompt + ft_strlen(prompt), "m");
 	ft_strcpy(prompt + ft_strlen(prompt), path);
 	ft_strcpy(prompt + ft_strlen(prompt), var_return(-1) ? RED : GRN);
-	ft_strcpy(prompt + ft_strlen(prompt), " [Be Strong Smortier] ❯ ");
+	ft_strcpy(prompt + ft_strlen(prompt), " ❯ ");
 	ft_strcpy(prompt + ft_strlen(prompt), "\x1B[0m");
 	my_prompt(prompt);
-	get_len_prompt((int)(ft_strlen(path) + ft_strlen(" [Be Strong Smortier] ❯ ")));
+	get_len_prompt((int)(ft_strlen(path) + 3));
 	free((void *)path);
 	free((void *)color);
 }
