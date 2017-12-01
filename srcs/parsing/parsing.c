@@ -6,7 +6,7 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 15:11:28 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/21 00:14:41 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 13:20:46 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ static void		parser(t_parsing **node)
 
 static void		expanding(t_parsing *node)
 {
+	alias(node);
 	special(node, "$$", getpid());
 	special(node, "$?", var_return(-1));
 	tilde(node);

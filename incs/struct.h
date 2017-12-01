@@ -6,7 +6,7 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/19 10:54:41 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/11/30 23:56:10 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,6 +159,18 @@ typedef struct				s_hist
 }							t_hist;
 
 /*
+**			ALIAS HISTORY
+*/
+
+typedef struct				s_alias
+{
+	char					*variable;
+	char					*value;
+	size_t					times;
+	struct s_alias			*next;
+}							t_alias;
+
+/*
 **			STRUCT FOR HASH
 */
 
@@ -170,18 +182,6 @@ typedef struct				s_hash
 	size_t					times;
 	struct s_hash			*next;
 }							t_hash;
-
-/*
-**          STRUCT FOR LIST HASH
-*/
-
-typedef struct				s_table_hash
-{
-	t_hash					**hash;
-	unsigned int			index;
-	struct s_table_hash		*next;
-	struct s_table_hash		*prev;
-}							t_table_hash;
 
 /*
 **			STRUCT FOR SEARCH IN HISTORY

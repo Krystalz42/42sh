@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/19 02:32:11 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/12/01 13:03:05 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,8 @@ SRCS = \
 	   cores/insert_one_line.c									\
 	   cores/var_return.c										\
 	   cores/exit.c												\
+	   alias/init_rc.c											\
+	   alias/alias.c											\
 	   read/other_read/read_stdin.c								\
 	   read/other_read/cursor_column.c							\
 	   read/other_read/my_tgetnum.c								\
@@ -194,6 +196,7 @@ SRCS = \
 	   parsing/lexing/recognition.c								\
 	   parsing/parsing/parsing.c								\
 	   parsing/expanding/argv.c									\
+	   parsing/expanding/alias.c								\
 	   parsing/expanding/argv_tools.c							\
 	   parsing/expanding/special.c								\
 	   parsing/expanding/tilde.c								\
