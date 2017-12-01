@@ -43,7 +43,32 @@ char			**env_table(char **env, int flags)
 	return (NULL);
 }
 
+void			add_local_var(void)
+{
+	char		*shlvl;
+	char		*temp;
+	int			level;
 
+	special_getenv("LSCOLORS=Cxfxgxdxbxegedabagacad");
+	special_getenv("COLORFGBG=7;0");
+	special_getenv("COLORTERM=truecolor");
+	add_environment("LSCOLORS=Cxfxgxdxbxegedabagacad");
+	add_environment("COLORFGBG=7;0");
+	add_environment("COLORTERM=truecolor");
+	if ((shlvl = my_getenv("SHLVL")))
+	{
+		level = ft_atoi(shlvl) + 1;
+		shlvl = ft_itoa(level);
+		temp = ft_strjoin("SHLVL=", shlvl);
+		ft_putendl(temp);
+		special_getenv(temp);
+		add_environment(temp);
+		ft_strdel(&temp);
+		ft_strdel(&shlvl);
+	}
+	else
+		add_environment("SHLVL=1");
+}
 
 void			init_env(void)
 {
@@ -60,5 +85,5 @@ void			init_env(void)
 	}
 	env[i] = NULL;
 	env_table(env, ENV_INIT);
-	add_environment("LSCOLORS=Cxfxgxdxbxegedabagacad");
+	add_local_var();
 }
