@@ -12,16 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3c7936b-9716-45eb-ac40-76d08a4c8dcf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/alias/init_rc.o" afterPath="$PROJECT_DIR$/.objs/alias/init_rc.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/error_function/usage_builtins3.o" afterPath="$PROJECT_DIR$/.objs/error_function/usage_builtins3.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_alias.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_alias.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/alias_tools.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/alias_tools.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/completion.o" afterPath="$PROJECT_DIR$/.objs/read/completion/completion.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/init_prompt.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/init_prompt.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/42sh" afterPath="$PROJECT_DIR$/42sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/env/init_env.c" afterPath="$PROJECT_DIR$/srcs/env/init_env.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/completion.c" afterPath="$PROJECT_DIR$/srcs/read/completion/completion.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/init_prompt.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/init_prompt.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,11 +59,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="completion.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="completion.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/read/completion/completion.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1215">
-                  <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+                <state relative-caret-position="720">
+                  <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="alias.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/alias/alias.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="495">
+                  <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="init_prompt.c" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/srcs/read/other_read/init_prompt.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="780">
+                  <caret line="52" column="69" lean-forward="false" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
                   <folding />
                 </state>
               </provider>
@@ -110,16 +124,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="built_in_hash.c" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/srcs/hash/built_in_hash.c">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -297,6 +301,7 @@
         <option value="$PROJECT_DIR$/srcs/env/init_env.c" />
         <option value="$PROJECT_DIR$/srcs/execution/tools/alias_tools.c" />
         <option value="$PROJECT_DIR$/srcs/read/completion/completion.c" />
+        <option value="$PROJECT_DIR$/srcs/read/other_read/init_prompt.c" />
       </list>
     </option>
   </component>
@@ -392,12 +397,12 @@
       <workItem from="1512065254570" duration="85000" />
       <workItem from="1512065366607" duration="4694000" />
       <workItem from="1512075047590" duration="6492000" />
-      <workItem from="1512135565965" duration="4849000" />
+      <workItem from="1512135565965" duration="5044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16120000" />
+    <option name="totallyTimeSpent" value="16315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1026" y="0" width="1534" height="1440" extended-state="0" />
@@ -434,21 +439,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/srcs/read/key_/key_enter.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/completion/complete_path.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -815,8 +805,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/read/completion/completion.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="720">
+          <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/alias/alias.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/init_prompt.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="69" lean-forward="false" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
           <folding />
         </state>
       </provider>
