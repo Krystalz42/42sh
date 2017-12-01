@@ -35,6 +35,8 @@
 # include <time.h>
 # include <sys/stat.h>
 
+int fdb;
+
 /*
 **				FUNCTION CORES
 */
@@ -48,6 +50,7 @@ uint8_t						var_return(int ret);
 **				FUNCTION READ && PRINT && RETURN A STRUCT
 */
 
+t_cmd						*copy_command(t_cmd *cmd);
 t_cmd						*read_stdin(unsigned char flags);
 char						*my_prompt(char *prompt);
 void						init_prompt(void);
@@ -269,6 +272,7 @@ char						**get_real_env(t_node *node);
 **				HISTORY FUNCTION
 */
 
+void						change_command(t_read **read_std, t_hist *hist);
 t_hist						*set_history_to_last(void);
 void						reset_history(void);
 void						copy_cmd(t_read **read_std, t_cmd *cpy);

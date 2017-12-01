@@ -12,17 +12,18 @@
 
 #include <sh.h>
 
-static t_cmd	*copy_command(t_cmd *cmd)
+t_cmd			*copy_command(t_cmd *cmd)
 {
 	t_cmd		*cpy;
 
+	cmd = first_cmd(cmd, 1);
 	cpy = create_element('\0');
 	while (cmd->c)
 	{
 		key_print_fct(cpy, cmd->c);
 		cmd = cmd->next;
 	}
-	return (cpy);
+	return (first_cmd(cpy, 1));
 }
 
 static int		empty_cmd(t_cmd *cmd)
@@ -50,7 +51,7 @@ static t_cmd	*return_line(t_read **read_std)
 			line = copy_command((*read_std)->cmd);
 		if (get_len_prompt(-42) == KEEP || empty_cmd((*read_std)->cmd))
 			memdel_read(read_std);
-		return (first_cmd(line, 1));
+		return (line);
 	}
 	return (NULL);
 }

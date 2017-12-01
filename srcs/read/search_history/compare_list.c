@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-int	list_compare(t_cmd *little, t_cmd *big)
+int					list_compare(t_cmd *little, t_cmd *big)
 {
 	t_cmd	*tmp;
 

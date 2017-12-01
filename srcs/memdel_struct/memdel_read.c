@@ -34,6 +34,7 @@ int			memdel_cmd(t_cmd **cmd)
 int			memdel_read(t_read **read_std)
 {
 	memdel_cmd(&((*read_std)->cmd));
+	memdel_cmd(&((*read_std)->history_compare));
 	memdel_completion(&((*read_std)->tab_));
 	memdel_lfh(&((*read_std)->hist_search));
 	ft_memdel((void **)read_std);

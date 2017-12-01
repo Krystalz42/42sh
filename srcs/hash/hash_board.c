@@ -40,7 +40,7 @@ char		*search_path(char *binary)
 	return (NULL);
 }
 
-t_hash		*create_hash(char *bin, char *path, size_t times)
+static t_hash		*create_hash(char *bin, char *path, size_t times)
 {
 	t_hash	*hash;
 
@@ -58,8 +58,8 @@ void		add_hash(char *bin, char *path, size_t times)
 	t_hash				**hash_tab;
 	t_hash				*tmp;
 
-	index = hash_value(bin);
 	hash_tab = hash_board();
+	index = hash_value(bin);
 	if ((tmp = hash_tab[index]))
 	{
 		while (tmp->next)

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(42sh)
+project(mybin)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -309,4 +309,4 @@ include_directories(incs)
 include_directories(libs/libft/incs)
 include_directories(libs/printf/incs)
 
-add_executable(42sh ${SOURCE_FILES})
+add_executable(mybin ${SOURCE_FILES})

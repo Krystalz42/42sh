@@ -12,15 +12,8 @@
 
 #include <sh.h>
 
-void			compare_history(t_read **read_std)
+void			change_command(t_read **read_std, t_hist *hist)
 {
-	t_hist		*hist;
-	t_cmd		*little;
-
-	hist = first_history();
-	little = first_cmd((*read_std)->hist_search->cmd, 1);
-	while (hist && !list_compare(little, first_cmd(hist->hist->cmd, 1)))
-		hist = hist->prev;
 	if (hist)
 	{
 		memdel_outstanding();
@@ -31,5 +24,17 @@ void			compare_history(t_read **read_std)
 		copy_cmd(read_std, hist->hist->cmd);
 		(*read_std)->print = 2;
 	}
+}
+
+void			compare_history(t_read **read_std)
+{
+	t_hist		*hist;
+	t_cmd		*little;
+
+	hist = first_history();
+	little = first_cmd((*read_std)->hist_search->cmd, 1);
+	while (hist && !list_compare(little, first_cmd(hist->hist->cmd, 1)))
+		hist = hist->prev;
+	change_command(read_std, hist);
 	last_resultat((hist) || !little->c ? 0 : 1);
 }

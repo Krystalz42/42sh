@@ -17,8 +17,7 @@ int			len_cmd(t_cmd **cmd)
 	int		i;
 
 	i = -1;
-	while (++i >= 0 && (*cmd)->prev &&
-			(*cmd)->prev->c != 32 && (*cmd)->prev->c != 9)
+	while (++i >= 0 && (*cmd)->prev && (*cmd)->prev->c != 32)
 		(*cmd) = (*cmd)->prev;
 	return (i);
 }
