@@ -60,4 +60,5 @@ void			init_env(void)
 	}
 	env[i] = NULL;
 	env_table(env, ENV_INIT);
+	add_environment("LSCOLORS=Cxfxgxdxbxegedabagacad");
 }

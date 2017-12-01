@@ -18,7 +18,6 @@ int			main(void)
 	init_env();
 	init_term();
 	init_rc();
-	ft_putendl("POV'CON");
 	write_history_in_sh(get_str_from_history());
 	init_pwd(env_table(NULL, ENV_REC));
 	shell();
