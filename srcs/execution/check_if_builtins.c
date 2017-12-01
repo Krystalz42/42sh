@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:20:09 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 16:19:13 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 15:57:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ static const t_builtin	g_builtin[] = {
 	(t_builtin){"exit", &builtin_exit},
 	(t_builtin){"help", &builtin_help},
 	(t_builtin){"suspend", &builtin_suspend},
+	(t_builtin){"alias", &builtin_alias},
 	(t_builtin){NULL, NULL}
 };
 
@@ -36,7 +37,7 @@ int				check_if_builtin(t_node *node, int info)
 
 	(void)info;
 	index = 0;
-	while (index < 14)
+	while (index < 15)
 	{
 		if (ft_strcmp(g_builtin[index].str, node->content->command[0]) == 0)
 		{

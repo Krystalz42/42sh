@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:30:27 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 15:36:00 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 15:50:13 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,10 @@ cursor position.\n");
 	return (1);
 }
 
-int			config_alias(void)
+int			help_alias(void)
 {
 	ft_putendl("To create your own configuration of alias, and use it inside \
-				the 42sh, you need to create (if not already created) \
-				a `.42sh_rc` inside your HOME");
+the 42sh.\nYou need to create (if not already created) \
+a `.42sh_rc` inside your HOME");
 	return (1);
 }

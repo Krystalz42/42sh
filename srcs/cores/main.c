@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/21 18:25:44 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/01 15:25:38 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 16:23:58 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int			main(void)
 	init_env();
 	init_term();
 	init_rc();
-	config_alias();
+	ft_putendl("POV'CON");
 	write_history_in_sh(get_str_from_history());
 	init_pwd(env_table(NULL, ENV_REC));
 	shell();

@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/01 15:26:40 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/01 16:23:14 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ uint8_t						builtin_help(t_node *node, int info);
 uint8_t						builtin_echo(t_node *node, int info);
 uint8_t						builtin_cd(t_node *node, int info);
 uint8_t						builtin_setenv(t_node *node, int info);
+uint8_t						builtin_alias(t_node *node, int info);
 
 /*
 **				BUILT IN OPTION
@@ -137,6 +138,8 @@ int							start_from_null(char **command, char ***env);
 int							start_from_full(char **command, char ***env);
 int							start_from_less(char **command, char ***env);
 t_process					*get_process(pid_t pid);
+void						print_alias(void);
+void						remove_alias(void);
 
 /*
 **				BUILT IN TOOLS
@@ -474,7 +477,6 @@ uint8_t						usage_cd(void);
 int							help_move(void);
 int							help_kill_and_yank(void);
 int							help_history(void);
-int							config_alias(void);
 int							help_alias(void);
 
 #endif

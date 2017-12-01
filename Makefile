@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/12/01 13:03:05 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/12/01 15:58:23 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -163,6 +163,7 @@ SRCS = \
 	   execution/executing_function/op_separator.c				\
 	   execution/executing_function/op_ampersand.c				\
 	   execution/builtins_functions/builtin_jobs.c				\
+	   execution/builtins_functions/builtin_alias.c				\
 	   execution/builtins_functions/builtin_suspend.c			\
 	   execution/builtins_functions/builtin_kill.c				\
 	   execution/builtins_functions/builtin_switch.c			\
