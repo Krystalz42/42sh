@@ -12,201 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3c7936b-9716-45eb-ac40-76d08a4c8dcf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/binary_tree/binary_tree.o" afterPath="$PROJECT_DIR$/.objs/binary_tree/binary_tree.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/cores/exit.o" afterPath="$PROJECT_DIR$/.objs/cores/exit.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/cores/insert_one_line.o" afterPath="$PROJECT_DIR$/.objs/cores/insert_one_line.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/cores/main.o" afterPath="$PROJECT_DIR$/.objs/cores/main.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/cores/shell.o" afterPath="$PROJECT_DIR$/.objs/cores/shell.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/cores/var_return.o" afterPath="$PROJECT_DIR$/.objs/cores/var_return.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/env/add_environment.o" afterPath="$PROJECT_DIR$/.objs/env/add_environment.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/env/init_env.o" afterPath="$PROJECT_DIR$/.objs/env/init_env.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/env/initialise_environment.o" afterPath="$PROJECT_DIR$/.objs/env/initialise_environment.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/env/my_getenv.o" afterPath="$PROJECT_DIR$/.objs/env/my_getenv.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/env/remove_environment.o" afterPath="$PROJECT_DIR$/.objs/env/remove_environment.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/error_function/bip.o" afterPath="$PROJECT_DIR$/.objs/error_function/bip.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/error_function/usage_builtins.o" afterPath="$PROJECT_DIR$/.objs/error_function/usage_builtins.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/error_function/usage_builtins2.o" afterPath="$PROJECT_DIR$/.objs/error_function/usage_builtins2.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/basic_help.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/basic_help.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_cd.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_cd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_data.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_data.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_echo.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_echo.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_env.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_env.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_exit.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_exit.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_hash.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_hash.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_help.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_help.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_history.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_jobs.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_jobs.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_kill.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_kill.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_kill2.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_kill2.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_refresh.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_refresh.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_setenv.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_setenv.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_suspend.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_suspend.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_switch.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_switch.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_switch2.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_switch2.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_tools.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_tools.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_unsetenv.o" afterPath="$PROJECT_DIR$/.objs/execution/builtins_functions/builtin_unsetenv.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/check_if_builtins.o" afterPath="$PROJECT_DIR$/.objs/execution/check_if_builtins.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_ampersand.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_function/op_ampersand.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_and_if.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_function/op_and_if.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_dgreat.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_function/op_dgreat.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_dless.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_function/op_dless.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_execution.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_function/op_execution.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_great.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_function/op_great.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_great_and.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_function/op_great_and.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_less.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_function/op_less.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_or_if.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_function/op_or_if.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_pipeline.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_function/op_pipeline.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_function/op_separator.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_function/op_separator.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/executing_node.o" afterPath="$PROJECT_DIR$/.objs/execution/executing_node.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/my_fork.o" afterPath="$PROJECT_DIR$/.objs/execution/my_fork.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/check_path.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/check_path.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/check_tree_path.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/check_tree_path.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/do_heredoc.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/do_heredoc.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/find_executing_node.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/find_executing_node.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/get_process.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/get_process.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/get_real_env.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/get_real_env.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/looking_for_path.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/looking_for_path.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/manage_pipe.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/manage_pipe.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/manage_use.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/manage_use.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/new_jobs.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/new_jobs.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/potential_option.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/potential_option.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/redirection_tools.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/redirection_tools.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/execution/tools/tools_heredoc.o" afterPath="$PROJECT_DIR$/.objs/execution/tools/tools_heredoc.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/hash/built_in_hash.o" afterPath="$PROJECT_DIR$/.objs/hash/built_in_hash.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/hash/get_str_from_hash.o" afterPath="$PROJECT_DIR$/.objs/hash/get_str_from_hash.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/hash/hash_board.o" afterPath="$PROJECT_DIR$/.objs/hash/hash_board.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/hash/hash_value.o" afterPath="$PROJECT_DIR$/.objs/hash/hash_value.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/hash/table_hash.o" afterPath="$PROJECT_DIR$/.objs/hash/table_hash.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/history/built_in_history.o" afterPath="$PROJECT_DIR$/.objs/history/built_in_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/history/copy_cmd.o" afterPath="$PROJECT_DIR$/.objs/history/copy_cmd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/history/gbl_save_history.o" afterPath="$PROJECT_DIR$/.objs/history/gbl_save_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/history/get_str_from_history.o" afterPath="$PROJECT_DIR$/.objs/history/get_str_from_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/history/init_history.o" afterPath="$PROJECT_DIR$/.objs/history/init_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/history/make_list_hist.o" afterPath="$PROJECT_DIR$/.objs/history/make_list_hist.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/history/next_history.o" afterPath="$PROJECT_DIR$/.objs/history/next_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/history/previous_history.o" afterPath="$PROJECT_DIR$/.objs/history/previous_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/history/reset_history.o" afterPath="$PROJECT_DIR$/.objs/history/reset_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/history/write_history.o" afterPath="$PROJECT_DIR$/.objs/history/write_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/jobs_control/get_real_jobs.o" afterPath="$PROJECT_DIR$/.objs/jobs_control/get_real_jobs.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/jobs_control/jobs_control.o" afterPath="$PROJECT_DIR$/.objs/jobs_control/jobs_control.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/jobs_control/modify_status_jobs.o" afterPath="$PROJECT_DIR$/.objs/jobs_control/modify_status_jobs.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/jobs_control/my_execve.o" afterPath="$PROJECT_DIR$/.objs/jobs_control/my_execve.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/jobs_control/my_wait.o" afterPath="$PROJECT_DIR$/.objs/jobs_control/my_wait.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/jobs_control/print_process.o" afterPath="$PROJECT_DIR$/.objs/jobs_control/print_process.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/jobs_control/set_process.o" afterPath="$PROJECT_DIR$/.objs/jobs_control/set_process.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/jobs_control/status_signals.o" afterPath="$PROJECT_DIR$/.objs/jobs_control/status_signals.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_completion.o" afterPath="$PROJECT_DIR$/.objs/memdel_struct/memdel_completion.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_jobs.o" afterPath="$PROJECT_DIR$/.objs/memdel_struct/memdel_jobs.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_outstanding.o" afterPath="$PROJECT_DIR$/.objs/memdel_struct/memdel_outstanding.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_read.o" afterPath="$PROJECT_DIR$/.objs/memdel_struct/memdel_read.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_search_history.o" afterPath="$PROJECT_DIR$/.objs/memdel_struct/memdel_search_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/memdel_struct/memdel_tree.o" afterPath="$PROJECT_DIR$/.objs/memdel_struct/memdel_tree.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/argv.o" afterPath="$PROJECT_DIR$/.objs/parsing/expanding/argv.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/argv_tools.o" afterPath="$PROJECT_DIR$/.objs/parsing/expanding/argv_tools.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/escape.o" afterPath="$PROJECT_DIR$/.objs/parsing/expanding/escape.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/special.o" afterPath="$PROJECT_DIR$/.objs/parsing/expanding/special.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/split.o" afterPath="$PROJECT_DIR$/.objs/parsing/expanding/split.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/split_tools.o" afterPath="$PROJECT_DIR$/.objs/parsing/expanding/split_tools.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/tilde.o" afterPath="$PROJECT_DIR$/.objs/parsing/expanding/tilde.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/tools.o" afterPath="$PROJECT_DIR$/.objs/parsing/expanding/tools.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/expanding/variable.o" afterPath="$PROJECT_DIR$/.objs/parsing/expanding/variable.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/lexing/lexer.o" afterPath="$PROJECT_DIR$/.objs/parsing/lexing/lexer.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/lexing/recognition.o" afterPath="$PROJECT_DIR$/.objs/parsing/lexing/recognition.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/lexing/regular_tokenisation.o" afterPath="$PROJECT_DIR$/.objs/parsing/lexing/regular_tokenisation.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/lexing/special_tokenisation.o" afterPath="$PROJECT_DIR$/.objs/parsing/lexing/special_tokenisation.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/parsing.o" afterPath="$PROJECT_DIR$/.objs/parsing/parsing.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/parsing/parsing.o" afterPath="$PROJECT_DIR$/.objs/parsing/parsing/parsing.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/tools/error.o" afterPath="$PROJECT_DIR$/.objs/parsing/tools/error.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/parsing/tools/list.o" afterPath="$PROJECT_DIR$/.objs/parsing/tools/list.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/check_binary_path.o" afterPath="$PROJECT_DIR$/.objs/read/completion/check_binary_path.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/color_completion.o" afterPath="$PROJECT_DIR$/.objs/read/completion/color_completion.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/complete_binary.o" afterPath="$PROJECT_DIR$/.objs/read/completion/complete_binary.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/complete_path.o" afterPath="$PROJECT_DIR$/.objs/read/completion/complete_path.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/completion.o" afterPath="$PROJECT_DIR$/.objs/read/completion/completion.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/continue_completion.o" afterPath="$PROJECT_DIR$/.objs/read/completion/continue_completion.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/create_comp.o" afterPath="$PROJECT_DIR$/.objs/read/completion/create_comp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/init_completion.o" afterPath="$PROJECT_DIR$/.objs/read/completion/init_completion.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/init_files.o" afterPath="$PROJECT_DIR$/.objs/read/completion/init_files.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/init_tab.o" afterPath="$PROJECT_DIR$/.objs/read/completion/init_tab.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/move_horizontal.o" afterPath="$PROJECT_DIR$/.objs/read/completion/move_horizontal.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/move_vertical.o" afterPath="$PROJECT_DIR$/.objs/read/completion/move_vertical.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/my_togo.o" afterPath="$PROJECT_DIR$/.objs/read/completion/my_togo.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/print_tab.o" afterPath="$PROJECT_DIR$/.objs/read/completion/print_tab.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/completion/update_index.o" afterPath="$PROJECT_DIR$/.objs/read/completion/update_index.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_arrow.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_arrow.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_capitalize_word.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_capitalize_word.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_clear.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_clear.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_del_buff.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_del_buff.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_delete.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_delete.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_delete_here.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_delete_here.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_downcase_word.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_downcase_word.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_enter.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_enter.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_eof.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_eof.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_home_end.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_home_end.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_interrupt.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_interrupt.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_kill_k.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_kill_k.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_kill_prev_word.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_kill_prev_word.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_kill_word.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_kill_word.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_print.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_print.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_refresh.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_refresh.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_reprint.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_reprint.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_search_history.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_search_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_shift.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_shift.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_tabulation.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_tabulation.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_undo.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_undo.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_upcase_word.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_upcase_word.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/key_/key_yank.o" afterPath="$PROJECT_DIR$/.objs/read/key_/key_yank.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/check_cmd.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/check_cmd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/cursor_column.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/cursor_column.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/finish_read_std.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/finish_read_std.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/first_cmd.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/first_cmd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/gbl_save_read.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/gbl_save_read.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/get_len_prompt.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/get_len_prompt.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/init_prompt.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/init_prompt.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/init_struct_for_read.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/init_struct_for_read.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/keep_buffer.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/keep_buffer.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/last_cmd.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/last_cmd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/my_prompt.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/my_prompt.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/my_put.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/my_put.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/my_tgetnum.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/my_tgetnum.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/print_struct.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/print_struct.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/prompt.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/prompt.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/read_gates.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/read_gates.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/read_stdin.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/read_stdin.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/restore_cursor.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/restore_cursor.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/other_read/signal_reception.o" afterPath="$PROJECT_DIR$/.objs/read/other_read/signal_reception.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/outstanding/add_outstanding.o" afterPath="$PROJECT_DIR$/.objs/read/outstanding/add_outstanding.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/outstanding/get_os_pointer.o" afterPath="$PROJECT_DIR$/.objs/read/outstanding/get_os_pointer.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/search_history/compare_history.o" afterPath="$PROJECT_DIR$/.objs/read/search_history/compare_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/search_history/compare_list.o" afterPath="$PROJECT_DIR$/.objs/read/search_history/compare_list.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/search_history/first_history.o" afterPath="$PROJECT_DIR$/.objs/read/search_history/first_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/search_history/init_research.o" afterPath="$PROJECT_DIR$/.objs/read/search_history/init_research.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/search_history/last_result.o" afterPath="$PROJECT_DIR$/.objs/read/search_history/last_result.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/search_history/manage_cursor_prompt.o" afterPath="$PROJECT_DIR$/.objs/read/search_history/manage_cursor_prompt.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/read/search_history/print_struct_history.o" afterPath="$PROJECT_DIR$/.objs/read/search_history/print_struct_history.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/signal/ft_signal.o" afterPath="$PROJECT_DIR$/.objs/signal/ft_signal.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/term/init_fd.o" afterPath="$PROJECT_DIR$/.objs/term/init_fd.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/term/init_term.o" afterPath="$PROJECT_DIR$/.objs/term/init_term.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/term/keep_term_struct.o" afterPath="$PROJECT_DIR$/.objs/term/keep_term_struct.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.objs/term/set_term.o" afterPath="$PROJECT_DIR$/.objs/term/set_term.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/42sh" afterPath="$PROJECT_DIR$/42sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/libft/libft.a" afterPath="$PROJECT_DIR$/libs/libft/libft.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/srcs/alias/alias.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/srcs/alias/init_rc.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/srcs/alias/tools.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/srcs/parsing/expanding/alias.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/define.h" afterPath="$PROJECT_DIR$/incs/define.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/sh.h" afterPath="$PROJECT_DIR$/incs/sh.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/incs/struct.h" afterPath="$PROJECT_DIR$/incs/struct.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/main.c" afterPath="$PROJECT_DIR$/srcs/cores/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/hash/hash_board.c" afterPath="$PROJECT_DIR$/srcs/hash/hash_board.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/history/next_history.c" afterPath="$PROJECT_DIR$/srcs/history/next_history.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/history/previous_history.c" afterPath="$PROJECT_DIR$/srcs/history/previous_history.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" afterPath="$PROJECT_DIR$/srcs/jobs_control/my_execve.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/memdel_struct/memdel_read.c" afterPath="$PROJECT_DIR$/srcs/memdel_struct/memdel_read.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/completion/completion.c" afterPath="$PROJECT_DIR$/srcs/read/completion/completion.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/finish_read_std.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/finish_read_std.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/search_history/compare_history.c" afterPath="$PROJECT_DIR$/srcs/read/search_history/compare_history.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/search_history/compare_list.c" afterPath="$PROJECT_DIR$/srcs/read/search_history/compare_list.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/cores/shell.c" afterPath="$PROJECT_DIR$/srcs/cores/shell.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c" afterPath="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_env.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/hash/hash_value.c" afterPath="$PROJECT_DIR$/srcs/hash/hash_value.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/parsing/parsing.c" afterPath="$PROJECT_DIR$/srcs/parsing/parsing.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -230,11 +49,41 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="previous_history.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="previous_history.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/history/previous_history.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+                <state relative-caret-position="570">
+                  <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="define.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/incs/define.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="375">
+                  <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="builtin_switch.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="630">
+                  <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="builtin_switch2.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch2.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="885">
+                  <caret line="59" column="25" lean-forward="false" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -247,8 +96,8 @@
           <file leaf-file-name="next_history.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/srcs/history/next_history.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+                <state relative-caret-position="795">
+                  <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -405,6 +254,9 @@
         <option value="$PROJECT_DIR$/srcs/cores/main.c" />
         <option value="$PROJECT_DIR$/srcs/history/next_history.c" />
         <option value="$PROJECT_DIR$/srcs/history/previous_history.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c" />
+        <option value="$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch2.c" />
+        <option value="$PROJECT_DIR$/incs/define.h" />
       </list>
     </option>
   </component>
@@ -415,7 +267,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="998" />
+    <option name="x" value="1026" />
+    <option name="width" value="1534" />
     <option name="height" value="1440" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -499,15 +352,15 @@
       <workItem from="1512065254570" duration="85000" />
       <workItem from="1512065366607" duration="4694000" />
       <workItem from="1512075047590" duration="6492000" />
-      <workItem from="1512135565965" duration="308000" />
+      <workItem from="1512135565965" duration="928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11579000" />
+    <option name="totallyTimeSpent" value="12199000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1534" height="1440" extended-state="0" />
+    <frame x="1026" y="0" width="1534" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23298968" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -592,6 +445,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -673,6 +527,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -737,6 +592,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -786,6 +642,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -869,18 +726,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/history/next_history.c">
+    <entry file="file://$PROJECT_DIR$/srcs/history/previous_history.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="570">
+          <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/history/previous_history.c">
+    <entry file="file://$PROJECT_DIR$/srcs/history/next_history.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="51" lean-forward="false" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+        <state relative-caret-position="795">
+          <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/execution/builtins_functions/builtin_switch2.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="25" lean-forward="false" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/incs/define.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
           <folding />
         </state>
       </provider>
