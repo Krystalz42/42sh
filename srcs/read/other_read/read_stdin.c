@@ -86,6 +86,7 @@ t_cmd					*read_stdin(unsigned char flags)
 	inline_print_(&read_std, &buf);
 	while (!read_std->finish && read(STDIN_FILENO, &buf, sizeof(unsigned long)))
 	{
+
 		index = -1;
 		while (++index < 34)
 			if (g_tab_are_key[index].key == buf)

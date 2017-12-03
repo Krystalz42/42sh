@@ -27,8 +27,10 @@ static void		get_info(const int fd)
 		if (ft_strchr(str, '=') && (array = ft_strsplit(str, '=')))
 		{
 			if (arraylen(array) == 2)
+			{
 				alias_exist(array[0]) == NULL ? add_alias(array) : 0;
-			arraydel(&array);
+				arraydel(&array);
+			}
 		}
 		ft_memdel((void **)&str);
 	}

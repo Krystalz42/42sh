@@ -50,7 +50,7 @@ void				init_prompt(void)
 	color = my_color();
 	ft_memdel((void **)&prompt);
 	prompt = (char *)ft_memalloc(sizeof(char) * \
-		(27 + ft_strlen(path)));
+		(30 + ft_strlen(path)));
 	ft_memcpy(prompt + ft_strlen(prompt), "\e[38;5;", 10);
 	ft_strcpy(prompt + ft_strlen(prompt), color);
 	ft_strcpy(prompt + ft_strlen(prompt), "m");
@@ -59,7 +59,7 @@ void				init_prompt(void)
 	ft_strcpy(prompt + ft_strlen(prompt), " ❯ ");
 	ft_strcpy(prompt + ft_strlen(prompt), "\x1B[0m");
 	my_prompt(prompt);
-	get_len_prompt((int)(ft_strlen(path) + 3));
+	get_len_prompt((int)(ft_strlen(path)) + 3);
 	free((void *)path);
 	free((void *)color);
 }
