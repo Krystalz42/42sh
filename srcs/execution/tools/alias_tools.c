@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 16:57:04 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/03 14:03:25 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/03 14:35:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,15 @@ uint8_t			print_alias(const int fd, uint8_t mode)
 	return (0);
 }
 
-uint8_t			remove_alias(void)
+uint8_t			remove_alias(char **command)
 {
 	size_t		index;
 	t_alias		**ptr;
 	t_alias		*temp;
 	t_alias		*memory;
 
+	if (command && command[0])
+		return (error_msg(S42H, "too many arguments", NULL));
 	index = 0;
 	ptr = get_alias();
 	while (index < USHRT_MAX)
@@ -76,7 +78,7 @@ uint8_t			interactive_alias(char **command)
 	char		**temp;
 
 	if (arraylen(command) > 1)
-		return (error_msg(S42H, "too many arguments", NULL));
+		return (error_msg(S42H, "Usage: alias [variable=value]", NULL));
 	if (ft_strchr(command[0], '=') && (temp = ft_strsplit(command[0], '=')))
 	{
 		if (arraylen(temp) == 2)

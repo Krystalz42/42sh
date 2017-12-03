@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/03 14:03:14 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/03 14:31:09 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,7 +139,7 @@ int							start_from_full(char **command, char ***env);
 int							start_from_less(char **command, char ***env);
 t_process					*get_process(pid_t pid);
 uint8_t						print_alias(const int fd, uint8_t mode);
-uint8_t						remove_alias(void);
+uint8_t						remove_alias(char **command);
 uint8_t						interactive_alias(char **command);
 uint8_t						append_alias(char **command);
 uint8_t						append_rc(char **command);

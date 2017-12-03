@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 15:57:47 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/03 14:03:00 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/03 14:32:06 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 static uint8_t	alias_fct(char **command, int options)
 {
 	if (options & 1)
-		return (remove_alias());
+		return (remove_alias(command));
 	else if (options & 2)
 		return (append_alias(command));
 	else if (options & 4)
