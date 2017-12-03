@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/30 22:02:07 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/03 12:38:53 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,6 +154,7 @@
 # define KILL					"kill: "
 # define ENV					"env: "
 # define HISTORY				"history: "
+# define ALIAS					"alias: "
 # define S42H					"42sh: "
 # define UNSETENV				"unsetenv : "
 # define SETENV					"setenv : "

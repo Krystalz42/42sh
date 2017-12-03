@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/01 19:12:04 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/03 14:03:14 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,9 +138,11 @@ int							start_from_null(char **command, char ***env);
 int							start_from_full(char **command, char ***env);
 int							start_from_less(char **command, char ***env);
 t_process					*get_process(pid_t pid);
-uint8_t						print_alias(void);
+uint8_t						print_alias(const int fd, uint8_t mode);
 uint8_t						remove_alias(void);
 uint8_t						interactive_alias(char **command);
+uint8_t						append_alias(char **command);
+uint8_t						append_rc(char **command);
 
 /*
 **				BUILT IN TOOLS
@@ -289,7 +291,8 @@ void						next_history(t_read **read_std);
 **				ALIAS
 */
 
-void						init_rc(void);
+void						read_rc(char *str);
+void						init_rc(char *str);
 void						add_alias(char **argv);
 void						arraydel(char ***address);
 char						*alias_exist(char *str);

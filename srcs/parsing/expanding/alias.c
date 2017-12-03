@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 12:52:30 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 15:45:10 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/02 12:00:55 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 *************** PRIVATE ********************************************************
 */
 
-static void		populate(char *new, char *str, char *home,
-				size_t length, char *original)
+static void		populate(char *new, char *str, char *home, size_t length, char *original)
 {
 	size_t		index;
 	char		*temp;
@@ -32,8 +31,7 @@ static void		populate(char *new, char *str, char *home,
 		new[index++] = *temp++;
 }
 
-
-static bool		expansion(char **str, size_t index)
+static void		expansion(char **str, size_t index)
 {
 	char		**temp;
 	char		*alias;
@@ -48,10 +46,8 @@ static bool		expansion(char **str, size_t index)
 		ft_memdel((void **)str);
 		arraydel(&temp);
 		*str = new;
-		return (true);
 	}
 	arraydel(&temp);
-	return (false);
 }
 
 /*
@@ -75,12 +71,12 @@ void			alias(t_parsing *node)
 				index += skip_to_occurence(node->input + index, '\'');
 			else if (node->input[index] == '\"')
 				index += skip_to_occurence(node->input + index, '\"');
+			else if (node->input[index] == ' ')
+				index++;
 			else
 			{
-				if (expansion(&node->input, index) == true)
-					return ;
-				else
-					index++;
+				expansion(&node->input, index);
+				return ;
 			}
 		}
 		node = node->next;

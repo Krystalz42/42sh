@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 17:17:54 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 19:27:17 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/02 12:30:40 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ created) a `.42sh_rc` inside your HOME,\n\t\t\t\t\t\tthen add your alias like \
 			STDERR_FILENO);
 	ft_putstr_fd("-c                      \
 			: Clear the alias list.\n", STDERR_FILENO);
-	ft_putstr_fd("-d offset               \
-			: Delete the alias entry at position offset.\n", STDERR_FILENO);
 	ft_putstr_fd("-r [pathname]           \
 			: Read the alias file and append its contents to the \
 alias list.\n", STDERR_FILENO);

@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 15:57:47 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 19:09:12 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/03 14:03:00 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,14 @@ static uint8_t	alias_fct(char **command, int options)
 {
 	if (options & 1)
 		return (remove_alias());
+	else if (options & 2)
+		return (append_alias(command));
+	else if (options & 4)
+		return (append_rc(command));
 	else if (command && *command)
 		return (interactive_alias(command));
 	else
-		return (print_alias());
+		return (print_alias(STDOUT_FILENO, DEFAULT));
 }
 
 static int		check_options_alias(char **command)
@@ -41,12 +45,11 @@ static int		check_options_alias(char **command)
 		table = 0;
 		while (command[index][table])
 		{
-			if (potential_option("-cdrw", command[index][table]) == 0)
-				return (error_msg(HISTORY, BAD_OPTION, command[index] + table));
+			if (potential_option("-crw", command[index][table]) == 0)
+				return (error_msg(ALIAS, BAD_OPTION, command[index] + table));
 			options += command[index][table] == 'c' && !(options & 1) ? 1 : 0;
-			options += command[index][table] == 'd' && !(options & 2) ? 2 : 0;
-			options += command[index][table] == 'r' && !(options & 4) ? 4 : 0;
-			options += command[index][table] == 'w' && !(options & 8) ? 8 : 0;
+			options += command[index][table] == 'r' && !(options & 2) ? 2 : 0;
+			options += command[index][table] == 'w' && !(options & 4) ? 4 : 0;
 			table++;
 		}
 		index++;

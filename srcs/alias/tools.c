@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:41:11 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 19:11:24 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/02 12:00:16 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,14 @@ void			arraydel(char ***address)
 {
 	size_t		index;
 
-	index = 0;
-	while ((*address)[index])
+	if (*address)
 	{
-		ft_memdel((void **)&(*address)[index]);
-		index++;
+		index = 0;
+		while ((*address)[index])
+		{
+			ft_memdel((void **)&(*address)[index]);
+			index++;
+		}
+		ft_memdel((void **)address);
 	}
-	ft_memdel((void **)address);
 }
