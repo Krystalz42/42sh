@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 16:57:04 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/03 14:35:35 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/04 13:23:57 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,9 +100,9 @@ uint8_t			append_alias(char **command)
 	if (arraylen(command) > 1)
 		return (error_msg(S42H, "too many arguments", NULL));
 	else if (command[0])
-		read_rc(command[0]);
+		read_rc(command[0], DEFAULT);
 	else
-		read_rc(".42sh_rc");
+		read_rc(NULL, DEFAULT);
 	return (0);
 }
 
@@ -113,6 +113,6 @@ uint8_t			append_rc(char **command)
 	else if (command[0])
 		init_rc(command[0]);
 	else
-		init_rc(".42sh_rc");
+		init_rc(NULL);
 	return (0);
 }

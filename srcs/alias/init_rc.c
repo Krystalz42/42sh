@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:08:10 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/03 14:25:20 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/04 13:27:49 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,40 +37,44 @@ static void		get_info(const int fd)
 	ft_memdel((void **)&str);
 }
 
-static void		fd_err(void)
+static void		fd_err(uint8_t mode)
 {
-	if (errno == ENOENT)
-		error_msg(S42H, "No such file or directory", NULL);
-	else if (errno == EACCES)
-		error_msg(S42H, "permission denied", NULL);
-	else if (errno == ENOTDIR)
-		error_msg(S42H, "is a directory", NULL);
+	if (mode & DEFAULT)
+	{
+		if (errno == ENOENT)
+			error_msg(S42H, "No such file or directory", NULL);
+		else if (errno == EACCES)
+			error_msg(S42H, "permission denied", NULL);
+		else if (errno == ENOTDIR)
+			error_msg(S42H, "is a directory", NULL);
+	}
 }
 
 /*
 *************** PUBLIC *********************************************************
 */
 
-void			read_rc(char *str)
+void			read_rc(char *str, uint8_t mode)
 {
 	int			fd;
 	char		*var;
 	char		*path;
 
-	if ((var = my_getenv("HOME")))
+	fd = -1;
+	if (str == NULL)
 	{
-		path = create_trial_path(var, str);
-		if ((fd = open(path, O_RDONLY)) > 0)
+		if ((var = my_getenv("HOME")))
 		{
-			get_info(fd);
-			close(fd);
+			path = create_trial_path(var, ".42sh_rc");
+			fd = open(path, O_RDONLY);
+			ft_memdel((void **)&path);
 		}
 		else
-			fd_err();
-		ft_memdel((void **)&path);
+			error_msg(S42H, "variable HOME not set", NULL);
 	}
 	else
-		error_msg(S42H, "variable HOME not set", NULL);
+		fd = open(str, O_RDONLY);
+	fd != -1 ? get_info(fd) : fd_err(mode);
 }
 
 void			init_rc(char *str)
@@ -78,19 +82,21 @@ void			init_rc(char *str)
 	int			fd;
 	char		*var;
 	char		*path;
-
-	if ((var = my_getenv("HOME")))
+	
+	fd = -1;
+	if (str == NULL)
 	{
-		path = create_trial_path(var, str);
-		if ((fd = open(path, O_CREAT | O_WRONLY | O_APPEND, 0644)) > 0)
+		if ((var = my_getenv("HOME")))
 		{
-			print_alias(fd, 2);
-			close(fd);
+			path = create_trial_path(var, ".42sh_rc");
+			fd = open(path, O_CREAT | O_WRONLY | O_TRUNC, 0644);
+			ft_memdel((void **)&path);
 		}
 		else
-			fd_err();
-		ft_memdel((void **)&path);
+			error_msg(S42H, "variable HOME not set", NULL);
 	}
 	else
-		error_msg(S42H, "variable HOME not set", NULL);
+		fd = open(str, O_CREAT | O_WRONLY | O_TRUNC, 0644);
+	fd != -1 ? print_alias(fd, 2) : fd_err(DEFAULT);
+	close(fd);
 }

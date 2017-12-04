@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/03 14:31:09 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/04 13:16:44 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -291,7 +291,7 @@ void						next_history(t_read **read_std);
 **				ALIAS
 */
 
-void						read_rc(char *str);
+void						read_rc(char *str, uint8_t mode);
 void						init_rc(char *str);
 void						add_alias(char **argv);
 void						arraydel(char ***address);
