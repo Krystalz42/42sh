@@ -12,22 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3c7936b-9716-45eb-ac40-76d08a4c8dcf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mybin.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mybin.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mybin.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mybin.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mybin.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mybin.dir/cmake_clean.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mybin.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mybin.dir/link.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mybin.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mybin.dir/progress.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/mybin.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/mybin.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/history/next_history.c" afterPath="$PROJECT_DIR$/srcs/history/next_history.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/memdel_struct/memdel_outstanding.c" afterPath="$PROJECT_DIR$/srcs/memdel_struct/memdel_outstanding.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/key_/key_clear.c" afterPath="$PROJECT_DIR$/srcs/read/key_/key_clear.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/read_gates.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/read_gates.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" afterPath="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/term/init_fd.c" afterPath="$PROJECT_DIR$/srcs/term/init_fd.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/srcs/term/init_term.c" afterPath="$PROJECT_DIR$/srcs/term/init_term.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -148,14 +133,14 @@
           <file leaf-file-name="read_gates.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_gates.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                <state relative-caret-position="480">
+                  <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="memdel_outstanding.c" pinned="false" current-in-tab="true">
+          <file leaf-file-name="memdel_outstanding.c" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/srcs/memdel_struct/memdel_outstanding.c">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="375">
@@ -165,11 +150,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="read_stdin.c" pinned="false" current-in-tab="false">
+          <file leaf-file-name="read_stdin.c" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+                <state relative-caret-position="1035">
+                  <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -313,10 +298,10 @@
         <option value="$PROJECT_DIR$/srcs/read/key_/key_clear.c" />
         <option value="$PROJECT_DIR$/srcs/read/other_read/print_struct.c" />
         <option value="$PROJECT_DIR$/srcs/term/init_fd.c" />
-        <option value="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
         <option value="$PROJECT_DIR$/srcs/term/init_term.c" />
-        <option value="$PROJECT_DIR$/srcs/read/other_read/read_gates.c" />
         <option value="$PROJECT_DIR$/srcs/memdel_struct/memdel_outstanding.c" />
+        <option value="$PROJECT_DIR$/srcs/read/other_read/read_gates.c" />
+        <option value="$PROJECT_DIR$/srcs/read/other_read/read_stdin.c" />
       </list>
     </option>
   </component>
@@ -414,12 +399,12 @@
       <workItem from="1512402220981" duration="88000" />
       <workItem from="1512406413640" duration="202000" />
       <workItem from="1512498130397" duration="702000" />
-      <workItem from="1512913888379" duration="46000" />
+      <workItem from="1512913888379" duration="110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20545000" />
+    <option name="totallyTimeSpent" value="20609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -794,14 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/term/init_term.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
@@ -810,18 +787,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_gates.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/memdel_struct/memdel_outstanding.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_gates.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/read/other_read/read_stdin.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
       </provider>

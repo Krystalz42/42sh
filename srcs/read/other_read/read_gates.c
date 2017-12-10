@@ -28,4 +28,5 @@ t_cmd			*finitialize_fct(t_read **read_std)
 {
 	set_termios(SET_OLD_TERM);
 	return (finish_read_std(read_std));
+
 }
