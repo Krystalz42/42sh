@@ -3201,6 +3201,87 @@ libs/printf/srcs/ft_xou_conv.c.s:
 	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/libs/printf/srcs/ft_xou_conv.c.s
 .PHONY : libs/printf/srcs/ft_xou_conv.c.s
 
+srcs/alias/alias.o: srcs/alias/alias.c.o
+
+.PHONY : srcs/alias/alias.o
+
+# target to build an object file
+srcs/alias/alias.c.o:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/alias.c.o
+.PHONY : srcs/alias/alias.c.o
+
+srcs/alias/alias.i: srcs/alias/alias.c.i
+
+.PHONY : srcs/alias/alias.i
+
+# target to preprocess a source file
+srcs/alias/alias.c.i:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/alias.c.i
+.PHONY : srcs/alias/alias.c.i
+
+srcs/alias/alias.s: srcs/alias/alias.c.s
+
+.PHONY : srcs/alias/alias.s
+
+# target to generate assembly for a file
+srcs/alias/alias.c.s:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/alias.c.s
+.PHONY : srcs/alias/alias.c.s
+
+srcs/alias/init_rc.o: srcs/alias/init_rc.c.o
+
+.PHONY : srcs/alias/init_rc.o
+
+# target to build an object file
+srcs/alias/init_rc.c.o:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o
+.PHONY : srcs/alias/init_rc.c.o
+
+srcs/alias/init_rc.i: srcs/alias/init_rc.c.i
+
+.PHONY : srcs/alias/init_rc.i
+
+# target to preprocess a source file
+srcs/alias/init_rc.c.i:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/init_rc.c.i
+.PHONY : srcs/alias/init_rc.c.i
+
+srcs/alias/init_rc.s: srcs/alias/init_rc.c.s
+
+.PHONY : srcs/alias/init_rc.s
+
+# target to generate assembly for a file
+srcs/alias/init_rc.c.s:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/init_rc.c.s
+.PHONY : srcs/alias/init_rc.c.s
+
+srcs/alias/tools.o: srcs/alias/tools.c.o
+
+.PHONY : srcs/alias/tools.o
+
+# target to build an object file
+srcs/alias/tools.c.o:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/tools.c.o
+.PHONY : srcs/alias/tools.c.o
+
+srcs/alias/tools.i: srcs/alias/tools.c.i
+
+.PHONY : srcs/alias/tools.i
+
+# target to preprocess a source file
+srcs/alias/tools.c.i:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/tools.c.i
+.PHONY : srcs/alias/tools.c.i
+
+srcs/alias/tools.s: srcs/alias/tools.c.s
+
+.PHONY : srcs/alias/tools.s
+
+# target to generate assembly for a file
+srcs/alias/tools.c.s:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/tools.c.s
+.PHONY : srcs/alias/tools.c.s
+
 srcs/binary_tree/binary_tree.o: srcs/binary_tree/binary_tree.c.o
 
 .PHONY : srcs/binary_tree/binary_tree.o
@@ -3579,6 +3660,33 @@ srcs/error_function/usage_builtins2.c.s:
 	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.s
 .PHONY : srcs/error_function/usage_builtins2.c.s
 
+srcs/error_function/usage_builtins3.o: srcs/error_function/usage_builtins3.c.o
+
+.PHONY : srcs/error_function/usage_builtins3.o
+
+# target to build an object file
+srcs/error_function/usage_builtins3.c.o:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o
+.PHONY : srcs/error_function/usage_builtins3.c.o
+
+srcs/error_function/usage_builtins3.i: srcs/error_function/usage_builtins3.c.i
+
+.PHONY : srcs/error_function/usage_builtins3.i
+
+# target to preprocess a source file
+srcs/error_function/usage_builtins3.c.i:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.i
+.PHONY : srcs/error_function/usage_builtins3.c.i
+
+srcs/error_function/usage_builtins3.s: srcs/error_function/usage_builtins3.c.s
+
+.PHONY : srcs/error_function/usage_builtins3.s
+
+# target to generate assembly for a file
+srcs/error_function/usage_builtins3.c.s:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.s
+.PHONY : srcs/error_function/usage_builtins3.c.s
+
 srcs/execution/builtins_functions/basic_help.o: srcs/execution/builtins_functions/basic_help.c.o
 
 .PHONY : srcs/execution/builtins_functions/basic_help.o
@@ -3605,6 +3713,33 @@ srcs/execution/builtins_functions/basic_help.s: srcs/execution/builtins_function
 srcs/execution/builtins_functions/basic_help.c.s:
 	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.s
 .PHONY : srcs/execution/builtins_functions/basic_help.c.s
+
+srcs/execution/builtins_functions/builtin_alias.o: srcs/execution/builtins_functions/builtin_alias.c.o
+
+.PHONY : srcs/execution/builtins_functions/builtin_alias.o
+
+# target to build an object file
+srcs/execution/builtins_functions/builtin_alias.c.o:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o
+.PHONY : srcs/execution/builtins_functions/builtin_alias.c.o
+
+srcs/execution/builtins_functions/builtin_alias.i: srcs/execution/builtins_functions/builtin_alias.c.i
+
+.PHONY : srcs/execution/builtins_functions/builtin_alias.i
+
+# target to preprocess a source file
+srcs/execution/builtins_functions/builtin_alias.c.i:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.i
+.PHONY : srcs/execution/builtins_functions/builtin_alias.c.i
+
+srcs/execution/builtins_functions/builtin_alias.s: srcs/execution/builtins_functions/builtin_alias.c.s
+
+.PHONY : srcs/execution/builtins_functions/builtin_alias.s
+
+# target to generate assembly for a file
+srcs/execution/builtins_functions/builtin_alias.c.s:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.s
+.PHONY : srcs/execution/builtins_functions/builtin_alias.c.s
 
 srcs/execution/builtins_functions/builtin_cd.o: srcs/execution/builtins_functions/builtin_cd.c.o
 
@@ -4469,6 +4604,33 @@ srcs/execution/my_fork.s: srcs/execution/my_fork.c.s
 srcs/execution/my_fork.c.s:
 	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/execution/my_fork.c.s
 .PHONY : srcs/execution/my_fork.c.s
+
+srcs/execution/tools/alias_tools.o: srcs/execution/tools/alias_tools.c.o
+
+.PHONY : srcs/execution/tools/alias_tools.o
+
+# target to build an object file
+srcs/execution/tools/alias_tools.c.o:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o
+.PHONY : srcs/execution/tools/alias_tools.c.o
+
+srcs/execution/tools/alias_tools.i: srcs/execution/tools/alias_tools.c.i
+
+.PHONY : srcs/execution/tools/alias_tools.i
+
+# target to preprocess a source file
+srcs/execution/tools/alias_tools.c.i:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.i
+.PHONY : srcs/execution/tools/alias_tools.c.i
+
+srcs/execution/tools/alias_tools.s: srcs/execution/tools/alias_tools.c.s
+
+.PHONY : srcs/execution/tools/alias_tools.s
+
+# target to generate assembly for a file
+srcs/execution/tools/alias_tools.c.s:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.s
+.PHONY : srcs/execution/tools/alias_tools.c.s
 
 srcs/execution/tools/check_path.o: srcs/execution/tools/check_path.c.o
 
@@ -5603,6 +5765,33 @@ srcs/memdel_struct/memdel_tree.s: srcs/memdel_struct/memdel_tree.c.s
 srcs/memdel_struct/memdel_tree.c.s:
 	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.s
 .PHONY : srcs/memdel_struct/memdel_tree.c.s
+
+srcs/parsing/expanding/alias.o: srcs/parsing/expanding/alias.c.o
+
+.PHONY : srcs/parsing/expanding/alias.o
+
+# target to build an object file
+srcs/parsing/expanding/alias.c.o:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o
+.PHONY : srcs/parsing/expanding/alias.c.o
+
+srcs/parsing/expanding/alias.i: srcs/parsing/expanding/alias.c.i
+
+.PHONY : srcs/parsing/expanding/alias.i
+
+# target to preprocess a source file
+srcs/parsing/expanding/alias.c.i:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.i
+.PHONY : srcs/parsing/expanding/alias.c.i
+
+srcs/parsing/expanding/alias.s: srcs/parsing/expanding/alias.c.s
+
+.PHONY : srcs/parsing/expanding/alias.s
+
+# target to generate assembly for a file
+srcs/parsing/expanding/alias.c.s:
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.s
+.PHONY : srcs/parsing/expanding/alias.c.s
 
 srcs/parsing/expanding/argv.o: srcs/parsing/expanding/argv.c.o
 
@@ -8358,6 +8547,15 @@ help:
 	@echo "... libs/printf/srcs/ft_xou_conv.o"
 	@echo "... libs/printf/srcs/ft_xou_conv.i"
 	@echo "... libs/printf/srcs/ft_xou_conv.s"
+	@echo "... srcs/alias/alias.o"
+	@echo "... srcs/alias/alias.i"
+	@echo "... srcs/alias/alias.s"
+	@echo "... srcs/alias/init_rc.o"
+	@echo "... srcs/alias/init_rc.i"
+	@echo "... srcs/alias/init_rc.s"
+	@echo "... srcs/alias/tools.o"
+	@echo "... srcs/alias/tools.i"
+	@echo "... srcs/alias/tools.s"
 	@echo "... srcs/binary_tree/binary_tree.o"
 	@echo "... srcs/binary_tree/binary_tree.i"
 	@echo "... srcs/binary_tree/binary_tree.s"
@@ -8400,9 +8598,15 @@ help:
 	@echo "... srcs/error_function/usage_builtins2.o"
 	@echo "... srcs/error_function/usage_builtins2.i"
 	@echo "... srcs/error_function/usage_builtins2.s"
+	@echo "... srcs/error_function/usage_builtins3.o"
+	@echo "... srcs/error_function/usage_builtins3.i"
+	@echo "... srcs/error_function/usage_builtins3.s"
 	@echo "... srcs/execution/builtins_functions/basic_help.o"
 	@echo "... srcs/execution/builtins_functions/basic_help.i"
 	@echo "... srcs/execution/builtins_functions/basic_help.s"
+	@echo "... srcs/execution/builtins_functions/builtin_alias.o"
+	@echo "... srcs/execution/builtins_functions/builtin_alias.i"
+	@echo "... srcs/execution/builtins_functions/builtin_alias.s"
 	@echo "... srcs/execution/builtins_functions/builtin_cd.o"
 	@echo "... srcs/execution/builtins_functions/builtin_cd.i"
 	@echo "... srcs/execution/builtins_functions/builtin_cd.s"
@@ -8499,6 +8703,9 @@ help:
 	@echo "... srcs/execution/my_fork.o"
 	@echo "... srcs/execution/my_fork.i"
 	@echo "... srcs/execution/my_fork.s"
+	@echo "... srcs/execution/tools/alias_tools.o"
+	@echo "... srcs/execution/tools/alias_tools.i"
+	@echo "... srcs/execution/tools/alias_tools.s"
 	@echo "... srcs/execution/tools/check_path.o"
 	@echo "... srcs/execution/tools/check_path.i"
 	@echo "... srcs/execution/tools/check_path.s"
@@ -8625,6 +8832,9 @@ help:
 	@echo "... srcs/memdel_struct/memdel_tree.o"
 	@echo "... srcs/memdel_struct/memdel_tree.i"
 	@echo "... srcs/memdel_struct/memdel_tree.s"
+	@echo "... srcs/parsing/expanding/alias.o"
+	@echo "... srcs/parsing/expanding/alias.i"
+	@echo "... srcs/parsing/expanding/alias.s"
 	@echo "... srcs/parsing/expanding/argv.o"
 	@echo "... srcs/parsing/expanding/argv.i"
 	@echo "... srcs/parsing/expanding/argv.s"

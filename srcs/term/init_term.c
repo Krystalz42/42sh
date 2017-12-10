@@ -12,6 +12,15 @@
 
 #include <sh.h>
 
+int					shell_interectative(int is)
+{
+	static int status;
+
+	if (is != -1)
+		status = is;
+	return (status);
+}
+
 static int			init_our_term(struct termios *term)
 {
 	(*term).c_lflag &= ~(ICANON);
@@ -23,16 +32,6 @@ static int			init_our_term(struct termios *term)
 
 static void			mine_terminal(int ret)
 {
-	if (isatty(STDIN_FILENO) == 0)
-	{
-		error_msg(S42H, "STDIN_FILENO is not a tty.", NULL);
-		exit(255);
-	}
-	if (isatty(STDOUT_FILENO) == 0)
-	{
-		error_msg(S42H, "STDOUT_FILENO is not a tty.", NULL);
-		exit(255);
-	}
 	if (tcgetpgrp(STDIN_FILENO) != getpgid(0))
 	{
 		kill(getpgid(0), SIGTTIN);
@@ -46,18 +45,24 @@ int					init_term(void)
 	static struct termios	our_term;
 	static int				ret;
 
-	if (!my_getenv("TERM"))
-		add_environment("TERM=vt100");
-	if ((tgetent(NULL, my_getenv("TERM"))) == ERR)
-		ret = 1;
-	if (!(tcgetattr(init_fd(), &old_term)))
-		keep_term_struct(SAVE_OLD, &old_term);
+	if (isatty(STDIN_FILENO) == 1)
+	{
+		if (!my_getenv("TERM"))
+			add_environment("TERM=vt100");
+		if ((tgetent(NULL, my_getenv("TERM"))) == ERR)
+			ret = 1;
+		if (!(tcgetattr(init_fd(), &old_term)))
+			keep_term_struct(SAVE_OLD, &old_term);
+		else
+			ret = 1;
+		if (!(tcgetattr(init_fd(), &our_term)) && init_our_term(&our_term))
+			keep_term_struct(SAVE_OUR, &our_term);
+		else
+			ret = 1;
+		mine_terminal(ret);
+		shell_interectative(1);
+	}
 	else
-		ret = 1;
-	if (!(tcgetattr(init_fd(), &our_term)) && init_our_term(&our_term))
-		keep_term_struct(SAVE_OUR, &our_term);
-	else
-		ret = 1;
-	mine_terminal(ret);
+		shell_interectative(0);
 	return (0);
 }

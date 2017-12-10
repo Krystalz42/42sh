@@ -454,6 +454,15 @@
 		<Unit filename="/Users/aroulin/mybin/libs/printf/srcs/ft_xou_conv.c">
 			<Option target="mybin"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/mybin/srcs/alias/alias.c">
+			<Option target="mybin"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/mybin/srcs/alias/init_rc.c">
+			<Option target="mybin"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/mybin/srcs/alias/tools.c">
+			<Option target="mybin"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/mybin/srcs/binary_tree/binary_tree.c">
 			<Option target="mybin"/>
 		</Unit>
@@ -496,7 +505,13 @@
 		<Unit filename="/Users/aroulin/mybin/srcs/error_function/usage_builtins2.c">
 			<Option target="mybin"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/mybin/srcs/error_function/usage_builtins3.c">
+			<Option target="mybin"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/mybin/srcs/execution/builtins_functions/basic_help.c">
+			<Option target="mybin"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_alias.c">
 			<Option target="mybin"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_cd.c">
@@ -593,6 +608,9 @@
 			<Option target="mybin"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/mybin/srcs/execution/my_fork.c">
+			<Option target="mybin"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/mybin/srcs/execution/tools/alias_tools.c">
 			<Option target="mybin"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/mybin/srcs/execution/tools/check_path.c">
@@ -719,6 +737,9 @@
 			<Option target="mybin"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/mybin/srcs/memdel_struct/memdel_tree.c">
+			<Option target="mybin"/>
+		</Unit>
+		<Unit filename="/Users/aroulin/mybin/srcs/parsing/expanding/alias.c">
 			<Option target="mybin"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/mybin/srcs/parsing/expanding/argv.c">

@@ -23,6 +23,7 @@ void		memdel_outstanding(void)
 	t_outstanding	*ptr;
 	t_outstanding	*temp;
 
+	keep_buffer(NULL, 1);
 	if ((ptr = get_os_pointer(NULL, 0)))
 	{
 		reset_os(&ptr);

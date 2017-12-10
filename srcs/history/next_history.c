@@ -48,10 +48,7 @@ void			next_history(t_read **read_std)
 
 	hist = gbl_save_history(NULL, REC_STRUCT);
 	if (hist && hist->next)
-	{
 		hist = jobs_next_history(read_std, hist);
-
-	}
 	else if ((*read_std)->history)
 	{
 		memdel_outstanding();

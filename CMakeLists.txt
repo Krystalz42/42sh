@@ -126,6 +126,9 @@ set(SOURCE_FILES
         libs/printf/srcs/ft_vector.c
         libs/printf/srcs/ft_wstr_conv.c
         libs/printf/srcs/ft_xou_conv.c
+        srcs/alias/alias.c
+        srcs/alias/init_rc.c
+        srcs/alias/tools.c
         srcs/binary_tree/binary_tree.c
         srcs/cores/exit.c
         srcs/cores/insert_one_line.c
@@ -140,7 +143,9 @@ set(SOURCE_FILES
         srcs/error_function/bip.c
         srcs/error_function/usage_builtins.c
         srcs/error_function/usage_builtins2.c
+        srcs/error_function/usage_builtins3.c
         srcs/execution/builtins_functions/basic_help.c
+        srcs/execution/builtins_functions/builtin_alias.c
         srcs/execution/builtins_functions/builtin_cd.c
         srcs/execution/builtins_functions/builtin_data.c
         srcs/execution/builtins_functions/builtin_echo.c
@@ -170,6 +175,7 @@ set(SOURCE_FILES
         srcs/execution/executing_function/op_or_if.c
         srcs/execution/executing_function/op_pipeline.c
         srcs/execution/executing_function/op_separator.c
+        srcs/execution/tools/alias_tools.c
         srcs/execution/tools/check_path.c
         srcs/execution/tools/check_tree_path.c
         srcs/execution/tools/do_heredoc.c
@@ -215,6 +221,7 @@ set(SOURCE_FILES
         srcs/memdel_struct/memdel_read.c
         srcs/memdel_struct/memdel_search_history.c
         srcs/memdel_struct/memdel_tree.c
+        srcs/parsing/expanding/alias.c
         srcs/parsing/expanding/argv.c
         srcs/parsing/expanding/argv_tools.c
         srcs/parsing/expanding/escape.c

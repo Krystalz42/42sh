@@ -2793,9 +2793,81 @@ CMakeFiles/mybin.dir/libs/printf/srcs/ft_xou_conv.c.o.provides: CMakeFiles/mybin
 CMakeFiles/mybin.dir/libs/printf/srcs/ft_xou_conv.c.o.provides.build: CMakeFiles/mybin.dir/libs/printf/srcs/ft_xou_conv.c.o
 
 
+CMakeFiles/mybin.dir/srcs/alias/alias.c.o: CMakeFiles/mybin.dir/flags.make
+CMakeFiles/mybin.dir/srcs/alias/alias.c.o: ../srcs/alias/alias.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/mybin.dir/srcs/alias/alias.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/alias/alias.c.o   -c /Users/aroulin/mybin/srcs/alias/alias.c
+
+CMakeFiles/mybin.dir/srcs/alias/alias.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mybin.dir/srcs/alias/alias.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/mybin/srcs/alias/alias.c > CMakeFiles/mybin.dir/srcs/alias/alias.c.i
+
+CMakeFiles/mybin.dir/srcs/alias/alias.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mybin.dir/srcs/alias/alias.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/mybin/srcs/alias/alias.c -o CMakeFiles/mybin.dir/srcs/alias/alias.c.s
+
+CMakeFiles/mybin.dir/srcs/alias/alias.c.o.requires:
+
+.PHONY : CMakeFiles/mybin.dir/srcs/alias/alias.c.o.requires
+
+CMakeFiles/mybin.dir/srcs/alias/alias.c.o.provides: CMakeFiles/mybin.dir/srcs/alias/alias.c.o.requires
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/alias.c.o.provides.build
+.PHONY : CMakeFiles/mybin.dir/srcs/alias/alias.c.o.provides
+
+CMakeFiles/mybin.dir/srcs/alias/alias.c.o.provides.build: CMakeFiles/mybin.dir/srcs/alias/alias.c.o
+
+
+CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o: CMakeFiles/mybin.dir/flags.make
+CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o: ../srcs/alias/init_rc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o   -c /Users/aroulin/mybin/srcs/alias/init_rc.c
+
+CMakeFiles/mybin.dir/srcs/alias/init_rc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mybin.dir/srcs/alias/init_rc.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/mybin/srcs/alias/init_rc.c > CMakeFiles/mybin.dir/srcs/alias/init_rc.c.i
+
+CMakeFiles/mybin.dir/srcs/alias/init_rc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mybin.dir/srcs/alias/init_rc.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/mybin/srcs/alias/init_rc.c -o CMakeFiles/mybin.dir/srcs/alias/init_rc.c.s
+
+CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o.requires:
+
+.PHONY : CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o.requires
+
+CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o.provides: CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o.requires
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o.provides.build
+.PHONY : CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o.provides
+
+CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o.provides.build: CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o
+
+
+CMakeFiles/mybin.dir/srcs/alias/tools.c.o: CMakeFiles/mybin.dir/flags.make
+CMakeFiles/mybin.dir/srcs/alias/tools.c.o: ../srcs/alias/tools.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/mybin.dir/srcs/alias/tools.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/alias/tools.c.o   -c /Users/aroulin/mybin/srcs/alias/tools.c
+
+CMakeFiles/mybin.dir/srcs/alias/tools.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mybin.dir/srcs/alias/tools.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/mybin/srcs/alias/tools.c > CMakeFiles/mybin.dir/srcs/alias/tools.c.i
+
+CMakeFiles/mybin.dir/srcs/alias/tools.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mybin.dir/srcs/alias/tools.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/mybin/srcs/alias/tools.c -o CMakeFiles/mybin.dir/srcs/alias/tools.c.s
+
+CMakeFiles/mybin.dir/srcs/alias/tools.c.o.requires:
+
+.PHONY : CMakeFiles/mybin.dir/srcs/alias/tools.c.o.requires
+
+CMakeFiles/mybin.dir/srcs/alias/tools.c.o.provides: CMakeFiles/mybin.dir/srcs/alias/tools.c.o.requires
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/alias/tools.c.o.provides.build
+.PHONY : CMakeFiles/mybin.dir/srcs/alias/tools.c.o.provides
+
+CMakeFiles/mybin.dir/srcs/alias/tools.c.o.provides.build: CMakeFiles/mybin.dir/srcs/alias/tools.c.o
+
+
 CMakeFiles/mybin.dir/srcs/binary_tree/binary_tree.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/binary_tree/binary_tree.c.o: ../srcs/binary_tree/binary_tree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/mybin.dir/srcs/binary_tree/binary_tree.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/mybin.dir/srcs/binary_tree/binary_tree.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/binary_tree/binary_tree.c.o   -c /Users/aroulin/mybin/srcs/binary_tree/binary_tree.c
 
 CMakeFiles/mybin.dir/srcs/binary_tree/binary_tree.c.i: cmake_force
@@ -2819,7 +2891,7 @@ CMakeFiles/mybin.dir/srcs/binary_tree/binary_tree.c.o.provides.build: CMakeFiles
 
 CMakeFiles/mybin.dir/srcs/cores/exit.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/cores/exit.c.o: ../srcs/cores/exit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/mybin.dir/srcs/cores/exit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/mybin.dir/srcs/cores/exit.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/cores/exit.c.o   -c /Users/aroulin/mybin/srcs/cores/exit.c
 
 CMakeFiles/mybin.dir/srcs/cores/exit.c.i: cmake_force
@@ -2843,7 +2915,7 @@ CMakeFiles/mybin.dir/srcs/cores/exit.c.o.provides.build: CMakeFiles/mybin.dir/sr
 
 CMakeFiles/mybin.dir/srcs/cores/insert_one_line.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/cores/insert_one_line.c.o: ../srcs/cores/insert_one_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/mybin.dir/srcs/cores/insert_one_line.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/mybin.dir/srcs/cores/insert_one_line.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/cores/insert_one_line.c.o   -c /Users/aroulin/mybin/srcs/cores/insert_one_line.c
 
 CMakeFiles/mybin.dir/srcs/cores/insert_one_line.c.i: cmake_force
@@ -2867,7 +2939,7 @@ CMakeFiles/mybin.dir/srcs/cores/insert_one_line.c.o.provides.build: CMakeFiles/m
 
 CMakeFiles/mybin.dir/srcs/cores/main.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/cores/main.c.o: ../srcs/cores/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/mybin.dir/srcs/cores/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/mybin.dir/srcs/cores/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/cores/main.c.o   -c /Users/aroulin/mybin/srcs/cores/main.c
 
 CMakeFiles/mybin.dir/srcs/cores/main.c.i: cmake_force
@@ -2891,7 +2963,7 @@ CMakeFiles/mybin.dir/srcs/cores/main.c.o.provides.build: CMakeFiles/mybin.dir/sr
 
 CMakeFiles/mybin.dir/srcs/cores/shell.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/cores/shell.c.o: ../srcs/cores/shell.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/mybin.dir/srcs/cores/shell.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/mybin.dir/srcs/cores/shell.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/cores/shell.c.o   -c /Users/aroulin/mybin/srcs/cores/shell.c
 
 CMakeFiles/mybin.dir/srcs/cores/shell.c.i: cmake_force
@@ -2915,7 +2987,7 @@ CMakeFiles/mybin.dir/srcs/cores/shell.c.o.provides.build: CMakeFiles/mybin.dir/s
 
 CMakeFiles/mybin.dir/srcs/cores/var_return.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/cores/var_return.c.o: ../srcs/cores/var_return.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/mybin.dir/srcs/cores/var_return.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/mybin.dir/srcs/cores/var_return.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/cores/var_return.c.o   -c /Users/aroulin/mybin/srcs/cores/var_return.c
 
 CMakeFiles/mybin.dir/srcs/cores/var_return.c.i: cmake_force
@@ -2939,7 +3011,7 @@ CMakeFiles/mybin.dir/srcs/cores/var_return.c.o.provides.build: CMakeFiles/mybin.
 
 CMakeFiles/mybin.dir/srcs/env/add_environment.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/env/add_environment.c.o: ../srcs/env/add_environment.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/mybin.dir/srcs/env/add_environment.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/mybin.dir/srcs/env/add_environment.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/env/add_environment.c.o   -c /Users/aroulin/mybin/srcs/env/add_environment.c
 
 CMakeFiles/mybin.dir/srcs/env/add_environment.c.i: cmake_force
@@ -2963,7 +3035,7 @@ CMakeFiles/mybin.dir/srcs/env/add_environment.c.o.provides.build: CMakeFiles/myb
 
 CMakeFiles/mybin.dir/srcs/env/init_env.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/env/init_env.c.o: ../srcs/env/init_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/mybin.dir/srcs/env/init_env.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/mybin.dir/srcs/env/init_env.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/env/init_env.c.o   -c /Users/aroulin/mybin/srcs/env/init_env.c
 
 CMakeFiles/mybin.dir/srcs/env/init_env.c.i: cmake_force
@@ -2987,7 +3059,7 @@ CMakeFiles/mybin.dir/srcs/env/init_env.c.o.provides.build: CMakeFiles/mybin.dir/
 
 CMakeFiles/mybin.dir/srcs/env/initialise_environment.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/env/initialise_environment.c.o: ../srcs/env/initialise_environment.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/mybin.dir/srcs/env/initialise_environment.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/mybin.dir/srcs/env/initialise_environment.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/env/initialise_environment.c.o   -c /Users/aroulin/mybin/srcs/env/initialise_environment.c
 
 CMakeFiles/mybin.dir/srcs/env/initialise_environment.c.i: cmake_force
@@ -3011,7 +3083,7 @@ CMakeFiles/mybin.dir/srcs/env/initialise_environment.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/env/my_getenv.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/env/my_getenv.c.o: ../srcs/env/my_getenv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/mybin.dir/srcs/env/my_getenv.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/mybin.dir/srcs/env/my_getenv.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/env/my_getenv.c.o   -c /Users/aroulin/mybin/srcs/env/my_getenv.c
 
 CMakeFiles/mybin.dir/srcs/env/my_getenv.c.i: cmake_force
@@ -3035,7 +3107,7 @@ CMakeFiles/mybin.dir/srcs/env/my_getenv.c.o.provides.build: CMakeFiles/mybin.dir
 
 CMakeFiles/mybin.dir/srcs/env/remove_environment.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/env/remove_environment.c.o: ../srcs/env/remove_environment.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/mybin.dir/srcs/env/remove_environment.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/mybin.dir/srcs/env/remove_environment.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/env/remove_environment.c.o   -c /Users/aroulin/mybin/srcs/env/remove_environment.c
 
 CMakeFiles/mybin.dir/srcs/env/remove_environment.c.i: cmake_force
@@ -3059,7 +3131,7 @@ CMakeFiles/mybin.dir/srcs/env/remove_environment.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/mybin.dir/srcs/error_function/bip.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/error_function/bip.c.o: ../srcs/error_function/bip.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/mybin.dir/srcs/error_function/bip.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/mybin.dir/srcs/error_function/bip.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/error_function/bip.c.o   -c /Users/aroulin/mybin/srcs/error_function/bip.c
 
 CMakeFiles/mybin.dir/srcs/error_function/bip.c.i: cmake_force
@@ -3083,7 +3155,7 @@ CMakeFiles/mybin.dir/srcs/error_function/bip.c.o.provides.build: CMakeFiles/mybi
 
 CMakeFiles/mybin.dir/srcs/error_function/usage_builtins.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/error_function/usage_builtins.c.o: ../srcs/error_function/usage_builtins.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/mybin.dir/srcs/error_function/usage_builtins.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/mybin.dir/srcs/error_function/usage_builtins.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/error_function/usage_builtins.c.o   -c /Users/aroulin/mybin/srcs/error_function/usage_builtins.c
 
 CMakeFiles/mybin.dir/srcs/error_function/usage_builtins.c.i: cmake_force
@@ -3107,7 +3179,7 @@ CMakeFiles/mybin.dir/srcs/error_function/usage_builtins.c.o.provides.build: CMak
 
 CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.o: ../srcs/error_function/usage_builtins2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.o   -c /Users/aroulin/mybin/srcs/error_function/usage_builtins2.c
 
 CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.i: cmake_force
@@ -3129,9 +3201,33 @@ CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.o.provides: CMakeFile
 CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.o.provides.build: CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.o
 
 
+CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o: CMakeFiles/mybin.dir/flags.make
+CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o: ../srcs/error_function/usage_builtins3.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o   -c /Users/aroulin/mybin/srcs/error_function/usage_builtins3.c
+
+CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/mybin/srcs/error_function/usage_builtins3.c > CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.i
+
+CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/mybin/srcs/error_function/usage_builtins3.c -o CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.s
+
+CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o.requires:
+
+.PHONY : CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o.requires
+
+CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o.provides: CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o.requires
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o.provides.build
+.PHONY : CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o.provides
+
+CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o.provides.build: CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o
+
+
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.o: ../srcs/execution/builtins_functions/basic_help.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/basic_help.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.i: cmake_force
@@ -3153,9 +3249,33 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.o.provides: 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.o.provides.build: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.o
 
 
+CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o: CMakeFiles/mybin.dir/flags.make
+CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o: ../srcs/execution/builtins_functions/builtin_alias.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_alias.c
+
+CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_alias.c > CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.i
+
+CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_alias.c -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.s
+
+CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o.requires:
+
+.PHONY : CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o.requires
+
+CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o.provides: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o.requires
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o.provides.build
+.PHONY : CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o.provides
+
+CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o.provides.build: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o
+
+
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_cd.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_cd.c.o: ../srcs/execution/builtins_functions/builtin_cd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_cd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_cd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_cd.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_cd.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_cd.c.i: cmake_force
@@ -3179,7 +3299,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_cd.c.o.provides.b
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_data.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_data.c.o: ../srcs/execution/builtins_functions/builtin_data.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_data.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_data.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_data.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_data.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_data.c.i: cmake_force
@@ -3203,7 +3323,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_data.c.o.provides
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_echo.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_echo.c.o: ../srcs/execution/builtins_functions/builtin_echo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_echo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_echo.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_echo.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_echo.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_echo.c.i: cmake_force
@@ -3227,7 +3347,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_echo.c.o.provides
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_env.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_env.c.o: ../srcs/execution/builtins_functions/builtin_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_env.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_env.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_env.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_env.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_env.c.i: cmake_force
@@ -3251,7 +3371,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_env.c.o.provides.
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_exit.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_exit.c.o: ../srcs/execution/builtins_functions/builtin_exit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_exit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_exit.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_exit.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_exit.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_exit.c.i: cmake_force
@@ -3275,7 +3395,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_exit.c.o.provides
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_hash.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_hash.c.o: ../srcs/execution/builtins_functions/builtin_hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_hash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_hash.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_hash.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_hash.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_hash.c.i: cmake_force
@@ -3299,7 +3419,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_hash.c.o.provides
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_help.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_help.c.o: ../srcs/execution/builtins_functions/builtin_help.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_help.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_help.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_help.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_help.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_help.c.i: cmake_force
@@ -3323,7 +3443,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_help.c.o.provides
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_history.c.o: ../srcs/execution/builtins_functions/builtin_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_history.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_history.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_history.c.i: cmake_force
@@ -3347,7 +3467,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_history.c.o.provi
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_jobs.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_jobs.c.o: ../srcs/execution/builtins_functions/builtin_jobs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_jobs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_jobs.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_jobs.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_jobs.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_jobs.c.i: cmake_force
@@ -3371,7 +3491,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_jobs.c.o.provides
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill.c.o: ../srcs/execution/builtins_functions/builtin_kill.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_kill.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill.c.i: cmake_force
@@ -3395,7 +3515,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill.c.o.provides
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill2.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill2.c.o: ../srcs/execution/builtins_functions/builtin_kill2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill2.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill2.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_kill2.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill2.c.i: cmake_force
@@ -3419,7 +3539,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_kill2.c.o.provide
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_refresh.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_refresh.c.o: ../srcs/execution/builtins_functions/builtin_refresh.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_refresh.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_refresh.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_refresh.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_refresh.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_refresh.c.i: cmake_force
@@ -3443,7 +3563,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_refresh.c.o.provi
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_setenv.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_setenv.c.o: ../srcs/execution/builtins_functions/builtin_setenv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_setenv.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_setenv.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_setenv.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_setenv.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_setenv.c.i: cmake_force
@@ -3467,7 +3587,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_setenv.c.o.provid
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_suspend.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_suspend.c.o: ../srcs/execution/builtins_functions/builtin_suspend.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_suspend.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_suspend.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_suspend.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_suspend.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_suspend.c.i: cmake_force
@@ -3491,7 +3611,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_suspend.c.o.provi
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch.c.o: ../srcs/execution/builtins_functions/builtin_switch.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_switch.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch.c.i: cmake_force
@@ -3515,7 +3635,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch.c.o.provid
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch2.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch2.c.o: ../srcs/execution/builtins_functions/builtin_switch2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch2.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch2.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_switch2.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch2.c.i: cmake_force
@@ -3539,7 +3659,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_switch2.c.o.provi
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_tools.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_tools.c.o: ../srcs/execution/builtins_functions/builtin_tools.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_tools.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_tools.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_tools.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_tools.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_tools.c.i: cmake_force
@@ -3563,7 +3683,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_tools.c.o.provide
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_unsetenv.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_unsetenv.c.o: ../srcs/execution/builtins_functions/builtin_unsetenv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_unsetenv.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_unsetenv.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_unsetenv.c.o   -c /Users/aroulin/mybin/srcs/execution/builtins_functions/builtin_unsetenv.c
 
 CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_unsetenv.c.i: cmake_force
@@ -3587,7 +3707,7 @@ CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_unsetenv.c.o.prov
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_ampersand.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_ampersand.c.o: ../srcs/execution/executing_function/op_ampersand.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_ampersand.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_ampersand.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_function/op_ampersand.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_function/op_ampersand.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_ampersand.c.i: cmake_force
@@ -3611,7 +3731,7 @@ CMakeFiles/mybin.dir/srcs/execution/executing_function/op_ampersand.c.o.provides
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_and_if.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_and_if.c.o: ../srcs/execution/executing_function/op_and_if.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_and_if.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_and_if.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_function/op_and_if.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_function/op_and_if.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_and_if.c.i: cmake_force
@@ -3635,7 +3755,7 @@ CMakeFiles/mybin.dir/srcs/execution/executing_function/op_and_if.c.o.provides.bu
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dgreat.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dgreat.c.o: ../srcs/execution/executing_function/op_dgreat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dgreat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dgreat.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dgreat.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_function/op_dgreat.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dgreat.c.i: cmake_force
@@ -3659,7 +3779,7 @@ CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dgreat.c.o.provides.bu
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dless.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dless.c.o: ../srcs/execution/executing_function/op_dless.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dless.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dless.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dless.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_function/op_dless.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dless.c.i: cmake_force
@@ -3683,7 +3803,7 @@ CMakeFiles/mybin.dir/srcs/execution/executing_function/op_dless.c.o.provides.bui
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_execution.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_execution.c.o: ../srcs/execution/executing_function/op_execution.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_execution.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_execution.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_function/op_execution.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_function/op_execution.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_execution.c.i: cmake_force
@@ -3707,7 +3827,7 @@ CMakeFiles/mybin.dir/srcs/execution/executing_function/op_execution.c.o.provides
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great.c.o: ../srcs/execution/executing_function/op_great.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_function/op_great.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great.c.i: cmake_force
@@ -3731,7 +3851,7 @@ CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great.c.o.provides.bui
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great_and.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great_and.c.o: ../srcs/execution/executing_function/op_great_and.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great_and.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great_and.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great_and.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_function/op_great_and.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great_and.c.i: cmake_force
@@ -3755,7 +3875,7 @@ CMakeFiles/mybin.dir/srcs/execution/executing_function/op_great_and.c.o.provides
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_less.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_less.c.o: ../srcs/execution/executing_function/op_less.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_less.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_less.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_function/op_less.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_function/op_less.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_less.c.i: cmake_force
@@ -3779,7 +3899,7 @@ CMakeFiles/mybin.dir/srcs/execution/executing_function/op_less.c.o.provides.buil
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_or_if.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_or_if.c.o: ../srcs/execution/executing_function/op_or_if.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_or_if.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_or_if.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_function/op_or_if.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_function/op_or_if.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_or_if.c.i: cmake_force
@@ -3803,7 +3923,7 @@ CMakeFiles/mybin.dir/srcs/execution/executing_function/op_or_if.c.o.provides.bui
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_pipeline.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_pipeline.c.o: ../srcs/execution/executing_function/op_pipeline.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_pipeline.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_pipeline.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_function/op_pipeline.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_function/op_pipeline.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_pipeline.c.i: cmake_force
@@ -3827,7 +3947,7 @@ CMakeFiles/mybin.dir/srcs/execution/executing_function/op_pipeline.c.o.provides.
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.o: ../srcs/execution/executing_function/op_separator.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_function/op_separator.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.i: cmake_force
@@ -3849,9 +3969,33 @@ CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.o.provides
 CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.o.provides.build: CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.o
 
 
+CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o: CMakeFiles/mybin.dir/flags.make
+CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o: ../srcs/execution/tools/alias_tools.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/alias_tools.c
+
+CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/mybin/srcs/execution/tools/alias_tools.c > CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.i
+
+CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/mybin/srcs/execution/tools/alias_tools.c -o CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.s
+
+CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o.requires:
+
+.PHONY : CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o.requires
+
+CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o.provides: CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o.requires
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o.provides.build
+.PHONY : CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o.provides
+
+CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o.provides.build: CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o
+
+
 CMakeFiles/mybin.dir/srcs/execution/tools/check_path.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/check_path.c.o: ../srcs/execution/tools/check_path.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/check_path.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/check_path.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/check_path.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/check_path.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/check_path.c.i: cmake_force
@@ -3875,7 +4019,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/check_path.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/execution/tools/check_tree_path.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/check_tree_path.c.o: ../srcs/execution/tools/check_tree_path.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/check_tree_path.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/check_tree_path.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/check_tree_path.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/check_tree_path.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/check_tree_path.c.i: cmake_force
@@ -3899,7 +4043,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/check_tree_path.c.o.provides.build: CM
 
 CMakeFiles/mybin.dir/srcs/execution/tools/do_heredoc.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/do_heredoc.c.o: ../srcs/execution/tools/do_heredoc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_161) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/do_heredoc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/do_heredoc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/do_heredoc.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/do_heredoc.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/do_heredoc.c.i: cmake_force
@@ -3923,7 +4067,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/do_heredoc.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/execution/tools/find_executing_node.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/find_executing_node.c.o: ../srcs/execution/tools/find_executing_node.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_162) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/find_executing_node.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/find_executing_node.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/find_executing_node.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/find_executing_node.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/find_executing_node.c.i: cmake_force
@@ -3947,7 +4091,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/find_executing_node.c.o.provides.build
 
 CMakeFiles/mybin.dir/srcs/execution/tools/get_process.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/get_process.c.o: ../srcs/execution/tools/get_process.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_163) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/get_process.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/get_process.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/get_process.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/get_process.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/get_process.c.i: cmake_force
@@ -3971,7 +4115,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/get_process.c.o.provides.build: CMakeF
 
 CMakeFiles/mybin.dir/srcs/execution/tools/get_real_env.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/get_real_env.c.o: ../srcs/execution/tools/get_real_env.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_164) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/get_real_env.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/get_real_env.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/get_real_env.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/get_real_env.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/get_real_env.c.i: cmake_force
@@ -3995,7 +4139,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/get_real_env.c.o.provides.build: CMake
 
 CMakeFiles/mybin.dir/srcs/execution/tools/looking_for_path.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/looking_for_path.c.o: ../srcs/execution/tools/looking_for_path.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_165) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/looking_for_path.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/looking_for_path.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/looking_for_path.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/looking_for_path.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/looking_for_path.c.i: cmake_force
@@ -4019,7 +4163,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/looking_for_path.c.o.provides.build: C
 
 CMakeFiles/mybin.dir/srcs/execution/tools/manage_pipe.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/manage_pipe.c.o: ../srcs/execution/tools/manage_pipe.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_166) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/manage_pipe.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/manage_pipe.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/manage_pipe.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/manage_pipe.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/manage_pipe.c.i: cmake_force
@@ -4043,7 +4187,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/manage_pipe.c.o.provides.build: CMakeF
 
 CMakeFiles/mybin.dir/srcs/execution/tools/manage_use.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/manage_use.c.o: ../srcs/execution/tools/manage_use.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_167) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/manage_use.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/manage_use.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/manage_use.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/manage_use.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/manage_use.c.i: cmake_force
@@ -4067,7 +4211,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/manage_use.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/execution/tools/new_jobs.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/new_jobs.c.o: ../srcs/execution/tools/new_jobs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_168) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/new_jobs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/new_jobs.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/new_jobs.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/new_jobs.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/new_jobs.c.i: cmake_force
@@ -4091,7 +4235,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/new_jobs.c.o.provides.build: CMakeFile
 
 CMakeFiles/mybin.dir/srcs/execution/tools/potential_option.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/potential_option.c.o: ../srcs/execution/tools/potential_option.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_169) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/potential_option.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/potential_option.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/potential_option.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/potential_option.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/potential_option.c.i: cmake_force
@@ -4115,7 +4259,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/potential_option.c.o.provides.build: C
 
 CMakeFiles/mybin.dir/srcs/execution/tools/redirection_tools.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/redirection_tools.c.o: ../srcs/execution/tools/redirection_tools.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_170) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/redirection_tools.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/redirection_tools.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/redirection_tools.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/redirection_tools.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/redirection_tools.c.i: cmake_force
@@ -4139,7 +4283,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/redirection_tools.c.o.provides.build: 
 
 CMakeFiles/mybin.dir/srcs/execution/tools/tools_heredoc.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/tools/tools_heredoc.c.o: ../srcs/execution/tools/tools_heredoc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_171) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/tools_heredoc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building C object CMakeFiles/mybin.dir/srcs/execution/tools/tools_heredoc.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/tools/tools_heredoc.c.o   -c /Users/aroulin/mybin/srcs/execution/tools/tools_heredoc.c
 
 CMakeFiles/mybin.dir/srcs/execution/tools/tools_heredoc.c.i: cmake_force
@@ -4163,7 +4307,7 @@ CMakeFiles/mybin.dir/srcs/execution/tools/tools_heredoc.c.o.provides.build: CMak
 
 CMakeFiles/mybin.dir/srcs/execution/check_if_builtins.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/check_if_builtins.c.o: ../srcs/execution/check_if_builtins.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_172) "Building C object CMakeFiles/mybin.dir/srcs/execution/check_if_builtins.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building C object CMakeFiles/mybin.dir/srcs/execution/check_if_builtins.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/check_if_builtins.c.o   -c /Users/aroulin/mybin/srcs/execution/check_if_builtins.c
 
 CMakeFiles/mybin.dir/srcs/execution/check_if_builtins.c.i: cmake_force
@@ -4187,7 +4331,7 @@ CMakeFiles/mybin.dir/srcs/execution/check_if_builtins.c.o.provides.build: CMakeF
 
 CMakeFiles/mybin.dir/srcs/execution/executing_node.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/executing_node.c.o: ../srcs/execution/executing_node.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_173) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_node.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building C object CMakeFiles/mybin.dir/srcs/execution/executing_node.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/executing_node.c.o   -c /Users/aroulin/mybin/srcs/execution/executing_node.c
 
 CMakeFiles/mybin.dir/srcs/execution/executing_node.c.i: cmake_force
@@ -4211,7 +4355,7 @@ CMakeFiles/mybin.dir/srcs/execution/executing_node.c.o.provides.build: CMakeFile
 
 CMakeFiles/mybin.dir/srcs/execution/my_fork.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/execution/my_fork.c.o: ../srcs/execution/my_fork.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_174) "Building C object CMakeFiles/mybin.dir/srcs/execution/my_fork.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building C object CMakeFiles/mybin.dir/srcs/execution/my_fork.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/execution/my_fork.c.o   -c /Users/aroulin/mybin/srcs/execution/my_fork.c
 
 CMakeFiles/mybin.dir/srcs/execution/my_fork.c.i: cmake_force
@@ -4235,7 +4379,7 @@ CMakeFiles/mybin.dir/srcs/execution/my_fork.c.o.provides.build: CMakeFiles/mybin
 
 CMakeFiles/mybin.dir/srcs/hash/built_in_hash.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/hash/built_in_hash.c.o: ../srcs/hash/built_in_hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_175) "Building C object CMakeFiles/mybin.dir/srcs/hash/built_in_hash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building C object CMakeFiles/mybin.dir/srcs/hash/built_in_hash.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/hash/built_in_hash.c.o   -c /Users/aroulin/mybin/srcs/hash/built_in_hash.c
 
 CMakeFiles/mybin.dir/srcs/hash/built_in_hash.c.i: cmake_force
@@ -4259,7 +4403,7 @@ CMakeFiles/mybin.dir/srcs/hash/built_in_hash.c.o.provides.build: CMakeFiles/mybi
 
 CMakeFiles/mybin.dir/srcs/hash/get_str_from_hash.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/hash/get_str_from_hash.c.o: ../srcs/hash/get_str_from_hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_176) "Building C object CMakeFiles/mybin.dir/srcs/hash/get_str_from_hash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building C object CMakeFiles/mybin.dir/srcs/hash/get_str_from_hash.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/hash/get_str_from_hash.c.o   -c /Users/aroulin/mybin/srcs/hash/get_str_from_hash.c
 
 CMakeFiles/mybin.dir/srcs/hash/get_str_from_hash.c.i: cmake_force
@@ -4283,7 +4427,7 @@ CMakeFiles/mybin.dir/srcs/hash/get_str_from_hash.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/mybin.dir/srcs/hash/hash_board.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/hash/hash_board.c.o: ../srcs/hash/hash_board.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_177) "Building C object CMakeFiles/mybin.dir/srcs/hash/hash_board.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building C object CMakeFiles/mybin.dir/srcs/hash/hash_board.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/hash/hash_board.c.o   -c /Users/aroulin/mybin/srcs/hash/hash_board.c
 
 CMakeFiles/mybin.dir/srcs/hash/hash_board.c.i: cmake_force
@@ -4307,7 +4451,7 @@ CMakeFiles/mybin.dir/srcs/hash/hash_board.c.o.provides.build: CMakeFiles/mybin.d
 
 CMakeFiles/mybin.dir/srcs/hash/hash_value.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/hash/hash_value.c.o: ../srcs/hash/hash_value.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_178) "Building C object CMakeFiles/mybin.dir/srcs/hash/hash_value.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building C object CMakeFiles/mybin.dir/srcs/hash/hash_value.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/hash/hash_value.c.o   -c /Users/aroulin/mybin/srcs/hash/hash_value.c
 
 CMakeFiles/mybin.dir/srcs/hash/hash_value.c.i: cmake_force
@@ -4331,7 +4475,7 @@ CMakeFiles/mybin.dir/srcs/hash/hash_value.c.o.provides.build: CMakeFiles/mybin.d
 
 CMakeFiles/mybin.dir/srcs/hash/table_hash.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/hash/table_hash.c.o: ../srcs/hash/table_hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_179) "Building C object CMakeFiles/mybin.dir/srcs/hash/table_hash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building C object CMakeFiles/mybin.dir/srcs/hash/table_hash.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/hash/table_hash.c.o   -c /Users/aroulin/mybin/srcs/hash/table_hash.c
 
 CMakeFiles/mybin.dir/srcs/hash/table_hash.c.i: cmake_force
@@ -4355,7 +4499,7 @@ CMakeFiles/mybin.dir/srcs/hash/table_hash.c.o.provides.build: CMakeFiles/mybin.d
 
 CMakeFiles/mybin.dir/srcs/history/built_in_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/history/built_in_history.c.o: ../srcs/history/built_in_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_180) "Building C object CMakeFiles/mybin.dir/srcs/history/built_in_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building C object CMakeFiles/mybin.dir/srcs/history/built_in_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/history/built_in_history.c.o   -c /Users/aroulin/mybin/srcs/history/built_in_history.c
 
 CMakeFiles/mybin.dir/srcs/history/built_in_history.c.i: cmake_force
@@ -4379,7 +4523,7 @@ CMakeFiles/mybin.dir/srcs/history/built_in_history.c.o.provides.build: CMakeFile
 
 CMakeFiles/mybin.dir/srcs/history/copy_cmd.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/history/copy_cmd.c.o: ../srcs/history/copy_cmd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_181) "Building C object CMakeFiles/mybin.dir/srcs/history/copy_cmd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building C object CMakeFiles/mybin.dir/srcs/history/copy_cmd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/history/copy_cmd.c.o   -c /Users/aroulin/mybin/srcs/history/copy_cmd.c
 
 CMakeFiles/mybin.dir/srcs/history/copy_cmd.c.i: cmake_force
@@ -4403,7 +4547,7 @@ CMakeFiles/mybin.dir/srcs/history/copy_cmd.c.o.provides.build: CMakeFiles/mybin.
 
 CMakeFiles/mybin.dir/srcs/history/gbl_save_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/history/gbl_save_history.c.o: ../srcs/history/gbl_save_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_182) "Building C object CMakeFiles/mybin.dir/srcs/history/gbl_save_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building C object CMakeFiles/mybin.dir/srcs/history/gbl_save_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/history/gbl_save_history.c.o   -c /Users/aroulin/mybin/srcs/history/gbl_save_history.c
 
 CMakeFiles/mybin.dir/srcs/history/gbl_save_history.c.i: cmake_force
@@ -4427,7 +4571,7 @@ CMakeFiles/mybin.dir/srcs/history/gbl_save_history.c.o.provides.build: CMakeFile
 
 CMakeFiles/mybin.dir/srcs/history/get_str_from_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/history/get_str_from_history.c.o: ../srcs/history/get_str_from_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_183) "Building C object CMakeFiles/mybin.dir/srcs/history/get_str_from_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building C object CMakeFiles/mybin.dir/srcs/history/get_str_from_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/history/get_str_from_history.c.o   -c /Users/aroulin/mybin/srcs/history/get_str_from_history.c
 
 CMakeFiles/mybin.dir/srcs/history/get_str_from_history.c.i: cmake_force
@@ -4451,7 +4595,7 @@ CMakeFiles/mybin.dir/srcs/history/get_str_from_history.c.o.provides.build: CMake
 
 CMakeFiles/mybin.dir/srcs/history/init_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/history/init_history.c.o: ../srcs/history/init_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_184) "Building C object CMakeFiles/mybin.dir/srcs/history/init_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building C object CMakeFiles/mybin.dir/srcs/history/init_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/history/init_history.c.o   -c /Users/aroulin/mybin/srcs/history/init_history.c
 
 CMakeFiles/mybin.dir/srcs/history/init_history.c.i: cmake_force
@@ -4475,7 +4619,7 @@ CMakeFiles/mybin.dir/srcs/history/init_history.c.o.provides.build: CMakeFiles/my
 
 CMakeFiles/mybin.dir/srcs/history/make_list_hist.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/history/make_list_hist.c.o: ../srcs/history/make_list_hist.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_185) "Building C object CMakeFiles/mybin.dir/srcs/history/make_list_hist.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building C object CMakeFiles/mybin.dir/srcs/history/make_list_hist.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/history/make_list_hist.c.o   -c /Users/aroulin/mybin/srcs/history/make_list_hist.c
 
 CMakeFiles/mybin.dir/srcs/history/make_list_hist.c.i: cmake_force
@@ -4499,7 +4643,7 @@ CMakeFiles/mybin.dir/srcs/history/make_list_hist.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/mybin.dir/srcs/history/next_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/history/next_history.c.o: ../srcs/history/next_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_186) "Building C object CMakeFiles/mybin.dir/srcs/history/next_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building C object CMakeFiles/mybin.dir/srcs/history/next_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/history/next_history.c.o   -c /Users/aroulin/mybin/srcs/history/next_history.c
 
 CMakeFiles/mybin.dir/srcs/history/next_history.c.i: cmake_force
@@ -4523,7 +4667,7 @@ CMakeFiles/mybin.dir/srcs/history/next_history.c.o.provides.build: CMakeFiles/my
 
 CMakeFiles/mybin.dir/srcs/history/previous_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/history/previous_history.c.o: ../srcs/history/previous_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_187) "Building C object CMakeFiles/mybin.dir/srcs/history/previous_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building C object CMakeFiles/mybin.dir/srcs/history/previous_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/history/previous_history.c.o   -c /Users/aroulin/mybin/srcs/history/previous_history.c
 
 CMakeFiles/mybin.dir/srcs/history/previous_history.c.i: cmake_force
@@ -4547,7 +4691,7 @@ CMakeFiles/mybin.dir/srcs/history/previous_history.c.o.provides.build: CMakeFile
 
 CMakeFiles/mybin.dir/srcs/history/reset_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/history/reset_history.c.o: ../srcs/history/reset_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_188) "Building C object CMakeFiles/mybin.dir/srcs/history/reset_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building C object CMakeFiles/mybin.dir/srcs/history/reset_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/history/reset_history.c.o   -c /Users/aroulin/mybin/srcs/history/reset_history.c
 
 CMakeFiles/mybin.dir/srcs/history/reset_history.c.i: cmake_force
@@ -4571,7 +4715,7 @@ CMakeFiles/mybin.dir/srcs/history/reset_history.c.o.provides.build: CMakeFiles/m
 
 CMakeFiles/mybin.dir/srcs/history/write_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/history/write_history.c.o: ../srcs/history/write_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_189) "Building C object CMakeFiles/mybin.dir/srcs/history/write_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building C object CMakeFiles/mybin.dir/srcs/history/write_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/history/write_history.c.o   -c /Users/aroulin/mybin/srcs/history/write_history.c
 
 CMakeFiles/mybin.dir/srcs/history/write_history.c.i: cmake_force
@@ -4595,7 +4739,7 @@ CMakeFiles/mybin.dir/srcs/history/write_history.c.o.provides.build: CMakeFiles/m
 
 CMakeFiles/mybin.dir/srcs/jobs_control/get_real_jobs.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/jobs_control/get_real_jobs.c.o: ../srcs/jobs_control/get_real_jobs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_190) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/get_real_jobs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/get_real_jobs.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/jobs_control/get_real_jobs.c.o   -c /Users/aroulin/mybin/srcs/jobs_control/get_real_jobs.c
 
 CMakeFiles/mybin.dir/srcs/jobs_control/get_real_jobs.c.i: cmake_force
@@ -4619,7 +4763,7 @@ CMakeFiles/mybin.dir/srcs/jobs_control/get_real_jobs.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/jobs_control/jobs_control.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/jobs_control/jobs_control.c.o: ../srcs/jobs_control/jobs_control.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_191) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/jobs_control.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/jobs_control.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/jobs_control/jobs_control.c.o   -c /Users/aroulin/mybin/srcs/jobs_control/jobs_control.c
 
 CMakeFiles/mybin.dir/srcs/jobs_control/jobs_control.c.i: cmake_force
@@ -4643,7 +4787,7 @@ CMakeFiles/mybin.dir/srcs/jobs_control/jobs_control.c.o.provides.build: CMakeFil
 
 CMakeFiles/mybin.dir/srcs/jobs_control/modify_status_jobs.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/jobs_control/modify_status_jobs.c.o: ../srcs/jobs_control/modify_status_jobs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_192) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/modify_status_jobs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/modify_status_jobs.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/jobs_control/modify_status_jobs.c.o   -c /Users/aroulin/mybin/srcs/jobs_control/modify_status_jobs.c
 
 CMakeFiles/mybin.dir/srcs/jobs_control/modify_status_jobs.c.i: cmake_force
@@ -4667,7 +4811,7 @@ CMakeFiles/mybin.dir/srcs/jobs_control/modify_status_jobs.c.o.provides.build: CM
 
 CMakeFiles/mybin.dir/srcs/jobs_control/my_execve.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/jobs_control/my_execve.c.o: ../srcs/jobs_control/my_execve.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_193) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/my_execve.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/my_execve.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/jobs_control/my_execve.c.o   -c /Users/aroulin/mybin/srcs/jobs_control/my_execve.c
 
 CMakeFiles/mybin.dir/srcs/jobs_control/my_execve.c.i: cmake_force
@@ -4691,7 +4835,7 @@ CMakeFiles/mybin.dir/srcs/jobs_control/my_execve.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/mybin.dir/srcs/jobs_control/my_wait.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/jobs_control/my_wait.c.o: ../srcs/jobs_control/my_wait.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_194) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/my_wait.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/my_wait.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/jobs_control/my_wait.c.o   -c /Users/aroulin/mybin/srcs/jobs_control/my_wait.c
 
 CMakeFiles/mybin.dir/srcs/jobs_control/my_wait.c.i: cmake_force
@@ -4715,7 +4859,7 @@ CMakeFiles/mybin.dir/srcs/jobs_control/my_wait.c.o.provides.build: CMakeFiles/my
 
 CMakeFiles/mybin.dir/srcs/jobs_control/print_process.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/jobs_control/print_process.c.o: ../srcs/jobs_control/print_process.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_195) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/print_process.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/print_process.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/jobs_control/print_process.c.o   -c /Users/aroulin/mybin/srcs/jobs_control/print_process.c
 
 CMakeFiles/mybin.dir/srcs/jobs_control/print_process.c.i: cmake_force
@@ -4739,7 +4883,7 @@ CMakeFiles/mybin.dir/srcs/jobs_control/print_process.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/jobs_control/set_process.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/jobs_control/set_process.c.o: ../srcs/jobs_control/set_process.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_196) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/set_process.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/set_process.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/jobs_control/set_process.c.o   -c /Users/aroulin/mybin/srcs/jobs_control/set_process.c
 
 CMakeFiles/mybin.dir/srcs/jobs_control/set_process.c.i: cmake_force
@@ -4763,7 +4907,7 @@ CMakeFiles/mybin.dir/srcs/jobs_control/set_process.c.o.provides.build: CMakeFile
 
 CMakeFiles/mybin.dir/srcs/jobs_control/status_signals.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/jobs_control/status_signals.c.o: ../srcs/jobs_control/status_signals.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_197) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/status_signals.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building C object CMakeFiles/mybin.dir/srcs/jobs_control/status_signals.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/jobs_control/status_signals.c.o   -c /Users/aroulin/mybin/srcs/jobs_control/status_signals.c
 
 CMakeFiles/mybin.dir/srcs/jobs_control/status_signals.c.i: cmake_force
@@ -4787,7 +4931,7 @@ CMakeFiles/mybin.dir/srcs/jobs_control/status_signals.c.o.provides.build: CMakeF
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_completion.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_completion.c.o: ../srcs/memdel_struct/memdel_completion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_198) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_completion.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_completion.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_completion.c.o   -c /Users/aroulin/mybin/srcs/memdel_struct/memdel_completion.c
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_completion.c.i: cmake_force
@@ -4811,7 +4955,7 @@ CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_completion.c.o.provides.build: CM
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_jobs.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_jobs.c.o: ../srcs/memdel_struct/memdel_jobs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_199) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_jobs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_jobs.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_jobs.c.o   -c /Users/aroulin/mybin/srcs/memdel_struct/memdel_jobs.c
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_jobs.c.i: cmake_force
@@ -4835,7 +4979,7 @@ CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_jobs.c.o.provides.build: CMakeFil
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_outstanding.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_outstanding.c.o: ../srcs/memdel_struct/memdel_outstanding.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_200) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_outstanding.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_outstanding.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_outstanding.c.o   -c /Users/aroulin/mybin/srcs/memdel_struct/memdel_outstanding.c
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_outstanding.c.i: cmake_force
@@ -4859,7 +5003,7 @@ CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_outstanding.c.o.provides.build: C
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_read.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_read.c.o: ../srcs/memdel_struct/memdel_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_201) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_read.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_read.c.o   -c /Users/aroulin/mybin/srcs/memdel_struct/memdel_read.c
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_read.c.i: cmake_force
@@ -4883,7 +5027,7 @@ CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_read.c.o.provides.build: CMakeFil
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_search_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_search_history.c.o: ../srcs/memdel_struct/memdel_search_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_202) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_search_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_search_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_search_history.c.o   -c /Users/aroulin/mybin/srcs/memdel_struct/memdel_search_history.c
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_search_history.c.i: cmake_force
@@ -4907,7 +5051,7 @@ CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_search_history.c.o.provides.build
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.o: ../srcs/memdel_struct/memdel_tree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_203) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building C object CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.o   -c /Users/aroulin/mybin/srcs/memdel_struct/memdel_tree.c
 
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.i: cmake_force
@@ -4929,9 +5073,33 @@ CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.o.provides: CMakeFiles/myb
 CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.o.provides.build: CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.o
 
 
+CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o: CMakeFiles/mybin.dir/flags.make
+CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o: ../srcs/parsing/expanding/alias.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o   -c /Users/aroulin/mybin/srcs/parsing/expanding/alias.c
+
+CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/mybin/srcs/parsing/expanding/alias.c > CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.i
+
+CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/mybin/srcs/parsing/expanding/alias.c -o CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.s
+
+CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o.requires:
+
+.PHONY : CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o.requires
+
+CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o.provides: CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o.requires
+	$(MAKE) -f CMakeFiles/mybin.dir/build.make CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o.provides.build
+.PHONY : CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o.provides
+
+CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o.provides.build: CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o
+
+
 CMakeFiles/mybin.dir/srcs/parsing/expanding/argv.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/expanding/argv.c.o: ../srcs/parsing/expanding/argv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_204) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/argv.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/argv.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/expanding/argv.c.o   -c /Users/aroulin/mybin/srcs/parsing/expanding/argv.c
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/argv.c.i: cmake_force
@@ -4955,7 +5123,7 @@ CMakeFiles/mybin.dir/srcs/parsing/expanding/argv.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/argv_tools.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/expanding/argv_tools.c.o: ../srcs/parsing/expanding/argv_tools.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_205) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/argv_tools.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/argv_tools.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/expanding/argv_tools.c.o   -c /Users/aroulin/mybin/srcs/parsing/expanding/argv_tools.c
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/argv_tools.c.i: cmake_force
@@ -4979,7 +5147,7 @@ CMakeFiles/mybin.dir/srcs/parsing/expanding/argv_tools.c.o.provides.build: CMake
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/escape.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/expanding/escape.c.o: ../srcs/parsing/expanding/escape.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_206) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/escape.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/escape.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/expanding/escape.c.o   -c /Users/aroulin/mybin/srcs/parsing/expanding/escape.c
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/escape.c.i: cmake_force
@@ -5003,7 +5171,7 @@ CMakeFiles/mybin.dir/srcs/parsing/expanding/escape.c.o.provides.build: CMakeFile
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/special.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/expanding/special.c.o: ../srcs/parsing/expanding/special.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_207) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/special.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/special.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/expanding/special.c.o   -c /Users/aroulin/mybin/srcs/parsing/expanding/special.c
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/special.c.i: cmake_force
@@ -5027,7 +5195,7 @@ CMakeFiles/mybin.dir/srcs/parsing/expanding/special.c.o.provides.build: CMakeFil
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/split.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/expanding/split.c.o: ../srcs/parsing/expanding/split.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_208) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/split.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/split.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/expanding/split.c.o   -c /Users/aroulin/mybin/srcs/parsing/expanding/split.c
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/split.c.i: cmake_force
@@ -5051,7 +5219,7 @@ CMakeFiles/mybin.dir/srcs/parsing/expanding/split.c.o.provides.build: CMakeFiles
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/split_tools.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/expanding/split_tools.c.o: ../srcs/parsing/expanding/split_tools.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_209) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/split_tools.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/split_tools.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/expanding/split_tools.c.o   -c /Users/aroulin/mybin/srcs/parsing/expanding/split_tools.c
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/split_tools.c.i: cmake_force
@@ -5075,7 +5243,7 @@ CMakeFiles/mybin.dir/srcs/parsing/expanding/split_tools.c.o.provides.build: CMak
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/tilde.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/expanding/tilde.c.o: ../srcs/parsing/expanding/tilde.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_210) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/tilde.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/tilde.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/expanding/tilde.c.o   -c /Users/aroulin/mybin/srcs/parsing/expanding/tilde.c
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/tilde.c.i: cmake_force
@@ -5099,7 +5267,7 @@ CMakeFiles/mybin.dir/srcs/parsing/expanding/tilde.c.o.provides.build: CMakeFiles
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/tools.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/expanding/tools.c.o: ../srcs/parsing/expanding/tools.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_211) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/tools.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/tools.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/expanding/tools.c.o   -c /Users/aroulin/mybin/srcs/parsing/expanding/tools.c
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/tools.c.i: cmake_force
@@ -5123,7 +5291,7 @@ CMakeFiles/mybin.dir/srcs/parsing/expanding/tools.c.o.provides.build: CMakeFiles
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/variable.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/expanding/variable.c.o: ../srcs/parsing/expanding/variable.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_212) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/variable.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building C object CMakeFiles/mybin.dir/srcs/parsing/expanding/variable.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/expanding/variable.c.o   -c /Users/aroulin/mybin/srcs/parsing/expanding/variable.c
 
 CMakeFiles/mybin.dir/srcs/parsing/expanding/variable.c.i: cmake_force
@@ -5147,7 +5315,7 @@ CMakeFiles/mybin.dir/srcs/parsing/expanding/variable.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/parsing/lexing/lexer.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/lexing/lexer.c.o: ../srcs/parsing/lexing/lexer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_213) "Building C object CMakeFiles/mybin.dir/srcs/parsing/lexing/lexer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building C object CMakeFiles/mybin.dir/srcs/parsing/lexing/lexer.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/lexing/lexer.c.o   -c /Users/aroulin/mybin/srcs/parsing/lexing/lexer.c
 
 CMakeFiles/mybin.dir/srcs/parsing/lexing/lexer.c.i: cmake_force
@@ -5171,7 +5339,7 @@ CMakeFiles/mybin.dir/srcs/parsing/lexing/lexer.c.o.provides.build: CMakeFiles/my
 
 CMakeFiles/mybin.dir/srcs/parsing/lexing/recognition.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/lexing/recognition.c.o: ../srcs/parsing/lexing/recognition.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_214) "Building C object CMakeFiles/mybin.dir/srcs/parsing/lexing/recognition.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building C object CMakeFiles/mybin.dir/srcs/parsing/lexing/recognition.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/lexing/recognition.c.o   -c /Users/aroulin/mybin/srcs/parsing/lexing/recognition.c
 
 CMakeFiles/mybin.dir/srcs/parsing/lexing/recognition.c.i: cmake_force
@@ -5195,7 +5363,7 @@ CMakeFiles/mybin.dir/srcs/parsing/lexing/recognition.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/parsing/lexing/regular_tokenisation.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/lexing/regular_tokenisation.c.o: ../srcs/parsing/lexing/regular_tokenisation.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_215) "Building C object CMakeFiles/mybin.dir/srcs/parsing/lexing/regular_tokenisation.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building C object CMakeFiles/mybin.dir/srcs/parsing/lexing/regular_tokenisation.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/lexing/regular_tokenisation.c.o   -c /Users/aroulin/mybin/srcs/parsing/lexing/regular_tokenisation.c
 
 CMakeFiles/mybin.dir/srcs/parsing/lexing/regular_tokenisation.c.i: cmake_force
@@ -5219,7 +5387,7 @@ CMakeFiles/mybin.dir/srcs/parsing/lexing/regular_tokenisation.c.o.provides.build
 
 CMakeFiles/mybin.dir/srcs/parsing/lexing/special_tokenisation.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/lexing/special_tokenisation.c.o: ../srcs/parsing/lexing/special_tokenisation.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_216) "Building C object CMakeFiles/mybin.dir/srcs/parsing/lexing/special_tokenisation.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building C object CMakeFiles/mybin.dir/srcs/parsing/lexing/special_tokenisation.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/lexing/special_tokenisation.c.o   -c /Users/aroulin/mybin/srcs/parsing/lexing/special_tokenisation.c
 
 CMakeFiles/mybin.dir/srcs/parsing/lexing/special_tokenisation.c.i: cmake_force
@@ -5243,7 +5411,7 @@ CMakeFiles/mybin.dir/srcs/parsing/lexing/special_tokenisation.c.o.provides.build
 
 CMakeFiles/mybin.dir/srcs/parsing/parsing/parsing.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/parsing/parsing.c.o: ../srcs/parsing/parsing/parsing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_217) "Building C object CMakeFiles/mybin.dir/srcs/parsing/parsing/parsing.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building C object CMakeFiles/mybin.dir/srcs/parsing/parsing/parsing.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/parsing/parsing.c.o   -c /Users/aroulin/mybin/srcs/parsing/parsing/parsing.c
 
 CMakeFiles/mybin.dir/srcs/parsing/parsing/parsing.c.i: cmake_force
@@ -5267,7 +5435,7 @@ CMakeFiles/mybin.dir/srcs/parsing/parsing/parsing.c.o.provides.build: CMakeFiles
 
 CMakeFiles/mybin.dir/srcs/parsing/tools/error.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/tools/error.c.o: ../srcs/parsing/tools/error.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_218) "Building C object CMakeFiles/mybin.dir/srcs/parsing/tools/error.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building C object CMakeFiles/mybin.dir/srcs/parsing/tools/error.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/tools/error.c.o   -c /Users/aroulin/mybin/srcs/parsing/tools/error.c
 
 CMakeFiles/mybin.dir/srcs/parsing/tools/error.c.i: cmake_force
@@ -5291,7 +5459,7 @@ CMakeFiles/mybin.dir/srcs/parsing/tools/error.c.o.provides.build: CMakeFiles/myb
 
 CMakeFiles/mybin.dir/srcs/parsing/tools/list.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/tools/list.c.o: ../srcs/parsing/tools/list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_219) "Building C object CMakeFiles/mybin.dir/srcs/parsing/tools/list.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Building C object CMakeFiles/mybin.dir/srcs/parsing/tools/list.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/tools/list.c.o   -c /Users/aroulin/mybin/srcs/parsing/tools/list.c
 
 CMakeFiles/mybin.dir/srcs/parsing/tools/list.c.i: cmake_force
@@ -5315,7 +5483,7 @@ CMakeFiles/mybin.dir/srcs/parsing/tools/list.c.o.provides.build: CMakeFiles/mybi
 
 CMakeFiles/mybin.dir/srcs/parsing/parsing.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/parsing/parsing.c.o: ../srcs/parsing/parsing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_220) "Building C object CMakeFiles/mybin.dir/srcs/parsing/parsing.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_227) "Building C object CMakeFiles/mybin.dir/srcs/parsing/parsing.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/parsing/parsing.c.o   -c /Users/aroulin/mybin/srcs/parsing/parsing.c
 
 CMakeFiles/mybin.dir/srcs/parsing/parsing.c.i: cmake_force
@@ -5339,7 +5507,7 @@ CMakeFiles/mybin.dir/srcs/parsing/parsing.c.o.provides.build: CMakeFiles/mybin.d
 
 CMakeFiles/mybin.dir/srcs/read/completion/check_binary_path.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/check_binary_path.c.o: ../srcs/read/completion/check_binary_path.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_221) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/check_binary_path.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_228) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/check_binary_path.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/check_binary_path.c.o   -c /Users/aroulin/mybin/srcs/read/completion/check_binary_path.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/check_binary_path.c.i: cmake_force
@@ -5363,7 +5531,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/check_binary_path.c.o.provides.build: 
 
 CMakeFiles/mybin.dir/srcs/read/completion/color_completion.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/color_completion.c.o: ../srcs/read/completion/color_completion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_222) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/color_completion.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_229) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/color_completion.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/color_completion.c.o   -c /Users/aroulin/mybin/srcs/read/completion/color_completion.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/color_completion.c.i: cmake_force
@@ -5387,7 +5555,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/color_completion.c.o.provides.build: C
 
 CMakeFiles/mybin.dir/srcs/read/completion/complete_binary.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/complete_binary.c.o: ../srcs/read/completion/complete_binary.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_223) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/complete_binary.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_230) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/complete_binary.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/complete_binary.c.o   -c /Users/aroulin/mybin/srcs/read/completion/complete_binary.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/complete_binary.c.i: cmake_force
@@ -5411,7 +5579,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/complete_binary.c.o.provides.build: CM
 
 CMakeFiles/mybin.dir/srcs/read/completion/complete_path.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/complete_path.c.o: ../srcs/read/completion/complete_path.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_224) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/complete_path.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_231) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/complete_path.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/complete_path.c.o   -c /Users/aroulin/mybin/srcs/read/completion/complete_path.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/complete_path.c.i: cmake_force
@@ -5435,7 +5603,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/complete_path.c.o.provides.build: CMak
 
 CMakeFiles/mybin.dir/srcs/read/completion/completion.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/completion.c.o: ../srcs/read/completion/completion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_225) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/completion.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/completion.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/completion.c.o   -c /Users/aroulin/mybin/srcs/read/completion/completion.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/completion.c.i: cmake_force
@@ -5459,7 +5627,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/completion.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/read/completion/continue_completion.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/continue_completion.c.o: ../srcs/read/completion/continue_completion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_226) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/continue_completion.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/continue_completion.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/continue_completion.c.o   -c /Users/aroulin/mybin/srcs/read/completion/continue_completion.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/continue_completion.c.i: cmake_force
@@ -5483,7 +5651,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/continue_completion.c.o.provides.build
 
 CMakeFiles/mybin.dir/srcs/read/completion/create_comp.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/create_comp.c.o: ../srcs/read/completion/create_comp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_227) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/create_comp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/create_comp.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/create_comp.c.o   -c /Users/aroulin/mybin/srcs/read/completion/create_comp.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/create_comp.c.i: cmake_force
@@ -5507,7 +5675,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/create_comp.c.o.provides.build: CMakeF
 
 CMakeFiles/mybin.dir/srcs/read/completion/init_completion.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/init_completion.c.o: ../srcs/read/completion/init_completion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_228) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/init_completion.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_235) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/init_completion.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/init_completion.c.o   -c /Users/aroulin/mybin/srcs/read/completion/init_completion.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/init_completion.c.i: cmake_force
@@ -5531,7 +5699,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/init_completion.c.o.provides.build: CM
 
 CMakeFiles/mybin.dir/srcs/read/completion/init_files.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/init_files.c.o: ../srcs/read/completion/init_files.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_229) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/init_files.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_236) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/init_files.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/init_files.c.o   -c /Users/aroulin/mybin/srcs/read/completion/init_files.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/init_files.c.i: cmake_force
@@ -5555,7 +5723,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/init_files.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/read/completion/init_tab.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/init_tab.c.o: ../srcs/read/completion/init_tab.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_230) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/init_tab.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_237) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/init_tab.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/init_tab.c.o   -c /Users/aroulin/mybin/srcs/read/completion/init_tab.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/init_tab.c.i: cmake_force
@@ -5579,7 +5747,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/init_tab.c.o.provides.build: CMakeFile
 
 CMakeFiles/mybin.dir/srcs/read/completion/move_horizontal.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/move_horizontal.c.o: ../srcs/read/completion/move_horizontal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_231) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/move_horizontal.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_238) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/move_horizontal.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/move_horizontal.c.o   -c /Users/aroulin/mybin/srcs/read/completion/move_horizontal.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/move_horizontal.c.i: cmake_force
@@ -5603,7 +5771,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/move_horizontal.c.o.provides.build: CM
 
 CMakeFiles/mybin.dir/srcs/read/completion/move_vertical.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/move_vertical.c.o: ../srcs/read/completion/move_vertical.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_232) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/move_vertical.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_239) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/move_vertical.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/move_vertical.c.o   -c /Users/aroulin/mybin/srcs/read/completion/move_vertical.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/move_vertical.c.i: cmake_force
@@ -5627,7 +5795,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/move_vertical.c.o.provides.build: CMak
 
 CMakeFiles/mybin.dir/srcs/read/completion/my_togo.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/my_togo.c.o: ../srcs/read/completion/my_togo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_233) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/my_togo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_240) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/my_togo.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/my_togo.c.o   -c /Users/aroulin/mybin/srcs/read/completion/my_togo.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/my_togo.c.i: cmake_force
@@ -5651,7 +5819,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/my_togo.c.o.provides.build: CMakeFiles
 
 CMakeFiles/mybin.dir/srcs/read/completion/print_tab.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/print_tab.c.o: ../srcs/read/completion/print_tab.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_234) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/print_tab.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_241) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/print_tab.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/print_tab.c.o   -c /Users/aroulin/mybin/srcs/read/completion/print_tab.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/print_tab.c.i: cmake_force
@@ -5675,7 +5843,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/print_tab.c.o.provides.build: CMakeFil
 
 CMakeFiles/mybin.dir/srcs/read/completion/update_index.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/completion/update_index.c.o: ../srcs/read/completion/update_index.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_235) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/update_index.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_242) "Building C object CMakeFiles/mybin.dir/srcs/read/completion/update_index.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/completion/update_index.c.o   -c /Users/aroulin/mybin/srcs/read/completion/update_index.c
 
 CMakeFiles/mybin.dir/srcs/read/completion/update_index.c.i: cmake_force
@@ -5699,7 +5867,7 @@ CMakeFiles/mybin.dir/srcs/read/completion/update_index.c.o.provides.build: CMake
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_arrow.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_arrow.c.o: ../srcs/read/key_/key_arrow.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_236) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_arrow.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_243) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_arrow.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_arrow.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_arrow.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_arrow.c.i: cmake_force
@@ -5723,7 +5891,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_arrow.c.o.provides.build: CMakeFiles/myb
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_capitalize_word.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_capitalize_word.c.o: ../srcs/read/key_/key_capitalize_word.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_237) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_capitalize_word.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_244) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_capitalize_word.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_capitalize_word.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_capitalize_word.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_capitalize_word.c.i: cmake_force
@@ -5747,7 +5915,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_capitalize_word.c.o.provides.build: CMak
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_clear.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_clear.c.o: ../srcs/read/key_/key_clear.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_238) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_clear.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_245) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_clear.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_clear.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_clear.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_clear.c.i: cmake_force
@@ -5771,7 +5939,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_clear.c.o.provides.build: CMakeFiles/myb
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_del_buff.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_del_buff.c.o: ../srcs/read/key_/key_del_buff.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_239) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_del_buff.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_246) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_del_buff.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_del_buff.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_del_buff.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_del_buff.c.i: cmake_force
@@ -5795,7 +5963,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_del_buff.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_delete.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_delete.c.o: ../srcs/read/key_/key_delete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_240) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_delete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_247) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_delete.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_delete.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_delete.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_delete.c.i: cmake_force
@@ -5819,7 +5987,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_delete.c.o.provides.build: CMakeFiles/my
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_delete_here.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_delete_here.c.o: ../srcs/read/key_/key_delete_here.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_241) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_delete_here.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_248) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_delete_here.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_delete_here.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_delete_here.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_delete_here.c.i: cmake_force
@@ -5843,7 +6011,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_delete_here.c.o.provides.build: CMakeFil
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_downcase_word.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_downcase_word.c.o: ../srcs/read/key_/key_downcase_word.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_242) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_downcase_word.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_249) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_downcase_word.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_downcase_word.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_downcase_word.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_downcase_word.c.i: cmake_force
@@ -5867,7 +6035,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_downcase_word.c.o.provides.build: CMakeF
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_enter.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_enter.c.o: ../srcs/read/key_/key_enter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_243) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_enter.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_250) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_enter.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_enter.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_enter.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_enter.c.i: cmake_force
@@ -5891,7 +6059,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_enter.c.o.provides.build: CMakeFiles/myb
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_eof.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_eof.c.o: ../srcs/read/key_/key_eof.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_244) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_eof.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_251) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_eof.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_eof.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_eof.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_eof.c.i: cmake_force
@@ -5915,7 +6083,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_eof.c.o.provides.build: CMakeFiles/mybin
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_home_end.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_home_end.c.o: ../srcs/read/key_/key_home_end.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_245) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_home_end.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_252) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_home_end.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_home_end.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_home_end.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_home_end.c.i: cmake_force
@@ -5939,7 +6107,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_home_end.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_interrupt.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_interrupt.c.o: ../srcs/read/key_/key_interrupt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_246) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_interrupt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_253) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_interrupt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_interrupt.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_interrupt.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_interrupt.c.i: cmake_force
@@ -5963,7 +6131,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_interrupt.c.o.provides.build: CMakeFiles
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_kill_k.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_kill_k.c.o: ../srcs/read/key_/key_kill_k.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_247) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_kill_k.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_254) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_kill_k.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_kill_k.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_kill_k.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_kill_k.c.i: cmake_force
@@ -5987,7 +6155,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_kill_k.c.o.provides.build: CMakeFiles/my
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_kill_prev_word.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_kill_prev_word.c.o: ../srcs/read/key_/key_kill_prev_word.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_248) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_kill_prev_word.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_255) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_kill_prev_word.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_kill_prev_word.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_kill_prev_word.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_kill_prev_word.c.i: cmake_force
@@ -6011,7 +6179,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_kill_prev_word.c.o.provides.build: CMake
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_kill_word.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_kill_word.c.o: ../srcs/read/key_/key_kill_word.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_249) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_kill_word.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_256) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_kill_word.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_kill_word.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_kill_word.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_kill_word.c.i: cmake_force
@@ -6035,7 +6203,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_kill_word.c.o.provides.build: CMakeFiles
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_print.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_print.c.o: ../srcs/read/key_/key_print.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_250) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_print.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_257) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_print.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_print.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_print.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_print.c.i: cmake_force
@@ -6059,7 +6227,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_print.c.o.provides.build: CMakeFiles/myb
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_refresh.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_refresh.c.o: ../srcs/read/key_/key_refresh.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_251) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_refresh.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_258) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_refresh.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_refresh.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_refresh.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_refresh.c.i: cmake_force
@@ -6083,7 +6251,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_refresh.c.o.provides.build: CMakeFiles/m
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_reprint.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_reprint.c.o: ../srcs/read/key_/key_reprint.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_252) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_reprint.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_259) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_reprint.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_reprint.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_reprint.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_reprint.c.i: cmake_force
@@ -6107,7 +6275,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_reprint.c.o.provides.build: CMakeFiles/m
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_search_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_search_history.c.o: ../srcs/read/key_/key_search_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_253) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_search_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_260) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_search_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_search_history.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_search_history.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_search_history.c.i: cmake_force
@@ -6131,7 +6299,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_search_history.c.o.provides.build: CMake
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_shift.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_shift.c.o: ../srcs/read/key_/key_shift.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_254) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_shift.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_261) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_shift.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_shift.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_shift.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_shift.c.i: cmake_force
@@ -6155,7 +6323,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_shift.c.o.provides.build: CMakeFiles/myb
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_tabulation.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_tabulation.c.o: ../srcs/read/key_/key_tabulation.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_255) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_tabulation.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_262) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_tabulation.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_tabulation.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_tabulation.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_tabulation.c.i: cmake_force
@@ -6179,7 +6347,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_tabulation.c.o.provides.build: CMakeFile
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_undo.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_undo.c.o: ../srcs/read/key_/key_undo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_256) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_undo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_263) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_undo.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_undo.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_undo.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_undo.c.i: cmake_force
@@ -6203,7 +6371,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_undo.c.o.provides.build: CMakeFiles/mybi
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_upcase_word.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_upcase_word.c.o: ../srcs/read/key_/key_upcase_word.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_257) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_upcase_word.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_264) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_upcase_word.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_upcase_word.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_upcase_word.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_upcase_word.c.i: cmake_force
@@ -6227,7 +6395,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_upcase_word.c.o.provides.build: CMakeFil
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_yank.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/key_/key_yank.c.o: ../srcs/read/key_/key_yank.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_258) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_yank.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_265) "Building C object CMakeFiles/mybin.dir/srcs/read/key_/key_yank.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/key_/key_yank.c.o   -c /Users/aroulin/mybin/srcs/read/key_/key_yank.c
 
 CMakeFiles/mybin.dir/srcs/read/key_/key_yank.c.i: cmake_force
@@ -6251,7 +6419,7 @@ CMakeFiles/mybin.dir/srcs/read/key_/key_yank.c.o.provides.build: CMakeFiles/mybi
 
 CMakeFiles/mybin.dir/srcs/read/other_read/check_cmd.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/check_cmd.c.o: ../srcs/read/other_read/check_cmd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_259) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/check_cmd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_266) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/check_cmd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/check_cmd.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/check_cmd.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/check_cmd.c.i: cmake_force
@@ -6275,7 +6443,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/check_cmd.c.o.provides.build: CMakeFil
 
 CMakeFiles/mybin.dir/srcs/read/other_read/cursor_column.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/cursor_column.c.o: ../srcs/read/other_read/cursor_column.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_260) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/cursor_column.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_267) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/cursor_column.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/cursor_column.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/cursor_column.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/cursor_column.c.i: cmake_force
@@ -6299,7 +6467,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/cursor_column.c.o.provides.build: CMak
 
 CMakeFiles/mybin.dir/srcs/read/other_read/finish_read_std.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/finish_read_std.c.o: ../srcs/read/other_read/finish_read_std.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_261) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/finish_read_std.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_268) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/finish_read_std.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/finish_read_std.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/finish_read_std.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/finish_read_std.c.i: cmake_force
@@ -6323,7 +6491,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/finish_read_std.c.o.provides.build: CM
 
 CMakeFiles/mybin.dir/srcs/read/other_read/first_cmd.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/first_cmd.c.o: ../srcs/read/other_read/first_cmd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_262) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/first_cmd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_269) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/first_cmd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/first_cmd.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/first_cmd.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/first_cmd.c.i: cmake_force
@@ -6347,7 +6515,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/first_cmd.c.o.provides.build: CMakeFil
 
 CMakeFiles/mybin.dir/srcs/read/other_read/gbl_save_read.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/gbl_save_read.c.o: ../srcs/read/other_read/gbl_save_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_263) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/gbl_save_read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_270) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/gbl_save_read.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/gbl_save_read.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/gbl_save_read.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/gbl_save_read.c.i: cmake_force
@@ -6371,7 +6539,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/gbl_save_read.c.o.provides.build: CMak
 
 CMakeFiles/mybin.dir/srcs/read/other_read/get_len_prompt.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/get_len_prompt.c.o: ../srcs/read/other_read/get_len_prompt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_264) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/get_len_prompt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_271) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/get_len_prompt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/get_len_prompt.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/get_len_prompt.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/get_len_prompt.c.i: cmake_force
@@ -6395,7 +6563,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/get_len_prompt.c.o.provides.build: CMa
 
 CMakeFiles/mybin.dir/srcs/read/other_read/init_prompt.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/init_prompt.c.o: ../srcs/read/other_read/init_prompt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_265) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/init_prompt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_272) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/init_prompt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/init_prompt.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/init_prompt.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/init_prompt.c.i: cmake_force
@@ -6419,7 +6587,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/init_prompt.c.o.provides.build: CMakeF
 
 CMakeFiles/mybin.dir/srcs/read/other_read/init_struct_for_read.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/init_struct_for_read.c.o: ../srcs/read/other_read/init_struct_for_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_266) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/init_struct_for_read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_273) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/init_struct_for_read.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/init_struct_for_read.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/init_struct_for_read.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/init_struct_for_read.c.i: cmake_force
@@ -6443,7 +6611,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/init_struct_for_read.c.o.provides.buil
 
 CMakeFiles/mybin.dir/srcs/read/other_read/keep_buffer.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/keep_buffer.c.o: ../srcs/read/other_read/keep_buffer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_267) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/keep_buffer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_274) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/keep_buffer.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/keep_buffer.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/keep_buffer.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/keep_buffer.c.i: cmake_force
@@ -6467,7 +6635,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/keep_buffer.c.o.provides.build: CMakeF
 
 CMakeFiles/mybin.dir/srcs/read/other_read/last_cmd.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/last_cmd.c.o: ../srcs/read/other_read/last_cmd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_268) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/last_cmd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_275) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/last_cmd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/last_cmd.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/last_cmd.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/last_cmd.c.i: cmake_force
@@ -6491,7 +6659,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/last_cmd.c.o.provides.build: CMakeFile
 
 CMakeFiles/mybin.dir/srcs/read/other_read/my_prompt.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/my_prompt.c.o: ../srcs/read/other_read/my_prompt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_269) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/my_prompt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_276) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/my_prompt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/my_prompt.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/my_prompt.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/my_prompt.c.i: cmake_force
@@ -6515,7 +6683,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/my_prompt.c.o.provides.build: CMakeFil
 
 CMakeFiles/mybin.dir/srcs/read/other_read/my_put.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/my_put.c.o: ../srcs/read/other_read/my_put.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_270) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/my_put.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_277) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/my_put.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/my_put.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/my_put.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/my_put.c.i: cmake_force
@@ -6539,7 +6707,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/my_put.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/mybin.dir/srcs/read/other_read/my_tgetnum.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/my_tgetnum.c.o: ../srcs/read/other_read/my_tgetnum.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_271) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/my_tgetnum.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_278) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/my_tgetnum.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/my_tgetnum.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/my_tgetnum.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/my_tgetnum.c.i: cmake_force
@@ -6563,7 +6731,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/my_tgetnum.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/read/other_read/print_struct.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/print_struct.c.o: ../srcs/read/other_read/print_struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_272) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/print_struct.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_279) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/print_struct.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/print_struct.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/print_struct.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/print_struct.c.i: cmake_force
@@ -6587,7 +6755,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/print_struct.c.o.provides.build: CMake
 
 CMakeFiles/mybin.dir/srcs/read/other_read/prompt.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/prompt.c.o: ../srcs/read/other_read/prompt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_273) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/prompt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_280) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/prompt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/prompt.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/prompt.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/prompt.c.i: cmake_force
@@ -6611,7 +6779,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/prompt.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/mybin.dir/srcs/read/other_read/read_gates.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/read_gates.c.o: ../srcs/read/other_read/read_gates.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_274) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/read_gates.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_281) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/read_gates.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/read_gates.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/read_gates.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/read_gates.c.i: cmake_force
@@ -6635,7 +6803,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/read_gates.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/read/other_read/read_stdin.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/read_stdin.c.o: ../srcs/read/other_read/read_stdin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_275) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/read_stdin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_282) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/read_stdin.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/read_stdin.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/read_stdin.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/read_stdin.c.i: cmake_force
@@ -6659,7 +6827,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/read_stdin.c.o.provides.build: CMakeFi
 
 CMakeFiles/mybin.dir/srcs/read/other_read/refresh_command.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/refresh_command.c.o: ../srcs/read/other_read/refresh_command.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_276) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/refresh_command.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_283) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/refresh_command.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/refresh_command.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/refresh_command.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/refresh_command.c.i: cmake_force
@@ -6683,7 +6851,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/refresh_command.c.o.provides.build: CM
 
 CMakeFiles/mybin.dir/srcs/read/other_read/restore_cursor.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/restore_cursor.c.o: ../srcs/read/other_read/restore_cursor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_277) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/restore_cursor.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_284) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/restore_cursor.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/restore_cursor.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/restore_cursor.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/restore_cursor.c.i: cmake_force
@@ -6707,7 +6875,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/restore_cursor.c.o.provides.build: CMa
 
 CMakeFiles/mybin.dir/srcs/read/other_read/signal_reception.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/other_read/signal_reception.c.o: ../srcs/read/other_read/signal_reception.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_278) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/signal_reception.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_285) "Building C object CMakeFiles/mybin.dir/srcs/read/other_read/signal_reception.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/other_read/signal_reception.c.o   -c /Users/aroulin/mybin/srcs/read/other_read/signal_reception.c
 
 CMakeFiles/mybin.dir/srcs/read/other_read/signal_reception.c.i: cmake_force
@@ -6731,7 +6899,7 @@ CMakeFiles/mybin.dir/srcs/read/other_read/signal_reception.c.o.provides.build: C
 
 CMakeFiles/mybin.dir/srcs/read/outstanding/add_outstanding.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/outstanding/add_outstanding.c.o: ../srcs/read/outstanding/add_outstanding.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_279) "Building C object CMakeFiles/mybin.dir/srcs/read/outstanding/add_outstanding.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_286) "Building C object CMakeFiles/mybin.dir/srcs/read/outstanding/add_outstanding.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/outstanding/add_outstanding.c.o   -c /Users/aroulin/mybin/srcs/read/outstanding/add_outstanding.c
 
 CMakeFiles/mybin.dir/srcs/read/outstanding/add_outstanding.c.i: cmake_force
@@ -6755,7 +6923,7 @@ CMakeFiles/mybin.dir/srcs/read/outstanding/add_outstanding.c.o.provides.build: C
 
 CMakeFiles/mybin.dir/srcs/read/outstanding/get_os_pointer.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/outstanding/get_os_pointer.c.o: ../srcs/read/outstanding/get_os_pointer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_280) "Building C object CMakeFiles/mybin.dir/srcs/read/outstanding/get_os_pointer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_287) "Building C object CMakeFiles/mybin.dir/srcs/read/outstanding/get_os_pointer.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/outstanding/get_os_pointer.c.o   -c /Users/aroulin/mybin/srcs/read/outstanding/get_os_pointer.c
 
 CMakeFiles/mybin.dir/srcs/read/outstanding/get_os_pointer.c.i: cmake_force
@@ -6779,7 +6947,7 @@ CMakeFiles/mybin.dir/srcs/read/outstanding/get_os_pointer.c.o.provides.build: CM
 
 CMakeFiles/mybin.dir/srcs/read/search_history/compare_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/search_history/compare_history.c.o: ../srcs/read/search_history/compare_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_281) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/compare_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_288) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/compare_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/search_history/compare_history.c.o   -c /Users/aroulin/mybin/srcs/read/search_history/compare_history.c
 
 CMakeFiles/mybin.dir/srcs/read/search_history/compare_history.c.i: cmake_force
@@ -6803,7 +6971,7 @@ CMakeFiles/mybin.dir/srcs/read/search_history/compare_history.c.o.provides.build
 
 CMakeFiles/mybin.dir/srcs/read/search_history/compare_list.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/search_history/compare_list.c.o: ../srcs/read/search_history/compare_list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_282) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/compare_list.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_289) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/compare_list.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/search_history/compare_list.c.o   -c /Users/aroulin/mybin/srcs/read/search_history/compare_list.c
 
 CMakeFiles/mybin.dir/srcs/read/search_history/compare_list.c.i: cmake_force
@@ -6827,7 +6995,7 @@ CMakeFiles/mybin.dir/srcs/read/search_history/compare_list.c.o.provides.build: C
 
 CMakeFiles/mybin.dir/srcs/read/search_history/first_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/search_history/first_history.c.o: ../srcs/read/search_history/first_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_283) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/first_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_290) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/first_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/search_history/first_history.c.o   -c /Users/aroulin/mybin/srcs/read/search_history/first_history.c
 
 CMakeFiles/mybin.dir/srcs/read/search_history/first_history.c.i: cmake_force
@@ -6851,7 +7019,7 @@ CMakeFiles/mybin.dir/srcs/read/search_history/first_history.c.o.provides.build: 
 
 CMakeFiles/mybin.dir/srcs/read/search_history/init_research.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/search_history/init_research.c.o: ../srcs/read/search_history/init_research.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_284) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/init_research.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_291) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/init_research.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/search_history/init_research.c.o   -c /Users/aroulin/mybin/srcs/read/search_history/init_research.c
 
 CMakeFiles/mybin.dir/srcs/read/search_history/init_research.c.i: cmake_force
@@ -6875,7 +7043,7 @@ CMakeFiles/mybin.dir/srcs/read/search_history/init_research.c.o.provides.build: 
 
 CMakeFiles/mybin.dir/srcs/read/search_history/last_result.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/search_history/last_result.c.o: ../srcs/read/search_history/last_result.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_285) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/last_result.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_292) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/last_result.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/search_history/last_result.c.o   -c /Users/aroulin/mybin/srcs/read/search_history/last_result.c
 
 CMakeFiles/mybin.dir/srcs/read/search_history/last_result.c.i: cmake_force
@@ -6899,7 +7067,7 @@ CMakeFiles/mybin.dir/srcs/read/search_history/last_result.c.o.provides.build: CM
 
 CMakeFiles/mybin.dir/srcs/read/search_history/manage_cursor_prompt.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/search_history/manage_cursor_prompt.c.o: ../srcs/read/search_history/manage_cursor_prompt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_286) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/manage_cursor_prompt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_293) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/manage_cursor_prompt.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/search_history/manage_cursor_prompt.c.o   -c /Users/aroulin/mybin/srcs/read/search_history/manage_cursor_prompt.c
 
 CMakeFiles/mybin.dir/srcs/read/search_history/manage_cursor_prompt.c.i: cmake_force
@@ -6923,7 +7091,7 @@ CMakeFiles/mybin.dir/srcs/read/search_history/manage_cursor_prompt.c.o.provides.
 
 CMakeFiles/mybin.dir/srcs/read/search_history/print_struct_history.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/read/search_history/print_struct_history.c.o: ../srcs/read/search_history/print_struct_history.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_287) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/print_struct_history.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_294) "Building C object CMakeFiles/mybin.dir/srcs/read/search_history/print_struct_history.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/read/search_history/print_struct_history.c.o   -c /Users/aroulin/mybin/srcs/read/search_history/print_struct_history.c
 
 CMakeFiles/mybin.dir/srcs/read/search_history/print_struct_history.c.i: cmake_force
@@ -6947,7 +7115,7 @@ CMakeFiles/mybin.dir/srcs/read/search_history/print_struct_history.c.o.provides.
 
 CMakeFiles/mybin.dir/srcs/signal/ft_signal.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/signal/ft_signal.c.o: ../srcs/signal/ft_signal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_288) "Building C object CMakeFiles/mybin.dir/srcs/signal/ft_signal.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_295) "Building C object CMakeFiles/mybin.dir/srcs/signal/ft_signal.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/signal/ft_signal.c.o   -c /Users/aroulin/mybin/srcs/signal/ft_signal.c
 
 CMakeFiles/mybin.dir/srcs/signal/ft_signal.c.i: cmake_force
@@ -6971,7 +7139,7 @@ CMakeFiles/mybin.dir/srcs/signal/ft_signal.c.o.provides.build: CMakeFiles/mybin.
 
 CMakeFiles/mybin.dir/srcs/term/init_fd.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/term/init_fd.c.o: ../srcs/term/init_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_289) "Building C object CMakeFiles/mybin.dir/srcs/term/init_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_296) "Building C object CMakeFiles/mybin.dir/srcs/term/init_fd.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/term/init_fd.c.o   -c /Users/aroulin/mybin/srcs/term/init_fd.c
 
 CMakeFiles/mybin.dir/srcs/term/init_fd.c.i: cmake_force
@@ -6995,7 +7163,7 @@ CMakeFiles/mybin.dir/srcs/term/init_fd.c.o.provides.build: CMakeFiles/mybin.dir/
 
 CMakeFiles/mybin.dir/srcs/term/init_term.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/term/init_term.c.o: ../srcs/term/init_term.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_290) "Building C object CMakeFiles/mybin.dir/srcs/term/init_term.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_297) "Building C object CMakeFiles/mybin.dir/srcs/term/init_term.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/term/init_term.c.o   -c /Users/aroulin/mybin/srcs/term/init_term.c
 
 CMakeFiles/mybin.dir/srcs/term/init_term.c.i: cmake_force
@@ -7019,7 +7187,7 @@ CMakeFiles/mybin.dir/srcs/term/init_term.c.o.provides.build: CMakeFiles/mybin.di
 
 CMakeFiles/mybin.dir/srcs/term/keep_term_struct.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/term/keep_term_struct.c.o: ../srcs/term/keep_term_struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_291) "Building C object CMakeFiles/mybin.dir/srcs/term/keep_term_struct.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_298) "Building C object CMakeFiles/mybin.dir/srcs/term/keep_term_struct.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/term/keep_term_struct.c.o   -c /Users/aroulin/mybin/srcs/term/keep_term_struct.c
 
 CMakeFiles/mybin.dir/srcs/term/keep_term_struct.c.i: cmake_force
@@ -7043,7 +7211,7 @@ CMakeFiles/mybin.dir/srcs/term/keep_term_struct.c.o.provides.build: CMakeFiles/m
 
 CMakeFiles/mybin.dir/srcs/term/set_term.c.o: CMakeFiles/mybin.dir/flags.make
 CMakeFiles/mybin.dir/srcs/term/set_term.c.o: ../srcs/term/set_term.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_292) "Building C object CMakeFiles/mybin.dir/srcs/term/set_term.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_299) "Building C object CMakeFiles/mybin.dir/srcs/term/set_term.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/mybin.dir/srcs/term/set_term.c.o   -c /Users/aroulin/mybin/srcs/term/set_term.c
 
 CMakeFiles/mybin.dir/srcs/term/set_term.c.i: cmake_force
@@ -7181,6 +7349,9 @@ mybin_OBJECTS = \
 "CMakeFiles/mybin.dir/libs/printf/srcs/ft_vector.c.o" \
 "CMakeFiles/mybin.dir/libs/printf/srcs/ft_wstr_conv.c.o" \
 "CMakeFiles/mybin.dir/libs/printf/srcs/ft_xou_conv.c.o" \
+"CMakeFiles/mybin.dir/srcs/alias/alias.c.o" \
+"CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o" \
+"CMakeFiles/mybin.dir/srcs/alias/tools.c.o" \
 "CMakeFiles/mybin.dir/srcs/binary_tree/binary_tree.c.o" \
 "CMakeFiles/mybin.dir/srcs/cores/exit.c.o" \
 "CMakeFiles/mybin.dir/srcs/cores/insert_one_line.c.o" \
@@ -7195,7 +7366,9 @@ mybin_OBJECTS = \
 "CMakeFiles/mybin.dir/srcs/error_function/bip.c.o" \
 "CMakeFiles/mybin.dir/srcs/error_function/usage_builtins.c.o" \
 "CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.o" \
+"CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o" \
 "CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.o" \
+"CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o" \
 "CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_cd.c.o" \
 "CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_data.c.o" \
 "CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_echo.c.o" \
@@ -7225,6 +7398,7 @@ mybin_OBJECTS = \
 "CMakeFiles/mybin.dir/srcs/execution/executing_function/op_or_if.c.o" \
 "CMakeFiles/mybin.dir/srcs/execution/executing_function/op_pipeline.c.o" \
 "CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.o" \
+"CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o" \
 "CMakeFiles/mybin.dir/srcs/execution/tools/check_path.c.o" \
 "CMakeFiles/mybin.dir/srcs/execution/tools/check_tree_path.c.o" \
 "CMakeFiles/mybin.dir/srcs/execution/tools/do_heredoc.c.o" \
@@ -7270,6 +7444,7 @@ mybin_OBJECTS = \
 "CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_read.c.o" \
 "CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_search_history.c.o" \
 "CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.o" \
+"CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o" \
 "CMakeFiles/mybin.dir/srcs/parsing/expanding/argv.c.o" \
 "CMakeFiles/mybin.dir/srcs/parsing/expanding/argv_tools.c.o" \
 "CMakeFiles/mybin.dir/srcs/parsing/expanding/escape.c.o" \
@@ -7477,6 +7652,9 @@ mybin: CMakeFiles/mybin.dir/libs/printf/srcs/ft_str_conv.c.o
 mybin: CMakeFiles/mybin.dir/libs/printf/srcs/ft_vector.c.o
 mybin: CMakeFiles/mybin.dir/libs/printf/srcs/ft_wstr_conv.c.o
 mybin: CMakeFiles/mybin.dir/libs/printf/srcs/ft_xou_conv.c.o
+mybin: CMakeFiles/mybin.dir/srcs/alias/alias.c.o
+mybin: CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o
+mybin: CMakeFiles/mybin.dir/srcs/alias/tools.c.o
 mybin: CMakeFiles/mybin.dir/srcs/binary_tree/binary_tree.c.o
 mybin: CMakeFiles/mybin.dir/srcs/cores/exit.c.o
 mybin: CMakeFiles/mybin.dir/srcs/cores/insert_one_line.c.o
@@ -7491,7 +7669,9 @@ mybin: CMakeFiles/mybin.dir/srcs/env/remove_environment.c.o
 mybin: CMakeFiles/mybin.dir/srcs/error_function/bip.c.o
 mybin: CMakeFiles/mybin.dir/srcs/error_function/usage_builtins.c.o
 mybin: CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.o
+mybin: CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o
 mybin: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.o
+mybin: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o
 mybin: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_cd.c.o
 mybin: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_data.c.o
 mybin: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_echo.c.o
@@ -7521,6 +7701,7 @@ mybin: CMakeFiles/mybin.dir/srcs/execution/executing_function/op_less.c.o
 mybin: CMakeFiles/mybin.dir/srcs/execution/executing_function/op_or_if.c.o
 mybin: CMakeFiles/mybin.dir/srcs/execution/executing_function/op_pipeline.c.o
 mybin: CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.o
+mybin: CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o
 mybin: CMakeFiles/mybin.dir/srcs/execution/tools/check_path.c.o
 mybin: CMakeFiles/mybin.dir/srcs/execution/tools/check_tree_path.c.o
 mybin: CMakeFiles/mybin.dir/srcs/execution/tools/do_heredoc.c.o
@@ -7566,6 +7747,7 @@ mybin: CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_outstanding.c.o
 mybin: CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_read.c.o
 mybin: CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_search_history.c.o
 mybin: CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.o
+mybin: CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o
 mybin: CMakeFiles/mybin.dir/srcs/parsing/expanding/argv.c.o
 mybin: CMakeFiles/mybin.dir/srcs/parsing/expanding/argv_tools.c.o
 mybin: CMakeFiles/mybin.dir/srcs/parsing/expanding/escape.c.o
@@ -7657,7 +7839,7 @@ mybin: CMakeFiles/mybin.dir/srcs/term/keep_term_struct.c.o
 mybin: CMakeFiles/mybin.dir/srcs/term/set_term.c.o
 mybin: CMakeFiles/mybin.dir/build.make
 mybin: CMakeFiles/mybin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_293) "Linking C executable mybin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/aroulin/mybin/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_300) "Linking C executable mybin"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mybin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -7779,6 +7961,9 @@ CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/libs/printf/srcs/ft_str_conv
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/libs/printf/srcs/ft_vector.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/libs/printf/srcs/ft_wstr_conv.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/libs/printf/srcs/ft_xou_conv.c.o.requires
+CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/alias/alias.c.o.requires
+CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/alias/init_rc.c.o.requires
+CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/alias/tools.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/binary_tree/binary_tree.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/cores/exit.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/cores/insert_one_line.c.o.requires
@@ -7793,7 +7978,9 @@ CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/env/remove_environment.
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/error_function/bip.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/error_function/usage_builtins.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/error_function/usage_builtins2.c.o.requires
+CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/error_function/usage_builtins3.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/basic_help.c.o.requires
+CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_alias.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_cd.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_data.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/builtins_functions/builtin_echo.c.o.requires
@@ -7823,6 +8010,7 @@ CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/executing_fun
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/executing_function/op_or_if.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/executing_function/op_pipeline.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/executing_function/op_separator.c.o.requires
+CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/tools/alias_tools.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/tools/check_path.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/tools/check_tree_path.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/execution/tools/do_heredoc.c.o.requires
@@ -7868,6 +8056,7 @@ CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_ou
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_read.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_search_history.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/memdel_struct/memdel_tree.c.o.requires
+CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/parsing/expanding/alias.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/parsing/expanding/argv.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/parsing/expanding/argv_tools.c.o.requires
 CMakeFiles/mybin.dir/requires: CMakeFiles/mybin.dir/srcs/parsing/expanding/escape.c.o.requires
