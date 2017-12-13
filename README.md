@@ -34,6 +34,7 @@ Completion on binary and directory with tabulation
 env
 unsetenv
 setenv
+alias
 history
 hash
 jobs
@@ -42,7 +43,7 @@ background
 cd
 ```
 ## Runing the tests
-_The usage have been make for all builtins_ `42sh > help`
+_The usage have been make for all builtins_ `help`
 
 ### Few test possible
 
