@@ -9,9 +9,7 @@ make
 ./42sh
 ```
 
-## Content
-
-The shell support the following feature
+## The shell support the following feature
 
 ### Jobs control
 Binary can be execute in foreround and in background
@@ -36,6 +34,7 @@ Completion on binary and directory with tabulation
 env
 unsetenv
 setenv
+alias
 history
 hash
 jobs
@@ -44,7 +43,7 @@ background
 cd
 ```
 ## Runing the tests
-_The usage have been make for all builtins_ `42sh > help`
+_The usage have been make for all builtins_ `help`
 
 ### Few test possible
 
@@ -61,3 +60,7 @@ _The usage have been make for all builtins_ `42sh > help`
 42sh > true && true && ls
 42sh > cd ./[Press Tabulation]
 ```
+## Authors
+
+* **Alexandre Roulin** - ** - [Krystalz](https://github.com/krystalz42)
+* **Jefferson Le Quellec** - ** - [Jle-quel](https://github.com/jle-quel)
