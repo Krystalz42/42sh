@@ -83,8 +83,8 @@ void					create_comp(t_read **read_std, t_path from)
 	{
 		while ((repo = readdir(dir)))
 		{
-			if (ft_strchr(from.to_comp, '*') &&
-								management_wildcard(repo->d_name, from.to_comp))
+			if ((ft_strchr(from.to_comp, '?') || ft_strchr(from.to_comp, '*'))
+				&& management_wildcard(repo->d_name, from.to_comp))
 			{
 				(index == 0) ? delete_previous_path(read_std) : 0;
 				index = -1;
