@@ -14,17 +14,6 @@
 
 int			main(void)
 {
-	int integer = 42;
-	void *varAcceptAll = (void *)&integer;
-	printf("%d\n", *(int *)varAcceptAll);
-	char character = '%';
-	varAcceptAll = (void *)&character;
-	printf("%c\n", *(char *)varAcceptAll);
-	char *string = "As tu tester mon 42sh ?";
-	varAcceptAll = (void *)string;
-	printf("%s\n", (char *)varAcceptAll);
-
-	fdb = open("/Users/aroulin/log", O_CREAT | O_TRUNC, O_RDWR, 0644);
 	init_env();
 	init_term();
 	read_rc(NULL, INIT);

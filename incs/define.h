@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/24 16:59:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/03 12:38:53 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 16:33:43 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,38 +157,39 @@
 # define HISTORY				"history: "
 # define ALIAS					"alias: "
 # define S42H					"42sh: "
-# define UNSETENV				"unsetenv : "
-# define SETENV					"setenv : "
-# define BECHO					"echo : "
-# define UCD					"cd : "
-# define UHELP					"help : "
+# define UNSETENV				"unsetenv: "
+# define SETENV					"setenv: "
+# define BECHO					"echo: "
+# define UCD					"cd: "
+# define UHELP					"help: "
 
 # define LIMIT					"limit process at 1024"
-# define BAD_FD					" Bad file descriptor"
+# define BAD_FD					"bad file descriptor"
 # define JOBS_IN_BG				"job already in background"
-# define NEED_VALUE				"variable need a name : "
+# define NEED_VALUE				"variable need a name: "
 # define JOBS_NOT_FOUND			"job not found: "
-# define INVALID				"invalid argument : "
+# define INVALID				"invalid argument: "
 # define NO_ARGS_U				"option requires an argument -- u"
-# define VAR_NO_SET				"variable not set : "
-# define WRONG_FORMAT			"variable have wrong format : "
-# define BAD_OPTION				"option not found : "
-# define NO_CUR_JOB				"no current job :"
+# define VAR_NO_SET				"variable not set: "
+# define WRONG_FORMAT			"variable have wrong format: "
+# define BAD_OPTION				"option not found: "
+# define NO_CUR_JOB				"no current job: "
 # define UNKNOWN				"unknown signal: "
-# define NO_ARGS				"not enough arguments : "
+# define NO_ARGS				"not enough arguments: "
 # define NO_PROCESS				"no such process: "
 # define ILLEGAL				"illegal pid: "
-# define EXPECT					"signal name expected :"
-# define TOO_MANY_ARGS			"too many arguments :"
-# define NUM_REQUIRED			"numeric argument required :"
+# define EXPECT					"signal name expected: "
+# define TOO_MANY_ARGS			"too many arguments: "
+# define NUM_REQUIRED			"numeric argument required: "
 # define RUN					"Running"
 # define STOP					"Stopped"
 # define CONT				"Continued"
 # define NO_DIRECTORY			"no such file or directory: "
 # define NO_RIGHT				"permission denied: "
-# define IS_NOTDIR				"not a directory: "
+# define IS_NOTDIR				"is not a directory: "
 # define IS_DIR					"is a directory: "
-# define NO_ARG					"not argument"
+# define NO_ARG					"not an argument"
+# define NO_OPT					"option is not supported: "
 
 # define HISTSIZE				8096
 # define HELP					"--help"
