@@ -13,19 +13,19 @@ make
 
 **The shell support the following feature :**
 
-		*redirections :*
+*Redirections :*
 
 ```
 ">" ">>" "<" "<<" "<&" ">&" "&>"
 ```
 
-		_logical operator :_
+_logical operator :_
 
 ```
 "|" "||" "&&" 
 ```
 
-		_command separator :_
+_command separator :_
 
 ```
 ";" "&"
