@@ -6,16 +6,11 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/13 17:54:31 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 18:00:53 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
-
-/*
-**			default print hash table
-**	-r	:	reset hash table
-*/
 
 static uint8_t	get_options(char **argv)
 {

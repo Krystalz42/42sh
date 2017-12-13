@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 12:52:30 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/13 15:44:06 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 18:21:30 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,15 @@
 *************** PRIVATE ********************************************************
 */
 
-static void		populate(char *new, char *str, char *home, size_t length, char *original)
+static char		*populate(char *str, char *home, size_t length, char *original)
 {
 	size_t		index;
+	char		*new;
 	char		*temp;
 
 	index = 0;
+	new = (char *)ft_memalloc(sizeof(char) *
+										(ft_strlen(str) + ft_strlen(home) + 1));
 	temp = str + (length + ft_strlen(original));
 	while (str && *str && length--)
 		new[index++] = *str++;
@@ -29,6 +32,7 @@ static void		populate(char *new, char *str, char *home, size_t length, char *ori
 		new[index++] = *home++;
 	while (temp && *temp)
 		new[index++] = *temp++;
+	return (new);
 }
 
 static void		expansion(char **str, size_t index)
@@ -40,15 +44,14 @@ static void		expansion(char **str, size_t index)
 	temp = ft_strsplit(*str + index, ' ');
 	if (temp && temp[0] && (alias = alias_exist(temp[0])))
 	{
-		new = (char *)ft_memalloc(sizeof(char) *
-		(ft_strlen(*str) + ft_strlen(alias) + 1));
-		populate(new, *str, alias, index, temp[0]);
+		new = populate(*str, alias, index, temp[0]);
 		ft_memdel((void **)str);
 		arraydel(&temp);
 		*str = new;
 	}
 	arraydel(&temp);
 }
+
 
 /*
 *************** PUBLIC *********************************************************
