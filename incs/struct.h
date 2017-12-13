@@ -16,6 +16,16 @@
 # include <stdbool.h>
 
 /*
+**			STRUCT FOR ESCAPE
+*/
+
+typedef struct				s_esc
+{
+	char					*esc;
+	char					*to_esc;
+}							t_esc;
+
+/*
 **			STRUCT FOR ERROR
 */
 
