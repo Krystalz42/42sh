@@ -6,20 +6,20 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/23 19:50:39 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/30 17:49:16 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/12/13 15:46:13 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-t_hash		**hash_board(void)
+t_hash			**hash_board(void)
 {
 	static t_hash	*h_board[USHRT_MAX];
 
 	return (h_board);
 }
 
-char		*search_path(char *binary)
+char			*search_path(char *binary)
 {
 	unsigned int		index;
 	t_hash				**hash_tab;
@@ -40,7 +40,7 @@ char		*search_path(char *binary)
 	return (NULL);
 }
 
-static t_hash		*create_hash(char *bin, char *path, size_t times)
+static t_hash	*create_hash(char *bin, char *path, size_t times)
 {
 	t_hash	*hash;
 
@@ -52,7 +52,7 @@ static t_hash		*create_hash(char *bin, char *path, size_t times)
 	return (hash);
 }
 
-void		add_hash(char *bin, char *path, size_t times)
+void			add_hash(char *bin, char *path, size_t times)
 {
 	unsigned int		index;
 	t_hash				**hash_tab;

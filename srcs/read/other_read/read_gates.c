@@ -6,7 +6,7 @@
 /*   By: gbourson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:32:10 by gbourson          #+#    #+#             */
-/*   Updated: 2017/11/17 16:33:31 by gbourson         ###   ########.fr       */
+/*   Updated: 2017/12/13 15:32:55 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,4 @@ t_cmd			*finitialize_fct(t_read **read_std)
 {
 	set_termios(SET_OLD_TERM);
 	return (finish_read_std(read_std));
-
 }

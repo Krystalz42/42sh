@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 22:08:10 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/04 13:27:49 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 15:51:23 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void			init_rc(char *str)
 	int			fd;
 	char		*var;
 	char		*path;
-	
+
 	fd = -1;
 	if (str == NULL)
 	{

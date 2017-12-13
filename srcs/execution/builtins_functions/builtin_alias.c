@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 15:57:47 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/03 14:32:06 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 15:49:37 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,8 @@ static int		check_options_alias(char **command)
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			builtin_alias(t_node *node, int info __attribute__((unused)))
+uint8_t			builtin_alias(t_node *node, int info)
 {
+	(void)info;
 	return (check_options_alias(node->content->command));
 }

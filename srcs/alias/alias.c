@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 23:34:22 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/01 15:36:43 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 15:51:43 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char			*alias_exist(char *str)
 	return (NULL);
 }
 
-void		add_alias(char **argv)
+void			add_alias(char **argv)
 {
 	size_t		index;
 	t_alias		**ptr;
