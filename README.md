@@ -16,7 +16,7 @@ make
 ```
 ">" ">>" "<" "<<" "<&" ">&" "&>"
 ```
-	-logical operator:
+    -logical operator:
 
 ```
 "|" "||" "&&" 
