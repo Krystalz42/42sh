@@ -11,7 +11,9 @@ make
 
 ## Content
 
-**The shell support the following feature :**
+### The shell support the following feature
+
+**Operator Token**
 
 *Redirections :*
 
@@ -24,11 +26,23 @@ _logical operator :_
 ```
 "|" "||" "&&" 
 ```
-
 _command separator :_
-
 ```
 ";" "&"
+```
+
+**Builtin**
+
+```
+env
+unsetenv
+setenv
+history
+hash
+jobs
+foreground
+background
+cd
 ```
 
 ## Runing the tests
