@@ -17,10 +17,13 @@ static inline t_cursor		init_cursor(int len)
 	t_cursor		cur;
 	int				co;
 
-	co = tgetco();
-	cur.co = len % co;
-	cur.line = (len / co) + 1;
-	return (cur);
+	if ((co = tgetco()) > 0)
+	{
+		cur.co = len % co;
+		cur.line = (len / co) + 1;
+		return (cur);
+	}
+	return ((t_cursor){0, 0, 0});
 }
 
 t_cursor					prompt(unsigned char flags)
