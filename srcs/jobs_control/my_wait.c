@@ -47,6 +47,9 @@ void			check_child_in_foreground(t_jobs *jobs)
 		update_jobs(jobs->process);
 		if (finished_process(jobs->process))
 		{
+			if (var_return(-1) > 127 && var_return(-1) != 130
+				&& var_return(-1) != 131)
+				print_status(jobs, jobs->process);
 			memdel_jobs(jobs);
 		}
 		else
