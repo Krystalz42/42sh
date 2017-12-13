@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 14:40:38 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 16:15:05 by gbourson         ###   ########.fr       */
+/*   Updated: 2017/12/13 15:33:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,8 @@ t_cmd					*read_stdin(unsigned char flags)
 				inline_other(&read_std, &buf, g_tab_are_key[index].function);
 		if (ft_isread(buf % (UCHAR_MAX + 1)))
 			inline_print_(&read_std, &buf);
-		if (buf != ARROW_DOWN && buf != ARROW_UP && buf != CTRL_P && buf != CTRL_N)
+		if (buf != ARROW_DOWN && buf != ARROW_UP && buf != CTRL_P &&
+																buf != CTRL_N)
 			memdel_cmd(&read_std->history_compare);
 		if ((read_std)->finish || signal_reception(-1))
 			break ;

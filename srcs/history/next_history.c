@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/24 16:30:08 by aroulin           #+#    #+#             */
-/*   Updated: 2017/08/30 19:01:46 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/12/13 15:45:16 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static t_hist	*jobs_next_history(t_read **read_std, t_hist *hist)
 	{
 		hist_temp = hist_temp->next ? hist_temp->next : hist_temp;
 		while (!list_compare((*read_std)->history_compare,
-							 first_cmd(hist_temp->hist->cmd, 1)))
+											first_cmd(hist_temp->hist->cmd, 1)))
 		{
 			if (hist_temp->next == NULL && bip())
 				return (hist);

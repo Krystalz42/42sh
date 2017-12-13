@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_tab_.c                                      :+:      :+:    :+:   */
+/*   create_comp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/13 04:48:03 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/28 16:20:11 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/12/13 15:48:54 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-static int				management_wildcard(char *data, char *tab_)
+static int			management_wildcard(char *data, char *tab_)
 {
 	if (*data != '\0' && *tab_ == '?')
 		return (management_wildcard(data + 1, tab_ + 1));
@@ -81,10 +81,10 @@ void					create_comp(t_read **read_std, t_path from)
 	index = 0;
 	if ((dir = opendir((!from.path ? "." : from.path))))
 	{
-
 		while ((repo = readdir(dir)))
 		{
-			if (ft_strchr(from.to_comp, '*') && management_wildcard(repo->d_name, from.to_comp))
+			if (ft_strchr(from.to_comp, '*') &&
+								management_wildcard(repo->d_name, from.to_comp))
 			{
 				(index == 0) ? delete_previous_path(read_std) : 0;
 				index = -1;

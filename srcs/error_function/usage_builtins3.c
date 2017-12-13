@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 17:17:54 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/02 12:30:40 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 15:50:11 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ alias list.\n", STDERR_FILENO);
 			: Print alias list\n", STDERR_FILENO);
 	return (0);
 }
-

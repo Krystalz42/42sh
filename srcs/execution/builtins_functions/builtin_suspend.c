@@ -6,13 +6,13 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:47 by aroulin           #+#    #+#             */
-/*   Updated: 2017/10/30 15:22:50 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/12/13 15:47:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-int				suspend_jobs()
+int				suspend_jobs(void)
 {
 	char			*shlvl;
 
