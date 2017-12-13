@@ -11,19 +11,26 @@ make
 
 ## Content
 
-*The shell support the following feature :*
+*The shell support the following feature *:
+
 		_redirections :_
+
 ```
 ">" ">>" "<" "<<" "<&" ">&" "&>"
 ```
+
 		_logical operator :_
+
 ```
 "|" "||" "&&" 
 ```
+
 		_command separator :_
+
 ```
 ";" "&"
 ```
+
 ## Runing the tests
 
 Shell 
