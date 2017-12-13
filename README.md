@@ -11,7 +11,7 @@ make
 
 ## Content
 
-*The shell support the following feature *:
+**The shell support the following feature :**
 
 		_redirections :_
 
