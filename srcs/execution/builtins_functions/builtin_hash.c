@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:22:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/01 16:59:07 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 17:54:31 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,25 @@
 **	-r	:	reset hash table
 */
 
+static uint8_t	get_options(char **argv)
+{
+	uint8_t		options;
+
+	options = 0;
+	while (*argv)
+	{
+		options += ft_strcmp(*argv, "-r") == 0 ? 0 : ERR;
+		argv++;
+	}
+	return (options & ERR ? usage_hash() + 1 : hash_reset());
+}
+
 uint8_t			builtin_hash(t_node *node, int info)
 {
-	int		index;
-	int		option;
-	int		c;
-
 	(void)info;
-	option = 0;
-	index = 0;
-	if (node->content->command[1])
-		if (ft_strcmp(node->content->command[1], HELP) == 0)
-			return (usage_hash());
-	while (node->content->command[++index] &&
-						(node->content->command[index][0]) == '-' && (c = -1))
-		while (node->content->command[index][++c])
-			if (node->content->command[index][c] == 'r')
-				option = 1;
-	return (option ? hash_reset() : hash_print(STDOUT_FILENO));
+	if (arraylen(node->content->command) == 1)
+		return (hash_print(STDOUT_FILENO));
+	if (ft_strcmp(node->content->command[1], HELP) == 0)
+		return (usage_hash());
+	return (get_options(node->content->command + 1));
 }
