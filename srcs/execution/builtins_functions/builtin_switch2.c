@@ -30,6 +30,18 @@ int				check_jobs_spec(char **command, char *from)
 	return (jobs_spec);
 }
 
+t_jobs			*jobs_index(t_jobs *jobs, int index)
+{
+	while (jobs)
+	{
+		if (jobs->index == index)
+			return (jobs);
+		jobs = jobs->prev_use;
+	}
+	error_msg(BG, JOBS_IN_BG, NULL);
+	return (NULL);
+}
+
 t_jobs			*get_jobs_by_setting(int index, char *from)
 {
 	t_jobs		*jobs;
@@ -40,14 +52,7 @@ t_jobs			*get_jobs_by_setting(int index, char *from)
 		return (NULL);
 	}
 	if (index)
-	{
-		while (jobs)
-		{
-			if (jobs->index == index)
-				return (jobs);
-			jobs = jobs->prev_use;
-		}
-	}
+		return (jobs_index(jobs, index));
 	else
 		while (jobs)
 		{

@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-static int			management_wildcard(char *data, char *tab_)
+static int				management_wildcard(char *data, char *tab_)
 {
 	if (*data != '\0' && *tab_ == '?')
 		return (management_wildcard(data + 1, tab_ + 1));
@@ -30,7 +30,7 @@ static int			management_wildcard(char *data, char *tab_)
 	return (0);
 }
 
-static inline void	delete_previous_path(t_read **read_std)
+static inline void		delete_previous_path(t_read **read_std)
 {
 	(*read_std)->completion = 0;
 	while ((*read_std)->cmd->prev && (*read_std)->cmd->prev->c != 32)
@@ -38,7 +38,7 @@ static inline void	delete_previous_path(t_read **read_std)
 	(*read_std)->completion = 2;
 }
 
-static inline void	add_command(t_read *read_std, t_path from, char *name)
+static inline void		add_command(t_read *read_std, t_path from, char *name)
 {
 	int			index;
 
@@ -62,7 +62,7 @@ static inline void	add_command(t_read *read_std, t_path from, char *name)
 		key_print_fct(read_std->cmd, 32);
 }
 
-static inline int	check_compare(t_path from, char *name)
+static inline int		check_compare(t_path from, char *name)
 {
 	if (from.to_comp == NULL && name[0] != '.')
 		return (1);
@@ -83,8 +83,8 @@ void					create_comp(t_read **read_std, t_path from)
 	{
 		while ((repo = readdir(dir)))
 		{
-			if (ft_strchr(from.to_comp, '*') &&
-								management_wildcard(repo->d_name, from.to_comp))
+			if ((ft_strchr(from.to_comp, '?') || ft_strchr(from.to_comp, '*'))
+				&& management_wildcard(repo->d_name, from.to_comp))
 			{
 				(index == 0) ? delete_previous_path(read_std) : 0;
 				index = -1;

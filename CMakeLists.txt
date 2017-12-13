@@ -1,9 +1,13 @@
-cmake_minimum_required(VERSION 3.8)
-project(mybin)
+cmake_minimum_required(VERSION 3.9)
+project(42sh)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES
+include_directories(incs)
+include_directories(libs/libft/incs)
+include_directories(libs/printf/incs)
+
+add_executable(42sh
         incs/define.h
         incs/enum.h
         incs/sh.h
@@ -311,9 +315,3 @@ set(SOURCE_FILES
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
         srcs/term/set_term.c)
-
-include_directories(incs)
-include_directories(libs/libft/incs)
-include_directories(libs/printf/incs)
-
-add_executable(mybin ${SOURCE_FILES})

@@ -149,7 +149,6 @@ uint8_t						append_rc(char **command);
 */
 
 t_jobs						*get_jobs_by_setting(int index, char *from);
-t_jobs						*get_jobs_by_setting(int index, char *from);
 int							check_jobs_spec(char **command, char *from);
 int							special_getenv(char *string);
 void						check_path(char *path);
