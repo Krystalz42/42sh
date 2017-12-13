@@ -35,8 +35,6 @@
 # include <time.h>
 # include <sys/stat.h>
 
-int fdb;
-
 /*
 **				FUNCTION CORES
 */
@@ -152,16 +150,12 @@ t_jobs						*get_jobs_by_setting(int index, char *from);
 int							check_jobs_spec(char **command, char *from);
 int							special_getenv(char *string);
 void						check_path(char *path);
-char						*check_directory(char **path, char *temp);
 void						collect_path(char **binary);
 int							looking_for_path(char **binary);
 t_bdata						*b_data(void);
 signed int					search_in_tab(char **data, char *var);
-char						**refresh_varenv(char **env);
-char						*ft_path(char *var, unsigned int begin);
 char						*add_envar(char *var, char *value);
 char						**init_pwd(char **env);
-unsigned int				search_char(char *str, char c);
 uint8_t						builtin_unsetenv(t_node *node, int info);
 int							potential_option(char *potential, int c);
 
@@ -297,7 +291,6 @@ void						arraydel(char ***address);
 char						*alias_exist(char *str);
 t_alias						**get_alias(void);
 size_t						arraylen(char **argv);
-void						arraydel(char ***address);
 
 /*
 **				LEXING FUNCTION
@@ -484,6 +477,5 @@ uint8_t						usage_cd(void);
 int							help_move(void);
 int							help_kill_and_yank(void);
 int							help_history(void);
-int							help_alias(void);
 
 #endif
