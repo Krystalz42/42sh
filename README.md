@@ -23,13 +23,13 @@ Alias work and stored in `~/.42sh_rc`
 ### Globbing
 `? *` followed by a tabulation
 ### Completion
-Completion with tabulation on binary and directory
+Completion on binary and directory with tabulation
 ### Operator Token
-*Redirections :*
+#### Redirections :
 `">" ">>" "<" "<<" "<&" ">&" "|"`
-_logical operator :_
+#### logical operator :
 `"||" "&&" `
-_command separator :_
+#### command separator :
 `";" "&"`
 ### Builtin
 ```
