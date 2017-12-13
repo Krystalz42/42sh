@@ -11,12 +11,23 @@ make
 
 ## Content
 
-Shell support :
+The shell support the following feature :
 
-### The following redirections:
+### redirections:
 ```
 ">" ">>" "<" "<<" "<&" ">&" "&>"
+```
 
+### logical operator:
+
+```
+"|" "||" "&&" 
+```
+
+### command separator
+
+```
+";" "&"
 ```
 
 ## Runing the tests
