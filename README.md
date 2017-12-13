@@ -11,14 +11,12 @@ make
 
 ## Content
 
-The shell support the following feature :
-
-### redirections:
+1.	The shell support the following feature :
+	-redirections:
 ```
 ">" ">>" "<" "<<" "<&" ">&" "&>"
 ```
-
-### logical operator:
+	-logical operator:
 
 ```
 "|" "||" "&&" 
