@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:40:09 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 23:33:51 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 21:07:04 by aroulin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,8 @@ void			check_child_in_foreground(t_jobs *jobs)
 void			my_wait(t_jobs *jobs)
 {
 	close_fildes(jobs->process);
-	if (jobs->process && jobs->process->foreground == 0)
+	if (jobs->process && jobs->process->foreground == 0 &&
+			*shell_interectative())
 	{
 		print_info_jobs(jobs->process, jobs->index);
 	}
