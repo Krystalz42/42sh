@@ -61,3 +61,7 @@ _The usage have been make for all builtins_ `42sh > help`
 42sh > true && true && ls
 42sh > cd ./[Press Tabulation]
 ```
+## Authors
+
+* **Alexandre Roulin** - ** - [Krystalz](https://github.com/krystalz42)
+* **Jefferson Le Quellec** - ** - [Jle-quel](https://github.com/jle-quel)
