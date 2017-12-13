@@ -29,19 +29,15 @@ Completion with tabulation on binary and directory
 
 *Redirections :*
 
-```
-">" ">>" "<" "<<" "<&" ">&" "|"
-```
+`">" ">>" "<" "<<" "<&" ">&" "|"`
 
 _logical operator :_
 
-```
-"||" "&&" 
-```
+`"||" "&&" `
+
 _command separator :_
-```
-";" "&"
-```
+
+`";" "&"`
 
 **Builtin**
 
