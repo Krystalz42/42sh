@@ -19,7 +19,6 @@ static t_hist	*jobs_next_history(t_read **read_std, t_hist *hist)
 	hist_temp = hist;
 	if ((*read_std)->history_compare == NULL)
 	{
-		memdel_outstanding();
 		hist = hist->next;
 		memdel_cmd(&((*read_std)->cmd));
 		copy_cmd(read_std, hist->hist->cmd);
@@ -35,10 +34,10 @@ static t_hist	*jobs_next_history(t_read **read_std, t_hist *hist)
 				return (hist);
 			hist_temp = hist_temp->next;
 		}
-		memdel_outstanding();
 		change_command(read_std, hist_temp);
 		return (hist_temp);
 	}
+	memdel_outstanding();
 	return (hist);
 }
 
