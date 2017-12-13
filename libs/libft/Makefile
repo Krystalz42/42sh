@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/08/30 22:26:42 by aroulin           #+#    #+#              #
-#    Updated: 2017/11/15 20:24:40 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/12/13 18:32:11 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -185,6 +185,9 @@ CPPFLAGS	= \
 
 CFLAGS		= \
 			  -Wall -Werror -Wextra		\
+			  -fsanitize=address		\
+			  -g3
+
 
 # ---------------------------------------------------------------------------- #
 # /!\ SOURCE NORMALIZATION AND COMPILATION RULES /!\                           #

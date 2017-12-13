@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/04 13:16:44 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 18:36:20 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ uint8_t						var_return(int ret);
 */
 
 t_cmd						*copy_command(t_cmd *cmd);
+int							shell_interectative(int is);
 t_cmd						*read_stdin(unsigned char flags);
 char						*my_prompt(char *prompt);
 void						init_prompt(void);

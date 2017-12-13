@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/06 14:40:38 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/13 15:33:35 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 18:43:37 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ t_cmd					*read_stdin(unsigned char flags)
 
 	initialize_fct(&read_std, flags);
 	inline_print_(&read_std, &buf);
-	while (!read_std->finish && read(STDIN_FILENO, &buf, sizeof(unsigned long)))
+	while (!read_std->finish && read(STDIN_FILENO, &buf, sizeof(unsigned long)) != -1)
 	{
 		index = -1;
 		while (++index < 34)

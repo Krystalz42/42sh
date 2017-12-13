@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 17:45:51 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/19 01:11:28 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 18:33:14 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void				init_prompt(void)
 	ft_memdel((void **)&prompt);
 	prompt = (char *)ft_memalloc(sizeof(char) * \
 		(30 + ft_strlen(path)));
-	ft_memcpy(prompt + ft_strlen(prompt), "\e[38;5;", 10);
+	ft_memcpy(prompt + ft_strlen(prompt), "\e[38;5;", 7);
 	ft_strcpy(prompt + ft_strlen(prompt), color);
 	ft_strcpy(prompt + ft_strlen(prompt), "m");
 	ft_strcpy(prompt + ft_strlen(prompt), path);
