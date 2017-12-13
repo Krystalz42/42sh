@@ -11,8 +11,8 @@ make
 
 ## Content
 
-1.	The shell support the following feature :
-	-redirections:
+1.  The shell support the following feature :
+    -redirections:
 ```
 ">" ">>" "<" "<<" "<&" ">&" "&>"
 ```
