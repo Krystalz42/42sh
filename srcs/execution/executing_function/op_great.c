@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:19:54 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/13 20:44:28 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 22:57:34 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,18 @@ static void		jobs_op_great(t_node *node)
 	else
 	{
 		fildes = check_fd(fildes);
-		std = STDOUT_FILENO;
-		if (ft_isdigit(node->content->command[0][0]))
-			std = ft_atoi(node->content->command[0]);
-		dup2(fildes, std);
+		if (ft_strchr(node->content->command[0], '&'))
+		{
+			dup2(fildes, STDOUT_FILENO);
+			dup2(fildes, STDERR_FILENO);
+		}
+		else
+		{
+			std = STDOUT_FILENO;
+			if (ft_isdigit(node->content->command[0][0]))
+				std = ft_atoi(node->content->command[0]);
+			dup2(fildes, std);
+		}
 	}
 	close(fildes);
 }
