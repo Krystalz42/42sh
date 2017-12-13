@@ -13,18 +13,26 @@ make
 
 ### The shell support the following feature
 
+**Wildcard**
+
+*\*\?* followed by a tabulation
+
+**Completion**
+
+Completion with tabulation on binary and directory
+
 **Operator Token**
 
 *Redirections :*
 
 ```
-">" ">>" "<" "<<" "<&" ">&" "&>"
+">" ">>" "<" "<<" "<&" ">&" "|"
 ```
 
 _logical operator :_
 
 ```
-"|" "||" "&&" 
+"||" "&&" 
 ```
 _command separator :_
 ```
@@ -47,4 +55,19 @@ cd
 
 ## Runing the tests
 
-Shell 
+
+_The usage have been make for all builtins_
+
+```
+42sh > help
+```
+
+**Few test possible**
+
+```
+42sh > ls -lR / | wc &
+42sh > jobs -r
+42sh > fg %1
+^C
+42sh > base64 /dev/random | head -c 1000 | grep 42 | wc -l | sed -e 's/1/YES/g' -e 's/0/NO/g'
+```
