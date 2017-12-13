@@ -9,9 +9,7 @@ make
 ./42sh
 ```
 
-## Content
-
-The shell support the following feature
+## The shell support the following feature
 
 ### Jobs control
 Binary can be execute in foreround and in background
