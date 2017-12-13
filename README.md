@@ -13,7 +13,7 @@ make
 
 **The shell support the following feature :**
 
-		_redirections :_
+         _redirections :_
 
 ```
 ">" ">>" "<" "<<" "<&" ">&" "&>"
