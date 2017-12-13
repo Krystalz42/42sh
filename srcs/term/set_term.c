@@ -16,7 +16,7 @@ void			set_termios(unsigned short flags)
 {
 	struct termios term;
 
-	if (shell_interectative(-1) == 0)
+	if (*shell_interectative() == 0)
 		return ;
 	if ((flags & SET_OUR_TERM))
 	{

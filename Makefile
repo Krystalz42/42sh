@@ -55,6 +55,7 @@ SRCS = \
 	   alias/alias.c											\
 	   alias/tools.c											\
 	   read/other_read/read_stdin.c								\
+	   read/other_read/read_input.c								\
 	   read/other_read/cursor_column.c							\
 	   read/other_read/my_tgetnum.c								\
 	   read/other_read/finish_read_std.c						\

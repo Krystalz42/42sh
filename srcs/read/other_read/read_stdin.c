@@ -84,8 +84,7 @@ t_cmd					*read_stdin(unsigned char flags)
 
 	initialize_fct(&read_std, flags);
 	inline_print_(&read_std, &buf);
-	
-	while (!read_std->finish && read(STDIN_FILENO, &buf, sizeof(unsigned long)) != -1)
+	while (!read_std->finish && read(STDIN_FILENO, &buf, sizeof(unsigned long)))
 	{
 		index = -1;
 		while (++index < 34)

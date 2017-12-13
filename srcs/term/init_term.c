@@ -12,13 +12,11 @@
 
 #include <sh.h>
 
-int					shell_interectative(int is)
+int					*shell_interectative(void)
 {
 	static int status;
 
-	if (is != -1)
-		status = is;
-	return (status);
+	return (&status);
 }
 
 static int			init_our_term(struct termios *term)
@@ -60,9 +58,9 @@ int					init_term(void)
 		else
 			ret = 1;
 		mine_terminal(ret);
-		shell_interectative(1);
+		*shell_interectative() = 1;
 	}
 	else
-		shell_interectative(0);
+		*shell_interectative() = 0;
 	return (0);
 }

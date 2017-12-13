@@ -24,7 +24,7 @@ int		shell(void)
 	{
 		memdel_cmd(&input);
 		memdel_node(&tree);
-		if ((input = read_stdin(DEFAULT)) == NULL)
+		if ((input = read_input(DEFAULT)) == NULL)
 			continue ;
 		if ((parse_struct = parsing(input)) == NULL)
 			continue ;

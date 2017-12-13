@@ -48,8 +48,9 @@ uint8_t						var_return(int ret);
 **				FUNCTION READ && PRINT && RETURN A STRUCT
 */
 
+t_cmd						*read_input(unsigned char flags);
 t_cmd						*copy_command(t_cmd *cmd);
-int							shell_interectative(int is);
+int							*shell_interectative(void);
 t_cmd						*read_stdin(unsigned char flags);
 char						*my_prompt(char *prompt);
 void						init_prompt(void);
