@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 16:27:36 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/16 16:40:32 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 20:49:44 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void			escape(t_parsing *node)
 		{
 			if (status & DQ && (variable = get_variable(node->input + index)))
 				expansion(&node->input, index, variable, temp);
-			else if (node->input[index] == '\\')
+			else if (node->input[index] == '\\' && node->input[index + 1])
 				index += 2;
 			else if (node->input[index] == '\'')
 				index += skip_to_occurence(node->input + index, '\'');

@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 17:58:20 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/21 00:14:35 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 20:49:24 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,12 +86,11 @@ void			variable(t_parsing *node)
 	t_parsing	*temp;
 
 	temp = node;
-	while (node)
+	while (node && !(index = 0))
 	{
-		index = 0;
 		while (node->input && node->input[index])
 		{
-			if (node->input[index] == '\\')
+			if (node->input[index] == '\\' && node->input[index + 1])
 				index += 2;
 			else if (node->input[index] == '\'')
 				index += skip_to_occurence(node->input + index, '\'');

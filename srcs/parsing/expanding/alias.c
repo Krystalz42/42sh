@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 12:52:30 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/13 18:21:30 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/13 20:47:14 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,11 @@ void			alias(t_parsing *node)
 	t_parsing	*temp;
 
 	temp = node;
-	while (node)
+	while (node && !(index = 0))
 	{
-		index = 0;
 		while (node->input && node->input[index])
 		{
-			if (node->input[index] == '\\')
+			if (node->input[index] == '\\' && node->input[index + 1])
 				index += 2;
 			else if (node->input[index] == '\'')
 				index += skip_to_occurence(node->input + index, '\'');
