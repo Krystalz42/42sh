@@ -13,19 +13,19 @@ make
 
 The shell support the following feature
 
-#### Alias
+### Alias
 
 Alias work and stored in `~/.42sh_rc`
 
-#### Globbing
+### Globbing
 
 *\*\?* followed by a tabulation
 
-#### Completion
+### Completion
 
 Completion with tabulation on binary and directory
 
-#### Operator Token
+### Operator Token
 
 *Redirections :*
 
