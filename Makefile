@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/12/13 18:31:36 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/12/14 13:43:25 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -162,6 +162,7 @@ SRCS = \
 	   execution/executing_function/op_or_if.c					\
 	   execution/executing_function/op_and_if.c					\
 	   execution/executing_function/op_less.c					\
+	   execution/executing_function/op_less_and.c				\
 	   execution/executing_function/op_pipeline.c				\
 	   execution/executing_function/op_separator.c				\
 	   execution/executing_function/op_ampersand.c				\

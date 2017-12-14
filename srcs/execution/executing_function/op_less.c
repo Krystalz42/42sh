@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:16:43 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/14 12:49:46 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/14 14:07:21 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,6 @@ static void		jobs_op_less(t_node *node)
 	}
 }
 
-static int		norminette(int info, int *fildes)
-{
-	write_pipe(fildes);
-	info ^= WRITE_PREVIOUS;
-	return (info);
-}
-
 /*
 *************** PUBLIC *********************************************************
 */
@@ -53,15 +46,15 @@ uint8_t			op_less(t_node *node, t_jobs *jobs, int info)
 		jobs = new_jobs(jobs);
 		if ((process = my_fork(jobs, find_executing_node(node), info)) == NULL)
 			return (var_return(255));
-		if (process->pid)
+		if (process->pid > 0)
 			my_wait(jobs);
 		else
 		{
 			process->pid = getpid();
-			jobs_op_less(node);
 			if (process->prev)
-				info = norminette(info, process->prev->fildes);
-			execute_node(node->left, jobs, (info ^ FORK));
+				write_pipe(process->prev->fildes);
+			jobs_op_less(node);
+			execute_node(node->left, jobs, (info ^ FORK) ^ WRITE_PREVIOUS);
 		}
 	}
 	else

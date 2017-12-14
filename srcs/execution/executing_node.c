@@ -6,13 +6,13 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:09:00 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 15:41:08 by sbelazou         ###   ########.fr       */
+/*   Updated: 2017/12/14 13:42:42 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-t_exec			*g_execute[11] =
+t_exec			*g_execute[12] =
 {
 	[VALUE_COMMAND] = &op_execution,
 	[VALUE_SEMI_COLON] = &op_separator,
@@ -25,6 +25,7 @@ t_exec			*g_execute[11] =
 	[VALUE_DGREAT] = &op_dgreat,
 	[VALUE_OR_IF] = &op_or_if,
 	[VALUE_GREAT_AND] = &op_great_and,
+	[VALUE_LESS_AND] = &op_less_and,
 };
 
 uint8_t			execute_node(t_node *node, t_jobs *jobs, int info)
