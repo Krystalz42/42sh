@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:16:43 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/13 23:04:11 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/14 12:49:46 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,19 @@
 *************** PRIVATE ********************************************************
 */
 
-void			jobs_op_less(t_node *node)
+static void		jobs_op_less(t_node *node)
 {
+	int			std;
 	int			fildes;
 
 	if ((fildes = open(node->right->content->command[0], O_RDONLY)) == -1)
 		check_path(node->right->content->command[0]);
 	else
 	{
-		dup2(fildes, STDIN_FILENO);
+		std = STDIN_FILENO;
+		if (ft_isdigit(node->content->command[0][0]))
+			std = ft_atoi(node->content->command[0]);
+		dup2(fildes, std);
 		close(fildes);
 	}
 }

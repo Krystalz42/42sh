@@ -6,7 +6,7 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 19:50:25 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/13 23:03:23 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/14 12:43:05 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void			regular_tokenisation(t_cmd *cmd)
 		if (cmd->status == DEFAULT)
 		{
 			cmd->value = get_value(cmd->c);
-			cmd->c == '>' ? populate(cmd->prev) : 0;
+			cmd->c == '>' || cmd->c == '<' ? populate(cmd->prev) : 0;
 		}
 		cmd = cmd->next;
 	}
