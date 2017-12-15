@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:20:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/15 18:48:29 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 19:01:59 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ t_manage_redir		*g_execute_redir[12] =
 		[VALUE_LESS] = &op_less,
 		[VALUE_LESS_AND] = &op_less_and,
 		[VALUE_DLESS] = NULL,		//	POUR TOI
-		[VALUE_GREAT] = NULL,		//	POUR MOI
-		[VALUE_GREAT_AND] = NULL,	//	POUR MOI
-		[VALUE_DGREAT] = NULL		//	POUR MOI
+		[VALUE_GREAT] = &op_great,		//	POUR MOI
+		[VALUE_DGREAT] = &op_dgreat,		//	POUR MOI
+		[VALUE_GREAT_AND] = &op_great_and,	//	POUR MOI
 };
 
 void				manage_redirection(t_parsing *node)
@@ -55,7 +55,7 @@ uint8_t				jobs_execution(t_node *node, t_jobs *jobs, int info)
 		else if (process->pid == 0)
 		{
 			process->pid = getpid();
-			if (info & WRITE_PREVIOUS && process && process->prev)
+			if (info & WRITE_PREVIOUS && process->prev)
 				write_pipe(process->prev->fildes);
 			exec_or_builtin(node, info);
 		}

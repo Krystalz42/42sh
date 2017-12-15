@@ -13,7 +13,7 @@
 #include <sh.h>
 
 /*
-*************** TOOLS **********************************************************
+*************** PRIVATE ********************************************************
 */
 
 static int		get_fildes(char *str)
@@ -23,68 +23,29 @@ static int		get_fildes(char *str)
 	if (!ft_strcmp(str, "-"))
 		fildes = open(PATH_ERROR, O_WRONLY);
 	else if (ft_strisdigit(str))
-	{
-		if ((fildes = ft_atoi(str)) > 2)
-		{
-			ft_dprintf(2, "42sh: %d: Bad file descriptor\n", fildes);
-			exit(var_return(1));
-		}
-	}
+		fildes = ft_atoi(str);
 	else
-		fildes = open(str, OPTION_GREAT, 0644);
+		if ((fildes = open(str, OPTION_GREAT, 0644)) == -1)
+			check_path(str);
 	return (fildes);
-}
-
-/*
-*************** PRIVATE ********************************************************
-*/
-
-static void		jobs_op_great_and(t_node *node)
-{
-	int			std;
-	int			fildes;
-
-	std = STDOUT_FILENO;
-	if (ft_isdigit(node->content->command[0][0]))
-		std = ft_atoi(node->content->command[0]);
-	fildes = get_fildes(node->right->content->command[0]);
-	if (fildes == -1)
-		check_path(node->right->content->command[0]);
-	else
-	{
-		fildes = check_fd(fildes);
-		dup2(fildes, std);
-	}
 }
 
 /*
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			op_great_and(t_node *node, t_jobs *jobs, int info)
+void op_great_and(t_parsing *node)
 {
-	t_process	*process;
+	int		fildes_out;
+	int		fildes_in;
 
-	if (info & FORK)
+	fildes_in = STDOUT_FILENO;
+	if (ft_isdigit(node->command[0][0]))
+		fildes_in = ft_atoi(node->command[0]);
+	fildes_out = get_fildes(node->next->command[0]);
+	if (dup2(fildes_out, fildes_in) == -1)
 	{
-		if ((jobs = new_jobs(jobs)) == NULL)
-			return (var_return(255));
-		process = my_fork(jobs, find_executing_node(node), info);
-		if (process->pid)
-			my_wait(jobs);
-		else
-		{
-			process->pid = getpid();
-			if (process->prev)
-				write_pipe(process->prev->fildes);
-			jobs_op_great_and(node);
-			execute_node(node->left, jobs, (info ^ FORK) ^ WRITE_PREVIOUS);
-		}
+		error_msg(S42H, BAD_FD, NULL);
+		exit(1);
 	}
-	else
-	{
-		jobs_op_great_and(node);
-		execute_node(node->left, jobs, info);
-	}
-	return (var_return(-1));
 }
