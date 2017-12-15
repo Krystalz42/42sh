@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:14:51 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 23:31:30 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 19:20:56 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,51 +16,32 @@
 *************** PRIVATE ********************************************************
 */
 
-static void		intro_heredoc(t_node *node)
+static int		get_fildes(char *str)
 {
 	int			fildes;
 
-	fildes = open(node->content->heredoc, O_RDONLY);
-	dup2(fildes, STDIN_FILENO);
-	close(fildes);
-	remove(node->content->heredoc);
-}
-
-static int		norminette(int info, int *fildes)
-{
-	write_pipe(fildes);
-	info ^= WRITE_PREVIOUS;
-	return (info);
+	if ((fildes = open(str, O_RDONLY)) == -1)
+	{
+		check_path(str);
+		exit(1);
+	}
+	return (fildes);
 }
 
 /*
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			op_dless(t_node *node, t_jobs *jobs, int info)
+void			op_dless(t_parsing *node)
 {
-	t_process	*process;
+	int			fildes;
 
-	if (info & FORK)
+	fildes = get_fildes(node->heredoc);
+	if (dup2(fildes, STDIN_FILENO) == -1)
 	{
-		jobs = new_jobs(jobs);
-		if ((process = my_fork(jobs, find_executing_node(node), info)) == NULL)
-			return (var_return(255));
-		if (process->pid > 0)
-			my_wait(jobs);
-		else
-		{
-			process->pid = getpid();
-			intro_heredoc(node);
-			if (process->prev)
-				info = norminette(info, process->prev->fildes);
-			execute_node(node->left, jobs, (info ^ FORK));
-		}
+		error_msg(S42H, BAD_FD, NULL);
+		exit(1);
 	}
-	else
-	{
-		intro_heredoc(node);
-		execute_node(node->left, jobs, info);
-	}
-	return (var_return(-1));
+	close(fildes);
+	remove(node->heredoc);
 }

@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:16:43 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/15 18:56:46 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 19:15:53 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,10 @@ void			op_less(t_parsing *node)
 
 	fildes = get_fildes(node->next->command[0]);
 	std = get_std(node->command[0]);
-	dup2(fildes, std);
+	if (dup2(fildes, std) == -1)
+	{
+		error_msg(S42H, BAD_FD, NULL);
+		exit(1);
+	}
 	close(fildes);
 }

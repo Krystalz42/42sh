@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:20:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/15 19:01:59 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 19:14:26 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ t_manage_redir		*g_execute_redir[12] =
 {
 		[VALUE_LESS] = &op_less,
 		[VALUE_LESS_AND] = &op_less_and,
-		[VALUE_DLESS] = NULL,		//	POUR TOI
-		[VALUE_GREAT] = &op_great,		//	POUR MOI
-		[VALUE_DGREAT] = &op_dgreat,		//	POUR MOI
-		[VALUE_GREAT_AND] = &op_great_and,	//	POUR MOI
+		[VALUE_DLESS] = &op_dless,
+		[VALUE_GREAT] = &op_great,
+		[VALUE_DGREAT] = &op_dgreat,
+		[VALUE_GREAT_AND] = &op_great_and,
 };
 
 void				manage_redirection(t_parsing *node)
