@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 20:08:58 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/15 17:47:05 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:50:05 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,6 @@ void			recognition(t_parsing *node)
 			else
 				node->priority = PRIO_COMMAND;
 		}
-		printf("[%s] [%d] [%d]\n", node->input, node->value, node->priority);
 		ft_memdel((void **)&temp);
 		node = node->next;
 	}
