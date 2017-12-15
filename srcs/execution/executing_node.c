@@ -24,7 +24,6 @@ t_exec			*g_execute[12] =
 
 uint8_t			execute_node(t_node *node, t_jobs *jobs, int info)
 {
-	ft_putnbr(node->content->value);
 	if (node)
 		g_execute[node->content->value](node, jobs, info);
 	return (var_return(-1));
