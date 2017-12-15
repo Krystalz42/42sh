@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:16:01 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 15:19:28 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 19:53:57 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 static int			check_this_one(char *part, char *path)
 {
-	struct stat		sts;
-
-	lstat(part, &sts);
-	if (S_ISDIR(sts.st_mode) || S_ISLNK(sts.st_mode))
-		return (error_msg(S42H, IS_DIR, path));
-	if (access(part, F_OK) == 0)
-		return (error_msg(S42H, NO_DIRECTORY, path));
-	if (access(part, X_OK) == -1)
-		return (error_msg(S42H, NO_RIGHT, path));
+	(void)part; (void)path;
+	if (errno == ENOENT)
+		return (error_msg(S42H, "No such file or directory", NULL));
+	else if (errno == EACCES)
+		return (error_msg(S42H, "permission denied", NULL));
+	else if (errno == ENOTDIR)
+		return (error_msg(S42H, "is a directory", NULL));
 	return (0);
 }
 

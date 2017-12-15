@@ -1,4 +1,4 @@
-# 42sh (Shell project in 42 school)
+# 42sh (42 School's shell project)
 
 ## Installing
 
@@ -9,27 +9,27 @@ make
 ./42sh
 ```
 
-## The shell support the following feature
+## The shell support the following features
 
 ### Jobs control
-Binary can be execute in foreround and in background
+Binary can be executed in foreground and in background
 ### Expansion
 Following character has been expand :
 `~ / $$ / $? $ENV_VARIABLE`
 ### Alias
-Alias work and stored in `~/.42sh_rc`
+Alias works and are stored in `~/.42sh_rc`
 ### Globbing
 `? *` followed by a tabulation
 ### Completion
 Completion on binary and directory with tabulation
-### Operator Token
+### Operator Tokens
 #### Redirections :
 `">" ">>" "<" "<<" "<&" ">&" "|"`
-#### logical operator :
+#### logical operators :
 `"||" "&&" `
-#### command separator :
+#### command separators :
 `";" "&"`
-### Builtin
+### Builtins
 ```
 env
 unsetenv
@@ -42,10 +42,10 @@ foreground
 background
 cd
 ```
-## Runing the tests
-_The usage have been make for all builtins_ `help`
+## Running the tests
+_The usage has been made for all builtins_ `help`
 
-### Few test possible
+### Few test possibles
 
 ```
 42sh > echo "ls=ls -G" >> ~/.42sh_rc
