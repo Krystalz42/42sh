@@ -23,7 +23,7 @@ static int		get_fildes(char *str)
 	if ((fildes = open(str, O_RDONLY)) == -1)
 	{
 		check_path(str);
-		exit(1);
+		return (-1);
 	}
 	return (fildes);
 }
@@ -43,17 +43,19 @@ static int		get_std(char *str)
 *************** PUBLIC *********************************************************
 */
 
-void			op_less(t_parsing *node)
+int				op_less(t_parsing *node)
 {
 	int			fildes;
 	int			std;
 
-	fildes = get_fildes(node->next->command[0]);
+	if ((fildes = get_fildes(node->next->command[0])) == -1)
+		return (0);
 	std = get_std(node->command[0]);
 	if (dup2(fildes, std) == -1)
 	{
 		error_msg(S42H, BAD_FD, NULL);
-		exit(1);
+		return (0);
 	}
 	close(fildes);
+	return (1);
 }

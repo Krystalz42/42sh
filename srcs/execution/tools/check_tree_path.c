@@ -18,13 +18,15 @@ void			check_tree_path(t_node *node)
 		return ;
 	if (node)
 	{
-		if (node->content->value == VALUE_DLESS)
-			do_heredoc(node);
 		if (node->content->value == VALUE_COMMAND)
+		{
 			if (check_if_builtin(node, DONT_EXECUTE) == -1)
 				if (ft_strchr(node->content->command[0], '/') == NULL)
 					if ((looking_for_path(&node->content->command[0])) == 0)
 						collect_path(&node->content->command[0]);
+			if (node->content->next && node->content->next->value == VALUE_DLESS)
+				do_heredoc(node->content->next);
+		}
 		check_tree_path(node->left);
 		check_tree_path(node->right);
 	}

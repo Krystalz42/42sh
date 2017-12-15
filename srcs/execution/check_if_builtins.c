@@ -43,6 +43,8 @@ int				check_if_builtin(t_node *node, int info)
 		{
 			if ((info & DONT_EXECUTE))
 				return (1);
+			if ((manage_redirection(node->content->next)) == 0)
+				return (-1);
 			return (var_return(g_builtin[index].function(node, info)));
 		}
 		index++;

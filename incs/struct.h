@@ -15,6 +15,17 @@
 
 # include <stdbool.h>
 
+
+/*
+**			ENUM FOR EXECUTING
+*/
+
+typedef struct s_jobs		t_jobs;
+typedef struct s_node		t_node;
+typedef struct s_parsing	t_parsing;
+typedef uint8_t				(t_exec)(t_node *node, t_jobs *jobs, int info);
+typedef int					(t_manage_redir)(t_parsing *parsing);
+
 /*
 **			STRUCT FOR ESCAPE
 */
@@ -310,12 +321,5 @@ typedef struct				s_norm
 	char					*home;
 	char					*original;
 }							t_norm;
-
-/*
-**			ENUM FOR EXECUTING
-*/
-
-typedef uint8_t				(t_exec)(t_node *node, t_jobs *jobs, int info);
-typedef void				(t_manage_redir)(t_parsing *parsing);
 
 #endif

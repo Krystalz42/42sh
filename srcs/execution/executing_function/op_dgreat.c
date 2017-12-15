@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-void				op_dgreat(t_parsing *node)
+int					op_dgreat(t_parsing *node)
 {
 	int			std;
 	int			fildes;
@@ -29,4 +29,5 @@ void				op_dgreat(t_parsing *node)
 		dup2(fildes, std);
 		close(fildes);
 	}
+	return (1);
 }

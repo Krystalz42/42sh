@@ -34,7 +34,7 @@ static int		get_fildes(char *str)
 *************** PUBLIC *********************************************************
 */
 
-void op_great_and(t_parsing *node)
+int 			op_great_and(t_parsing *node)
 {
 	int		fildes_out;
 	int		fildes_in;
@@ -46,6 +46,7 @@ void op_great_and(t_parsing *node)
 	if (dup2(fildes_out, fildes_in) == -1)
 	{
 		error_msg(S42H, BAD_FD, NULL);
-		exit(1);
+		return (0);
 	}
+	return (1);
 }

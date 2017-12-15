@@ -361,7 +361,7 @@ t_node						*create_binary_tree(t_parsing *list,
 												int priority);
 uint8_t						execute_node(t_node *node, t_jobs *jobs, int info);
 void						check_tree_path(t_node *node);
-void						do_heredoc(t_node *node);
+void						do_heredoc(t_parsing *node);
 
 /*
 **				JOB'S CONTROL FUNCTION
@@ -394,6 +394,7 @@ t_jobs						*add_to_first(t_jobs *new);
 **				EXECUTION FUNCTION
 */
 
+int							manage_redirection(t_parsing *node);
 uint8_t						op_execution(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_separator(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_pipeline(t_node *node, t_jobs *jobs, int info);
@@ -405,12 +406,12 @@ uint8_t						op_or_if(t_node *node, t_jobs *jobs, int info);
 **				MANAGE REDIRECTIOM
 */
 
-void						op_great(t_parsing *node);
-void						op_dgreat(t_parsing *node);
-void						op_great_and(t_parsing *node);
-void						op_less(t_parsing *node);
-void						op_less_and(t_parsing *node);
-void						op_dless(t_parsing *node);
+int							op_great(t_parsing *node);
+int							op_dgreat(t_parsing *node);
+int							op_great_and(t_parsing *node);
+int							op_less(t_parsing *node);
+int							op_less_and(t_parsing *node);
+int							op_dless(t_parsing *node);
 
 /*
 **				TOOL'S EXECUTION

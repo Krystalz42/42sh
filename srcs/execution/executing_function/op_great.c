@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-void				op_great(t_parsing *node)
+int					op_great(t_parsing *node)
 {
 	int			std;
 	int			fildes;
@@ -35,4 +35,5 @@ void				op_great(t_parsing *node)
 		}
 	}
 	close(fildes);
+	return (1);
 }

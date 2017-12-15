@@ -1,0 +1,12 @@
+42sh
+CMakeLists.txt
+Makefile
+README.md
+bonjour
+cmake-build-debug
+incs
+libs
+lol
+srcs
+tdest
+test

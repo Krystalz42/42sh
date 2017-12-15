@@ -22,18 +22,22 @@ t_manage_redir		*g_execute_redir[12] =
 		[VALUE_GREAT_AND] = &op_great_and,
 };
 
-void				manage_redirection(t_parsing *node)
+int					manage_redirection(t_parsing *node)
 {
 	if (node && node->priority == PRIO_REDIR)
 	{
-		g_execute_redir[node->value](node);
-		manage_redirection(node->next->next);
+		if ((g_execute_redir[node->value](node)) == 1)
+			manage_redirection(node->next->next);
+		else
+			return (0);
 	}
+	return (1);
 }
 
 uint8_t				exec_or_builtin(t_node *node, int info)
 {
-	manage_redirection(node->content->next);
+	if ((manage_redirection(node->content->next)) == 0)
+		exit(1);
 	if (check_if_builtin(node, info) == -1)
 		my_execve(node->content->command, get_real_env(node));
 	else
@@ -72,9 +76,9 @@ uint8_t				jobs_execution(t_node *node, t_jobs *jobs, int info)
 
 uint8_t				op_execution(t_node *node, t_jobs *jobs, int info)
 {
-	if (info & FORCE_FORK || !(info & FORK))
-		jobs_execution(node, jobs, info);
-	else if (check_if_builtin(node, info) != -1)
+	if (jobs)
+		return (jobs_execution(node, jobs, info));
+	if (check_if_builtin(node, info) != -1)
 		;
 	else
 		jobs_execution(node, jobs, info);

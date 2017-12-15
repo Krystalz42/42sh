@@ -12,20 +12,20 @@
 
 #include <sh.h>
 
-static void		jobs_do_heredoc(t_node *node, char **heredoc)
+static void		jobs_do_heredoc(t_parsing *node, char **heredoc)
 {
 	int					fildes;
 	char				*temp;
 
 	temp = ft_itoa(time(NULL));
-	node->content->heredoc = ft_strjoin("/tmp/", temp);
-	fildes = open(node->content->heredoc, O_WRONLY | O_CREAT, 0644);
+	node->heredoc = ft_strjoin("/tmp/", temp);
+	fildes = open(node->heredoc, O_WRONLY | O_CREAT, 0644);
 	ft_memdel((void **)&temp);
 	ft_putstrtab_fd(heredoc, 10, fildes);
 	close(fildes);
 }
 
-void			do_heredoc(t_node *node)
+void			do_heredoc(t_parsing *node)
 {
 	t_cmd				*cmd;
 	char				**heredoc;
@@ -36,7 +36,7 @@ void			do_heredoc(t_node *node)
 		cmd = first_cmd(read_stdin(HEREDOC), 1);
 		if (signal_reception(-1) == SIGINT)
 			break ;
-		else if (compare_heredoc(cmd, node->right->content->command[0]) == 0 \
+		else if (compare_heredoc(cmd, node->next->command[0]) == 0 \
 			|| signal_reception(-1) == 1)
 		{
 			jobs_do_heredoc(node, heredoc);
