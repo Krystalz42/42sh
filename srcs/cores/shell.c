@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:11:34 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/13 21:05:30 by aroulin          ###   ########.fr       */
+/*   Updated: 2017/12/15 17:37:02 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int		shell(void)
 			continue ;
 		if ((parse_struct = parsing(input)) == NULL)
 			continue ;
+		continue ;
 		if (!(tree = create_binary_tree(parse_struct, NULL, PRIO_SEPARATOR)))
 			continue ;
 		check_tree_path(tree);
