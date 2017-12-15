@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 14:37:30 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 16:49:25 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 21:00:08 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ static char		*chk(char *str)
 bool			chk_get_argv(t_parsing *node)
 {
 	short				index;
-	static const char	*operaters[] = {">>", ">&", "&>", ">", NULL};
+	static const char	*operaters[] = {"<", ">>", ">&", "&>", ">", NULL};
 
 	if (node && node->value && node->command && node->command[0])
 	{
