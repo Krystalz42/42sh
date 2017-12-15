@@ -6,13 +6,14 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:38:21 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 16:38:27 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 21:41:03 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-static const t_signal	g_signal[] = {
+static const t_signal	g_signal[] =
+{
 		(t_signal){SIGHUP, "terminal line hangup"},
 		(t_signal){SIGINT, "interrupt program"},
 		(t_signal){SIGQUIT, "quit program"},
@@ -60,20 +61,18 @@ const char				*status_signal(int signal)
 
 const char				*status_exit(int signal)
 {
-	static char		status[8];
+	static char		status[9];
 	char			*temp;
 
-	ft_bzero(status, 8);
+	ft_bzero(status, 9);
 	if (signal)
 	{
 		temp = ft_itoa(signal);
 		ft_strcpy(status, "exit ");
-		ft_strcpy(status + 5, temp);
-		free(temp);
+		ft_strcat(status, temp);
+		ft_memdel((void **)&temp);
 	}
 	else
-	{
 		ft_strcpy(status, "done");
-	}
 	return (status);
 }
