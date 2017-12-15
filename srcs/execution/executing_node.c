@@ -19,17 +19,12 @@ t_exec			*g_execute[12] =
 	[VALUE_AMPERSAND] = &op_ampersand,
 	[VALUE_AND_IF] = &op_and_if,
 	[VALUE_PIPELINE] = &op_pipeline,
-	[VALUE_DLESS] = &op_dless,
-	[VALUE_LESS] = &op_less,
-	[VALUE_GREAT] = &op_great,
-	[VALUE_DGREAT] = &op_dgreat,
 	[VALUE_OR_IF] = &op_or_if,
-	[VALUE_GREAT_AND] = &op_great_and,
-	[VALUE_LESS_AND] = &op_less_and,
 };
 
 uint8_t			execute_node(t_node *node, t_jobs *jobs, int info)
 {
+	ft_putnbr(node->content->value);
 	if (node)
 		g_execute[node->content->value](node, jobs, info);
 	return (var_return(-1));

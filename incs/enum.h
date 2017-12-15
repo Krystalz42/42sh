@@ -81,8 +81,8 @@ typedef enum			e_priority
 	PRIO_AMPERSAND,
 	PRIO_CMD_AND_OR,
 	PRIO_PIPE,
-	PRIO_REDIR,
-	PRIO_COMMAND
+	PRIO_COMMAND,
+	PRIO_REDIR
 }						t_priority;
 
 #endif

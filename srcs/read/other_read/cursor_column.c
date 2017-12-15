@@ -14,20 +14,20 @@
 
 int			cursor_column(int new_line)
 {
-	char	buff[7];
+	char	buff[10];
 	int		index;
 	int		col;
 
 	if (*shell_interectative())
 	{
-		ft_bzero(buff, 7);
+		ft_bzero(buff, 10);
 		set_termios(SET_OUR_TERM);
 		if ((write(STDIN_FILENO, CURSOR, sizeof(CURSOR))))
-			read(STDIN_FILENO, buff, 7);
+			read(STDIN_FILENO, buff, 10);
 		index = 0;
-		while (index < 7 && buff[index] != ';')
+		while (index < 10 && buff[index] != ';')
 			index++;
-		col = ft_atoi(buff + index + 1);
+		col = (index + 1 < 10) ? ft_atoi(buff + index + 1) : 1;
 		if (col > 2 && new_line)
 			ft_putstr_fd("\x1B[7m%\x1B[0m\n", init_fd());
 		return (col);
