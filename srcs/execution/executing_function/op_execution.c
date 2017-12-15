@@ -12,8 +12,30 @@
 
 #include <sh.h>
 
+void				test(t_parsing *node)
+{(void)node;}
+
+t_manage_redir					*g_execute_redir[12] = {
+		[VALUE_LESS] = NULL, 		//	POUR TOI
+		[VALUE_LESS_AND] = NULL,	//	POUR TOI
+		[VALUE_DLESS] = NULL,		//	POUR TOI
+		[VALUE_GREAT] = NULL,		//	POUR MOI
+		[VALUE_GREAT_AND] = NULL,	//	POUR MOI
+		[VALUE_DGREAT] = &test		//	POUR MOI
+};
+
+void				manage_redirection(t_parsing *node)
+{
+	if (node && node->priority == PRIO_REDIR)
+	{
+		g_execute_redir[node->value](node);
+		manage_redirection(node->next->next);
+	}
+}
+
 uint8_t				exec_or_builtin(t_node *node, int info)
 {
+	manage_redirection(node->content->next);
 	if (check_if_builtin(node, info) == -1)
 		my_execve(node->content->command, get_real_env(node));
 	else

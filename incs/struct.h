@@ -316,5 +316,6 @@ typedef struct				s_norm
 */
 
 typedef uint8_t				(t_exec)(t_node *node, t_jobs *jobs, int info);
+typedef void				(t_manage_redir)(t_parsing *parsing);
 
 #endif
