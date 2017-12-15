@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/14 13:41:29 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 18:56:20 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -401,11 +401,11 @@ uint8_t						op_dless(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_ampersand(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_and_if(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_or_if(t_node *node, t_jobs *jobs, int info);
-uint8_t						op_less(t_node *node, t_jobs *jobs, int info);
+void						op_less(t_parsing *node);
+void						op_less_and(t_parsing *node);
 uint8_t						op_great(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_great_and(t_node *node, t_jobs *jobs, int info);
 uint8_t						op_dgreat(t_node *node, t_jobs *jobs, int info);
-uint8_t						op_less_and(t_node *node, t_jobs *jobs, int info);
 
 /*
 **				TOOL'S EXECUTION

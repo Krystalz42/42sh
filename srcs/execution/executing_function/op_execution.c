@@ -6,22 +6,20 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:20:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 22:43:47 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 18:48:29 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-void				test(t_parsing *node)
-{(void)node;}
-
-t_manage_redir					*g_execute_redir[12] = {
-		[VALUE_LESS] = NULL, 		//	POUR TOI
-		[VALUE_LESS_AND] = NULL,	//	POUR TOI
+t_manage_redir		*g_execute_redir[12] =
+{
+		[VALUE_LESS] = &op_less,
+		[VALUE_LESS_AND] = &op_less_and,
 		[VALUE_DLESS] = NULL,		//	POUR TOI
 		[VALUE_GREAT] = NULL,		//	POUR MOI
 		[VALUE_GREAT_AND] = NULL,	//	POUR MOI
-		[VALUE_DGREAT] = &test		//	POUR MOI
+		[VALUE_DGREAT] = NULL		//	POUR MOI
 };
 
 void				manage_redirection(t_parsing *node)
