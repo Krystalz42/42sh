@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-t_manage_redir		*g_execute_redir[13] =
+t_manage_redir		*g_execute_redir[] =
 {
 		[VALUE_LESS] = &op_less,
 		[VALUE_LESS_AND] = &op_less_and,

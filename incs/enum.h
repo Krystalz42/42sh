@@ -70,7 +70,7 @@ typedef enum			e_value
 	VALUE_GREAT_AND,
 	VALUE_LESS_AND,
 	VALUE_LESSGREAT,
-	VALUE_STRING,
+	VALUE_STRING
 }						t_value;
 
 /*
