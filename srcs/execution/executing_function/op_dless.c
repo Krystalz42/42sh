@@ -20,7 +20,7 @@ static int		get_fildes(char *str)
 {
 	int			fildes;
 
-	if ((fildes = open(str, O_RDWR | O_CREAT)) == -1)
+	if ((fildes = open(str, O_RDONLY)) == -1)
 	{
 		check_path(str);
 		return (-1);

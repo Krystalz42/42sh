@@ -27,7 +27,7 @@ void			check_tree_path(t_parsing *node)
 			if (node->next && node->next->value == VALUE_DLESS)
 				do_heredoc(node->next);
 			if (node->next && node->next->value == VALUE_STRING)
-				do_heredoc(node->next);
+				do_string(node->next);
 		}
 		check_tree_path(node->left);
 		check_tree_path(node->right);

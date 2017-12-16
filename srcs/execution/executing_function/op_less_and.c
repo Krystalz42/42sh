@@ -60,6 +60,7 @@ int				op_less_and(t_parsing *node)
 	std = get_std(node->command[0]);
 	if (dup2(fildes, std) == -1)
 	{
+		perror("");
 		error_msg(S42H, BAD_FD, NULL);
 		return (0);
 	}

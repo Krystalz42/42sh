@@ -13,7 +13,7 @@ static void		jobs_do_string(t_parsing *node, char *heredoc)
 	node->heredoc = ft_strjoin("/tmp/", temp);
 	fildes = open(node->heredoc, O_WRONLY | O_CREAT, 0644);
 	ft_memdel((void **)&temp);
-	ft_putstr_fd(heredoc, fildes);
+	ft_putendl_fd(heredoc, fildes);
 	close(fildes);
 }
 
