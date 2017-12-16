@@ -4578,6 +4578,33 @@ srcs/execution/executing_function/op_separator.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_separator.c.s
 .PHONY : srcs/execution/executing_function/op_separator.c.s
 
+srcs/execution/executing_function/op_string.o: srcs/execution/executing_function/op_string.c.o
+
+.PHONY : srcs/execution/executing_function/op_string.o
+
+# target to build an object file
+srcs/execution/executing_function/op_string.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o
+.PHONY : srcs/execution/executing_function/op_string.c.o
+
+srcs/execution/executing_function/op_string.i: srcs/execution/executing_function/op_string.c.i
+
+.PHONY : srcs/execution/executing_function/op_string.i
+
+# target to preprocess a source file
+srcs/execution/executing_function/op_string.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.i
+.PHONY : srcs/execution/executing_function/op_string.c.i
+
+srcs/execution/executing_function/op_string.s: srcs/execution/executing_function/op_string.c.s
+
+.PHONY : srcs/execution/executing_function/op_string.s
+
+# target to generate assembly for a file
+srcs/execution/executing_function/op_string.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.s
+.PHONY : srcs/execution/executing_function/op_string.c.s
+
 srcs/execution/executing_node.o: srcs/execution/executing_node.c.o
 
 .PHONY : srcs/execution/executing_node.o
@@ -4739,6 +4766,33 @@ srcs/execution/tools/do_heredoc.s: srcs/execution/tools/do_heredoc.c.s
 srcs/execution/tools/do_heredoc.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/do_heredoc.c.s
 .PHONY : srcs/execution/tools/do_heredoc.c.s
+
+srcs/execution/tools/do_string.o: srcs/execution/tools/do_string.c.o
+
+.PHONY : srcs/execution/tools/do_string.o
+
+# target to build an object file
+srcs/execution/tools/do_string.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o
+.PHONY : srcs/execution/tools/do_string.c.o
+
+srcs/execution/tools/do_string.i: srcs/execution/tools/do_string.c.i
+
+.PHONY : srcs/execution/tools/do_string.i
+
+# target to preprocess a source file
+srcs/execution/tools/do_string.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.i
+.PHONY : srcs/execution/tools/do_string.c.i
+
+srcs/execution/tools/do_string.s: srcs/execution/tools/do_string.c.s
+
+.PHONY : srcs/execution/tools/do_string.s
+
+# target to generate assembly for a file
+srcs/execution/tools/do_string.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.s
+.PHONY : srcs/execution/tools/do_string.c.s
 
 srcs/execution/tools/find_executing_node.o: srcs/execution/tools/find_executing_node.c.o
 
@@ -8754,6 +8808,9 @@ help:
 	@echo "... srcs/execution/executing_function/op_separator.o"
 	@echo "... srcs/execution/executing_function/op_separator.i"
 	@echo "... srcs/execution/executing_function/op_separator.s"
+	@echo "... srcs/execution/executing_function/op_string.o"
+	@echo "... srcs/execution/executing_function/op_string.i"
+	@echo "... srcs/execution/executing_function/op_string.s"
 	@echo "... srcs/execution/executing_node.o"
 	@echo "... srcs/execution/executing_node.i"
 	@echo "... srcs/execution/executing_node.s"
@@ -8772,6 +8829,9 @@ help:
 	@echo "... srcs/execution/tools/do_heredoc.o"
 	@echo "... srcs/execution/tools/do_heredoc.i"
 	@echo "... srcs/execution/tools/do_heredoc.s"
+	@echo "... srcs/execution/tools/do_string.o"
+	@echo "... srcs/execution/tools/do_string.i"
+	@echo "... srcs/execution/tools/do_string.s"
 	@echo "... srcs/execution/tools/find_executing_node.o"
 	@echo "... srcs/execution/tools/find_executing_node.i"
 	@echo "... srcs/execution/tools/find_executing_node.s"

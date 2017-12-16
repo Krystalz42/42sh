@@ -315,4 +315,4 @@ add_executable(42sh
         srcs/term/init_fd.c
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
-        srcs/term/set_term.c srcs/memdel_struct/memdel_parsing.c)
+        srcs/term/set_term.c srcs/memdel_struct/memdel_parsing.c srcs/execution/executing_function/op_string.c srcs/execution/tools/do_string.c)

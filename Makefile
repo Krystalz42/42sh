@@ -147,6 +147,7 @@ SRCS = \
 	   execution/tools/new_jobs.c								\
 	   execution/tools/check_tree_path.c						\
 	   execution/tools/do_heredoc.c								\
+	   execution/tools/do_string.c								\
 	   execution/tools/get_process.c							\
 	   execution/tools/find_executing_node.c					\
 	   execution/tools/check_path.c								\
@@ -162,6 +163,7 @@ SRCS = \
 	   execution/executing_function/op_or_if.c					\
 	   execution/executing_function/op_and_if.c					\
 	   execution/executing_function/op_less.c					\
+	   execution/executing_function/op_string.c					\
 	   execution/executing_function/op_less_and.c				\
 	   execution/executing_function/op_pipeline.c				\
 	   execution/executing_function/op_separator.c				\

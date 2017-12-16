@@ -30,24 +30,27 @@ void			do_heredoc(t_parsing *node)
 	t_cmd				*cmd;
 	char				**heredoc;
 
-	heredoc = NULL;
-	while (0x2A)
+	if (node && (heredoc = NULL) == NULL)
 	{
-		cmd = first_cmd(read_stdin(HEREDOC), 1);
-		if (signal_reception(-1) == SIGINT)
-			break ;
-		else if (compare_heredoc(cmd, node->next->command[0]) == 0 \
+		while (0x2A)
+		{
+			cmd = first_cmd(read_stdin(HEREDOC), 1);
+			if (signal_reception(-1) == SIGINT)
+				break ;
+			else if (compare_heredoc(cmd, node->next->command[0]) == 0 \
 			|| signal_reception(-1) == 1)
-		{
-			jobs_do_heredoc(node, heredoc);
-			memdel_cmd(&cmd);
-			break ;
+			{
+				jobs_do_heredoc(node, heredoc);
+				memdel_cmd(&cmd);
+				break ;
+			}
+			else
+			{
+				heredoc = build_table(heredoc, convert_to_str(cmd));
+				memdel_cmd(&cmd);
+			}
 		}
-		else
-		{
-			heredoc = build_table(heredoc, convert_to_str(cmd));
-			memdel_cmd(&cmd);
-		}
+		ft_memdel_tab(&heredoc);
+		do_heredoc(node->next->next);
 	}
-	ft_memdel_tab(&heredoc);
 }

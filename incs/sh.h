@@ -362,6 +362,8 @@ t_parsing						*create_binary_tree(t_parsing *list,
 uint8_t						execute_node(t_parsing *node, t_jobs *jobs, int info);
 void						check_tree_path(t_parsing *node);
 void						do_heredoc(t_parsing *node);
+void						do_string(t_parsing *node);
+
 
 /*
 **				JOB'S CONTROL FUNCTION

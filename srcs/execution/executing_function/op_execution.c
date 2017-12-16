@@ -20,6 +20,7 @@ t_manage_redir		*g_execute_redir[12] =
 		[VALUE_GREAT] = &op_great,
 		[VALUE_DGREAT] = &op_dgreat,
 		[VALUE_GREAT_AND] = &op_great_and,
+		[VALUE_STRING] = &op_string,
 };
 
 int					manage_redirection(t_parsing *node)

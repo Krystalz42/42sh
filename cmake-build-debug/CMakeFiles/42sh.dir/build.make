@@ -7281,6 +7281,54 @@ CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.o.provides: CMakeFiles/4
 CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.o.provides.build: CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.o
 
 
+CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o: CMakeFiles/42sh.dir/flags.make
+CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o: ../srcs/execution/executing_function/op_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_302) "Building C object CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o   -c /Users/aroulin/42sh/srcs/execution/executing_function/op_string.c
+
+CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/42sh/srcs/execution/executing_function/op_string.c > CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.i
+
+CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/42sh/srcs/execution/executing_function/op_string.c -o CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.s
+
+CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o.requires:
+
+.PHONY : CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o.requires
+
+CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o.provides: CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o.requires
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o.provides.build
+.PHONY : CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o.provides
+
+CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o.provides.build: CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o
+
+
+CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o: CMakeFiles/42sh.dir/flags.make
+CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o: ../srcs/execution/tools/do_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_303) "Building C object CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o   -c /Users/aroulin/42sh/srcs/execution/tools/do_string.c
+
+CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/aroulin/42sh/srcs/execution/tools/do_string.c > CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.i
+
+CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/aroulin/42sh/srcs/execution/tools/do_string.c -o CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.s
+
+CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o.requires:
+
+.PHONY : CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o.requires
+
+CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o.provides: CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o.requires
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o.provides.build
+.PHONY : CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o.provides
+
+CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o.provides.build: CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o
+
+
 # Object files for target 42sh
 42sh_OBJECTS = \
 "CMakeFiles/42sh.dir/libs/libft/srcs/ft_atoi.c.o" \
@@ -7583,7 +7631,9 @@ CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.o.provides.build: CMakeF
 "CMakeFiles/42sh.dir/srcs/term/init_term.c.o" \
 "CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o" \
 "CMakeFiles/42sh.dir/srcs/term/set_term.c.o" \
-"CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.o"
+"CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.o" \
+"CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o" \
+"CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o"
 
 # External object files for target 42sh
 42sh_EXTERNAL_OBJECTS =
@@ -7889,9 +7939,11 @@ CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.o.provides.build: CMakeF
 42sh: CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o
 42sh: CMakeFiles/42sh.dir/srcs/term/set_term.c.o
 42sh: CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.o
+42sh: CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o
+42sh: CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o
 42sh: CMakeFiles/42sh.dir/build.make
 42sh: CMakeFiles/42sh.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_302) "Linking C executable 42sh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/aroulin/42sh/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_304) "Linking C executable 42sh"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/42sh.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -8200,6 +8252,8 @@ CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/term/init_term.c.o.requir
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o.requires
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/term/set_term.c.o.requires
 CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.o.requires
+CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/execution/executing_function/op_string.c.o.requires
+CMakeFiles/42sh.dir/requires: CMakeFiles/42sh.dir/srcs/execution/tools/do_string.c.o.requires
 
 .PHONY : CMakeFiles/42sh.dir/requires
 
