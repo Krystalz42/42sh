@@ -96,8 +96,6 @@ CPPFLAGS	= \
 
 CFLAGS		= \
 			  -Wall -Werror -Wextra	\
-			  -fsanitize=address	\
-			  -g3					\
 
 DEPFLAGS	= \
 			  -MT $@ -MMD -MP -MF $(DIR_DEPS)/$*.Td	\

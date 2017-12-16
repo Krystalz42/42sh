@@ -6,7 +6,7 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 22:43:12 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/13 15:38:59 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/16 16:10:10 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -303,17 +303,5 @@ typedef struct				s_signal
 	int						signal;
 	char					*status;
 }							t_signal;
-
-/*
-**			STRUCT FOR ALIAS
-*/
-
-typedef struct				s_norm
-{
-	char					*new;
-	char					*str;
-	char					*home;
-	char					*original;
-}							t_norm;
 
 #endif

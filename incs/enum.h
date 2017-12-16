@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 12:02:53 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/15 21:08:29 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/16 17:05:58 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ typedef enum			e_value
 	VALUE_GREAT_AND,
 	VALUE_LESS_AND,
 	VALUE_LESSGREAT,
+	VALUE_STRING,
 }						t_value;
 
 /*

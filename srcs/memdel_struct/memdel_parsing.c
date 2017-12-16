@@ -12,10 +12,12 @@ void		memdel_parsing(t_parsing **node)
 	{
 		to_kill = *node;
 		*node = (*node)->next;
+		ft_memdel((void **)&to_kill->input);
 		ft_memdel((void **)&to_kill->heredoc);
 		if (to_kill->env_option)
 			ft_memdel_tab(&to_kill->env);
 		ft_memdel_tab(&to_kill->command);
+		ft_memdel((void **)&to_kill);
 	}
 	*node = NULL;
 }
