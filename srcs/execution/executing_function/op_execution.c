@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:20:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/15 19:14:26 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 21:56:58 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ uint8_t				jobs_execution(t_parsing *node, t_jobs *jobs, int info)
 
 uint8_t				op_execution(t_parsing *node, t_jobs *jobs, int info)
 {
-	if (jobs)
+	if (jobs || (node->content->next && node->content->next->priority == PRIO_REDIR))
 		return (jobs_execution(node, jobs, info));
 	if (check_if_builtin(node, info) != -1)
 		;

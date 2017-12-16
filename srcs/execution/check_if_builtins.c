@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 15:20:09 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/01 15:57:35 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/15 21:58:33 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,11 @@ int				check_if_builtin(t_parsing *node, int info)
 		{
 			if ((info & DONT_EXECUTE))
 				return (1);
+<<<<<<< HEAD
 			if ((manage_redirection(node->next)) == 0)
 				return (-1);
+=======
+>>>>>>> 9c1739a9c7b4ede3fafe0bd992af4ef508c0b315
 			return (var_return(g_builtin[index].function(node, info)));
 		}
 		index++;
