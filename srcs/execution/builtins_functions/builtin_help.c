@@ -65,16 +65,16 @@ int					get_option(char **cmd, int option)
 	return (option);
 }
 
-uint8_t				builtin_help(t_node *node, int info)
+uint8_t				builtin_help(t_parsing *node, int info)
 {
 	int			option;
 
 	(void)info;
 	option = 0;
-	if (node->content->command[1] == NULL)
+	if (node->command[1] == NULL)
 		return (usage_help());
-	else if (node->content->command[1] && node->content->command[1][0] == '-')
-		if ((option = get_option(node->content->command, 0)) == -1)
+	else if (node->command[1] && node->command[1][0] == '-')
+		if ((option = get_option(node->command, 0)) == -1)
 			return (1);
 	return (print_help(option));
 }

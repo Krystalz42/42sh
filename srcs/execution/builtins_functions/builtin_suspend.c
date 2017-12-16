@@ -23,13 +23,13 @@ int				suspend_jobs(void)
 	return (0);
 }
 
-uint8_t			builtin_suspend(t_node *node, int info)
+uint8_t			builtin_suspend(t_parsing *node, int info)
 {
 	(void)node;
 	(void)info;
-	if (node->content->command[1])
+	if (node->command[1])
 	{
-		error_msg("suspend: ", TOO_MANY_ARGS, node->content->command[1]);
+		error_msg("suspend: ", TOO_MANY_ARGS, node->command[1]);
 		return (var_return(1));
 	}
 	if (suspend_jobs() == 0)

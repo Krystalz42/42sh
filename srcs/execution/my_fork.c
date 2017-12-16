@@ -32,7 +32,7 @@ t_process		*new_process(t_jobs *jobs)
 	}
 }
 
-t_process		*my_fork(t_jobs *jobs, t_node *node, int info)
+t_process		*my_fork(t_jobs *jobs, t_parsing *node, int info)
 {
 	t_process	*process;
 
@@ -46,7 +46,7 @@ t_process		*my_fork(t_jobs *jobs, t_node *node, int info)
 	process->fildes[0] = -1;
 	process->fildes[1] = -1;
 	process->running = true;
-	process->command = ft_strdup(node->content->input);
+	process->command = ft_strdup(node->input);
 	setpgid(process->pid, process->prev ? process->prev->pgid : process->pid);
 	process->pgid = getpgid(process->pid);
 	process->status = -1;

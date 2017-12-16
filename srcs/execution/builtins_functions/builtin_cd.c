@@ -77,7 +77,7 @@ static void		modify_variable(char *variable, char **pwd)
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			builtin_cd(t_node *node, int info)
+uint8_t			builtin_cd(t_parsing *node, int info)
 {
 	char				err;
 	char				*oldpwd;
@@ -85,7 +85,7 @@ uint8_t			builtin_cd(t_node *node, int info)
 
 	(void)info;
 	oldpwd = getcwd(NULL, 4096);
-	err = change_direction(node->content->command[1]);
+	err = change_direction(node->command[1]);
 	if (err == 0)
 	{
 		pwd = getcwd(NULL, 4096);

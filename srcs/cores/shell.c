@@ -16,14 +16,14 @@ int		shell(void)
 {
 	t_cmd		*input;
 	t_parsing	*parse_struct;
-	t_node		*tree;
+	t_parsing	*tree;
 
 	input = NULL;
-	tree = NULL;
+	parse_struct = NULL;
 	while (0x2A)
 	{
 		memdel_cmd(&input);
-		memdel_node(&tree);
+		memdel_parsing(&parse_struct);
 		if ((input = read_input(DEFAULT)) == NULL)
 			continue ;
 		if ((parse_struct = parsing(input)) == NULL)

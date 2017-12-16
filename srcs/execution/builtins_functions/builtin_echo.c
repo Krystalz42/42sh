@@ -49,14 +49,14 @@ static void		print_argv(char **argv)
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			builtin_echo(t_node *node, int info)
+uint8_t			builtin_echo(t_parsing *node, int info)
 {
 	uint8_t		option;
 	char		**argv;
 
 	(void)info;
 	option = DEFAULT;
-	argv = get_argv(node->content->command + 1, &option);
+	argv = get_argv(node->command + 1, &option);
 	print_argv(argv);
 	option & DEFAULT || !argv ? ft_putchar('\012') : 0;
 	return (0);

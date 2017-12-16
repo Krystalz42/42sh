@@ -103,21 +103,21 @@ void						add_hash(char *bin, char *path,
 **				BUILT IN FUNCTION
 */
 
-int							check_if_builtin(t_node *node, int info);
-uint8_t						builtin_background(t_node *node, int info);
-uint8_t						builtin_foreground(t_node *node, int info);
-uint8_t						builtin_jobs(t_node *node, int info);
-uint8_t						builtin_suspend(t_node *node, int info);
-uint8_t						builtin_hash(t_node *node, int info);
-uint8_t						builtin_history(t_node *node, int info);
-uint8_t						builtin_kill(t_node *node, int info);
-uint8_t						builtin_env(t_node *node, int info);
-uint8_t						builtin_exit(t_node *node, int info);
-uint8_t						builtin_help(t_node *node, int info);
-uint8_t						builtin_echo(t_node *node, int info);
-uint8_t						builtin_cd(t_node *node, int info);
-uint8_t						builtin_setenv(t_node *node, int info);
-uint8_t						builtin_alias(t_node *node, int info);
+int							check_if_builtin(t_parsing *node, int info);
+uint8_t						builtin_background(t_parsing *node, int info);
+uint8_t						builtin_foreground(t_parsing *node, int info);
+uint8_t						builtin_jobs(t_parsing *node, int info);
+uint8_t						builtin_suspend(t_parsing *node, int info);
+uint8_t						builtin_hash(t_parsing *node, int info);
+uint8_t						builtin_history(t_parsing *node, int info);
+uint8_t						builtin_kill(t_parsing *node, int info);
+uint8_t						builtin_env(t_parsing *node, int info);
+uint8_t						builtin_exit(t_parsing *node, int info);
+uint8_t						builtin_help(t_parsing *node, int info);
+uint8_t						builtin_echo(t_parsing *node, int info);
+uint8_t						builtin_cd(t_parsing *node, int info);
+uint8_t						builtin_setenv(t_parsing *node, int info);
+uint8_t						builtin_alias(t_parsing *node, int info);
 
 /*
 **				BUILT IN OPTION
@@ -158,7 +158,7 @@ t_bdata						*b_data(void);
 signed int					search_in_tab(char **data, char *var);
 char						*add_envar(char *var, char *value);
 char						**init_pwd(char **env);
-uint8_t						builtin_unsetenv(t_node *node, int info);
+uint8_t						builtin_unsetenv(t_parsing *node, int info);
 int							potential_option(char *potential, int c);
 
 /*
@@ -267,7 +267,7 @@ char						*my_getenv(char *name);
 size_t						compare_environment(const char *s1, const char *s2);
 void						remove_environment(char *string);
 char						**env_table(char **env, int flags);
-char						**get_real_env(t_node *node);
+char						**get_real_env(t_parsing *node);
 
 /*
 **				HISTORY FUNCTION
@@ -356,11 +356,11 @@ t_parsing					*lstnew(char *input);
 **				CREATE BINARY TREE
 */
 
-t_node						*create_binary_tree(t_parsing *list,
+t_parsing						*create_binary_tree(t_parsing *list,
 												t_parsing *compare,
 												int priority);
-uint8_t						execute_node(t_node *node, t_jobs *jobs, int info);
-void						check_tree_path(t_node *node);
+uint8_t						execute_node(t_parsing *node, t_jobs *jobs, int info);
+void						check_tree_path(t_parsing *node);
 void						do_heredoc(t_parsing *node);
 
 /*
@@ -373,11 +373,11 @@ int							finished_process(t_process *process);
 t_process					*place_status(pid_t pid, int status);
 t_jobs						*get_jobs(pid_t pgid);
 void						print_info_jobs(t_process *process, int index);
-t_process					*my_fork(t_jobs *jobs, t_node *node, int info);
+t_process					*my_fork(t_jobs *jobs, t_parsing *node, int info);
 t_jobs						*new_jobs(t_jobs *jobs);
 t_process					*new_process(t_jobs *jobs);
 void						close_fildes(t_process *process);
-t_node						*find_executing_node(t_node *node);
+t_parsing						*find_executing_node(t_parsing *node);
 int							wait_group(t_process *process, int option);
 void						my_execve(char **command, char **env);
 void						handler_sigchld(int sig);
@@ -395,12 +395,12 @@ t_jobs						*add_to_first(t_jobs *new);
 */
 
 int							manage_redirection(t_parsing *node);
-uint8_t						op_execution(t_node *node, t_jobs *jobs, int info);
-uint8_t						op_separator(t_node *node, t_jobs *jobs, int info);
-uint8_t						op_pipeline(t_node *node, t_jobs *jobs, int info);
-uint8_t						op_ampersand(t_node *node, t_jobs *jobs, int info);
-uint8_t						op_and_if(t_node *node, t_jobs *jobs, int info);
-uint8_t						op_or_if(t_node *node, t_jobs *jobs, int info);
+uint8_t						op_execution(t_parsing *node, t_jobs *jobs, int info);
+uint8_t						op_separator(t_parsing *node, t_jobs *jobs, int info);
+uint8_t						op_pipeline(t_parsing *node, t_jobs *jobs, int info);
+uint8_t						op_ampersand(t_parsing *node, t_jobs *jobs, int info);
+uint8_t						op_and_if(t_parsing *node, t_jobs *jobs, int info);
+uint8_t						op_or_if(t_parsing *node, t_jobs *jobs, int info);
 
 /*
 **				MANAGE REDIRECTIOM
@@ -463,8 +463,9 @@ int							memdel_read(t_read **read_std);
 int							memdel_lfh(t_lfh **hist_search);
 int							memdel_cmd(t_cmd **cmd);
 void						memdel_outstanding(void);
-void						memdel_node(t_node **node);
 void						memdel_jobs(t_jobs *jobs);
+void						memdel_parsing(t_parsing **node);
+
 
 /*
 **				ERROR FUNCTION

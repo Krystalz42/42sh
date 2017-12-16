@@ -12,9 +12,9 @@
 
 #include <sh.h>
 
-t_node			*find_executing_node(t_node *node)
+t_parsing			*find_executing_node(t_parsing *node)
 {
-	if (node->content->priority == PRIO_PIPE)
+	if (node->priority == PRIO_PIPE)
 		return (find_executing_node(node->right));
 	return (node);
 }

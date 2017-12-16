@@ -22,23 +22,23 @@ static uint8_t		kill_option_l(char **command)
 		return (all_signal());
 }
 
-uint8_t				builtin_kill(t_node *node, int info)
+uint8_t				builtin_kill(t_parsing *node, int info)
 {
 	(void)info;
-	if (node->content->command[1] && node->content->command[1][0] == '-')
+	if (node->command[1] && node->command[1][0] == '-')
 	{
-		if (ft_strcmp(node->content->command[1], HELP) == 0)
+		if (ft_strcmp(node->command[1], HELP) == 0)
 			return (usage_kill());
-		else if (ft_strcmp(node->content->command[1], "-l") == 0)
-			return (kill_option_l(node->content->command));
-		else if (node->content->command[2])
-			return (kill_process(node->content->command[1],
-													node->content->command[2]));
+		else if (ft_strcmp(node->command[1], "-l") == 0)
+			return (kill_option_l(node->command));
+		else if (node->command[2])
+			return (kill_process(node->command[1],
+													node->command[2]));
 		else
-			return (error_msg(KILL, UNKNOWN, node->content->command[1] + 1));
+			return (error_msg(KILL, UNKNOWN, node->command[1] + 1));
 	}
-	else if (node->content->command[1])
-		return (kill_process(NULL, node->content->command[1]));
+	else if (node->command[1])
+		return (kill_process(NULL, node->command[1]));
 	else
 		return (error_msg(KILL, NO_ARGS, NULL));
 }

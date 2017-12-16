@@ -56,8 +56,8 @@ int				check_option_history(char **command)
 	return (var_return(looking_for_fct(command + index, option)));
 }
 
-uint8_t			builtin_history(t_node *node, int info)
+uint8_t			builtin_history(t_parsing *node, int info)
 {
 	(void)info;
-	return (check_option_history(node->content->command));
+	return (check_option_history(node->command));
 }

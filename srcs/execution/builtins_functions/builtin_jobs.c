@@ -116,15 +116,15 @@ static int		print_jobs(int jobs_spec, int option)
 	return (0);
 }
 
-uint8_t			builtin_jobs(t_node *node, int info)
+uint8_t			builtin_jobs(t_parsing *node, int info)
 {
 	int			option;
 	int			jobs_spec;
 
 	(void)info;
-	if ((option = check_option(node->content->command + 1)) == -1)
+	if ((option = check_option(node->command + 1)) == -1)
 		return (var_return(-1));
-	if ((jobs_spec = check_jobs(node->content->command + 1)) == -1)
+	if ((jobs_spec = check_jobs(node->command + 1)) == -1)
 		return (1);
 	return ((uint8_t)print_jobs(jobs_spec, option));
 }

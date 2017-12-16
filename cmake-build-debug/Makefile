@@ -5712,6 +5712,33 @@ srcs/memdel_struct/memdel_outstanding.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_outstanding.c.s
 .PHONY : srcs/memdel_struct/memdel_outstanding.c.s
 
+srcs/memdel_struct/memdel_parsing.o: srcs/memdel_struct/memdel_parsing.c.o
+
+.PHONY : srcs/memdel_struct/memdel_parsing.o
+
+# target to build an object file
+srcs/memdel_struct/memdel_parsing.c.o:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.o
+.PHONY : srcs/memdel_struct/memdel_parsing.c.o
+
+srcs/memdel_struct/memdel_parsing.i: srcs/memdel_struct/memdel_parsing.c.i
+
+.PHONY : srcs/memdel_struct/memdel_parsing.i
+
+# target to preprocess a source file
+srcs/memdel_struct/memdel_parsing.c.i:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.i
+.PHONY : srcs/memdel_struct/memdel_parsing.c.i
+
+srcs/memdel_struct/memdel_parsing.s: srcs/memdel_struct/memdel_parsing.c.s
+
+.PHONY : srcs/memdel_struct/memdel_parsing.s
+
+# target to generate assembly for a file
+srcs/memdel_struct/memdel_parsing.c.s:
+	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.s
+.PHONY : srcs/memdel_struct/memdel_parsing.c.s
+
 srcs/memdel_struct/memdel_read.o: srcs/memdel_struct/memdel_read.c.o
 
 .PHONY : srcs/memdel_struct/memdel_read.o
@@ -5765,33 +5792,6 @@ srcs/memdel_struct/memdel_search_history.s: srcs/memdel_struct/memdel_search_his
 srcs/memdel_struct/memdel_search_history.c.s:
 	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_search_history.c.s
 .PHONY : srcs/memdel_struct/memdel_search_history.c.s
-
-srcs/memdel_struct/memdel_tree.o: srcs/memdel_struct/memdel_tree.c.o
-
-.PHONY : srcs/memdel_struct/memdel_tree.o
-
-# target to build an object file
-srcs/memdel_struct/memdel_tree.c.o:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_tree.c.o
-.PHONY : srcs/memdel_struct/memdel_tree.c.o
-
-srcs/memdel_struct/memdel_tree.i: srcs/memdel_struct/memdel_tree.c.i
-
-.PHONY : srcs/memdel_struct/memdel_tree.i
-
-# target to preprocess a source file
-srcs/memdel_struct/memdel_tree.c.i:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_tree.c.i
-.PHONY : srcs/memdel_struct/memdel_tree.c.i
-
-srcs/memdel_struct/memdel_tree.s: srcs/memdel_struct/memdel_tree.c.s
-
-.PHONY : srcs/memdel_struct/memdel_tree.s
-
-# target to generate assembly for a file
-srcs/memdel_struct/memdel_tree.c.s:
-	$(MAKE) -f CMakeFiles/42sh.dir/build.make CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_tree.c.s
-.PHONY : srcs/memdel_struct/memdel_tree.c.s
 
 srcs/parsing/expanding/alias.o: srcs/parsing/expanding/alias.c.o
 
@@ -8880,15 +8880,15 @@ help:
 	@echo "... srcs/memdel_struct/memdel_outstanding.o"
 	@echo "... srcs/memdel_struct/memdel_outstanding.i"
 	@echo "... srcs/memdel_struct/memdel_outstanding.s"
+	@echo "... srcs/memdel_struct/memdel_parsing.o"
+	@echo "... srcs/memdel_struct/memdel_parsing.i"
+	@echo "... srcs/memdel_struct/memdel_parsing.s"
 	@echo "... srcs/memdel_struct/memdel_read.o"
 	@echo "... srcs/memdel_struct/memdel_read.i"
 	@echo "... srcs/memdel_struct/memdel_read.s"
 	@echo "... srcs/memdel_struct/memdel_search_history.o"
 	@echo "... srcs/memdel_struct/memdel_search_history.i"
 	@echo "... srcs/memdel_struct/memdel_search_history.s"
-	@echo "... srcs/memdel_struct/memdel_tree.o"
-	@echo "... srcs/memdel_struct/memdel_tree.i"
-	@echo "... srcs/memdel_struct/memdel_tree.s"
 	@echo "... srcs/parsing/expanding/alias.o"
 	@echo "... srcs/parsing/expanding/alias.i"
 	@echo "... srcs/parsing/expanding/alias.s"

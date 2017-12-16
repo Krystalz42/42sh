@@ -16,7 +16,7 @@
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			op_pipeline(t_node *node, t_jobs *jobs, int info)
+uint8_t			op_pipeline(t_parsing *node, t_jobs *jobs, int info)
 {
 	int			fildes[2];
 	t_process	*process;

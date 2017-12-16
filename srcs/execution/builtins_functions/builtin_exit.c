@@ -25,19 +25,19 @@ static size_t	get_len(char **argv, size_t length)
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			builtin_exit(t_node *node, int info)
+uint8_t			builtin_exit(t_parsing *node, int info)
 {
 	size_t		length;
 	int			var;
 
 	(void)info;
-	if ((length = get_len(node->content->command, 0)) == 2)
+	if ((length = get_len(node->command, 0)) == 2)
 	{
-		if (ft_strisdigit(node->content->command[1]))
-			var = ft_atoi(node->content->command[1]);
+		if (ft_strisdigit(node->command[1]))
+			var = ft_atoi(node->command[1]);
 		else
 		{
-			error_msg(EXIT, NUM_REQUIRED, node->content->command[1]);
+			error_msg(EXIT, NUM_REQUIRED, node->command[1]);
 			var = 255;
 		}
 		b_write_history_in_file(get_str_from_history());

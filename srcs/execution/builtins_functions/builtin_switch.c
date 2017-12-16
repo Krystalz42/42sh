@@ -52,26 +52,26 @@ static int		put_in_background(t_jobs *jobs)
 	return (0);
 }
 
-uint8_t			builtin_foreground(t_node *node, int info)
+uint8_t			builtin_foreground(t_parsing *node, int info)
 {
 	int			jobs_spec;
 	t_jobs		*jobs;
 
 	(void)info;
-	if ((jobs_spec = check_jobs_spec(node->content->command, FG)) == -1)
+	if ((jobs_spec = check_jobs_spec(node->command, FG)) == -1)
 		return (1);
 	if ((jobs = get_jobs_by_setting(jobs_spec, FG)))
 		return (uint8_t)(put_in_foreground(jobs));
 	return (1);
 }
 
-uint8_t			builtin_background(t_node *node, int info)
+uint8_t			builtin_background(t_parsing *node, int info)
 {
 	int			jobs_spec;
 	t_jobs		*jobs;
 
 	(void)info;
-	if ((jobs_spec = check_jobs_spec(node->content->command, BG)) == -1)
+	if ((jobs_spec = check_jobs_spec(node->command, BG)) == -1)
 		return (1);
 	if ((jobs = get_jobs_by_setting(jobs_spec, BG)))
 		return (uint8_t)(put_in_background(jobs));

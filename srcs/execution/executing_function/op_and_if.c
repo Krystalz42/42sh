@@ -16,7 +16,7 @@
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			op_and_if(t_node *node, t_jobs *jobs, int info)
+uint8_t			op_and_if(t_parsing *node, t_jobs *jobs, int info)
 {
 	return (execute_node(node->left, jobs, info) == 0
 			&& execute_node(node->right, jobs, info));

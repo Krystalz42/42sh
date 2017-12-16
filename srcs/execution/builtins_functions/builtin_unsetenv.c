@@ -12,22 +12,22 @@
 
 #include <sh.h>
 
-uint8_t				builtin_unsetenv(t_node *node, int info)
+uint8_t				builtin_unsetenv(t_parsing *node, int info)
 {
 	int				table;
 
 	table = 1;
 	(void)info;
-	while (node->content->command[table])
+	while (node->command[table])
 	{
-		if (my_getenv(node->content->command[table]))
+		if (my_getenv(node->command[table]))
 		{
-			remove_environment(node->content->command[table]);
+			remove_environment(node->command[table]);
 			var_return(0);
 		}
 		else
 		{
-			error_msg(UNSETENV, VAR_NO_SET, node->content->command[table]);
+			error_msg(UNSETENV, VAR_NO_SET, node->command[table]);
 			var_return(1);
 		}
 		table++;

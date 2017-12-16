@@ -12,20 +12,20 @@
 
 #include <sh.h>
 
-uint8_t			fct(t_node *node, int info)
+uint8_t			fct(t_parsing *node, int info)
 {
-	if (node->content->command[0])
+	if (node->command[0])
 	{
-		node->content->env_option = 1;
+		node->env_option = 1;
 		if (check_if_builtin(node, DONT_EXECUTE) == -1)
-			if ((looking_for_path(&node->content->command[0])) == 0)
-				collect_path(&node->content->command[0]);
+			if ((looking_for_path(&node->command[0])) == 0)
+				collect_path(&node->command[0]);
 		execute_node(node, NULL, info);
 	}
 	else
 	{
-		node->content->env_option = 1;
-		ft_putstrtab(node->content->env, 10);
+		node->env_option = 1;
+		ft_putstrtab(node->env, 10);
 		var_return(0);
 	}
 	return (1);
@@ -54,28 +54,28 @@ int				free_command(char ***command, int ret)
 	return (1);
 }
 
-uint8_t			check_option(t_node *node, int info, int opt)
+uint8_t			check_option(t_parsing *node, int info, int opt)
 {
 	int			ret;
 	char		**env;
 
-	node->content->env = node->content->env_option ?
-								node->content->env : env_table(NULL, ENV_REC);
-	env = node->content->env_option ? node->content->env : NULL;
+	node->env = node->env_option ?
+								node->env : env_table(NULL, ENV_REC);
+	env = node->env_option ? node->env : NULL;
 	if (opt == 'i' &&
-	(ret = start_from_null(node->content->command, &node->content->env)) >= 0)
-		free_command(&(node->content->command), ret) && fct(node, info);
+	(ret = start_from_null(node->command, &node->env)) >= 0)
+		free_command(&(node->command), ret) && fct(node, info);
 	if (opt == 'u' &&
-	(ret = start_from_less(node->content->command, &node->content->env)) >= 0)
-		free_command(&(node->content->command), ret) && fct(node, info);
+	(ret = start_from_less(node->command, &node->env)) >= 0)
+		free_command(&(node->command), ret) && fct(node, info);
 	if (opt == 0 &&
-	(ret = start_from_full(node->content->command, &node->content->env)) >= 0)
-		free_command(&(node->content->command), ret) && fct(node, info);
+	(ret = start_from_full(node->command, &node->env)) >= 0)
+		free_command(&(node->command), ret) && fct(node, info);
 	ft_memdel_tab(&env);
 	return (0);
 }
 
-uint8_t			builtin_env(t_node *node, int info)
+uint8_t			builtin_env(t_parsing *node, int info)
 {
 	int				index;
 	int				opt;
@@ -83,23 +83,23 @@ uint8_t			builtin_env(t_node *node, int info)
 
 	table = 0;
 	opt = 0;
-	if (ft_strcmp(node->content->command[1], HELP) == 0)
+	if (ft_strcmp(node->command[1], HELP) == 0)
 		return (usage_env());
-	while (node->content->command[++table] &&
-			node->content->command[table][0] == '-' && !(index = 0))
+	while (node->command[++table] &&
+			node->command[table][0] == '-' && !(index = 0))
 	{
-		while (node->content->command[table][index])
+		while (node->command[table][index])
 		{
 			if (potential_option("-iu",
-			node->content->command[table][index]) == 0)
+			node->command[table][index]) == 0)
 				return (error_msg(ENV, BAD_OPTION,
-							node->content->command[table] + index));
-				if (node->content->command[table][index] == 'u' ||
-					node->content->command[table][index] == 'i')
-				opt = node->content->command[table][index];
+							node->command[table] + index));
+				if (node->command[table][index] == 'u' ||
+					node->command[table][index] == 'i')
+				opt = node->command[table][index];
 			index++;
 		}
 	}
-	free_command(&node->content->command, table);
+	free_command(&node->command, table);
 	return (check_option(node, info, opt));
 }

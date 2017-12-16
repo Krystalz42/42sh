@@ -61,8 +61,8 @@ static int		check_options_alias(char **command)
 *************** PUBLIC *********************************************************
 */
 
-uint8_t			builtin_alias(t_node *node, int info)
+uint8_t			builtin_alias(t_parsing *node, int info)
 {
 	(void)info;
-	return (check_options_alias(node->content->command));
+	return (check_options_alias(node->command));
 }

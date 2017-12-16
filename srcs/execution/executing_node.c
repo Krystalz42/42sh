@@ -22,9 +22,9 @@ t_exec			*g_execute[12] =
 	[VALUE_OR_IF] = &op_or_if,
 };
 
-uint8_t			execute_node(t_node *node, t_jobs *jobs, int info)
+uint8_t			execute_node(t_parsing *node, t_jobs *jobs, int info)
 {
 	if (node)
-		g_execute[node->content->value](node, jobs, info);
+		g_execute[node->value](node, jobs, info);
 	return (var_return(-1));
 }

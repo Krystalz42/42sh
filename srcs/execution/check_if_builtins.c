@@ -31,7 +31,7 @@ static const t_builtin	g_builtin[] = {
 	(t_builtin){NULL, NULL}
 };
 
-int				check_if_builtin(t_node *node, int info)
+int				check_if_builtin(t_parsing *node, int info)
 {
 	int		index;
 
@@ -39,11 +39,11 @@ int				check_if_builtin(t_node *node, int info)
 	index = 0;
 	while (index < 15)
 	{
-		if (ft_strcmp(g_builtin[index].str, node->content->command[0]) == 0)
+		if (ft_strcmp(g_builtin[index].str, node->command[0]) == 0)
 		{
 			if ((info & DONT_EXECUTE))
 				return (1);
-			if ((manage_redirection(node->content->next)) == 0)
+			if ((manage_redirection(node->next)) == 0)
 				return (-1);
 			return (var_return(g_builtin[index].function(node, info)));
 		}

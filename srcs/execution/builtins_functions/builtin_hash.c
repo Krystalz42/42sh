@@ -25,12 +25,12 @@ static uint8_t	get_options(char **argv)
 	return (options & ERR ? usage_hash() + 1 : hash_reset());
 }
 
-uint8_t			builtin_hash(t_node *node, int info)
+uint8_t			builtin_hash(t_parsing *node, int info)
 {
 	(void)info;
-	if (arraylen(node->content->command) == 1)
+	if (arraylen(node->command) == 1)
 		return (hash_print(STDOUT_FILENO));
-	if (ft_strcmp(node->content->command[1], HELP) == 0)
+	if (ft_strcmp(node->command[1], HELP) == 0)
 		return (usage_hash());
-	return (get_options(node->content->command + 1));
+	return (get_options(node->command + 1));
 }

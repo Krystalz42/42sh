@@ -225,7 +225,6 @@ add_executable(42sh
         srcs/memdel_struct/memdel_outstanding.c
         srcs/memdel_struct/memdel_read.c
         srcs/memdel_struct/memdel_search_history.c
-        srcs/memdel_struct/memdel_tree.c
         srcs/parsing/expanding/alias.c
         srcs/parsing/expanding/argv.c
         srcs/parsing/expanding/argv_tools.c
@@ -316,4 +315,4 @@ add_executable(42sh
         srcs/term/init_fd.c
         srcs/term/init_term.c
         srcs/term/keep_term_struct.c
-        srcs/term/set_term.c)
+        srcs/term/set_term.c srcs/memdel_struct/memdel_parsing.c)

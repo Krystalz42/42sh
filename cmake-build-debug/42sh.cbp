@@ -733,13 +733,13 @@
 		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_outstanding.c">
 			<Option target="42sh"/>
 		</Unit>
+		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_parsing.c">
+			<Option target="42sh"/>
+		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_read.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_search_history.c">
-			<Option target="42sh"/>
-		</Unit>
-		<Unit filename="/Users/aroulin/42sh/srcs/memdel_struct/memdel_tree.c">
 			<Option target="42sh"/>
 		</Unit>
 		<Unit filename="/Users/aroulin/42sh/srcs/parsing/expanding/alias.c">

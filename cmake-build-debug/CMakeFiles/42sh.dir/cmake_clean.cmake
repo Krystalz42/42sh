@@ -208,7 +208,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_outstanding.c.o"
   "CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_read.c.o"
   "CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_search_history.c.o"
-  "CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_tree.c.o"
   "CMakeFiles/42sh.dir/srcs/parsing/expanding/alias.c.o"
   "CMakeFiles/42sh.dir/srcs/parsing/expanding/argv.c.o"
   "CMakeFiles/42sh.dir/srcs/parsing/expanding/argv_tools.c.o"
@@ -300,6 +299,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/42sh.dir/srcs/term/init_term.c.o"
   "CMakeFiles/42sh.dir/srcs/term/keep_term_struct.c.o"
   "CMakeFiles/42sh.dir/srcs/term/set_term.c.o"
+  "CMakeFiles/42sh.dir/srcs/memdel_struct/memdel_parsing.c.o"
   "42sh.pdb"
   "42sh"
 )

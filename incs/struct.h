@@ -21,9 +21,8 @@
 */
 
 typedef struct s_jobs		t_jobs;
-typedef struct s_node		t_node;
 typedef struct s_parsing	t_parsing;
-typedef uint8_t				(t_exec)(t_node *node, t_jobs *jobs, int info);
+typedef uint8_t				(t_exec)(t_parsing *node, t_jobs *jobs, int info);
 typedef int					(t_manage_redir)(t_parsing *parsing);
 
 /*
@@ -242,14 +241,9 @@ typedef struct				s_parsing
 	int						priority;
 	struct s_parsing		*prev;
 	struct s_parsing		*next;
+	struct s_parsing		*right;
+	struct s_parsing		*left;
 }							t_parsing;
-
-typedef struct				s_node
-{
-	t_parsing				*content;
-	struct s_node			*right;
-	struct s_node			*left;
-}							t_node;
 
 /*
 **			STRUCT FOR BUILTINS
@@ -258,7 +252,7 @@ typedef struct				s_node
 typedef struct				s_builtin
 {
 	const char				*str;
-	uint8_t					(*function)(t_node *node, int info);
+	uint8_t					(*function)(t_parsing *node, int info);
 }							t_builtin;
 
 /*

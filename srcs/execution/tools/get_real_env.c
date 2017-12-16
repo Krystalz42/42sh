@@ -12,10 +12,10 @@
 
 #include <sh.h>
 
-char			**get_real_env(t_node *node)
+char			**get_real_env(t_parsing *node)
 {
-	if (node->content->env_option)
-		return (node->content->env);
+	if (node->env_option)
+		return (node->env);
 	else
 		return (env_table(NULL, ENV_REC));
 }

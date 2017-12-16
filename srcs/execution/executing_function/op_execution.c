@@ -34,18 +34,18 @@ int					manage_redirection(t_parsing *node)
 	return (1);
 }
 
-uint8_t				exec_or_builtin(t_node *node, int info)
+uint8_t				exec_or_builtin(t_parsing *node, int info)
 {
-	if ((manage_redirection(node->content->next)) == 0)
+	if ((manage_redirection(node->next)) == 0)
 		exit(1);
 	if (check_if_builtin(node, info) == -1)
-		my_execve(node->content->command, get_real_env(node));
+		my_execve(node->command, get_real_env(node));
 	else
 		exit(var_return(-1));
 	return (var_return(-1));
 }
 
-uint8_t				jobs_execution(t_node *node, t_jobs *jobs, int info)
+uint8_t				jobs_execution(t_parsing *node, t_jobs *jobs, int info)
 {
 	t_process		*process;
 
@@ -74,7 +74,7 @@ uint8_t				jobs_execution(t_node *node, t_jobs *jobs, int info)
 	return (var_return(-1));
 }
 
-uint8_t				op_execution(t_node *node, t_jobs *jobs, int info)
+uint8_t				op_execution(t_parsing *node, t_jobs *jobs, int info)
 {
 	if (jobs)
 		return (jobs_execution(node, jobs, info));

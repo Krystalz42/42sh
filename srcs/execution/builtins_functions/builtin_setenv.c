@@ -30,30 +30,30 @@ int				special_getenv(char *string)
 	return (ret);
 }
 
-uint8_t			builtin_setenv(t_node *node, int info)
+uint8_t			builtin_setenv(t_parsing *node, int info)
 {
 	int			table;
 
 	(void)info;
 	table = 0;
-	while (node->content->command[++table])
-		if (ft_strchr(node->content->command[table], '='))
+	while (node->command[++table])
+		if (ft_strchr(node->command[table], '='))
 		{
-			if (node->content->command[table][0] != '=')
+			if (node->command[table][0] != '=')
 			{
-				special_getenv(node->content->command[table]);
-				add_environment(node->content->command[table]);
+				special_getenv(node->command[table]);
+				add_environment(node->command[table]);
 				var_return(0);
 			}
 			else
 			{
-				error_msg(SETENV, NEED_VALUE, node->content->command[table]);
+				error_msg(SETENV, NEED_VALUE, node->command[table]);
 				var_return(1);
 			}
 		}
 		else
 		{
-			error_msg(SETENV, WRONG_FORMAT, node->content->command[table]);
+			error_msg(SETENV, WRONG_FORMAT, node->command[table]);
 			var_return(1);
 		}
 	return (var_return(var_return(-1) ? usage_setenv() + 1 : 0));
