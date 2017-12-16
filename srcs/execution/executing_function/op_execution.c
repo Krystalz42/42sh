@@ -6,13 +6,13 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:20:55 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/16 17:10:35 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/16 17:32:35 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-t_manage_redir		*g_execute_redir[13] =
+t_manage_redir		*g_execute_redir[14] =
 {
 		[VALUE_LESS] = &op_less,
 		[VALUE_LESS_AND] = &op_less_and,
