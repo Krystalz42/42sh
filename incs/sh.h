@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/15 19:02:34 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/16 17:11:22 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -408,12 +408,14 @@ uint8_t						op_or_if(t_parsing *node, t_jobs *jobs, int info);
 **				MANAGE REDIRECTIOM
 */
 
+int							op_string(t_parsing *node);
 int							op_great(t_parsing *node);
 int							op_dgreat(t_parsing *node);
 int							op_great_and(t_parsing *node);
 int							op_less(t_parsing *node);
 int							op_less_and(t_parsing *node);
 int							op_dless(t_parsing *node);
+int							op_lessgreat(t_parsing *node);
 
 /*
 **				TOOL'S EXECUTION

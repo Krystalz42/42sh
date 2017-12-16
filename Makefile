@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/12/16 16:11:40 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/12/16 17:11:40 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -160,6 +160,7 @@ SRCS = \
 	   execution/executing_function/op_great.c					\
 	   execution/executing_function/op_dgreat.c					\
 	   execution/executing_function/op_dless.c					\
+	   execution/executing_function/op_lessgreat.c				\
 	   execution/executing_function/op_or_if.c					\
 	   execution/executing_function/op_and_if.c					\
 	   execution/executing_function/op_less.c					\
