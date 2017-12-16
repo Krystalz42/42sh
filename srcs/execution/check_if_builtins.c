@@ -43,11 +43,6 @@ int				check_if_builtin(t_parsing *node, int info)
 		{
 			if ((info & DONT_EXECUTE))
 				return (1);
-<<<<<<< HEAD
-			if ((manage_redirection(node->next)) == 0)
-				return (-1);
-=======
->>>>>>> 9c1739a9c7b4ede3fafe0bd992af4ef508c0b315
 			return (var_return(g_builtin[index].function(node, info)));
 		}
 		index++;

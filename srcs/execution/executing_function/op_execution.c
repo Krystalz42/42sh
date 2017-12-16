@@ -76,7 +76,7 @@ uint8_t				jobs_execution(t_parsing *node, t_jobs *jobs, int info)
 
 uint8_t				op_execution(t_parsing *node, t_jobs *jobs, int info)
 {
-	if (jobs || (node->content->next && node->content->next->priority == PRIO_REDIR))
+	if (jobs || (node->next && node->next->priority == PRIO_REDIR))
 		return (jobs_execution(node, jobs, info));
 	if (check_if_builtin(node, info) != -1)
 		;
