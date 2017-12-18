@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:14:51 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/18 15:27:01 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/18 15:35:23 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@ static int		get_fildes(char *str)
 	int			fildes;
 
 	if ((fildes = open(str, O_RDONLY)) == -1)
-	{
 		check_path(str);
-		exit(1);
-	}
 	return (fildes);
 }
 
@@ -48,8 +45,7 @@ void			op_dless(t_parsing *node)
 	int			fildes;
 	int			std;
 
-	if ((fildes = get_fildes(node->heredoc)) == -1)
-		exit(1);
+	fildes = get_fildes(node->heredoc);
 	std = get_std(node->command[0]);
 	if (dup2(fildes, std) == -1)
 	{
