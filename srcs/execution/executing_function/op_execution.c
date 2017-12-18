@@ -38,8 +38,7 @@ int					manage_redirection(t_parsing *node)
 
 uint8_t				exec_or_builtin(t_parsing *node, int info)
 {
-	if ((manage_redirection(node->next)) == 0)
-		exit(1);
+	manage_redirection(node->next);
 	if (check_if_builtin(node, info) == -1)
 		my_execve(node->command, get_real_env(node));
 	else
