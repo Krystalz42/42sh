@@ -420,7 +420,7 @@ void						op_lessgreat(t_parsing *node);
 /*
 **				TOOL'S EXECUTION
 */
-
+void						close_fd(int fd);
 int							compare_heredoc(t_cmd *cmd, char *string);
 char						**build_table(char **heredoc, char *str);
 char						*convert_to_str(t_cmd *cmd);

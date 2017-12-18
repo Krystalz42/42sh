@@ -23,10 +23,14 @@ static int		get_fildes(char *str, int std)
 	if (ft_isdigit(*str))
 		fildes = ft_atoi(str);
 	else if (ft_strcmp(str, "-") == 0)
+<<<<<<< HEAD
 	{
 		close(std);
 		return (-1);
 	}
+=======
+		return (-1);
+>>>>>>> 52900275c8b8353695b5f6c084d56145dcfc58e1
 	else
 	{
 		error_msg(S42H, "ambiguous redirect: ", str);

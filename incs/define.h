@@ -20,6 +20,9 @@
 **			LEXING
 */
 
+# define DASH_						-2
+# define ERROR_						-1
+
 # define CHILD(x) (x >= 0 && x < MAX_CHILD) ? true : false
 # define INIT 2
 

@@ -22,8 +22,8 @@ static int		get_fildes(int fildes, char *str)
 
 	if (!ft_strcmp(str, "-"))
 	{
-		close(fildes);
-		return (-1);
+		close_fd(fildes);
+		return (DASH_);
 	}
 	else if (ft_strisdigit(str))
 		fildes_out = ft_atoi(str);

@@ -155,6 +155,7 @@ SRCS = \
 	   execution/tools/potential_option.c						\
 	   execution/tools/manage_use.c								\
 	   execution/tools/alias_tools.c							\
+	   execution/tools/close_fd.c								\
 	   execution/executing_function/op_execution.c				\
 	   execution/executing_function/op_great_and.c				\
 	   execution/executing_function/op_great.c					\
