@@ -16,18 +16,21 @@
 *************** PRIVATE ********************************************************
 */
 
-static int		get_fildes(char *str)
+static int		get_fildes(int fildes, char *str)
 {
-	int			fildes;
+	int			fildes_out;
 
 	if (!ft_strcmp(str, "-"))
-		fildes = open(PATH_ERROR, O_WRONLY);
+	{
+		close(fildes);
+		return (-1);
+	}
 	else if (ft_strisdigit(str))
-		fildes = ft_atoi(str);
+		fildes_out = ft_atoi(str);
 	else
-		if ((fildes = open(str, OPTION_GREAT, 0644)) == -1)
+		if ((fildes_out = open(str, OPTION_GREAT, 0644)) == -1)
 			check_path(str);
-	return (fildes);
+	return (fildes_out);
 }
 
 /*
@@ -42,7 +45,8 @@ int 			op_great_and(t_parsing *node)
 	fildes_in = STDOUT_FILENO;
 	if (ft_isdigit(node->command[0][0]))
 		fildes_in = ft_atoi(node->command[0]);
-	fildes_out = get_fildes(node->next->command[0]);
+	if ((fildes_out = get_fildes(fildes_in, node->next->command[0])) == -1)
+		return (1);
 	if (dup2(fildes_out, fildes_in) == -1)
 	{
 		error_msg(S42H, BAD_FD, NULL);
