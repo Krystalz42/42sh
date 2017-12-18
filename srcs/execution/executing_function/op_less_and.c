@@ -24,7 +24,7 @@ static int		get_fildes(char *str)
 	if (ft_isdigit(*str))
 		fildes = ft_atoi(str);
 	else if (ft_strcmp(str, "-") == 0)
-		return (-1)
+		return (-1);
 	else
 	{
 		error_msg(S42H, "ambiguous redirect: ", str);

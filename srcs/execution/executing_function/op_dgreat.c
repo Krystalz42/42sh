@@ -15,20 +15,19 @@
 void				op_dgreat(t_parsing *node)
 {
 	int			fildes;
-	
-	if ((fildes = open(node->next->command[0], OPTION_DGREAT, 0644)) == -1)
-		check_path(node->next->command[0]);
-	else
+	int			fildes_out;
+
+	fildes_out = STDOUT_FILENO;
+	if (ft_isdigit(node->command[0][0]))
+		fildes_out = ft_atoi(node->command[0]);
+	if (ft_strcmp(node->next->command[0], "-") == 0)
 	{
-		if (ft_isdigit(node->command[0][0]))
-			dup2(fildes, ft_atoi(node->command[0]));
-		else if (node->command[0][0] == '&')
-		{
-			dup2(fildes, STDOUT_FILENO);
-			dup2(fildes, STDERR_FILENO);
-		}
-		else
-			dup2(fildes, STDOUT_FILENO);
-		close(fildes);
+		close_fd(fildes_out);
+		return ;
 	}
+	else if ((fildes = open(node->next->command[0], OPTION_DGREAT, 0644)) == -1)
+		check_path(node->next->command[0]);
+	if (dup2(fildes, fildes_out) == -1)
+		exit(error_msg(S42H, BAD_FD, NULL));
+	close(fildes);
 }
