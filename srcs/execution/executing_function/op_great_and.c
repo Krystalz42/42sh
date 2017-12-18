@@ -37,20 +37,16 @@ static int		get_fildes(int fildes, char *str)
 *************** PUBLIC *********************************************************
 */
 
-int 			op_great_and(t_parsing *node)
+void 			op_great_and(t_parsing *node)
 {
 	int		fildes_out;
-	int		fildes_in;
+	int		fildes;
 
-	fildes_in = STDOUT_FILENO;
+	fildes = STDOUT_FILENO;
 	if (ft_isdigit(node->command[0][0]))
-		fildes_in = ft_atoi(node->command[0]);
-	if ((fildes_out = get_fildes(fildes_in, node->next->command[0])) == -1)
-		return (1);
-	if (dup2(fildes_out, fildes_in) == -1)
-	{
-		error_msg(S42H, BAD_FD, NULL);
-		return (0);
-	}
-	return (1);
+		fildes = ft_atoi(node->command[0]);
+	if ((fildes_out = get_fildes(fildes, node->next->command[0])) < 0)
+		return ;
+	if (dup2(fildes_out, fildes) == -1)
+		exit(error_msg(S42H, BAD_FD, NULL));
 }

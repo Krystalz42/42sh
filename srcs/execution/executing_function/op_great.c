@@ -12,7 +12,7 @@
 
 #include <sh.h>
 
-int					op_great(t_parsing *node)
+void					op_great(t_parsing *node)
 {
 	int			std;
 	int			fildes;
@@ -33,7 +33,6 @@ int					op_great(t_parsing *node)
 				std = ft_atoi(node->command[0]);
 			dup2(fildes, std);
 		}
+		close(fildes);
 	}
-	close(fildes);
-	return (1);
 }

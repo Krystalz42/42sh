@@ -23,7 +23,7 @@
 typedef struct s_jobs		t_jobs;
 typedef struct s_parsing	t_parsing;
 typedef uint8_t				(t_exec)(t_parsing *node, t_jobs *jobs, int info);
-typedef int					(t_manage_redir)(t_parsing *parsing);
+typedef void				(t_manage_redir)(t_parsing *parsing);
 
 /*
 **			STRUCT FOR ESCAPE

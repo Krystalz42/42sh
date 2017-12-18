@@ -24,16 +24,13 @@ t_manage_redir		*g_execute_redir[] =
 		[VALUE_LESSGREAT] = &op_lessgreat,
 };
 
-int					manage_redirection(t_parsing *node)
+void				manage_redirection(t_parsing *node)
 {
 	if (node && node->priority == PRIO_REDIR)
 	{
-		if ((g_execute_redir[node->value](node)) == 1)
-			manage_redirection(node->next->next);
-		else
-			return (0);
+		g_execute_redir[node->value](node);
+		manage_redirection(node->next->next);
 	}
-	return (1);
 }
 
 uint8_t				exec_or_builtin(t_parsing *node, int info)

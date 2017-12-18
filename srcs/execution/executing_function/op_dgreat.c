@@ -12,22 +12,23 @@
 
 #include <sh.h>
 
-int					op_dgreat(t_parsing *node)
+void				op_dgreat(t_parsing *node)
 {
-	int			std;
 	int			fildes;
-
-	ft_putstr("dsadsa");
-	std = STDOUT_FILENO;
-	if (ft_isdigit(node->command[0][0]))
-		std = ft_atoi(node->command[0]);
+	
 	if ((fildes = open(node->next->command[0], OPTION_DGREAT, 0644)) == -1)
 		check_path(node->next->command[0]);
 	else
 	{
-		fildes = check_fd(fildes);
-		dup2(fildes, std);
+		if (ft_isdigit(node->command[0][0]))
+			dup2(fildes, ft_atoi(node->command[0]));
+		else if (node->command[0][0] == '&')
+		{
+			dup2(fildes, STDOUT_FILENO);
+			dup2(fildes, STDERR_FILENO);
+		}
+		else
+			dup2(fildes, STDOUT_FILENO);
 		close(fildes);
 	}
-	return (1);
 }
