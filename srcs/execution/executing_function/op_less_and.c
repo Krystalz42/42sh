@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 13:41:56 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/18 15:36:39 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/18 17:24:02 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,17 @@
 *************** PRIVATE ********************************************************
 */
 
-static int		get_fildes(char *str)
+static int		get_fildes(char *str, int std)
 {
 	int			fildes;
 	
-	fildes = STDIN_FILENO;
 	if (ft_isdigit(*str))
 		fildes = ft_atoi(str);
 	else if (ft_strcmp(str, "-") == 0)
-		return (-1)
+	{
+		close(std);
+		return (-1);
+	}
 	else
 	{
 		error_msg(S42H, "ambiguous redirect: ", str);
@@ -50,15 +52,17 @@ static int		get_std(char *str)
 
 void			op_less_and(t_parsing *node)
 {
-	int			fildes;
 	int			std;
+	int			fildes;
 
-	fildes = get_fildes(node->next->command[0]);
 	std = get_std(node->command[0]);
-	if (dup2(fildes, std) == -1)
+	if ((fildes = get_fildes(node->next->command[0], std)) > 0)
 	{
-		error_msg(S42H, BAD_FD, NULL);
-		exit(1);
+		if (dup2(fildes, std) == -1)
+		{
+			error_msg(S42H, BAD_FD, NULL);
+			exit(1);
+		}
 	}
 	close(fildes);
 }
