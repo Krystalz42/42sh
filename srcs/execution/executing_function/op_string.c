@@ -13,7 +13,8 @@ void				op_string(t_parsing *node)
 	if (ft_isdigit(node->command[0][0]))
 		std_in = ft_atoi(node->command[0]);
 	if ((std = open(node->heredoc, O_RDWR)) == -1)
-;	if (dup2(std, std_in) == -1)
-		error_msg(S42H, BAD_FD, NULL);
+		check_path(node->heredoc);
+	if (dup2(std, std_in) == -1)
+		exit(error_msg(S42H, BAD_FD, NULL));
 	close(std);
 }

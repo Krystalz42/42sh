@@ -20,8 +20,11 @@ static int		get_fildes(char *str)
 {
 	int			fildes;
 	
+	fildes = STDIN_FILENO;
 	if (ft_isdigit(*str))
 		fildes = ft_atoi(str);
+	else if (ft_strcmp(str, "-") == 0)
+		return (-1)
 	else
 	{
 		error_msg(S42H, "ambiguous redirect: ", str);
