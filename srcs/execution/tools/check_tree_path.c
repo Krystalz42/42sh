@@ -12,6 +12,18 @@
 
 #include <sh.h>
 
+void			manage_redir(t_parsing *node)
+{
+	if (node)
+	{
+		if (node->value == VALUE_DLESS)
+			do_heredoc(node);
+		if (node->value == VALUE_STRING)
+			do_string(node);
+		manage_redir(node->next->next);
+	}
+}
+
 void			check_tree_path(t_parsing *node)
 {
 	if (signal_reception(-1) == SIGINT)
@@ -24,8 +36,7 @@ void			check_tree_path(t_parsing *node)
 				if (ft_strchr(node->command[0], '/') == NULL)
 					if ((looking_for_path(&node->command[0])) == 0)
 						collect_path(&node->command[0]);
-			if (node->next && node->next->value == VALUE_DLESS)
-				do_heredoc(node->next);
+			manage_redir(node->next);
 		}
 		check_tree_path(node->left);
 		check_tree_path(node->right);

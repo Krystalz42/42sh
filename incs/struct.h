@@ -15,7 +15,6 @@
 
 # include <stdbool.h>
 
-
 /*
 **			ENUM FOR EXECUTING
 */
