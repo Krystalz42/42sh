@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:11:11 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 16:05:13 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/20 14:28:57 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void			manage_redir(t_parsing *node)
 {
-	if (node)
+	if (node && node->priority == PRIO_REDIR)
 	{
 		if (node->value == VALUE_DLESS)
 			do_heredoc(node);

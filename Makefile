@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/12/16 17:11:40 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/12/20 13:52:11 by jle-quel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -272,6 +272,8 @@ LDLIBS		= \
 			  -lft									\
 			  -lprintf								\
 			  -lncurses								\
+			  -g3									\
+			  -fsanitize=address					\
 
 CPPFLAGS	= \
 			  -I$(DIR_INCS)							\
@@ -280,8 +282,8 @@ CPPFLAGS	= \
 
 CFLAGS		= \
 			  -Wall -Werror -Wextra					\
-
-
+			  -g3									\
+			  -fsanitize=address					\
 
 # ---------------------------------------------------------------------------- #
 # /!\ SOURCE NORMALIZATION AND COMPILATION RULES /!\                           #
