@@ -6,7 +6,7 @@
 /*   By: sbelazou <sbelazou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/09 17:36:39 by sbelazou          #+#    #+#             */
-/*   Updated: 2017/11/17 14:57:39 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/20 16:15:10 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,11 @@ static uint8_t	change_direction(char *str)
 	return (0);
 }
 
-static void		modify_variable(char *variable, char **pwd)
+static void		modify_variable(char *variable, char **pwd, char *backup)
 {
 	char		*str;
 
-	str = ft_threejoin(variable, "=", *pwd);
+	str = ft_threejoin(variable, "=", *pwd == NULL ? backup : *pwd);
 	special_getenv(str);
 	add_environment(str);
 	ft_memdel((void **)&str);
@@ -89,8 +89,8 @@ uint8_t			builtin_cd(t_parsing *node, int info)
 	if (err == 0)
 	{
 		pwd = getcwd(NULL, 4096);
-		modify_variable("OLDPWD", &oldpwd);
-		modify_variable("PWD", &pwd);
+		modify_variable("OLDPWD", &oldpwd, pwd);
+		modify_variable("PWD", &pwd, pwd);
 	}
 	ft_memdel((void **)&oldpwd);
 	return (err != 0 ? 1 : 0);

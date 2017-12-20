@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/12 20:34:39 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 20:00:16 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/20 17:11:33 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void			order(t_parsing **node)
 			rounds = rounds ? 0 : 1;
 			temp = temp->next;
 		}
-		if (temp->value && temp->value != 2)
+		if (temp->value && temp->value != 2 && temp->value != VALUE_SEMI_COLON)
 			err(temp->input, SYNTAX_ERR, node);
 	}
 }
