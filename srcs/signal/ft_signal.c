@@ -6,7 +6,7 @@
 /*   By: aroulin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/27 19:16:56 by aroulin           #+#    #+#             */
-/*   Updated: 2017/11/17 16:12:55 by gbourson         ###   ########.fr       */
+/*   Updated: 2017/12/20 15:20:45 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void				handler_sig(int sig)
 	set_termios(SET_OLD_TERM);
 	reset_signal();
 	b_write_history_in_file(get_str_from_history());
+	init_rc(NULL);
 	kill(0, sig);
 }
 

@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 13:41:56 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/18 17:24:02 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/20 14:44:27 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 static int		get_fildes(char *str, int std)
 {
 	int			fildes;
-	
+
 	if (ft_isdigit(*str))
 		fildes = ft_atoi(str);
 	else if (ft_strcmp(str, "-") == 0)

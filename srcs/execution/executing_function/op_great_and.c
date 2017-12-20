@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 16:10:18 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/20 23:36:40 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/20 14:46:17 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ static int		get_fildes(int fildes, char *str)
 	else if (ft_strisdigit(str))
 		fildes_out = ft_atoi(str);
 	else
+	{
 		if ((fildes_out = open(str, OPTION_GREAT, 0644)) == -1)
 			check_path(str);
+	}
 	return (fildes_out);
 }
 
@@ -37,7 +39,7 @@ static int		get_fildes(int fildes, char *str)
 *************** PUBLIC *********************************************************
 */
 
-void 			op_great_and(t_parsing *node)
+void			op_great_and(t_parsing *node)
 {
 	int		fildes_out;
 	int		fildes;

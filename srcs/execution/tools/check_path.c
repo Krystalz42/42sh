@@ -6,7 +6,7 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:16:01 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/15 21:48:55 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/20 14:41:53 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 static int			check_this_one(char *part, char *path)
 {
-	(void)part; (void)path;
+	(void)part;
+	(void)path;
 	if (errno == ENOENT)
 		return (error_msg(S42H, "No such file or directory", NULL));
 	else if (errno == EACCES)

@@ -6,7 +6,7 @@
 /*   By: jle-quel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 12:02:53 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/12/16 17:05:58 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/20 14:57:21 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,14 @@ typedef enum			e_priority
 	PRIO_COMMAND,
 	PRIO_REDIR
 }						t_priority;
+
+/*
+**			ENUM FOR EXECUTING
+*/
+
+typedef struct s_jobs		t_jobs;
+typedef struct s_parsing	t_parsing;
+typedef uint8_t				(t_exec)(t_parsing *node, t_jobs *jobs, int info);
+typedef void				(t_manage_redir)(t_parsing *parsing);
 
 #endif

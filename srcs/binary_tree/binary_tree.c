@@ -6,13 +6,14 @@
 /*   By: jle-quel <jle-quel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:04:51 by jle-quel          #+#    #+#             */
-/*   Updated: 2017/11/17 15:05:13 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/20 14:47:47 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <sh.h>
 
-t_parsing	*create_binary_tree(t_parsing *list, t_parsing *compare, int priority)
+t_parsing			*create_binary_tree(t_parsing *list, t_parsing *compare,
+					int priority)
 {
 	t_parsing		*keep;
 	t_parsing		*temp;

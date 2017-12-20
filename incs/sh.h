@@ -6,7 +6,7 @@
 /*   By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/09 21:07:41 by aroulin           #+#    #+#             */
-/*   Updated: 2017/12/16 17:11:22 by jle-quel         ###   ########.fr       */
+/*   Updated: 2017/12/20 14:53:08 by jle-quel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@
 # include <fcntl.h>
 # include <curses.h>
 # include <term.h>
-# include <stdbool.h>
 # include <sys/types.h>
 # include <dirent.h>
 # include <signal.h>
@@ -34,6 +33,7 @@
 # include <enum.h>
 # include <time.h>
 # include <sys/stat.h>
+# include <stdbool.h>
 
 /*
 **				FUNCTION CORES
@@ -356,14 +356,13 @@ t_parsing					*lstnew(char *input);
 **				CREATE BINARY TREE
 */
 
-t_parsing						*create_binary_tree(t_parsing *list,
-												t_parsing *compare,
-												int priority);
-uint8_t						execute_node(t_parsing *node, t_jobs *jobs, int info);
+t_parsing					*create_binary_tree(t_parsing *list,
+							t_parsing *compare, int priority);
+uint8_t						execute_node(t_parsing *node, t_jobs *jobs,
+							int info);
 void						check_tree_path(t_parsing *node);
 void						do_heredoc(t_parsing *node);
 void						do_string(t_parsing *node);
-
 
 /*
 **				JOB'S CONTROL FUNCTION
@@ -379,7 +378,7 @@ t_process					*my_fork(t_jobs *jobs, t_parsing *node, int info);
 t_jobs						*new_jobs(t_jobs *jobs);
 t_process					*new_process(t_jobs *jobs);
 void						close_fildes(t_process *process);
-t_parsing						*find_executing_node(t_parsing *node);
+t_parsing					*find_executing_node(t_parsing *node);
 int							wait_group(t_process *process, int option);
 void						my_execve(char **command, char **env);
 void						handler_sigchld(int sig);
@@ -397,10 +396,14 @@ t_jobs						*add_to_first(t_jobs *new);
 */
 
 void						manage_redirection(t_parsing *node);
-uint8_t						op_execution(t_parsing *node, t_jobs *jobs, int info);
-uint8_t						op_separator(t_parsing *node, t_jobs *jobs, int info);
-uint8_t						op_pipeline(t_parsing *node, t_jobs *jobs, int info);
-uint8_t						op_ampersand(t_parsing *node, t_jobs *jobs, int info);
+uint8_t						op_execution(t_parsing *node, t_jobs *jobs,
+							int info);
+uint8_t						op_separator(t_parsing *node, t_jobs *jobs,
+							int info);
+uint8_t						op_pipeline(t_parsing *node, t_jobs *jobs,
+							int info);
+uint8_t						op_ampersand(t_parsing *node, t_jobs *jobs,
+							int info);
 uint8_t						op_and_if(t_parsing *node, t_jobs *jobs, int info);
 uint8_t						op_or_if(t_parsing *node, t_jobs *jobs, int info);
 
@@ -469,7 +472,6 @@ int							memdel_cmd(t_cmd **cmd);
 void						memdel_outstanding(void);
 void						memdel_jobs(t_jobs *jobs);
 void						memdel_parsing(t_parsing **node);
-
 
 /*
 **				ERROR FUNCTION
