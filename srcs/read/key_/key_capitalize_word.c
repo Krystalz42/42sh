@@ -34,12 +34,9 @@ int				capitalize_word(t_read *read_std)
 	while (read_std->cmd->c == 32)
 		read_std->cmd = read_std->cmd->next;
 	if (ft_isalpha(read_std->cmd->c) && ft_islower(read_std->cmd->c))
-	{
 		read_std->cmd->c -= 32;
-		while (ft_isalpha(read_std->cmd->c))
-			read_std->cmd = read_std->cmd->next;
-		return (1);
-	}
+	while (read_std->cmd->c && read_std->cmd->c != 32)
+		read_std->cmd = read_std->cmd->next;
 	return (0);
 }
 

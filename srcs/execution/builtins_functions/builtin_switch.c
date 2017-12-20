@@ -21,14 +21,13 @@ static int		put_in_foreground(t_jobs *jobs)
 	reset_signal();
 	print_jobs_info(jobs, jobs->process, OPT_C);
 	kill(-jobs->process->pgid, SIGCONT);
-	init_signal();
 	wait_group(jobs->process, WUNTRACED);
+	init_signal();
 	set_fildes(getpgid(0));
 	update_status(jobs->process);
 	update_jobs(jobs->process);
 	if (finished_process(jobs->process))
-	{
-	}
+		;
 	else
 	{
 		modify_foreground(jobs->process, false);

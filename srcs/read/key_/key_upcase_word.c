@@ -16,7 +16,7 @@ int				key_upcase_word(t_read **read_std, unsigned long buff)
 {
 	(*read_std)->cmd = (*read_std)->cmd;
 	add_outstanding(NULL, buff, 0);
-	while ((*read_std)->cmd->c && (*read_std)->cmd->c == 32)
+	while ((*read_std)->cmd->c && ft_isalnum((*read_std)->cmd->c) == 0)
 		(*read_std)->cmd = (*read_std)->cmd->next;
 	while ((*read_std)->cmd->c && ft_isalnum((*read_std)->cmd->c))
 	{

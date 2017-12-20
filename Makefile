@@ -6,7 +6,7 @@
 #    By: aroulin <aroulin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/04/18 18:36:59 by aroulin           #+#    #+#              #
-#    Updated: 2017/12/20 13:52:11 by jle-quel         ###   ########.fr        #
+#    Updated: 2017/12/20 14:36:41 by aroulin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -273,7 +273,6 @@ LDLIBS		= \
 			  -lprintf								\
 			  -lncurses								\
 			  -g3									\
-			  -fsanitize=address					\
 
 CPPFLAGS	= \
 			  -I$(DIR_INCS)							\
@@ -283,7 +282,6 @@ CPPFLAGS	= \
 CFLAGS		= \
 			  -Wall -Werror -Wextra					\
 			  -g3									\
-			  -fsanitize=address					\
 
 # ---------------------------------------------------------------------------- #
 # /!\ SOURCE NORMALIZATION AND COMPILATION RULES /!\                           #
@@ -330,10 +328,6 @@ all : libs $(NAME)
 $(NAME)		: $(DIR_OBJS) $(DIR_DEPS) $(O_SRCS) $(LIBS)
 	@$(CC) $(O_SRCS) -o  $(NAME) $(LDFLAGS) $(LDLIBS)
 	@printf "$(GRN)[ Created Executable ]$(RST) %s\n" $(NAME)
-
-fs			:
-	@$(CC) $(LDFLAGS) $(DFLAGS) $(LDLIBS) $(O_SRCS) -o $(NAME)
-	@printf "$(GRN)[ /!\ MEMORY CHECK /!\ ]$(RST) %s\n" $(NAME)
 
 libs		:
 	@make -C $(DIR_LIBS)/libft
