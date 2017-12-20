@@ -33,7 +33,7 @@ void			do_heredoc(t_parsing *node)
 	heredoc = NULL;
 	while (0x2A)
 	{
-		cmd = first_cmd(read_stdin(HEREDOC), 1);
+		cmd = first_cmd(read_input(HEREDOC), 1);
 		if (signal_reception(-1) == SIGINT)
 			break ;
 		else if (compare_heredoc(cmd, node->next->command[0]) == 0 \
